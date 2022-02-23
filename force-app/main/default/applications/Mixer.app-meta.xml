@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#F26925</headerColor>
+        <logo>mixerremovebgpreview</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Mixer</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>Recommended_Badge_Mix__c</tabs>
+    <tabs>trailheadapp__Badge__c</tabs>
+    <tabs>trailheadapp__Trail__c</tabs>
+    <tabs>trailheadapp__TrailheadSetup</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Mixer_UtilityBar</utilityBar>
+</CustomApplication>
