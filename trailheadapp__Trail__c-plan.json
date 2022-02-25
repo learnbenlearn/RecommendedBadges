@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "trailheadapp__Trail__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "trailheadapp__Trail__cs.json"
+        ]
+    }
+]

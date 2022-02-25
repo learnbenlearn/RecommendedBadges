@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "Mix_Category__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "Mix_Category__cs.json"
+        ]
+    }
+]

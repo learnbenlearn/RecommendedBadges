@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "trailheadapp__Badge__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "trailheadapp__Badge__cs.json"
+        ]
+    }
+]

@@ -1,0 +1,2767 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef1"
+            },
+            "Name": "Learn the AWS Cloud Practitioner Essentials",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-the-aws-cloud-practitioner-essentials/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef2"
+            },
+            "Name": "Make the Move from SalesforceIQ to Sales Cloud",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/make-the-move-from-salesforceiq-to-sales-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef3"
+            },
+            "Name": "Discover Advanced Service Cloud Features for Salesforce Classic",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/service_develop/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef4"
+            },
+            "Name": "Build Storefront Pages with Salesforce B2C Commerce Page Designer",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-storefront-pages-with-salesforce-b2c-commerce-page-designer/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef5"
+            },
+            "Name": "Engage Customers with Salesforce IoT",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/iot_cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef6"
+            },
+            "Name": "Explore Cloud Solutions for Partners",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/explore-the-customer-success-platform/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef7"
+            },
+            "Name": "Make the Move from Desk.com to Service Cloud",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/make-the-move-from-desk-com-to-service-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef8"
+            },
+            "Name": "Boost Productivity with Einstein Voice Assistant",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/boost-productivity-with-einstein-voice-assistant/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef9"
+            },
+            "Name": "Help Customers Faster with Desk.com",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/help_customers_faster_with_desk_com/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef10"
+            },
+            "Name": "Deliver IT Success with MuleSoft Catalyst",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/deliver-it-success-with-mulesoft-catalyst/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef11"
+            },
+            "Name": "Learn to Work in Financial Services Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-to-work-in-financial-services-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef12"
+            },
+            "Name": "Build and Release Packages with Salesforce Developer Tools",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-managed-packages/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef13"
+            },
+            "Name": "Automate Your Business Processes with Salesforce Flow",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/automate_business_processes/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef14"
+            },
+            "Name": "Make the Move to Lightning Experience",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/lex_admin_migration/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef15"
+            },
+            "Name": "Find Your Way Around Trailhead",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/explore-the-best-of-trailhead/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef16"
+            },
+            "Name": "Administer Salesforce for K-12 Educational Institutions",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/administer-salesforce-for-k12-educational-institutions/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef17"
+            },
+            "Name": "Expand Your Reach with Experience Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/communities/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef18"
+            },
+            "Name": "Skill Up for the Future with Trailhead",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/skill-up-for-the-future-with-trailhead/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef19"
+            },
+            "Name": "Transform Your Business with Mobile",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/salesforce1_mgmt/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef20"
+            },
+            "Name": "Get to Know Salesforce",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/salesforce_advantage/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef21"
+            },
+            "Name": "Learn Admin Essentials in Lightning Experience",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-admin-essentials/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef22"
+            },
+            "Name": "Set Up Your Workspace and Install Developer Tools",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/set-up-your-workspace-and-install-developer-tools/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef23"
+            },
+            "Name": "Sell Lightning Fast with Sales Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/lex_end_user/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef24"
+            },
+            "Name": "Admin Beginner",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/force_com_admin_beginner/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef25"
+            },
+            "Name": "Build Apps Fast with Salesforce Platform Services",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build_apps_fast/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef26"
+            },
+            "Name": "Manage Your Salesforce Data and External Data",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/manage-your-salesforce-data/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef27"
+            },
+            "Name": "Build Your Marketing Cloud Consulting Practice",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-your-marketing-cloud-consulting-practice/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef28"
+            },
+            "Name": "Develop Apps with Heroku",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/heroku_enterprise/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef29"
+            },
+            "Name": "Accelerate Your Sales Team with High Velocity Sales",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/accelerate-your-sales-team-with-high-velocity-sales/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef30"
+            },
+            "Name": "Navigate the Salesforce Hiring Process",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/navigate-the-salesforce-hiring-process/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef31"
+            },
+            "Name": "Get Ready for Dreamforce",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get_ready_for_dreamforce/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef32"
+            },
+            "Name": "Learn About the Fourth Industrial Revolution",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/4th-industrial-revolution/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef33"
+            },
+            "Name": "Build and Manage Your Sales Team the Salesforce Way",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-and-manage-your-sales-team-the-salesforce-way/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef34"
+            },
+            "Name": "Build Applications with CumulusCI",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-applications-with-cumulusci/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef35"
+            },
+            "Name": "Build Efficient Applications Without Limits",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-efficient-applications-without-limits/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef36"
+            },
+            "Name": "Optimize Sales Forecasts",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/collaborative_forecasts/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef37"
+            },
+            "Name": "Cultivate Philanthropy at Work",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/cultivate-philanthropy-at-work/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef38"
+            },
+            "Name": "Admin Intermediate",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/force_com_admin_intermediate/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef39"
+            },
+            "Name": "Developer Beginner",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/force_com_dev_beginner/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef40"
+            },
+            "Name": "Get Started with Lightning Experience",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/lex_admin_implementation/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef41"
+            },
+            "Name": "Get Started with Workforce Engagement",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-workforce-engagement/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef42"
+            },
+            "Name": "Administer Education Data Architecture (EDA)",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/highered_heda/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef43"
+            },
+            "Name": "Administer Quip",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/quip-for-customer-360/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef44"
+            },
+            "Name": "Deliver Connected Digital Experiences to Education Constituents",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/deliver-connected-digital-experiences-to-education-constituents/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef45"
+            },
+            "Name": "Administer Salesforce B2B Commerce on Lightning Experience",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/administer-salesforce-b2b-commerce-on-lightning-experience/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef46"
+            },
+            "Name": "Build Your Career as a Salesforce B2C Commerce Functional Architect",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-about-the-role-of-commerce-cloud-functional-architect/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef47"
+            },
+            "Name": "Build Apps with Lightning Web Components Open Source",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-apps-lightning-web-components-open-source/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef48"
+            },
+            "Name": "Learn Drucker School MBA Essentials",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/drucker_school/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef49"
+            },
+            "Name": "Fundraise with Nonprofit Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/fundraise-with-nonprofit-success-pack-npsp/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef50"
+            },
+            "Name": "Customize Your Org to Win More Deals",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/customize-your-org-to-track-your-competition/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef51"
+            },
+            "Name": "Discover Salesforce Essentials",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/discover_salesforce_essentials/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef52"
+            },
+            "Name": "Get Started with Sales Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-sales-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef53"
+            },
+            "Name": "Grow Your Career as a Customer Service Agent",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/grow-your-career-as-a-customer-service-agent/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef54"
+            },
+            "Name": "Learn Salesforce Agile Practices",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-salesforce-agile-practices/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef55"
+            },
+            "Name": "Learn to Work in Lightning Experience",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/lex_user_learn_fundamentals/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef56"
+            },
+            "Name": "Simplify Your Development Process with Continuous Integration",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/move-to-a-continuous-integration-development/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef57"
+            },
+            "Name": "Apply .NET Skills to Salesforce",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/microsoft_dotnet/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef58"
+            },
+            "Name": "Reach Your Audience with Rad Content",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/reach_audience_rad/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef59"
+            },
+            "Name": "Strengthen and Diversify Your Workforce with Military Veterans",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/strengthen-and-diversify-your-workforce-with-military-veterans/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef60"
+            },
+            "Name": "Use Marketing Cloud Connect to Integrate with Salesforce CRM",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/use-marketing-cloud-connect/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef61"
+            },
+            "Name": "Create a Sustainable Future",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/create-a-sustainable-future/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef62"
+            },
+            "Name": "Manage Identity and Access",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/identity/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef63"
+            },
+            "Name": "Import Data With Nonprofit Success Pack (NPSP)",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/import-data-with-nonprofit-success-pack-npsp/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef64"
+            },
+            "Name": "Get to Know Relationship Design",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-to-know-relationship-design/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef65"
+            },
+            "Name": "Build a Travel Approval App",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-a-travel-approval-app/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef66"
+            },
+            "Name": "Get Started with Datorama",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-datorama/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef67"
+            },
+            "Name": "Study for the Tableau CRM and Einstein Discovery Consultant Exam",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/study-for-the-einstein-analytics-and-discovery-consultant-exam/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef68"
+            },
+            "Name": "Transform Your Business with Sales Operations",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/transform-your-business-with-sales-operations/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef69"
+            },
+            "Name": "Provide Secure Connectivity with Private Connect",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/provide-secure-connectivity-with-private-connect/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef70"
+            },
+            "Name": "Get Started with Executive Cyber Leadership",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-executive-cyber-leadership/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef71"
+            },
+            "Name": "Prepare for Salesforce Releases",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/sf_release_prep/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef72"
+            },
+            "Name": "Fundraise with Salesforce.org Elevate",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/fundraise-with-salesforceorg-elevate/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef73"
+            },
+            "Name": "Create Compelling Content with Content Builder",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/create-compelling-content-with-content-builder/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef74"
+            },
+            "Name": "Deploy Commerce Cloud Einstein",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/deploy-commerce-cloud-einstein/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef75"
+            },
+            "Name": "Admin Advanced",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/force_com_admin_advanced/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef76"
+            },
+            "Name": "AWS Cloud for Technical Professionals",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/aws-cloud-for-technical-professionals/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef77"
+            },
+            "Name": "Build Platform Apps in Lightning Experience",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-platform-apps-in-lightning-experience/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef78"
+            },
+            "Name": "Build Your Customer Service Management Toolkit",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-your-customer-service-management-toolkit/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef79"
+            },
+            "Name": "Discover the Salesforce Way",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/discover-the-salesforce-way-for-partners/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef80"
+            },
+            "Name": "Empower Managers and Agents with Service Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/empower-managers-and-agents-with-the-service-cloud-platform/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef81"
+            },
+            "Name": "Explore Nonprofit Success Pack (NPSP)",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/explore-nonprofit-success-pack/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef82"
+            },
+            "Name": "Get on the Road with Field Service",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/field_service/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef83"
+            },
+            "Name": "Become an Integration Champion",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/mulesoft-integration-trailblazer/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef84"
+            },
+            "Name": "Build Great APIs and Integrations with MuleSoft",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/great-integrations-mulesoft/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef85"
+            },
+            "Name": "Prepare for Success with Nonprofit Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/prepare-for-success-with-nonprofit-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef86"
+            },
+            "Name": "Get to Know Marketing Cloud​",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/personalize_customer_journeys_marketing_cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef87"
+            },
+            "Name": "Get Started with Slack",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/be-more-productive-with-slack/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef88"
+            },
+            "Name": "Administer a Salesforce B2C Commerce Site",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/administer-b2c-commerce/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef89"
+            },
+            "Name": "Assess Site Performance with B2C Commerce Reports & Dashboards",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/assess-site-performance-with-b2c-commerce-reports-dashboards/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef90"
+            },
+            "Name": "Deliver Great Patient Care with Health Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/deliver-great-patient-care-with-health-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef91"
+            },
+            "Name": "Get Started with Network Security",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-network-security-essentials/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef92"
+            },
+            "Name": "Sell Everywhere with Commerce Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/cc-overview/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef93"
+            },
+            "Name": "Enhance Service Cloud with Lightning Knowledge",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/enhance-service-cloud-with-lightning-knowledge/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef94"
+            },
+            "Name": "Measure Your Marketing Impact",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/measure-your-marketing-impact/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef95"
+            },
+            "Name": "Collaborate with Quip",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-more-productive-with-quip/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef96"
+            },
+            "Name": "Develop Integrations with Pardot APIs",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/develop-integrations-with-pardot-apis/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef97"
+            },
+            "Name": "Use Einstein Features in Marketing Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/use-einstein-features-in-marketing-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef98"
+            },
+            "Name": "Lead During Challenging Times",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/lead-during-challenging-times/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef99"
+            },
+            "Name": "Optimize Sales Features for Lightning Experience",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/sales_admin/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef100"
+            },
+            "Name": "Succeed from Anywhere During COVID-19",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/succeed-from-home-during-covid19/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef101"
+            },
+            "Name": "Apply Visualforce Skills to Lightning Components",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/lex_dev_lc_vf/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef102"
+            },
+            "Name": "Manage Your Mission with Nonprofit Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/manage-your-mission-with-nonprofit-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef103"
+            },
+            "Name": "Discover Trailhead Sample Apps",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/discover-trailhead-sample-apps/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef104"
+            },
+            "Name": "Get Started with Contact Tracing",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-as-a-contact-tracer/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef105"
+            },
+            "Name": "Get Social with Social Studio",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-social-with-social-studio/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef106"
+            },
+            "Name": "Learn Marketing Best Practices",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-marketing-best-practices/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef107"
+            },
+            "Name": "Study for the Marketing Cloud Administrator Exam",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/study-for-the-marketing-cloud-administrator-exam/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef108"
+            },
+            "Name": "Discover Interaction Studio",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/discover-interaction-studio/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef109"
+            },
+            "Name": "Optimize Search Engine Awareness for Your Salesforce B2C Commerce Storefront",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/optimize-search-engine-awareness-for-your-salesforce-b2c-commerce-storefront/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef110"
+            },
+            "Name": "Evolve Your Marketing Strategy with Artificial Intelligence",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/einstein-and-the-modern-marketer/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef111"
+            },
+            "Name": "Create and Send Targeted Emails",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/create-and-send-targeted-emails-with-email-studio/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef112"
+            },
+            "Name": "Use Journey Builder Strategies",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/use-journey-builder-strategies/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef113"
+            },
+            "Name": "Complete Journey Builder Tasks",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/complete-journey-builder-tasks/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef114"
+            },
+            "Name": "Use Developer Languages in Marketing Cloud",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/use-developer-languages-in-marketing-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef115"
+            },
+            "Name": "Complete Developer Tasks in Marketing Cloud",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/complete-developer-tasks-in-marketing-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef116"
+            },
+            "Name": "Develop Mobile Strategies in Marketing Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/mobile-strategies-in-marketing-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef117"
+            },
+            "Name": "Explore Salesforce CDP",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/explore-customer-360-audiences/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef118"
+            },
+            "Name": "Use Journey Builder Strategies",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/journey-builder-strategies/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef119"
+            },
+            "Name": "Use Developer Languages in Marketing Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/marketing-cloud-developer-languages/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef120"
+            },
+            "Name": "Learn Developer Fundamentals in Marketing Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/develop-for-marketing-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef121"
+            },
+            "Name": "Learn Business Lessons from Winter Sports",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-business-lessons-from-winter-sports/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef122"
+            },
+            "Name": "Study for the B2C Solution Architect Certification",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/study-for-the-b2c-solution-architect-certification/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef123"
+            },
+            "Name": "Employ the LEVERS of Change Framework",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/employ-the-levers-of-change-framework/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef124"
+            },
+            "Name": "Structure Your Data in Financial Services Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/structure-your-data-in-financial-services-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef125"
+            },
+            "Name": "Secure Your Apps with Salesforce Shield",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/shield/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef126"
+            },
+            "Name": "Learn Privacy and Data Protection Law",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-privacy-and-data-protection-law/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef127"
+            },
+            "Name": "Discover Sales Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/discover-sales-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef128"
+            },
+            "Name": "Integrate Salesforce and Google Platforms",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/integrate-salesforce-and-google-platforms/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef129"
+            },
+            "Name": "Get Started with Distributed Marketing",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-distributed-marketing/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef130"
+            },
+            "Name": "Manage Your Partner Relationships with Sales Cloud PRM",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/manage-partner-relationships/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef131"
+            },
+            "Name": "Build Your Practice as a Consulting Partner",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/consulting_partner/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef132"
+            },
+            "Name": "Get Started with Military Benefits",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-military-benefits/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef133"
+            },
+            "Name": "Customize your Experience Cloud Site",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/customize-your-community/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef134"
+            },
+            "Name": "Learn Admin Fundamentals in Marketing Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/administer-marketing-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef135"
+            },
+            "Name": "Make Service Cloud Smarter",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/service_einstein/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef136"
+            },
+            "Name": "Manage Volunteers for Nonprofits",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/nonprofit_volunteer/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef137"
+            },
+            "Name": "Build Your Career in the Salesforce Ecosystem",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-your-career-with-salesforce-skills/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef138"
+            },
+            "Name": "Complete Journey Builder Tasks",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/journey-builder-tasks/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef139"
+            },
+            "Name": "Build Apps as an AppExchange Partner",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/isv_developer_beginner/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef140"
+            },
+            "Name": "Design for Sustainability",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/design-for-sustainability/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef141"
+            },
+            "Name": "Configure Your Salesforce B2C Commerce Storefront Data",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/configure-your-salesforce-b2c-commerce-storefront-data/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef142"
+            },
+            "Name": "Get Smart with Salesforce Einstein",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get_smart_einstein/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef143"
+            },
+            "Name": "Extend Your Data Capabilities with Datorama",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/extend-your-data-capabilities-with-datorama/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef144"
+            },
+            "Name": "Get Started with Service Cloud for Lightning Experience",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/service_cloud_move/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef145"
+            },
+            "Name": "Learn Atlassian Agile Practices",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/run-an-agile-team/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef146"
+            },
+            "Name": "Develop for Lightning Experience",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/lex_dev/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef147"
+            },
+            "Name": "Enhance Emails with Interactivity",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/enhance-emails-with-interactivity/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef148"
+            },
+            "Name": "Build Your Ecommerce Site with Salesforce B2C Commerce",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-ecommerce-site-with-cc-digital/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef149"
+            },
+            "Name": "Optimize Social Studio for Your Business",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/optimize-social-studio-for-your-business/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef150"
+            },
+            "Name": "Optimize Storefront Performance with Headless Architecture",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/optimize-storefront-performance-with-headless-architecture/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef151"
+            },
+            "Name": "Appointment Booking with Salesforce Scheduler",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/appointment-booking-with-lightning-scheduler/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef152"
+            },
+            "Name": "Discover Salesforce Maps",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/discover-salesforce-maps/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef153"
+            },
+            "Name": "Deliver Personalized Insurance Service with Financial Services Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/deliver-personalized-insurance-service-with-financial-services-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef154"
+            },
+            "Name": "Develop a Virtual Strategy for Your Business",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/develop-your-virtual-strategy-for-your-business/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef155"
+            },
+            "Name": "Explore with Tableau CRM",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/wave_analytics_explorer/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef156"
+            },
+            "Name": "Accelerate Tableau CRM with Apps",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/wave_analytics_apps/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef157"
+            },
+            "Name": "Build and Administer Tableau CRM",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/wave_analytics_enable_and_produce/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef158"
+            },
+            "Name": "Automate Marketing to Businesses with Pardot Lightning App",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/automate-marketing-to-businesses-with-pardot-lightning-app/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef159"
+            },
+            "Name": "Integrate AWS and Salesforce",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/integrate-aws-and-salesforce/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef160"
+            },
+            "Name": "Gain Insight and Improve Outcomes with Einstein Discovery",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/wave_analytics_einstein_discovery/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef161"
+            },
+            "Name": "Discover B2B Core Features and Concepts",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/discover-b2b-core-features-and-concepts/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef162"
+            },
+            "Name": "Complete Developer Tasks in Marketing Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/marketing-cloud-developer-tasks/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef163"
+            },
+            "Name": "Advance Your Marketing Strategy",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/advance-your-marketing-strategy/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef164"
+            },
+            "Name": "Achieve Your Goals with Salesforce Customer Success",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/achieve-your-goals-with-success-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef165"
+            },
+            "Name": "Manage Your Marketing Cloud Account",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/manage-your-marketing-cloud-account/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef166"
+            },
+            "Name": "Study for the Platform App Builder Exam",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/platform-app-builder-certification-prep/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef167"
+            },
+            "Name": "Optimize Data, Audiences, and Digital Advertising",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/optimize-data-audiences-and-digital-advertising/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef168"
+            },
+            "Name": "Study for the Platform Developer I Exam",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/platform-developer-i-certification-study-guide/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef169"
+            },
+            "Name": "Get Started with iOS App Development",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/start-ios-appdev/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef170"
+            },
+            "Name": "Develop for Salesforce B2C Commerce",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/develop-for-commerce-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef171"
+            },
+            "Name": "Migrate from Visualforce to Lightning Web Components",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/migrate-from-visualforce-to-lightning-web-components/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef172"
+            },
+            "Name": "Migrate from Aura to Lightning Web Components",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/migrate-from-aura-to-lightning-web-components/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef173"
+            },
+            "Name": "Rock Your Future with Salesforce",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/salesforce-for-students/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef174"
+            },
+            "Name": "Integrate Outlook and Gmail with Salesforce",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/outlook_gmail_integration/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef175"
+            },
+            "Name": "Innovate the Salesforce Way",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/innovation_salesforce_way/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef176"
+            },
+            "Name": "Accelerate the Sustainable Development Goals (SDGs)",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-about-the-uns-global-goals/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef177"
+            },
+            "Name": "Build Your Business Skills",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-your-business-skills/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef178"
+            },
+            "Name": "Discover Tableau CRM",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/discover-tableau-crm/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef179"
+            },
+            "Name": "Implement B2C Cross-Cloud Solutions",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/implement-b2c-crosscloud-solutions/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef180"
+            },
+            "Name": "Administer Nonprofit Success Pack (NPSP)",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/nonprofit_fundraising/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef181"
+            },
+            "Name": "Transform Your Business with Salesforce Customer Success",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/transform-business-sf-expeditions/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef182"
+            },
+            "Name": "Grow Your Business as an AppExchange Partner",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/isv_business_beginner/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef183"
+            },
+            "Name": "Get to Know OmniStudio",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-to-know-omnistudio/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef184"
+            },
+            "Name": "Connect with Customers Using Financial Services Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/connect-with-customers-using-financial-services-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef185"
+            },
+            "Name": "Build Guided Experiences with OmniStudio",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-guided-experiences-with-omnistudio/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef186"
+            },
+            "Name": "Learn Salesforce CPQ Admin Fundamentals",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/cpq-admin/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef187"
+            },
+            "Name": "Prepare Your Salesforce B2C Commerce Storefront for Holiday Shopping",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/prepare-your-b2c-commerce-storefront-for-holiday-shopping/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef188"
+            },
+            "Name": "Design Event-Driven Apps for Real-Time Integration",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/design-eventdriven-apps-for-realtime-integration/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef189"
+            },
+            "Name": "Study for the B2B Solution Architect Exam",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/study-for-the-b2b-solution-architect-exam/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef190"
+            },
+            "Name": "Study for the Salesforce JavaScript Developer I Exam",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/study-for-the-salesforce-javascript-developer-i-exam/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef191"
+            },
+            "Name": "Expand Service Cloud with Digital Engagement",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/expand-service-cloud-with-digital-engagement/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef192"
+            },
+            "Name": "Get Started with Tableau Server",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-tableau-server/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef193"
+            },
+            "Name": "Develop Secure Web Apps",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/security_developer/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef194"
+            },
+            "Name": "Explore Integration Patterns and Practices",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/explore-integration-patterns-and-practices/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef195"
+            },
+            "Name": "Integrate B2B Systems",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/integrate-b2b-systems/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef196"
+            },
+            "Name": "Get Started with Web Accessibility",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-web-accessibility/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef197"
+            },
+            "Name": "Inspire the Next Generation of Trailblazers",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/inspire-the-next-generation-of-trailblazers/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef198"
+            },
+            "Name": "Build Soft Skills to Succeed as a Salesforce Partner",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-soft-skills-to-succeed-as-a-salesforce-partner/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef199"
+            },
+            "Name": "Discover a New Way to Work with Work.com",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-back-to-business-with-workcom/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef200"
+            },
+            "Name": "Try Out Popular Badges",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/take-a-quick-look/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef201"
+            },
+            "Name": "Understand Your Web Users with Google Analytics",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/understand-your-web-users-with-google-analytics/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef202"
+            },
+            "Name": "Build Apps Together with Package Development",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/sfdx_get_started/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef203"
+            },
+            "Name": "Enhance Employee Wellbeing with Camp B-Well",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/camp-pono/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef204"
+            },
+            "Name": "Manage Campaigns with Journey Builder",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/manage-campaigns-with-journey-builder/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef205"
+            },
+            "Name": "Study for the Administrator Certification Exam",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/administrator-certification-prep/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef206"
+            },
+            "Name": "Explore Advanced Security Features",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/explore-advanced-security-features/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef207"
+            },
+            "Name": "Go from Lead to Cash with Salesforce CPQ and Billing",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/lead-to-cash-with-salesforce-cpq-and-billing/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef208"
+            },
+            "Name": "Drive Sales with Operational Excellence",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/drive-sales-with-operational-excellence/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef209"
+            },
+            "Name": "Learn CRM Fundamentals for Salesforce Classic",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/getting_started_crm_basics/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef210"
+            },
+            "Name": "Troubleshoot Lightning Web Components",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/troubleshoot-lightning-web-components/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef211"
+            },
+            "Name": "Enroll Best-Fit Students with Education Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/enroll-bestfit-students-with-education-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef212"
+            },
+            "Name": "Manage the Salesforce Way",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/manage_the_salesforce_way/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef213"
+            },
+            "Name": "Innovate with Alexa and Amazon Web Services",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/innovate-with-alexa-and-amazon-web-services/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef214"
+            },
+            "Name": "Code with AMPscript",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/code-with-ampscript/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef215"
+            },
+            "Name": "Develop with Mobile SDK",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/mobile_sdk_intro/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef216"
+            },
+            "Name": "Get Started with Web Authoring in Tableau Online",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-web-authoring-tableau-online/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef217"
+            },
+            "Name": "Tour the Tableau Environment",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/tour-the-tableau-environment/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef218"
+            },
+            "Name": "Get Started with Data Visualization in Tableau Desktop",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-data-visualization-in-tableau-desktop/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef219"
+            },
+            "Name": "Streamline Self-Registration for Experience Cloud Sites",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/streamline-self-registration-for-experience-cloud-sites/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef220"
+            },
+            "Name": "Get Started as a Salesforce Business Analyst",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-as-a-salesforce-business-analyst/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef221"
+            },
+            "Name": "Achieve Advancement Goals with Education Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/achieve-advancement-goals-with-education-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef222"
+            },
+            "Name": "Developer Advanced",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/force_com_dev_advanced/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef223"
+            },
+            "Name": "Get Started with Customer 360 Data Manager",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-customer-360-data-manager/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef224"
+            },
+            "Name": "Get Started with MuleSoft Composer",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-mulesoft-composer/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef225"
+            },
+            "Name": "Build Lightning Web Components",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-lightning-web-components/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef226"
+            },
+            "Name": "Design Solutions with Salesforce APIs",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/architect-solutions-with-the-right-api/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef227"
+            },
+            "Name": "Boost Collaboration with the Salesforce for Slack Integration",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/boost-collaboration-with-the-salesforce-for-slack-integration/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef228"
+            },
+            "Name": "Think Slack-First for Lines-of-Business",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/think-slack-first-for-lines-of-business/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef229"
+            },
+            "Name": "Develop Apps for Slack",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/develop-slack-apps/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef230"
+            },
+            "Name": "Build Better with UX",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-better-ux/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef231"
+            },
+            "Name": "Discover Salesforce Functions",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/discover-salesforce-functions/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef232"
+            },
+            "Name": "Learn Project Management Essentials from Walden University",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-project-management-essentials/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef233"
+            },
+            "Name": "Develop Emotional Intelligence",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/develop-emotional-intelligence/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef234"
+            },
+            "Name": "Einstein for Consumer Goods Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/einstein-for-consumer-goods-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef235"
+            },
+            "Name": "Volunteer Your Salesforce Expertise",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/volunteer-your-salesforce-expertise/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef236"
+            },
+            "Name": "Boost Field Service with Mobile",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/boost-field-service-with-mobile/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef237"
+            },
+            "Name": "Plan and Track Sales Goals with Sales Operations",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/plan-and-track-sales-goals-with-sales-operations/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef238"
+            },
+            "Name": "Build Your Career as a Salesforce B2C Commerce Technical Architect",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-your-career-as-a-salesforce-b2c-commerce-technical-architect/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef239"
+            },
+            "Name": "Support Students and Families with Student Success Hub",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/support-students-and-families-with-student-success-hub/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef240"
+            },
+            "Name": "Explore Commerce Strategies",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/explore-commerce-strategies/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef241"
+            },
+            "Name": "Build a Connected Campus with Education Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-a-connected-campus-with-education-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef242"
+            },
+            "Name": "Increase Engagement and Nurture Leads with Pardot for Salesforce Classic",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/increase-engagement-and-nurture-leads-with-pardot/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef243"
+            },
+            "Name": "Accelerate Your Mission with Impact Management",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/accelerate-your-mission-with-impact-management/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef244"
+            },
+            "Name": "Build Apex Coding Skills",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-apex-coding-skills/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef245"
+            },
+            "Name": "Automate Marketing to Businesses with Pardot for Salesforce Classic",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/automate-marketing-to-businesses-with-pardot/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef246"
+            },
+            "Name": "Developer Intermediate",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/force_com_dev_intermediate/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef247"
+            },
+            "Name": "Be the Bank Your Customers Love",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/be-the-bank-your-customers-love/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef248"
+            },
+            "Name": "Dreamforce Trail",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/dreamforce/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef249"
+            },
+            "Name": "Determine Which Application Lifecycle Management Model Is Right for You",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/determine-which-application-lifecycle-management-model-is-right-for-you/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef250"
+            },
+            "Name": "Manage Programs with Nonprofit Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/manage-programs-with-nonprofit-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef251"
+            },
+            "Name": "Perform Complex Data Transformations with Data Processing Engine",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/perform-complex-data-transformations-with-data-processing-engine/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef252"
+            },
+            "Name": "Engage Constituents with Nonprofit Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/engage-constituents-with-nonprofit-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef253"
+            },
+            "Name": "Build a CDP Data Strategy",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-a-cdp-data-strategy/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef254"
+            },
+            "Name": "Supercharge Field Service",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/supercharge-field-service-lightning/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef255"
+            },
+            "Name": "Create New Learning Experiences with myTrailhead",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/create-learning-experiences-with-mytrailhead/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef256"
+            },
+            "Name": "Get Started with Salesforce Surveys",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-salesforce-surveys/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef257"
+            },
+            "Name": "Get Started with Application Security",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-application-security/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef258"
+            },
+            "Name": "Get Started with Cloud Security Engineering",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-cloud-security-engineering/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef259"
+            },
+            "Name": "Get Started with Security Operations",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-security-operations/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef260"
+            },
+            "Name": "Get Started with Security Awareness",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-security-awareness/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef261"
+            },
+            "Name": "Getting Started with the Force.com Platform",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/force_com_introduction/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef262"
+            },
+            "Name": "Intro to Programmatic App Development",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/force_com_programmatic_beginner/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef263"
+            },
+            "Name": "Integrate Microsoft Email and Salesforce",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/microsoft_integration_admin/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef264"
+            },
+            "Name": "Explore Deep Learning for Natural Language Processing",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/explore-deep-learning-for-nlp/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef265"
+            },
+            "Name": "Discover Service for Small Business with Service Cloud Essentials",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/discover-service-for-small-business-with-service-cloud-essentials/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef266"
+            },
+            "Name": "Grow Your Small Business with Sales Cloud Essentials",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/grow-your-small-business-with-sales-cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef267"
+            },
+            "Name": "Configure Your App with Custom Metadata Types",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/configure-your-app-with-custom-metadata-types/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef268"
+            },
+            "Name": "Apply a Salesforce B2C Commerce Functional Solution",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/apply-a-salesforce-b2c-commerce-functional-solution/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef269"
+            },
+            "Name": "Increase Sales Efficiency with Territory Management",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/increase-efficiency-territory-management/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef270"
+            },
+            "Name": "Learn to Work with JavaScript",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-to-work-with-javascript/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef271"
+            },
+            "Name": "Cultivate Equality at Work",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/champion_workplace_equality/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef272"
+            },
+            "Name": "Build Your Salesforce B2C Commerce Consulting Practice",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-your-b2c-commerce-consulting-practice/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef273"
+            },
+            "Name": "Get Started with Cyber Defense Forensics",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-cyber-defense-forensics/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef274"
+            },
+            "Name": "Get Started with Cybersecurity Architecture",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-cybersecurity-architecture/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef275"
+            },
+            "Name": "Get Started with Incident Response",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-incident-response/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef276"
+            },
+            "Name": "Get Started with Security Testing and Evaluation",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-security-testing-and-evaluation/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef277"
+            },
+            "Name": "Get Started with Penetration Testing",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-penetration-testing/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef278"
+            },
+            "Name": "Get Started with Cybersecurity Compliance Analysis",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-cybersecurity-compliance-analysis/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef279"
+            },
+            "Name": "Get Started with Cybersecurity Risk Management",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-cybersecurity-risk-management/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef280"
+            },
+            "Name": "Get Started with Vulnerability Assessment",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-vulnerability-assessment/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef281"
+            },
+            "Name": "Get Started with Technical Project Management",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-technical-project-management/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef282"
+            },
+            "Name": "Get Started with Threat Intelligence",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-threat-intelligence/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef283"
+            },
+            "Name": "Develop Securely",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/develop-securely/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef284"
+            },
+            "Name": "Implement Cybersecurity Best Practices in Your Organization",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/implement-cybersecurity-best-practices-in-your-organization/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef285"
+            },
+            "Name": "Learn About the Fourth Industrial Revolution",
+            "trailheadapp__Archived__c": true,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-about-the-fourth-industrial-revolution/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef286"
+            },
+            "Name": "Build Flows with Flow Builder",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-flows-with-flow-builder/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef287"
+            },
+            "Name": "Keep Customers Happy with Service Cloud for Salesforce Classic",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/service_cloud/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef288"
+            },
+            "Name": "Find Success with Your Implementation Partner",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/find-success-with-your-implementation-partner/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef289"
+            },
+            "Name": "Build Your Sales Career",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-your-sales-career/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef290"
+            },
+            "Name": "Increase Engagement and Nurture Leads with Pardot Lightning App",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/increase-engagement-nurture-leads-pardot-lightning/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef291"
+            },
+            "Name": "Empower Your Salesforce Users",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/empower-your-salesforce-users/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef292"
+            },
+            "Name": "Master Salesforce Billing Admin Fundamentals",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/salesforce-billing-admin-fundamentals/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef293"
+            },
+            "Name": "Supercharge Your CRM With the Salesforce Platform",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/supercharge-your-crm-with-the-salesforce-platform/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef294"
+            },
+            "Name": "Build Integrations Using Connected Apps",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/build-integrations-using-connected-apps/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef295"
+            },
+            "Name": "Inspire Customer Loyalty with Financial Services Cloud",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/fsc_build_loyalty/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef296"
+            },
+            "Name": "Implement Secrets Management at Your Organization",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/implement-secrets-management-at-your-organization/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef297"
+            },
+            "Name": "Discover Threat Actors and Secure Your Digital Assets",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/discover-threat-actors-and-secure-your-digital-assets/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef298"
+            },
+            "Name": "Get Started with Infrastructure Support",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/get-started-with-infrastructure-support/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef299"
+            },
+            "Name": "Maintain Your Salesforce Certifications",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/maintain-your-salesforce-certifications/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef300"
+            },
+            "Name": "Meet Your Business Needs with AppExchange",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/meet-your-business-needs-with-appexchange/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef301"
+            },
+            "Name": "Grow Faster with CRM",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/crm/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef302"
+            },
+            "Name": "Learn CRM Fundamentals for Lightning Experience",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/crm-essentials-lightning-experience/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef303"
+            },
+            "Name": "Administer Salesforce from Anywhere During COVID-19",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/administer-salesforce-from-home-during-covid19/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef304"
+            },
+            "Name": "Go Digital Fast with the Salesforce Customer 360",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/go-digital-fast-with-the-salesforce-customer-360/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef305"
+            },
+            "Name": "Learn B2B Product Fundamentals",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn-b2b-product-fundamentals/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef306"
+            },
+            "Name": "Get Started with Trailhead",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/learn_salesforce_with_trailhead/"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "referenceId": "trailheadapp__Trail__cRef307"
+            },
+            "Name": "Protect Your Salesforce Data",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/trail/security/"
+        }
+    ]
+}
