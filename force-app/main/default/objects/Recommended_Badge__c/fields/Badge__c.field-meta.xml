@@ -6,7 +6,7 @@
     <referenceTo>trailheadapp__Badge__c</referenceTo>
     <relationshipLabel>Recommended Badges</relationshipLabel>
     <relationshipName>Recommended_Badges</relationshipName>
-    <relationshipOrder>1</relationshipOrder>
+    <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
     <trackTrending>false</trackTrending>
     <type>MasterDetail</type>
