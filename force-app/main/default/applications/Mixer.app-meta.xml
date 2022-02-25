@@ -17,6 +17,7 @@
     <tabs>trailheadapp__Badge__c</tabs>
     <tabs>trailheadapp__Trail__c</tabs>
     <tabs>trailheadapp__TrailheadSetup</tabs>
+    <tabs>Mix_Category__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Mixer_UtilityBar</utilityBar>
 </CustomApplication>

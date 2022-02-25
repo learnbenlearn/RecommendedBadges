@@ -6,6 +6,36 @@
         <visible>true</visible>
     </applicationVisibilities>
     <custom>false</custom>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Mix_Category__c.Exam__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Mix_Category__c.Weight__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <layoutAssignments>
+        <layout>Mix_Category__c-Exam Category Layout</layout>
+        <recordType>Mix_Category__c.Exam_Category</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Mix_Category__c-Mix Category Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Mix_Category__c-Mix Category Layout</layout>
+        <recordType>Mix_Category__c.Standard</recordType>
+    </layoutAssignments>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Mix_Category__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
     <objectPermissions>
         <allowCreate>true</allowCreate>
         <allowDelete>true</allowDelete>
@@ -15,6 +45,35 @@
         <object>Recommended_Badge_Mix__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Recommended_Badge__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Recommended_Trail__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
+        <recordType>Mix_Category__c.Exam_Category</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
+        <recordType>Mix_Category__c.Standard</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
     <tabVisibilities>
         <tab>Recommended_Badge_Mix__c</tab>
         <visibility>DefaultOn</visibility>

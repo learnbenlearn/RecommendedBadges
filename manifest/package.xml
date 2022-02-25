@@ -11,13 +11,22 @@
     </types>
 
     <types>
+        <members>Mix_Category__c</members>
         <members>Recommended_Badge_Mix__c</members>
+        <members>Recommended_Badge__c</members>
+        <members>Recommended_Trail__c</members>
         <name>CustomObject</name>
     </types>
 
     <types>
         <members>Recommended_Badge_Mix__c</members>
         <name>CustomTab</name>
+    </types>
+
+    <types>
+        <members>Mix_Category__c-Exam Category Layout</members>
+        <members>Mix_Category__c-Mix Category Layout</members>
+        <name>Layout</name>
     </types>
 
     <types>

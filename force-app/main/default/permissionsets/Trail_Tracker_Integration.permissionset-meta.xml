@@ -4,6 +4,16 @@
         <application>trailheadapp__Trailhead_Tracker</application>
         <visible>true</visible>
     </applicationVisibilities>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mix_Category__c.Exam__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mix_Category__c.Weight__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Trail Tracker Integration</label>
     <userPermissions>
