@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>MultipleDefaultBadgeMixException</members>
+        <members>RecommendedBadgeMixService</members>
+        <members>RecommendedBadgeMixTrigger_Helper</members>
+        <name>ApexClass</name>
+    </types>
+
+    <types>
+        <members>RecommendedBadgeMixTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+
+    <types>
         <members>mixerremovebgpreview</members>
         <name>ContentAsset</name>
     </types>
@@ -27,6 +39,12 @@
         <members>Mix_Category__c-Exam Category Layout</members>
         <members>Mix_Category__c-Mix Category Layout</members>
         <name>Layout</name>
+    </types>
+
+    <types>
+        <members>dropdown</members>
+        <members>recommendedBadgeMixContainer</members>
+        <name>LightningComponentBundle</name>
     </types>
 
     <types>
