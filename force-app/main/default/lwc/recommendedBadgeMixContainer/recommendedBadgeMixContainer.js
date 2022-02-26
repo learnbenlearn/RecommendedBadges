@@ -1,6 +1,19 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, wire } from 'lwc';
+
+import getSetupData from '@salesforce/apex/RecommendedBadgeMixService.getSetupData';
 
 export default class RecommendedBadgeMixContainer extends LightningElement {
+    randomBool;
+
+    @wire(getSetupData)
+    parseSetupData({error, data}) {
+        if(data) {
+            console.log(data);
+            this.randomBool = true;
+        } else if(error) {
+            console.error(error);
+        }
+    }
     
 
 

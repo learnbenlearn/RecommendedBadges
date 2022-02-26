@@ -13,11 +13,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>RecordTypeId</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Recommended_Badge_Mix__c</field>
+                <field>Default_Badge_Mix__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -95,56 +91,49 @@
             <sortOrder>6</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>ChangeRecordType</actionName>
+            <actionName>RecordShareHierarchy</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>7</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Share</actionName>
+            <actionName>Edit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>8</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>RecordShareHierarchy</actionName>
+            <actionName>Clone</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>9</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Edit</actionName>
+            <actionName>ChangeOwnerOne</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>10</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Clone</actionName>
+            <actionName>PrintableView</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>11</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>ChangeOwnerOne</actionName>
+            <actionName>Share</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>12</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>PrintableView</actionName>
+            <actionName>Delete</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>13</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Delete</actionName>
+            <actionName>ChangeRecordType</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>14</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
-        <fields>Trail_Name__c</fields>
-        <fields>Level__c</fields>
-        <relatedList>Recommended_Trail__c.Mix_Category__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>trailheadapp__Badge__c.NAME</fields>
-        <fields>trailheadapp__Badge__c.trailheadapp__Level__c</fields>
-        <fields>trailheadapp__Badge__c.trailheadapp__Type__c</fields>
-        <relatedList>Recommended_Badge__c.Mix_Category__c</relatedList>
+        <fields>NAME</fields>
+        <relatedList>Mix_Category__c.Recommended_Badge_Mix__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
@@ -152,7 +141,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h8c00000hYV4k</masterLabel>
+        <masterLabel>00h8c00000hIQDs</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

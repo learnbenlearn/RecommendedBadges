@@ -11,6 +11,8 @@
     <types>
         <members>BadgeTrigger</members>
         <members>RecommendedBadgeMixTrigger</members>
+        <members>RecommendedBadgeTrigger</members>
+        <members>RecommendedTrailTrigger</members>
         <members>TrailTrigger</members>
         <name>ApexTrigger</name>
     </types>
@@ -39,6 +41,18 @@
     </types>
 
     <types>
+        <members>Home_Page_Default</members>
+        <members>Mix_Category_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+
+    <types>
+        <members>Level</members>
+        <name>GlobalValueSet</name>
+    </types>
+
+    <types>
+        <members>Recommended_Badge_Mix__c-Recommended Badge Mix Layout</members>
         <members>Mix_Category__c-Exam Category Layout</members>
         <members>Mix_Category__c-Mix Category Layout</members>
         <name>Layout</name>
