@@ -1,5 +1,5 @@
 <!--
-  @description       : 
+  @description       : Container for a dropdown and treegrid to display recommended badge mixes.
   @author            : Ben Learn
   @group             : 
   @last modified on  : 02-26-2022
@@ -7,16 +7,14 @@
 -->
 <template>
     <div class="slds-box slds-theme_default slds-var-p-around_small">
-        <span>
-            <lightning-button label="Expand All"></lightning-button>
-            &nbsp; &nbsp;
-        
-            <lightning-button label="Collapse All"></lightning-button>
-        </span>
-
         <c-dropdown label={dropdownLabel} value={dropdownValue} options={dropdownOptions} ondropdownchange={handleDropdownChange}>
         </c-dropdown>
+        <br/>
 
+        <lightning-button label="Expand All" onclick={handleExpandAll}></lightning-button>
+        &nbsp; &nbsp;
+        <lightning-button label="Collapse All" onclick={handleCollapseAll}></lightning-button>
+        <br/>
         <br/>
 
         <template if:true={displayTable}>

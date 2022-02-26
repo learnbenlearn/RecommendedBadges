@@ -1,5 +1,5 @@
 /**
- * @description       : 
+ * @description       : Apex controller for recommendedBadgeMixContainer LWC.
  * @author            : Ben Learn
  * @group             : 
  * @last modified on  : 02-26-2022

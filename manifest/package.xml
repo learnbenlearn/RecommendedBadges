@@ -37,8 +37,18 @@
     </types>
 
     <types>
+        <members>Recommended_Badges</members>
+        <name>CustomSite</name>
+    </types>
+
+    <types>
         <members>Recommended_Badge_Mix__c</members>
         <name>CustomTab</name>
+    </types>
+
+    <types>
+        <members>Recommended_Badges1</members>
+        <name>ExperienceBundle</name>
     </types>
 
     <types>
@@ -69,6 +79,11 @@
     <types>
         <members>trailheadapp__Badge__c.Active_Badges</members>
         <name>ListView</name>
+    </types>
+
+    <types>
+        <members>Recommended Badges</members>
+        <name>Network</name>
     </types>
 
     <types>

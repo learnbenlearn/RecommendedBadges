@@ -103,8 +103,14 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     }
 
     handleDropdownChange(event) {
-        console.log(event);
-        console.log(event.detail);
         this.treegridData = this.treegridDataByMix[event.detail];
+    }
+
+    handleExpandAll() {
+        this.template.querySelector('c-treegrid').expandAll();
+    }
+
+    handleCollapseAll() {
+        this.template.querySelector('c-treegrid').collapseAll();
     }
 }
