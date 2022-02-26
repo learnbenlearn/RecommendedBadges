@@ -62,6 +62,7 @@
     <types>
         <members>dropdown</members>
         <members>recommendedBadgeMixContainer</members>
+        <members>treegrid</members>
         <name>LightningComponentBundle</name>
     </types>
 

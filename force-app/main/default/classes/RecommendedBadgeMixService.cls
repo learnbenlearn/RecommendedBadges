@@ -2,16 +2,16 @@
  * @description       : 
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 02-25-2022
+ * @last modified on  : 02-26-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class RecommendedBadgeMixService {
     @AuraEnabled(cacheable=true)
     public static SetupDataWrapper getSetupData() {
-        List<Mix_Category__c> mixCategories = [SELECT Name, Recommended_Badge_Mix__r.Name, (SELECT Name, Badge_Icon__c, Description__c,
-            Level__c, Trail_Name__c, URL__c FROM Recommended_Trails__r WHERE Archived__c = false), (SELECT Name, Badge_Icon__c, 
-            Badge_Name__c, Description__c, Level__c, Mix_Category__c, Type__c, URL__c FROM Recommended_Badges__r WHERE 
-            Archived__c = false) FROM Mix_Category__c];
+        List<Mix_Category__c> mixCategories = [SELECT Name, Recommended_Badge_Mix__r.Name, (SELECT Badge_Icon__c, Description__c,
+            Level__c, Trail_Name__c, URL__c FROM Recommended_Trails__r WHERE Archived__c = false), (SELECT Badge_Icon__c, 
+            Badge_Name__c, Description__c, Level__c, Type__c, URL__c FROM Recommended_Badges__r WHERE Archived__c = false) FROM 
+            Mix_Category__c ORDER BY Name];
 
         Map<String, List<Mix_Category__c>> categoriesByMix = new Map<String, List<Mix_Category__c>>();
 

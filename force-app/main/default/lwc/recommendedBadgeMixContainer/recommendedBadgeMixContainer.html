@@ -2,12 +2,27 @@
   @description       : 
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 02-25-2022
+  @last modified on  : 02-26-2022
   @last modified by  : Ben Learn
 -->
 <template>
     <div class="slds-box slds-theme_default slds-var-p-around_small">
+        <span>
+            <lightning-button label="Expand All"></lightning-button>
+            &nbsp; &nbsp;
+        
+            <lightning-button label="Collapse All"></lightning-button>
+        </span>
+
         <c-dropdown label={dropdownLabel} value={dropdownValue} options={dropdownOptions} ondropdownchange={handleDropdownChange}>
         </c-dropdown>
+
+        <br/>
+
+        <template if:true={displayTable}>
+            <div style="max-height:400px;overflow:scroll">
+                <c-treegrid columns={treegridColumns} treegrid-data={treegridData} key-field={keyField}></c-treegrid>
+            </div>
+        </template>
     </div>
 </template>

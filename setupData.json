@@ -1,0 +1,637 @@
+{
+  "categoriesByMix": {
+    "Recommended PDI Badges": [
+      {
+        "Name": "Salesforce Fundamentals",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmqAAC",
+        "Id": "a0C8c00000Xlw5XEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended PDI Badges",
+          "Id": "a098c00000sTmmqAAC"
+        }
+      },
+      {
+        "Name": "Data Modeling & Management",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmqAAC",
+        "Id": "a0C8c00000Xlw5YEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended PDI Badges",
+          "Id": "a098c00000sTmmqAAC"
+        }
+      },
+      {
+        "Name": "Process Automation & Logic",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmqAAC",
+        "Id": "a0C8c00000Xlw5ZEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended PDI Badges",
+          "Id": "a098c00000sTmmqAAC"
+        }
+      },
+      {
+        "Name": "User Interface",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmqAAC",
+        "Id": "a0C8c00000Xlw5aEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended PDI Badges",
+          "Id": "a098c00000sTmmqAAC"
+        }
+      },
+      {
+        "Name": "Testing, Debugging, & Deployment",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmqAAC",
+        "Id": "a0C8c00000Xlw5bEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended PDI Badges",
+          "Id": "a098c00000sTmmqAAC"
+        }
+      }
+    ],
+    "Recommended ADM Badges": [
+      {
+        "Name": "Configuration & Setup",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmuAAC",
+        "Id": "a0C8c00000Xlw5cEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended ADM Badges",
+          "Id": "a098c00000sTmmuAAC"
+        }
+      },
+      {
+        "Name": "Object Manager & Lightning App Builder",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmuAAC",
+        "Id": "a0C8c00000Xlw5dEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended ADM Badges",
+          "Id": "a098c00000sTmmuAAC"
+        }
+      },
+      {
+        "Name": "Sales & Marketing Applications",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmuAAC",
+        "Id": "a0C8c00000Xlw5eEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended ADM Badges",
+          "Id": "a098c00000sTmmuAAC"
+        }
+      },
+      {
+        "Name": "Service & Support Applications",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmuAAC",
+        "Id": "a0C8c00000Xlw5fEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended ADM Badges",
+          "Id": "a098c00000sTmmuAAC"
+        }
+      },
+      {
+        "Name": "Productivity & Collaboration",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmuAAC",
+        "Id": "a0C8c00000Xlw5gEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended ADM Badges",
+          "Id": "a098c00000sTmmuAAC"
+        }
+      },
+      {
+        "Name": "Data & Analytics Management",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmuAAC",
+        "Id": "a0C8c00000Xlw5hEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended ADM Badges",
+          "Id": "a098c00000sTmmuAAC"
+        }
+      },
+      {
+        "Name": "Workflow/Process Automation",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmuAAC",
+        "Id": "a0C8c00000Xlw5iEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended ADM Badges",
+          "Id": "a098c00000sTmmuAAC"
+        }
+      }
+    ],
+    "Recommended Trailhead Badges": [
+      {
+        "Name": "Administration",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4nEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Administration Projects",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4oEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Administrator Certification",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4pEAB",
+        "Recommended_Trails__r": [
+          {
+            "Mix_Category__c": "a0C8c00000Xlw4pEAB",
+            "Id": "a0B8c000010dZsIEAU",
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/administrator-certification-prep/6ef57661a95bd177a7ae901210969731_icon.png\" alt=\"Study for the Administrator Certification Exam\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Description__c": "Get ready for the administrator certification exam with interactive study tools.",
+            "Level__c": "Intermediate",
+            "Trail_Name__c": "Study for the Administrator Certification Exam",
+            "URL__c": "https://developer.salesforce.com/trailhead/trail/administrator-certification-prep/"
+          }
+        ],
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Advanced Administration",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4qEAB",
+        "Recommended_Badges__r": [
+          {
+            "Mix_Category__c": "a0C8c00000Xlw4qEAB",
+            "Id": "a0A8c00000evt4kEAA",
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/superbadges/superbadge_lightning_platform_app_builder/2c0777d1847dfb7dcb0430a20b7c1538_badge.png\" alt=\"App Customization Specialist\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Badge_Name__c": "App Customization Specialist",
+            "Description__c": "Put your click-not-code skills to work to build an app and unlock new functionality.",
+            "Type__c": "Superbadge",
+            "URL__c": "https://developer.salesforce.com/trailhead/super_badges/superbadge_lightning_platform_app_builder/"
+          }
+        ],
+        "Recommended_Trails__r": [
+          {
+            "Mix_Category__c": "a0C8c00000Xlw4qEAB",
+            "Id": "a0B8c000010dZsSEAU",
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/build-platform-apps-in-lightning-experience/1771124c5e2cc37bb3f72fc2249dab87_icon.png\" alt=\"Build Platform Apps in Lightning Experience\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Description__c": "Build and customize a recruiting app in Lightning Experience. No code required.",
+            "Level__c": "Intermediate",
+            "Trail_Name__c": "Build Platform Apps in Lightning Experience",
+            "URL__c": "https://developer.salesforce.com/trailhead/trail/build-platform-apps-in-lightning-experience/"
+          },
+          {
+            "Mix_Category__c": "a0C8c00000Xlw4qEAB",
+            "Id": "a0B8c000010dZsNEAU",
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/build-a-travel-approval-app/bd61b0dacb8f499c7cdc833e40bd29a6_icon.png\" alt=\"Build a Travel Approval App\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Description__c": "Build and customize a Lightning app for travel approvals using clicks, not code.",
+            "Level__c": "Beginner",
+            "Trail_Name__c": "Build a Travel Approval App",
+            "URL__c": "https://developer.salesforce.com/trailhead/trail/build-a-travel-approval-app/"
+          }
+        ],
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Advanced Apex",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4rEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Agile Frameworks",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4sEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Apex",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4tEAB",
+        "Recommended_Badges__r": [
+          {
+            "Mix_Category__c": "a0C8c00000Xlw4tEAB",
+            "Id": "a0A8c00000evt54EAA",
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/projects/quickstart-apex/4f48b764af00ed126ef1b274086d543d_badge.png\" alt=\"Quick Start: Apex\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Badge_Name__c": "Quick Start: Apex",
+            "Description__c": "Write your first Apex class.",
+            "Level__c": "Beginner",
+            "Type__c": "Project",
+            "URL__c": "https://developer.salesforce.com/trailhead/project/quickstart-apex/"
+          },
+          {
+            "Mix_Category__c": "a0C8c00000Xlw4tEAB",
+            "Id": "a0A8c00000evt4lEAA",
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/apex_basics_dotnet/1e5f89c30eeecfb43f98e50cfe4fac96_badge.png\" alt=\"Apex &amp; .NET Basics\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Badge_Name__c": "Apex & .NET Basics",
+            "Description__c": "Discover the basics of Apex and its similarities to programming with .NET.",
+            "Level__c": "Beginner",
+            "Type__c": "Module",
+            "URL__c": "https://developer.salesforce.com/trailhead/module/apex_basics_dotnet/"
+          },
+          {
+            "Mix_Category__c": "a0C8c00000Xlw4tEAB",
+            "Id": "a0A8c00000evt4zEAA",
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/platform_dev_basics/1032ac92bf6f133413628588c39308a7_badge.png\" alt=\"Platform Development Basics\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Badge_Name__c": "Platform Development Basics",
+            "Description__c": "Meet the tools and technologies that power development on the Salesforce platform.",
+            "Level__c": "Beginner",
+            "Type__c": "Module",
+            "URL__c": "https://developer.salesforce.com/trailhead/module/platform_dev_basics/"
+          },
+          {
+            "Mix_Category__c": "a0C8c00000Xlw4tEAB",
+            "Id": "a0A8c00000evt4qEAA",
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/projects/quick-start-apex-coding-for-admins/1af48ff522b28b87c9582a0a82d88029_badge.png\" alt=\"Quick Start: Apex Coding for Admins\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Badge_Name__c": "Quick Start: Apex Coding for Admins",
+            "Description__c": "Add Apex to your toolkit and build complex business processes with code.",
+            "Level__c": "Beginner",
+            "Type__c": "Project",
+            "URL__c": "https://developer.salesforce.com/trailhead/project/quick-start-apex-coding-for-admins/"
+          },
+          {
+            "Mix_Category__c": "a0C8c00000Xlw4tEAB",
+            "Id": "a0A8c00000evt4uEAA",
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/object-oriented-programming-for-admins/31b659f52b2d563a1083542d1d70607b_badge.png\" alt=\"Object-Oriented Programming for Admins\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Badge_Name__c": "Object-Oriented Programming for Admins",
+            "Description__c": "Enhance your Salesforce data with Apex classes, objects, DML, sets, and loops.",
+            "Level__c": "Intermediate",
+            "Type__c": "Module",
+            "URL__c": "https://developer.salesforce.com/trailhead/module/object-oriented-programming-for-admins/"
+          },
+          {
+            "Mix_Category__c": "a0C8c00000Xlw4tEAB",
+            "Id": "a0A8c00000evt4pEAA",
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/apex-basics-for-admins/cb318c4c53e69345a903fedd62fdee64_badge.png\" alt=\"Apex Basics for Admins\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Badge_Name__c": "Apex Basics for Admins",
+            "Description__c": "Learn the fundamentals of the Apex programming language.",
+            "Level__c": "Intermediate",
+            "Type__c": "Module",
+            "URL__c": "https://developer.salesforce.com/trailhead/module/apex-basics-for-admins/"
+          }
+        ],
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Apex & CRUD",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4uEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Apex Security",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4vEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "AppExchange",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4wEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Application Lifecycle & Development Models",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4xEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Chatter",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4zEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Custom Metadata Types & Custom Settings",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw50EAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Data Management",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw51EAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Data Model",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw52EAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Data Visualization",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw53EAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Deployment",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw54EAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Auditing",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw4yEAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Email Integration",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw55EAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Experience Cloud",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw56EAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Flows",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw57EAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Github",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw58EAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Governor Limits & Performance",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw59EAB",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Heroku & Salesforce Connect",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5AEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Integration",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5BEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "JavaScript",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5CEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Lightning Aura Components",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5DEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Lightning Design System",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5EEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Lightning Experience Development",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5FEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Lightning Web Components",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5GEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Package Based Development & SFDX",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5HEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Platform Developer I Certification",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5IEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Platform Events",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5JEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Presentation Fundamentals",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5KEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Process Automation",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5LEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Salesforce Introduction",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5MEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Salesforce Mobile App",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5NEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Sales Cloud",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5OEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Sandboxes",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5PEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Security",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5QEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Service Cloud",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5REAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Testing",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5SEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Trailhead",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5TEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Triggers",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5UEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Visual Studio Code",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5VEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      },
+      {
+        "Name": "Visualforce",
+        "Recommended_Badge_Mix__c": "a098c00000sTmmpAAC",
+        "Id": "a0C8c00000Xlw5WEAR",
+        "Recommended_Badge_Mix__r": {
+          "Name": "Recommended Trailhead Badges",
+          "Id": "a098c00000sTmmpAAC"
+        }
+      }
+    ]
+  },
+  "defaultMix": "Recommended Trailhead Badges"
+}
