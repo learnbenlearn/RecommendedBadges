@@ -5,6 +5,7 @@
         <members>MultipleDefaultBadgeMixException</members>
         <members>RecommendedBadgeMixService</members>
         <members>RecommendedBadgeMixTrigger_Helper</members>
+        <members>SetupDataWrapper</members>
         <name>ApexClass</name>
     </types>
 

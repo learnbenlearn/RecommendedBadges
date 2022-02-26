@@ -6,6 +6,10 @@ export default class Dropdown extends LightningElement {
     @api options;
 
     handleChange() {
+        const changeEvent = new CustomEvent('dropdownchange', {
+            detail: this.querySelector('lightning-combobox').value
+        });
 
+        this.dispatchEvent(changeEvent);
     }
 }
