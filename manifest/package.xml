@@ -47,6 +47,12 @@
     </types>
 
     <types>
+        <members>Public</members>
+        <members>Public/Products_Dashboard</members>
+        <name>Dashboard</name>
+    </types>
+
+    <types>
         <members>Recommended_Badges1</members>
         <name>ExperienceBundle</name>
     </types>
@@ -94,6 +100,17 @@
     <types>
         <members>Admin</members>
         <name>Profile</name>
+    </types>
+
+    <types>
+        <members>ProductsReports/Badges_with_Products_CO9</members>
+        <members>ProductsReports/Trails_with_Products_GXp</members>
+        <name>Report</name>
+    </types>
+
+    <types>
+        <members>ProductsReports</members>
+        <name>ReportFolder</name>
     </types>
     <version>52.0</version>
 </Package>

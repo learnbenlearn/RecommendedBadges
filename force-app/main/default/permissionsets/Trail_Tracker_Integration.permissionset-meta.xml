@@ -11,6 +11,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Mix_Category__c.Number_of_Badges__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Mix_Category__c.Number_of_Trails__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Mix_Category__c.Recommended_Badge_Mix__c</field>
         <readable>false</readable>
     </fieldPermissions>
