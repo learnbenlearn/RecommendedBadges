@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Mix_Categories_without_Badges</fullName>
+    <fullName>Mix_Categories_without_Badges_or_Trails</fullName>
     <columns>NAME</columns>
     <filterScope>Everything</filterScope>
     <filters>
@@ -8,5 +8,10 @@
         <operation>equals</operation>
         <value>0</value>
     </filters>
-    <label>Mix Categories without Badges</label>
+    <filters>
+        <field>Number_of_Trails__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Mix Categories without Badges or Trails</label>
 </ListView>

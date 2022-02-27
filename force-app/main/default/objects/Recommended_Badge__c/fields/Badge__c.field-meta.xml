@@ -3,6 +3,16 @@
     <fullName>Badge__c</fullName>
     <externalId>false</externalId>
     <label>Badge</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Only active badges can be added to a mix.</errorMessage>
+        <filterItems>
+            <field>trailheadapp__Badge__c.trailheadapp__Archived__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
     <referenceTo>trailheadapp__Badge__c</referenceTo>
     <relationshipLabel>Recommended Badges</relationshipLabel>
     <relationshipName>Recommended_Badges</relationshipName>

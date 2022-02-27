@@ -7,7 +7,7 @@
     <relationshipLabel>Recommended Badges</relationshipLabel>
     <relationshipName>Recommended_Badges</relationshipName>
     <relationshipOrder>1</relationshipOrder>
-    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
     <trackTrending>false</trackTrending>
     <type>MasterDetail</type>
     <writeRequiresMasterRead>false</writeRequiresMasterRead>

@@ -2,9 +2,8 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>52.0</apiVersion>
     <isExposed>true</isExposed>
-    <masterLabel>Recommended Badge Mixes</masterLabel>
+    <masterLabel>Storage Limits</masterLabel>
     <targets>
         <target>lightning__HomePage</target>
-        <target>lightningCommunity__Page</target>
     </targets>
 </LightningComponentBundle>

@@ -6,6 +6,7 @@
         <members>RecommendedBadgeMixService</members>
         <members>RecommendedBadgeMixTrigger_Helper</members>
         <members>SetupDataWrapper</members>
+        <members>StorageLimitsService</members>
         <name>ApexClass</name>
     </types>
 
@@ -29,6 +30,26 @@
     </types>
 
     <types>
+        <members>Badge_Product_to_Delete__mdt.Commerce_Cloud</members>
+        <members>Badge_Product_to_Delete__mdt.Education_Cloud</members>
+        <members>Badge_Product_to_Delete__mdt.Education_Cloud_Nonprofit_Cloud</members>
+        <members>Badge_Product_to_Delete__mdt.Financial_Services_Cloud</members>
+        <members>Badge_Product_to_Delete__mdt.Health_Cloud</members>
+        <members>Badge_Product_to_Delete__mdt.Mulesoft</members>
+        <members>Badge_Product_to_Delete__mdt.Nonprofit_Cloud</members>
+        <members>Badge_Product_to_Delete__mdt.Pardot</members>
+        <members>Badge_to_Keep__mdt.API_Basics</members>
+        <members>Badge_to_Keep__mdt.Data_Storage</members>
+        <members>Badge_to_Keep__mdt.Digital_Transformation</members>
+        <members>Badge_to_Keep__mdt.Pardot_Email_Sending</members>
+        <members>Badge_to_Keep__mdt.Student_Success_Hub</members>
+        <members>Badge_to_Keep__mdt.Volunteers_for_Salesforce</members>
+        <name>CustomMetadata</name>
+    </types>
+
+    <types>
+        <members>Badge_Product_to_Delete__mdt</members>
+        <members>Badge_to_Keep__mdt</members>
         <members>Mix_Category__c</members>
         <members>Recommended_Badge_Mix__c</members>
         <members>Recommended_Badge__c</members>
@@ -60,6 +81,7 @@
     <types>
         <members>Home_Page_Default</members>
         <members>Mix_Category_Record_Page</members>
+        <members>Recommended_Badge_Mix_Record_Page</members>
         <name>FlexiPage</name>
     </types>
 
@@ -69,15 +91,17 @@
     </types>
 
     <types>
-        <members>Recommended_Badge_Mix__c-Recommended Badge Mix Layout</members>
         <members>Mix_Category__c-Exam Category Layout</members>
         <members>Mix_Category__c-Mix Category Layout</members>
+        <members>Recommended_Badge_Mix__c-Recommended Badge Mix Layout</members>
+        <members>Recommended_Badge__c-Recommended Badge Layout</members>
         <name>Layout</name>
     </types>
 
     <types>
         <members>dropdown</members>
         <members>recommendedBadgeMixContainer</members>
+        <members>storageLimits</members>
         <members>treegrid</members>
         <name>LightningComponentBundle</name>
     </types>

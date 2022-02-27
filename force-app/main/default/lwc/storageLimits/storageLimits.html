@@ -1,0 +1,42 @@
+<!--
+  @description       : A generic component to display an org's data storage limit and consumption of that limit.
+  @author            : Ben Learn
+  @group             : 
+  @last modified on  : 02-27-2022
+  @last modified by  : Ben Learn
+-->
+<template>
+    <template if:true={displayCard}>
+        <lightning-card title={cardTitle}>
+            <div class="slds-grid slds-var-p-around_large">
+                <div class="slds-col slds-size_1-of-2">
+                    <b>
+                        <lightning-formatted-text value={valueLabel}></lightning-formatted-text>:
+                    </b>
+                    &nbsp;
+                    <lightning-formatted-number value={valueNum}></lightning-formatted-number>
+                    <br/>
+            
+                    <b>
+                        <lightning-formatted-text value={limitLabel}></lightning-formatted-text>:
+                    </b>
+                    &nbsp;
+                    <lightning-formatted-number value={limitNum}></lightning-formatted-number>
+                    <br/>
+
+                    <b>
+                        <lightning-formatted-text value={percentConsumedLabel}></lightning-formatted-text>:
+                    </b>
+                    &nbsp;
+                    <lightning-formatted-number value={percentConsumed} format-style="percent"></lightning-formatted-number>
+                </div>
+                
+                <div class="slds-col slds-size_1-of-4"></div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-progress-ring variant="warning" value={percentConsumedNum} size="large">
+                    </lightning-progress-ring>
+                </div>
+            </div>
+        </lightning-card>
+    </template>
+</template>
