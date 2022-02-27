@@ -1,3 +1,15 @@
+<!--
+  @description       : Container to hold functionality for clearing storage space in Recommended Badges org.
+  @author            : Ben Learn
+  @group             : 
+  @last modified on  : 02-27-2022
+  @last modified by  : Ben Learn
+-->
 <template>
-    
+  <div class="slds-var-p-around_medium slds-theme_default slds-box">
+    <c-storage-limits></c-storage-limits>
+    <br/>
+
+    <lightning-button label="Clear Storage" onclick={handleClearStorage} variant="destructive"></lightning-button>
+  </div>
 </template>

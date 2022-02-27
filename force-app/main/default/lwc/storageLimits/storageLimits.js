@@ -1,9 +1,12 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 import getStorageLimitInfo from '@salesforce/apex/StorageLimitsService.getStorageLimitInfo';
 
+const DATA_STORAGE_URL = '/lightning/setup/CompanyResourceDisk/home';
+
 export default class StorageLimits extends LightningElement {
     cardTitle;
+    dataStorageUrl = DATA_STORAGE_URL;
     displayCard;
     limitLabel = 'Limit';
     limitNum;
@@ -27,5 +30,9 @@ export default class StorageLimits extends LightningElement {
         this.percentConsumedNum = parseInt((this.percentConsumed) * 100);
 
         this.displayCard = true;
+    }
+
+    @api refreshStorageLimitInfo() {
+        this.fetchStorageLimitInfo();
     }
 }

@@ -6,6 +6,7 @@
         <members>RecommendedBadgeMixService</members>
         <members>RecommendedBadgeMixTrigger_Helper</members>
         <members>SetupDataWrapper</members>
+        <members>ScheduledStorageClean</members>
         <members>StorageLimitsService</members>
         <name>ApexClass</name>
     </types>
@@ -102,6 +103,7 @@
         <members>dropdown</members>
         <members>recommendedBadgeMixContainer</members>
         <members>storageLimits</members>
+        <members>storageManagementContainer</members>
         <members>treegrid</members>
         <name>LightningComponentBundle</name>
     </types>
