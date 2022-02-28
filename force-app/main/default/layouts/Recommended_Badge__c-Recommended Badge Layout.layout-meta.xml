@@ -87,6 +87,10 @@
                 <behavior>Edit</behavior>
                 <field>Category_Rank__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Time_Estimate_Minutes__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>

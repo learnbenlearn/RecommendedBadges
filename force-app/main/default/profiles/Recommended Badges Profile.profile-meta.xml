@@ -156,6 +156,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Recommended_Badge__c.Time_Estimate_Minutes__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Recommended_Badge__c.Time_Estimate__c</field>
         <readable>false</readable>
     </fieldPermissions>
