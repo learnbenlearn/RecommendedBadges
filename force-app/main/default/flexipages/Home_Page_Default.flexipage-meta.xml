@@ -121,6 +121,11 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>storageManagementContainer</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>tabs</name>
                     <value>Facet-165b843e-65dd-4de4-adad-717e9605a349</value>

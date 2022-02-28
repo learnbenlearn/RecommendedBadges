@@ -125,6 +125,7 @@
 
     <types>
         <members>Admin</members>
+        <members>Recommended Badges Profile</members>
         <name>Profile</name>
     </types>
 

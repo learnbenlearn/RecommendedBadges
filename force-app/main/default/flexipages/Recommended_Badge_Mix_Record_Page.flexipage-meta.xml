@@ -79,6 +79,11 @@
                 <fieldItem>Record.Default_Badge_Mix__c</fieldItem>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Private_Mix__c</fieldItem>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-28ca7302-a55a-4864-accb-908d71423c4c</name>
         <type>Facet</type>
     </flexiPageRegions>

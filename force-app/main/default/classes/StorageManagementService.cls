@@ -43,20 +43,24 @@ public with sharing class StorageManagementService {
             }
         }
 
+        List<trailheadapp__Badge__c> archivedBadges = [SELECT Id FROM trailheadapp__Badge__c WHERE trailheadapp__Archived__c = true];
+
         List<trailheadapp__Badge__c> badgesToDelete = [SELECT Id FROM trailheadapp__Badge__c WHERE trailheadapp__Products__c 
-            IN :productsToDeleteMap.get('badges') AND Name NOT IN :badgesToKeepNames];
+            IN :productsToDeleteMap.get('badges') AND Name NOT IN :badgesToKeepNames AND Id NOT IN :archivedBadges];
 
         List<trailheadapp__Trail__c> trailsToDelete = [SELECT Id FROM trailheadapp__Trail__c WHERE trailheadapp__Products__c
             IN :productsToDeleteMap.get('trails')];
             
         List<trailheadapp__Debug_Log__c> debugLogsToDelete = [SELECT Id FROM trailheadapp__Debug_Log__c];
 
+        delete archivedBadges;
         delete badgesToDelete;
         delete trailsToDelete;
         delete debugLogsToDelete;
 
-        Database.emptyRecycleBin(badgesToDelete);
-        Database.emptyRecycleBin(trailsToDelete);
-        Database.emptyRecycleBin(debugLogsToDelete);
+        if(archivedBadges.size() > 0) Database.emptyRecycleBin(archivedBadges);
+        if(badgesToDelete.size() > 0) Database.emptyRecycleBin(badgesToDelete);
+        if(trailsToDelete.size() > 0) Database.emptyRecycleBin(trailsToDelete);
+        if(debugLogsToDelete.size() > 0) Database.emptyRecycleBin(debugLogsToDelete);
     }
 }

@@ -36,6 +36,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Recommended_Badge_Mix__c.Private_Mix__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Recommended_Badge__c.Add_to_Recommended_Badges_Mix__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -52,6 +57,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Recommended_Badge__c.Badge_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Recommended_Badge__c.Category_Rank__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -87,6 +97,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Recommended_Badge__c.Products__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Recommended_Badge__c.Saved_by_CMT__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

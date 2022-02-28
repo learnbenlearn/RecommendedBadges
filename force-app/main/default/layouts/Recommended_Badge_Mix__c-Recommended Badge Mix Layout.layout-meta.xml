@@ -15,6 +15,10 @@
                 <behavior>Edit</behavior>
                 <field>Default_Badge_Mix__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Private_Mix__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

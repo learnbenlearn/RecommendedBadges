@@ -22,7 +22,15 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ScheduledStorageClean</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SetupDataWrapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>StorageLimitsService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
@@ -73,6 +81,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Recommended_Badge_Mix__c.Private_Mix__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Recommended_Badge__c.Add_to_Recommended_Badges_Mix__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -89,6 +102,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Recommended_Badge__c.Badge_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Recommended_Badge__c.Category_Rank__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -124,6 +142,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Recommended_Badge__c.Products__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Recommended_Badge__c.Saved_by_CMT__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

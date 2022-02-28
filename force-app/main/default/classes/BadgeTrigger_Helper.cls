@@ -2,7 +2,7 @@
  * @description       : A catchall trigger helper for TrailTrigger, BadgeTrigger, RecommendedBadgeTrigger, and RecommendedTrailTrigger.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 02-25-2022
+ * @last modified on  : 02-28-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class BadgeTrigger_Helper {
@@ -56,8 +56,9 @@ public without sharing class BadgeTrigger_Helper {
             }
         }
 
-        String queryString = 'SELECT ' + parentObjectInfo.relationshipFieldName + ', ' + String.join(fieldsToCheck, ', ') + ' FROM ' + parentObjectInfo.childJunctionObjectType +
-            ' WHERE ' + parentObjectInfo.relationshipFieldName + ' IN :modifiedParentIds';
+        String queryString = 'SELECT ' + parentObjectInfo.relationshipFieldName + ', ' + 
+            String.join(parentObjectInfo.parentJunctionPicklistMap.values(), ', ') + ' FROM ' + 
+            parentObjectInfo.childJunctionObjectType + ' WHERE ' + parentObjectInfo.relationshipFieldName + ' IN :modifiedParentIds';
 
         List<sObject> junctionRecordsToUpdate = Database.query(queryString);
 
