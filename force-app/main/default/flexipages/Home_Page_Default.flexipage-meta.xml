@@ -4,6 +4,7 @@
         <itemInstances>
             <componentInstance>
                 <componentName>recommendedBadgeMixContainer</componentName>
+                <identifier>c_recommendedBadgeMixContainer1</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-c0e65231-74d1-40df-a0c1-63882c4a0f14</name>
@@ -21,6 +22,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>desktopDashboards:embeddedDashboard</componentName>
+                <identifier>desktopDashboards_embeddedDashboard1</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-a8910c9b-a18f-4e67-9349-e09e405c1a25</name>
@@ -42,6 +44,7 @@
                     <value>Mixes</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab5</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -59,6 +62,7 @@
                     <value>Products Dashboard</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab4</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-f0fa2332-3c0f-4399-963c-02af8c6f4205</name>
@@ -72,6 +76,7 @@
                     <value>Facet-f0fa2332-3c0f-4399-963c-02af8c6f4205</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
+                <identifier>flexipage_tabset2</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -92,6 +97,7 @@
         <itemInstances>
             <componentInstance>
                 <componentName>home:recentRecordContainer</componentName>
+                <identifier>home_recentRecordContainer</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-01a42686-e72e-402f-908d-e22d41031be4</name>
@@ -113,6 +119,7 @@
                     <value>Recent</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab3</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-165b843e-65dd-4de4-adad-717e9605a349</name>
@@ -122,6 +129,7 @@
         <itemInstances>
             <componentInstance>
                 <componentName>storageManagementContainer</componentName>
+                <identifier>c_storageManagementContainer1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -131,6 +139,7 @@
                     <value>Facet-165b843e-65dd-4de4-adad-717e9605a349</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
+                <identifier>flexipage_tabset1</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

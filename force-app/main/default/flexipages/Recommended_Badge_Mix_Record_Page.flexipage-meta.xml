@@ -24,6 +24,7 @@
                     <value>3</value>
                 </componentInstanceProperties>
                 <componentName>force:highlightsPanel</componentName>
+                <identifier>force_highlightsPanel</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -54,6 +55,7 @@
                     <value>true</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListSingleContainer</componentName>
+                <identifier>force_relatedListSingleContainer1</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -68,6 +70,7 @@
                     <value>required</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Name</fieldItem>
+                <identifier>RecordNameField1</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -77,11 +80,13 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Default_Badge_Mix__c</fieldItem>
+                <identifier>RecordDefault_Badge_Mix_cField1</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldItem>Record.Private_Mix__c</fieldItem>
+                <identifier>RecordPrivate_Mix_cField1</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-28ca7302-a55a-4864-accb-908d71423c4c</name>
@@ -95,6 +100,7 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.OwnerId</fieldItem>
+                <identifier>RecordOwnerIdField1</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -104,6 +110,7 @@
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.CreatedById</fieldItem>
+                <identifier>RecordCreatedByIdField1</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-4a938110-d593-4b07-8ada-9cb2afdd8dfd</name>
@@ -117,6 +124,7 @@
                     <value>Facet-28ca7302-a55a-4864-accb-908d71423c4c</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -126,6 +134,7 @@
                     <value>Facet-4a938110-d593-4b07-8ada-9cb2afdd8dfd</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column2</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-dcecb2ef-6a6a-4f66-b315-6a45469aca3f</name>
@@ -143,11 +152,13 @@
                     <value>Information</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection1</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentName>force:recordDetailPanelMobile</componentName>
+                <identifier>force_recordDetailPanelMobile1</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

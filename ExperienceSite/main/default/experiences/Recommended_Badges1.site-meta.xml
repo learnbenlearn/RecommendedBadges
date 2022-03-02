@@ -2,5 +2,5 @@
 <ExperienceBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <label>Recommended Badges</label>
     <type>ChatterNetworkPicasso</type>
-    <urlPathPrefix>badges</urlPathPrefix>
+    <urlPathPrefix></urlPathPrefix>
 </ExperienceBundle>
