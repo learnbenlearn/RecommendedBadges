@@ -64,6 +64,7 @@
     </types>
 
     <types>
+        <members>Mix_Category__c</members>
         <members>Recommended_Badge_Mix__c</members>
         <name>CustomTab</name>
     </types>
@@ -81,6 +82,7 @@
 
     <types>
         <members>Home_Page_Default</members>
+        <members>Mixer_UtilityBar</members>
         <members>Mix_Category_Record_Page</members>
         <members>Recommended_Badge_Mix_Record_Page</members>
         <name>FlexiPage</name>
@@ -140,6 +142,13 @@
         <members>ProductsReports</members>
         <members>TempReports</members>
         <name>ReportFolder</name>
+    </types>
+
+    <types>
+        <members>Communities</members>
+        <members>ExperienceBundle</members>
+        <members>Language</members>
+        <name>Settings</name>
     </types>
     <version>52.0</version>
 </Package>

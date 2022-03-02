@@ -1,8 +1,17 @@
 {
   "orgName": "Demo company",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "features": ["EnableSetPasswordInApi", "Communities", "Sites"],
   "settings": {
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    },
+    "experienceBundleSettings": {
+      "enableExperienceBundleMetadata": true
+    },
+    "languageSettings": {
+      "enableTranslationWorkbench": true
+    },
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
