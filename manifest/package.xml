@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>ChangePasswordController</members>
+        <members>ChangePasswordControllerTest</members>
+        <members>CommunitiesLandingController</members>
+        <members>CommunitiesLoginController</members>
+        <members>CommunitiesLoginControllerTest</members>
+        <members>CommunitiesSelfRegConfirmController</members>
+        <members>CommunitiesSelfRegConfirmControllerTest</members>
+        <members>CommunitiesSelfRegController</members>
+        <members>CommunitiesSelfRegControllerTest</members>
+        <members>ForgotPasswordController</members>
+        <members>ForgotPasswordControllerTest</members>
+        <members>LightningForgotPasswordController</members>
+        <members>LightningForgotPasswordControllerTest</members>
+        <members>LightningLoginFormController</members>
+        <members>LightningLoginFormControllerTest</members>
+        <members>LightningSelfRegisterController</members>
+        <members>LightningSelfRegisterControllerTest</members>
+        <members>MicrobatchSelfRegController</members>
+        <members>MicrobatchSelfRegControllerTest</members>
+        <members>MyProfilePageController</members>
+        <members>MyProfilePageControllerTest</members>
+        <members>SiteLoginController</members>
+        <members>SiteLoginControllerTest</members>
+        <members>SiteRegisterController</members>
+        <members>SiteRegisterControllerTest</members>
+
         <members>BadgeTrigger_Helper</members>
         <members>MultipleDefaultBadgeMixException</members>
         <members>RecommendedBadgeMixService</members>
@@ -12,12 +38,57 @@
     </types>
 
     <types>
+        <members>SiteFooter</members>
+        <members>SiteHeader</members>
+        <members>SiteLogin</members>
+        <members>SitePoweredBy</members>
+        <name>ApexComponent</name>
+    </types>
+
+
+    <types>
+        <members>AnswersHome</members>
+        <members>BandwidthExceeded</members>
+        <members>ChangePassword</members>
+        <members>CommunitiesLanding</members>
+        <members>CommunitiesLogin</members>
+        <members>CommunitiesSelfReg</members>
+        <members>CommunitiesSelfRegConfirm</members>
+        <members>CommunitiesTemplate</members>
+        <members>Exception</members>
+        <members>FileNotFound</members>
+        <members>ForgotPassword</members>
+        <members>ForgotPasswordConfirm</members>
+        <members>IdeasHome</members>
+        <members>InMaintenance</members>
+        <members>MicrobatchSelfReg</members>
+        <members>MyProfilePage</members>
+        <members>SiteLogin</members>
+        <members>SiteRegister</members>
+        <members>SiteRegisterConfirm</members>
+        <members>SiteTemplate</members>
+        <members>StdExceptionTemplate</members>
+        <members>Unauthorized</members>
+        <members>UnderConstruction</members>
+        <name>ApexPage</name>
+    </types>
+
+    <types>
         <members>BadgeTrigger</members>
         <members>RecommendedBadgeMixTrigger</members>
         <members>RecommendedBadgeTrigger</members>
         <members>RecommendedTrailTrigger</members>
         <members>TrailTrigger</members>
         <name>ApexTrigger</name>
+    </types>
+
+    <types>
+        <members>forgotPassword</members>
+        <members>loginForm</members>
+        <members>selfRegister</members>
+        <members>setExpId</members>
+        <members>setStartUrl</members>
+        <name>AuraDefinitionBundle</name>
     </types>
 
     <types>
@@ -64,6 +135,7 @@
     </types>
 
     <types>
+        <members>Mix_Category__c</members>
         <members>Recommended_Badge_Mix__c</members>
         <name>CustomTab</name>
     </types>
@@ -81,6 +153,7 @@
 
     <types>
         <members>Home_Page_Default</members>
+        <members>Mixer_UtilityBar</members>
         <members>Mix_Category_Record_Page</members>
         <members>Recommended_Badge_Mix_Record_Page</members>
         <name>FlexiPage</name>
@@ -125,7 +198,7 @@
 
     <types>
         <members>Admin</members>
-        <members>Recommended Badges Profile</members>
+        <!--<members>Recommended Badges Profile</members>-->
         <name>Profile</name>
     </types>
 
@@ -141,5 +214,12 @@
         <members>TempReports</members>
         <name>ReportFolder</name>
     </types>
-    <version>52.0</version>
+
+    <types>
+        <members>Communities</members>
+        <members>ExperienceBundle</members>
+        <members>Language</members>
+        <name>Settings</name>
+    </types>
+    <version>54.0</version>
 </Package>

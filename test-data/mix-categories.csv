@@ -1,0 +1,71 @@
+TEST_EXTERNAL_ID__C,NAME,EXAM__C,WEIGHT__C,RECOMMENDED_BADGE_MIX__C
+a0C8c00000Xm12FEAR,Leadership,,,a098c00000sTtpRAAS
+a0C8c00000Xm0tEEAR,OmniStudio,,,a098c00000sTtpRAAS
+a0C8c00000Xm0szEAB,Tableau,,,a098c00000sTtpRAAS
+a0C8c00000Xm0t0EAB,Tableau Projects,,,a098c00000sTtpRAAS
+a0C8c00000Xm0t1EAB,Industries,,,a098c00000sTtpRAAS
+a0C8c00000Xm12AEAR,Other,,,a098c00000sTtpRAAS
+a0C8c00000Xm0t4EAB,Potential Recommended Projects,,,a098c00000sTtpRAAS
+a0C8c00000Xm0t5EAB,Quick Looks,,,a098c00000sTtpRAAS
+a0C8c00000Xm0t6EAB,Marketing Cloud,,,a098c00000sTtpRAAS
+a0C8c00000Xm0t9EAB,Just for Ben,,,a098c00000sTtpRAAS
+a0C8c00000Xm12KEAR,Mobile Development,,,a098c00000sTtpRAAS
+a0C8c00000Xm0suEAB,Potential Recommended Badges,,,a098c00000sTtpRAAS
+a0C8c00000Xlw5XEAR,Salesforce Fundamentals,PDI,7,a098c00000sTmmqAAC
+a0C8c00000Xlw5YEAR,Data Modeling & Management,PDI,13,a098c00000sTmmqAAC
+a0C8c00000Xlw5ZEAR,Process Automation & Logic,PDI,40,a098c00000sTmmqAAC
+a0C8c00000Xlw5aEAB,User Interface,PDI,23,a098c00000sTmmqAAC
+a0C8c00000Xlw5bEAB,"Testing, Debugging, & Deployment",PDI,17,a098c00000sTmmqAAC
+a0C8c00000Xlw5cEAB,Configuration & Setup,ADM,20,a098c00000sTmmuAAC
+a0C8c00000Xlw5dEAB,Object Manager & Lightning App Builder,ADM,20,a098c00000sTmmuAAC
+a0C8c00000Xlw5eEAB,Sales & Marketing Applications,ADM,12,a098c00000sTmmuAAC
+a0C8c00000Xlw5fEAB,Service & Support Applications,ADM,11,a098c00000sTmmuAAC
+a0C8c00000Xlw5gEAB,Productivity & Collaboration,ADM,7,a098c00000sTmmuAAC
+a0C8c00000Xlw5hEAB,Data & Analytics Management,ADM,14,a098c00000sTmmuAAC
+a0C8c00000Xlw5iEAB,Workflow/Process Automation,ADM,16,a098c00000sTmmuAAC
+a0C8c00000Xlw4nEAB,Administration,,,a098c00000sTmmpAAC
+a0C8c00000Xlw4oEAB,Administration Projects,,,a098c00000sTmmpAAC
+a0C8c00000Xlw4pEAB,Administrator Certification,,,a098c00000sTmmpAAC
+a0C8c00000Xlw4qEAB,Advanced Administration,,,a098c00000sTmmpAAC
+a0C8c00000Xlw4rEAB,Advanced Apex,,,a098c00000sTmmpAAC
+a0C8c00000Xlw4sEAB,Agile Frameworks,,,a098c00000sTmmpAAC
+a0C8c00000Xlw4tEAB,Apex,,,a098c00000sTmmpAAC
+a0C8c00000Xlw4uEAB,Apex & CRUD,,,a098c00000sTmmpAAC
+a0C8c00000Xlw4vEAB,Apex Security,,,a098c00000sTmmpAAC
+a0C8c00000Xlw4wEAB,AppExchange,,,a098c00000sTmmpAAC
+a0C8c00000Xlw4xEAB,Application Lifecycle & Development Models,,,a098c00000sTmmpAAC
+a0C8c00000Xlw4zEAB,Chatter,,,a098c00000sTmmpAAC
+a0C8c00000Xlw50EAB,Custom Metadata Types & Custom Settings,,,a098c00000sTmmpAAC
+a0C8c00000Xlw51EAB,Data Management,,,a098c00000sTmmpAAC
+a0C8c00000Xlw52EAB,Data Model,,,a098c00000sTmmpAAC
+a0C8c00000Xlw53EAB,Data Visualization,,,a098c00000sTmmpAAC
+a0C8c00000Xlw54EAB,Deployment,,,a098c00000sTmmpAAC
+a0C8c00000Xlw4yEAB,Auditing,,,a098c00000sTmmpAAC
+a0C8c00000Xlw55EAB,Email Integration,,,a098c00000sTmmpAAC
+a0C8c00000Xlw56EAB,Experience Cloud,,,a098c00000sTmmpAAC
+a0C8c00000Xlw57EAB,Flows,,,a098c00000sTmmpAAC
+a0C8c00000Xlw58EAB,Github,,,a098c00000sTmmpAAC
+a0C8c00000Xlw59EAB,Governor Limits & Performance,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5AEAR,Heroku & Salesforce Connect,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5BEAR,Integration,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5CEAR,JavaScript,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5DEAR,Lightning Aura Components,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5EEAR,Lightning Design System,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5FEAR,Lightning Experience Development,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5GEAR,Lightning Web Components,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5HEAR,Package Based Development & SFDX,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5IEAR,Platform Developer I Certification,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5JEAR,Platform Events,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5KEAR,Presentation Fundamentals,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5LEAR,Process Automation,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5MEAR,Salesforce Introduction,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5NEAR,Salesforce Mobile App,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5OEAR,Sales Cloud,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5PEAR,Sandboxes,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5QEAR,Security,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5REAR,Service Cloud,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5SEAR,Testing,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5TEAR,Trailhead,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5UEAR,Triggers,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5VEAR,Visual Studio Code,,,a098c00000sTmmpAAC
+a0C8c00000Xlw5WEAR,Visualforce,,,a098c00000sTmmpAAC

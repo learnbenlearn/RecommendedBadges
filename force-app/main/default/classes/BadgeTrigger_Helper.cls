@@ -2,7 +2,7 @@
  * @description       : A catchall trigger helper for TrailTrigger, BadgeTrigger, RecommendedBadgeTrigger, and RecommendedTrailTrigger.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 02-28-2022
+ * @last modified on  : 03-03-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class BadgeTrigger_Helper {
@@ -94,5 +94,18 @@ public without sharing class BadgeTrigger_Helper {
                 newRecord.put(picklists.get(String.valueOf(parentPicklist)), parentPicklistValue);
             }
         }
+    }
+
+    public static void createCMTDeleteTasks(List<Recommended_Badge__c> recommendedBadges) {
+        List<Task> cmtDeleteTasks = new List<Task>();
+
+        for(REcommended_Badge__c recommendedBadge : recommendedBadges) {
+            if(recommendedBadge.Saved_By_CMT__c) {
+                Task t = new Task(Priority='Normal', Status='New', Subject='Delete CMT Record for ' + recommendedBadge.Badge_Name__c);
+                cmtDeleteTasks.add(t);
+            }
+        }
+
+        insert cmtDeleteTasks;
     }
 }
