@@ -1,0 +1,588 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef1"
+            },
+            "Name": "Potential Recommended Badges",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef2"
+            },
+            "Name": "Mobile Development",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef3"
+            },
+            "Name": "Leadership",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef4"
+            },
+            "Name": "OmniStudio",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef5"
+            },
+            "Name": "Tableau",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef6"
+            },
+            "Name": "Tableau Projects",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef7"
+            },
+            "Name": "Industries",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef8"
+            },
+            "Name": "Other",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef9"
+            },
+            "Name": "Just for Ben",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef10"
+            },
+            "Name": "Marketing Cloud",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef11"
+            },
+            "Name": "Quick Looks",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef12"
+            },
+            "Name": "Potential Recommended Projects",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef13"
+            },
+            "Name": "Data & Analytics Management",
+            "Exam__c": "ADM",
+            "Weight__c": 14,
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef2"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef14"
+            },
+            "Name": "Workflow/Process Automation",
+            "Exam__c": "ADM",
+            "Weight__c": 16,
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef2"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef15"
+            },
+            "Name": "Object Manager & Lightning App Builder",
+            "Exam__c": "ADM",
+            "Weight__c": 20,
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef2"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef16"
+            },
+            "Name": "Sales & Marketing Applications",
+            "Exam__c": "ADM",
+            "Weight__c": 12,
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef2"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef17"
+            },
+            "Name": "Service & Support Applications",
+            "Exam__c": "ADM",
+            "Weight__c": 11,
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef2"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef18"
+            },
+            "Name": "Productivity & Collaboration",
+            "Exam__c": "ADM",
+            "Weight__c": 7,
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef2"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef19"
+            },
+            "Name": "Configuration & Setup",
+            "Exam__c": "ADM",
+            "Weight__c": 20,
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef2"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef20"
+            },
+            "Name": "Visualforce",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef21"
+            },
+            "Name": "Visual Studio Code",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef22"
+            },
+            "Name": "Triggers",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef23"
+            },
+            "Name": "Trailhead",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef24"
+            },
+            "Name": "Testing",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef25"
+            },
+            "Name": "Service Cloud",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef26"
+            },
+            "Name": "Security",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef27"
+            },
+            "Name": "Sandboxes",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef28"
+            },
+            "Name": "Sales Cloud",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef29"
+            },
+            "Name": "Salesforce Mobile App",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef30"
+            },
+            "Name": "Salesforce Introduction",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef31"
+            },
+            "Name": "Process Automation",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef32"
+            },
+            "Name": "Presentation Fundamentals",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef33"
+            },
+            "Name": "Platform Events",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef34"
+            },
+            "Name": "Platform Developer I Certification",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef35"
+            },
+            "Name": "Package Based Development & SFDX",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef36"
+            },
+            "Name": "Lightning Web Components",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef37"
+            },
+            "Name": "Lightning Experience Development",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef38"
+            },
+            "Name": "Lightning Design System",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef39"
+            },
+            "Name": "Lightning Aura Components",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef40"
+            },
+            "Name": "JavaScript",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef41"
+            },
+            "Name": "Integration",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef42"
+            },
+            "Name": "Heroku & Salesforce Connect",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef43"
+            },
+            "Name": "Governor Limits & Performance",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef44"
+            },
+            "Name": "Github",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef45"
+            },
+            "Name": "Flows",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef46"
+            },
+            "Name": "Experience Cloud",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef47"
+            },
+            "Name": "Email Integration",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef48"
+            },
+            "Name": "Auditing",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef49"
+            },
+            "Name": "Deployment",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef50"
+            },
+            "Name": "Data Visualization",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef51"
+            },
+            "Name": "Data Model",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef52"
+            },
+            "Name": "Data Management",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef53"
+            },
+            "Name": "Custom Metadata Types & Custom Settings",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef54"
+            },
+            "Name": "Chatter",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef55"
+            },
+            "Name": "Application Lifecycle & Development Models",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef56"
+            },
+            "Name": "AppExchange",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef57"
+            },
+            "Name": "Apex Security",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef58"
+            },
+            "Name": "Apex & CRUD",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef59"
+            },
+            "Name": "Apex",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef60"
+            },
+            "Name": "Agile Frameworks",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef61"
+            },
+            "Name": "Advanced Apex",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef62"
+            },
+            "Name": "Advanced Administration",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef63"
+            },
+            "Name": "Administrator Certification",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef64"
+            },
+            "Name": "Administration Projects",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef65"
+            },
+            "Name": "Administration",
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef66"
+            },
+            "Name": "Testing, Debugging, & Deployment",
+            "Exam__c": "PDI",
+            "Weight__c": 17,
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef4"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef67"
+            },
+            "Name": "User Interface",
+            "Exam__c": "PDI",
+            "Weight__c": 23,
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef4"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef68"
+            },
+            "Name": "Salesforce Fundamentals",
+            "Exam__c": "PDI",
+            "Weight__c": 7,
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef4"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef69"
+            },
+            "Name": "Data Modeling & Management",
+            "Exam__c": "PDI",
+            "Weight__c": 13,
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef4"
+        },
+        {
+            "attributes": {
+                "type": "Mix_Category__c",
+                "referenceId": "Mix_Category__cRef70"
+            },
+            "Name": "Process Automation & Logic",
+            "Exam__c": "PDI",
+            "Weight__c": 40,
+            "Recommended_Badge_Mix__c": "@Recommended_Badge_Mix__cRef4"
+        }
+    ]
+}

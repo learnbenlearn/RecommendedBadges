@@ -1,8 +1,7 @@
 {
   "packageDirectories": [
     {
-      "path": "ExperienceSite",
-      "default": true
+      "path": "force-app"
     }
   ],
   "name": "RecommendedBadges",

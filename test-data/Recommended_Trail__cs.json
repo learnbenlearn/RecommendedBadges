@@ -1,0 +1,123 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Recommended_Trail__c",
+                "referenceId": "Recommended_Trail__cRef1"
+            },
+            "Name": "RT-0000006",
+            "Trail__c": "@trailheadapp__Trail__cRef45",
+            "Archived__c": false,
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/build-apps-lightning-web-components-open-source/3a0e02d79f5f85fb2a84f704c336d1a4_icon.png\" alt=\"Build Apps with Lightning Web Components Open Source\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Description__c": "Explore an open source JavaScript framework you can use to build on Salesforce and any other platform.",
+            "Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/build-apps-lightning-web-components-open-source/3a0e02d79f5f85fb2a84f704c336d1a4_icon.png",
+            "Products__c": "Lightning",
+            "Roles__c": "Developer",
+            "URL__c": "https://developer.salesforce.com/trailhead/trail/build-apps-lightning-web-components-open-source/",
+            "Level__c": "Beginner",
+            "Trail_Name__c": "Build Apps with Lightning Web Components Open Source"
+        },
+        {
+            "attributes": {
+                "type": "Recommended_Trail__c",
+                "referenceId": "Recommended_Trail__cRef2"
+            },
+            "Name": "RT-0000002",
+            "Trail__c": "@trailheadapp__Trail__cRef61",
+            "Archived__c": false,
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/build-a-travel-approval-app/bd61b0dacb8f499c7cdc833e40bd29a6_icon.png\" alt=\"Build a Travel Approval App\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Description__c": "Build and customize a Lightning app for travel approvals using clicks, not code.",
+            "Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/build-a-travel-approval-app/bd61b0dacb8f499c7cdc833e40bd29a6_icon.png",
+            "Products__c": "Salesforce Platform",
+            "Roles__c": "Admin",
+            "URL__c": "https://developer.salesforce.com/trailhead/trail/build-a-travel-approval-app/",
+            "Level__c": "Beginner",
+            "Trail_Name__c": "Build a Travel Approval App"
+        },
+        {
+            "attributes": {
+                "type": "Recommended_Trail__c",
+                "referenceId": "Recommended_Trail__cRef3"
+            },
+            "Name": "RT-0000003",
+            "Trail__c": "@trailheadapp__Trail__cRef71",
+            "Archived__c": false,
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/build-platform-apps-in-lightning-experience/1771124c5e2cc37bb3f72fc2249dab87_icon.png\" alt=\"Build Platform Apps in Lightning Experience\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Description__c": "Build and customize a recruiting app in Lightning Experience. No code required.",
+            "Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/build-platform-apps-in-lightning-experience/1771124c5e2cc37bb3f72fc2249dab87_icon.png",
+            "Products__c": "Salesforce Platform",
+            "Roles__c": "Admin",
+            "URL__c": "https://developer.salesforce.com/trailhead/trail/build-platform-apps-in-lightning-experience/",
+            "Level__c": "Intermediate",
+            "Trail_Name__c": "Build Platform Apps in Lightning Experience"
+        },
+        {
+            "attributes": {
+                "type": "Recommended_Trail__c",
+                "referenceId": "Recommended_Trail__cRef4"
+            },
+            "Name": "RT-0000007",
+            "Trail__c": "@trailheadapp__Trail__cRef150",
+            "Archived__c": false,
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/platform-developer-i-certification-study-guide/40358c6fca7b6e63d8092535967e0102_icon.png\" alt=\"Study for the Platform Developer I Exam\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Description__c": "Get ready for the platform developer I certification exam with interactive study tools.",
+            "Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/platform-developer-i-certification-study-guide/40358c6fca7b6e63d8092535967e0102_icon.png",
+            "Products__c": "Salesforce Platform",
+            "Roles__c": "Developer",
+            "URL__c": "https://developer.salesforce.com/trailhead/trail/platform-developer-i-certification-study-guide/",
+            "Level__c": "Intermediate",
+            "Trail_Name__c": "Study for the Platform Developer I Exam"
+        },
+        {
+            "attributes": {
+                "type": "Recommended_Trail__c",
+                "referenceId": "Recommended_Trail__cRef5"
+            },
+            "Name": "RT-0000005",
+            "Trail__c": "@trailheadapp__Trail__cRef169",
+            "Archived__c": false,
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/study-for-the-salesforce-javascript-developer-i-exam/54bee3cdd15bdde5cf31c2473df87de1_icon.png\" alt=\"Study for the Salesforce JavaScript Developer I Exam\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Description__c": "Get ready for the Salesforce JavaScript Developer I certification exam with interactive study tools.",
+            "Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/study-for-the-salesforce-javascript-developer-i-exam/54bee3cdd15bdde5cf31c2473df87de1_icon.png",
+            "Products__c": "Salesforce Platform",
+            "Roles__c": "Developer",
+            "URL__c": "https://developer.salesforce.com/trailhead/trail/study-for-the-salesforce-javascript-developer-i-exam/",
+            "Level__c": "Intermediate",
+            "Trail_Name__c": "Study for the Salesforce JavaScript Developer I Exam"
+        },
+        {
+            "attributes": {
+                "type": "Recommended_Trail__c",
+                "referenceId": "Recommended_Trail__cRef6"
+            },
+            "Name": "RT-0000001",
+            "Trail__c": "@trailheadapp__Trail__cRef184",
+            "Archived__c": false,
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/administrator-certification-prep/6ef57661a95bd177a7ae901210969731_icon.png\" alt=\"Study for the Administrator Certification Exam\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Description__c": "Get ready for the administrator certification exam with interactive study tools.",
+            "Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/administrator-certification-prep/6ef57661a95bd177a7ae901210969731_icon.png",
+            "Products__c": "General",
+            "Roles__c": "Admin",
+            "URL__c": "https://developer.salesforce.com/trailhead/trail/administrator-certification-prep/",
+            "Level__c": "Intermediate",
+            "Trail_Name__c": "Study for the Administrator Certification Exam"
+        },
+        {
+            "attributes": {
+                "type": "Recommended_Trail__c",
+                "referenceId": "Recommended_Trail__cRef7"
+            },
+            "Name": "RT-0000004",
+            "Trail__c": "@trailheadapp__Trail__cRef242",
+            "Archived__c": false,
+            "Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/configure-your-app-with-custom-metadata-types/a3877f56dec4845e92f83655202060fd_icon.png\" alt=\"Configure Your App with Custom Metadata Types\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "Description__c": "Learn to use custom metadata types declaratively and programmatically.",
+            "Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/trails/configure-your-app-with-custom-metadata-types/a3877f56dec4845e92f83655202060fd_icon.png",
+            "Products__c": "Salesforce Platform",
+            "Roles__c": "Admin",
+            "URL__c": "https://developer.salesforce.com/trailhead/trail/configure-your-app-with-custom-metadata-types/",
+            "Level__c": "Beginner",
+            "Trail_Name__c": "Configure Your App with Custom Metadata Types"
+        }
+    ]
+}

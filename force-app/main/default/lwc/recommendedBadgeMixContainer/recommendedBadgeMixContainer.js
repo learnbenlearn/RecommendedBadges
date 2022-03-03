@@ -46,7 +46,6 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
             this.treegridData = this.treegridDataByMix[data.defaultMix];
 
             this.displayTable = true;
-            console.log(this.treegridData);
         } else if(error) {
             console.error(error);
         }

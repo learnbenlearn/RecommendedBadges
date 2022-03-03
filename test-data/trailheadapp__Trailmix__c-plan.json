@@ -1,10 +1,10 @@
 [
     {
-        "sobject": "Mix_Category__c",
+        "sobject": "trailheadapp__Trailmix__c",
         "saveRefs": true,
         "resolveRefs": false,
         "files": [
-            "Mix_Category__cs.json"
+            "trailheadapp__Trailmix__cs.json"
         ]
     }
 ]

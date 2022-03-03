@@ -6,5 +6,13 @@
         "files": [
             "trailheadapp__Trail__cs.json"
         ]
+    },
+    {
+        "sobject": "Recommended_Trail__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "Recommended_Trail__cs.json"
+        ]
     }
 ]

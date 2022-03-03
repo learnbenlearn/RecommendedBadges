@@ -1,0 +1,1801 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1001"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/mr-email-marketing-strategies/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Marketer",
+            "trailheadapp__Products__c": "General, Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/mr-email-marketing-strategies/02132ace98b122a5fa443cbbd6a95c35_badge.png",
+            "trailheadapp__External_Id__c": "m-146842",
+            "trailheadapp__Description__c": "Discover best practices to use when designing and sending an email.",
+            "trailheadapp__Created_At__c": "2021-10-18T20:53:41.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/mr-email-marketing-strategies/02132ace98b122a5fa443cbbd6a95c35_badge.png\" alt=\"Email Marketing Strategies\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "mr-email-marketing-strategies",
+            "Name": "Email Marketing Strategies"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1002"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/mc_trust/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/mc_trust/3378d370c4f5333a4990ae3b5d233938_badge.png",
+            "trailheadapp__External_Id__c": "m-146845",
+            "trailheadapp__Description__c": "Use the Status site to check performance and security of your Marketing Cloud instance.",
+            "trailheadapp__Created_At__c": "2021-10-18T20:53:54.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/mc_trust/3378d370c4f5333a4990ae3b5d233938_badge.png\" alt=\"Marketing Cloud Trust Site\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "mc_trust",
+            "Name": "Marketing Cloud Trust Site"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1003"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/lex_implementation_basics/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Lightning",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lex_implementation_basics/56b5a2cb9fb731dbfe6b5b88cd855775_badge.png",
+            "trailheadapp__External_Id__c": "m-156479",
+            "trailheadapp__Description__c": "Learn how to use customer relationship management (CRM) software to grow your business.",
+            "trailheadapp__Created_At__c": "2021-12-09T17:00:53.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lex_implementation_basics/56b5a2cb9fb731dbfe6b5b88cd855775_badge.png\" alt=\"Salesforce CRM\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "lex_implementation_basics",
+            "Name": "Salesforce CRM"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1004"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/lex_migration_rollout/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Lightning",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lex_migration_rollout/70a3b9d69dcb501c04a4030c20ded2a5_badge.png",
+            "trailheadapp__External_Id__c": "m-156481",
+            "trailheadapp__Description__c": "Develop a strategy to transition your org to Lightning Experience and roll out the new user interface to your users.",
+            "trailheadapp__Created_At__c": "2021-12-09T17:01:32.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lex_migration_rollout/70a3b9d69dcb501c04a4030c20ded2a5_badge.png\" alt=\"Lightning Experience Rollout\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "lex_migration_rollout",
+            "Name": "Lightning Experience Rollout"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1005"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/ampscript-solutions/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/ampscript-solutions/a86e3a8d2decb790449857c5fa2d4396_badge.png",
+            "trailheadapp__External_Id__c": "m-156507",
+            "trailheadapp__Description__c": "Explore AMPscript for personalization, loyalty emails, data-driven emails, and more.",
+            "trailheadapp__Created_At__c": "2021-12-09T18:09:26.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/ampscript-solutions/a86e3a8d2decb790449857c5fa2d4396_badge.png\" alt=\"AMPscript Solutions\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "ampscript-solutions",
+            "Name": "AMPscript Solutions"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1006"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/loyalty-rules-management-and-processing/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/loyalty-rules-management-and-processing/1b07fc20be34cba9c380c2ace41703be_badge.png",
+            "trailheadapp__External_Id__c": "m-156512",
+            "trailheadapp__Description__c": "Learn about loyalty program processes and the rules engines that configure them.",
+            "trailheadapp__Created_At__c": "2021-12-09T18:10:00.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/loyalty-rules-management-and-processing/1b07fc20be34cba9c380c2ace41703be_badge.png\" alt=\"Loyalty Rules Management and Processing\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "loyalty-rules-management-and-processing",
+            "Name": "Loyalty Rules Management and Processing"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1007"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/virtual-events/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/virtual-events/1d09cc390d0bc9cdd1bcc2a953deffc0_badge.png",
+            "trailheadapp__External_Id__c": "m-156514",
+            "trailheadapp__Description__c": "Plan and prepare for successful virtual events.",
+            "trailheadapp__Created_At__c": "2021-12-09T18:10:05.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/virtual-events/1d09cc390d0bc9cdd1bcc2a953deffc0_badge.png\" alt=\"Virtual Events\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "virtual-events",
+            "Name": "Virtual Events"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1008"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/einstein-bots-project-planning/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Einstein, Service Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/einstein-bots-project-planning/384734ecd26c0d141c882c94c60b12b9_badge.png",
+            "trailheadapp__External_Id__c": "m-156517",
+            "trailheadapp__Description__c": "Explore bot use cases and what it takes to build and implement a bot.",
+            "trailheadapp__Created_At__c": "2021-12-09T18:10:11.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/einstein-bots-project-planning/384734ecd26c0d141c882c94c60b12b9_badge.png\" alt=\"Einstein Bots Project Planning\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "einstein-bots-project-planning",
+            "Name": "Einstein Bots Project Planning"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1009"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/engagement-splits-in-journey-builder-using-ampscript/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Marketer",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Advanced",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/engagement-splits-in-journey-builder-using-ampscript/31d4945071eb67b85d690221af73de1a_badge.png",
+            "trailheadapp__External_Id__c": "m-156522",
+            "trailheadapp__Description__c": "Create journeys based on engagement with email links that use AMPscript.",
+            "trailheadapp__Created_At__c": "2021-12-09T18:10:27.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/engagement-splits-in-journey-builder-using-ampscript/31d4945071eb67b85d690221af73de1a_badge.png\" alt=\"Engagement Splits in Journey Builder using AMPscript\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "engagement-splits-in-journey-builder-using-ampscript",
+            "Name": "Engagement Splits in Journey Builder using AMPscript"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1010"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/business-analyst_skills-strategies/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business Analyst",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/business-analyst_skills-strategies/0f43d6acd5b63014ca01fe67e09bbfca_badge.png",
+            "trailheadapp__External_Id__c": "m-156530",
+            "trailheadapp__Description__c": "Explore fundamental skills that drive successful projects.",
+            "trailheadapp__Created_At__c": "2021-12-09T18:11:06.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/business-analyst_skills-strategies/0f43d6acd5b63014ca01fe67e09bbfca_badge.png\" alt=\"Essential Business Analyst Skills\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "business-analyst_skills-strategies",
+            "Name": "Essential Business Analyst Skills"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1011"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/workcom-features/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/workcom-features/3566752a0dbc43f78175462fa0ab0a44_badge.png",
+            "trailheadapp__External_Id__c": "m-157454",
+            "trailheadapp__Description__c": "See how a business like yours gets back to work safely.",
+            "trailheadapp__Created_At__c": "2021-12-14T19:31:28.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/workcom-features/3566752a0dbc43f78175462fa0ab0a44_badge.png\" alt=\"Work.com Features\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "workcom-features",
+            "Name": "Work.com Features"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1012"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/quip-automation-tools/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Quip",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/quip-automation-tools/61e713bbe63d8ed8a101f99e56ff40fb_badge.png",
+            "trailheadapp__External_Id__c": "m-172388",
+            "trailheadapp__Description__c": "Customize your team’s workflows using Quip for Sales.",
+            "trailheadapp__Created_At__c": "2022-02-28T17:49:45.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/quip-automation-tools/61e713bbe63d8ed8a101f99e56ff40fb_badge.png\" alt=\"Quip Automation Tools\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "quip-automation-tools",
+            "Name": "Quip Automation Tools"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1013"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/salesforce1_mobile_app/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/salesforce1_mobile_app/fd42d65036cd108cff61e93b20a8c193_badge.png",
+            "trailheadapp__External_Id__c": "m-164552",
+            "trailheadapp__Description__c": "Customize your mobile experience with the Salesforce app.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:50:16.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/salesforce1_mobile_app/fd42d65036cd108cff61e93b20a8c193_badge.png\" alt=\"Salesforce Mobile App Customization\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "salesforce1_mobile_app",
+            "Name": "Salesforce Mobile App Customization"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1014"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/lex_dev_lc_basics/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "Lightning, Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lex_dev_lc_basics/d80be110694dd501ac4f0c09d3901104_badge.png",
+            "trailheadapp__External_Id__c": "m-164555",
+            "trailheadapp__Description__c": "Use Aura components to build modern web apps with reusable UI components.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:50:58.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lex_dev_lc_basics/d80be110694dd501ac4f0c09d3901104_badge.png\" alt=\"Aura Components Basics\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "lex_dev_lc_basics",
+            "Name": "Aura Components Basics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1015"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/lex_dev_lc_vf_concepts/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "Lightning, Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lex_dev_lc_vf_concepts/736dfceaf2048da13b8e563b10dde9e4_badge.png",
+            "trailheadapp__External_Id__c": "m-164559",
+            "trailheadapp__Description__c": "Explore key Aura components concepts by comparing them with Visualforce.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:51:16.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lex_dev_lc_vf_concepts/736dfceaf2048da13b8e563b10dde9e4_badge.png\" alt=\"Aura Components Core Concepts\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "lex_dev_lc_vf_concepts",
+            "Name": "Aura Components Core Concepts"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1016"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/platform-app-builder-certification-maintenance-winter-22/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Lightning",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/platform-app-builder-certification-maintenance-winter-22/9e409e913ddf667d40f865a1e0dea242_badge.png",
+            "trailheadapp__External_Id__c": "m-164560",
+            "trailheadapp__Description__c": "Review updates to Salesforce to maintain your Platform App Builder certification.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:51:39.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/platform-app-builder-certification-maintenance-winter-22/9e409e913ddf667d40f865a1e0dea242_badge.png\" alt=\"Platform App Builder Certification Maintenance (Winter ’22)\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "platform-app-builder-certification-maintenance-winter-22",
+            "Name": "Platform App Builder Certification Maintenance (Winter ’22)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1017"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/einstein-for-service-quick-look/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "Einstein, Service Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/einstein-for-service-quick-look/ef223241122e00e169adff4c85ccb80c_badge.png",
+            "trailheadapp__External_Id__c": "m-164561",
+            "trailheadapp__Description__c": "Use AI to improve customer service and boost team productivity.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:51:43.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/einstein-for-service-quick-look/ef223241122e00e169adff4c85ccb80c_badge.png\" alt=\"Einstein for Service: Quick Look\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "einstein-for-service-quick-look",
+            "Name": "Einstein for Service: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1018"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/advanced-account-forecasting-with-manufacturing-cloud/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/advanced-account-forecasting-with-manufacturing-cloud/0356bcbe17dfb4100c2c040920a4abd8_badge.png",
+            "trailheadapp__External_Id__c": "m-164562",
+            "trailheadapp__Description__c": "Create complex, configurable, multi-enterprise forecasts.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:51:45.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/advanced-account-forecasting-with-manufacturing-cloud/0356bcbe17dfb4100c2c040920a4abd8_badge.png\" alt=\"Advanced Account Forecasting with Manufacturing Cloud\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "advanced-account-forecasting-with-manufacturing-cloud",
+            "Name": "Advanced Account Forecasting with Manufacturing Cloud"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1019"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/manage_the_sfdc_culture_of_feedback/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/manage_the_sfdc_culture_of_feedback/c78934740c385c021a96e25d55055117_badge.png",
+            "trailheadapp__External_Id__c": "m-164563",
+            "trailheadapp__Description__c": "Discover strategies and tools to help you establish a culture of feedback at your company.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:51:51.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/manage_the_sfdc_culture_of_feedback/c78934740c385c021a96e25d55055117_badge.png\" alt=\"Culture of Feedback\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "manage_the_sfdc_culture_of_feedback",
+            "Name": "Culture of Feedback"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1020"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/manage_the_sfdc_storytelling/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/manage_the_sfdc_storytelling/35dce30e8c0990665c6893c6c4a6bec0_badge.png",
+            "trailheadapp__External_Id__c": "m-164574",
+            "trailheadapp__Description__c": "See how stories make your meetings, presentations, and communications more compelling.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:52:26.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/manage_the_sfdc_storytelling/35dce30e8c0990665c6893c6c4a6bec0_badge.png\" alt=\"Storytelling &amp; Communication\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "manage_the_sfdc_storytelling",
+            "Name": "Storytelling & Communication"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1021"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/sustainability-for-salesforce-suppliers/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/sustainability-for-salesforce-suppliers/1d0bad48fd8be5c07b3ca8d9635512df_badge.png",
+            "trailheadapp__External_Id__c": "m-164581",
+            "trailheadapp__Description__c": "Discover how Salesforce works with suppliers to create a sustainable future.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:52:41.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/sustainability-for-salesforce-suppliers/1d0bad48fd8be5c07b3ca8d9635512df_badge.png\" alt=\"Sustainability for Salesforce Suppliers\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "sustainability-for-salesforce-suppliers",
+            "Name": "Sustainability for Salesforce Suppliers"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1022"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/field_service_basics/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Lightning, Service Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/field_service_basics/6dad992a919124cc96f6749400a6244b_badge.png",
+            "trailheadapp__External_Id__c": "m-168969",
+            "trailheadapp__Description__c": "Learn about Field Service and set service territories.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:08:45.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/field_service_basics/6dad992a919124cc96f6749400a6244b_badge.png\" alt=\"Field Service Basics\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "field_service_basics",
+            "Name": "Field Service Basics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1023"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/setup-quick-look/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/setup-quick-look/a2125d4cd76d29bc4f60c1813e685b81_badge.png",
+            "trailheadapp__External_Id__c": "m-168970",
+            "trailheadapp__Description__c": "Find your way around Setup and use the Object Manager to create and edit objects.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:08:46.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/setup-quick-look/a2125d4cd76d29bc4f60c1813e685b81_badge.png\" alt=\"Setup: Quick Look\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "setup-quick-look",
+            "Name": "Setup: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1024"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/git-and-git-hub-basics/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/git-and-git-hub-basics/18ac221379d887006bf95555ad307e05_badge.png",
+            "trailheadapp__External_Id__c": "m-168971",
+            "trailheadapp__Description__c": "Learn about version control systems and practice using Git and GitHub.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:08:51.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/git-and-git-hub-basics/18ac221379d887006bf95555ad307e05_badge.png\" alt=\"Git and GitHub Basics\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "git-and-git-hub-basics",
+            "Name": "Git and GitHub Basics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1025"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/business-process-mapping/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business Analyst",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/business-process-mapping/b397719a1bec7cf9598afde409087491_badge.png",
+            "trailheadapp__External_Id__c": "m-168973",
+            "trailheadapp__Description__c": "Increase efficiency and alignment by mapping processes.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:09:01.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/business-process-mapping/b397719a1bec7cf9598afde409087491_badge.png\" alt=\"Business Process Mapping\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "business-process-mapping",
+            "Name": "Business Process Mapping"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1026"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/ux-personas-for-salesforce/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Designer",
+            "trailheadapp__Products__c": "General, Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/ux-personas-for-salesforce/7017a2073c350de1841c65f6ffb89107_badge.png",
+            "trailheadapp__External_Id__c": "m-168974",
+            "trailheadapp__Description__c": "Explore the Salesforce user research personas and learn how to use them at your business.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:09:02.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/ux-personas-for-salesforce/7017a2073c350de1841c65f6ffb89107_badge.png\" alt=\"UX Personas for Salesforce\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "ux-personas-for-salesforce",
+            "Name": "UX Personas for Salesforce"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1027"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/isvforce_basics/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/isvforce_basics/4c24dc52815094bef8e457762ce9ccb5_badge.png",
+            "trailheadapp__External_Id__c": "m-168975",
+            "trailheadapp__Description__c": "Build a business on the Salesforce platform with the AppExchange Partner Program.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:09:06.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/isvforce_basics/4c24dc52815094bef8e457762ce9ccb5_badge.png\" alt=\"AppExchange Partner Basics\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "isvforce_basics",
+            "Name": "AppExchange Partner Basics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1028"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/mobile_sdk_introduction/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/mobile_sdk_introduction/e35c963c1c12df422c93d85d2ce7743b_badge.png",
+            "trailheadapp__External_Id__c": "m-168976",
+            "trailheadapp__Description__c": "Learn about the technologies that power mobile development with Salesforce Mobile SDK.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:09:10.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/mobile_sdk_introduction/e35c963c1c12df422c93d85d2ce7743b_badge.png\" alt=\"Salesforce Mobile SDK Basics\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "mobile_sdk_introduction",
+            "Name": "Salesforce Mobile SDK Basics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1029"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/partner-relationship-management/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Sales",
+            "trailheadapp__Products__c": "Sales Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/partner-relationship-management/574cbe531061f5f401480dd108ff8f99_badge.png",
+            "trailheadapp__External_Id__c": "m-168977",
+            "trailheadapp__Description__c": "Learn how Sales Cloud PRM can help you achieve your channel sales goals.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:09:12.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/partner-relationship-management/574cbe531061f5f401480dd108ff8f99_badge.png\" alt=\"Partner Relationship Management\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "partner-relationship-management",
+            "Name": "Partner Relationship Management"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1030"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/sustainable-design/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Designer",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/sustainable-design/260707d6273acb4298c1a83714b587ac_badge.png",
+            "trailheadapp__External_Id__c": "m-168979",
+            "trailheadapp__Description__c": "Use design principles to strengthen the relationship between business and society.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:09:21.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/sustainable-design/260707d6273acb4298c1a83714b587ac_badge.png\" alt=\"Sustainable Design\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "sustainable-design",
+            "Name": "Sustainable Design"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1031"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/salesforce-cpq-features/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/salesforce-cpq-features/aa0f0d97ea48a949f284b6b93f466afb_badge.png",
+            "trailheadapp__External_Id__c": "m-170785",
+            "trailheadapp__Description__c": "Learn how the advanced features in Salesforce CPQ help optimize sales from lead to cash.",
+            "trailheadapp__Created_At__c": "2022-02-21T16:31:25.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/salesforce-cpq-features/aa0f0d97ea48a949f284b6b93f466afb_badge.png\" alt=\"Salesforce CPQ Features\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "salesforce-cpq-features",
+            "Name": "Salesforce CPQ Features"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1032"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/swift-essentials/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/swift-essentials/c53d9178311c1d403c9531ba8a249ae9_badge.png",
+            "trailheadapp__External_Id__c": "m-78292",
+            "trailheadapp__Description__c": "Learn the basics of the Swift programming language.",
+            "trailheadapp__Created_At__c": "2020-10-20T21:41:13.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/swift-essentials/c53d9178311c1d403c9531ba8a249ae9_badge.png\" alt=\"Swift Essentials\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "swift-essentials",
+            "Name": "Swift Essentials"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1033"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/xcode-essentials/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/xcode-essentials/deac17e1c3af54f10d497a7f3e7af6bf_badge.png",
+            "trailheadapp__External_Id__c": "m-78296",
+            "trailheadapp__Description__c": "Learn how to use the Xcode IDE and the iOS SDK to build your first app.",
+            "trailheadapp__Created_At__c": "2020-10-20T21:41:33.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/xcode-essentials/deac17e1c3af54f10d497a7f3e7af6bf_badge.png\" alt=\"Xcode Essentials\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "xcode-essentials",
+            "Name": "Xcode Essentials"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1034"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/secure-clientside-development/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "Lightning, Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/secure-clientside-development/89b1b406d15c0a33f3a0e7e992c59dd2_badge.png",
+            "trailheadapp__External_Id__c": "m-79161",
+            "trailheadapp__Description__c": "Secure the client side of your application for deployment on the Salesforce Platform.",
+            "trailheadapp__Created_At__c": "2020-10-27T19:50:35.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/secure-clientside-development/89b1b406d15c0a33f3a0e7e992c59dd2_badge.png\" alt=\"Secure Client-Side Development\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "secure-clientside-development",
+            "Name": "Secure Client-Side Development"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1035"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/secure-serverside-development/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "Lightning, Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/secure-serverside-development/9e772712965dcb02dd48d7cb4f254361_badge.png",
+            "trailheadapp__External_Id__c": "m-79164",
+            "trailheadapp__Description__c": "Secure the server side of your applications for deployment on the Salesforce Platform.",
+            "trailheadapp__Created_At__c": "2020-10-27T19:50:39.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/secure-serverside-development/9e772712965dcb02dd48d7cb4f254361_badge.png\" alt=\"Secure Server-Side Development\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "secure-serverside-development",
+            "Name": "Secure Server-Side Development"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1036"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/private-connect-for-aws/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/private-connect-for-aws/7a395ad8e79a5e1ca6de91144ab85e29_badge.png",
+            "trailheadapp__External_Id__c": "m-79349",
+            "trailheadapp__Description__c": "Discover a new way to increase security on your AWS integrations.",
+            "trailheadapp__Created_At__c": "2020-10-28T16:43:16.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/private-connect-for-aws/7a395ad8e79a5e1ca6de91144ab85e29_badge.png\" alt=\"Salesforce Private Connect for AWS\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "private-connect-for-aws",
+            "Name": "Salesforce Private Connect for AWS"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1037"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/universal-declaration-of-human-rights-shared-global-vision/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/universal-declaration-of-human-rights-shared-global-vision/8d6daf5563e5421da7690c2bcc304e0f_badge.png",
+            "trailheadapp__External_Id__c": "m-81003",
+            "trailheadapp__Description__c": "Learn how we can all work together to protect human rights.",
+            "trailheadapp__Created_At__c": "2020-11-09T17:13:07.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/universal-declaration-of-human-rights-shared-global-vision/8d6daf5563e5421da7690c2bcc304e0f_badge.png\" alt=\"Universal Declaration of Human Rights (UDHR): Shared Global Vision\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "universal-declaration-of-human-rights-shared-global-vision",
+            "Name": "Universal Declaration of Human Rights (UDHR): Shared Global Vision"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1038"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/service_message/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "Service Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/service_message/1c13d72c2d7b0cd016f03e5d8b49953c_badge.png",
+            "trailheadapp__External_Id__c": "m-82796",
+            "trailheadapp__Description__c": "Deliver proactive service to customers over messaging apps.",
+            "trailheadapp__Created_At__c": "2020-11-16T23:06:41.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/service_message/1c13d72c2d7b0cd016f03e5d8b49953c_badge.png\" alt=\"Outbound Messaging for Service\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "service_message",
+            "Name": "Outbound Messaging for Service"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1039"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/declarative-change-set-development/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/declarative-change-set-development/955be0efb55f9ff7115a555a302b01c3_badge.png",
+            "trailheadapp__External_Id__c": "m-83114",
+            "trailheadapp__Description__c": "Understand application lifecycle management using declarative change sets.",
+            "trailheadapp__Created_At__c": "2020-11-17T17:54:42.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/declarative-change-set-development/955be0efb55f9ff7115a555a302b01c3_badge.png\" alt=\"Change Set Development Model\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "declarative-change-set-development",
+            "Name": "Change Set Development Model"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1040"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/aws-identity-and-access-management/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/aws-identity-and-access-management/6c0f3f71de1b0e284f3c824dbe7d73ce_badge.png",
+            "trailheadapp__External_Id__c": "m-83116",
+            "trailheadapp__Description__c": "Control authentication and authorization in AWS.",
+            "trailheadapp__Created_At__c": "2020-11-17T17:54:44.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/aws-identity-and-access-management/6c0f3f71de1b0e284f3c824dbe7d73ce_badge.png\" alt=\"AWS Identity and Access Management\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "aws-identity-and-access-management",
+            "Name": "AWS Identity and Access Management"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1041"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/salesforce-admins-and-salesforce-bas-quick-look/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business Analyst",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/salesforce-admins-and-salesforce-bas-quick-look/d232351d209f2b695c044f3d422699ee_badge.png",
+            "trailheadapp__External_Id__c": "m-83334",
+            "trailheadapp__Description__c": "Learn what Salesforce admins and business analysts do, and how their roles are different.",
+            "trailheadapp__Created_At__c": "2020-11-18T15:41:04.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/salesforce-admins-and-salesforce-bas-quick-look/d232351d209f2b695c044f3d422699ee_badge.png\" alt=\"Admin &amp; BA Job Comparison: Quick Look\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "salesforce-admins-and-salesforce-bas-quick-look",
+            "Name": "Admin & BA Job Comparison: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1042"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/salesforce-business-analyst-quick-look/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business Analyst",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/salesforce-business-analyst-quick-look/bfab6a53a468d1f1abc208640204170b_badge.png",
+            "trailheadapp__External_Id__c": "m-83335",
+            "trailheadapp__Description__c": "Learn what Salesforce business analysts do and the skills they need to succeed.",
+            "trailheadapp__Created_At__c": "2020-11-18T15:41:06.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/salesforce-business-analyst-quick-look/bfab6a53a468d1f1abc208640204170b_badge.png\" alt=\"Salesforce Business Analyst: Quick Look\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "salesforce-business-analyst-quick-look",
+            "Name": "Salesforce Business Analyst: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1043"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/lightning-experience-performance-optimization/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Lightning",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lightning-experience-performance-optimization/e476f5dd40f45649baf5f725d8dccfb5_badge.png",
+            "trailheadapp__External_Id__c": "m-83732",
+            "trailheadapp__Description__c": "Improve your Lightning Experience to help users work faster.",
+            "trailheadapp__Created_At__c": "2020-11-18T21:31:22.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lightning-experience-performance-optimization/e476f5dd40f45649baf5f725d8dccfb5_badge.png\" alt=\"Lightning Experience Performance Optimization\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "lightning-experience-performance-optimization",
+            "Name": "Lightning Experience Performance Optimization"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1044"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/ethics_for_sf_partners/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/ethics_for_sf_partners/8fce641c2c7e137d8fc8c2457fbaf6d9_badge.png",
+            "trailheadapp__External_Id__c": "m-125085",
+            "trailheadapp__Description__c": "Learn about legal and ethical expectations for Salesforce partners.",
+            "trailheadapp__Created_At__c": "2021-06-29T17:10:21.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/ethics_for_sf_partners/8fce641c2c7e137d8fc8c2457fbaf6d9_badge.png\" alt=\"Ethics and Integrity for Salesforce Partners\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "ethics_for_sf_partners",
+            "Name": "Ethics and Integrity for Salesforce Partners"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1045"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/complex-b2b-implementations/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Architect",
+            "trailheadapp__Products__c": "MuleSoft, Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/complex-b2b-implementations/964928718c0e9fe466a3aa54365b4347_badge.png",
+            "trailheadapp__External_Id__c": "m-125092",
+            "trailheadapp__Description__c": "Review complex B2B scenarios and design multi-cloud solutions.",
+            "trailheadapp__Created_At__c": "2021-06-29T17:10:55.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/complex-b2b-implementations/964928718c0e9fe466a3aa54365b4347_badge.png\" alt=\"Complex B2B Implementations\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "complex-b2b-implementations",
+            "Name": "Complex B2B Implementations"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1046"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/interactive-email-forms/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Marketer",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/interactive-email-forms/40a8c9562d9e18eb8e802526844f87bc_badge.png",
+            "trailheadapp__External_Id__c": "m-125093",
+            "trailheadapp__Description__c": "Gather customer data directly from your email using Interactive Email Forms in Marketing Cloud.",
+            "trailheadapp__Created_At__c": "2021-06-29T17:10:55.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/interactive-email-forms/40a8c9562d9e18eb8e802526844f87bc_badge.png\" alt=\"Interactive Email Forms\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "interactive-email-forms",
+            "Name": "Interactive Email Forms"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1047"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/multicloud-b2b-implementations/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Architect",
+            "trailheadapp__Products__c": "MuleSoft, Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/multicloud-b2b-implementations/827edc03753b43afdbdfa8fad7ec505b_badge.png",
+            "trailheadapp__External_Id__c": "m-125095",
+            "trailheadapp__Description__c": "Review B2B scenarios and design a solution that integrates multiple Salesforce products.",
+            "trailheadapp__Created_At__c": "2021-06-29T17:10:57.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/multicloud-b2b-implementations/827edc03753b43afdbdfa8fad7ec505b_badge.png\" alt=\"Multi-Cloud B2B Implementations\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "multicloud-b2b-implementations",
+            "Name": "Multi-Cloud B2B Implementations"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1048"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/automation-studio-activities/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/automation-studio-activities/57fa18e90897dec881f48474a122eb2e_badge.png",
+            "trailheadapp__External_Id__c": "m-126275",
+            "trailheadapp__Description__c": "Create automated tasks in Marketing Cloud with activities, SQL queries, and API requests.",
+            "trailheadapp__Created_At__c": "2021-07-06T18:26:45.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/automation-studio-activities/57fa18e90897dec881f48474a122eb2e_badge.png\" alt=\"Automation Studio Activities\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "automation-studio-activities",
+            "Name": "Automation Studio Activities"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1049"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/joined-reports-quick-look/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "Tableau CRM",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/joined-reports-quick-look/7d3a33cffa8a3e85587424b43aaaafb8_badge.png",
+            "trailheadapp__External_Id__c": "m-126276",
+            "trailheadapp__Description__c": "Create joined reports for a broad view of your data across objects or conditions.",
+            "trailheadapp__Created_At__c": "2021-07-06T18:26:51.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/joined-reports-quick-look/7d3a33cffa8a3e85587424b43aaaafb8_badge.png\" alt=\"Joined Reports: Quick Look\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "joined-reports-quick-look",
+            "Name": "Joined Reports: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1050"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/relationship-building/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/relationship-building/a31df38ccb8811b3838ef29de04f6c90_badge.png",
+            "trailheadapp__External_Id__c": "m-126297",
+            "trailheadapp__Description__c": "Respond to your teammates with empathy and foster an environment of trust.",
+            "trailheadapp__Created_At__c": "2021-07-06T18:27:43.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/relationship-building/a31df38ccb8811b3838ef29de04f6c90_badge.png\" alt=\"Relationship Building\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "relationship-building",
+            "Name": "Relationship Building"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1051"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/tableau-and-google-bigquery-optimization/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Tableau",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/tableau-and-google-bigquery-optimization/8d1d85ceb2528ec4c5e6b3ce49c45f14_badge.png",
+            "trailheadapp__External_Id__c": "m-126318",
+            "trailheadapp__Description__c": "Learn how to improve query performance and big data analytics in a no-code environment.",
+            "trailheadapp__Created_At__c": "2021-07-06T19:02:43.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/tableau-and-google-bigquery-optimization/8d1d85ceb2528ec4c5e6b3ce49c45f14_badge.png\" alt=\"Tableau and Google BigQuery Optimization\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "tableau-and-google-bigquery-optimization",
+            "Name": "Tableau and Google BigQuery Optimization"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1052"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/tableau-mobile-quick-look/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "Tableau",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/tableau-mobile-quick-look/4b5444f91bd5d42036f99d949e776eb1_badge.png",
+            "trailheadapp__External_Id__c": "m-127982",
+            "trailheadapp__Description__c": "Discover the features and capabilities of Tableau Mobile.",
+            "trailheadapp__Created_At__c": "2021-07-13T19:59:28.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/tableau-mobile-quick-look/4b5444f91bd5d42036f99d949e776eb1_badge.png\" alt=\"Tableau Mobile: Quick Look\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "tableau-mobile-quick-look",
+            "Name": "Tableau Mobile: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1053"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/enhanced_transaction_security/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Advanced",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/enhanced_transaction_security/5693dd6748e82659cea18299b95c448b_badge.png",
+            "trailheadapp__External_Id__c": "m-127989",
+            "trailheadapp__Description__c": "Monitor events, enforce policies, and get instant notifications based on rules you create.",
+            "trailheadapp__Created_At__c": "2021-07-13T20:00:12.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/enhanced_transaction_security/5693dd6748e82659cea18299b95c448b_badge.png\" alt=\"Enhanced Transaction Security\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "enhanced_transaction_security",
+            "Name": "Enhanced Transaction Security"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1054"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/einstein-relationship-insights-basics/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Einstein",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/einstein-relationship-insights-basics/f050b47fd3b245e6b3ab6ac3f571d1de_badge.png",
+            "trailheadapp__External_Id__c": "m-127991",
+            "trailheadapp__Description__c": "Use AI to deepen relationships with customers and boost sales and productivity.",
+            "trailheadapp__Created_At__c": "2021-07-13T20:00:29.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/einstein-relationship-insights-basics/f050b47fd3b245e6b3ab6ac3f571d1de_badge.png\" alt=\"Einstein Relationship Insights Basics\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "einstein-relationship-insights-basics",
+            "Name": "Einstein Relationship Insights Basics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1055"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/einstein-customer-lifecycle-analytics/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Salesforce Platform, Tableau CRM",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/einstein-customer-lifecycle-analytics/7caa5330c783ed1cd8007eedf8e9bf9a_badge.png",
+            "trailheadapp__External_Id__c": "m-128010",
+            "trailheadapp__Description__c": "Use analytics templates to gather actionable insights from survey responses.",
+            "trailheadapp__Created_At__c": "2021-07-13T20:01:21.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/einstein-customer-lifecycle-analytics/7caa5330c783ed1cd8007eedf8e9bf9a_badge.png\" alt=\"Tableau CRM Customer Lifecycle Analytics\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "einstein-customer-lifecycle-analytics",
+            "Name": "Tableau CRM Customer Lifecycle Analytics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1056"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/mc-for-consulting-partners/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/mc-for-consulting-partners/27986ec198d9295696216278aaf52300_badge.png",
+            "trailheadapp__External_Id__c": "m-146846",
+            "trailheadapp__Description__c": "Create a Marketing Cloud team that's the right size and shape for your consulting projects.",
+            "trailheadapp__Created_At__c": "2021-10-18T20:53:56.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/mc-for-consulting-partners/27986ec198d9295696216278aaf52300_badge.png\" alt=\"Marketing Cloud Business Planning for Partners\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "mc-for-consulting-partners",
+            "Name": "Marketing Cloud Business Planning for Partners"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1057"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/slack-block-kit/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "Slack",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://developer.salesforce.com/resource/images/trailhead/badges/modules/trailhead_module_slack-block-kit.png",
+            "trailheadapp__External_Id__c": "m-146854",
+            "trailheadapp__Description__c": "Use Slack’s UI framework to build reusable, interactive content for your app.",
+            "trailheadapp__Created_At__c": "2021-10-18T20:54:38.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://developer.salesforce.com/resource/images/trailhead/badges/modules/trailhead_module_slack-block-kit.png\" alt=\"Slack Block Kit\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "slack-block-kit",
+            "Name": "Slack Block Kit"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1058"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/slack-app-development-with-bolt/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "Slack",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/slack-app-development-with-bolt/4b7217ed85c4c29d05d460f27a5d673b_badge.png",
+            "trailheadapp__External_Id__c": "m-146860",
+            "trailheadapp__Description__c": "Build a Slack app using the Bolt for JavaScript development framework.",
+            "trailheadapp__Created_At__c": "2021-10-18T20:54:53.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/slack-app-development-with-bolt/4b7217ed85c4c29d05d460f27a5d673b_badge.png\" alt=\"Slack App Development with Bolt\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "slack-app-development-with-bolt",
+            "Name": "Slack App Development with Bolt"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1059"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/omniout-omnistudio-off-platform/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/omniout-omnistudio-off-platform/14b7deb958bdf73296b0ced32d5dc7c0_badge.png",
+            "trailheadapp__External_Id__c": "m-147501",
+            "trailheadapp__Description__c": "Deploy OmniStudio components outside the Salesforce platform.",
+            "trailheadapp__Created_At__c": "2021-10-20T15:31:03.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/omniout-omnistudio-off-platform/14b7deb958bdf73296b0ced32d5dc7c0_badge.png\" alt=\"OmniOut: OmniStudio Off-Platform\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "omniout-omnistudio-off-platform",
+            "Name": "OmniOut: OmniStudio Off-Platform"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1060"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/best-practices-for-building-datasets-with-tableau-crm/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Tableau CRM",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/best-practices-for-building-datasets-with-tableau-crm/9e2411f29bef6311ba33caad655cd4fe_badge.png",
+            "trailheadapp__External_Id__c": "m-147507",
+            "trailheadapp__Description__c": "Minimize common mistakes and pain points related to building datasets.",
+            "trailheadapp__Created_At__c": "2021-10-20T15:31:31.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/best-practices-for-building-datasets-with-tableau-crm/9e2411f29bef6311ba33caad655cd4fe_badge.png\" alt=\"Best Practices for Building Datasets with Tableau CRM\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "best-practices-for-building-datasets-with-tableau-crm",
+            "Name": "Best Practices for Building Datasets with Tableau CRM"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1061"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/testing-for-web-accessibility/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "Lightning, Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/testing-for-web-accessibility/6f551729f080a73e9f20f7134b7d0901_badge.png",
+            "trailheadapp__External_Id__c": "m-147529",
+            "trailheadapp__Description__c": "Ensure your code is accessible with automated and manual tests.",
+            "trailheadapp__Created_At__c": "2021-10-20T15:32:50.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/testing-for-web-accessibility/6f551729f080a73e9f20f7134b7d0901_badge.png\" alt=\"Testing for Web Accessibility\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "testing-for-web-accessibility",
+            "Name": "Testing for Web Accessibility"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1062"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/customer-data-platform-strategy/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Marketer",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/customer-data-platform-strategy/c24da48456c98840666d7ec29a77a9a7_badge.png",
+            "trailheadapp__External_Id__c": "m-148442",
+            "trailheadapp__Description__c": "Create a customer data platform strategy that delivers marketing success.",
+            "trailheadapp__Created_At__c": "2021-10-26T17:49:25.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/customer-data-platform-strategy/c24da48456c98840666d7ec29a77a9a7_badge.png\" alt=\"Customer Data Platform Strategy\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "customer-data-platform-strategy",
+            "Name": "Customer Data Platform Strategy"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1063"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/accountability-in-design/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Designer",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/accountability-in-design/ca13d6b6f06c5601209b6b022a980a42_badge.png",
+            "trailheadapp__External_Id__c": "m-157462",
+            "trailheadapp__Description__c": "Learn key practices to build social and business accountability into your design process.",
+            "trailheadapp__Created_At__c": "2021-12-14T19:34:15.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/accountability-in-design/ca13d6b6f06c5601209b6b022a980a42_badge.png\" alt=\"Accountability in Design\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "accountability-in-design",
+            "Name": "Accountability in Design"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1064"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/drucker_org_change_leadership/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://developer.salesforce.com/resource/images/trailhead/badges/modules/trailhead_module_drucker_school—organizational_change_leadership.png",
+            "trailheadapp__External_Id__c": "m-157463",
+            "trailheadapp__Description__c": "Stay competitive with the Drucker principles for driving change within your organization.",
+            "trailheadapp__Created_At__c": "2021-12-14T19:34:36.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://developer.salesforce.com/resource/images/trailhead/badges/modules/trailhead_module_drucker_school—organizational_change_leadership.png\" alt=\"Drucker School—Organizational Change Leadership\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "drucker_org_change_leadership",
+            "Name": "Drucker School—Organizational Change Leadership"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1065"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/content-builder-features/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Marketer",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/content-builder-features/7326dc6f8deac8d7f55248db1faee015_badge.png",
+            "trailheadapp__External_Id__c": "m-157466",
+            "trailheadapp__Description__c": "Learn how to use Content Builder to create a library of customized, reusable content.",
+            "trailheadapp__Created_At__c": "2021-12-14T19:35:05.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/content-builder-features/7326dc6f8deac8d7f55248db1faee015_badge.png\" alt=\"Content Builder Features\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "content-builder-features",
+            "Name": "Content Builder Features"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1066"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/advanced_formulas/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Advanced",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/advanced_formulas/6f471d553d3f3f1efaf6e25b0761cb39_badge.png",
+            "trailheadapp__External_Id__c": "m-157468",
+            "trailheadapp__Description__c": "Learn how to write clean, easy-to-understand formulas for complex use cases.",
+            "trailheadapp__Created_At__c": "2021-12-14T19:35:13.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/advanced_formulas/6f471d553d3f3f1efaf6e25b0761cb39_badge.png\" alt=\"Advanced Formulas\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "advanced_formulas",
+            "Name": "Advanced Formulas"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1067"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/implementing-quip-in-salesforce/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Quip",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/implementing-quip-in-salesforce/73f9e3bdebf25647a72dad5767d1e3d5_badge.png",
+            "trailheadapp__External_Id__c": "m-157476",
+            "trailheadapp__Description__c": "Customize Quip tools to help your team collaborate efficiently.",
+            "trailheadapp__Created_At__c": "2021-12-14T19:36:33.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/implementing-quip-in-salesforce/73f9e3bdebf25647a72dad5767d1e3d5_badge.png\" alt=\"Quip for Customer 360 Implementation\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "implementing-quip-in-salesforce",
+            "Name": "Quip for Customer 360 Implementation"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1068"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/sales-ops-use-case/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Sales",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/sales-ops-use-case/c6bbbb7495cd09c556d618fd36c01a93_badge.png",
+            "trailheadapp__External_Id__c": "m-157477",
+            "trailheadapp__Description__c": "Get practical tips on process improvement and collaboration.",
+            "trailheadapp__Created_At__c": "2021-12-14T19:37:01.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/sales-ops-use-case/c6bbbb7495cd09c556d618fd36c01a93_badge.png\" alt=\"Sales Operations Use Case and Best Practices\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "sales-ops-use-case",
+            "Name": "Sales Operations Use Case and Best Practices"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1069"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/account-data-strategies/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Sales",
+            "trailheadapp__Products__c": "Sales Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/account-data-strategies/92f6a6919b239a14e3d0eb8c4a3dd244_badge.png",
+            "trailheadapp__External_Id__c": "m-157482",
+            "trailheadapp__Description__c": "Learn how your sales team can use data to close deals.",
+            "trailheadapp__Created_At__c": "2021-12-14T19:38:59.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/account-data-strategies/92f6a6919b239a14e3d0eb8c4a3dd244_badge.png\" alt=\"Account Data Strategies\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "account-data-strategies",
+            "Name": "Account Data Strategies"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1070"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/isv_app_selling/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/isv_app_selling/9e0da4753c4dbe712616c5925ab00702_badge.png",
+            "trailheadapp__External_Id__c": "m-157483",
+            "trailheadapp__Description__c": "Meet the Salesforce sales team and work with them to sell your app.",
+            "trailheadapp__Created_At__c": "2021-12-14T19:41:11.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/isv_app_selling/9e0da4753c4dbe712616c5925ab00702_badge.png\" alt=\"AppExchange App Selling\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "isv_app_selling",
+            "Name": "AppExchange App Selling"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1071"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/coding-for-web-accessibility/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "Lightning",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/coding-for-web-accessibility/622e77c417fa92394d74c65e5a710302_badge.png",
+            "trailheadapp__External_Id__c": "m-157486",
+            "trailheadapp__Description__c": "Write code to build accessible user interfaces.",
+            "trailheadapp__Created_At__c": "2021-12-14T19:41:24.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/coding-for-web-accessibility/622e77c417fa92394d74c65e5a710302_badge.png\" alt=\"Coding for Web Accessibility\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "coding-for-web-accessibility",
+            "Name": "Coding for Web Accessibility"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1072"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/artificial-intelligence-for-marketing/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Marketer",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/artificial-intelligence-for-marketing/9f3ee4019c1ac3412499dbcd66a1ff6c_badge.png",
+            "trailheadapp__External_Id__c": "m-164582",
+            "trailheadapp__Description__c": "Use AI to create smarter marketing campaigns and scale your business.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:52:42.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/artificial-intelligence-for-marketing/9f3ee4019c1ac3412499dbcd66a1ff6c_badge.png\" alt=\"Artificial Intelligence for Marketing\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "artificial-intelligence-for-marketing",
+            "Name": "Artificial Intelligence for Marketing"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1073"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/campaign-optimization-for-marketers/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Marketer",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/campaign-optimization-for-marketers/08470337fd2ba4371055c361ed10ee70_badge.png",
+            "trailheadapp__External_Id__c": "m-164586",
+            "trailheadapp__Description__c": "Achieve maximum impact by planning and pacing your media.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:52:49.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/campaign-optimization-for-marketers/08470337fd2ba4371055c361ed10ee70_badge.png\" alt=\"Campaign Optimization for Marketers\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "campaign-optimization-for-marketers",
+            "Name": "Campaign Optimization for Marketers"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1074"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/entitlement-management-for-lightning-experience/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Service Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/entitlement-management-for-lightning-experience/c319fd2c3eec409402b9bc5a1ad6ad15_badge.png",
+            "trailheadapp__External_Id__c": "m-164587",
+            "trailheadapp__Description__c": "Use entitlements to ensure your customers receive top-notch service.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:52:52.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/entitlement-management-for-lightning-experience/c319fd2c3eec409402b9bc5a1ad6ad15_badge.png\" alt=\"Entitlement Management for Lightning Experience\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "entitlement-management-for-lightning-experience",
+            "Name": "Entitlement Management for Lightning Experience"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1075"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/lightning_app_builder/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Lightning",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lightning_app_builder/e74ff600f7c04071af20c5d1e9686042_badge.png",
+            "trailheadapp__External_Id__c": "m-164588",
+            "trailheadapp__Description__c": "Build custom pages for Lightning Experience quickly with point-and-click tools.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:52:53.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lightning_app_builder/e74ff600f7c04071af20c5d1e9686042_badge.png\" alt=\"Lightning App Builder\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "lightning_app_builder",
+            "Name": "Lightning App Builder"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1076"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/appexchange_basics/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "General, Lightning",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/appexchange_basics/4f6fbe64b38464ba090bc80b06994913_badge.png",
+            "trailheadapp__External_Id__c": "m-172634",
+            "trailheadapp__Description__c": "Extend the power of Salesforce with apps and services from AppExchange.",
+            "trailheadapp__Created_At__c": "2022-03-01T19:15:28.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/appexchange_basics/4f6fbe64b38464ba090bc80b06994913_badge.png\" alt=\"AppExchange Basics\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "appexchange_basics",
+            "Name": "AppExchange Basics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1077"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/object-oriented-programming-for-admins/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/object-oriented-programming-for-admins/31b659f52b2d563a1083542d1d70607b_badge.png",
+            "trailheadapp__External_Id__c": "m-164598",
+            "trailheadapp__Description__c": "Enhance your Salesforce data with Apex classes, objects, DML, sets, and loops.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:53:27.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/object-oriented-programming-for-admins/31b659f52b2d563a1083542d1d70607b_badge.png\" alt=\"Object-Oriented Programming for Admins\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "object-oriented-programming-for-admins",
+            "Name": "Object-Oriented Programming for Admins"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1078"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/data-analysis-in-datorama/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Marketer",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/data-analysis-in-datorama/43e8c43944756ae6acfe4f743046a9b4_badge.png",
+            "trailheadapp__External_Id__c": "m-164599",
+            "trailheadapp__Description__c": "Use pivot tables and reports to view and validate data uploaded into Datorama.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:53:29.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/data-analysis-in-datorama/43e8c43944756ae6acfe4f743046a9b4_badge.png\" alt=\"Data Analysis in Datorama\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "data-analysis-in-datorama",
+            "Name": "Data Analysis in Datorama"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1079"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/data-uploading-in-datorama-1/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Marketer",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/data-uploading-in-datorama-1/8bbba6b7bbc3cddd7d9be9a6e62e56f0_badge.png",
+            "trailheadapp__External_Id__c": "m-164604",
+            "trailheadapp__Description__c": "Discover three ways to upload data in Datorama.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:53:38.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/data-uploading-in-datorama-1/8bbba6b7bbc3cddd7d9be9a6e62e56f0_badge.png\" alt=\"Data Uploading In Datorama\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "data-uploading-in-datorama-1",
+            "Name": "Data Uploading In Datorama"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1080"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/marketing-analytics-quick-look/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Marketer",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/marketing-analytics-quick-look/02282198664ed5e2fe7f8bcf5e3c846d_badge.png",
+            "trailheadapp__External_Id__c": "m-164608",
+            "trailheadapp__Description__c": "Learn how to use data to improve marketing performance.",
+            "trailheadapp__Created_At__c": "2022-01-25T22:53:48.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/marketing-analytics-quick-look/02282198664ed5e2fe7f8bcf5e3c846d_badge.png\" alt=\"Marketing Analytics: Quick Look\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "marketing-analytics-quick-look",
+            "Name": "Marketing Analytics: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1081"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/consumer-interaction-management/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Marketer",
+            "trailheadapp__Products__c": "Marketing Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/consumer-interaction-management/cefdb38a72d4d5a9b75258286c63a3bc_badge.png",
+            "trailheadapp__External_Id__c": "m-168981",
+            "trailheadapp__Description__c": "Take the consumer experience to the next level with real-time interaction management.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:09:24.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/consumer-interaction-management/cefdb38a72d4d5a9b75258286c63a3bc_badge.png\" alt=\"Consumer Interaction Management\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "consumer-interaction-management",
+            "Name": "Consumer Interaction Management"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1082"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/one-on-one-meetings/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/one-on-one-meetings/6f7cb8eefd86b70877cec7301737c269_badge.png",
+            "trailheadapp__External_Id__c": "m-171679",
+            "trailheadapp__Description__c": "Learn tips for having productive one-on-one meetings with your direct reports.",
+            "trailheadapp__Created_At__c": "2022-02-24T16:49:17.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/one-on-one-meetings/6f7cb8eefd86b70877cec7301737c269_badge.png\" alt=\"One-on-One Meetings\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "one-on-one-meetings",
+            "Name": "One-on-One Meetings"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1083"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/identity_basics/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/identity_basics/981bd3688c4e61f8245d4fc0261dbb98_badge.png",
+            "trailheadapp__External_Id__c": "m-168983",
+            "trailheadapp__Description__c": "Secure your org so users can log in once to access a variety of apps, orgs, and services.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:09:34.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/identity_basics/981bd3688c4e61f8245d4fc0261dbb98_badge.png\" alt=\"Identity Basics\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "identity_basics",
+            "Name": "Identity Basics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1084"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/isv_security_review/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Developer",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/isv_security_review/2905110d59e6e2df3f8ab25acafa5e38_badge.png",
+            "trailheadapp__External_Id__c": "m-168984",
+            "trailheadapp__Description__c": "Devise an app security strategy and prepare for a security review.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:09:35.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/isv_security_review/2905110d59e6e2df3f8ab25acafa5e38_badge.png\" alt=\"AppExchange Security Review\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "isv_security_review",
+            "Name": "AppExchange Security Review"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1085"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/lightning-knowledge-basics/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Lightning, Service Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lightning-knowledge-basics/6386d456dbab20e002b5edf166dd8a01_badge.png",
+            "trailheadapp__External_Id__c": "m-168986",
+            "trailheadapp__Description__c": "Use Lightning Knowledge to create a knowledge base for better customer service.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:09:46.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/lightning-knowledge-basics/6386d456dbab20e002b5edf166dd8a01_badge.png\" alt=\"Knowledge Basics for Lightning Experience\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "lightning-knowledge-basics",
+            "Name": "Knowledge Basics for Lightning Experience"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1086"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/salesforce-anywhere-for-customer-360/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Business User",
+            "trailheadapp__Products__c": "Quip",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/salesforce-anywhere-for-customer-360/ab04b84061aec2f6b63ca0a12de11af1_badge.png",
+            "trailheadapp__External_Id__c": "m-168987",
+            "trailheadapp__Description__c": "Boost productivity and collaboration with Quip for Customer 360.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:09:59.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/salesforce-anywhere-for-customer-360/ab04b84061aec2f6b63ca0a12de11af1_badge.png\" alt=\"Quip for Customer 360\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "salesforce-anywhere-for-customer-360",
+            "Name": "Quip for Customer 360"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1087"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/user-engagement/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin, Designer",
+            "trailheadapp__Products__c": "General",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Beginner",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/user-engagement/7bb1ab9e0bc5d916fc0c03453cf907a8_badge.png",
+            "trailheadapp__External_Id__c": "m-168988",
+            "trailheadapp__Description__c": "Create in-app guidance to help users get the most value out of your Salesforce app.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:10:01.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/user-engagement/7bb1ab9e0bc5d916fc0c03453cf907a8_badge.png\" alt=\"User Engagement\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "user-engagement",
+            "Name": "User Engagement"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1088"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/company_wide_org_settings/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Sales Cloud",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/company_wide_org_settings/a398554a847393bf4670d08a986adc45_badge.png",
+            "trailheadapp__External_Id__c": "m-168990",
+            "trailheadapp__Description__c": "Learn about search, regional settings, multiple currencies, and user interface controls.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:10:05.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/company_wide_org_settings/a398554a847393bf4670d08a986adc45_badge.png\" alt=\"Company-Wide Org Settings\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "company_wide_org_settings",
+            "Name": "Company-Wide Org Settings"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1089"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/module/identity_external/",
+            "trailheadapp__Type__c": "Module",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Intermediate",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/identity_external/a1621836f23efbbdd49856e0222ba411_badge.png",
+            "trailheadapp__External_Id__c": "m-168992",
+            "trailheadapp__Description__c": "Use Salesforce Identity to engage your customers and attract new ones.",
+            "trailheadapp__Created_At__c": "2022-02-15T00:10:10.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/modules/identity_external/a1621836f23efbbdd49856e0222ba411_badge.png\" alt=\"Identity for Customers\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "identity_external",
+            "Name": "Identity for Customers"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "referenceId": "trailheadapp__Badge__cRef1090"
+            },
+            "trailheadapp__URL__c": "https://developer.salesforce.com/trailhead/project/marsxp-optimize-a-real-estate-app-for-mars/",
+            "trailheadapp__Type__c": "Project",
+            "trailheadapp__Roles__c": "Admin",
+            "trailheadapp__Products__c": "Sales Cloud, Salesforce Platform",
+            "trailheadapp__Namespace__c": "learn",
+            "trailheadapp__Level__c": "Advanced",
+            "trailheadapp__Icon__c": "https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/projects/marsxp-optimize-a-real-estate-app-for-mars/f2833a8f29579e63e2e79643db75c103_badge.png",
+            "trailheadapp__External_Id__c": "p-63607",
+            "trailheadapp__Description__c": "Use your advanced admin skills to support human habitation of the red planet.",
+            "trailheadapp__Created_At__c": "2020-07-29T15:33:59.000+0000",
+            "trailheadapp__Badge_Icon__c": "<img src=\"https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70/learn/projects/marsxp-optimize-a-real-estate-app-for-mars/f2833a8f29579e63e2e79643db75c103_badge.png\" alt=\"MarsXP: Optimize a Real Estate App for Mars\" style=\"height:50px; width:50px;\" border=\"0\"/>",
+            "trailheadapp__Archived__c": false,
+            "trailheadapp__API_Name__c": "marsxp-optimize-a-real-estate-app-for-mars",
+            "Name": "MarsXP: Optimize a Real Estate App for Mars"
+        }
+    ]
+}
