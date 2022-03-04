@@ -96,6 +96,68 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>taskList</componentName>
+                <identifier>c_taskList1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>storageManagementContainer</componentName>
+                <identifier>c_storageManagementContainer1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-40a933e6-f2ad-4934-b977-4bf695b7cd09</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentName>shortcuts</componentName>
+                <identifier>c_shortcuts1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-7b4422dc-45dc-44fa-8a7c-e3a9dee59c10</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-40a933e6-f2ad-4934-b977-4bf695b7cd09</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Data Management</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>active</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-7b4422dc-45dc-44fa-8a7c-e3a9dee59c10</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Shortcuts</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-01d4bd41-45d5-4b2e-8c84-5242045a15b5</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
                 <componentName>home:recentRecordContainer</componentName>
                 <identifier>home_recentRecordContainer</identifier>
             </componentInstance>
@@ -128,14 +190,12 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>taskList</componentName>
-                <identifier>c_taskList1</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>storageManagementContainer</componentName>
-                <identifier>c_storageManagementContainer1</identifier>
+                <componentInstanceProperties>
+                    <name>tabs</name>
+                    <value>Facet-01d4bd41-45d5-4b2e-8c84-5242045a15b5</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tabset</componentName>
+                <identifier>flexipage_tabset3</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
