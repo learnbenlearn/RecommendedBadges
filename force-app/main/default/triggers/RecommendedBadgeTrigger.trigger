@@ -4,7 +4,7 @@
  *                      metadata record on delete (if it exists).
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 03-03-2022
+ * @last modified on  : 03-05-2022
  * @last modified by  : Ben Learn
 **/
 trigger RecommendedBadgeTrigger on Recommended_Badge__c (before insert, after delete) {
@@ -13,7 +13,7 @@ trigger RecommendedBadgeTrigger on Recommended_Badge__c (before insert, after de
             BadgeTrigger_Helper.populateJunctionPicklists(Trigger.new, 'Recommended_Badge__c');
         }
         when AFTER_DELETE {
-            BadgeTrigger_Helper.createCMTDeleteTasks(Trigger.new);
+            BadgeTrigger_Helper.createCMTDeleteTasks(Trigger.old);
         }
     }
 }

@@ -99,7 +99,7 @@ public without sharing class BadgeTrigger_Helper {
     public static void createCMTDeleteTasks(List<Recommended_Badge__c> recommendedBadges) {
         List<Task> cmtDeleteTasks = new List<Task>();
 
-        for(REcommended_Badge__c recommendedBadge : recommendedBadges) {
+        for(Recommended_Badge__c recommendedBadge : recommendedBadges) {
             if(recommendedBadge.Saved_By_CMT__c) {
                 Task t = new Task(Priority='Normal', Status='New', Subject='Delete CMT Record for ' + recommendedBadge.Badge_Name__c);
                 cmtDeleteTasks.add(t);
