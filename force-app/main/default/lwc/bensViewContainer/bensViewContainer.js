@@ -1,6 +1,7 @@
 import { LightningElement } from 'lwc';
 
 import getBensMixCategoryNames from '@salesforce/apex/BensViewService.getBensMixCategoryNames';
+import getBensMixRecommendedBadges from '@salesforce/apex/BensViewService.getBensMixRecommendedBadges';
 
 const HARDCODED_VIEW_OPTIONS = [
     {
@@ -20,15 +21,20 @@ export default class BensViewContainer extends LightningElement {
 
     async connectedCallback() {
         try {
-            let data = await getBensMixCategoryNames(); 
+            let mixCategoryData = await getBensMixCategoryNames(); 
             this.viewOptions = HARDCODED_VIEW_OPTIONS;
 
-            for(let categoryName of data) {
+            for(let categoryName of mixCategoryData) {
                 this.viewOptions.push({
                     label: categoryName,
                     value: categoryName
                 });
             }
+
+            let recommendedBadgeData = await getBensMixRecommendedBadges();
+
+            console.log(JSON.parse(JSON.stringify(recommendedBadgeData)));
+
         } catch(err) {
             console.error(err);
         }
