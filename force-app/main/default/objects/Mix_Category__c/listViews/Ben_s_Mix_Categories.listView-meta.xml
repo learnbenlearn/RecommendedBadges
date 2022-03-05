@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ben_s_Mix_Categories</fullName>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Recommended_Badge_Mix__c</field>
+        <operation>equals</operation>
+        <value>Ben&apos;s Mix</value>
+    </filters>
+    <label>Ben&apos;s Mix Categories</label>
+</ListView>
