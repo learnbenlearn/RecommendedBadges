@@ -1,4 +1,4 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 import getBensMixCategoryNames from '@salesforce/apex/BensViewService.getBensMixCategoryNames';
 import getBensMixRecommendedBadges from '@salesforce/apex/BensViewService.getBensMixRecommendedBadges';
@@ -36,6 +36,7 @@ const TABLE_COLUMNS = [
 ]
 
 export default class BensViewContainer extends LightningElement {
+    @api divClasses;
     dropdownViewLabel = 'Select View';
     dropdownViewValue = 'High Priority';
     isLoading;
