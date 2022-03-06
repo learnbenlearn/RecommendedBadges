@@ -4,6 +4,35 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>tabs</name>
+                    <valueList>
+                        <valueListItems>
+                            <value>trailheadapp__Badge__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>trailheadapp__Trail__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>trailheadapp__Trailmix__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Recommended_Badge_Mix__c</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>Mix_Category__c</value>
+                        </valueListItems>
+                    </valueList>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                </componentInstanceProperties>
+                <componentName>runtime_mobilesapp:launchPadTileList</componentName>
+                <identifier>runtime_mobilesapp_launchPadTileList1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>divClasses</name>
                     <value>slds-box slds-theme_default slds-var-p-around_small</value>
                 </componentInstanceProperties>
