@@ -3,6 +3,16 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>bensViewContainer</componentName>
+                <identifier>c_bensViewContainer1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-72b5748a-6e0d-42ea-a2c4-0db938e5bf94</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
                 <componentName>recommendedBadgeMixContainer</componentName>
                 <identifier>c_recommendedBadgeMixContainer1</identifier>
             </componentInstance>
@@ -34,6 +44,24 @@
                 <componentInstanceProperties>
                     <name>active</name>
                     <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-72b5748a-6e0d-42ea-a2c4-0db938e5bf94</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Ben&apos;s View</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab6</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>active</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>body</name>
