@@ -6,14 +6,16 @@
   @last modified by  : Ben Learn
 -->
 <template>
-  <template if:true={isLoading}>
-    <lightning-spinner></lightning-spinner>
-  </template>
-  <template if:false={isLoading}>
-    <c-dropdown label={dropdownViewLabel} value={dropdownViewValue} options={viewOptions} ondropdownchange={handleDropdownChange}>
-    </c-dropdown>
-    <br/>
-
-    <c-datatable key-field="Id" table-data={tableData} columns={tableColumns}></c-datatable>
-  </template>
+  <div class={divClasses}>
+    <template if:true={isLoading}>
+      <lightning-spinner></lightning-spinner>
+    </template>
+    <template if:false={isLoading}>
+      <c-dropdown label={dropdownViewLabel} value={dropdownViewValue} options={viewOptions} ondropdownchange={handleDropdownChange}>
+      </c-dropdown>
+      <br/>
+  
+      <c-datatable key-field="Id" table-data={tableData} columns={tableColumns}></c-datatable>
+    </template>
+  </div>
 </template>
