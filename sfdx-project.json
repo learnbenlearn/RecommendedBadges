@@ -1,11 +1,50 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app"
+    "packageDirectories": [
+        {
+            "path": "DataModel",
+            "package": "DataModel",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "04t1Q000001ACOnQAO"
+                }
+            ]
+        },
+        {
+            "path": "TaskList",
+            "default": false,
+            "package": "TaskList",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "04t1Q000001ACOnQAO"
+                },
+                {
+                    "package": "DataModel",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "CustomMetadataTypes",
+            "default": true,
+            "package": "CustomMetadataTypes",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        }
+    ],
+    "name": "RecommendedBadges",
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "54.0",
+    "packageAliases": {
+        "DataModel": "0Ho8c000000fxx5CAA",
+        "DataModel@0.1.0-1": "04t8c000000yesTAAQ",
+        "TaskList": "0Ho8c000000fy1NCAQ",
+        "TaskList@0.1.0-1": "04t8c000000yfp5AAA",
+        "CustomMetadataTypes": "0Ho8c000000fy1SCAQ"
     }
-  ],
-  "name": "RecommendedBadges",
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "54.0"
 }
