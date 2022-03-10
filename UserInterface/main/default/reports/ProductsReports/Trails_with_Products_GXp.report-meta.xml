@@ -48,10 +48,6 @@
         <sortType>Aggregate</sortType>
     </groupingsDown>
     <name>Trails with Products</name>
-    <params>
-        <name>co</name>
-        <value>1</value>
-    </params>
     <reportType>CustomEntity$trailheadapp__Trail__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>

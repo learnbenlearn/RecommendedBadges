@@ -55,10 +55,6 @@
         <sortType>Aggregate</sortType>
     </groupingsDown>
     <name>Badges with Products</name>
-    <params>
-        <name>co</name>
-        <value>1</value>
-    </params>
     <reportType>CustomEntity$trailheadapp__Badge__c</reportType>
     <scope>organization</scope>
     <showDetails>true</showDetails>
