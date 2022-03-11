@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#F26925</headerColor>
+        <logo>mixer_mobile</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>Mixer Mobile</label>
+    <navType>Standard</navType>
+    <tabs>Ben_s_View</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Mixer_Mobile_UtilityBar</utilityBar>
+</CustomApplication>
