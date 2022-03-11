@@ -1,11 +1,188 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app"
+    "packageDirectories": [
+        {
+            "path": "DataModel",
+            "package": "DataModel",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "default": false,
+            "dependencies": [
+                {
+                    "package": "04t1Q000001ACOnQAO"
+                }
+            ]
+        },
+        {
+            "path": "TaskList",
+            "default": false,
+            "package": "TaskList",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "04t1Q000001ACOnQAO"
+                },
+                {
+                    "package": "DataModel",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "CustomMetadataTypes",
+            "default": false,
+            "package": "CustomMetadataTypes",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        },
+        {
+            "path": "LWCUtils",
+            "default": false,
+            "package": "LWCUtils",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        },
+        {
+            "path": "Triggers",
+            "default": false,
+            "package": "Triggers",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "04t1Q000001ACOnQAO"
+                },
+                {
+                    "package": "DataModel",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "StorageManagement",
+            "default": false,
+            "package": "StorageManagement",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "04t1Q000001ACOnQAO"
+                },
+                {
+                    "package": "DataModel",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "CustomMetadataTypes",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "RecommendedBadgeMix",
+            "default": false,
+            "package": "RecommendedBadgeMix",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "04t1Q000001ACOnQAO"
+                },
+                {
+                    "package": "DataModel",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "LWCUtils",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "BensView",
+            "default": false,
+            "package": "BensView",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "04t1Q000001ACOnQAO"
+                },
+                {
+                    "package": "DataModel",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "LWCUtils",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "UserInterface",
+            "default": true,
+            "package": "UserInterface",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "04t1Q000001ACOnQAO"
+                },
+                {
+                    "package": "DataModel",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "LWCUtils",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "04t8c000000yXMAAA2"
+                },
+                {
+                    "package": "BensView",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "RecommendedBadgeMix",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "CustomMetadataTypes",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "StorageManagement",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "TaskList",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        }
+    ],
+    "name": "RecommendedBadges",
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "54.0",
+    "packageAliases": {
+        "DataModel": "0Ho8c000000fxx5CAA",
+        "DataModel@0.1.0-1": "04t8c000000yesTAAQ",
+        "TaskList": "0Ho8c000000fy1NCAQ",
+        "TaskList@0.1.0-1": "04t8c000000yfp5AAA",
+        "CustomMetadataTypes": "0Ho8c000000fy1SCAQ",
+        "CustomMetadataTypes@0.1.0-1": "04t8c000000yizyAAA",
+        "LWCUtils": "0Ho8c000000fy64CAA",
+        "LWCUtils@0.1.0-1": "04t8c000000yj03AAA",
+        "Triggers": "0Ho8c000000fy69CAA",
+        "Triggers@0.1.0-1": "04t8c000000yj08AAA",
+        "StorageManagement": "0Ho8c000000fy6ECAQ",
+        "StorageManagement@0.1.0-1": "04t8c000000yj0IAAQ",
+        "RecommendedBadgeMix": "0Ho8c000000fy6OCAQ",
+        "RecommendedBadgeMix@0.1.0-1": "04t8c000000yj0NAAQ",
+        "BensView": "0Ho8c000000fy6TCAQ",
+        "BensView@0.1.0-1": "04t8c000000yj0cAAA",
+        "UserInterface": "0Ho8c000000fy6YCAQ"
     }
-  ],
-  "name": "RecommendedBadges",
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "54.0"
 }
