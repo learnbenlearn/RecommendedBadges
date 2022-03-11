@@ -6,7 +6,7 @@
   @last modified by  : Ben Learn
 -->
 <template>
-    <div class="slds-box slds-theme_default slds-var-p-around_small slds-grid slds-wrap" style="min-height:300px">
+    <div class="slds-box slds-var-p-around_small slds-grid slds-wrap" style="min-height:300px">
         <div style="height:125px">
             <div class="slds-col slds-size_3-of-3">
                 <c-dropdown label={dropdownLabel} value={dropdownValue} options={dropdownOptions} ondropdownchange={handleDropdownChange}>
@@ -15,15 +15,14 @@
             <!--<div class="slds-col slds-size_2-of-3"></div>-->
             <br/>
     
-            <lightning-button label="Expand All" onclick={handleExpandAll}></lightning-button>
+            <lightning-button variant="brand" label="Expand All" onclick={handleExpandAll}></lightning-button>
             &nbsp; &nbsp;
-            <lightning-button label="Collapse All" onclick={handleCollapseAll}></lightning-button>
+            <lightning-button variant="brand" label="Collapse All" onclick={handleCollapseAll}></lightning-button>
         </div>
-        <br/>
-        <br/>
 
         <template if:true={displayTable}>
-            <div style="max-height:80vh;overflow:scroll">
+            <div style="max-height:80vh;overflow:scroll;display:block">
+                <br/>
                 <c-treegrid columns={treegridColumns} treegrid-data={treegridData} key-field={keyField}></c-treegrid>
             </div>
         </template>
