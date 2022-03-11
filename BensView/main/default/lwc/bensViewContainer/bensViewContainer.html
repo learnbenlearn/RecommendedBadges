@@ -1,8 +1,8 @@
 <!--
-  @description       : 
+  @description       : Container for a dropdown and datatable to display personal badge mixes.
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 03-06-2022
+  @last modified on  : 03-11-2022
   @last modified by  : Ben Learn
 -->
 <template>
@@ -15,7 +15,9 @@
       </c-dropdown>
       <br/>
   
-      <c-datatable key-field="Id" table-data={tableData} columns={tableColumns}></c-datatable>
+      <div style="max-height:80vh">
+        <c-datatable key-field="Id" table-data={tableData} columns={tableColumns}></c-datatable>
+      </div>
     </template>
   </div>
 </template>
