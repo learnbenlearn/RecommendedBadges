@@ -4,8 +4,10 @@
     <externalId>false</externalId>
     <fieldManageability>DeveloperControlled</fieldManageability>
     <label>Sortable Field</label>
-    <length>255</length>
-    <required>false</required>
-    <type>Text</type>
+    <referenceTo>Sortable_Field__mdt</referenceTo>
+    <relationshipLabel>Sortable Field Values</relationshipLabel>
+    <relationshipName>Sortable_Field_Values</relationshipName>
+    <required>true</required>
+    <type>MetadataRelationship</type>
     <unique>false</unique>
 </CustomField>

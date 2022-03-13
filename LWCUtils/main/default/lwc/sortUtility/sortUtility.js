@@ -1,26 +1,55 @@
-const sortData = (fieldName, sortDirection, data) => {
-    let newData = []
-    let sortedFieldValues = []
+const sortAlphabetic = (fieldName, data, sortDirection = 'asc') => {
+    let sortedFieldOrder = [];
 
-    for(let a of data){
-        sortedFieldValues.push(a[fieldName])
-    }
+    let recordsBySortedField = groupRecordsBySortedField(fieldName, data);
 
     if(sortDirection === 'asc') {
-        sortedFieldValues = sortedFieldValues.sort()
+        sortedFieldOrder = Object.keys(recordsBySortedField).sort();
     } else if(sortDirection === 'desc') {
-        sortedFieldValues = sortedFieldValues.sort().reverse()
+        sortedFieldOrder = Object.keys(recordsBySortedField).sort().reverse();
     }
 
-    for(let a of data) {
-        newData[sortedFieldValues.indexOf(a[fieldName])] = a
+    let sortedData = sortRecords(sortedFieldOrder, recordsBySortedField);
 
-        // janky solution to still sort when field values are identical (e.g. a lot of people have passed cert so we don't want to
-        // continually overwrite the value at that index or newData will be emtpyish and lonely)
-        sortedFieldValues[sortedFieldValues.indexOf(a[fieldName])] = null
-    }
-
-    return newData  
+    return sortedData;
 }
 
-export { sortData }
+const sortCustom = (fieldName, data, sortedFieldOrder, sortDirection = 'asc') => {
+    let recordsBySortedField = groupRecordsBySortedField(fieldName, data);
+
+    if(sortDirection === 'desc') {
+        sortedFieldOrder = sortedFieldOrder.reverse();
+    }
+    
+    let sortedData = sortRecords(sortedFieldOrder, recordsBySortedField);
+
+    return sortedData;
+}
+
+let groupRecordsBySortedField = (fieldName, data) => {
+    let recordsBySortedField = [];
+
+    for(let a of data) {
+        if(recordsBySortedField[a[fieldName]]) {
+            recordsBySortedField[a[fieldName]].push(a);
+        } else {
+            recordsBySortedField[a[fieldName]] = [a];
+        }
+    }
+
+    return recordsBySortedField;
+}
+
+let sortRecords = (sortedFieldOrder, recordsBySortedField) => {
+    let sortedData = [];
+
+    for(let a of sortedFieldOrder) {
+        if(recordsBySortedField[a]) {
+            sortedData.push(... recordsBySortedField[a]);
+        }
+    }
+
+    return sortedData;
+}
+
+export { sortAlphabetic, sortCustom }

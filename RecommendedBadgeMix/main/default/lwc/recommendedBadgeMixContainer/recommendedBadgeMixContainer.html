@@ -24,6 +24,11 @@
                 <lightning-button variant="brand" label="Collapse All" onclick={handleCollapseAll}></lightning-button>
             </div>
         </div>
+
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading..."></lightning-spinner>
+        </template>
+
         <template if:true={displayTable}>
             <div style="max-height:80vh;overflow:scroll;display:block">
                 <br/>
@@ -31,6 +36,4 @@
             </div>
         </template>
     </div>
-
-    {sortOptions}
 </template>

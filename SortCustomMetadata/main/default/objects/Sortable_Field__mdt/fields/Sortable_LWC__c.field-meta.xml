@@ -5,7 +5,6 @@
     <fieldManageability>DeveloperControlled</fieldManageability>
     <label>Sortable LWC</label>
     <referenceTo>Sortable_LWC__mdt</referenceTo>
-    <relationshipLabel>Sort Options</relationshipLabel>
     <relationshipName>Sort_Options</relationshipName>
     <required>false</required>
     <type>MetadataRelationship</type>

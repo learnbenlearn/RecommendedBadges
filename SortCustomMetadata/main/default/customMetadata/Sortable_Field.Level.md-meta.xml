@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <label>Type__c</label>
+    <label>Level</label>
     <protected>false</protected>
     <values>
-        <field>Sortable_Field__c</field>
-        <value xsi:nil="true"/>
+        <field>Field_API_Name__c</field>
+        <value xsi:type="xsd:string">Level__c</value>
     </values>
     <values>
         <field>Sortable_LWC__c</field>
