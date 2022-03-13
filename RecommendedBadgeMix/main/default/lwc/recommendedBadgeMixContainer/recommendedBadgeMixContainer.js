@@ -2,6 +2,8 @@ import { LightningElement, wire } from 'lwc';
 
 import getSetupData from '@salesforce/apex/RecommendedBadgeMixService.getSetupData';
 
+import getSortOptions from '@salesforce/apex/SortCustomMetadataService.getSortOptions';
+
 const TREEGRID_COLUMNS = [
     {
         type: 'url',
@@ -27,10 +29,13 @@ const TREEGRID_COLUMNS = [
 export default class RecommendedBadgeMixContainer extends LightningElement {
     categoriesByMix;
     displayTable;
-    dropdownLabel = 'Select Badge Mix';
-    dropdownOptions;
-    dropdownValue;
+    mixLabel = 'Select Badge Mix';
+    mixOptions;
+    mixValue;
     keyField = 'Name';
+    sortLabel = 'Sort By';
+    sortOptions;
+    sortValue;
     treegridColumns = TREEGRID_COLUMNS;
     treegridData;
     treegridDataByMix;
@@ -46,6 +51,22 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
             this.treegridData = this.treegridDataByMix[data.defaultMix];
 
             this.displayTable = true;
+        } else if(error) {
+            console.error(error);
+        }
+    }
+
+    @wire(getSortOptions, {componentName: 'recommendedBadgeMixContainer'})
+    parseSortOptions({error, data}) {
+        if(data) {
+            this.sortOptions = [];
+            
+            for(let option of data) {
+                this.sortOptions.push({
+                    label: option.MasterLabel,
+                    value: option.Field_API_Name__c
+                })   
+            }
         } else if(error) {
             console.error(error);
         }
@@ -102,8 +123,12 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         }
     }
 
-    handleDropdownChange(event) {
+    handleMixChange(event) {
         this.treegridData = this.treegridDataByMix[event.detail];
+    }
+
+    handleSortChange(event) {
+
     }
 
     handleExpandAll() {

@@ -2,7 +2,7 @@
  * @description       : A catchall trigger helper for TrailTrigger, BadgeTrigger, RecommendedBadgeTrigger, and RecommendedTrailTrigger.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 03-03-2022
+ * @last modified on  : 03-11-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class BadgeTrigger_Helper {
@@ -101,11 +101,33 @@ public without sharing class BadgeTrigger_Helper {
 
         for(Recommended_Badge__c recommendedBadge : recommendedBadges) {
             if(recommendedBadge.Saved_By_CMT__c) {
-                Task t = new Task(Priority='Normal', Status='New', Subject='Delete CMT Record for ' + recommendedBadge.Badge_Name__c);
+                Task t = new Task(Priority='Normal', Status='New', 
+                    Subject='Delete CMT Record for ' + recommendedBadge.Badge_Name__c);
                 cmtDeleteTasks.add(t);
             }
         }
 
         insert cmtDeleteTasks;
+    }
+
+    public static void populateBadgeMixKeys(List<Recommended_Badge__c> newRecommendedBadges) {
+        Set<Id> mixCategoryIds = new Set<Id>();
+
+        for(Recommended_Badge__c newRecommendedBadge : newRecommendedBadges) {
+            if(newRecommendedBadge.Badge_Mix_Key__c == null) {
+                mixCategoryIds.add(newRecommendedBadge.Mix_Category__c);
+            }
+        }
+
+        Map<Id, Mix_Category__c> mixCategoryMap = new Map<Id, Mix_Category__c>([SELECT Id, 
+            Recommended_Badge_Mix__r.Name FROM Mix_Category__c WHERE Id IN :mixCategoryIds]);
+        
+        for(Recommended_Badge__c newRecommendedBadge : newRecommendedBadges) {
+            if(newRecommendedBadge.Badge_Mix_Key__c == null) {
+                String recommendedBadgeMixName = 
+                    mixCategoryMap.get(newRecommendedBadge.Mix_Category__c).Recommended_Badge_Mix__r.Name;
+                newRecommendedBadge.Badge_Mix_Key__c = newRecommendedBadge.Badge_Name__c + '-' + recommendedBadgeMixName;
+            }
+        }
     }
 }

@@ -120,7 +120,7 @@
         },
         {
             "path": "UserInterface",
-            "default": true,
+            "default": false,
             "package": "UserInterface",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
@@ -160,6 +160,10 @@
                     "versionNumber": "0.1.0.LATEST"
                 }
             ]
+        },
+        {
+            "path": "SortCustomMetadata",
+            "default": true
         }
     ],
     "name": "RecommendedBadges",

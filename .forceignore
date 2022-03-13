@@ -13,3 +13,12 @@ package.xml
 
 # Admin profile
 force-app\main\default\profiles\Admin.profile-meta.xml
+
+## Temp Ignored
+
+harness.auradefinitionbundle
+admin.profile
+TaskList
+StorageManagement
+CustomMetadataTypes
+UserInterface
