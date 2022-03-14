@@ -3,7 +3,7 @@
  *                      Tracker app.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 02-27-2022
+ * @last modified on  : 03-13-2022
  * @last modified by  : Ben Learn
 **/
 public with sharing class StorageManagementService {
@@ -53,14 +53,19 @@ public with sharing class StorageManagementService {
             
         List<trailheadapp__Debug_Log__c> debugLogsToDelete = [SELECT Id FROM trailheadapp__Debug_Log__c];
 
+        List<trailheadapp__Trailmix__c> trailmixesToDelete = [SELECT Id FROM trailheadapp__Trailmix__c WHERE 
+            trailheadapp__Created_By_Profile__c != 'https://trailhead.salesforce.com/users/profiles/blearn5241'];
+
         delete archivedBadges;
         delete badgesToDelete;
         delete trailsToDelete;
         delete debugLogsToDelete;
+        delete trailmixesToDelete;
 
         if(archivedBadges.size() > 0) Database.emptyRecycleBin(archivedBadges);
         if(badgesToDelete.size() > 0) Database.emptyRecycleBin(badgesToDelete);
         if(trailsToDelete.size() > 0) Database.emptyRecycleBin(trailsToDelete);
         if(debugLogsToDelete.size() > 0) Database.emptyRecycleBin(debugLogsToDelete);
+        if(trailmixesToDelete.size() > 0) Database.emptyRecycleBin(trailmixesToDelete);
     }
 }
