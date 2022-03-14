@@ -60,7 +60,7 @@
         },
         {
             "path": "StorageManagement",
-            "default": false,
+            "default": true,
             "package": "StorageManagement",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
@@ -70,10 +70,6 @@
                 },
                 {
                     "package": "DataModel",
-                    "versionNumber": "0.1.0.LATEST"
-                },
-                {
-                    "package": "CustomMetadataTypes",
                     "versionNumber": "0.1.0.LATEST"
                 }
             ]
@@ -148,10 +144,6 @@
                     "versionNumber": "0.1.0.LATEST"
                 },
                 {
-                    "package": "CustomMetadataTypes",
-                    "versionNumber": "0.1.0.LATEST"
-                },
-                {
                     "package": "StorageManagement",
                     "versionNumber": "0.1.0.LATEST"
                 },
@@ -163,7 +155,7 @@
         },
         {
             "path": "SortCustomMetadata",
-            "default": true
+            "default": false
         }
     ],
     "name": "RecommendedBadges",
