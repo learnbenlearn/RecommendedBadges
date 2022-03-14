@@ -60,7 +60,7 @@
         },
         {
             "path": "StorageManagement",
-            "default": true,
+            "default": false,
             "package": "StorageManagement",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
@@ -116,7 +116,7 @@
         },
         {
             "path": "UserInterface",
-            "default": false,
+            "default": true,
             "package": "UserInterface",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
