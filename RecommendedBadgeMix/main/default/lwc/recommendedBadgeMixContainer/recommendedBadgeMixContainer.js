@@ -1,6 +1,10 @@
-import { LightningElement, wire } from 'lwc';
+import { LightningElement, wire, track } from 'lwc';
 
 import getSetupData from '@salesforce/apex/RecommendedBadgeMixService.getSetupData';
+
+import getSortOptions from '@salesforce/apex/SortCustomMetadataService.getSortOptions';
+
+import { sortAlphabetic, sortCustom } from 'c/sortUtility';
 
 const TREEGRID_COLUMNS = [
     {
@@ -27,13 +31,27 @@ const TREEGRID_COLUMNS = [
 export default class RecommendedBadgeMixContainer extends LightningElement {
     categoriesByMix;
     displayTable;
-    dropdownLabel = 'Select Badge Mix';
-    dropdownOptions;
-    dropdownValue;
+    isLoading = true;
+    mixLabel = 'Select Badge Mix';
+    mixOptions;
+    mixValue;
     keyField = 'Name';
+    sortLabel = 'Sort By';
+    sortOptions;
+    sortValue;
     treegridColumns = TREEGRID_COLUMNS;
     treegridData;
     treegridDataByMix;
+
+    renderedCallback() {
+        if(this.treegridData && !this.displayTable) {
+            this.displayTable = true;
+        }
+
+        if(this.isLoading && this.treegridData) {
+            this.isLoading = false;
+        }
+    }
 
     @wire(getSetupData)
     parseSetupData({error, data}) {
@@ -46,6 +64,24 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
             this.treegridData = this.treegridDataByMix[data.defaultMix];
 
             this.displayTable = true;
+            this.isLoading = false;
+        } else if(error) {
+            console.error(error);
+        }
+    }
+
+    @wire(getSortOptions, {componentName: 'recommendedBadgeMixContainer'})
+    parseSortOptions({error, data}) {
+        if(data) {
+            this.sortOptions = [];
+            for(let option of data) {
+                this.sortOptions.push({
+                    label: option.MasterLabel,
+                    value: option.Field_API_Name__c,
+                    sortableFieldValues: option.Sortable_Field_Values__r
+                })   
+            }
+
         } else if(error) {
             console.error(error);
         }
@@ -102,15 +138,47 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         }
     }
 
-    handleDropdownChange(event) {
+    handleMixChange(event) {
         this.treegridData = this.treegridDataByMix[event.detail];
     }
 
+    handleSortChange(event) {
+        this.displayTable = false;
+        let sortableFieldValues;
+        let tempTreegridData = [];
+        tempTreegridData = this.treegridData;
+
+        for(let sortOption of this.sortOptions) {
+            if((sortOption.value === event.detail) && this.sortOptions.sortableFieldValues) {
+                sortableFieldValues = [];
+
+                for(let sortableFieldValue of sortOption.sortableFieldValues) {
+                    sortableFieldValues.splice(sortableFieldValue.Sort_Order__c - 1, 0, sortableFieldValue.MasterLabel);
+                }
+                break;
+            }
+        }
+
+        for(let category of tempTreegridData) {
+            if(category._children.length > 1) {
+                if(sortableFieldValues) {
+                    category._children = sortCustom(event.detail, category._children, sortableFieldValues);
+                } else {
+                    category._children = sortAlphabetic(event.detail, category._children);
+                }
+            }
+        }
+
+        this.treegridData = tempTreegridData;
+    }
+
     handleExpandAll() {
+        this.isLoading = true;
         this.template.querySelector('c-treegrid').expandAll();
     }
 
     handleCollapseAll() {
+        this.isLoading = true;
         this.template.querySelector('c-treegrid').collapseAll();
     }
 }

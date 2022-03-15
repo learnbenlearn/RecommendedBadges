@@ -13,3 +13,10 @@ package.xml
 
 # Admin profile
 force-app\main\default\profiles\Admin.profile-meta.xml
+
+## Temp Ignored
+
+harness.auradefinitionbundle
+home_page_default.flexipage
+admin.profile
+CustomMetadataTypes

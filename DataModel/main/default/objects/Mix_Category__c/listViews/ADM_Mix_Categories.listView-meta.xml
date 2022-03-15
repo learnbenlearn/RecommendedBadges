@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ADM_Mix_Categories</fullName>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Recommended_Badge_Mix__c</field>
+        <operation>equals</operation>
+        <value>Recommended ADM Badges</value>
+    </filters>
+    <label>ADM Mix Categories</label>
+</ListView>

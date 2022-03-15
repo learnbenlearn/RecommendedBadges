@@ -29,13 +29,6 @@
             ]
         },
         {
-            "path": "CustomMetadataTypes",
-            "default": false,
-            "package": "CustomMetadataTypes",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
-        },
-        {
             "path": "LWCUtils",
             "default": false,
             "package": "LWCUtils",
@@ -71,10 +64,6 @@
                 {
                     "package": "DataModel",
                     "versionNumber": "0.1.0.LATEST"
-                },
-                {
-                    "package": "CustomMetadataTypes",
-                    "versionNumber": "0.1.0.LATEST"
                 }
             ]
         },
@@ -95,6 +84,10 @@
                 {
                     "package": "LWCUtils",
                     "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "SortCustomMetadata",
+                    "versionNumber": "0.1.0.LATEST"
                 }
             ]
         },
@@ -114,6 +107,10 @@
                 },
                 {
                     "package": "LWCUtils",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "SortCustomMetadata",
                     "versionNumber": "0.1.0.LATEST"
                 }
             ]
@@ -140,15 +137,15 @@
                     "package": "04t8c000000yXMAAA2"
                 },
                 {
+                    "package": "SortCustomMetadata",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
                     "package": "BensView",
                     "versionNumber": "0.1.0.LATEST"
                 },
                 {
                     "package": "RecommendedBadgeMix",
-                    "versionNumber": "0.1.0.LATEST"
-                },
-                {
-                    "package": "CustomMetadataTypes",
                     "versionNumber": "0.1.0.LATEST"
                 },
                 {
@@ -160,6 +157,13 @@
                     "versionNumber": "0.1.0.LATEST"
                 }
             ]
+        },
+        {
+            "path": "SortCustomMetadata",
+            "default": false,
+            "package": "SortCustomMetadata",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
         }
     ],
     "name": "RecommendedBadges",
@@ -171,8 +175,6 @@
         "DataModel@0.1.0-1": "04t8c000000yesTAAQ",
         "TaskList": "0Ho8c000000fy1NCAQ",
         "TaskList@0.1.0-1": "04t8c000000yfp5AAA",
-        "CustomMetadataTypes": "0Ho8c000000fy1SCAQ",
-        "CustomMetadataTypes@0.1.0-1": "04t8c000000yizyAAA",
         "LWCUtils": "0Ho8c000000fy64CAA",
         "LWCUtils@0.1.0-1": "04t8c000000yj03AAA",
         "Triggers": "0Ho8c000000fy69CAA",
@@ -187,6 +189,16 @@
         "UserInterface@0.1.0-1": "04t8c000000ylbJAAQ",
         "TaskList@0.1.0-2": "04t8c000000ylfqAAA",
         "RecommendedBadgeMix@0.1.0-2": "04t8c000000ylg0AAA",
-        "BensView@0.1.0-2": "04t8c000000ylkDAAQ"
+        "BensView@0.1.0-2": "04t8c000000ylkDAAQ",
+        "DataModel@0.1.0-2": "04t8c000000ypRyAAI",
+        "LWCUtils@0.1.0-2": "04t8c000000ypS3AAI",
+        "TaskList@0.1.0-3": "04t8c000000ypS8AAI",
+        "Triggers@0.1.0-2": "04t8c000000ypSDAAY",
+        "StorageManagement@0.1.0-2": "04t8c000000ypSIAAY",
+        "SortCustomMetadata": "0Ho8c000000fy7CCAQ",
+        "SortCustomMetadata@0.1.0-1": "04t8c000000ypSNAAY",
+        "BensView@0.1.0-3": "04t8c000000ypSSAAY",
+        "RecommendedBadgeMix@0.1.0-3": "04t8c000000ypSXAAY",
+        "UserInterface@0.1.0-2": "04t8c000000ytYuAAI"
     }
 }

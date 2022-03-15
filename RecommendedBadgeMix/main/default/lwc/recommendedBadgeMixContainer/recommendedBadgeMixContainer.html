@@ -2,28 +2,36 @@
   @description       : Container for a dropdown and treegrid to display recommended badge mixes.
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 03-11-2022
+  @last modified on  : 03-13-2022
   @last modified by  : Ben Learn
 -->
 <template>
-    <div class="slds-box slds-theme_default slds-var-p-around_small slds-grid slds-wrap" style="min-height:300px">
-        <div style="height:125px">
-            <div class="slds-col slds-size_3-of-3">
-                <c-dropdown label={dropdownLabel} value={dropdownValue} options={dropdownOptions} ondropdownchange={handleDropdownChange}>
+    <div class="slds-box slds-var-p-around_small" style="min-height:300px">
+        <div class="slds-grid slds-wrap slds-gutters" style="height:125px">
+            <div class="slds-col slds-size_1-of-4">
+                <c-dropdown label={mixLabel} value={mixValue} options={mixOptions} ondropdownchange={handleMixChange}>
                 </c-dropdown>
             </div>
-            <!--<div class="slds-col slds-size_2-of-3"></div>-->
-            <br/>
-    
-            <lightning-button label="Expand All" onclick={handleExpandAll}></lightning-button>
-            &nbsp; &nbsp;
-            <lightning-button label="Collapse All" onclick={handleCollapseAll}></lightning-button>
+
+            <div class="slds-col slds-size_1-of-4">
+                <c-dropdown label={sortLabel} value={sortValue} options={sortOptions} ondropdownchange={handleSortChange}></c-dropdown>
+            </div>
+
+            <div class="slds-col slds-size_1-of-6"></div>
+            <div class="slds-col slds-size_1-of-3">
+                <lightning-button variant="brand" label="Expand All" onclick={handleExpandAll}></lightning-button>
+                &nbsp;&nbsp;
+                <lightning-button variant="brand" label="Collapse All" onclick={handleCollapseAll}></lightning-button>
+            </div>
         </div>
-        <br/>
-        <br/>
+
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading..."></lightning-spinner>
+        </template>
 
         <template if:true={displayTable}>
-            <div style="max-height:80vh;overflow:scroll">
+            <div style="max-height:80vh;overflow:scroll;display:block">
+                <br/>
                 <c-treegrid columns={treegridColumns} treegrid-data={treegridData} key-field={keyField}></c-treegrid>
             </div>
         </template>
