@@ -29,13 +29,6 @@
             ]
         },
         {
-            "path": "CustomMetadataTypes",
-            "default": false,
-            "package": "CustomMetadataTypes",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
-        },
-        {
             "path": "LWCUtils",
             "default": false,
             "package": "LWCUtils",
@@ -182,8 +175,6 @@
         "DataModel@0.1.0-1": "04t8c000000yesTAAQ",
         "TaskList": "0Ho8c000000fy1NCAQ",
         "TaskList@0.1.0-1": "04t8c000000yfp5AAA",
-        "CustomMetadataTypes": "0Ho8c000000fy1SCAQ",
-        "CustomMetadataTypes@0.1.0-1": "04t8c000000yizyAAA",
         "LWCUtils": "0Ho8c000000fy64CAA",
         "LWCUtils@0.1.0-1": "04t8c000000yj03AAA",
         "Triggers": "0Ho8c000000fy69CAA",
@@ -207,6 +198,7 @@
         "SortCustomMetadata": "0Ho8c000000fy7CCAQ",
         "SortCustomMetadata@0.1.0-1": "04t8c000000ypSNAAY",
         "BensView@0.1.0-3": "04t8c000000ypSSAAY",
-        "RecommendedBadgeMix@0.1.0-3": "04t8c000000ypSXAAY"
+        "RecommendedBadgeMix@0.1.0-3": "04t8c000000ypSXAAY",
+        "UserInterface@0.1.0-2": "04t8c000000ytYuAAI"
     }
 }
