@@ -2,10 +2,17 @@
  * @description       : Apex controller for recommendedBadgeMixContainer LWC.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 03-11-2022
+ * @last modified on  : 03-23-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class RecommendedBadgeMixService {
+    /**
+    * @description Method to retrieve necessary data - including mix categories, recommended badges, and
+        recommended trails for public recommended badge mixes, as well as the name of the default mix -
+        for recommendedBadgeMixContainer.
+    * @author Ben Learn | 03-11-2022 
+    * @return SetupDataWrapper 
+    **/
     @AuraEnabled(cacheable=true)
     public static SetupDataWrapper getSetupData() {
         List<Mix_Category__c> mixCategories = [SELECT Name, Recommended_Badge_Mix__r.Name, (SELECT Description__c,

@@ -2,7 +2,7 @@
  * @description       : A catchall trigger helper for TrailTrigger, BadgeTrigger, RecommendedBadgeTrigger, and RecommendedTrailTrigger.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 03-11-2022
+ * @last modified on  : 03-23-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class BadgeTrigger_Helper {
@@ -42,6 +42,16 @@ public without sharing class BadgeTrigger_Helper {
         }
     }
 
+    /**
+    * @description Method to copy Level__c and Type__c field values from parent trailheadapp__Badge__c/
+        trialheadapp__Trail__c to child Recommended_Badge__c/Recommended_Trail__c, respectively, after
+        the parent is updated. (Necessary because these fields are picklist fields, so formula fields
+        can't be used to copy their values from a parent to a child).
+    * @author Ben Learn | 03-11-2022 
+    * @param List<sObject> oldRecords 
+    * @param Map<Id sObject> newRecordMap 
+    * @param String sObjectType 
+    **/
     public static void updateJunctionTypesAndLevels(List<sObject> oldRecords, Map<Id, sObject> newRecordMap, String sObjectType) {
         ObjectInfoWrapper parentObjectInfo = OBJECT_INFO_MAP.get(sObjectType);
         List<String> fieldsToCheck = new List<String>(parentObjectInfo.parentJunctionPicklistMap.keySet());
@@ -72,6 +82,15 @@ public without sharing class BadgeTrigger_Helper {
         update junctionRecordsToUpdate;
     }
 
+    /**
+    * @description Method to copy Level__c and Type__c field values from parent trailheadapp__Badge__c/
+        trialheadapp__Trail__c to child Recommended_Badge__c/Recommended_Trail__c, respectively, before
+        the child is created. (Necessary because these fields are picklist fields, so formula fields 
+        can't be used to copy their values from a parent to a child).
+    * @author Ben Learn | 03-11-2022 
+    * @param List<sObject> newRecords 
+    * @param String sObjectType 
+    **/
     public static void populateJunctionPicklists(List<sObject> newRecords, String sObjectType) {
         ObjectInfoWrapper childObject = OBJECT_INFO_MAP.get(sObjectType);
         Map<String, String> picklists = childObject.parentJunctionPicklistMap;
@@ -96,6 +115,12 @@ public without sharing class BadgeTrigger_Helper {
         }
     }
 
+    /**
+    * @description Method to create tasks to remind to delete custom metadata records previously used to
+        prevent badges from being deleted by StorageManagementService.
+    * @author Ben Learn | 03-11-2022 
+    * @param List<Recommended_Badge__c> recommendedBadges 
+    **/
     public static void createCMTDeleteTasks(List<Recommended_Badge__c> recommendedBadges) {
         List<Task> cmtDeleteTasks = new List<Task>();
 
@@ -110,6 +135,13 @@ public without sharing class BadgeTrigger_Helper {
         insert cmtDeleteTasks;
     }
 
+    /**
+    * @description Method to populate unique key in the format [Badge Name]-[Recommended Badge Mix Name].
+        Done to ensure that there aren't any duplicated recommended badges within the same recommended
+        badge mix.
+    * @author Ben Learn | 03-11-2022 
+    * @param List<Recommended_Badge__c> newRecommendedBadges 
+    **/
     public static void populateBadgeMixKeys(List<Recommended_Badge__c> newRecommendedBadges) {
         Set<Id> mixCategoryIds = new Set<Id>();
 
