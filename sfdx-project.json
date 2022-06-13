@@ -206,6 +206,8 @@
         "Triggers@0.1.0-3": "04t8c00000100S5AAI",
         "TaskList@0.1.0-4": "04t8c00000100SFAAY",
         "StorageManagement@0.1.0-3": "04t8c00000100SPAAY",
-        "UserInterface@0.1.0-3": "04t8c00000100SZAAY"
+        "UserInterface@0.1.0-3": "04t8c00000100SZAAY",
+        "StorageManagement@0.1.0-4": "04t8c00000100TDAAY",
+        "UserInterface@0.1.0-4": "04t8c00000100TIAAY"
     }
 }
