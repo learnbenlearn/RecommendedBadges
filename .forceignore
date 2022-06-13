@@ -22,8 +22,8 @@ admin.profile
 
 # Ignored Packages
 BensView
-DataModel
 LWCUtils
+RecommendedBadgeMix
 SortCustomMetadata
 StorageManagement
 TaskList
