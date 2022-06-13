@@ -2,20 +2,25 @@
  * @description       : Apex controller for storageLimits LWC.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 02-27-2022
+ * @last modified on  : 03-23-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class StorageLimitsService {
+    /**
+    * @description Method to retrieve available and consumed org storage.
+    * @author Ben Learn | 02-27-2022 
+    * @return Map<String, String> 
+    **/
     @AuraEnabled(cacheable=true)
     public static Map<String, String> getStorageLimitInfo(){
-    Map<String, System.OrgLimit> orgLimitMap = OrgLimits.getMap();
-    System.OrgLimit storageLimit = orgLimitMap.get('DataStorageMB');
+        Map<String, System.OrgLimit> orgLimitMap = OrgLimits.getMap();
+        System.OrgLimit storageLimit = orgLimitMap.get('DataStorageMB');
 
-    Map<String, String> infoValueMap = new Map<String, String>();
-    infoValueMap.put('Name', storageLimit.getName());
-    infoValueMap.put('Limit', String.valueOf(storageLimit.getLimit()));
-    infoValueMap.put('Value', String.valueOf(storageLimit.getValue()));
+        Map<String, String> infoValueMap = new Map<String, String>();
+        infoValueMap.put('Name', storageLimit.getName());
+        infoValueMap.put('Limit', String.valueOf(storageLimit.getLimit()));
+        infoValueMap.put('Value', String.valueOf(storageLimit.getValue()));
 
-    return infoValueMap;
+        return infoValueMap;
     }
 }

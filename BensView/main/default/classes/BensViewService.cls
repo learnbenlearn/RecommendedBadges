@@ -2,10 +2,15 @@
  * @description       : Apex controller for bensViewContainer LWC.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 03-11-2022
+ * @last modified on  : 03-23-2022
  * @last modified by  : Ben Learn
 **/
 public with sharing class BensViewService {
+    /**
+    * @description Method to retrieve names of mix categories for personal recommended badge mix.
+    * @author Ben Learn | 03-11-2022 
+    * @return List<String> 
+    **/
     @AuraEnabled(cacheable=true)
     public static List<String> getBensMixCategoryNames() {
         List<Mix_Category__c> bensMixCategories = [SELECT Name FROM Mix_Category__c WHERE Recommended_Badge_Mix__r.Name LIKE 'Ben%'
@@ -19,6 +24,11 @@ public with sharing class BensViewService {
         return bensMixCategoryNames;
     }
 
+    /**
+    * @description Method to retrieve recommended badges for personal recommended badge mix.
+    * @author Ben Learn | 03-11-2022 
+    * @return Map<String, List<Recommended_Badge__c>> 
+    **/
     @AuraEnabled(cacheable=true)
     public static Map<String, List<Recommended_Badge__c>> getBensMixRecommendedBadges() {
         List<Recommended_Badge__c> bensMixRecommendedBadges = [SELECT Add_to_Recommended_Badges_Mix__c, Badge_Name__c,

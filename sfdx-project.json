@@ -199,6 +199,12 @@
         "SortCustomMetadata@0.1.0-1": "04t8c000000ypSNAAY",
         "BensView@0.1.0-3": "04t8c000000ypSSAAY",
         "RecommendedBadgeMix@0.1.0-3": "04t8c000000ypSXAAY",
-        "UserInterface@0.1.0-2": "04t8c000000ytYuAAI"
+        "UserInterface@0.1.0-2": "04t8c000000ytYuAAI",
+        "DataModel@0.1.0-3": "04t8c00000100RRAAY",
+        "SortCustomMetadata@0.1.0-2": "04t8c00000100RWAAY",
+        "RecommendedBadgeMix@0.1.0-4": "04t8c00000100RvAAI",
+        "Triggers@0.1.0-3": "04t8c00000100S5AAI",
+        "TaskList@0.1.0-4": "04t8c00000100SFAAY",
+        "StorageManagement@0.1.0-3": "04t8c00000100SPAAY"
     }
 }
