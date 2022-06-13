@@ -35,7 +35,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     mixLabel = 'Select Badge Mix';
     mixOptions;
     mixValue;
-    keyField = 'Name';
+    keyField = 'Id';
     sortLabel = 'Sort By';
     sortOptions;
     sortValue;
@@ -57,7 +57,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     parseSetupData({error, data}) {
         if(data) {
             this.categoriesByMix = data.categoriesByMix;
-            this.populateDropdown(data.defaultMix);
+            this.populateMixDropdown(data.defaultMix);
 
             this.parseTreegridData();
 
@@ -87,13 +87,13 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         }
     }
 
-    populateDropdown(defaultMix) {
+    populateMixDropdown(defaultMix) {
         let options = [];
         for(let a of Object.keys(this.categoriesByMix)) {
             options.push({label: a, value: a});
         }
-        this.dropdownOptions = options;
-        this.dropdownValue = defaultMix;
+        this.mixOptions = options;
+        this.mixValue = defaultMix;
     }
 
     parseTreegridData() {
@@ -105,6 +105,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                 if(item.Recommended_Badges__r) {
                     for(let badge of item.Recommended_Badges__r) {
                         newCategoryChildren.push({
+                            Id: badge.Id,
                             Name: badge.Badge_Name__c,
                             Level__c: badge.Level__c,
                             Type__c: badge.Type__c,
@@ -117,6 +118,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                 if(item.Recommended_Trails__r) {
                     for(let trail of item.Recommended_Trails__r) {
                         newCategoryChildren.push({
+                            Id: trail.Id,
                             Name: trail.Trail_Name__c,
                             Level__c: trail.Level__c,
                             Type__c: 'Trail',
@@ -126,6 +128,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                 }
 
                 let newCategory = {
+                    Id: item.Id,
                     Name: item.Name,
                     URL__c: '/' + item.Id,
                     _children: newCategoryChildren

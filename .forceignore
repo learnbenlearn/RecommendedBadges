@@ -24,8 +24,8 @@ admin.profile
 BensView
 DataModel
 LWCUtils
-RecommendedBadgeMix
 SortCustomMetadata
 StorageManagement
+TaskList
 Triggers
 UserInterface

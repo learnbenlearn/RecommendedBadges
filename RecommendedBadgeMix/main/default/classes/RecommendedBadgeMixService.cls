@@ -2,7 +2,7 @@
  * @description       : Apex controller for recommendedBadgeMixContainer LWC.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 03-23-2022
+ * @last modified on  : 06-13-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class RecommendedBadgeMixService {
@@ -16,7 +16,7 @@ public without sharing class RecommendedBadgeMixService {
     @AuraEnabled(cacheable=true)
     public static SetupDataWrapper getSetupData() {
         List<Mix_Category__c> mixCategories = [SELECT Name, Recommended_Badge_Mix__r.Name, (SELECT Description__c,
-            Level__c, Trail_Name__c, URL__c FROM Recommended_Trails__r WHERE Archived__c = false), (SELECT
+            Level__c, Trail_Name__c, URL__c FROM Recommended_Trails__r WHERE Archived__c = false), (SELECT 
             Badge_Name__c, Description__c, Level__c, Type__c, URL__c FROM Recommended_Badges__r WHERE Archived__c = false) FROM 
             Mix_Category__c WHERE Recommended_Badge_Mix__r.Private_Mix__c = false ORDER BY Name];
 
