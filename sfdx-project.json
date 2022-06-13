@@ -205,6 +205,7 @@
         "RecommendedBadgeMix@0.1.0-4": "04t8c00000100RvAAI",
         "Triggers@0.1.0-3": "04t8c00000100S5AAI",
         "TaskList@0.1.0-4": "04t8c00000100SFAAY",
-        "StorageManagement@0.1.0-3": "04t8c00000100SPAAY"
+        "StorageManagement@0.1.0-3": "04t8c00000100SPAAY",
+        "UserInterface@0.1.0-3": "04t8c00000100SZAAY"
     }
 }
