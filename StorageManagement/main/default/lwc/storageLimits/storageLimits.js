@@ -22,7 +22,6 @@ export default class StorageLimits extends LightningElement {
 
     async fetchStorageLimitInfo() {
         let storageLimitInfo = await getStorageLimitInfo();
-
         this.cardTitle = storageLimitInfo.Name;
         this.limitNum = storageLimitInfo.Limit;
         this.valueNum = storageLimitInfo.Value;
@@ -33,6 +32,7 @@ export default class StorageLimits extends LightningElement {
     }
 
     @api refreshStorageLimitInfo() {
+        console.log('in refreshStorageLimitInfo');
         this.fetchStorageLimitInfo();
     }
 }

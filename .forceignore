@@ -21,11 +21,11 @@ home_page_default.flexipage
 admin.profile
 
 # Ignored Packages
-#BensView
-#LWCUtils
-#RecommendedBadgeMix
-#SortCustomMetadata
+BensView
+LWCUtils
+RecommendedBadgeMix
+SortCustomMetadata
 #StorageManagement
 #TaskList
-#Triggers
-#UserInterface
+Triggers
+UserInterface

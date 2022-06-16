@@ -1,4 +1,6 @@
-import { LightningElement, wire } from 'lwc';
+import { LightningElement, wire, track } from 'lwc';
+
+import { refreshApex } from '@salesforce/apex';
 
 import getTasks from '@salesforce/apex/TaskListService.getTasks';
 
@@ -7,10 +9,14 @@ export default class TaskList extends LightningElement {
     displayTaskList;
     noTasks;
     noTasksMessage = '<b>No tasks!</b>';
-    taskList;
+    parseTasksResponse;
+    @track taskList;
 
     @wire(getTasks)
-    parseTasks({error, data}) {
+    parseTasks(value) {
+        this.parseTasksResponse = value;
+        const {error, data} = value;
+
         if(data) {
             let tasks = data;
 
@@ -33,5 +39,10 @@ export default class TaskList extends LightningElement {
         } else if(error) {
             console.error(error);
         }
+    }
+
+    handleRefresh() {
+        this.displaySpinner = true;
+        refreshApex(this.parseTasksResponse);
     }
 }

@@ -2,23 +2,30 @@
   @description       : Simple LWC to display tasks in a "bulleted" list.
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 06-12-2022
+  @last modified on  : 06-16-2022
   @last modified by  : Ben Learn
 -->
 <template>
     <div class="slds-box slds-theme_default slds-var-p-around_small">
         <template if:true={displayTaskList}>
-            <h1 class="slds-align_absolute-center"><b>Tasks</b></h1>
+            <span class="slds-float_right">
+                <lightning-button-icon icon-name="utility:refresh" onclick={handleRefresh} variant="bare"></lightning-button-icon>
+            </span>
+                <span class="slds-align_absolute-center slds-text-heading_medium">Tasks</span>
+            <br/>
+
             <template for:each={taskList} for:item="task">
                 - <lightning-formatted-url key={task.Id} label={task.Subject} value={task.Id}></lightning-formatted-url>
                 <br key={task.Id}>
             </template>
         </template>
+
         <template if:true={noTasks}>
             <div class="slds-align_absolute-center">
                 <lightning-formatted-rich-text value={noTasksMessage}></lightning-formatted-rich-text>
             </div>
         </template>
+        
         <template if:true={displaySpinner}>
             <lightning-spinner></lightning-spinner>
         </template>
