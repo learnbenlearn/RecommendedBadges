@@ -7,10 +7,6 @@ const HARDCODED_VIEW_OPTIONS = [
     {
         label: 'High Priority',
         value: 'High Priority'
-    },
-    {
-        label: 'Add to Recommended Badges Mix',
-        value: 'Add to Recommended Badges Mix'
     }
 ];
 

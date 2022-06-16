@@ -21,10 +21,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Add_to_Recommended_Badges_Mix__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>High_Priority__c</field>
             </layoutItems>
             <layoutItems>
