@@ -1,7 +1,17 @@
-import { LightningElement, api } from 'lwc';
+import { LightningElement, api, track } from 'lwc';
 
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+
+import deleteRecommendedBadge from '@salesforce/apex/BensViewService.deleteRecommendedBadge';
 import getBensMixCategoryNames from '@salesforce/apex/BensViewService.getBensMixCategoryNames';
 import getBensMixRecommendedBadges from '@salesforce/apex/BensViewService.getBensMixRecommendedBadges';
+
+const ACTIONS = [
+    {
+        label: 'Delete Recommended Badge',
+        name: 'delete'
+    }
+]
 
 const HARDCODED_VIEW_OPTIONS = [
     {
@@ -28,6 +38,12 @@ const TABLE_COLUMNS = [
     {
         label: 'Time Estimate',
         fieldName: 'Time_Estimate__c'
+    },
+    {
+        type: 'action',
+        typeAttributes: {
+            rowActions: ACTIONS
+        }
     }
 ]
 
@@ -35,10 +51,10 @@ export default class BensViewContainer extends LightningElement {
     @api divClasses;
     dropdownViewLabel = 'Select View';
     dropdownViewValue = 'High Priority';
-    isLoading;
+    isLoading = true;
     recommendedBadgeData;
     tableColumns = TABLE_COLUMNS;
-    tableData;
+    @track tableData;
     viewOptions;
 
     async connectedCallback() {
@@ -64,5 +80,41 @@ export default class BensViewContainer extends LightningElement {
 
     handleDropdownChange(event) {
         this.tableData = this.recommendedBadgeData[event.detail];
+    }
+
+    async handleRowAction(event) {
+        switch(event.detail.action.name) {
+            case 'delete':
+                this.isLoading = true;
+
+                let deletedRowIndex;
+
+                for(let row of this.tableData) {
+                    if(row.Id === event.detail.row.Id) {
+                        deletedRowIndex = this.tableData.indexOf(row);
+                    }
+                }
+
+                try{
+                    await deleteRecommendedBadge({recommendedBadgeId: event.detail.row.Id});
+    
+                    this.tableData = this.tableData.slice(0, deletedRowIndex).concat(this.tableData.slice(deletedRowIndex + 1));
+                    
+                    // special case when high priority
+                    // update recommendedBadgeData
+    
+                    const showToastEvent = new ShowToastEvent({
+                        title: 'Success',
+                        message: 'Deleted ' + event.detail.row.Badge_Name__c + ' recommended badge.',
+                        variant: 'success'
+                    });
+    
+                    this.dispatchEvent(showToastEvent);
+                } catch(err) {
+                    console.error(err);
+                }
+
+                this.isLoading = false;
+        }
     }
 }

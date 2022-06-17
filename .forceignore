@@ -22,11 +22,12 @@ admin.profile
 
 # Ignored Packages
 #BensView
+DataModel
 ExperienceSite
 #LWCUtils
-#RecommendedBadgeMix
-#SortCustomMetadata
-#StorageManagement
-#TaskList
-#Triggers
-#UserInterface
+RecommendedBadgeMix
+SortCustomMetadata
+StorageManagement
+TaskList
+Triggers
+UserInterface

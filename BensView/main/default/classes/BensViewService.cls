@@ -2,7 +2,7 @@
  * @description       : Apex controller for bensViewContainer LWC.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 06-16-2022
+ * @last modified on  : 06-17-2022
  * @last modified by  : Ben Learn
 **/
 public with sharing class BensViewService {
@@ -58,5 +58,16 @@ public with sharing class BensViewService {
         }
 
         return bensViewMap;
+    }
+
+    /**
+    * @description Method to delete recommended badge based on Id.
+    * @author Ben Learn | 06-17-2022 
+    * @param Id recommendedBadgeId 
+    **/
+    @AuraEnabled
+    public static void deleteRecommendedBadge(Id recommendedBadgeId) {
+        List<Recommended_Badge__c> recommendedBadges = [SELECT Id FROM Recommended_Badge__c WHERE Id = :recommendedBadgeId];
+        delete recommendedBadges;
     }
 }
