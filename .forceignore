@@ -24,9 +24,9 @@ admin.profile
 #BensView
 ExperienceSite
 #LWCUtils
-RecommendedBadgeMix
+#RecommendedBadgeMix
 #SortCustomMetadata
-StorageManagement
-TaskList
-Triggers
-UserInterface
+#StorageManagement
+#TaskList
+#Triggers
+#UserInterface

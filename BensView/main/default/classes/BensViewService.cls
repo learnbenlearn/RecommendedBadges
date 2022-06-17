@@ -37,7 +37,6 @@ public with sharing class BensViewService {
 
         Map<String, List<Recommended_Badge__c>> bensViewMap = new Map<String, List<Recommended_Badge__c>>();
         bensViewMap.put('High Priority', new List<Recommended_Badge__c>());
-        bensViewMap.put('Add to Recommended Badges Mix', new List<Recommended_Badge__c>());
 
         List<Recommended_Badge__c> tempRecommendedBadges = new List<Recommended_Badge__c>();
 
