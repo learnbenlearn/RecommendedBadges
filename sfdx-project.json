@@ -208,6 +208,19 @@
         "StorageManagement@0.1.0-3": "04t8c00000100SPAAY",
         "UserInterface@0.1.0-3": "04t8c00000100SZAAY",
         "StorageManagement@0.1.0-4": "04t8c00000100TDAAY",
-        "UserInterface@0.1.0-4": "04t8c00000100TIAAY"
+        "UserInterface@0.1.0-4": "04t8c00000100TIAAY",
+        "DataModel@0.1.0-4": "04t8c000001029tAAA",
+        "Triggers@0.1.0-4": "04t8c000001029yAAA",
+        "StorageManagement@0.1.0-5": "04t8c00000102A3AAI",
+        "BensView@0.1.0-5": "04t8c00000102A8AAI",
+        "RecommendedBadgeMix@0.1.0-5": "04t8c00000102ADAAY",
+        "UserInterface@0.1.0-5": "04t8c00000102AIAAY",
+        "DataModel@0.1.0-5": "04t8c00000102JHAAY",
+        "Triggers@0.1.0-5": "04t8c00000102JMAAY",
+        "LWCUtils@0.1.0-3": "04t8c00000102JRAAY",
+        "StorageManagement@0.1.0-6": "04t8c00000102JWAAY",
+        "BensView@0.1.0-6": "04t8c00000102JbAAI",
+        "RecommendedBadgeMix@0.1.0-6": "04t8c00000102JgAAI",
+        "UserInterface@0.1.0-6": "04t8c00000102JlAAI"
     }
 }

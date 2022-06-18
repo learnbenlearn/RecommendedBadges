@@ -2,9 +2,15 @@
   @description       : Generic datatable LWC.
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 03-06-2022
+  @last modified on  : 06-17-2022
   @last modified by  : Ben Learn
 -->
 <template>
-    <lightning-datatable key-field={keyField} data={tableData} columns={columns} hide-checkbox-column></lightning-datatable>
+    <template if:true={hasRowActions}>
+      <lightning-datatable key-field={keyField} data={tableData} columns={columns} onrowaction={handleRowAction} hide-checkbox-column>
+      </lightning-datatable>
+    </template>
+    <template if:false={hasRowActions}>
+      <lightning-datatable key-field={keyField} data={tableData} columns={columns} hide-checkbox-column></lightning-datatable>
+    </template>
 </template>
