@@ -214,6 +214,13 @@
         "StorageManagement@0.1.0-5": "04t8c00000102A3AAI",
         "BensView@0.1.0-5": "04t8c00000102A8AAI",
         "RecommendedBadgeMix@0.1.0-5": "04t8c00000102ADAAY",
-        "UserInterface@0.1.0-5": "04t8c00000102AIAAY"
+        "UserInterface@0.1.0-5": "04t8c00000102AIAAY",
+        "DataModel@0.1.0-5": "04t8c00000102JHAAY",
+        "Triggers@0.1.0-5": "04t8c00000102JMAAY",
+        "LWCUtils@0.1.0-3": "04t8c00000102JRAAY",
+        "StorageManagement@0.1.0-6": "04t8c00000102JWAAY",
+        "BensView@0.1.0-6": "04t8c00000102JbAAI",
+        "RecommendedBadgeMix@0.1.0-6": "04t8c00000102JgAAI",
+        "UserInterface@0.1.0-6": "04t8c00000102JlAAI"
     }
 }

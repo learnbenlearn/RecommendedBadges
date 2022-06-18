@@ -24,11 +24,11 @@ standard-home.tab
 # Ignored Packages
 #BensView
 #DataModel
-ExperienceSite
+#ExperienceSite
 #LWCUtils
-RecommendedBadgeMix
-SortCustomMetadata
-StorageManagement
-TaskList
-Triggers
-UserInterface
+#RecommendedBadgeMix
+#SortCustomMetadata
+#StorageManagement
+#TaskList
+#Triggers
+#UserInterface
