@@ -13,12 +13,12 @@ const ACTIONS = [
     }
 ]
 
-const HARDCODED_VIEW_OPTIONS = [
-    {
-        label: 'High Priority',
-        value: 'High Priority'
-    }
-];
+const HIGH_PRIORITY_OPTION = {
+    label: 'High Priority',
+    value: 'High Priority'
+};
+
+const HIGH_PRIORITY_PREFIX = 'HP';
 
 const TABLE_COLUMNS = [
     {
@@ -52,7 +52,8 @@ export default class BensViewContainer extends LightningElement {
     dropdownViewLabel = 'Select View';
     dropdownViewValue = 'High Priority';
     isLoading = true;
-    recommendedBadgeData;
+    keyField = 'High_Priority_Id__c';
+    @track recommendedBadgeData;
     tableColumns = TABLE_COLUMNS;
     @track tableData;
     viewOptions;
@@ -60,7 +61,8 @@ export default class BensViewContainer extends LightningElement {
     async connectedCallback() {
         try {
             let mixCategoryData = await getBensMixCategoryNames(); 
-            this.viewOptions = HARDCODED_VIEW_OPTIONS;
+            this.viewOptions = [];
+            this.viewOptions.push(HIGH_PRIORITY_OPTION);
 
             for(let categoryName of mixCategoryData) {
                 this.viewOptions.push({
@@ -79,42 +81,50 @@ export default class BensViewContainer extends LightningElement {
     }
 
     handleDropdownChange(event) {
+        if(event.detail === 'High Priority') {
+            this.keyField = 'High_Priority_Id__c';
+        } else {
+            this.keyField = 'Id';
+        }
+
+        this.dropdownViewValue = event.detail;
         this.tableData = this.recommendedBadgeData[event.detail];
     }
 
-    async handleRowAction(event) {
+    handleRowAction(event) {
         switch(event.detail.action.name) {
             case 'delete':
-                this.isLoading = true;
-
-                let deletedRowIndex;
-
-                for(let row of this.tableData) {
-                    if(row.Id === event.detail.row.Id) {
-                        deletedRowIndex = this.tableData.indexOf(row);
-                    }
-                }
-
-                try{
-                    await deleteRecommendedBadge({recommendedBadgeId: event.detail.row.Id});
-    
-                    this.tableData = this.tableData.slice(0, deletedRowIndex).concat(this.tableData.slice(deletedRowIndex + 1));
-                    
-                    // special case when high priority
-                    // update recommendedBadgeData
-    
-                    const showToastEvent = new ShowToastEvent({
-                        title: 'Success',
-                        message: 'Deleted ' + event.detail.row.Badge_Name__c + ' recommended badge.',
-                        variant: 'success'
-                    });
-    
-                    this.dispatchEvent(showToastEvent);
-                } catch(err) {
-                    console.error(err);
-                }
-
-                this.isLoading = false;
+                this.handleDelete(event.detail.row);
         }
+    }
+
+    async handleDelete(rowToDelete) {
+        this.isLoading = true;
+
+        let recommendedBadgeId;
+
+        if(this.dropdownViewValue === 'High Priority') {
+            recommendedBadgeId = rowToDelete.Id.replace(HIGH_PRIORITY_PREFIX, '');
+        } else {
+            recommendedBadgeId = rowToDelete.Id;
+        }
+
+        try{
+            await deleteRecommendedBadge({recommendedBadgeId: recommendedBadgeId});
+            this.recommendedBadgeData = await getBensMixRecommendedBadges();
+            this.tableData = this.recommendedBadgeData[this.dropdownViewValue];
+
+            const showToastEvent = new ShowToastEvent({
+                title: 'Success',
+                message: 'Deleted ' + rowToDelete.Badge_Name__c + ' recommended badge.',
+                variant: 'success'
+            });
+
+            this.dispatchEvent(showToastEvent);
+        } catch(err) {
+            console.error(err);
+        }
+
+        this.isLoading = false;
     }
 }

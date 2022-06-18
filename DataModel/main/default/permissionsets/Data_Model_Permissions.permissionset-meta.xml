@@ -76,6 +76,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Recommended_Badge__c.High_Priority_Id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Recommended_Badge__c.High_Priority__c</field>
         <readable>true</readable>

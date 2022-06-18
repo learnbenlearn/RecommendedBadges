@@ -2,7 +2,7 @@
   @description       : Container for a dropdown and datatable to display personal badge mixes.
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 06-17-2022
+  @last modified on  : 06-18-2022
   @last modified by  : Ben Learn
 -->
 <template>
@@ -16,7 +16,8 @@
       <br/>
   
       <div style="max-height:80vh;overflow:scroll">
-        <c-datatable key-field="Id" table-data={tableData} columns={tableColumns} has-row-actions="true" onactionclick={handleRowAction}>
+        <c-datatable key-field={keyField} table-data={tableData} columns={tableColumns} has-row-actions="true" 
+          onactionclick={handleRowAction}>
         </c-datatable>
       </div>
     </template>

@@ -19,10 +19,11 @@ force-app/main/default/profiles/Admin.profile-meta.xml
 harness.auradefinitionbundle
 home_page_default.flexipage
 admin.profile
+standard-home.tab
 
 # Ignored Packages
 #BensView
-DataModel
+#DataModel
 ExperienceSite
 #LWCUtils
 RecommendedBadgeMix
