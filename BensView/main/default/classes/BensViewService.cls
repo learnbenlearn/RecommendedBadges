@@ -12,15 +12,19 @@ public with sharing class BensViewService {
     * @return List<String> 
     **/
     @AuraEnabled(cacheable=true)
-    public static List<String> getBensMixCategoryNames() {
+    public static Map<String, Mix_Category__c> getBensMixCategoryNames() {
         List<Mix_Category__c> bensMixCategories = [SELECT Name FROM Mix_Category__c WHERE Recommended_Badge_Mix__r.Name LIKE 'Ben%'
             ORDER BY Name];
+
+        List<Mix_Category__c> publicMixCategories = [SELECT Name, Recommended_Badge_Mix__r.Name FROM Mix_Category__c WHERE 
+            NOT Recommended_Badge_Mix__r.Name LIKE 'Ben%'];
 
         List<String> bensMixCategoryNames = new List<String>();
         for(Mix_Category__c mc : bensMixCategories) {
             bensMixCategoryNames.add(mc.Name);
         }
 
+        //bensMixCa
         return bensMixCategoryNames;
     }
 

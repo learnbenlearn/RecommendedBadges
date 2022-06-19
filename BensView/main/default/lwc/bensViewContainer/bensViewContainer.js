@@ -3,6 +3,7 @@ import { LightningElement, api, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 import deleteRecommendedBadge from '@salesforce/apex/BensViewService.deleteRecommendedBadge';
+
 import getBensMixCategoryNames from '@salesforce/apex/BensViewService.getBensMixCategoryNames';
 import getBensMixRecommendedBadges from '@salesforce/apex/BensViewService.getBensMixRecommendedBadges';
 

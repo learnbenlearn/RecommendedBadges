@@ -30,7 +30,7 @@
         },
         {
             "path": "LWCUtils",
-            "default": false,
+            "default": true,
             "package": "LWCUtils",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT"
@@ -117,7 +117,7 @@
         },
         {
             "path": "UserInterface",
-            "default": true,
+            "default": false,
             "package": "UserInterface",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
