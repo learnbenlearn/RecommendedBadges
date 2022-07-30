@@ -1,0 +1,23 @@
+<!--
+  @description       : Generic component to display an item in a lookup search.
+  @author            : Ben Learn
+  @last modified on  : 07-30-2022
+  @last modified by  : Ben Learn
+-->
+<template>
+    <li role="presentation" class="slds-listbox__item" onclick={handleItemClick} >
+        <div class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
+            <span class="slds-media__figure slds-listbox__option-icon">
+                <lightning-icon icon-name={resultIconName} size="small"></lightning-icon>
+            </span>
+            <span class="slds-media__body">
+                <span class="slds-listbox__option-text slds-listbox__option-text-entity">
+                    {name} &nbsp;
+                </span>
+                <span class="slds-listbox__option-meta slds-listbox__option-meta-entity">
+                    {objectName} &#x2022; {secondaryFieldValue}
+                </span>
+            </span>
+        </div>
+    </li>
+</template>

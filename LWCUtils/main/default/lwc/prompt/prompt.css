@@ -1,0 +1,3 @@
+.promptInputHeight {
+    min-height: var(--prompt-input-height, 100px);
+}

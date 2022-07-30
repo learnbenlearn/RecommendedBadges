@@ -1,0 +1,28 @@
+<!--
+  @description       : Generic popup prompt lwc with slot for prompt message and optional cancel button.
+  @author            : Ben Learn
+  @last modified on  : 07-30-2022
+  @last modified by  : Ben Learn
+-->
+<template>
+    <section role="dialog" tabindex="0" aria-modal="true" aria-labelledby="prompt-heading-id" 
+        aria-describedby="prompt-message-wrapper" class="slds-modal slds-fade-in-open slds-modal_prompt">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header slds-theme_default">
+                <h1 class="slds-text-heading_medium" id="prompt-heading-id">{promptHeader}</h1>
+            </div>
+
+            <div class="slds-modal__content slds-p-around_medium promptInputHeight" id="prompt-message-wrapper">
+                <slot name="promptInput"></slot>
+            </div>
+            
+            <div class="slds-modal__footer slds-theme_default">
+                <template if:true={displayCancel}>
+                    <lightning-button label={cancelLabel} onclick={handleCancel} variant="brand"></lightning-button>
+                </template>
+                &nbsp;
+                <lightning-button label={confirmLabel} onclick={handleConfirm} variant="brand"></lightning-button>
+            </div>
+        </div>
+    </section>
+</template>
