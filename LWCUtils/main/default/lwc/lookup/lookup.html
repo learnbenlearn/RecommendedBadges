@@ -2,7 +2,7 @@
   @description       : 
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 06-19-2022
+  @last modified on  : 07-30-2022
   @last modified by  : Ben Learn
 -->
 <template>
@@ -10,28 +10,32 @@
         <div class="slds-form-element__control">
             <div class="slds-combobox_container">
                 <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click">
-                    <lightning-input label={lookupLabel} type="search"></lightning-input>
-                </div>
-                <div class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
-                    <ul class="slds-listbox slds-listbox_vertical" role="presentation">
-                        <template for:each={searchResults} for:item="searchResult">
-                            <li key={searchResult.Id} role="presentation" class="slds-listbox__item">
-                                <div class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta" role="option">
-                                    <span class="slds-media__figure slds-listbox__option-icon">
-                                        <lightning-icon icon-name={resultIconName} size="small"></lightning-icon>
-                                    </span>
-                                    <span class="slds-media__body">
-                                        <span class="slds-listbox__option-text slds-listbox__option-text-entity">
-                                            <span><mark>test</mark>test</span>
-                                        </span>
-                                        <span class="slds-listbox__option-meta slds-listbox__option-meta-entity">
-                                            {objectName} &#x2022; {searchResult.secondaryFieldValue}
-                                        </span>
-                                    </span>
-                                </div>
-                            </li>
-                        </template>
-                    </ul>
+                    <label>{lookupLabel}</label>
+                    <template if:false={selectedItem}>
+                        <lightning-input label={lookupLabel} variant="label-hidden" type="search" onfocus={handleInputFocus} onblur={handleInputBlur}></lightning-input>
+                    </template>
+                    
+                    <template if:true={selectedItem}>
+                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right slds-input_faux" role="none">
+                            <lightning-icon icon-name={resultIconName}></lightning-icon>
+                            <button type="button" class="slds-combobox__input slds-combobox__input-value slds-input_faux">
+                                <span class="slds-truncate">{selectedItem}</span>
+                            </button>
+                            <lightning-button-icon icon-name="utility:close" variant="container" onclick={handleRemoveSelectedItem}></lightning-button-icon>
+                        </div>
+                    </template>
+
+                    <div class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
+                        <ul class="slds-listbox slds-listbox_vertical" role="presentation">
+                           <template for:each={searchResults} for:item="searchResult">
+                                <!-- change key value to Id -->
+                                <c-lookup-item key={searchResult.Name} name={searchResult.Name} object-name={objectName} result-icon-name={resultIconName}
+                                    secondary-field-value={searchResult.secondaryFieldValue} onmousedown={handleItemMouseDown} onmouseup={handleItemMouseUp}
+                                    onitemclick={handleItemClick}>
+                                </c-lookup-item>
+                            </template>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

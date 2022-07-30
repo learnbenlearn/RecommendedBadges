@@ -1,0 +1,370 @@
+[
+  {
+    "Name": "Leadership",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "OmniStudio",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "Tableau",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "Tableau Projects",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "Industries",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "Other",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "Potential Recommended Projects",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "Quick Looks",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "Marketing Cloud",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "Just for Ben",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "Mobile Development",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "Potential Recommended Badges",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "AWS",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "Marketing Cloud Developer",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "AppExchange",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "General Cybersecurity",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "Einstein Next Best Action",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Platform Developer I Certification Prep",
+    "Recommended_Badge_Mix__r.Name": "Recommended PDI Badges"
+  },
+  {
+    "Name": "Administrator Certification Prep",
+    "Recommended_Badge_Mix__r.Name": "Recommended ADM Badges"
+  },
+  {
+    "Name": "Declarative User Interface",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Salesforce Fundamentals",
+    "Recommended_Badge_Mix__r.Name": "Recommended PDI Badges"
+  },
+  {
+    "Name": "Data Modeling & Management",
+    "Recommended_Badge_Mix__r.Name": "Recommended PDI Badges"
+  },
+  {
+    "Name": "Process Automation & Logic",
+    "Recommended_Badge_Mix__r.Name": "Recommended PDI Badges"
+  },
+  {
+    "Name": "User Interface",
+    "Recommended_Badge_Mix__r.Name": "Recommended PDI Badges"
+  },
+  {
+    "Name": "Testing, Debugging, & Deployment",
+    "Recommended_Badge_Mix__r.Name": "Recommended PDI Badges"
+  },
+  {
+    "Name": "Configuration & Setup",
+    "Recommended_Badge_Mix__r.Name": "Recommended ADM Badges"
+  },
+  {
+    "Name": "Object Manager & Lightning App Builder",
+    "Recommended_Badge_Mix__r.Name": "Recommended ADM Badges"
+  },
+  {
+    "Name": "Sales & Marketing Applications",
+    "Recommended_Badge_Mix__r.Name": "Recommended ADM Badges"
+  },
+  {
+    "Name": "Service & Support Applications",
+    "Recommended_Badge_Mix__r.Name": "Recommended ADM Badges"
+  },
+  {
+    "Name": "Productivity & Collaboration",
+    "Recommended_Badge_Mix__r.Name": "Recommended ADM Badges"
+  },
+  {
+    "Name": "Data & Analytics Management",
+    "Recommended_Badge_Mix__r.Name": "Recommended ADM Badges"
+  },
+  {
+    "Name": "Workflow/Process Automation",
+    "Recommended_Badge_Mix__r.Name": "Recommended ADM Badges"
+  },
+  {
+    "Name": "AMPscript",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "Marketing Basics",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "Email Marketing",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "Administration",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Administration Projects",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Administrator Certification",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Advanced Administration",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Advanced Apex",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Agile Frameworks",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Apex",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Apex & CRUD",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Apex Security",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "AppExchange",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Application Lifecycle & Development Models",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Chatter",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Custom Metadata Types & Custom Settings",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Data Quality & Management",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Data Model",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Data Visualization",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Deployment",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Auditing",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Email Integration",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Experience Cloud",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Flows",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Github",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Governor Limits & Performance",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Heroku & Salesforce Connect",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Integration",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "JavaScript",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Lightning Aura Components",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Lightning Design System",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Lightning Web Components",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Package Based Development & SFDX",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Platform Developer I Certification",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Platform Events",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Presentation Fundamentals",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Process Automation",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Salesforce Introduction",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Salesforce Mobile App",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Sales Cloud",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Sandboxes",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Security",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Service Cloud",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Testing",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Trailhead",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Triggers",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Visual Studio Code",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Visualforce",
+    "Recommended_Badge_Mix__r.Name": "Recommended Trailhead Badges"
+  },
+  {
+    "Name": "Data Management",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "Journey Builder & Automation Studio",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "Content Builder & Email Studio",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "SQL",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "Marketing Cloud Connect",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "Administration",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "Data Analysis",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "Marketing Cloud Basics",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "Development",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "Marketing Cloud Apps",
+    "Recommended_Badge_Mix__r.Name": "Marketing Cloud"
+  },
+  {
+    "Name": "Development Lifecycle and Deployment Designer",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  },
+  {
+    "Name": "User Experience Designer Certification",
+    "Recommended_Badge_Mix__r.Name": "Ben's Mix"
+  }
+]
