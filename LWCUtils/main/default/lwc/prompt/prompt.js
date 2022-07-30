@@ -1,8 +1,8 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 export default class Prompt extends LightningElement {
-    confirmDisabled = true;
-    confirmLabel;
-    handleConfirm;
-    promptHeader;
+    @api confirmDisabled = false;
+    @api confirmLabel;
+    @api handleConfirm;
+    @api promptHeader;
 }

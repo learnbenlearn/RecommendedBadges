@@ -10,7 +10,11 @@ import getBensMixRecommendedBadges from '@salesforce/apex/BensViewService.getBen
 const ACTIONS = [
     {
         label: 'Delete Recommended Badge',
-        name: 'delete'
+        name: 'Delete Recommended Badge'
+    },
+    {
+        label: 'Add to Recommended Badge Mix',
+        name: 'Add to Recommended Badge Mix'
     }
 ]
 
@@ -20,6 +24,9 @@ const HIGH_PRIORITY_OPTION = {
 };
 
 const HIGH_PRIORITY_PREFIX = 'HP';
+
+const PROMPT_HEADER = 'Add to Recommended Badges Mix';
+const CONFIRM_LABEL = 'Save';
 
 const TABLE_COLUMNS = [
     {
@@ -49,11 +56,13 @@ const TABLE_COLUMNS = [
 ]
 
 export default class BensViewContainer extends LightningElement {
+    confirmLabel = CONFIRM_LABEL
     @api divClasses;
     dropdownViewLabel = 'Select View';
     dropdownViewValue = 'High Priority';
     isLoading = true;
     keyField = 'High_Priority_Id__c';
+    promptHeader = PROMPT_HEADER;
     @track recommendedBadgeData;
     tableColumns = TABLE_COLUMNS;
     @track tableData;
@@ -94,8 +103,11 @@ export default class BensViewContainer extends LightningElement {
 
     handleRowAction(event) {
         switch(event.detail.action.name) {
-            case 'delete':
+            case 'Delete Recommended Badge':
                 this.handleDelete(event.detail.row);
+                break;
+            case 'Add to Recommended Badge Mix':
+
         }
     }
 

@@ -2,7 +2,7 @@
   @description       : Container for a dropdown and datatable to display personal badge mixes.
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 06-18-2022
+  @last modified on  : 07-30-2022
   @last modified by  : Ben Learn
 -->
 <template>
@@ -15,6 +15,9 @@
       </c-dropdown>
       <br/>
   
+      <c-prompt prompt-header={promptHeader} confirm-label={confirmLabel}>
+        <c-lookup slot="promptInput"></c-lookup>
+      </c-prompt>
       <div style="max-height:80vh;overflow:scroll">
         <c-datatable key-field={keyField} table-data={tableData} columns={tableColumns} has-row-actions="true" 
           onactionclick={handleRowAction}>
