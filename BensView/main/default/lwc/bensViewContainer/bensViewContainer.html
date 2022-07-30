@@ -15,9 +15,18 @@
       </c-dropdown>
       <br/>
   
-      <c-prompt prompt-header={promptHeader} confirm-label={confirmLabel}>
-        <c-lookup slot="promptInput"></c-lookup>
-      </c-prompt>
+      <template if:true={displayPrompt}>
+        <c-prompt prompt-header={promptHeader} confirm-label="Save" display-cancel="true" cancel-label="Cancel" onpromptclose={handlePromptClose} 
+          onpromptconfirm={handlePromptConfirm}>
+          <span slot="promptInput">
+            <c-lookup object-name={lookupObjectName} result-icon-name={lookupResultIconName} lookup-items={lookupItems}></c-lookup>
+            <template if:true={promptIsLoading}>
+              <lightning-spinner></lightning-spinner>
+            </template>
+          </span>
+        </c-prompt>
+      </template>
+      
       <div style="max-height:80vh;overflow:scroll">
         <c-datatable key-field={keyField} table-data={tableData} columns={tableColumns} has-row-actions="true" 
           onactionclick={handleRowAction}>

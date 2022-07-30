@@ -1,7 +1,6 @@
 <!--
-  @description       : 
+  @description       : Generic popup prompt lwc with slot for prompt message and optional cancel button.
   @author            : Ben Learn
-  @group             : 
   @last modified on  : 07-30-2022
   @last modified by  : Ben Learn
 -->
@@ -18,7 +17,11 @@
             </div>
             
             <div class="slds-modal__footer slds-theme_default">
-                <lightning-button label={confirmLabel} onclick={handleConfirm} disabled={confirmDisabled}></lightning-button>
+                <template if:true={displayCancel}>
+                    <lightning-button label={cancelLabel} onclick={handleCancel} variant="brand"></lightning-button>
+                </template>
+                &nbsp;
+                <lightning-button label={confirmLabel} onclick={handleConfirm} variant="brand"></lightning-button>
             </div>
         </div>
     </section>

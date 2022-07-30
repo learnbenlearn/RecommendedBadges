@@ -4,7 +4,8 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 import deleteRecommendedBadge from '@salesforce/apex/BensViewService.deleteRecommendedBadge';
 
-import getBensMixCategoryNames from '@salesforce/apex/BensViewService.getBensMixCategoryNames';
+import addToRecommendedBadgeMix from '@salesforce/apex/BensViewService.addToRecommendedBadgeMix';
+import getMixCategoryData from '@salesforce/apex/BensViewService.getMixCategoryData';
 import getBensMixRecommendedBadges from '@salesforce/apex/BensViewService.getBensMixRecommendedBadges';
 
 const ACTIONS = [
@@ -26,7 +27,9 @@ const HIGH_PRIORITY_OPTION = {
 const HIGH_PRIORITY_PREFIX = 'HP';
 
 const PROMPT_HEADER = 'Add to Recommended Badges Mix';
-const CONFIRM_LABEL = 'Save';
+
+const LOOKUP_OBJECT_NAME = 'Mix Category';
+const RESULT_ICON_NAME = 'custom:custom46';
 
 const TABLE_COLUMNS = [
     {
@@ -56,29 +59,37 @@ const TABLE_COLUMNS = [
 ]
 
 export default class BensViewContainer extends LightningElement {
-    confirmLabel = CONFIRM_LABEL
     @api divClasses;
+    displayPrompt;
     dropdownViewLabel = 'Select View';
     dropdownViewValue = 'High Priority';
     isLoading = true;
     keyField = 'High_Priority_Id__c';
+    lookupItems;
+    lookupObjectName = LOOKUP_OBJECT_NAME;
+    lookupResultIconName = RESULT_ICON_NAME;
+    mixCategoryData;
     promptHeader = PROMPT_HEADER;
+    promptIsLoading;
     @track recommendedBadgeData;
+    selectedRecommendedBadge;
     tableColumns = TABLE_COLUMNS;
     @track tableData;
     viewOptions;
 
     async connectedCallback() {
         try {
-            let mixCategoryData = await getBensMixCategoryNames(); 
+            this.mixCategoryData = await getMixCategoryData();
             this.viewOptions = [];
             this.viewOptions.push(HIGH_PRIORITY_OPTION);
 
-            for(let categoryName of mixCategoryData) {
-                this.viewOptions.push({
-                    label: categoryName,
-                    value: categoryName
-                });
+            for(let mixCategory of this.mixCategoryData) {
+                if(mixCategory.Recommended_Badge_Mix__r.Private_Mix__c) {
+                    this.viewOptions.push({
+                        label: mixCategory.Name,
+                        value: mixCategory.Name
+                    });
+                }
             }
 
             this.recommendedBadgeData = await getBensMixRecommendedBadges();
@@ -87,6 +98,18 @@ export default class BensViewContainer extends LightningElement {
 
         } catch(err) {
             console.error(err);
+        }
+    }
+
+    populateLookupItems() {
+        this.lookupItems = [];
+        for(let mixCategory of this.mixCategoryData) {
+            this.lookupItems.push({
+                Id: mixCategory.Id,
+                Name: mixCategory.Name,
+                SecondaryFieldValue: mixCategory.Recommended_Badge_Mix__r.Name,
+                ParentId: mixCategory.Recommended_Badge_Mix__c
+            });
         }
     }
 
@@ -107,7 +130,10 @@ export default class BensViewContainer extends LightningElement {
                 this.handleDelete(event.detail.row);
                 break;
             case 'Add to Recommended Badge Mix':
-
+                this.selectedRecommendedBadge = event.detail.row;
+                this.populateLookupItems();
+                this.displayPrompt = true;
+                break;
         }
     }
 
@@ -124,8 +150,7 @@ export default class BensViewContainer extends LightningElement {
 
         try{
             await deleteRecommendedBadge({recommendedBadgeId: recommendedBadgeId});
-            this.recommendedBadgeData = await getBensMixRecommendedBadges();
-            this.tableData = this.recommendedBadgeData[this.dropdownViewValue];
+            this.refreshRecommendedBadgeData();
 
             const showToastEvent = new ShowToastEvent({
                 title: 'Success',
@@ -139,5 +164,39 @@ export default class BensViewContainer extends LightningElement {
         }
 
         this.isLoading = false;
+    }
+
+    handlePromptClose() {
+        this.displayPrompt = false;
+    }
+
+    async handlePromptConfirm() {
+        this.promptIsLoading = true;
+        let selectedMixCategory = this.template.querySelector('c-lookup').selectedItem;
+        let recommendedBadge = {
+            Id: this.selectedRecommendedBadge.Id,
+            Mix_Category__c: selectedMixCategory.Id
+        };
+
+        try {
+            await addToRecommendedBadgeMix({recommendedBadge: recommendedBadge});
+            this.refreshRecommendedBadgeData(); 
+            this.promptIsLoading = false;
+            this.displayPrompt = false;
+
+            const showToastEvent = new ShowToastEvent({
+                title: 'Success',
+                message: 'Changed Mix Category for ' + this.selectedRecommendedBadge.Badge_Name__c + ' to ' + selectedMixCategory.Name,
+                variant: 'success'
+            });
+            this.dispatchEvent(showToastEvent);
+        } catch(err) {
+            console.error(err);
+        }
+    }
+
+    async refreshRecommendedBadgeData() {
+        this.recommendedBadgeData = await getBensMixRecommendedBadges();
+        this.tableData = this.recommendedBadgeData[this.dropdownViewValue];
     }
 }
