@@ -30,7 +30,7 @@
         },
         {
             "path": "LWCUtils",
-            "default": true,
+            "default": false,
             "package": "LWCUtils",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT"
@@ -117,7 +117,7 @@
         },
         {
             "path": "UserInterface",
-            "default": false,
+            "default": true,
             "package": "UserInterface",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
@@ -223,6 +223,12 @@
         "RecommendedBadgeMix@0.1.0-6": "04t8c00000102JgAAI",
         "UserInterface@0.1.0-6": "04t8c00000102JlAAI",
         "LWCUtils@0.1.0-4": "04t8c0000010MF0AAM",
-        "BensView@0.1.0-7": "04t8c0000010MF5AAM"
+        "BensView@0.1.0-7": "04t8c0000010MF5AAM",
+        "Triggers@0.1.0-6": "04t8c0000010MFAAA2",
+        "Triggers@0.1.0-7": "04t8c0000010MFFAA2",
+        "StorageManagement@0.1.0-7": "04t8c0000010MFKAA2",
+        "Triggers@0.1.0-8": "04t8c0000010MFPAA2",
+        "StorageManagement@0.1.0-8": "04t8c0000010MFUAA2",
+        "UserInterface@0.1.0-7": "04t8c0000010MFZAA2"
     }
 }

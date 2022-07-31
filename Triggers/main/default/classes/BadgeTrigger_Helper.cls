@@ -2,7 +2,7 @@
  * @description       : A catchall trigger helper for TrailTrigger, BadgeTrigger, RecommendedBadgeTrigger, and RecommendedTrailTrigger.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 03-23-2022
+ * @last modified on  : 07-30-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class BadgeTrigger_Helper {
@@ -59,9 +59,11 @@ public without sharing class BadgeTrigger_Helper {
         Set<Id> modifiedParentIds = new Set<Id>();
 
         for(sObject oldRecord : oldRecords) {
-            for(String fieldToCheck : fieldsToCheck) {
-                if(oldRecord.get(fieldToCheck) != newRecordMap.get(String.valueOf(oldRecord.get('Id'))).get(fieldToCheck)) {
-                    modifiedParentIds.add(String.valueOf(oldRecord.get('Id')));
+            if(!Boolean.valueOf(oldRecord.get('trailheadapp__Archived__c'))) {
+                for(String fieldToCheck : fieldsToCheck) {
+                    if(oldRecord.get(fieldToCheck) != newRecordMap.get(String.valueOf(oldRecord.get('Id'))).get(fieldToCheck)) {
+                        modifiedParentIds.add(String.valueOf(oldRecord.get('Id')));
+                    }
                 }
             }
         }
@@ -73,9 +75,9 @@ public without sharing class BadgeTrigger_Helper {
         List<sObject> junctionRecordsToUpdate = Database.query(queryString);
 
         for(sObject junctionRecord : junctionRecordsToUpdate) {
-            for(String picklist : parentObjectInfo.parentJunctionPicklistMap.values()) {
+            for(String picklist : parentObjectInfo.parentJunctionPicklistMap.keySet()) {
                 sObject parentRecord = newRecordMap.get(String.valueOf(junctionRecord.get(parentObjectInfo.relationshipFieldName)));
-                junctionRecord.put(picklist, parentRecord.get(picklist));
+                junctionRecord.put(parentObjectInfo.parentJunctionPicklistMap.get(picklist), parentRecord.get(picklist));
             }
         }
 
