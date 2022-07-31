@@ -22,13 +22,12 @@ admin.profile
 standard-home.tab
 
 # Ignored Packages
-#BensView
-#DataModel
-ExperienceSite
-#LWCUtils
+BensView
+DataModel
+LWCUtils
 RecommendedBadgeMix
-#SortCustomMetadata
-StorageManagement
+SortCustomMetadata
+#StorageManagement
 TaskList
-Triggers
-UserInterface
+#Triggers
+#UserInterface
