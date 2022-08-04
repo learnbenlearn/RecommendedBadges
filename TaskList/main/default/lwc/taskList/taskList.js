@@ -14,35 +14,42 @@ export default class TaskList extends LightningElement {
 
     @wire(getTasks)
     parseTasks(value) {
-        this.parseTasksResponse = value;
-        const {error, data} = value;
-
-        if(data) {
-            let tasks = data;
-
-            if(tasks.length > 0) {
-                this.taskList = [];
-    
-                for(let task of tasks) {
-                    this.taskList.push({
-                        'Id': '/' + task.Id,
-                        'Subject': task.Subject
-                    });
-                }
-
-                this.displayTaskList = true;
-            } else {
-                this.noTasks = true;
-            }
-
+        console.log(value);
+        console.log(this.parseTasksResponse);
+        if(this.parseTasksResponse === value) {
             this.displaySpinner = false;
-        } else if(error) {
-            console.error(error);
+        } else {
+            this.parseTasksResponse = value;
+            const {error, data} = value;
+    
+            if(data) {
+                let tasks = data;
+    
+                if(tasks.length > 0) {
+                    this.taskList = [];
+                    for(let task of tasks) {
+                        this.taskList.push({
+                            'Id': '/' + task.Id,
+                            'Subject': task.Subject
+                        });
+                    }
+                    this.displayTaskList = true;
+                    this.noTasks = false;
+                } else {
+                    this.displayTaskList = false;
+                    this.noTasks = true;
+                }
+                
+                this.displaySpinner = false;
+            } else if(error) {
+                console.error(error);
+            }
         }
     }
 
-    handleRefresh() {
+    async handleRefresh() {
         this.displaySpinner = true;
-        refreshApex(this.parseTasksResponse);
+        await refreshApex(this.parseTasksResponse);
+        this.displaySpinner = false;
     }
 }

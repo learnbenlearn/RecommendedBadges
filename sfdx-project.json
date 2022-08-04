@@ -229,6 +229,11 @@
         "StorageManagement@0.1.0-7": "04t8c0000010MFKAA2",
         "Triggers@0.1.0-8": "04t8c0000010MFPAA2",
         "StorageManagement@0.1.0-8": "04t8c0000010MFUAA2",
-        "UserInterface@0.1.0-7": "04t8c0000010MFZAA2"
+        "UserInterface@0.1.0-7": "04t8c0000010MFZAA2",
+        "TaskList@0.1.0-5": "04t8c0000010MFeAAM",
+        "TaskList@0.1.0-6": "04t8c0000010MFjAAM",
+        "StorageManagement@0.1.0-9": "04t8c0000010P6XAAU",
+        "StorageManagement@0.1.0-10": "04t8c0000010P6cAAE",
+        "TaskList@0.1.0-7": "04t8c0000010P6hAAE"
     }
 }
