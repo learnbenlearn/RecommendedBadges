@@ -27,7 +27,7 @@ DataModel
 LWCUtils
 RecommendedBadgeMix
 SortCustomMetadata
-#StorageManagement
-#TaskList
-#Triggers
+StorageManagement
+TaskList
+Triggers
 #UserInterface
