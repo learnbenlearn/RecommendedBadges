@@ -11,19 +11,16 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-# Admin profile
-force-app/main/default/profiles/Admin.profile-meta.xml
+harness.auradefinitionbundle
+admin.profile
 
 ## Temp Ignored
-
-harness.auradefinitionbundle
 home_page_default.flexipage
-admin.profile
 standard-home.tab
 
 # Ignored Packages
 BensView
-DataModel
+#DataModel
 LWCUtils
 RecommendedBadgeMix
 SortCustomMetadata

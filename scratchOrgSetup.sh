@@ -20,6 +20,3 @@ do
     sfdx force:package:install -p $id -u $username -r -w 20
     echo ""
 done
-
-echo "Installing package: " $package
-sfdx force:package:install -p $id -u $username -r -w 20
