@@ -6,7 +6,7 @@ async function getChangedPackageDirectories() {
     let changedFiles = [];
     let changedPackageDirectories = new Set();
     try {
-        const {stdout, stderr} = await exec('git diff HEAD  --name-only');
+        const {stdout, stderr} = await exec('git diff HEAD --name-only');
         if(stderr) {
             console.log(stderr);
         } else {
