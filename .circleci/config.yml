@@ -12,45 +12,45 @@ jobs:
     steps:
       - checkout
       - when:
-        condition:
-          equal: [ packaging, <<pipeline.git.branch>> ]
-        steps:
-          - run:
-              name: "Create SFDX Folder"
-              command: |
-                # Create sfdx directory
-                mkdir sfdx
-                # Download Salesforce CLI
-                wget -q0- ${DX_CLI_URL_CUSTOM-$DX_CLI_URL} | tar xJ -C ~/sfdx --strip-components 1
-          - run:
-              name: Install CLI
-              command: |
-                # Install the CLI
-                export PATH=~/sfdx/bin:$PATH
-                echo "export PATH=~/sfdx/bin:$PATH" >> $BASH_ENV
-                sfdx
-          - run:
-              name: Decrypt server key
-              command: |
-                # Decrypt server key
-                openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -v $DECRYPTION_IV
-          - run:
-              name: Create Package Version(s)
-              command: |
-                # Authorize Dev Hub
-                sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a HubOrg
-                # Create package versions
-                sortedPackagesToUpdate=$(node getSortedPackagesToUpdate.js)
-                if [[ -n $sortedPackagesToUpdate ]]
-                then
-                    packageArray=()
-                    packageArray+=($sortedPackagesToUpdate)
-                    for package in "${packageArray[@]}"
-                    do
-                        $(sfdx force:package:version:create -p $package -x -w $WAIT_TIME)
-                        echo "Created new version for package" $package 
-                    done
-                fi
+          condition:
+            equal: [ packaging, <<pipeline.git.branch>> ]
+          steps:
+            - run:
+                name: "Create SFDX Folder"
+                command: |
+                  # Create sfdx directory
+                  mkdir sfdx
+                  # Download Salesforce CLI
+                  wget -q0- ${DX_CLI_URL_CUSTOM-$DX_CLI_URL} | tar xJ -C ~/sfdx --strip-components 1
+            - run:
+                name: Install CLI
+                command: |
+                  # Install the CLI
+                  export PATH=~/sfdx/bin:$PATH
+                  echo "export PATH=~/sfdx/bin:$PATH" >> $BASH_ENV
+                  sfdx
+            - run:
+                name: Decrypt server key
+                command: |
+                  # Decrypt server key
+                  openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -v $DECRYPTION_IV
+            - run:
+                name: Create Package Version(s)
+                command: |
+                  # Authorize Dev Hub
+                  sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a HubOrg
+                  # Create package versions
+                  sortedPackagesToUpdate=$(node getSortedPackagesToUpdate.js)
+                  if [[ -n $sortedPackagesToUpdate ]]
+                  then
+                      packageArray=()
+                      packageArray+=($sortedPackagesToUpdate)
+                      for package in "${packageArray[@]}"
+                      do
+                          $(sfdx force:package:version:create -p $package -x -w $WAIT_TIME)
+                          echo "Created new version for package" $package 
+                      done
+                  fi
 #       - run:
 #           name: Create scratch org for installing packages
 #           command: |
