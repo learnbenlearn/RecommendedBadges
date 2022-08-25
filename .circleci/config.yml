@@ -21,7 +21,7 @@ jobs:
                   # Create sfdx directory
                   mkdir sfdx
                   # Download Salesforce CLI
-                  wget -q0- ${DX_CLI_URL_CUSTOM-$DX_CLI_URL} | tar xJ -C ~/sfdx --strip-components 1
+                  wget -qO- ${DX_CLI_URL_CUSTOM-$DX_CLI_URL} | tar xJ -C ~/sfdx --strip-components 1
             - run:
                 name: Install CLI
                 command: |
