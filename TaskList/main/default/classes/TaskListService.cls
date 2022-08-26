@@ -2,10 +2,10 @@
  * @description       : Apex controller for taskList LWC.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 03-23-2022
+ * @last modified on  : 08-25-2022
  * @last modified by  : Ben Learn
 **/
-public without sharing class TaskListService {
+public with sharing class TaskListService {
     /**
     * @description Method to return all open tasks for taskList LWC.
     * @author Ben Learn | 03-11-2022 
