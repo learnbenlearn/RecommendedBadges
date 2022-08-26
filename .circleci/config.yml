@@ -41,6 +41,7 @@ jobs:
                   sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a HubOrg
                   # Create package versions
                   sortedPackagesToUpdate=$(node getSortedPackagesToUpdate.js)
+                  #add something to update forceignore
                   if [[ -n $sortedPackagesToUpdate ]]
                   then
                       packageArray=()
