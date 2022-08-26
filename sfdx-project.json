@@ -3,9 +3,8 @@
         {
             "path": "DataModel",
             "package": "DataModel",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
-            "default": false,
+            "versionNumber": "1.0.0.NEXT",
+            "default": true,
             "dependencies": [
                 {
                     "package": "04t1Q000001ACOnQAO"
@@ -117,7 +116,7 @@
         },
         {
             "path": "UserInterface",
-            "default": true,
+            "default": false,
             "package": "UserInterface",
             "versionName": "ver 0.1",
             "versionNumber": "0.1.0.NEXT",
@@ -168,7 +167,7 @@
     ],
     "name": "RecommendedBadges",
     "namespace": "",
-    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sfdcLoginUrl": "https://recommendedbadges-dev-ed.my.salesforce.com",
     "sourceApiVersion": "54.0",
     "packageAliases": {
         "DataModel": "0Ho8c000000fxx5CAA",
@@ -234,6 +233,15 @@
         "TaskList@0.1.0-6": "04t8c0000010MFjAAM",
         "StorageManagement@0.1.0-9": "04t8c0000010P6XAAU",
         "StorageManagement@0.1.0-10": "04t8c0000010P6cAAE",
-        "TaskList@0.1.0-7": "04t8c0000010P6hAAE"
+        "TaskList@0.1.0-7": "04t8c0000010P6hAAE",
+        "DataModel@0.1.0-6": "04t8c0000010UmvAAE",
+        "DataModel@0.1.0-7": "04t8c0000010VShAAM",
+        "TaskList@0.1.0-8": "04t8c0000010VSmAAM",
+        "Triggers@0.1.0-9": "04t8c0000010VSrAAM",
+        "StorageManagement@0.1.0-11": "04t8c0000010VSwAAM",
+        "RecommendedBadgeMix@0.1.0-7": "04t8c0000010VT1AAM",
+        "BensView@0.1.0-8": "04t8c0000010VT6AAM",
+        "UserInterface@0.1.0-8": "04t8c0000010VTBAA2",
+        "DataModel@1.0.0-1": "04t8c0000010VTGAA2"
     }
 }

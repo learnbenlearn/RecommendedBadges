@@ -17,11 +17,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Mix_Category__c.Recommended_Badge_Mix__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Mix_Category__c.Test_External_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
