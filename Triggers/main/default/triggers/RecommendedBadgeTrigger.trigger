@@ -4,17 +4,17 @@
  *                      metadata record on delete (if it exists).
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 03-11-2022
+ * @last modified on  : 09-08-2022
  * @last modified by  : Ben Learn
 **/
-trigger RecommendedBadgeTrigger on Recommended_Badge__c (before insert, after delete) {
+trigger RecommendedBadgeTrigger on Recommended_Badge__c (before insert, before update, after delete) {
     switch on Trigger.operationType {
         when BEFORE_INSERT {
             BadgeTrigger_Helper.populateJunctionPicklists(Trigger.new, 'Recommended_Badge__c');
-            BadgeTrigger_Helper.populateBadgeMixKeys(Trigger.new);
+            BadgeTrigger_Helper.populateBadgeMixKeys(Trigger.new, Trigger.oldMap);
         }
         when BEFORE_UPDATE {
-            BadgeTrigger_Helper.populateBadgeMixKeys(Trigger.new);
+            BadgeTrigger_Helper.populateBadgeMixKeys(Trigger.new, Trigger.oldMap);
         }
         when AFTER_DELETE {
             BadgeTrigger_Helper.createCMTDeleteTasks(Trigger.old);

@@ -3,7 +3,7 @@
  *                      record is marked as the default.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 03-23-2022
+ * @last modified on  : 08-28-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class RecommendedBadgeMixTrigger_Helper {
@@ -12,15 +12,20 @@ public without sharing class RecommendedBadgeMixTrigger_Helper {
     * @author Ben Learn | 02-25-2022 
     * @param List<Recommended_Badge_Mix__c> upsertedBadgeMixes 
     **/
-    public static void enforceSingleDefaultMix(List<Recommended_Badge_Mix__c> upsertedBadgeMixes) {
+    public static void enforceSingleDefaultMix(Map<Id, Recommended_Badge_Mix__c> upsertedBadgeMixes) {
         Id defaultMixId;
+
+        List<Id> upsertedBadgeMixIds = new List<Id>(upsertedBadgeMixes.keySet());
+        Integer numExistingDefaultMixes = [SELECT COUNT() FROM Recommended_Badge_Mix__c WHERE 
+            Id NOT IN :upsertedBadgeMixIds];
         
-        for(Recommended_Badge_Mix__c rbm : upsertedBadgeMixes) {
-            if(rbm.Default_Badge_Mix__c && (defaultMixId == null)) {
-                defaultMixId = rbm.Id;
-            } else if(rbm.Default_Badge_Mix__c) {
-                throw new MultipleDefaultBadgeMixException('Only one recommended badge mix can be' +
-                    ' marked as the default.');
+        for(Id rbmId : upsertedBadgeMixes.keySet()) {
+            if(upsertedBadgeMixes.get(rbmId).Default_Badge_Mix__c) {
+                if((numExistingDefaultMixes > 0) || (defaultMixId != null)) {
+                    throw new MultipleDefaultBadgeMixException('Only one recommended badge mix can be marked as the default.');
+                } else {
+                    defaultMixId = rbmId;
+                }
             }
         }
     }

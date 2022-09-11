@@ -1,31 +1,222 @@
 /**
- * @description       : 
- * @author            : Ben Learn
- * @group             : 
- * @last modified on  : 08-26-2022
+ * @description       : Test class for RecommendedBadgeMixTrigger_Helper class.
+ * @author            : Ben Learn]
+ * @last modified on  : 09-05-2022
  * @last modified by  : Ben Learn
 **/
 @isTest
 private class RecommendedBadgeMixTrigger_HelperTests {
-    static Integer suffix = 1;
+    private static String NO_EXCEPTION_EXPECTED_MESSAGE = 'No exception expected.';
 
-    @isTest
-    static void testEnforceSingleDefaultMix_NoDefault() {
-        List<Recommended_Badge_Mix__c> recommendedBadgeMixes = new List<Recommended_Badge_Mix__c>();
-        recommendedBadgeMixes.add(new Recommended_Badge_Mix__c(Name='Test'));
-        recommendedBadgeMixes[0].Id = generateId(recommendedBadgeMixes[0]);
-
-        RecommendedBadgeMixTrigger_Helper.enforceSingleDefaultMix(recommendedBadgeMixes);
+    private static List<Recommended_Badge_Mix__c> generateTestData(Integer numberRecommendedBadgeMixes, Integer numberDefaultRecommendedBadgeMixes) {
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = new List<Recommended_Badge_Mix__c>();
+        for(Integer i = 0; i < numberRecommendedBadgeMixes; i++) {
+            if(i < numberDefaultRecommendedBadgeMixes) {
+                testRecommendedBadgeMixes.add(new Recommended_Badge_Mix__c(Name='Test ' + i, Default_Badge_Mix__c=true));
+            } else {
+                testRecommendedBadgeMixes.add(new Recommended_Badge_Mix__c(Name='Test ' + i));
+            }
+        }
+        return testRecommendedBadgeMixes;
     }
 
     @isTest
-    static void testEnforceSingleDefaultMix_Positive() {
+    private static void testEnforceSingleDefaultMix_insertNoDefault() {
+        Boolean caughtException = false;
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(1, 0);
+
+        try {
+            insert testRecommendedBadgeMixes;
+        } catch(Exception e) {
+            caughtException = true;
+        }
+
+        System.assert(!caughtException, NO_EXCEPTION_EXPECTED_MESSAGE);
+    }
+
+    @isTest
+    private static void testEnforceSingleDefaultMix_insertPositive() {
+        Boolean caughtException = false;
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(1, 1);
+
+        try {
+            insert testRecommendedBadgeMixes;
+        } catch(Exception e) {
+            caughtException = true;
+        }
+
+        System.assert(!caughtException, NO_EXCEPTION_EXPECTED_MESSAGE);
+    }
+
+    @isTest
+    private static void testEnforceSingleDefaultMix_insertNegative() {
+        Boolean caughtException = false;
+        String exceptionMessage;
+
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(2, 2);
+
+        try {
+            insert testRecommendedBadgeMixes;
+        } catch(Exception e) {
+            caughtException = true;
+            exceptionMessage = e.getMessage();
+        }
+
+        System.assert(caughtException, 'Expected exception.');
+        System.assert(exceptionMessage.contains('Only one recommended badge mix can be marked as the default.'), 'Expected exception with provided message.');
+    }
+
+    @isTest
+    private static void testEnforceSingleDefaultMix_insertBulkNoDefault() {
+        Boolean caughtException = false;
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(200, 0);
+
+        try {
+            insert testRecommendedBadgeMixes;
+        } catch(Exception e) {
+            caughtException = true;
+        }
+
+        System.assert(!caughtException, NO_EXCEPTION_EXPECTED_MESSAGE);
+    }
+
+    @isTest
+    private static void testEnforceSingleDefaultMix_insertBulkPositive() {
+        Boolean caughtException = false;
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(200, 1);
+
+        try {
+            insert testRecommendedBadgeMixes;
+        } catch(Exception e) {
+            caughtException = true;
+        }
+
+        System.assert(!caughtException, NO_EXCEPTION_EXPECTED_MESSAGE);
+    }
+
+    @isTest
+    private static void testEnforceSingleDefaultMix_insertBulkNegative() {
+        Boolean caughtException = false;
+        String exceptionMessage;
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(200, 10);
+
+        try {
+            insert testRecommendedBadgeMixes;
+        } catch(Exception e) {
+            caughtException = true;
+            exceptionMessage = e.getMessage();
+        }
+
+        System.assert(caughtException, 'Expected exception.');
+        System.assert(exceptionMessage.contains('Only one recommended badge mix can be marked as the default.'), 'Expected exception with provided message.');
+    }
+
+    @isTest
+    private static void testEnforceSingleDefaultMix_updateNoDefault() {
+        Boolean caughtException = false;
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(1, 0);
+
+        try {
+            insert testRecommendedBadgeMixes;
+            testRecommendedBadgeMixes[0].Name += ' test';
+            update testRecommendedBadgeMixes;
+        } catch(Exception e) {
+            caughtException = true;
+        }
+
+        System.assert(!caughtException, NO_EXCEPTION_EXPECTED_MESSAGE);   
+    }
+
+    @isTest
+    private static void testEnforceSingleDefaultMix_updatePositive() {
+        Boolean caughtException = false;
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(1, 1);
+
+        try {
+            insert testRecommendedBadgeMixes;
+            testRecommendedBadgeMixes[0].Name += ' test';
+            update testRecommendedBadgeMixes;
+        } catch(Exception e) {
+            caughtException = true;
+        }
+
+        System.assert(!caughtException, NO_EXCEPTION_EXPECTED_MESSAGE);
+    }
+
+    @isTest
+    private static void testEnforceSingleDefaultMix_updateNegative() {
+        Boolean caughtException = false;
+        String exceptionMessage;
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(2, 1);
+
+        try {
+            insert testRecommendedBadgeMixes;
+            testRecommendedBadgeMixes[1].Default_Badge_Mix__c = true;
+            update testRecommendedBadgeMixes;
+        } catch(Exception e) {
+            caughtException = true;
+            exceptionMessage = e.getMessage();
+        }
+
+        System.assert(caughtException, 'Expected exception.');
+        System.assert(exceptionMessage.contains('Only one recommended badge mix can be marked as the default.'), 'Expected exception with provided message.');
+    }
+
+    @isTest
+    private static void testEnforceSingleDefaultMix_updateNoDefaultBulk() {
+        Boolean caughtException = false;
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(200, 0);
         
+        try {
+            insert testRecommendedBadgeMixes;
+            for(Recommended_Badge_Mix__c rbm : testRecommendedBadgeMixes) {
+                rbm.Name += ' test';
+            }
+            update testRecommendedBadgeMixes;
+        } catch(Exception e) {
+            caughtException = true;
+        }
+
+        System.assert(!caughtException, NO_EXCEPTION_EXPECTED_MESSAGE);
     }
 
-    static String generateId(sObject record) {
-        String sObjectPrefix = record.getSObjectType().getDescribe().getKeyPrefix();
-        String idSuffix = String.valueOf(suffix++);
-        return sObjectPrefix + '0'.repeat(12 - idSuffix.length()) + idSuffix;
+    @isTest
+    private static void testEnforceSingleDefaultMix_updatePositiveBulk() {
+        Boolean caughtException = false;
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(200, 0);
+        
+        try {
+            insert testRecommendedBadgeMixes;
+            for(Recommended_Badge_Mix__c rbm : testRecommendedBadgeMixes) {
+                rbm.Name += ' test';
+            }
+            update testRecommendedBadgeMixes;
+        } catch(Exception e) {
+            caughtException = true;
+        }
+
+        System.assert(!caughtException, NO_EXCEPTION_EXPECTED_MESSAGE);
+    }
+
+    @isTest
+    private static void testEnforceSingleDefaultMix_updateNegativeBulk() {
+        Boolean caughtException = false;
+        String exceptionMessage;
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(200, 1);
+        
+        try {
+            insert testRecommendedBadgeMixes;
+            testRecommendedBadgeMixes[1].Default_Badge_Mix__c = true;
+            for(Recommended_Badge_Mix__c rbm : testRecommendedBadgeMixes) {
+                rbm.Name += ' test';
+            }
+            update testRecommendedBadgeMixes;
+        } catch(Exception e) {
+            caughtException = true;
+            exceptionMessage = e.getMessage();
+        }
+
+        System.assert(caughtException, 'Expected exception.');
+        System.assert(exceptionMessage.contains('Only one recommended badge mix can be marked as the default.'), 'Expected exception with provided message.');
     }
 }
