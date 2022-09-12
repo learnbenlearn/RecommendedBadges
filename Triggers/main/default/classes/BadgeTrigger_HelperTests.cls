@@ -1,7 +1,6 @@
 /**
- * @description       : 
+ * @description       : Test class for BadgeTrigger_Helper class.
  * @author            : Ben Learn
- * @group             : 
  * @last modified on  : 09-11-2022
  * @last modified by  : Ben Learn
 **/

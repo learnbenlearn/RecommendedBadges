@@ -1,8 +1,7 @@
 /**
  * @description       : Apex controller for recommendedBadgeMixContainer LWC.
  * @author            : Ben Learn
- * @group             : 
- * @last modified on  : 06-13-2022
+ * @last modified on  : 09-11-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class RecommendedBadgeMixService {

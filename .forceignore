@@ -23,10 +23,10 @@ BensView
 DataModel
 LWCUtils
 RecommendedBadgeMix
-SortCustomMetadata
+#SortCustomMetadata
 StorageManagement
 TaskList
-#Triggers
+Triggers
 UserInterface
 
 # Ignored Folders
