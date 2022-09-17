@@ -2,20 +2,22 @@ import { LightningElement, api, track } from 'lwc';
 
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
-import deleteRecommendedBadge from '@salesforce/apex/BensViewService.deleteRecommendedBadge';
+import { deleteRecord, updateRecord } from 'lightning/uiRecordApi';
 
-import addToRecommendedBadgeMix from '@salesforce/apex/BensViewService.addToRecommendedBadgeMix';
 import getMixCategoryData from '@salesforce/apex/BensViewService.getMixCategoryData';
 import getBensMixRecommendedBadges from '@salesforce/apex/BensViewService.getBensMixRecommendedBadges';
 
+const CHANGE_MIX_CATEGORY = 'Change Mix Category';
+const DELETE_RECOMMENDED_BADGE = 'Delete Recommended Badge';
+
 const ACTIONS = [
     {
-        label: 'Delete Recommended Badge',
-        name: 'Delete Recommended Badge'
+        label: DELETE_RECOMMENDED_BADGE,
+        name: DELETE_RECOMMENDED_BADGE
     },
     {
-        label: 'Add to Recommended Badge Mix',
-        name: 'Add to Recommended Badge Mix'
+        label: CHANGE_MIX_CATEGORY,
+        name: CHANGE_MIX_CATEGORY
     }
 ]
 
@@ -26,7 +28,7 @@ const HIGH_PRIORITY_OPTION = {
 
 const HIGH_PRIORITY_PREFIX = 'HP';
 
-const PROMPT_HEADER = 'Add to Recommended Badges Mix';
+const PROMPT_HEADER = 'Change Mix Category';
 
 const LOOKUP_OBJECT_NAME = 'Mix Category';
 const RESULT_ICON_NAME = 'custom:custom46';
@@ -126,10 +128,10 @@ export default class BensViewContainer extends LightningElement {
 
     handleRowAction(event) {
         switch(event.detail.action.name) {
-            case 'Delete Recommended Badge':
+            case DELETE_RECOMMENDED_BADGE:
                 this.handleDelete(event.detail.row);
                 break;
-            case 'Add to Recommended Badge Mix':
+            case CHANGE_MIX_CATEGORY:
                 this.selectedRecommendedBadge = event.detail.row;
                 this.populateLookupItems();
                 this.displayPrompt = true;
@@ -149,7 +151,7 @@ export default class BensViewContainer extends LightningElement {
         }
 
         try{
-            await deleteRecommendedBadge({recommendedBadgeId: recommendedBadgeId});
+            await deleteRecord(recommendedBadgeId);
             this.refreshRecommendedBadgeData();
 
             const showToastEvent = new ShowToastEvent({
@@ -179,7 +181,9 @@ export default class BensViewContainer extends LightningElement {
         };
 
         try {
-            await addToRecommendedBadgeMix({recommendedBadge: recommendedBadge});
+            const fields = recommendedBadge;
+            const recommendedBadgeToUpdate = { fields };
+            await updateRecord(recommendedBadgeToUpdate);
             this.refreshRecommendedBadgeData(); 
             this.promptIsLoading = false;
             this.displayPrompt = false;

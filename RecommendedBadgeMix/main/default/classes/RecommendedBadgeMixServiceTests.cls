@@ -1,5 +1,5 @@
 /**
- * @description       : 
+ * @description       : Test class for RecommendedBadgeMixService.
  * @author            : Ben Learn
  * @last modified on  : 09-16-2022
  * @last modified by  : Ben Learn
