@@ -50,12 +50,11 @@ public with sharing class BensViewService {
 
             if(bensViewMap.get(rb.Mix_Category__r.Name) != null) {
                 tempRecommendedBadges = bensViewMap.get(rb.Mix_Category__r.Name);
+                tempRecommendedBadges.add(rb);
+                bensViewMap.put(rb.Mix_Category__r.Name, tempRecommendedBadges);
             } else {
-                tempRecommendedBadges = new List<Recommended_Badge__c>();
+                bensViewMap.put(rb.Mix_Category__r.Name, new List<Recommended_Badge__c>{rb});
             }
-
-            tempRecommendedBadges.add(rb);
-            bensViewMap.put(rb.Mix_Category__r.Name, tempRecommendedBadges);
         }
 
         return bensViewMap;

@@ -21,22 +21,20 @@
             "path": "LWCUtils",
             "default": false,
             "package": "LWCUtils",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
+            "versionNumber": "1.0.0.NEXT"
         },
         {
             "path": "Triggers",
             "default": false,
             "package": "Triggers",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "versionNumber": "1.1.0.NEXT",
             "dependencies": [
                 {
                     "package": "04t1Q000001ACOnQAO"
                 },
                 {
                     "package": "DataModel",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 }
             ]
         },
@@ -44,15 +42,14 @@
             "path": "StorageManagement",
             "default": false,
             "package": "StorageManagement",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "versionNumber": "1.0.0.NEXT",
             "dependencies": [
                 {
                     "package": "04t1Q000001ACOnQAO"
                 },
                 {
                     "package": "DataModel",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 }
             ]
         },
@@ -60,23 +57,22 @@
             "path": "RecommendedBadgeMix",
             "default": false,
             "package": "RecommendedBadgeMix",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "versionNumber": "1.0.0.NEXT",
             "dependencies": [
                 {
                     "package": "04t1Q000001ACOnQAO"
                 },
                 {
                     "package": "DataModel",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "LWCUtils",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "SortCustomMetadata",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 }
             ]
         },
@@ -84,23 +80,22 @@
             "path": "BensView",
             "default": false,
             "package": "BensView",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "versionNumber": "1.0.0.NEXT",
             "dependencies": [
                 {
                     "package": "04t1Q000001ACOnQAO"
                 },
                 {
                     "package": "DataModel",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "LWCUtils",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "SortCustomMetadata",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 }
             ]
         },
@@ -108,42 +103,41 @@
             "path": "UserInterface",
             "default": false,
             "package": "UserInterface",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "versionNumber": "1.0.0.NEXT",
             "dependencies": [
                 {
                     "package": "04t1Q000001ACOnQAO"
                 },
                 {
                     "package": "DataModel",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "LWCUtils",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "04t8c000000yXMAAA2"
                 },
                 {
                     "package": "SortCustomMetadata",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "BensView",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "RecommendedBadgeMix",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "StorageManagement",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "TaskList",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 }
             ]
         },
@@ -151,8 +145,7 @@
             "path": "SortCustomMetadata",
             "default": false,
             "package": "SortCustomMetadata",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
+            "versionNumber": "1.0.0.NEXT"
         },
         {
             "path": "unpackageable",
@@ -238,6 +231,16 @@
         "UserInterface@0.1.0-8": "04t8c0000010VTBAA2",
         "DataModel@1.0.0-1": "04t8c0000010VTGAA2",
         "TaskList@0.1.0-9": "04t8c000000ZfoQAAS",
-        "TaskList@1.0.0-1": "04t8c000000ZfoVAAS"
+        "TaskList@1.0.0-1": "04t8c000000ZfoVAAS",
+        "LWCUtils@1.0.0-1": "04t8c000000ZwK9AAK",
+        "Triggers@1.0.0-1": "04t8c000000ZwKEAA0",
+        "Triggers@1.0.0-2": "04t8c000000ZwKJAA0",
+        "Triggers@1.1.0-1": "04t8c000000ZwKOAA0",
+        "StorageManagement@1.0.0-1": "04t8c000000ZwKTAA0",
+        "SortCustomMetadata@1.0.0-1": "04t8c000000ZwKYAA0",
+        "RecommendedBadgeMix@0.1.0-8": "04t8c000000ZwKdAAK",
+        "RecommendedBadgeMix@1.0.0-1": "04t8c000000ZwKiAAK",
+        "BensView@1.0.0-1": "04t8c000000ZwKnAAK",
+        "UserInterface@1.0.0-1": "04t8c000000ZwKsAAK"
     }
 }
