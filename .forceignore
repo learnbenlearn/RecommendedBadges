@@ -22,11 +22,11 @@ standard-home.tab
 BensView
 DataModel
 LWCUtils
-RecommendedBadgeMix
-#SortCustomMetadata
+#RecommendedBadgeMix
+SortCustomMetadata
 StorageManagement
 TaskList
-Triggers
+#Triggers
 UserInterface
 
 # Ignored Folders

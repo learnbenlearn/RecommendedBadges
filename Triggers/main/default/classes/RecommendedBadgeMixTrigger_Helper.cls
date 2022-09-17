@@ -3,7 +3,7 @@
  *                      record is marked as the default.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 08-28-2022
+ * @last modified on  : 09-12-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class RecommendedBadgeMixTrigger_Helper {
@@ -16,12 +16,20 @@ public without sharing class RecommendedBadgeMixTrigger_Helper {
         Id defaultMixId;
 
         List<Id> upsertedBadgeMixIds = new List<Id>(upsertedBadgeMixes.keySet());
-        Integer numExistingDefaultMixes = [SELECT COUNT() FROM Recommended_Badge_Mix__c WHERE 
-            Id NOT IN :upsertedBadgeMixIds];
+        List<Recommended_Badge_Mix__c> existingDefaultBadgeMixes = [
+            SELECT Name 
+            FROM Recommended_Badge_Mix__c 
+            WHERE Id NOT IN :upsertedBadgeMixIds AND Default_Badge_Mix__c = true
+        ];
         
         for(Id rbmId : upsertedBadgeMixes.keySet()) {
             if(upsertedBadgeMixes.get(rbmId).Default_Badge_Mix__c) {
-                if((numExistingDefaultMixes > 0) || (defaultMixId != null)) {
+                if(existingDefaultBadgeMixes.size() > 0) {
+                    throw new MultipleDefaultBadgeMixException(
+                        'Only one recommended badge mix can be marked as the default. ' 
+                        + existingDefaultBadgeMixes[0].Name + ' is already marked as the default badge mix.'
+                    );
+                } else if(defaultMixId != null) {
                     throw new MultipleDefaultBadgeMixException('Only one recommended badge mix can be marked as the default.');
                 } else {
                     defaultMixId = rbmId;

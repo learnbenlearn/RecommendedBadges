@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for RecommendedBadgeMixTrigger_Helper class.
  * @author            : Ben Learn]
- * @last modified on  : 09-05-2022
+ * @last modified on  : 09-12-2022
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -169,10 +169,16 @@ private class RecommendedBadgeMixTrigger_HelperTests {
         
         try {
             insert testRecommendedBadgeMixes;
+            List<Recommended_Badge_Mix__c> updatedTestRecommendedBadgeMixes = new List<Recommended_Badge_Mix__c>();
+            Boolean updateRecord = true;
             for(Recommended_Badge_Mix__c rbm : testRecommendedBadgeMixes) {
-                rbm.Name += ' test';
+                if(updateRecord) {
+                    rbm.Name += ' test';
+                    updatedTestRecommendedBadgeMixes.add(rbm);
+                }
+                updateRecord = !updateRecord;
             }
-            update testRecommendedBadgeMixes;
+            update updatedTestRecommendedBadgeMixes;
         } catch(Exception e) {
             caughtException = true;
         }
@@ -183,14 +189,20 @@ private class RecommendedBadgeMixTrigger_HelperTests {
     @isTest
     private static void testEnforceSingleDefaultMix_updatePositiveBulk() {
         Boolean caughtException = false;
-        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(200, 0);
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = generateTestData(200, 1);
         
         try {
             insert testRecommendedBadgeMixes;
+            List<Recommended_Badge_Mix__c> updatedRecommendedBadgeMixes = new List<Recommended_Badge_Mix__c>();
+            Boolean updateRecord = true;
             for(Recommended_Badge_Mix__c rbm : testRecommendedBadgeMixes) {
-                rbm.Name += ' test';
+                if(updateRecord) {
+                    rbm.Name += ' test';
+                    updatedRecommendedBadgeMixes.add(rbm);
+                }
+                updateRecord = !updateRecord;
             }
-            update testRecommendedBadgeMixes;
+            update updatedRecommendedBadgeMixes;
         } catch(Exception e) {
             caughtException = true;
         }
