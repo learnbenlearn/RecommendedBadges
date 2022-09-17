@@ -2,7 +2,7 @@
  * @description       : Apex controller for storageLimits LWC.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 06-14-2022
+ * @last modified on  : 09-11-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class StorageLimitsService {
@@ -13,7 +13,6 @@ public without sharing class StorageLimitsService {
     **/
     @AuraEnabled
     public static Map<String, String> getStorageLimitInfo(){
-        System.debug('called getStorageLimitInfo');
         Map<String, System.OrgLimit> orgLimitMap = OrgLimits.getMap();
         System.OrgLimit storageLimit = orgLimitMap.get('DataStorageMB');
 

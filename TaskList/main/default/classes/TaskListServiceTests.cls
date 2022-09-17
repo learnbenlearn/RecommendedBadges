@@ -1,8 +1,7 @@
 /**
- * @description       : 
+ * @description       : Test class for TaskListService.
  * @author            : Ben Learn
- * @group             : 
- * @last modified on  : 08-25-2022
+ * @last modified on  : 08-26-2022
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -24,7 +23,6 @@ private class TaskListServiceTests {
     
     @isTest
     static void testGetTasks() {
-
         Test.startTest();
         List<Task> openTasks = TaskListService.getTasks();
         Test.stopTest();

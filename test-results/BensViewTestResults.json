@@ -1,0 +1,175 @@
+{
+  "status": 0,
+  "result": {
+    "summary": {
+      "outcome": "Passed",
+      "testsRan": 2,
+      "passing": 2,
+      "failing": 0,
+      "skipped": 0,
+      "passRate": "100%",
+      "failRate": "0%",
+      "testStartTime": "Sat Sep 17 2022 9:32:45 AM",
+      "testExecutionTime": "3246 ms",
+      "testTotalTime": "3246 ms",
+      "commandTime": "530 ms",
+      "hostname": "https://customer-ability-8854-dev-ed.my.salesforce.com",
+      "orgId": "00D0R000000o6SGUAY",
+      "username": "test-90ixaeiidoji@example.com",
+      "testRunId": "7070R00002B6CXs",
+      "userId": "0050R00000Dp3mtQAB",
+      "testRunCoverage": "100%",
+      "orgWideCoverage": "90%"
+    },
+    "tests": [
+      {
+        "Id": "07M0R00000SlBiAUAV",
+        "QueueItemId": "7090R000003BFoyQAG",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "7070R00002B6CXsQAN",
+        "MethodName": "getBensMixRecommendedBadges_test",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01p0R00000e1S1UQAU",
+          "Name": "BensViewServiceTests",
+          "NamespacePrefix": null
+        },
+        "RunTime": 2924,
+        "FullName": "BensViewServiceTests.getBensMixRecommendedBadges_test"
+      },
+      {
+        "Id": "07M0R00000SlBiBUAV",
+        "QueueItemId": "7090R000003BFoyQAG",
+        "StackTrace": null,
+        "Message": null,
+        "AsyncApexJobId": "7070R00002B6CXsQAN",
+        "MethodName": "getMixCategoryData_test",
+        "Outcome": "Pass",
+        "ApexClass": {
+          "Id": "01p0R00000e1S1UQAU",
+          "Name": "BensViewServiceTests",
+          "NamespacePrefix": null
+        },
+        "RunTime": 322,
+        "FullName": "BensViewServiceTests.getMixCategoryData_test"
+      }
+    ],
+    "coverage": {
+      "coverage": [
+        {
+          "id": "01p0R00000e1S1TQAU",
+          "name": "BensViewService",
+          "totalLines": 19,
+          "lines": {
+            "16": 1,
+            "17": 1,
+            "22": 1,
+            "31": 1,
+            "32": 1,
+            "39": 1,
+            "40": 1,
+            "42": 1,
+            "44": 1,
+            "45": 1,
+            "46": 1,
+            "47": 1,
+            "48": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "56": 1,
+            "60": 1
+          },
+          "totalCovered": 19,
+          "coveredPercent": 100
+        }
+      ],
+      "records": [
+        {
+          "ApexTestClass": {
+            "Id": "07M0R00000SlBiAUAV",
+            "Name": "BensViewServiceTests"
+          },
+          "Coverage": {
+            "coveredLines": [
+              31,
+              32,
+              39,
+              40,
+              42,
+              44,
+              45,
+              46,
+              47,
+              48,
+              51,
+              52,
+              53,
+              54,
+              56,
+              60
+            ],
+            "uncoveredLines": [
+              16,
+              17,
+              22
+            ]
+          },
+          "TestMethodName": "getBensMixRecommendedBadges_test",
+          "NumLinesCovered": 16,
+          "ApexClassOrTrigger": {
+            "Id": "01p0R00000e1S1TQAU",
+            "Name": "BensViewService"
+          },
+          "NumLinesUncovered": 3
+        },
+        {
+          "ApexTestClass": {
+            "Id": "07M0R00000SlBiBUAV",
+            "Name": "BensViewServiceTests"
+          },
+          "Coverage": {
+            "coveredLines": [
+              16,
+              17,
+              22,
+              31
+            ],
+            "uncoveredLines": [
+              32,
+              39,
+              40,
+              42,
+              44,
+              45,
+              46,
+              47,
+              48,
+              51,
+              52,
+              53,
+              54,
+              56,
+              60
+            ]
+          },
+          "TestMethodName": "getMixCategoryData_test",
+          "NumLinesCovered": 4,
+          "ApexClassOrTrigger": {
+            "Id": "01p0R00000e1S1TQAU",
+            "Name": "BensViewService"
+          },
+          "NumLinesUncovered": 15
+        }
+      ],
+      "summary": {
+        "totalLines": 19,
+        "coveredLines": 19,
+        "orgWideCoverage": "90%",
+        "testRunCoverage": "100%"
+      }
+    }
+  }
+}
