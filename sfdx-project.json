@@ -150,6 +150,12 @@
         {
             "path": "unpackageable",
             "default": true
+        },
+        {
+            "path": "fflib",
+            "default": false,
+            "package": "fflib",
+            "versionNumber": "1.0.0.NEXT"
         }
     ],
     "name": "RecommendedBadges",
@@ -241,6 +247,8 @@
         "RecommendedBadgeMix@0.1.0-8": "04t8c000000ZwKdAAK",
         "RecommendedBadgeMix@1.0.0-1": "04t8c000000ZwKiAAK",
         "BensView@1.0.0-1": "04t8c000000ZwKnAAK",
-        "UserInterface@1.0.0-1": "04t8c000000ZwKsAAK"
+        "UserInterface@1.0.0-1": "04t8c000000ZwKsAAK",
+        "fflib": "0Ho8c000000k9kfCAA",
+        "fflib@1.0.0-1": "04t8c000000a00HAAQ"
     }
 }
