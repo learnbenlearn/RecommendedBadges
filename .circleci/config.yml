@@ -52,6 +52,15 @@ jobs:
                           echo "Created new version for package" $package
                       done
                   fi
+      - when:
+          condition:
+            equal: [ fflib-migration, <pipeline.git.branch> ]
+          steps:
+            - run:
+                name: Check node install
+                command: |
+                  ls usr/bin/
+                  ls usr/bin/env
 #       - run:
 #           name: Create scratch org for installing packages
 #           command: |
