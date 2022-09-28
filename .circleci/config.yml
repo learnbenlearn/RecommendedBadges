@@ -59,8 +59,8 @@ jobs:
             - run:
                 name: Check node install
                 command: |
-                  ls usr/bin/
-                  ls usr/bin/env
+                  ls /bin/
+                  ls /bin/env
 #       - run:
 #           name: Create scratch org for installing packages
 #           command: |
