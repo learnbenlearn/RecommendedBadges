@@ -54,7 +54,7 @@ jobs:
                   fi
       - when:
           condition:
-            equal: [ fflib-migration, <pipeline.git.branch> ]
+            equal: [ fflib-migration, <<pipeline.git.branch>> ]
           steps:
             - run:
                 name: Check node install
