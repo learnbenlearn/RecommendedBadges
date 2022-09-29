@@ -23,6 +23,12 @@ jobs:
             && sudo apt install gh -y
             gh --version
       - run:
+          name: Test Pull Request
+          command: |
+            curl --version
+            echo $CIRCLE_PULL_REQUEST
+            echo ${CIRCLE_PULL_REQUESTS[@]}
+      - run:
           name: Create SFDX Folder
           command: |
             # Create sfdx directory
