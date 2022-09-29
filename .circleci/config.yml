@@ -53,6 +53,7 @@ jobs:
             echo 'export CREATE_PACKAGES="$createPackages"' >> "$BASH_ENV"
       - run:
           name: Test Interpolation
+          command: |
             if [[ -z "$CREATE_PACKAGES" ]]; then
               echo "package is empty"
             else
