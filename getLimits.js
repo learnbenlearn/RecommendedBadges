@@ -5,10 +5,10 @@ const exec = util.promisify(require('child_process').exec);
 
 const SCRATCH_ORG_LIMIT = 'DailyScratchOrgs';
 const PACKAGE_VERSION_LIMIT = 'Package2VersionCreates';
-//${process.env.HUB_ALIAS}
+
 async function getLimits() {
     try {
-        const {stdout, stderr} = await exec(`sfdx force:limits:api:display -u RecommendedBadges --json`);
+        const {stdout, stderr} = await exec(`sfdx force:limits:api:display -u ${process.env.HUB_ALIAS} --json`);
         if(stderr) {
             console.log(stderr);
         } else {
