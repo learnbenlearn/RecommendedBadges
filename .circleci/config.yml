@@ -60,7 +60,7 @@ jobs:
                 name: Check node install
                 command: |
                   # ls /bin/
-                  ls /bin/env/
+                  node getLimits.js
 #       - run:
 #           name: Create scratch org for installing packages
 #           command: |
