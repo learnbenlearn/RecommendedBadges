@@ -50,6 +50,7 @@ jobs:
           name: Test Pull Request
           command: |
             createPackages=$(node nodescripts/getPackageToggle.js)
+            echo ${createPackages}
             echo 'export CREATE_PACKAGES="$createPackages"' >> "$BASH_ENV"
       - run:
           name: Test Interpolation
