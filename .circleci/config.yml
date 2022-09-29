@@ -24,15 +24,6 @@ jobs:
             && sudo apt install gh -y
             echo $GH_ACCESS_TOKEN | gh auth login --with-token
       - run:
-          name: Test Pull Request
-          command: |
-            createPackages=$(node nodescripts/getPackageToggle.js)
-            if [[ -z "$createPackages" ]]; then
-              echo "package is empty"
-            else
-              echo "package is not empty"
-            fi
-      - run:
           name: Create SFDX Folder
           command: |
             # Create sfdx directory
@@ -55,6 +46,18 @@ jobs:
           name: Authorize Dev Hub
           command: |
             sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
+      - run:
+          name: Test Pull Request
+          command: |
+            createPackages=$(node nodescripts/getPackageToggle.js)
+            echo 'export CREATE_PACKAGES="$createPackages"' >> "$BASH_ENV"
+      - run:
+          name: Test Interpolation
+            if [[ -z "$CREATE_PACKAGES" ]]; then
+              echo "package is empty"
+            else
+              echo "package is not empty"
+            fi
       - when:
           condition:
             equal: [ packaging, <<pipeline.git.branch>> ]
