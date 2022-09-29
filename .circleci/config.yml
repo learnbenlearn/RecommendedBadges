@@ -61,8 +61,13 @@ jobs:
             - run:
                 name: Check node install
                 command: |
-                  # ls /bin/
-                  node getLimits.js
+                  limitLiteral=$(node getLimits.js)
+                  limitArray=()
+                  limitArray+=($limitLiteral)
+                  declare -A limits
+                  limits[scratchOrgs]=limitArray[0]
+                  limits[packageVersions]=limitArray[1]
+                  echo ${limits[@]}
 #       - run:
 #           name: Create scratch org for installing packages
 #           command: |
