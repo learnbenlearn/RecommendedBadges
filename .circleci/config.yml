@@ -26,7 +26,7 @@ jobs:
           name: Test Pull Request
           command: |
             createPackages=$(node nodescripts/getPackageToggle.js)
-            if [[ -z createPackages ]]; then
+            if [[ -z "$createPackages" ]]; then
               echo "package is empty"
             fi
       - run:
