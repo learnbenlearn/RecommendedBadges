@@ -28,6 +28,8 @@ jobs:
             createPackages=$(node nodescripts/getPackageToggle.js)
             if [[ -z "$createPackages" ]]; then
               echo "package is empty"
+            else
+              echo "package is not empty"
             fi
       - run:
           name: Create SFDX Folder
