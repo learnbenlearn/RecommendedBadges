@@ -41,6 +41,7 @@ jobs:
           steps:
             - run:
               name: Create Package Version(s)
+              command: |
                   sortedPackagesToUpdate=$(node getSortedPackagesToUpdate.js)
                   #add something to update forceignore
                   if [[ -n $sortedPackagesToUpdate ]]
