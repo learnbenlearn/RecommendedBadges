@@ -62,7 +62,7 @@ jobs:
                 name: Check node install
                 command: |
                   limitLiteral=$(node getLimits.js)
-                  echo ${limitLiteral}
+                  echo $limitLiteral
                   limitArray=()
                   limitArray+=($limitLiteral)
                   declare -A limits
