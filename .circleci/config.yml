@@ -65,8 +65,8 @@ jobs:
                   limitArray=()
                   limitArray+=($limitLiteral)
                   declare -A limits
-                  limits[scratchOrgs]=limitArray[0]
-                  limits[packageVersions]=limitArray[1]
+                  limits[scratchOrgs]=${limitArray[0]}
+                  limits[packageVersions]=${limitArray[1]}
                   echo ${limits[@]}
 #       - run:
 #           name: Create scratch org for installing packages
