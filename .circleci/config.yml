@@ -22,7 +22,11 @@ jobs:
             && sudo apt update \
             && sudo apt install gh -y
             echo $GH_ACCESS_TOKEN | gh auth login --with-token
-            gh api -H "Accept: application/vnd.github+json" /repos/learnbenlearn/RecommendedBadges/pulls/99 
+            
+            createPackages=$(node nodescripts/getPackageToggle.js)
+            if [[ -z createPackages ]]; then
+              echo "package is empty"
+            fi
       - run:
           name: Test Pull Request
           command: |
@@ -78,7 +82,7 @@ jobs:
             - run:
                 name: Check node install
                 command: |
-                  limitLiteral=$(node getLimits.js)
+                  limitLiteral=$(node nodescripts/getLimits.js)
                   limitArray=()
                   limitArray+=($limitLiteral)
                   declare -A limits
