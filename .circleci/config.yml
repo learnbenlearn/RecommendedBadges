@@ -54,6 +54,7 @@ jobs:
       - run:
           name: Test Interpolation
           command: |
+          echo ${CREATE_PACKAGES}
             if [[ -z "$CREATE_PACKAGES" ]]; then
               echo "package is empty"
             else
