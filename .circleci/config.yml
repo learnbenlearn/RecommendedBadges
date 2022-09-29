@@ -13,6 +13,11 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Test Pull Request
+          command: |
+            echo $CIRCLE_PULL_REQUEST
+            echo ${CIRCLE_PULL_REQUESTS[@]}
+      - run:
           name: Create SFDX Folder
           command: |
             # Create sfdx directory
