@@ -8,6 +8,7 @@ jobs:
       - image: cimg/node:lts
     environment:
     - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
+    - HUB_ALIAS: HubOrg
     - WAIT_TIME: 30
     steps:
       - checkout
@@ -25,21 +26,21 @@ jobs:
             export PATH=~/sfdx/bin:$PATH
             echo "export PATH=~/sfdx/bin:$PATH" >> $BASH_ENV
             sfdx
+      - run:
+          name: Decrypt server key
+          command: |
+            # Decrypt server key
+            openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
+      - run:
+          name: Authorize Dev Hub
+          command: |
+            sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
       - when:
           condition:
             equal: [ packaging, <<pipeline.git.branch>> ]
           steps:
             - run:
-                name: Decrypt server key
-                command: |
-                  # Decrypt server key
-                  openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
-            - run:
-                name: Create Package Version(s)
-                command: |
-                  # Authorize Dev Hub
-                  sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a HubOrg
-                  # Create package versions
+              name: Create Package Version(s)
                   sortedPackagesToUpdate=$(node getSortedPackagesToUpdate.js)
                   #add something to update forceignore
                   if [[ -n $sortedPackagesToUpdate ]]

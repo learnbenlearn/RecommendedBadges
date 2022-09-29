@@ -5,7 +5,7 @@ const exec = util.promisify(require('child_process').exec);
 
 async function getLimits() {
     try {
-        const {stdout, stderr} = await exec(`sfdx force:limits:api:display -u ${process.env.HUB_USER_NAME} --json`);
+        const {stdout, stderr} = await exec(`sfdx force:limits:api:display -u ${process.env.HUB_ALIAS} --json`);
         if(stderr) {
             console.log(stderr);
         } else {
