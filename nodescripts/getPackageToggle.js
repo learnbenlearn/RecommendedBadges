@@ -6,7 +6,7 @@ const exec = util.promisify(require('child_process').exec);
 const USERNAME = process.env.CIRCLE_USERNAME || 'learnbenlearn';
 const REPO = process.env.CIRCLE_PROJECT_REPONAME || 'RecommendedBadges';
 const PULL_REQUEST_NUMBER = process.env.CIRCLE_PULL_REQUEST ? process.env.CIRCLE_PULL_REQUEST.substring(process.env.CIRCLE_PULL_REQUEST.lastIndexOf('/')) : 115;
-const PACKAGE_LABEL = "create packages";
+const PACKAGE_LABEL = process.env.PACKAGE_LABEL;
 
 
 async function getPackageToggle() {
