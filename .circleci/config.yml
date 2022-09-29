@@ -13,7 +13,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Create SFDX Folder"
+          name: Create SFDX Folder
           command: |
             # Create sfdx directory
             mkdir ~/sfdx

@@ -9,9 +9,8 @@ async function getLimits() {
         if(stderr) {
             console.log(stderr);
         } else {
-            console.log(stdout);
+            console.log(stdout.result);
         }
-        console.log(process.env.HUB_USER_NAME)
     } catch(err) {
         console.error(err);
     }
