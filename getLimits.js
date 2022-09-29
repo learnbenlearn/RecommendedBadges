@@ -9,7 +9,9 @@ async function getLimits() {
         if(stderr) {
             console.log(stderr);
         } else {
-            console.log(stdout.result);
+            let jsonResponse = JSON.parse(stdout);
+            let limitList = jsonResponse.result;
+            console.log(limitList);
         }
     } catch(err) {
         console.error(err);
