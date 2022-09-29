@@ -6,6 +6,7 @@ const exec = util.promisify(require('child_process').exec);
 const USERNAME = process.env.CIRCLE_USERNAME || 'learnbenlearn';
 const REPO = process.env.CIRCLE_PROJECT_REPONAME || 'RecommendedBadges';
 const PULL_REQUEST_NUMBER = process.env.CIRCLE_PULL_REQUEST ? process.env.CIRCLE_PULL_REQUEST.substring(process.env.CIRCLE_PULL_REQUEST.lastIndexOf('/')) : 115;
+const PACKAGE_LABEL = "create packages";
 
 
 async function getPackageToggle() {
@@ -14,8 +15,13 @@ async function getPackageToggle() {
         if(stderr) {
             console.log(stderr);
         } else {
-            if(JSON.parse(stdout).labels.length != 0) {
-
+            let labels = JSON.parse(stdout).labels;
+            if(labels.length != 0) {
+                for(let label of labels) {
+                    if(label.name === PACKAGE_LABEL) {
+                        return label.name;
+                    }
+                }
             }
         }
     } catch(err) {
