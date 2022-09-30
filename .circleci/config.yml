@@ -51,11 +51,11 @@ jobs:
           command: |
             createPackages=$(node nodescripts/getPackageToggle.js)
             echo ${createPackages}
-            echo 'export CREATE_PACKAGES="${createPackages}"' >> "$BASH_ENV"
+            echo 'export CREATE_PACKAGES=${createPackages}' >> "$BASH_ENV"
       - run:
           name: Test Interpolation
           command: |
-            echo $CREATE_PACKAGES
+            echo $BASH_ENV
             if [[ -z "$CREATE_PACKAGES" ]]; then
               echo "package is empty"
             else
