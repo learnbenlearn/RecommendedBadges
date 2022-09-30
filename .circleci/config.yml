@@ -38,21 +38,28 @@ jobs:
             echo "export PATH=~/sfdx/bin:$PATH" >> $BASH_ENV
             sfdx
       - run:
-          name: Decrypt server key
+          name: Decrypt Server Key
           command: |
-            # Decrypt server key
             openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
       - run:
           name: Authorize Dev Hub
           command: |
             sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
       - run:
-          name: Test Pull Request
+          name: Check Package Toggle
           command: |
             createPackages=$(node nodescripts/getPackageToggle.js)
             if [[ -n "$createPackages" ]]; then
               echo 'export CREATE_PACKAGES=true' >> "$BASH_ENV"
             fi
+      - when:
+          condition:
+            equal: [ true, $CREATE_PACKAGES ]
+          steps:
+            run:
+              name: Test Condition
+              command: |
+                echo "ran command"
       - run:
           name: Test Interpolation
           command: |
