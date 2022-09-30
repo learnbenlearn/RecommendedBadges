@@ -51,7 +51,7 @@ jobs:
           command: |
             createPackages=$(node nodescripts/getPackageToggle.js)
             echo ${createPackages}
-            echo 'export CREATE_PACKAGES=${createPackages}' >> "$BASH_ENV"
+            echo 'export CREATE_PACKAGES="hello"' >> "$BASH_ENV"
       - run:
           name: Test Interpolation
           command: |
