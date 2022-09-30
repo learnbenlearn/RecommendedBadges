@@ -54,7 +54,7 @@ jobs:
             fi
       - when:
           condition:
-            equal: [ true, $CREATE_PACKAGES ]
+            equal: [ "true", $CREATE_PACKAGES ]
           steps:
             run:
               name: Test Condition
