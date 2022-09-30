@@ -50,13 +50,15 @@ jobs:
           name: Test Pull Request
           command: |
             createPackages=$(node nodescripts/getPackageToggle.js)
+            if [[ -n "$createPackages" ]]; then
+              echo 'export CREATE_PACKAGES=true'
             echo ${createPackages}
             echo 'export CREATE_PACKAGES="hello"' >> "$BASH_ENV"
       - run:
           name: Test Interpolation
           command: |
             echo $CREATE_PACKAGES
-            if [[ -z "$CREATE_PACKAGES" ]]; then
+            if [[ "$CREATE_PACKAGES" == true ]]; then
               echo "package is empty"
             else
               echo "package is not empty"
