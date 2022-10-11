@@ -16,10 +16,6 @@ jobs:
     - HUB_ALIAS: HubOrg
     - WAIT_TIME: 30
     steps:
-      - run:
-          name: Print Create Packages
-          command: |
-            when << pipeline.parameters.create-packages >>
       - checkout
       - run:
           name: Install GH CLI
