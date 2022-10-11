@@ -25,14 +25,46 @@ jobs:
               && sudo apt install gh -y
               echo $GH_ACCESS_TOKEN | gh auth login --with-token
         - run:
-            name: Check Package Toggle
+            name: Create SFDX Folder
             command: |
-              createPackages=$(node nodescripts/getPackageToggle.js)
-              if [[ -n "$createPackages" ]]; then
-                echo '{"create-packages": true}' > parameters.json
-              else
-                echo '{"create-packages": false}' > parameters.json
-              fi
+              # Create sfdx directory
+              mkdir ~/sfdx
+              # Download Salesforce CLI
+              wget -qO- ${DX_CLI_URL_CUSTOM-$DX_CLI_URL} | tar xJ -C ~/sfdx --strip-components 1
+        - run:
+            name: Install CLI
+            command: |
+              # Install the CLI
+              export PATH=~/sfdx/bin:$PATH
+              echo "export PATH=~/sfdx/bin:$PATH" >> $BASH_ENV
+              sfdx
+        - run:
+            name: Decrypt Server Key
+            command: |
+              openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
+        - run:
+            name: Authorize Dev Hub
+            command: |
+              sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
+        - when:
+            condition:
+              equal: [ fflib-migration, <<pipeline.git.branch>> ]
+            steps:
+              - run:
+                  name: Populate Dynamic Parameters
+                  command: |
+                    limitLiteral=$(node nodescripts/getLimits.js)
+                    limitArray=()
+                    limitArray+=($limitLiteral)
+                    declare -A limits
+                    limits[scratchOrgs]=${limitArray[0]}
+                    limits[packageVersionsNoValidation]=${limitArray[2]}
+                    createPackages=$(node nodescripts/getPackageToggle.js)
+                    if [[ -n "$createPackages" ]]; then
+                      echo '{"create-packages": true, "remaining-scratch-orgs": ${limits[scratchOrgs]}, "remaining-packages-without-validation": ${limits[packageVersionsNoValidation]}"}' > parameters.json
+                    else
+                      echo '{"create-packages": false, "remaining-scratch-orgs": ${limits[scratchOrgs]}}' > parameters.json
+                    fi
         - continuation/continue:
             configuration_path: .circleci/static-config.yml
             parameters: parameters.json

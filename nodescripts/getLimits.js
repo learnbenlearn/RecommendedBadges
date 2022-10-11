@@ -5,6 +5,7 @@ const exec = util.promisify(require('child_process').exec);
 
 const SCRATCH_ORG_LIMIT = 'DailyScratchOrgs';
 const PACKAGE_VERSION_LIMIT = 'Package2VersionCreates';
+const PACKAGE_VERSION_NO_VALIDATION_LIMIT = 'Package2VersionCreatesWithoutValidation';
 
 async function getLimits() {
     try {
@@ -16,6 +17,7 @@ async function getLimits() {
             let limitList = jsonResponse.result;
             let remainingScratchOrgs;
             let remainingPackageVersions;
+            let remainingPackageVersionsNoValidation;
 
             for(let limit of limitList) {
                 switch(limit.name) {
@@ -24,10 +26,12 @@ async function getLimits() {
                         break;
                     case PACKAGE_VERSION_LIMIT:
                         remainingPackageVersions = limit.remaining;
+                    case PACKAGE_VERSION_NO_VALIDATION_LIMIT:
+                        remainingPackageVersionsNoValidation = limit.remaining;
                 }
             }
 
-            process.stdout.write(`${remainingScratchOrgs} ${remainingPackageVersions}`);
+            process.stdout.write(`${remainingScratchOrgs} ${remainingPackageVersions} ${remainingPackageVersionsNoValidation}`);
         }
     } catch(err) {
         console.error(err);

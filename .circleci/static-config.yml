@@ -5,6 +5,12 @@ parameters:
   create-packages:
     type: boolean
     default: false
+  remaining-scratch-orgs:
+    type: integer
+    default: 0
+  remaining-packages-without-validation:
+    type: integer
+    default: 0
 
 jobs:
   build:
@@ -41,7 +47,6 @@ jobs:
             export PATH=~/sfdx/bin:$PATH
             echo "export PATH=~/sfdx/bin:$PATH" >> $BASH_ENV
             sfdx
-            fail
       - run:
           name: Decrypt Server Key
           command: |
@@ -50,6 +55,7 @@ jobs:
           name: Authorize Dev Hub
           command: |
             sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
+
       - when:
           condition:
             equal: [ true, << pipeline.parameters.create-packages >> ]
@@ -86,24 +92,15 @@ jobs:
                           echo "Created new version for package" $package
                       done
                   fi
-      - when:
-          condition:
-            equal: [ fflib-migration, <<pipeline.git.branch>> ]
-          steps:
-            - run:
-                name: Check node install
-                command: |
-                  limitLiteral=$(node nodescripts/getLimits.js)
-                  limitArray=()
-                  limitArray+=($limitLiteral)
-                  declare -A limits
-                  limits[scratchOrgs]=${limitArray[0]}
-                  limits[packageVersions]=${limitArray[1]}
+
 
 workflows:
   build:
     jobs:
       - build
+
+
+# fail to fail
 #       - run:
 #           name: Create scratch org for installing packages
 #           command: |
