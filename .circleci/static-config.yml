@@ -104,6 +104,11 @@ jobs:
                   declare -A limits
                   limits[scratchOrgs]=${limitArray[0]}
                   limits[packageVersions]=${limitArray[1]}
+
+workflows:
+  build:
+    jobs:
+      - build
 #       - run:
 #           name: Create scratch org for installing packages
 #           command: |
