@@ -31,11 +31,12 @@ async function getLimits() {
                 }
             }
 
-            process.stdout.write({
+            let limits = {
                 "remaining-scratch-orgs": remainingScratchOrgs, 
                 "remaining-packages": remainingPackageVersions,
                 "remaining-packages-without-validation": remainingPackageVersionsNoValidation
-            });
+            };
+            return limits;
         }
     } catch(err) {
         console.error(err);
