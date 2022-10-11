@@ -9,6 +9,8 @@ jobs:
   setup:
     docker:
       - image: cimg/node:lts
+    environment:
+      - PACKAGE_LABEL: "create packages"
     executor: continuation/default
     steps:
         - checkout
