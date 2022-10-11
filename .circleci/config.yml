@@ -32,7 +32,7 @@ jobs:
                 echo '{"create-packages": "false"}' > parameters.json
               fi
         - continuation/continue:
-            configuration_path: static-config.yml
+            configuration_path: .circleci/static-config.yml
             parameters: parameters.json
 
 workflows:
