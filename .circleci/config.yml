@@ -63,7 +63,8 @@ jobs:
                     limits[packageVersionsNoValidation]=${limitArray[2]}
                     createPackages=$(node nodescripts/getPackageToggle.js)
                     if [[ -n "$createPackages" ]]; then
-                      echo '{"create-packages": true, "remaining-scratch-orgs": ${limits[scratchOrgs]}, "remaining-packages-without-validation": ${limits[packageVersionsNoValidation]}"}' > parameters.json
+                      parametersJSON='{"create-packages": true, "remaining-scratch-orgs": ${limits[scratchOrgs]}, "remaining-packages-without-validation": ${limits[packageVersionsNoValidation]}"}'
+                      echo $parametersJSON > parameters.json
                     else
                       echo '{"create-packages": false, "remaining-scratch-orgs": ${limits[scratchOrgs]}}' > parameters.json
                     fi
