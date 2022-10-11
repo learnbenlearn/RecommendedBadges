@@ -19,14 +19,16 @@ async function getPackageToggle() {
             if(labels.length != 0) {
                 for(let label of labels) {
                     if(label.name === PACKAGE_LABEL) {
-                        process.stdout.write(label.name);
+                        process.stdout.write(true);
+                        process.exit();
                     }
                 }
             }
+            process.stdout.write(false);
         }
     } catch(err) {
         console.error(err);
     }
 }
 
-getPackageToggle();
+module.exports = getPackageToggle;
