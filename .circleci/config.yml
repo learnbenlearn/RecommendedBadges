@@ -27,9 +27,9 @@ jobs:
             command: |
               createPackages=$(node nodescripts/getPackageToggle.js)
               if [[ -n "$createPackages" ]]; then
-                echo '{"create-packages": "true"}' > parameters.json
+                echo '{"create-packages": true}' > parameters.json
               else
-                echo '{"create-packages": "false"}' > parameters.json
+                echo '{"create-packages": false}' > parameters.json
               fi
         - continuation/continue:
             configuration_path: .circleci/static-config.yml
