@@ -15,4 +15,4 @@ async function populateParameters() {
     fs.writeFileSync(OUTPUT_FILENAME, parameters);
 }
 
-module.exports = populateParameters;
+module.exports.populateParameters = populateParameters;
