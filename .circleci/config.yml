@@ -1,178 +1,39 @@
-# Use the latest 2.1 version of CircleCI pipeline process engine.
 version: 2.1
 
+# to use dynamic configuration
+setup: true
+orbs:
+  continuation: circleci/continuation@0.1.2
+
 jobs:
-  build:
-    # Specify the execution environment.
-    docker:
-      - image: cimg/node:lts
-    environment:
-    - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
-    - HUB_ALIAS: HubOrg
-    - PACKAGE_LABEL: "create packages"
-    - WAIT_TIME: 30
+  setup:
+    executor: continuation/default
     steps:
-      - checkout
-      - run:
-          name: Install GH CLI
-          command: |
-            type -p curl >/dev/null || sudo apt install curl -y
-            curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
-            && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
-            && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-            && sudo apt update \
-            && sudo apt install gh -y
-            echo $GH_ACCESS_TOKEN | gh auth login --with-token
-      - run:
-          name: Create SFDX Folder
-          command: |
-            # Create sfdx directory
-            mkdir ~/sfdx
-            # Download Salesforce CLI
-            wget -qO- ${DX_CLI_URL_CUSTOM-$DX_CLI_URL} | tar xJ -C ~/sfdx --strip-components 1
-      - run:
-          name: Install CLI
-          command: |
-            # Install the CLI
-            export PATH=~/sfdx/bin:$PATH
-            echo "export PATH=~/sfdx/bin:$PATH" >> $BASH_ENV
-            sfdx
-            fail
-      - run:
-          name: Decrypt Server Key
-          command: |
-            openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
-      - run:
-          name: Authorize Dev Hub
-          command: |
-            sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
-      - run:
-          name: Check Package Toggle
-          command: |
-            createPackages=$(node nodescripts/getPackageToggle.js)
-            if [[ -n "$createPackages" ]]; then
-              echo 'export CREATE_PACKAGES=true' >> "$BASH_ENV"
-            fi
-      - when:
-          condition:
-            equal: [ "true", $CREATE_PACKAGES ]
-          steps:
-            run:
-              name: Test Condition
-              command: |
-                echo "ran command"
-      - run:
-          name: Test Interpolation
-          command: |
-            echo $CREATE_PACKAGES
-            if [[ "$CREATE_PACKAGES" == true ]]; then
-              echo "package is empty"
-            else
-              echo "package is not empty"
-            fi
-      - when:
-          condition:
-            equal: [ packaging, <<pipeline.git.branch>> ]
-          steps:
-            - run:
-                name: Create Package Version(s)
-                command: |
-                  sortedPackagesToUpdate=$(node getSortedPackagesToUpdate.js)
-                  #add something to update forceignore
-                  if [[ -n $sortedPackagesToUpdate ]]
-                  then
-                      packageArray=()
-                      packageArray+=($sortedPackagesToUpdate)
-                      for package in "${packageArray[@]}"
-                      do
-                          sfdx force:package:version:create -p $package -x -w $WAIT_TIME
-                          echo "Created new version for package" $package
-                      done
-                  fi
-      - when:
-          condition:
-            equal: [ fflib-migration, <<pipeline.git.branch>> ]
-          steps:
-            - run:
-                name: Check node install
-                command: |
-                  limitLiteral=$(node nodescripts/getLimits.js)
-                  limitArray=()
-                  limitArray+=($limitLiteral)
-                  declare -A limits
-                  limits[scratchOrgs]=${limitArray[0]}
-                  limits[packageVersions]=${limitArray[1]}
-#       - run:
-#           name: Create scratch org for installing packages
-#           command: |
-#             # Create scratch org
-#             sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a installorg -w 10 -d 1
-#       - run:
-#           name: Install packages in scratch org
+        - checkout
+        - run:
+            name: Install GH CLI
+            command: |
+              type -p curl >/dev/null || sudo apt install curl -y
+              curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+              && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+              && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+              && sudo apt update \
+              && sudo apt install gh -y
+              echo $GH_ACCESS_TOKEN | gh auth login --with-token
+        - run:
+            name: Check Package Toggle
+            command: |
+              createPackages=$(node nodescripts/getPackageToggle.js)
+              if [[ -n "$createPackages" ]]; then
+                echo '{"create-packages": "true"}' > parameters.json
+              else
+                echo '{"create-packages": "false"}' > parameters.json
+              fi
+        - continuation/continue:
+            configuration_path: static-config.yml
+            parameters: parameters.json
 
-#      - run:
-#           name: Create Package Version
-#           command: |
-#             #Create package version
-#             PACKAGEVERSION="$(sfdx force:package:version:create --package $PACKAGENAME --installationkeybypass --wait 10 --json --targetdevhubusername HubOrg | jq '.result.SubscriberPackageVersionId' | tr -d '"')"
-#             echo 'PackageVersionId - ' ${PACKAGEVERSION}
-#             # Store PackageVersionId to be used in future step
-#             echo $PACKAGEVERSION > /tmp/packageversion.txt
-#             name: Create scratch org
-#             command: |
-#               sfdx force --help
-              
-#               # Create scratch org
-#               sfdx force:org:create -s -f config/project-scratch-def.json -s -a circle_build_$CIRCLE_BUILD_NUM -w 10 -d 1
-#               # Push source to scratch org
-
-#               stop here
-#               sfdx force:source:push -u circle_build_$CIRCLE_BUILD_NUM
-
-# git diff HEAD --name-only
-
-#         - PACKAGENAME: "0Ho0N000000CaT8SAK"
-#     - TESTLEVEL: RunLocalTests
-#       - run:
-#           name: Run Apex Tests
-#           command: |
-#             #Run unit tests on scratch org
-#             sfdx force:apex:test:run --targetusername circle_build_$CIRCLE_BUILD_NUM --wait 10 --resultformat tap --codecoverage --testlevel $TESTLEVEL
-#       - run:
-#           name: Delete Scratch Org
-#           command: |
-#             #Delete scratch org
-#             sfdx force:org:delete --targetusername  circle_build_$CIRCLE_BUILD_NUM --noprompt
- 
-#       - run:
-#           name: Create Scratch Org for Installing Package Version
-#           command: |
-#             #Create scratch org
-#             sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername --definitionfile config/project-scratch-def.json --setalias installorg --wait 10 --durationdays 1
-#             sfdx force:org:display --targetusername installorg
-#       - run:
-#           name: Install package in Scratch Org
-#           command: |
-#             #Get PackageVersionId
-#             PackageVersionId=$(</tmp/packageversion.txt)
-#             #Install package in scratch org
-#             sfdx force:package:install --package $PackageVersionId --publishwait 10 --wait 10 --targetusername installorg
-#       - run:
-#           name: Run Unit Tests on Scratch Org
-#           command: |
-#             #Run unit tests on scratch org
-#             sfdx force:apex:test:run --targetusername installorg --wait 10 --resultformat tap --codecoverage --testlevel $TESTLEVEL
-#       - run:
-#           name: Delete Scratch org
-#           command: |
-#             #Delete scratch org
-#             sfdx force:org:delete --targetusername installorg --noprompt
-#     # Add steps to the job
-#     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-
-# # Invoke jobs via workflows
-# # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-# workflows:
-#   say-hello-workflow:
-#     jobs:
-#       - say-hello
+workflows:
+  setup:
+    jobs:
+      - setup
