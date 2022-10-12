@@ -31,9 +31,15 @@ async function getLimits() {
                 }
             }
 
-            process.stdout.write(
-                `{"remaining-scratch-orgs": ${remainingScratchOrgs}, "remaining-packages": ${remainingPackageVersions}, "remaining-packages-without-validation": ${remainingPackageVersionsNoValidation}}`
-            );
+            let limits = {
+                "remaining-scratch-orgs": remainingScratchOrgs,
+                "remaining-packages": remainingPackageVersions,
+                "remaining-packages-without-validation": remainingPackageVersionsNoValidation
+            }
+
+            console.log(JSON.stringify(limits));
+
+            process.stdout.write(JSON.stringify(limits));
         }
     } catch(err) {
         console.error(err);
