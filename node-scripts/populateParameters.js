@@ -9,7 +9,7 @@ const OUTPUT_FILENAME = 'parameters.json';
 
 async function populateParameters() {
     let limits = await getLimits();
-    process.stdout.write(limits);
+    console.log(limits);
     //let parameters = JSON.parse(limits);
     //ßparameters["create-packages"] = await getPackageToggle();
 
