@@ -37,9 +37,7 @@ async function getLimits() {
                 "remaining-packages-without-validation": remainingPackageVersionsNoValidation
             }
 
-            console.log(JSON.stringify(limits));
-
-            return 'test';
+            return limits;
         }
     } catch(err) {
         console.log('here');
