@@ -39,7 +39,7 @@ async function getLimits() {
 
             console.log(JSON.stringify(limits));
 
-            process.stdout.write('test');
+            return 'test';
         }
     } catch(err) {
         console.log('here');
