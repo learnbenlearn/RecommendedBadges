@@ -8,10 +8,8 @@ const getPackageToggle = require('./getPackageToggle.js');
 const OUTPUT_FILENAME = 'parameters.json';
 
 async function populateParameters() {
-    let limits = await getLimits();
-    console.log(limits);
-    //let parameters = JSON.parse(limits);
-    //ßparameters["create-packages"] = await getPackageToggle();
+    let parameters = await getLimits();
+    parameters["create-packages"] = await getPackageToggle();
 
     fs.writeFileSync(OUTPUT_FILENAME, parameters);
 }
