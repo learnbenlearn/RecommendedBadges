@@ -56,6 +56,7 @@ jobs:
                   name: Populate Dynamic Parameters
                   command: |
                     npm run populateParameters
+                    fail
 #rewrite to populate from node entirely
 
  #                   limitLiteral=$(node node-scripts/getLimits.js)

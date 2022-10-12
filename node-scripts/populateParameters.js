@@ -9,8 +9,9 @@ const OUTPUT_FILENAME = 'parameters.json';
 
 async function populateParameters() {
     let limits = await getLimits();
-    let parameters = JSON.parse(limits);
-    parameters["create-packages"] = await getPackageToggle();
+    process.stdout(limits);
+    //let parameters = JSON.parse(limits);
+    //ßparameters["create-packages"] = await getPackageToggle();
 
     fs.writeFileSync(OUTPUT_FILENAME, parameters);
 }
