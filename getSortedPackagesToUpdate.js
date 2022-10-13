@@ -2,12 +2,14 @@ const fs = require ('fs');
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
+const OUTPUT_FILENAME = '/tmp/artifacts/packagesToUpdate.txt';
 //b851edc4a777261f401611c03117e5b513c6a203
+//HEAD^
 async function getChangedPackageDirectories() {
     let changedFiles = [];
     let changedPackageDirectories = new Set();
     try {
-        const {stdout, stderr} = await exec('git diff HEAD^ --name-only');
+        const {stdout, stderr} = await exec('git diff f5f93fcd0c6a180ad067618d632ab3449e23cdcf --name-only');
         if(stderr) {
             console.log(stderr);
         } else {
@@ -102,6 +104,7 @@ async function getSortedPackagesToUpdate() {
     let packagesToUpdate = getPackagesToUpdate(changedPackageDirectories, sfdxProjectJSON);
     let sortedPackagesToUpdate = sortPackagesToUpdate(packagesToUpdate, sfdxProjectJSON);
     process.stdout.write(sortedPackagesToUpdate.join(' '));
+    fs.writeFileSync(OUTPUT_FILENAME, sortedPackagesToUpdate.join(' '))
 }
 
 module.exports.getSortedPackagesToUpdate = getSortedPackagesToUpdate;
