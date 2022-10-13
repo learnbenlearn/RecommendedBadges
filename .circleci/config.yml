@@ -56,22 +56,6 @@ jobs:
                   name: Populate Dynamic Parameters
                   command: |
                     npm run populateParameters
-#rewrite to populate from node entirely
-
- #                   limitLiteral=$(node node-scripts/getLimits.js)
-  #                  limitArray=()
-   #                 limitArray+=($limitLiteral)
-    #                declare -A limits
-     #               limits[scratchOrgs]=${limitArray[0]}
-      #              limits[packageVersionsNoValidation]=${limitArray[2]}
-       #             createPackages=$(node node-scripts/getPackageToggle.js)
-        #            if [[ -n "$createPackages" ]]; then
-         #             parametersJSON='{"create-packages": true, "remaining-scratch-orgs": ${limits[scratchOrgs]}, "remaining-packages-without-validation": ${limits[packageVersionsNoValidation]}"}'
-          #            echo $parametersJSON
-           #           echo $parametersJSON > parameters.json
-            #        else
-             #         echo '{"create-packages": false, "remaining-scratch-orgs": ${limits[scratchOrgs]}}' > parameters.json
-              #      fi
         - continuation/continue:
             configuration_path: .circleci/static-config.yml
             parameters: parameters.json

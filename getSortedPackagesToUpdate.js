@@ -1,6 +1,7 @@
 const fs = require ('fs');
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
+
 //b851edc4a777261f401611c03117e5b513c6a203
 async function getChangedPackageDirectories() {
     let changedFiles = [];
@@ -103,4 +104,4 @@ async function getSortedPackagesToUpdate() {
     process.stdout.write(sortedPackagesToUpdate.join(' '));
 }
 
-getSortedPackagesToUpdate();
+module.exports.getSortedPackagesToUpdate = getSortedPackagesToUpdate;

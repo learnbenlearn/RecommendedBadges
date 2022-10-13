@@ -11,6 +11,9 @@ parameters:
   remaining-packages-without-validation:
     type: integer
     default: 0
+  remaining-packages:
+    type: integer
+    default: 0
 
 jobs:
   build:
@@ -55,24 +58,16 @@ jobs:
           name: Authorize Dev Hub
           command: |
             sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
-
       - when:
           condition:
             equal: [ true, << pipeline.parameters.create-packages >> ]
           steps:
-            run:
-              name: Test Condition
-              command: |
-                echo "ran command"
-      - run:
-          name: Test Interpolation
-          command: |
-            echo $CREATE_PACKAGES
-            if [[ "$CREATE_PACKAGES" == true ]]; then
-              echo "package is empty"
-            else
-              echo "package is not empty"
-            fi
+            - run:
+                name: Get Packages to Update
+                command: |
+                  echo ${npm run getSortedPackagesToUpdate} >> /tmp/artifacts/packagesToUpdate.txt
+            - store_artifacts:
+                path: /tmp/artifacts
       - when:
           condition:
             equal: [ packaging, <<pipeline.git.branch>> ]
@@ -168,10 +163,3 @@ workflows:
 #             sfdx force:org:delete --targetusername installorg --noprompt
 #     # Add steps to the job
 #     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-
-# # Invoke jobs via workflows
-# # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-# workflows:
-#   say-hello-workflow:
-#     jobs:
-#       - say-hello
