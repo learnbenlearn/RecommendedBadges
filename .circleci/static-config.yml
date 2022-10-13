@@ -67,7 +67,7 @@ jobs:
                 command: |
                   mkdir /tmp/artifacts
                   touch /tmp/artifacts/packagesToUpdate.txt
-                  npm run getSortedPackagesToUpdate > /tmp/artifacts/packagesToUpdate.txt
+                  npm run getPackagesToUpdate > /tmp/artifacts/packagesToUpdate.txt
             - store_artifacts:
                 path: /tmp/artifacts
       - when:
