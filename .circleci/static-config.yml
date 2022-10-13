@@ -65,7 +65,9 @@ jobs:
             - run:
                 name: Get Packages to Update
                 command: |
-                  mkdir artifacts
+                  mkdir /tmp
+                  mkdir /tmp/artifacts
+                  touch /tmp/artifacts/packagesToUpdate.txt
                   npm run getSortedPackagesToUpdate > /artifacts/packagesToUpdate.txt
             - store_artifacts:
                 path: artifacts
