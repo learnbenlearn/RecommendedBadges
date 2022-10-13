@@ -65,12 +65,11 @@ jobs:
             - run:
                 name: Get Packages to Update
                 command: |
-                  mkdir /tmp
                   mkdir /tmp/artifacts
                   touch /tmp/artifacts/packagesToUpdate.txt
                   npm run getSortedPackagesToUpdate > /artifacts/packagesToUpdate.txt
             - store_artifacts:
-                path: artifacts
+                path: /tmp/artifacts
       - when:
           condition:
             equal: [ packaging, <<pipeline.git.branch>> ]
