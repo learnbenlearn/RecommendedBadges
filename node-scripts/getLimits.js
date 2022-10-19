@@ -33,9 +33,9 @@ async function getLimits() {
             }
 
             let limits = {
-                "REMAINING_SCRATCH_ORGS": remainingScratchOrgs,
-                "REMAINING_PACKAGES": remainingPackageVersions,
-                "REMAINING_PACKAGES_WITHOUT_VALIDATION": remainingPackageVersionsNoValidation
+                "remaining-scratch-orgs": remainingScratchOrgs,
+                "remaining-packages": remainingPackageVersions,
+                "remaining-packages-without-validation": remainingPackageVersionsNoValidation
             }
 
             return limits;

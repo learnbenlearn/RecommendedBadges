@@ -5,13 +5,13 @@ parameters:
   create-packages:
     type: boolean
     default: false
-  REMAINING_SCRATCH_ORGS:
+  remaining-scratch-orgs:
     type: integer
     default: 0
-  REMAINING_PACKAGES_WITHOUT_VALIDATION:
+  remaining-packages-without-validation:
     type: integer
     default: 0
-  REMAINING_PACKAGES:
+  remaining-packages:
     type: integer
     default: 0
 
@@ -75,9 +75,9 @@ jobs:
       - run:
           name: Create Scratch Org for Testing Packages
           command: |
-            echo $REMAINING_SCRATCH_ORGS
+            echo << pipeline.parameters.remaining-scratch-orgs >>
             echo $REQUIRED_SCRATCH_ORGS
-            if [[ $REMAINING_SCRATCH_ORGS -lt $REQUIRED_SCRATCH_ORGS ]]
+            if [[  << pipeline.parameters.remaining-scratch-orgs >> -lt $REQUIRED_SCRATCH_ORGS ]]
             then
               exit 1
             else
