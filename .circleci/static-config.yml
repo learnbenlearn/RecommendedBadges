@@ -5,13 +5,13 @@ parameters:
   create-packages:
     type: boolean
     default: false
-  remaining-scratch-orgs:
+  REMAINING_SCRATCH_ORGS:
     type: integer
     default: 0
-  remaining-packages-without-validation:
+  REMAINING_PACKAGES_WITHOUT_VALIDATION:
     type: integer
     default: 0
-  remaining-packages:
+  REMAINING_PACKAGES:
     type: integer
     default: 0
 
@@ -75,9 +75,9 @@ jobs:
       - run:
           name: Create Scratch Org for Testing Packages
           command: |
-            echo $(remaining-scratch-orgs)
+            echo $REMAINING_SCRATCH_ORGS
             echo $REQUIRED_SCRATCH_ORGS
-            if [[ $(remaining-scratch-orgs) -lt $REQUIRED_SCRATCH_ORGS ]]
+            if [[ $REMAINING_SCRATCH_ORGS -lt $REQUIRED_SCRATCH_ORGS ]]
             then
               exit 1
             else
