@@ -75,9 +75,11 @@ jobs:
       - run:
           name: Create Scratch Org for Testing Packages
           command: |
+            echo $remaining-scratch-orgs
+            echo $REQUIRED_SCRATCH_ORGS
             if [[ $remaining-scratch-orgs -lt $REQUIRED_SCRATCH_ORGS ]]
             then
-              fail
+              exit 1
             else
               sfdx force:org:create -v $HUB_ALIAS -s -f config/project.scratch.json -a $TEST_ORG_ALIAS -w $WAIT_TIME -d 1
             fi
