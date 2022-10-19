@@ -11,7 +11,8 @@ async function getLimits() {
     try {
         const {stdout, stderr} = await exec(`sfdx force:limits:api:display -u ${process.env.HUB_ALIAS} --json`);
         if(stderr) {
-            console.log(stderr);
+            process.stderr.write(`Error in getLimits(): ${stderr}`);
+            process.exit(1);
         } else {
             let jsonResponse = JSON.parse(stdout);
             let limitList = jsonResponse.result;

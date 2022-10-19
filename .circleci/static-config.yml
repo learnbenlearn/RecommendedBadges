@@ -23,6 +23,8 @@ jobs:
     environment:
     - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
     - HUB_ALIAS: HubOrg
+    - REQUIRED_SCRATCH_ORGS: 1
+    - TEST_ORG_ALIAS: TestOrg
     - WAIT_TIME: 30
     steps:
       - checkout
@@ -67,9 +69,34 @@ jobs:
                 command: |
                   mkdir /tmp/artifacts
                   touch /tmp/artifacts/packagesToUpdate.txt
-                  npm run getPackagesToUpdate > /tmp/artifacts/packagesToUpdate.txt
+                  npm run getPackagesToUpdate
             - store_artifacts:
                 path: /tmp/artifacts
+      - run:
+          name: Create Scratch Org for Testing Packages
+          command: |
+            if [[ $remaining-scratch-orgs -lt $REQUIRED_SCRATCH_ORGS ]]
+            then
+              fail
+            else
+              sfdx force:org:create -v $HUB_ALIAS -s -f config/project.scratch.json -a $TEST_ORG_ALIAS -w $WAIT_TIME -d 1
+            fi
+      - run: 
+          name: Push Source to Scratch Org
+          command: |
+            packagesToInstall=()
+            packagesToInstall+=$( (npm --silent run getDependenciesBeforeTesting) )
+            for packageToInstall in ${packagesToInstall[@]};
+                do $(sfdx force:package:install -p $packageToInstall -u $TEST_ORG_ALIAS -w $WAIT_TIME
+            done
+            sfdx force:source:push -u $TEST_ORG_ALIAS
+            #       - run:
+#           name: Create scratch org for installing packages
+#           command: |
+#             # Create scratch org
+#             sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a installorg -w 10 -d 1
+#       - run:
+#           name: Install packages in scratch org
       - when:
           condition:
             equal: [ packaging, <<pipeline.git.branch>> ]
@@ -98,13 +125,7 @@ workflows:
 
 
 # fail to fail
-#       - run:
-#           name: Create scratch org for installing packages
-#           command: |
-#             # Create scratch org
-#             sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a installorg -w 10 -d 1
-#       - run:
-#           name: Install packages in scratch org
+
 
 #      - run:
 #           name: Create Package Version
