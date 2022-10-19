@@ -89,7 +89,14 @@ jobs:
                 do $(sfdx force:package:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME)
             done
             sfdx force:source:push -u $TEST_ORG_ALIAS
-            #       - run:
+      - run:
+          name: Run Tests in Scratch Org
+          command: |
+            mkdir -p /tmp/artifacts
+            sfdx force:apex:test:run -l RunLocalTests -u $TEST_ORG_ALIAS -c -d /tmp/artifacts -r json -y -w $WAIT_TIME
+      - store_artifacts:
+          path: /tmp/artifacts
+#       - run:
 #           name: Create scratch org for installing packages
 #           command: |
 #             # Create scratch org
