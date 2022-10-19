@@ -46,9 +46,8 @@ jobs:
             # Download Salesforce CLI
             wget -qO- ${DX_CLI_URL_CUSTOM-$DX_CLI_URL} | tar xJ -C ~/sfdx --strip-components 1
       - run:
-          name: Install CLI
+          name: Install Salesforce CLI
           command: |
-            # Install the CLI
             export PATH=~/sfdx/bin:$PATH
             echo "export PATH=~/sfdx/bin:$PATH" >> $BASH_ENV
             sfdx
@@ -75,8 +74,6 @@ jobs:
       - run:
           name: Create Scratch Org for Testing Packages
           command: |
-            echo << pipeline.parameters.remaining-scratch-orgs >>
-            echo $REQUIRED_SCRATCH_ORGS
             if [[  << pipeline.parameters.remaining-scratch-orgs >> -lt $REQUIRED_SCRATCH_ORGS ]]
             then
               exit 1
@@ -89,7 +86,7 @@ jobs:
             packagesToInstall=()
             packagesToInstall+=$( (npm --silent run getDependenciesBeforeTesting) )
             for packageToInstall in ${packagesToInstall[@]};
-                do $(sfdx force:package:install -p $packageToInstall -u $TEST_ORG_ALIAS -w $WAIT_TIME
+                do $(sfdx force:package:install -p $packageToInstall -u $TEST_ORG_ALIAS -w $WAIT_TIME)
             done
             sfdx force:source:push -u $TEST_ORG_ALIAS
             #       - run:
