@@ -63,7 +63,9 @@ jobs:
             sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
       - when:
           condition:
-            equal: [ true, << pipeline.parameters.create-packages >> ]
+            and:
+              - equal: [ true, << pipeline.parameters.create-packages >> ]
+              - equal: [ packaging, << pipeline.git.branch >> ]
           steps:
             - run:
                 name: Get Packages to Update
@@ -78,7 +80,7 @@ jobs:
                 command: |
                   npm run --silent updateForceIgnore
                   packagesToUpdate=()
-                  packagesToUpdate+=$( (npm run --silent getPackagesToUpdate))
+                  packagesToUpdate+=$( (npm run --silent getPackagesToUpdate) )
                   for packageToUpdate in ${packagesToUpdate[@]};
                       do sfdx force:package:version:create -p $packageToUpdate -x -w $WAIT_TIME --skipvalidation
                   done
