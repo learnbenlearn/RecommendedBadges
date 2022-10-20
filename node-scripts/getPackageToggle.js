@@ -15,17 +15,17 @@ async function getPackageToggle() {
         if(stderr) {
             process.stderr.write(`Error in getPackageToggle(): ${stderr}`);
             process.exit(1);
-        } else {
-            let labels = JSON.parse(stdout).labels;
-            if(labels.length != 0) {
-                for(let label of labels) {
-                    if(label.name === PACKAGE_LABEL) {
-                        return true;
-                    }
+        }
+        
+        let labels = JSON.parse(stdout).labels;
+        if(labels.length != 0) {
+            for(let label of labels) {
+                if(label.name === PACKAGE_LABEL) {
+                    return true;
                 }
             }
-            return false;
         }
+        return false;
     } catch(err) {
         console.error(err);
     }

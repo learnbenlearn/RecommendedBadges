@@ -21,11 +21,11 @@ async function ensurePackageIdsInPackageAliases() {
         if(stderr) {
             process.stderr.write(`Error in ensurePackageIdsInPackageAliases(): ${stderr}`);
             process.exit(1);
-        } else {
-            let queryResults = JSON.parse(stdout).result.records;
-            for(let record of queryResults) {
-                PACKAGE_ALIASES[record.Name] = record.Id;
-            }
+        }
+
+        let queryResults = JSON.parse(stdout).result.records;
+        for(let record of queryResults) {
+            PACKAGE_ALIASES[record.Name] = record.Id;
         }
     }
 }

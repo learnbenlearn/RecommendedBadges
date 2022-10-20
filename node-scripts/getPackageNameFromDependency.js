@@ -20,11 +20,12 @@ async function getPackageNameFromDependency(dependentPackage) {
         );
         if(stderr) {
             process.stderr.write(`Error in getPackageNameFromDependency(): ${stderr}`);
-        } else {
-            let result = JSON.parse(stdout).result.records;
-            if(result.length > 0 && REVERSE_PACKAGE_ALIASES[result[0].Package2Id]) {
-                return REVERSE_PACKAGE_ALIASES[result[0].Package2Id];
-            }
+            process.exit(1);
+        }
+        
+        let result = JSON.parse(stdout).result.records;
+        if(result.length > 0 && REVERSE_PACKAGE_ALIASES[result[0].Package2Id]) {
+            return REVERSE_PACKAGE_ALIASES[result[0].Package2Id];
         }
     } else if(dependentPackage.package.startsWith(PACKAGE_ID_PREFIX)) {
         return REVERSE_PACKAGE_ALIASES[dependentPackage.package];

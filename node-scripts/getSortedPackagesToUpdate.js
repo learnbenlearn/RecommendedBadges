@@ -8,7 +8,7 @@ const {PACKAGE_DIRECTORIES} = require('./constants.js');
 
 const OUTPUT_FILENAME = '/tmp/artifacts/packagesToUpdate.txt';
 // 598452d0fb1a3ff5e01cf5cb0be690817796e5f6
-//b851edc4a777261f401611c03117e5b513c6a203
+// b851edc4a777261f401611c03117e5b513c6a203
 
 async function getChangedPackageDirectories() {
     let changedFiles = [];
@@ -18,12 +18,12 @@ async function getChangedPackageDirectories() {
         if(stderr) {
             process.stderr.write(`Error in getChangedPackageDirectories(): ${stderr}`);
             process.exit(1);
-        } else {
-            changedFiles = stdout.split('\n');
-            for(let changedFile of changedFiles) {
-                if(changedFile.indexOf('/') != -1) {
-                    changedPackageDirectories.add(changedFile.substring(0, changedFile.indexOf('/')));
-                }
+        }
+        
+        changedFiles = stdout.split('\n');
+        for(let changedFile of changedFiles) {
+            if(changedFile.indexOf('/') != -1) {
+                changedPackageDirectories.add(changedFile.substring(0, changedFile.indexOf('/')));
             }
         }
     } catch(err) {

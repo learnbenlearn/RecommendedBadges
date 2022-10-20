@@ -19,15 +19,15 @@ home_page_default.flexipage
 standard-home.tab
 
 # Ignored Packages
-BensView
-DataModel
-LWCUtils
-RecommendedBadgeMix
-SortCustomMetadata
-StorageManagement
+#BensView
+#DataModel
+#LWCUtils
+#RecommendedBadgeMix
+#SortCustomMetadata
+#StorageManagement
 #TaskList
-Triggers
-UserInterface
+#Triggers
+#UserInterface
 
 # Ignored Folders
-unpackageable
+#unpackageable

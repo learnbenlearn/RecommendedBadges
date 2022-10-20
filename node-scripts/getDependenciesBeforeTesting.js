@@ -33,12 +33,12 @@ async function getDependenciesBeforeTesting() {
         if(stderr) {
             process.stderr.write(`Error in getDependenciesBeforeTesting(): ${stderr}`);
             process.exit(1);
-        } else {
-            let queryResult = JSON.parse(stdout).result.records;
-            for(let result of queryResult) {
-                if(PACKAGE_IDS.includes(result.Package2Id)) {
-                    possibleRequiredPackageVersionIds.delete(result.SubscriberPackageVersionId)
-                }
+        }
+        
+        let queryResult = JSON.parse(stdout).result.records;
+        for(let result of queryResult) {
+            if(PACKAGE_IDS.includes(result.Package2Id)) {
+                possibleRequiredPackageVersionIds.delete(result.SubscriberPackageVersionId)
             }
         }
 
@@ -69,9 +69,8 @@ async function getPackageIdFromDependency(dependency) {
     if(stderr) {
         process.stderr.write(`Error in getPackageIdFromDependency(): ${stderr}`);
         process.exit(1);
-    } else {
-        return JSON.parse(stdout).result.records[0].SubscriberPackageVersionId;
     }
+    return JSON.parse(stdout).result.records[0].SubscriberPackageVersionId;
 }
 
 module.exports.getDependenciesBeforeTesting = getDependenciesBeforeTesting;
