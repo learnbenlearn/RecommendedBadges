@@ -7,6 +7,6 @@
   "salesforcedx-vscode-core.push-or-deploy-on-save.enabled": true,
   "salesforcedx-vscode-core.show-cli-success-msg": false,
   "apexPMD.rulesets": [
-    "customPMDRules.xml"
+    ".custompmdrules.xml"
   ]
 }
