@@ -22,7 +22,6 @@ async function getPackageNameFromDependency(dependentPackage) {
             process.stderr.write(`Error in getPackageNameFromDependency(): ${stderr}`);
             process.exit(1);
         }
-        
         let result = JSON.parse(stdout).result.records;
         if(result.length > 0 && REVERSE_PACKAGE_ALIASES[result[0].Package2Id]) {
             return REVERSE_PACKAGE_ALIASES[result[0].Package2Id];

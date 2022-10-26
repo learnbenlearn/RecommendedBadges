@@ -59,7 +59,7 @@ async function getSortedPackagesToUpdate() {
     let packagesToUpdate = await getPackagesToUpdate(changedPackageDirectories);
     let sortedPackagesToUpdate = await sortPackages(packagesToUpdate, PACKAGE_DIRECTORIES);
     process.stdout.write(sortedPackagesToUpdate.join(' '));
-    fs.writeFileSync(OUTPUT_FILENAME, sortedPackagesToUpdate.join(' '))
+    fs.writeFileSync(OUTPUT_FILENAME, sortedPackagesToUpdate.join('\n'))
 }
 
 module.exports.getSortedPackagesToUpdate = getSortedPackagesToUpdate;
