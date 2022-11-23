@@ -39,7 +39,7 @@ async function getSortedPackagesToInstall() {
         sortedPackagesToInstall[i] = latestPackageVersionIds[sortedPackagesToInstall[i]];
     }
 
-    process.stdout.write(`${sortedPackagesToInstall.join(' ')}`)
+    process.stdout.write(`${Array.from(sortedPackagesToInstall).join(' ')}`)
 }
 
 module.exports.getSortedPackagesToInstall = getSortedPackagesToInstall;
