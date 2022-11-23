@@ -7,8 +7,6 @@ const getPackageNameFromDependency = require('./getPackageNameFromDependency.js'
 const {PACKAGE_DIRECTORIES} = require('./constants.js');
 
 const OUTPUT_FILENAME = '/tmp/artifacts/packagesToUpdate.txt';
-// 598452d0fb1a3ff5e01cf5cb0be690817796e5f6
-// b851edc4a777261f401611c03117e5b513c6a203
 
 async function getChangedPackageDirectories() {
     let changedFiles = [];

@@ -1,7 +1,7 @@
 #!/bin/env node
 const fs = require('fs');
 
-const HUB_ALIAS = process.env.HUB_ALIAS || 'RecommendedBadges';
+const HUB_ALIAS = process.env.HUB_ALIAS;
 const SFDX_PROJECT_JSON = JSON.parse(fs.readFileSync('./sfdx-project.json'));
 const PACKAGE_ALIASES = SFDX_PROJECT_JSON.packageAliases;
 const PACKAGE_ALIAS_DELIMITER = '@';
