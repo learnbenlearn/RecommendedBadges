@@ -117,7 +117,7 @@ jobs:
                   command: |
                     packagesToInstall=()
                     packagesToInstall+=$( (npm run getSortedPackagesToInstall) )
-                    echo ${packagesToinstall[@]}
+                    echo "${packagesToInstall[@]}"
                     for packageToInstall in ${packagesToInstall[@]};
                       do echo "Installing dependent package: "$packageToInstall
                       sfdx force:package:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
