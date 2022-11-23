@@ -116,7 +116,7 @@ jobs:
                   name: Install Packages in Scratch Org
                   command: |
                     packagesToInstall=()
-                    packagesToInstall+=$( (npm run getSortedPackagesToInstall) )
+                    packagesToInstall+=$( (npm run --silent getSortedPackagesToInstall) )
                     echo "${packagesToInstall[0]}"
                     echo "${packagesToInstall[1]}"
                     echo "${packagesToInstall[2]}"
