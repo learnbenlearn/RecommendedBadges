@@ -99,7 +99,7 @@ jobs:
             packagesToInstall=()
             packagesToInstall+=$( (npm run --silent getDependenciesBeforeTesting) )
             for packageToInstall in ${packagesToInstall[@]};
-                do sfdx force:package:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
+                do sfdx force:package:beta:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
             done
       - when:
             condition:
@@ -117,10 +117,11 @@ jobs:
                   command: |
                     packagesToInstall=()
                     packagesToInstall+=$( (npm run getSortedPackagesToInstall) )
-                    echo "${packagesToInstall[@]}"
+                    echo "${packagesToInstall[0]}"
+                    echo "${packagesToInstall[1]}"
                     for packageToInstall in ${packagesToInstall[@]};
                       do echo "Installing dependent package: "$packageToInstall
-                      sfdx force:package:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
+                      sfdx force:package:beta:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
                     done
                     sfdx force:source:deploy -p $UNPACKAGED_DIRECTORY -u $TEST_ORG_ALIAS
       - run:
