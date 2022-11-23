@@ -117,14 +117,9 @@ jobs:
                   command: |
                     packagesToInstall=()
                     packagesToInstall+=$( (npm run --silent getSortedPackagesToInstall) )
-                    echo "${packagesToInstall[0]}"
-                    echo "${packagesToInstall[1]}"
-                    echo "${packagesToInstall[2]}"
                     for packageToInstall in ${packagesToInstall[@]};
-                      do echo "Installing dependent package: "$packageToInstall
-                      sfdx force:package:beta:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
+                      do sfdx force:package:beta:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
                     done
-                    sfdx force:source:deploy -p $UNPACKAGED_DIRECTORY -u $TEST_ORG_ALIAS
       - run:
           name: Run Tests in Scratch Org
           command: |
