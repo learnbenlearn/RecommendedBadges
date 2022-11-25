@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for SortCustomMetadataService.
  * @author            : Ben Learn
- * @last modified on  : 09-11-2022
+ * @last modified on  : 11-23-2022
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -30,10 +30,9 @@ private class SortCustomMetadataServiceTests {
         List<Sortable_Field__mdt> sortOptions = SortCustomMetadataService.getSortOptions(testComponentName);
         Test.stopTest();
 
-        System.assertEquals(
-            sortableFields, 
-            sortOptions,
-            'Expected sort options to be the same.'
-        );
+        Map<Id, Sortable_Field__mdt> sortableFieldMap = new Map<Id, Sortable_Field__mdt>(sortableFields);
+        for(Sortable_Field__mdt sortOption : sortOptions) {
+            System.assert(sortableFieldMap.containsKey(sortOption.Id), 'Expected sort options to be the same.');
+        }
     }
 }
