@@ -65,7 +65,7 @@ jobs:
           condition:
             and:
               - equal: [ true, << pipeline.parameters.create-packages >> ]
-              - equal: [ packaging, << pipeline.git.branch >> ]
+              - equal: [ fflib-migration, << pipeline.git.branch >> ]
           steps:
             - run:
                 name: Get Packages to Update
