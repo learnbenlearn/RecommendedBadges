@@ -17,7 +17,7 @@ async function getChangedPackageDirectories() {
             process.stderr.write(`Error in getChangedPackageDirectories(): ${stderr}`);
             process.exit(1);
         }
-        
+        console.log(stdout);
         changedFiles = stdout.split('\n');
         for(let changedFile of changedFiles) {
             if(changedFile.indexOf('/') != -1) {
