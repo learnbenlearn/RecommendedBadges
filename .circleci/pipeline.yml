@@ -109,7 +109,9 @@ jobs:
             steps:
               - run:
                   name: Push Source to Scratch Org
-                  command: sfdx force:source:push -u $TEST_ORG_ALIAS
+                  command: |
+                    npm run --silent updateForceIgnore
+                    sfdx force:source:push -u $TEST_ORG_ALIAS
       - when:
             condition:
               equal: [ true, << pipeline.parameters.create-packages >> ]
