@@ -53,6 +53,7 @@ async function getPackagesToUpdate(changedPackageDirectories) {
 
 async function getSortedPackagesToUpdate() {
     let changedPackageDirectories = await getChangedPackageDirectories();
+    console.log(changedPackageDirectories);
     await ensurePackageIdsInPackageAliases();
     let packagesToUpdate = await getPackagesToUpdate(changedPackageDirectories);
     let sortedPackagesToUpdate = await sortPackages(packagesToUpdate, PACKAGE_DIRECTORIES);
