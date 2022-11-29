@@ -7,12 +7,13 @@ const getPackageNameFromDependency = require('./getPackageNameFromDependency.js'
 const {PACKAGE_DIRECTORIES} = require('./constants.js');
 
 const OUTPUT_FILENAME = '/tmp/artifacts/packagesToUpdate.txt';
+const BASE_BRANCH = 'packaging';
 
 async function getChangedPackageDirectories() {
     let changedFiles = [];
     let changedPackageDirectories = new Set();
     try {
-        const {stdout, stderr} = await exec('git diff HEAD^ --name-only');
+        const {stdout, stderr} = await exec(`git diff ${BASE_BRANCH} --name-only`);
         if(stderr) {
             process.stderr.write(`Error in getChangedPackageDirectories(): ${stderr}`);
             process.exit(1);
