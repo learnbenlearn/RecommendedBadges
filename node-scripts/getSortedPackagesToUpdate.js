@@ -25,7 +25,8 @@ async function getChangedPackageDirectories() {
             }
         }
     } catch(err) {
-        console.error(err);
+        process.stderr.write(`Error in getChangedPackageDirectories(): ${err}`);
+        process.exit(1);
     }
     return changedPackageDirectories;
 }
