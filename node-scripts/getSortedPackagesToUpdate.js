@@ -14,7 +14,7 @@ async function getChangedPackageDirectories() {
     let changedPackageDirectories = new Set();
     try {
         let stderr;
-        ({_, stderr} = await exec('git fetch origin'));
+        ({_, stderr} = await exec(`git fetch origin ${BASE_BRANCH}`));
         if(stderr) {
             process.stderr.write(`Error in getChangedPackageDirectories(): ${stderr}`);
             process.exit(1);
