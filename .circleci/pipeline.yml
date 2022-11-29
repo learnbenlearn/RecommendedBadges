@@ -81,6 +81,7 @@ jobs:
                   npm run --silent updateForceIgnore
                   packagesToUpdate=()
                   packagesToUpdate+=$( (npm run --silent getPackagesToUpdate) )
+                  echo ${packagesToUpdate[@]}
                   for packageToUpdate in ${packagesToUpdate[@]};
                       do sfdx force:package:version:create -p $packageToUpdate -x -w $WAIT_TIME --skipvalidation
                   done

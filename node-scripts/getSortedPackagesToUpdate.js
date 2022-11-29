@@ -13,20 +13,11 @@ async function getChangedPackageDirectories() {
     let changedFiles = [];
     let changedPackageDirectories = new Set();
     try {
-        let stderr;
-        /*({_, stderr} = await exec(`git  origin ${BASE_BRANCH} -q`));
-        if(stderr) {
-            process.stderr.write(`Error in getChangedPackageDirectories(): ${stderr}`);
-            process.exit(1);
-        }*/
-
-        let stdout;
-        ({stdout, stderr} = await exec(`git diff origin/${BASE_BRANCH} --name-only`));
+        const {stdout, stderr} = await exec(`git diff origin/${BASE_BRANCH} --name-only`);
         if(stderr) {
             process.stderr.write(`Error in getChangedPackageDirectories(): ${stderr}`);
             process.exit(1);
         }
-        console.log(stdout);
         changedFiles = stdout.split('\n');
         for(let changedFile of changedFiles) {
             if(changedFile.indexOf('/') != -1) {
@@ -62,7 +53,6 @@ async function getPackagesToUpdate(changedPackageDirectories) {
 
 async function getSortedPackagesToUpdate() {
     let changedPackageDirectories = await getChangedPackageDirectories();
-    console.log(changedPackageDirectories);
     await ensurePackageIdsInPackageAliases();
     let packagesToUpdate = await getPackagesToUpdate(changedPackageDirectories);
     let sortedPackagesToUpdate = await sortPackages(packagesToUpdate, PACKAGE_DIRECTORIES);
