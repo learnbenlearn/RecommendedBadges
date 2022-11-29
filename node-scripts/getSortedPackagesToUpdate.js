@@ -14,14 +14,14 @@ async function getChangedPackageDirectories() {
     let changedPackageDirectories = new Set();
     try {
         let stderr;
-        ({_, stderr} = await exec(`git fetch origin ${BASE_BRANCH} -q`));
+        /*({_, stderr} = await exec(`git  origin ${BASE_BRANCH} -q`));
         if(stderr) {
             process.stderr.write(`Error in getChangedPackageDirectories(): ${stderr}`);
             process.exit(1);
-        }
+        }*/
 
         let stdout;
-        ({stdout, stderr} = await exec(`git diff ${BASE_BRANCH} --name-only`));
+        ({stdout, stderr} = await exec(`git diff origin/${BASE_BRANCH} --name-only`));
         if(stderr) {
             process.stderr.write(`Error in getChangedPackageDirectories(): ${stderr}`);
             process.exit(1);
