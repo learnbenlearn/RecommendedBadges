@@ -19,11 +19,7 @@ function updateForceIgnore() {
             forceIgnoreLines[i] = '#' + forceIgnoreLines[i];
         }
     }
-    try {
-        fs.writeFileSync(FORCE_IGNORE_FILENAME, forceIgnoreLines.join('\n'));
-    } catch(err) {
-        console.log(err);
-    }
+    fs.writeFileSync(FORCE_IGNORE_FILENAME, forceIgnoreLines.join('\n'));
 }
 
 module.exports.updateForceIgnore = updateForceIgnore;

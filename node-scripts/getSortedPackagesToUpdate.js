@@ -55,6 +55,7 @@ async function getSortedPackagesToUpdate() {
     let changedPackageDirectories = await getChangedPackageDirectories();
     await ensurePackageIdsInPackageAliases();
     let packagesToUpdate = await getPackagesToUpdate(changedPackageDirectories);
+    console.log('here');
     let sortedPackagesToUpdate = await sortPackages(packagesToUpdate, PACKAGE_DIRECTORIES);
     process.stdout.write(sortedPackagesToUpdate.join(' '));
     fs.writeFileSync(OUTPUT_FILENAME, sortedPackagesToUpdate.join('\n'))
