@@ -79,6 +79,7 @@ jobs:
                 name: Create Package Versions Skipping Validation
                 command: |
                   npm run --silent updateForceIgnore
+                  echo "after updateForceIgnore"
                   packagesToUpdate=()
                   packagesToUpdate+=$( (npm run --silent getPackagesToUpdate) )
                   echo ${packagesToUpdate[@]}
