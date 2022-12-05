@@ -15,6 +15,8 @@ async function getChangedPackageDirectories() {
     try {
         const {stdout, stderr} = await exec(`git diff origin/${BASE_BRANCH} --name-only`);
         if(stderr) {
+
+            console.log(`Error in getChangedPackageDirectories(): ${stderr}`);
             process.stderr.write(`Error in getChangedPackageDirectories(): ${stderr}`);
             process.exit(1);
         }
@@ -25,6 +27,7 @@ async function getChangedPackageDirectories() {
             }
         }
     } catch(err) {
+        console.log(`Error in getChangedPackageDirectories(): ${err}`);
         process.stderr.write(`Error in getChangedPackageDirectories(): ${err}`);
         process.exit(1);
     }
