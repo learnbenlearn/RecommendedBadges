@@ -89,8 +89,6 @@ jobs:
       - run:
           name: Create Scratch Org for Running Tests
           command: |
-            echo << pipeline.parameters.create-packages >>
-            echo << pipeline.git.branch >>
             if [[  << pipeline.parameters.remaining-scratch-orgs >> -lt $REQUIRED_SCRATCH_ORGS ]]
             then
               exit 1
@@ -141,3 +139,5 @@ workflows:
   build:
     jobs:
       - build
+
+# VS Code Extension Version: 1.4.0

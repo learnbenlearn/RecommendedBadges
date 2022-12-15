@@ -11,6 +11,9 @@ const PACKAGE_LABEL = process.env.PACKAGE_LABEL;
 
 async function getPackageToggle() {
     try {
+        console.log(USERNAME);
+        console.log(REPO);
+        console.log(PULL_REQUEST_NUMBER);
         const {stdout, stderr} = await exec(`gh api -H "Accept: application/vnd.github+json" /repos/${USERNAME}/${REPO}/pulls/${PULL_REQUEST_NUMBER}`);
         if(stderr) {
             process.stderr.write(`Error in getPackageToggle(): ${stderr}`);
