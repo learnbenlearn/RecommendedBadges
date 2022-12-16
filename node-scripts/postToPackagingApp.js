@@ -2,7 +2,6 @@ const axios = require('axios');
 
 const HEROKU_ENDPOINT = 'https://recommended-badges-warehouse.herokuapp.com/job';
 const PULL_REQUEST_NUMBER = process.env.CIRCLE_PULL_REQUEST;
-const HEADER_PARAMETER_NAME = 'Token'
 
 async function postToPackagingApp() {
     try {
@@ -13,7 +12,7 @@ async function postToPackagingApp() {
             },
             {
                 headers: {
-                    HEADER_PARAMETER_NAME: process.env.GITHUB_SECRET
+                    'Token': process.env.GITHUB_SECRET
                 }
             }
         );
@@ -24,4 +23,6 @@ async function postToPackagingApp() {
     }
 }
 
-postToPackagingApp();
+module.exports = {
+    postToPackagingApp
+};
