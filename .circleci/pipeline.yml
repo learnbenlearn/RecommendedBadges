@@ -140,7 +140,9 @@ jobs:
             steps:
               - run:
                   name: Make Request to Packaging App
-                  command: npm run --silent postToPackagingApp
+                  command: |
+                    npm install axios
+                    npm run --silent postToPackagingApp
 
 workflows:
   build:
