@@ -139,7 +139,7 @@ jobs:
               equal: [ true, << pipeline.parameters.create-packages >> ]
             steps:
               - run:
-                - name: Make Request to Packaging App
+                name: Make Request to Packaging App
                 command: npm run --silent postToPackagingApp
 
 workflows:
