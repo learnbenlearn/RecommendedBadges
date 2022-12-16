@@ -134,6 +134,13 @@ jobs:
       - run:
           name: Delete Testing Scratch Org
           command: sfdx force:org:delete -u $TEST_ORG_ALIAS -p
+        - when:
+            condition:
+              equal: [ true, << pipeline.parameters.create-packages >> ]
+            steps:
+              - run:
+                - name: Make Request to Packaging App
+                command: npm run --silent postToPackagingApp
 
 workflows:
   build:
