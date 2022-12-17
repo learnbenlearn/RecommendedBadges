@@ -17,7 +17,7 @@ async function postToPackagingApp() {
                 }
             }
         );
-        console.log(res.data);
+        console.log(res);
     } catch(err) {
         process.stderr.write(`Error in postToPackagingApp(): ${err}`);
         process.exit(1);
