@@ -1,14 +1,15 @@
 const axios = require('axios');
 
 const HEROKU_ENDPOINT = 'https://recommended-badges-warehouse.herokuapp.com/job';
-const PULL_REQUEST_NUMBER = process.env.CIRCLE_PULL_REQUEST;
+const PULL_REQUEST_URL = process.env.CIRCLE_PULL_REQUEST;
 
 async function postToPackagingApp() {
     try {
+        let pullRequestNumber = PULL_REQUEST_URL.substring(PULL_REQUEST_URL.lastIndexOf('/') + 1);
         const res = await axios.post(
             HEROKU_ENDPOINT,
             {
-                pullRequestNumber: PULL_REQUEST_NUMBER,
+                pullRequestNumber,
             },
             {
                 headers: {
