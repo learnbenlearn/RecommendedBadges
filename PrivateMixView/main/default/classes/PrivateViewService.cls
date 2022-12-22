@@ -1,10 +1,10 @@
 /**
- * @description       : Apex controller for bensViewContainer LWC.
+ * @description       : Apex controller for privateViewContainer LWC.
  * @author            : Ben Learn
- * @last modified on  : 09-17-2022
+ * @last modified on  : 12-22-2022
  * @last modified by  : Ben Learn
 **/
-public with sharing class BensViewService {
+public with sharing class PrivateViewService {
 // change to private
 
     /**
@@ -28,35 +28,35 @@ public with sharing class BensViewService {
     * @return Map<String, List<Recommended_Badge__c>> 
     **/
     @AuraEnabled
-    public static Map<String, List<Recommended_Badge__c>> getBensMixRecommendedBadges() {
-        List<Recommended_Badge__c> bensMixRecommendedBadges = [
+    public static Map<String, List<Recommended_Badge__c>> getPrivateMixRecommendedBadges() {
+        List<Recommended_Badge__c> privateMixRecommendedBadges = [
             SELECT Badge_Name__c, Category_Rank__c, High_Priority__c, High_Priority_Id__c, Level__c, Time_Estimate_Minutes__c, Time_Estimate__c, Type__c, 
             URL__c, Mix_Category__r.Name
             FROM Recommended_Badge__c 
             WHERE Mix_Category__r.Recommended_Badge_Mix__r.Private_Mix__c = true ORDER BY Badge_Name__c
         ];
 
-        Map<String, List<Recommended_Badge__c>> bensViewMap = new Map<String, List<Recommended_Badge__c>>();
-        bensViewMap.put('High Priority', new List<Recommended_Badge__c>());
+        Map<String, List<Recommended_Badge__c>> privateViewMap = new Map<String, List<Recommended_Badge__c>>();
+        privateViewMap.put('High Priority', new List<Recommended_Badge__c>());
 
         List<Recommended_Badge__c> tempRecommendedBadges = new List<Recommended_Badge__c>();
 
-        for(Recommended_Badge__c rb : bensMixRecommendedBadges) {
+        for(Recommended_Badge__c rb : privateMixRecommendedBadges) {
             if(rb.High_Priority__c) {
-                tempRecommendedBadges = bensViewMap.get('High Priority');
+                tempRecommendedBadges = privateViewMap.get('High Priority');
                 tempRecommendedBadges.add(rb);
-                bensViewMap.put('High Priority', tempRecommendedBadges);
+                privateViewMap.put('High Priority', tempRecommendedBadges);
             }
 
-            if(bensViewMap.get(rb.Mix_Category__r.Name) != null) {
-                tempRecommendedBadges = bensViewMap.get(rb.Mix_Category__r.Name);
+            if(privateViewMap.get(rb.Mix_Category__r.Name) != null) {
+                tempRecommendedBadges = privateViewMap.get(rb.Mix_Category__r.Name);
                 tempRecommendedBadges.add(rb);
-                bensViewMap.put(rb.Mix_Category__r.Name, tempRecommendedBadges);
+                privateViewMap.put(rb.Mix_Category__r.Name, tempRecommendedBadges);
             } else {
-                bensViewMap.put(rb.Mix_Category__r.Name, new List<Recommended_Badge__c>{rb});
+                privateViewMap.put(rb.Mix_Category__r.Name, new List<Recommended_Badge__c>{rb});
             }
         }
 
-        return bensViewMap;
+        return privateViewMap;
     }
 }

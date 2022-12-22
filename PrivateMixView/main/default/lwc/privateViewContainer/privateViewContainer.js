@@ -4,8 +4,8 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 import { deleteRecord, updateRecord } from 'lightning/uiRecordApi';
 
-import getMixCategoryData from '@salesforce/apex/BensViewService.getMixCategoryData';
-import getBensMixRecommendedBadges from '@salesforce/apex/BensViewService.getBensMixRecommendedBadges';
+import getMixCategoryData from '@salesforce/apex/PrivateViewService.getMixCategoryData';
+import getPrivateMixRecommendedBadges from '@salesforce/apex/PrivateViewService.getPrivateMixRecommendedBadges';
 
 const CHANGE_MIX_CATEGORY = 'Change Mix Category';
 const DELETE_RECOMMENDED_BADGE = 'Delete Recommended Badge';
@@ -60,7 +60,7 @@ const TABLE_COLUMNS = [
     }
 ]
 
-export default class BensViewContainer extends LightningElement {
+export default class PrivateViewContainer extends LightningElement {
     @api divClasses;
     displayPrompt;
     dropdownViewLabel = 'Select View';
@@ -94,7 +94,7 @@ export default class BensViewContainer extends LightningElement {
                 }
             }
 
-            this.recommendedBadgeData = await getBensMixRecommendedBadges();
+            this.recommendedBadgeData = await getPrivateMixRecommendedBadges();
             this.tableData = this.recommendedBadgeData[this.dropdownViewValue]
             this.isLoading = false;
 
@@ -200,7 +200,7 @@ export default class BensViewContainer extends LightningElement {
     }
 
     async refreshRecommendedBadgeData() {
-        this.recommendedBadgeData = await getBensMixRecommendedBadges();
+        this.recommendedBadgeData = await getPrivateMixRecommendedBadges();
         this.tableData = this.recommendedBadgeData[this.dropdownViewValue];
     }
 }

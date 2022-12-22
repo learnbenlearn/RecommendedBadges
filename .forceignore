@@ -19,7 +19,7 @@ home_page_default.flexipage
 standard-home.tab
 
 # Ignored Packages
-#BensView
+#PrivateView
 DataModel
 LWCUtils
 fflib

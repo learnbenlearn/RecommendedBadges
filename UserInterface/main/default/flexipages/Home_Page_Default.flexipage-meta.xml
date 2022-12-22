@@ -3,8 +3,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>bensViewContainer</componentName>
-                <identifier>c_bensViewContainer1</identifier>
+                <componentName>privateViewContainer</componentName>
+                <identifier>c_privateViewContainer1</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-72b5748a-6e0d-42ea-a2c4-0db938e5bf94</name>
@@ -33,7 +33,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
-                    <value>Ben&apos;s View</value>
+                    <value>Private View</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>flexipage_tab6</identifier>

@@ -2,11 +2,11 @@
  * @description       : 
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 09-17-2022
+ * @last modified on  : 12-22-2022
  * @last modified by  : Ben Learn
 **/
 @isTest
-private class BensViewServiceTests {
+private class PrivateViewServiceTests {
     private static List<String> levels = new List<String>{
         'Beginner',
         'Intermediate',
@@ -58,14 +58,14 @@ private class BensViewServiceTests {
         ];
 
         Test.startTest();
-        List<Mix_Category__c> mixCategoryData = BensViewService.getMixCategoryData();
+        List<Mix_Category__c> mixCategoryData = PrivateViewService.getMixCategoryData();
         Test.stopTest();
 
         System.assert(testMixCategories.equals(mixCategoryData), 'Expected Mix Category data to equal test data.');
     }
 
     @isTest
-    private static void getBensMixRecommendedBadges_test() {
+    private static void getPrivateMixRecommendedBadges_test() {
         List<trailheadapp__Badge__c> testBadges = new List<trailheadapp__Badge__c>();
         List<trailheadapp__Trail__c> testTrails = new List<trailheadapp__Trail__c>();
 
@@ -156,7 +156,7 @@ private class BensViewServiceTests {
         }
 
         Test.startTest();
-        Map<String, List<Recommended_Badge__c>> privateViewMap = BensViewService.getBensMixRecommendedBadges();
+        Map<String, List<Recommended_Badge__c>> privateViewMap = PrivateViewService.getPrivateMixRecommendedBadges();
         Test.stopTest();
 
         System.assert(resultRecommendedBadgeMap.equals(privateViewMap), 'Expected private view Recommended Badges to equal test data.');

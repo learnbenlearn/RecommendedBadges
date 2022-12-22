@@ -36,14 +36,14 @@
                     <name>divClasses</name>
                     <value>slds-box slds-theme_default slds-var-p-around_small</value>
                 </componentInstanceProperties>
-                <componentName>bensViewContainer</componentName>
-                <identifier>c_bensViewContainer1</identifier>
+                <componentName>privateViewContainer</componentName>
+                <identifier>c_privateViewContainer1</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>Ben&apos;s View</masterLabel>
+    <masterLabel>Private View</masterLabel>
     <template>
         <name>flexipage:defaultAppHomeTemplate</name>
     </template>

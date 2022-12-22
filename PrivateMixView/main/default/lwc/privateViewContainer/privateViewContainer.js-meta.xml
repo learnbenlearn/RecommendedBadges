@@ -2,7 +2,7 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>54.0</apiVersion>
     <isExposed>true</isExposed>
-    <masterLabel>Ben's View</masterLabel>
+    <masterLabel>Private View</masterLabel>
     <targets>
         <target>lightning__HomePage</target>
         <target>lightning__AppPage</target>
