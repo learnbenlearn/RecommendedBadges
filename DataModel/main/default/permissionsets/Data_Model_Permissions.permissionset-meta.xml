@@ -42,11 +42,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Recommended_Badge__c.Archived__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Recommended_Badge__c.Badge_Icon__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -143,11 +138,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Recommended_Badge__c.URL__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Recommended_Trail__c.Archived__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
