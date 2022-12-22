@@ -22,9 +22,13 @@ standard-home.tab
 #BensView
 #DataModel
 #LWCUtils
+#fflib
 #RecommendedBadgeMix
 #SortCustomMetadata
 #StorageManagement
 #TaskList
 #Triggers
 #UserInterface
+
+# Ignored Folders
+#unpackageable
