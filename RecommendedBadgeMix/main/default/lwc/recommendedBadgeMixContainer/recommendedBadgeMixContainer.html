@@ -2,12 +2,12 @@
   @description       : Container for a dropdown and treegrid to display recommended badge mixes.
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 03-13-2022
+  @last modified on  : 12-22-2022
   @last modified by  : Ben Learn
 -->
 <template>
     <div class="slds-box slds-var-p-around_small" style="min-height:300px">
-        <div class="slds-grid slds-wrap slds-gutters" style="height:125px">
+        <div class="slds-grid slds-wrap slds-gutters" style="min-height:125px">
             <div class="slds-col slds-size_1-of-4">
                 <c-dropdown label={mixLabel} value={mixValue} options={mixOptions} ondropdownchange={handleMixChange}>
                 </c-dropdown>
@@ -30,7 +30,7 @@
         </template>
 
         <template if:true={displayTable}>
-            <div style="max-height:80vh;overflow:scroll;display:block">
+            <div style="max-height:60vh;overflow:scroll;display:block">
                 <br/>
                 <c-treegrid columns={treegridColumns} treegrid-data={treegridData} key-field={keyField}></c-treegrid>
             </div>

@@ -23,7 +23,7 @@ standard-home.tab
 DataModel
 LWCUtils
 fflib
-RecommendedBadgeMix
+#RecommendedBadgeMix
 SortCustomMetadata
 StorageManagement
 TaskList
