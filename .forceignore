@@ -19,14 +19,14 @@ home_page_default.flexipage
 standard-home.tab
 
 # Ignored Packages
-BensView
+#BensView
 DataModel
 LWCUtils
 fflib
 RecommendedBadgeMix
 SortCustomMetadata
 StorageManagement
-#TaskList
+TaskList
 Triggers
 UserInterface
 
