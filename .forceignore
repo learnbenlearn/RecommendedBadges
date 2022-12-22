@@ -20,12 +20,13 @@ standard-home.tab
 
 # Ignored Packages
 #BensView
-DataModel
+#DataModel
 #LWCUtils
+#fflib
 #RecommendedBadgeMix
 #SortCustomMetadata
 #StorageManagement
-TaskList
+#TaskList
 #Triggers
 #UserInterface
 

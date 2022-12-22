@@ -19,7 +19,7 @@ then
     for id in ${dependencies[@]}
     do
         echo "Installing dependent package: "$id
-        sfdx force:package:install -p $id -u $username -r -w 20
+        sfdx force:package:beta:install -p $id -u $username -r -w 20
         echo ""
     done
 fi

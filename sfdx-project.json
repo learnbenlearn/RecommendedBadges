@@ -150,6 +150,12 @@
         {
             "path": "unpackageable",
             "default": true
+        },
+        {
+            "path": "fflib",
+            "default": false,
+            "package": "fflib",
+            "versionNumber": "1.0.0.NEXT"
         }
     ],
     "name": "RecommendedBadges",
@@ -241,6 +247,16 @@
         "RecommendedBadgeMix@0.1.0-8": "04t8c000000ZwKdAAK",
         "RecommendedBadgeMix@1.0.0-1": "04t8c000000ZwKiAAK",
         "BensView@1.0.0-1": "04t8c000000ZwKnAAK",
-        "UserInterface@1.0.0-1": "04t8c000000ZwKsAAK"
+        "UserInterface@1.0.0-1": "04t8c000000ZwKsAAK",
+        "fflib": "0Ho8c000000k9kfCAA",
+        "fflib@1.0.0-1": "04t8c000000a00HAAQ",
+        "TaskList@1.7.0-0": "04t8c000001ItbHAAS",
+        "Triggers@1.3.0-0": "04t8c000001ItbMAAS",
+        "StorageManagement@1.1.0-0": "04t8c000001ItbRAAS",
+        "SortCustomMetadata@1.1.0-0": "04t8c000001ItbWAAS",
+        "fflib@1.1.0-0": "04t8c000001ItbbAAC",
+        "RecommendedBadgeMix@1.1.0-0": "04t8c000001ItbgAAC",
+        "BensView@1.1.0-0": "04t8c000001ItblAAC",
+        "UserInterface@1.1.0-0": "04t8c000001ItbqAAC"
     }
 }

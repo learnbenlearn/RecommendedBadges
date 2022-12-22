@@ -1,18 +1,84 @@
-# Salesforce DX Project: Next Steps
+# Recommended Badges
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Test Runtimes
 
-## How Do You Plan to Deploy Your Changes?
+<details>
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+| Test Class                      | Test Method                                                    | Runtime (s) |
+| ------------------------------- | -------------------------------------------------------------- | ----------- |
+| BensViewServiceTests            | getBensMixRecommendedBadges_test                               | 2.924       |
+|                                 | getMixCategoryData_test                                        | 0.322       |
+| RecommendedBadgeMixServiceTests |  getSetupData_testDefaultBadgeMix                              | 0.281       |
+|                                 | getSetupData_testNoDefaultBadgeMix                             | 0.222       |
+| SortCustomMetadataServiceTests  | getSortOptions_test                                            | 0.056       |
+| StorageManagementServiceTests   | manualClean_test                                               | 28.989      |
+|                                 | getStorageLimitInfo_test                                       | 0.148       |
+| TaskListServiceTests            | testGetTasks                                                   | 0.061       |
+|                                 | testGetTasksRestrictiedUser                                    | 0.738       |
+| BadgeTrigger_HelperTests        | testCreateCMTDeleteTasks_bulk                                  | 5.618       |
+|                                 | testCreateCMTDeleteTasks_singleNegative                        | 0.458       |
+|                                 | testCreateCMTDeleteTasks_singlePositive                        | 0.707       |
+|                                 | testPopulateBadgeMixKeys_bulkNegativeInsert                    | 0.973       |
+|                                 | testPopulateBadgeMixKeys_bulkPositiveInsert                    | 0.869       |
+|                                 | testPopulateBadgeMixKeys_bulkPositiveUpdate                    | 2.206       |
+|                                 | testPopulateBadgeMixKeys_negativeBulkUpdate                    | 7.656       |
+|                                 | testPopulateBadgeMixKeys_negativeInsert                        | 0.498       |
+|                                 | testPopulateBadgeMixKeys_negativeUpdate                        | 0.521       |
+|                                 | testPopulateBadgeMixKeys_singlePositiveInsert                  | 0.395       |
+|                                 | testPopulateBadgeMixKeys_singlePositiveUpdate                  | 0.462       |
+|                                 | testPopulateJunctionPicklists_bulkBadges                       | 1.034       |
+|                                 | testPopulateJunctionPicklists_bulkBadgesNegative               | 0.926       |
+|                                 | testPopulateJunctionPicklists_bullkTrails                      | 0.694       |
+|                                 | testPopulateJunctionPicklists_bulkTrailsNegative               | 0.776       |
+|                                 | testPopulateJunctionPicklists_singleBadge                      | 0.223       |
+|                                 | testPopulateJunctionPicklists_singleBadgeNegative              | 0.134       |
+|                                 | testPopulateJunctionPicklists_singleTrail                      | 0.134       |
+|                                 | testPopulateJunctionPicklists_singleTrailNegative              | 0.123       |
+|                                 | testUpdateJunctionTypesAndLevels_bulkBadges                    | 3.496       |
+|                                 | testUpdateJunctionTypesAndLevels_bulkBadgesNegative            | 2.262       |    
+|                                 | testUpdateJunctionTypesAndLevels_bulkTrails                    | 2.839       |
+|                                 | testUpdateJunctionTypesAndLevels_bulkTrailsNegative            | 1.995       |
+|                                 | testUpdateJunctionTypesAndLevels_singleBadgeLevelChange        | 1.822       |
+|                                 | testUpdateJunctionTypesAndLevels_singleBadgeNegative           | 2.463       |
+|                                 | testUpdateJunctionTypesAndLevels_singleBadgeTypeAndLevelChange | 1.913       |
+|                                 | testUpdateJunctionTypesAndLevels_singleBadgeTypeChange         | 2.172       |
+|                                 | testUpdateJunctionTypesAndLevels_singleTrail                   | 1.523       |
+|                                 | testUpdateJunctionTypesAndLevels_singleTrailNegative           | 1.762       |
+|                                 | testEnforceSingleDefaultMix_insertBulkPositive                 | 0.506       |
+|                                 | testEnforceSingleDefaultMix_insertNegative                     | 0.028       |
+|                                 | testEnforceSingleDefaultMix_insertNoDefault                    | 0.020       |
+|                                 | testEnforceSingleDefaultMix_insertPositive                     | 0.022       |
+|                                 | testEnforceSingleDefaultMix_updateNegative                     | 0.081       |
+|                                 | testEnforceSingleDefaultMix_updateNegativeBulk                 | 1.744       |
+|                                 | testEnforceSingleDefaultMix_updateNoDefault                    | 0.040       |
+|                                 | testEnforceSingleDefaultMix_updateNoDefaultBulk                | 1.667       |
+|                                 | testEnforceSingleDefaultMix_updatePositive                     | 0.045       |    
+|                                 | testEnforceSingleDefaultMix_updatePositiveBulk                 | 1.593       |
+|                                 | testEnforceSingleDefaultMix_insertBulkNegative                 | 1.360       |
+|                                 | testEnforcesingleDefaultMix_insertBulkNoDefault                | 0.730       |
 
-## Configure Your Salesforce DX Project
+</details>
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Test Coverage
 
-## Read All About It
+<details>
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+| Class                             | Coverage |
+| --------------------------------- | -------- |
+| BadgeTrigger                      | 100%     |
+| BadgeTrigger_Helper               | 100%     |
+| BensViewService                   | 100%     |
+| MultipleDefaultBadgeMixException  | 0%       |
+| RecommendedBadgeMixService        | 100%     |
+| RecommendedBadgeMixTrigger        | 100%     |
+| RecommendedBadgeMixTrigger_Helper | 100%     |
+| RecommendedBadgeTrigger           | 100%     |
+| RecommendedTrailTrigger           | 100%     |
+| SetupDataWrapper                  | 100%     |
+| SortCustomMetadataService         | 100%     |
+| StorageLimitsService              | 100%     |
+| StorageManagementService          | 97%      |
+| TaskListService                   | 100%     |
+| TrailTrigger                      | 100%     |
+
+</details>
