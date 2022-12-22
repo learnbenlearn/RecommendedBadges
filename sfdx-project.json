@@ -161,7 +161,7 @@
     "name": "RecommendedBadges",
     "namespace": "",
     "sfdcLoginUrl": "https://recommendedbadges-dev-ed.my.salesforce.com",
-    "sourceApiVersion": "54.0",
+    "sourceApiVersion": "56.0",
     "packageAliases": {
         "DataModel": "0Ho8c000000fxx5CAA",
         "TaskList": "0Ho8c000000fy1NCAQ",
