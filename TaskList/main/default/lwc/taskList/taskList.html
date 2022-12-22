@@ -15,13 +15,15 @@
                 <span class="slds-align_absolute-center slds-text-heading_medium">Tasks</span>
             <br/>
 
-            <ul class="slds-list_dotted slds-has-block-links">
-                <template for:each={taskList} for:item="task">
-                    <li key={task.Id}>
-                        <lightning-formatted-url label={task.Subject} value={task.Id}></lightning-formatted-url>
-                    </li>
-                </template>
-            </ul>
+            <div class="slds-scrollable" style="max-height:30vh">
+                <ul class="slds-list_dotted slds-has-block-links">
+                    <template for:each={taskList} for:item="task">
+                        <li key={task.Id}>
+                            <lightning-formatted-url label={task.Subject} value={task.Id}></lightning-formatted-url>
+                        </li>
+                    </template>
+                </ul>
+            </div>
         </template>
 
         <template if:true={noTasks}>
