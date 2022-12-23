@@ -4,6 +4,12 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 import { deleteRecord, updateRecord } from 'lightning/uiRecordApi';
 
+import BADGE_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Badge_Name__c';
+import ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
+import TIME_ESTIMATE_FIELD from '@salesforce/schema/Recommended_Badge__c.Time_Estimate__c';
+import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
+import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
+
 import getMixCategoryData from '@salesforce/apex/PrivateViewService.getMixCategoryData';
 import getPrivateMixRecommendedBadges from '@salesforce/apex/PrivateViewService.getPrivateMixRecommendedBadges';
 
@@ -36,21 +42,21 @@ const RESULT_ICON_NAME = 'custom:custom46';
 const TABLE_COLUMNS = [
     {
         label: 'Badge',
-        fieldName: 'URL__c',
+        fieldName: URL_FIELD.fieldApiName,
         type: 'url',
         typeAttributes: {
             label: {
-                fieldName: 'Badge_Name__c'
+                fieldName: BADGE_NAME_FIELD.fieldApiName
             }
         }
     },
     {
         label: 'Type',
-        fieldName: 'Type__c'
+        fieldName: TYPE_FIELD.fieldApiName
     },
     {
         label: 'Time Estimate',
-        fieldName: 'Time_Estimate__c'
+        fieldName: TIME_ESTIMATE_FIELD.fieldApiName
     },
     {
         type: 'action',
@@ -97,7 +103,6 @@ export default class PrivateViewContainer extends LightningElement {
             this.recommendedBadgeData = await getPrivateMixRecommendedBadges();
             this.tableData = this.recommendedBadgeData[this.dropdownViewValue]
             this.isLoading = false;
-
         } catch(err) {
             console.error(err);
         }
@@ -119,7 +124,7 @@ export default class PrivateViewContainer extends LightningElement {
         if(event.detail === 'High Priority') {
             this.keyField = 'High_Priority_Id__c';
         } else {
-            this.keyField = 'Id';
+            this.keyField = ID_FIELD.fieldApiName;
         }
 
         this.dropdownViewValue = event.detail;

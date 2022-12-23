@@ -6,24 +6,32 @@ import getSortOptions from '@salesforce/apex/SortCustomMetadataService.getSortOp
 
 import { sortAlphabetic, sortCustom } from 'c/sortUtility';
 
+
+import BADGE_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Badge_Name__c';
+import ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
+import LEVEL_FIELD from '@salesforce/schema/Recommended_Badge__c.Level__c';
+import NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Name';
+import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
+import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
+
 const TREEGRID_COLUMNS = [
     {
         type: 'url',
-        fieldName: 'URL__c',
+        fieldName: URL_FIELD.fieldApiName,
         label: 'Name',
         typeAttributes: {
             label: {
-                fieldName: 'Name'
+                fieldName: NAME_FIELD.fieldApiName
             }
         },
         initialWidth: 500
     },
     {
-        fieldName: 'Type__c',
+        fieldName: TYPE_FIELD.fieldApiName,
         label: 'Type'
     },
     {
-        fieldName: 'Level__c',
+        fieldName: LEVEL_FIELD.fieldApiName,
         label: 'Level'
     }
 ]
@@ -35,7 +43,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     mixLabel = 'Select Badge Mix';
     mixOptions;
     mixValue;
-    keyField = 'Id';
+    keyField = ID_FIELD.fieldApiName;
     sortLabel = 'Sort By';
     sortOptions;
     sortValue;
