@@ -28,7 +28,7 @@ SortCustomMetadata
 StorageManagement
 TaskList
 Triggers
-UserInterface
+#UserInterface
 
 # Ignored Folders
 unpackageable
