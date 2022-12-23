@@ -21,7 +21,7 @@ standard-home.tab
 # Ignored Packages
 #PrivateView
 DataModel
-LWCUtils
+#LWCUtils
 fflib
 #RecommendedBadgeMix
 SortCustomMetadata

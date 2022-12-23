@@ -70,4 +70,8 @@ export default class Lookup extends LightningElement {
         div.classList.remove('slds-is-open');
     }
   }
+
+  testHandler(event) {
+    console.log(event);
+  }
 }
