@@ -1,4 +1,4 @@
-import { LightningElement, wire, track } from 'lwc';
+import { LightningElement, wire } from 'lwc';
 
 import getSetupData from '@salesforce/apex/RecommendedBadgeMixService.getSetupData';
 
@@ -6,8 +6,6 @@ import getSortOptions from '@salesforce/apex/SortCustomMetadataService.getSortOp
 
 import { sortAlphabetic, sortCustom } from 'c/sortUtility';
 
-
-import BADGE_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Badge_Name__c';
 import ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
 import LEVEL_FIELD from '@salesforce/schema/Recommended_Badge__c.Level__c';
 import NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Name';
