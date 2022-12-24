@@ -32,14 +32,13 @@ async function getChangedPackageDirectories() {
 }
 
 async function getPackagesToUpdate(changedPackageDirectories) {
-    console.log(changedPackageDirectories);
     let packagesToUpdate = new Set();
     for(let packageDirectory of PACKAGE_DIRECTORIES) {
         if(changedPackageDirectories.has(packageDirectory.path) && packageDirectory.package) {
             packagesToUpdate.add(packageDirectory.package);
         }
     }
-    console.log(packagesToUpdate);
+
     for(let packageDirectory of PACKAGE_DIRECTORIES) {
         if(packageDirectory.dependencies) {
             for(let dependentPackage of packageDirectory.dependencies) {
@@ -58,6 +57,7 @@ async function getSortedPackagesToUpdate() {
     await ensurePackageIdsInPackageAliases();
     let packagesToUpdate = await getPackagesToUpdate(changedPackageDirectories);
     let sortedPackagesToUpdate = await sortPackages(packagesToUpdate, PACKAGE_DIRECTORIES);
+    console.log(sortedPackagesToUpdate.join(' '));
     process.stdout.write(sortedPackagesToUpdate.join(' '));
     fs.writeFileSync(OUTPUT_FILENAME, sortedPackagesToUpdate.join('\n'))
 }
