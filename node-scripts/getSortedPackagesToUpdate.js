@@ -39,7 +39,7 @@ async function getPackagesToUpdate(changedPackageDirectories) {
             packagesToUpdate.add(packageDirectory.package);
         }
     }
-
+    console.log(packagesToUpdate);
     for(let packageDirectory of PACKAGE_DIRECTORIES) {
         if(packageDirectory.dependencies) {
             for(let dependentPackage of packageDirectory.dependencies) {
