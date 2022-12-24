@@ -32,6 +32,7 @@ async function getChangedPackageDirectories() {
 }
 
 async function getPackagesToUpdate(changedPackageDirectories) {
+    console.log(changedPackageDirectories);
     let packagesToUpdate = new Set();
     for(let packageDirectory of PACKAGE_DIRECTORIES) {
         if(changedPackageDirectories.has(packageDirectory.path) && packageDirectory.package) {
