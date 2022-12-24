@@ -80,7 +80,7 @@
             "path": "UserInterface",
             "default": true,
             "package": "UserInterface",
-            "versionNumber": "1.0.0.NEXT",
+            "versionNumber": "1.1.0.NEXT",
             "dependencies": [
                 {
                     "package": "04t1Q000001ACOnQAO"
