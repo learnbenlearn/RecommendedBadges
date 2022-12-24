@@ -77,26 +77,6 @@
       ]
     },
     {
-      "path": "PrivateMixView",
-      "default": false,
-      "package": "BensView",
-      "versionNumber": "1.0.0.NEXT",
-      "dependencies": [
-        {
-          "subscriberPackageVersionId": "04t1Q000001ACOnQAO"
-        },
-        {
-          "subscriberPackageVersionId": "04t8c0000010VTGAA2"
-        },
-        {
-          "subscriberPackageVersionId": "04t8c000000ZwK9AAK"
-        },
-        {
-          "subscriberPackageVersionId": "04t8c000001ItYDAA0"
-        }
-      ]
-    },
-    {
       "path": "UserInterface",
       "default": true,
       "package": "UserInterface",
