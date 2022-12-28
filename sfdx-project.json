@@ -3,8 +3,7 @@
         {
             "path": "DataModel",
             "package": "DataModel",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "versionNumber": "1.0.0.NEXT",
             "default": false,
             "dependencies": [
                 {
@@ -16,38 +15,26 @@
             "path": "TaskList",
             "default": false,
             "package": "TaskList",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
-            "dependencies": [
-                {
-                    "package": "04t1Q000001ACOnQAO"
-                },
-                {
-                    "package": "DataModel",
-                    "versionNumber": "0.1.0.LATEST"
-                }
-            ]
+            "versionNumber": "1.7.0.NEXT"
         },
         {
             "path": "LWCUtils",
-            "default": true,
+            "default": false,
             "package": "LWCUtils",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
+            "versionNumber": "1.0.0.NEXT"
         },
         {
             "path": "Triggers",
             "default": false,
             "package": "Triggers",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "versionNumber": "1.3.0.NEXT",
             "dependencies": [
                 {
                     "package": "04t1Q000001ACOnQAO"
                 },
                 {
                     "package": "DataModel",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 }
             ]
         },
@@ -55,15 +42,14 @@
             "path": "StorageManagement",
             "default": false,
             "package": "StorageManagement",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "versionNumber": "1.1.0.NEXT",
             "dependencies": [
                 {
                     "package": "04t1Q000001ACOnQAO"
                 },
                 {
                     "package": "DataModel",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 }
             ]
         },
@@ -71,90 +57,64 @@
             "path": "RecommendedBadgeMix",
             "default": false,
             "package": "RecommendedBadgeMix",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "versionNumber": "1.1.0.NEXT",
             "dependencies": [
                 {
                     "package": "04t1Q000001ACOnQAO"
                 },
                 {
                     "package": "DataModel",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "LWCUtils",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "SortCustomMetadata",
-                    "versionNumber": "0.1.0.LATEST"
-                }
-            ]
-        },
-        {
-            "path": "BensView",
-            "default": false,
-            "package": "BensView",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
-            "dependencies": [
-                {
-                    "package": "04t1Q000001ACOnQAO"
-                },
-                {
-                    "package": "DataModel",
-                    "versionNumber": "0.1.0.LATEST"
-                },
-                {
-                    "package": "LWCUtils",
-                    "versionNumber": "0.1.0.LATEST"
-                },
-                {
-                    "package": "SortCustomMetadata",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.1.0.LATEST"
                 }
             ]
         },
         {
             "path": "UserInterface",
-            "default": false,
+            "default": true,
             "package": "UserInterface",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT",
+            "versionNumber": "1.1.0.NEXT",
             "dependencies": [
                 {
                     "package": "04t1Q000001ACOnQAO"
                 },
                 {
                     "package": "DataModel",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "LWCUtils",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "04t8c000000yXMAAA2"
                 },
                 {
                     "package": "SortCustomMetadata",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.1.0.LATEST"
                 },
                 {
-                    "package": "BensView",
-                    "versionNumber": "0.1.0.LATEST"
+                    "package": "PrivateMixView",
+                    "versionNumber": "1.0.0.LATEST"
                 },
                 {
                     "package": "RecommendedBadgeMix",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.1.0.LATEST"
                 },
                 {
                     "package": "StorageManagement",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.1.0.LATEST"
                 },
                 {
                     "package": "TaskList",
-                    "versionNumber": "0.1.0.LATEST"
+                    "versionNumber": "1.7.0.LATEST"
                 }
             ]
         },
@@ -162,68 +122,83 @@
             "path": "SortCustomMetadata",
             "default": false,
             "package": "SortCustomMetadata",
-            "versionName": "ver 0.1",
-            "versionNumber": "0.1.0.NEXT"
+            "versionNumber": "1.1.0.NEXT"
+        },
+        {
+            "path": "unpackageable",
+            "default": false
+        },
+        {
+            "path": "fflib",
+            "default": false,
+            "package": "fflib",
+            "versionNumber": "1.1.0.NEXT"
+        },
+        {
+            "path": "PrivateMixView",
+            "package": "PrivateMixView",
+            "versionNumber": "1.0.0.NEXT",
+            "default": false,
+            "versionDescription": "Package containing classes, LWCs, and Lightning pages for the private view portion of the Recommended Badges app.",
+            "dependencies": [
+                {
+                    "package": "04t1Q000001ACOnQAO"
+                },
+                {
+                    "package": "DataModel",
+                    "versionNumber": "1.0.0.LATEST"
+                },
+                {
+                    "package": "LWCUtils",
+                    "versionNumber": "1.0.0.LATEST"
+                },
+                {
+                    "package": "SortCustomMetadata",
+                    "versionNumber": "1.0.0.LATEST"
+                }
+            ]
         }
     ],
     "name": "RecommendedBadges",
     "namespace": "",
-    "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "54.0",
+    "sfdcLoginUrl": "https://recommendedbadges-dev-ed.my.salesforce.com",
+    "sourceApiVersion": "56.0",
     "packageAliases": {
         "DataModel": "0Ho8c000000fxx5CAA",
-        "DataModel@0.1.0-1": "04t8c000000yesTAAQ",
         "TaskList": "0Ho8c000000fy1NCAQ",
-        "TaskList@0.1.0-1": "04t8c000000yfp5AAA",
         "LWCUtils": "0Ho8c000000fy64CAA",
-        "LWCUtils@0.1.0-1": "04t8c000000yj03AAA",
         "Triggers": "0Ho8c000000fy69CAA",
-        "Triggers@0.1.0-1": "04t8c000000yj08AAA",
         "StorageManagement": "0Ho8c000000fy6ECAQ",
-        "StorageManagement@0.1.0-1": "04t8c000000yj0IAAQ",
         "RecommendedBadgeMix": "0Ho8c000000fy6OCAQ",
-        "RecommendedBadgeMix@0.1.0-1": "04t8c000000yj0NAAQ",
         "BensView": "0Ho8c000000fy6TCAQ",
-        "BensView@0.1.0-1": "04t8c000000yj0cAAA",
         "UserInterface": "0Ho8c000000fy6YCAQ",
-        "UserInterface@0.1.0-1": "04t8c000000ylbJAAQ",
-        "TaskList@0.1.0-2": "04t8c000000ylfqAAA",
-        "RecommendedBadgeMix@0.1.0-2": "04t8c000000ylg0AAA",
-        "BensView@0.1.0-2": "04t8c000000ylkDAAQ",
-        "DataModel@0.1.0-2": "04t8c000000ypRyAAI",
-        "LWCUtils@0.1.0-2": "04t8c000000ypS3AAI",
-        "TaskList@0.1.0-3": "04t8c000000ypS8AAI",
-        "Triggers@0.1.0-2": "04t8c000000ypSDAAY",
-        "StorageManagement@0.1.0-2": "04t8c000000ypSIAAY",
         "SortCustomMetadata": "0Ho8c000000fy7CCAQ",
-        "SortCustomMetadata@0.1.0-1": "04t8c000000ypSNAAY",
-        "BensView@0.1.0-3": "04t8c000000ypSSAAY",
-        "RecommendedBadgeMix@0.1.0-3": "04t8c000000ypSXAAY",
-        "UserInterface@0.1.0-2": "04t8c000000ytYuAAI",
-        "DataModel@0.1.0-3": "04t8c00000100RRAAY",
-        "SortCustomMetadata@0.1.0-2": "04t8c00000100RWAAY",
-        "RecommendedBadgeMix@0.1.0-4": "04t8c00000100RvAAI",
-        "Triggers@0.1.0-3": "04t8c00000100S5AAI",
-        "TaskList@0.1.0-4": "04t8c00000100SFAAY",
-        "StorageManagement@0.1.0-3": "04t8c00000100SPAAY",
-        "UserInterface@0.1.0-3": "04t8c00000100SZAAY",
-        "StorageManagement@0.1.0-4": "04t8c00000100TDAAY",
-        "UserInterface@0.1.0-4": "04t8c00000100TIAAY",
-        "DataModel@0.1.0-4": "04t8c000001029tAAA",
-        "Triggers@0.1.0-4": "04t8c000001029yAAA",
-        "StorageManagement@0.1.0-5": "04t8c00000102A3AAI",
-        "BensView@0.1.0-5": "04t8c00000102A8AAI",
-        "RecommendedBadgeMix@0.1.0-5": "04t8c00000102ADAAY",
-        "UserInterface@0.1.0-5": "04t8c00000102AIAAY",
-        "DataModel@0.1.0-5": "04t8c00000102JHAAY",
-        "Triggers@0.1.0-5": "04t8c00000102JMAAY",
-        "LWCUtils@0.1.0-3": "04t8c00000102JRAAY",
-        "StorageManagement@0.1.0-6": "04t8c00000102JWAAY",
-        "BensView@0.1.0-6": "04t8c00000102JbAAI",
-        "RecommendedBadgeMix@0.1.0-6": "04t8c00000102JgAAI",
-        "UserInterface@0.1.0-6": "04t8c00000102JlAAI",
-        "LWCUtils@0.1.0-4": "04t8c0000010MF0AAM",
-        "BensView@0.1.0-7": "04t8c0000010MF5AAM",
+        "PrivateMixView": "0Ho8c000000sY9SCAU",
+        "fflib": "0Ho8c000000k9kfCAA",
+        "DataModel@1.0.0-1": "04t8c0000010VTGAA2",
+        "TaskList@0.1.0-9": "04t8c000000ZfoQAAS",
+        "TaskList@1.0.0-1": "04t8c000000ZfoVAAS",
+        "LWCUtils@1.0.0-1": "04t8c000000ZwK9AAK",
+        "Triggers@1.0.0-1": "04t8c000000ZwKEAA0",
+        "Triggers@1.0.0-2": "04t8c000000ZwKJAA0",
+        "Triggers@1.1.0-1": "04t8c000000ZwKOAA0",
+        "StorageManagement@1.0.0-1": "04t8c000000ZwKTAA0",
+        "SortCustomMetadata@1.0.0-1": "04t8c000000ZwKYAA0",
+        "RecommendedBadgeMix@0.1.0-8": "04t8c000000ZwKdAAK",
+        "RecommendedBadgeMix@1.0.0-1": "04t8c000000ZwKiAAK",
+        "BensView@1.0.0-1": "04t8c000000ZwKnAAK",
+        "UserInterface@1.0.0-1": "04t8c000000ZwKsAAK",
+        "fflib@1.0.0-1": "04t8c000000a00HAAQ",
+        "TaskList@1.7.0-0": "04t8c000001ItbHAAS",
+        "Triggers@1.3.0-0": "04t8c000001ItbMAAS",
+        "StorageManagement@1.1.0-0": "04t8c000001ItbRAAS",
+        "SortCustomMetadata@1.1.0-0": "04t8c000001ItbWAAS",
+        "fflib@1.1.0-0": "04t8c000001ItbbAAC",
+        "RecommendedBadgeMix@1.1.0-0": "04t8c000001ItbgAAC",
+        "BensView@1.1.0-0": "04t8c000001ItblAAC",
+        "UserInterface@1.1.0-0": "04t8c000001ItbqAAC",
+        "PrivateMixView@1.0.0-1": "04t8c000001Itc5AAC",
+        "UserInterface@1.0.0-49": "04t8c000001ItdSAAS",
 
         "DataModel@1.6.0-1": "04t8c000001Itp4AAC",
         "TaskList@1.13.0-1": "04t8c000001Itp9AAC",

@@ -102,25 +102,7 @@
     </types>
 
     <types>
-        <members>Badge_Product_to_Delete__mdt.Commerce_Cloud</members>
-        <members>Badge_Product_to_Delete__mdt.Education_Cloud</members>
-        <members>Badge_Product_to_Delete__mdt.Education_Cloud_Nonprofit_Cloud</members>
-        <members>Badge_Product_to_Delete__mdt.Financial_Services_Cloud</members>
-        <members>Badge_Product_to_Delete__mdt.Health_Cloud</members>
-        <members>Badge_Product_to_Delete__mdt.Mulesoft</members>
-        <members>Badge_Product_to_Delete__mdt.Nonprofit_Cloud</members>
-        <members>Badge_Product_to_Delete__mdt.Pardot</members>
-        <members>Badge_to_Keep__mdt.API_Basics</members>
-        <members>Badge_to_Keep__mdt.Data_Storage</members>
-        <members>Badge_to_Keep__mdt.Digital_Transformation</members>
-        <members>Badge_to_Keep__mdt.Pardot_Email_Sending</members>
-        <members>Badge_to_Keep__mdt.Student_Success_Hub</members>
-        <members>Badge_to_Keep__mdt.Volunteers_for_Salesforce</members>
-        <name>CustomMetadata</name>
-    </types>
-
-    <types>
-        <members>Badge_Product_to_Delete__mdt</members>
+        <members>Product_to_Delete__mdt</members>
         <members>Badge_to_Keep__mdt</members>
         <members>Mix_Category__c</members>
         <members>Recommended_Badge_Mix__c</members>
@@ -204,7 +186,6 @@
     <types>
         <members>ProductsReports/Badges_with_Products_CO9</members>
         <members>ProductsReports/Trails_with_Products_GXp</members>
-        <members>TempReports/Bens_Mix_WoI</members>
         <name>Report</name>
     </types>
 

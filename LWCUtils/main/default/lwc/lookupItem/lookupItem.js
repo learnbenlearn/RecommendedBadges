@@ -10,6 +10,7 @@ export default class LookupItem extends LightningElement {
     handleItemClick() {
         let id = this.id.substring(0, this.id.indexOf('-'));
         const itemClickEvent = new CustomEvent('itemclick', {
+            bubbles: true,
             detail: {
                 Id: id,
                 Name: this.name

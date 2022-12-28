@@ -3,16 +3,6 @@
     <fullName>Trail__c</fullName>
     <externalId>false</externalId>
     <label>Trail</label>
-    <lookupFilter>
-        <active>true</active>
-        <errorMessage>Only active trails can be added to a mix.</errorMessage>
-        <filterItems>
-            <field>trailheadapp__Trail__c.trailheadapp__Archived__c</field>
-            <operation>equals</operation>
-            <value>False</value>
-        </filterItems>
-        <isOptional>false</isOptional>
-    </lookupFilter>
     <referenceTo>trailheadapp__Trail__c</referenceTo>
     <relationshipLabel>Recommended Trails</relationshipLabel>
     <relationshipName>Recommended_Trails</relationshipName>

@@ -158,14 +158,14 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Read</externalSharingModel>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
     <label>Mix Category</label>
     <nameField>
         <label>Mix Category</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Mix Categories</pluralLabel>
-    <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
+    <searchLayouts></searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

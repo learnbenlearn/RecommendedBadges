@@ -14,7 +14,7 @@
     </classAccesses>
     <customMetadataTypeAccesses>
         <enabled>true</enabled>
-        <name>Badge_Product_to_Delete__mdt</name>
+        <name>Product_to_Delete__mdt</name>
     </customMetadataTypeAccesses>
     <customMetadataTypeAccesses>
         <enabled>true</enabled>

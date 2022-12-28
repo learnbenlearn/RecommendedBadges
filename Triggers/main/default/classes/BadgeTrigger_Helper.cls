@@ -2,7 +2,7 @@
  * @description       : A catchall trigger helper for TrailTrigger, BadgeTrigger, RecommendedBadgeTrigger, and RecommendedTrailTrigger.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 03-23-2022
+ * @last modified on  : 09-08-2022
  * @last modified by  : Ben Learn
 **/
 public without sharing class BadgeTrigger_Helper {
@@ -59,9 +59,11 @@ public without sharing class BadgeTrigger_Helper {
         Set<Id> modifiedParentIds = new Set<Id>();
 
         for(sObject oldRecord : oldRecords) {
-            for(String fieldToCheck : fieldsToCheck) {
-                if(oldRecord.get(fieldToCheck) != newRecordMap.get(String.valueOf(oldRecord.get('Id'))).get(fieldToCheck)) {
-                    modifiedParentIds.add(String.valueOf(oldRecord.get('Id')));
+            if(!Boolean.valueOf(oldRecord.get('trailheadapp__Archived__c'))) {
+                for(String fieldToCheck : fieldsToCheck) {
+                    if(oldRecord.get(fieldToCheck) != newRecordMap.get(String.valueOf(oldRecord.get('Id'))).get(fieldToCheck)) {
+                        modifiedParentIds.add(String.valueOf(oldRecord.get('Id')));
+                    }
                 }
             }
         }
@@ -73,9 +75,9 @@ public without sharing class BadgeTrigger_Helper {
         List<sObject> junctionRecordsToUpdate = Database.query(queryString);
 
         for(sObject junctionRecord : junctionRecordsToUpdate) {
-            for(String picklist : parentObjectInfo.parentJunctionPicklistMap.values()) {
+            for(String picklist : parentObjectInfo.parentJunctionPicklistMap.keySet()) {
                 sObject parentRecord = newRecordMap.get(String.valueOf(junctionRecord.get(parentObjectInfo.relationshipFieldName)));
-                junctionRecord.put(picklist, parentRecord.get(picklist));
+                junctionRecord.put(parentObjectInfo.parentJunctionPicklistMap.get(picklist), parentRecord.get(picklist));
             }
         }
 
@@ -104,7 +106,6 @@ public without sharing class BadgeTrigger_Helper {
         String queryString = 'SELECT ' + String.join(new List<String>(picklists.keySet()), ', ') + ' FROM ' + childObject.parentObjectType + 
             ' WHERE Id IN :parentIdsToQuery';
 
-        System.debug(queryString);
         Map<Id, sObject> parentRecordMap = new Map<Id, sObject>(Database.query(queryString));
 
         for(sObject newRecord : newRecords) {
@@ -141,12 +142,16 @@ public without sharing class BadgeTrigger_Helper {
         badge mix.
     * @author Ben Learn | 03-11-2022 
     * @param List<Recommended_Badge__c> newRecommendedBadges 
+    * @param Map<Id, Recommended_Badge__c> oldRecommendedBadgeMap
     **/
-    public static void populateBadgeMixKeys(List<Recommended_Badge__c> newRecommendedBadges) {
+    public static void populateBadgeMixKeys(List<Recommended_Badge__c> newRecommendedBadges, Map<Id, Recommended_Badge__c> oldRecommendedBadgeMap) {
         Set<Id> mixCategoryIds = new Set<Id>();
 
         for(Recommended_Badge__c newRecommendedBadge : newRecommendedBadges) {
-            if(newRecommendedBadge.Badge_Mix_Key__c == null) {
+            if(
+                (newRecommendedBadge.Badge_Mix_Key__c == null) || 
+                (oldRecommendedBadgeMap?.get(newRecommendedBadge.Id).Mix_Category__c != newRecommendedBadge.Mix_Category__c)
+            ) {
                 mixCategoryIds.add(newRecommendedBadge.Mix_Category__c);
             }
         }
@@ -155,9 +160,11 @@ public without sharing class BadgeTrigger_Helper {
             Recommended_Badge_Mix__r.Name FROM Mix_Category__c WHERE Id IN :mixCategoryIds]);
         
         for(Recommended_Badge__c newRecommendedBadge : newRecommendedBadges) {
-            if(newRecommendedBadge.Badge_Mix_Key__c == null) {
-                String recommendedBadgeMixName = 
-                    mixCategoryMap.get(newRecommendedBadge.Mix_Category__c).Recommended_Badge_Mix__r.Name;
+            if(
+                (newRecommendedBadge.Badge_Mix_Key__c == null) || 
+                (oldRecommendedBadgeMap?.get(newRecommendedBadge.Id).Mix_Category__c != newRecommendedBadge.Mix_Category__c)
+            ){
+                String recommendedBadgeMixName = mixCategoryMap.get(newRecommendedBadge.Mix_Category__c).Recommended_Badge_Mix__r.Name;
                 newRecommendedBadge.Badge_Mix_Key__c = newRecommendedBadge.Badge_Name__c + '-' + recommendedBadgeMixName;
             }
         }

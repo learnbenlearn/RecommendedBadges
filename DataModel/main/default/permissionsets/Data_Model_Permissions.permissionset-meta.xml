@@ -17,11 +17,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Mix_Category__c.Recommended_Badge_Mix__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Mix_Category__c.Test_External_Id__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -43,11 +38,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Recommended_Badge_Mix__c.Test_External_Id__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Recommended_Badge__c.Archived__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -148,11 +138,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Recommended_Badge__c.URL__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Recommended_Trail__c.Archived__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

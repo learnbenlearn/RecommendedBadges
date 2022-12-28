@@ -12,7 +12,7 @@
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Mixer Mobile</label>
     <navType>Standard</navType>
-    <tabs>Ben_s_View</tabs>
+    <tabs>Private_View</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Mixer_Mobile_UtilityBar</utilityBar>
 </CustomApplication>

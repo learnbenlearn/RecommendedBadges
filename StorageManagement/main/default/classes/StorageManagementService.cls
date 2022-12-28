@@ -3,7 +3,7 @@
  *                      Tracker app.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 06-14-2022
+ * @last modified on  : 12-22-2022
  * @last modified by  : Ben Learn
 **/
 public with sharing class StorageManagementService {
@@ -29,15 +29,14 @@ public with sharing class StorageManagementService {
             badgesToKeepNames.add(btk.Badge_Name__c);
         }
 
-        List<Badge_Product_to_Delete__mdt> badgeProductsToDelete = [SELECT MasterLabel, Badge_Product__c, Trail_Product__c FROM 
-            Badge_Product_to_Delete__mdt];
+        List<Product_to_Delete__mdt> badgeProductsToDelete = [SELECT MasterLabel, Badge_Product__c, Trail_Product__c FROM Product_to_Delete__mdt];
 
         Map<String, List<String>> productsToDeleteMap = new Map<String, List<String>>();
         productsToDeleteMap.put('badges', new List<String>());
         productsToDeleteMap.put('trails', new List<String>());
         List<String> tempValues;
 
-        for(Badge_Product_to_Delete__mdt bptd : badgeProductsToDelete) {
+        for(Product_to_Delete__mdt bptd : badgeProductsToDelete) {
             if(bptd.Badge_Product__c) {
                 tempValues = productsToDeleteMap.get('badges');
                 tempValues.add(bptd.MasterLabel);
@@ -51,29 +50,33 @@ public with sharing class StorageManagementService {
             }
         }
 
-        List<trailheadapp__Badge__c> archivedBadges = [SELECT Id FROM trailheadapp__Badge__c WHERE trailheadapp__Archived__c = true];
+        List<trailheadapp__Badge__c> badgesToDelete = [
+            SELECT Id 
+            FROM trailheadapp__Badge__c 
+            WHERE (trailheadapp__Products__c IN :productsToDeleteMap.get('badges') AND Name NOT IN :badgesToKeepNames) OR trailheadapp__Archived__c = true
+        ];
 
-        List<trailheadapp__Badge__c> badgesToDelete = [SELECT Id FROM trailheadapp__Badge__c WHERE trailheadapp__Products__c 
-            IN :productsToDeleteMap.get('badges') AND Name NOT IN :badgesToKeepNames AND Id NOT IN :archivedBadges];
-
-        List<trailheadapp__Trail__c> trailsToDelete = [SELECT Id FROM trailheadapp__Trail__c WHERE trailheadapp__Products__c
-            IN :productsToDeleteMap.get('trails')];
+        List<trailheadapp__Trail__c> trailsToDelete = [
+            SELECT Id 
+            FROM trailheadapp__Trail__c 
+            WHERE trailheadapp__Products__c IN :productsToDeleteMap.get('trails') OR trailheadapp__Archived__c = true
+        ];
             
         List<trailheadapp__Debug_Log__c> debugLogsToDelete = [SELECT Id FROM trailheadapp__Debug_Log__c];
+        List<trailheadapp__Trailmix__c> trailmixesToDelete = [SELECT Id FROM trailheadapp__Trailmix__c];
+        List<trailheadapp__User_Badge__c> userBadges = [SELECT Id FROM trailheadapp__User_Badge__c];
 
-        List<trailheadapp__Trailmix__c> trailmixesToDelete = [SELECT Id FROM trailheadapp__Trailmix__c WHERE 
-            trailheadapp__Created_By_Profile__c != 'https://trailhead.salesforce.com/users/profiles/blearn5241'];
-
-        delete archivedBadges;
+        // delete User Badges first to avoid error that occurs when deleting records already deleted through cascading delete caused by deleted Badges
+        delete userBadges;
         delete badgesToDelete;
         delete trailsToDelete;
         delete debugLogsToDelete;
         delete trailmixesToDelete;
 
-        if(archivedBadges.size() > 0) Database.emptyRecycleBin(archivedBadges);
         if(badgesToDelete.size() > 0) Database.emptyRecycleBin(badgesToDelete);
         if(trailsToDelete.size() > 0) Database.emptyRecycleBin(trailsToDelete);
         if(debugLogsToDelete.size() > 0) Database.emptyRecycleBin(debugLogsToDelete);
         if(trailmixesToDelete.size() > 0) Database.emptyRecycleBin(trailmixesToDelete);
+        if(userBadges.size() > 0) Database.emptyRecycleBin(userBadges);
     }
 }

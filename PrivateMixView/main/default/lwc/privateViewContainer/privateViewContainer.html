@@ -1,0 +1,37 @@
+<!--
+  @description       : Container for a dropdown and datatable to display personal badge mixes.
+  @author            : Ben Learn
+  @group             : 
+  @last modified on  : 12-22-2022
+  @last modified by  : Ben Learn
+-->
+<template>
+  <div class={divClasses}>
+    <template if:true={isLoading}>
+      <lightning-spinner></lightning-spinner>
+    </template>
+    <template if:false={isLoading}>
+      <c-dropdown label={dropdownViewLabel} value={dropdownViewValue} options={viewOptions} ondropdownchange={handleDropdownChange}>
+      </c-dropdown>
+      <br/>
+  
+      <template if:true={displayPrompt}>
+        <c-prompt prompt-header={promptHeader} confirm-label="Save" display-cancel="true" cancel-label="Cancel" onpromptclose={handlePromptClose} 
+          onpromptconfirm={handlePromptConfirm}>
+          <span slot="promptInput">
+            <c-lookup object-name={lookupObjectName} result-icon-name={lookupResultIconName} lookup-items={lookupItems}></c-lookup>
+            <template if:true={promptIsLoading}>
+              <lightning-spinner></lightning-spinner>
+            </template>
+          </span>
+        </c-prompt>
+      </template>
+      
+      <div style="max-height:75vh;overflow:scroll">
+        <c-datatable key-field={keyField} table-data={tableData} columns={tableColumns} has-row-actions="true" 
+          onactionclick={handleRowAction}>
+        </c-datatable>
+      </div>
+    </template>
+  </div>
+</template>
