@@ -47,6 +47,7 @@ jobs:
         - run:
             name: Authorize Dev Hub
             command: |
+              echo $CIRCLE_PULL_REQUEST
               sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
         - when:
             condition:
@@ -56,13 +57,13 @@ jobs:
                   name: Populate Dynamic Parameters
                   command: |
                     npm run populateParameters
-        - continuation/continue:
-            configuration_path: .circleci/pipeline.yml
-            parameters: parameters.json
+              - continuation/continue:
+                  configuration_path: .circleci/pipeline.yml
+                  parameters: parameters.json
 
 workflows:
   setup:
     jobs:
       - setup
 
-# VS Code Extension Version: 1.4.0
+# VS Code Extension Version: 1.5.0
