@@ -1,0 +1,69 @@
+version: 2.1
+
+# to use dynamic configuration
+setup: true
+orbs:
+  continuation: circleci/continuation@0.3.1
+
+jobs:
+  setup:
+    docker:
+      - image: cimg/node:lts
+    environment:
+      - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
+      - HUB_ALIAS: HubOrg
+      - PACKAGE_LABEL: "create packages"
+    executor: continuation/default
+    steps:
+        - checkout
+        - run:
+            name: Install GH CLI
+            command: |
+              type -p curl >/dev/null || sudo apt install curl -y
+              curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+              && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+              && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+              && sudo apt update \
+              && sudo apt install gh -y
+              echo $GH_ACCESS_TOKEN | gh auth login --with-token
+        - run:
+            name: Create SFDX Folder
+            command: |
+              # Create sfdx directory
+              mkdir ~/sfdx
+              # Download Salesforce CLI
+              wget -qO- ${DX_CLI_URL_CUSTOM-$DX_CLI_URL} | tar xJ -C ~/sfdx --strip-components 1
+        - run:
+            name: Install CLI
+            command: |
+              # Install the CLI
+              export PATH=~/sfdx/bin:$PATH
+              echo "export PATH=~/sfdx/bin:$PATH" >> $BASH_ENV
+              sfdx
+        - run:
+            name: Decrypt Server Key
+            command: |
+              openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
+        - run:
+            name: Authorize Dev Hub
+            command: |
+              echo $CIRCLE_PULL_REQUEST
+              sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
+        - when:
+            condition:
+              equal: [ fflib-migration, <<pipeline.git.branch>> ]
+            steps:
+              - run:
+                  name: Populate Dynamic Parameters
+                  command: |
+                    npm run populateParameters
+              - continuation/continue:
+                  configuration_path: .circleci/pipeline.yml
+                  parameters: parameters.json
+
+workflows:
+  setup:
+    jobs:
+      - setup
+
+# VS Code Extension Version: 1.5.0

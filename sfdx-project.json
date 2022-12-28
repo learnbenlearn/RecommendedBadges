@@ -223,6 +223,15 @@
         "RecommendedBadgeMix@0.1.0-6": "04t8c00000102JgAAI",
         "UserInterface@0.1.0-6": "04t8c00000102JlAAI",
         "LWCUtils@0.1.0-4": "04t8c0000010MF0AAM",
-        "BensView@0.1.0-7": "04t8c0000010MF5AAM"
+        "BensView@0.1.0-7": "04t8c0000010MF5AAM",
+
+        "DataModel@1.6.0-1": "04t8c000001Itp4AAC",
+        "TaskList@1.13.0-1": "04t8c000001Itp9AAC",
+        "LWCUtils@1.6.0-1": "04t8c000001ItpEAAS",
+        "Triggers@1.9.0-1": "04t8c000001ItpJAAS",
+        "StorageManagement@1.7.0-1": "04t8c000001ItpOAAS",
+        "RecommendedBadgeMix@1.3.0-1": "04t8c000001ItpYAAS",
+        "PrivateMixView@1.2.0-1": "04t8c000001ItpdAAC",
+        "UserInterface@1.2.0-1": "04t8c000001ItpiAAC"
     }
 }
