@@ -1,5 +1,135 @@
 # Recommended Badges
 
+## Released Package Versions
+
+<details><summary>DataModel</summary>
+
+| Package Version | Subscriber Package Version Id |
+| --------------- | ----------------------------- |
+| 1.0.0.1         | 04t8c0000010VTGAA2            |
+| 1.1.0.1         | 04t8c000001ItjBAAS            |
+| 1.2.0.1         | 04t8c000001ItjaAAC            |
+| 1.3.0.1         | 04t8c000001ItlCAAS            |
+| 1.4.0.1         | 04t8c000001ItmjAAC            |
+| 1.5.0.1         | 04t8c000001ItncAAC            |
+| 1.6.0.1         | 04t8c000001Itp4AAC            |
+
+</details>
+
+<details><summary>fflib</summary>
+
+| Package Version | Subscriber Package Version Id |
+| --------------- | ----------------------------- |
+| 1.0.0.1         | 04t8c000000a00HAAQ            |
+| 1.1.0.0         | 04t8c000001ItbbAAC            |
+
+</details>
+
+<details><summary>LWCUtils</summary>
+
+| Package Version | Subscriber Package Version Id |
+| --------------- | ----------------------------- |
+| 1.0.0.1         | 04t8c000000ZwK9AAK            |
+| 1.1.0.1         | 04t8c000001ItjLAAS            |
+| 1.2.0.1         | 04t8c000001ItjkAAC            |
+| 1.3.0.1         | 04t8c000001ItlMAAS            |
+| 1.4.0.1         | 04t8c000001ItmtAAC            |
+| 1.5.0.1         | 04t8c000001ItnmAAC            |
+| 1.6.0.1         | 04t8c000001ItpEAAS            |
+
+</details>
+
+<details><summary>PrivateMixView</summary>
+
+| Package Version | Subscriber Package Version Id |
+| --------------- | ----------------------------- |
+| 1.1.0.1         | 04t8c000001Ito6AAC            |
+| 1.2.0.1         | 04t8c000001ItpdAAC            |
+
+</details>
+
+<details><summary>RecommendedBadgeMix</summary>
+
+| Package Version | Subscriber Package Version Id |
+| --------------- | ----------------------------- |
+| 1.0.0.1         | 04t8c000000ZwKiAAK            |
+| 1.1.0.0         | 04t8c000001ItbgAAC            |
+| 1.2.0.1         | 04t8c000001Ito1AAC            |
+| 1.3.0.1         | 04t8c000001ItpYAAS            |
+| 1.4.0.1         | 04t8c000001ItmtAAC            |
+| 1.5.0.1         | 04t8c000001ItnmAAC            |
+| 1.6.0.1         | 04t8c000001ItpEAAS            |
+
+</details>
+
+<details><summary>SortCustomMetadata</summary>
+
+| Package Version | Subscriber Package Version Id |
+| --------------- | ----------------------------- |
+| 1.0.0.1         | 04t8c000000ZwKYAA0            |
+| 1.1.0.0         | 04t8c000001ItbWAAS            |
+
+</details>
+
+<details><summary>StorageManagement</summary>
+
+| Package Version | Subscriber Package Version Id |
+| --------------- | ----------------------------- |
+| 1.0.0.1         | 04t8c000000ZwKTAA0            |
+| 1.1.0.0         | 04t8c000001ItbRAAS            |
+| 1.5.0.1         | 04t8c000001Itn3AAC            |
+| 1.6.0.1         | 04t8c000001ItnwAAC            |
+| 1.7.0.1         | 04t8c000001ItpOAAS            |
+
+</details>
+
+<details><summary>TaskList</summary>
+
+| Package Version | Subscriber Package Version Id |
+| --------------- | ----------------------------- |
+| 1.1.0.0         | 04t8c000001ItZLAA0            |
+| 1.2.0.0         | 04t8c000001ItZQAA0            |
+| 1.3.0.0         | 04t8c000001ItZVAA0            |
+| 1.4.0.0         | 04t8c000001ItZaAAK            |
+| 1.5.0.0         | 04t8c000001ItZfAAK            |
+| 1.6.0.0         | 04t8c000001ItZgAAK            |
+| 1.7.0.0         | 04t8c000001ItbHAAS            |
+| 1.8.0.1         | 04t8c000001ItjGAAS            |
+| 1.9.0.1         | 04t8c000001ItjfAAC            |
+| 1.10.0.1        | 04t8c000001ItlHAAS            |
+| 1.11.0.1        | 04t8c000001ItmoAAC            |
+| 1.12.0.1        | 04t8c000001ItnhAAC            |
+| 1.13.0.1        | 04t8c000001Itp9AAC            |
+
+</details>
+
+<details><summary>Triggers</summary>
+
+| Package Version | Subscriber Package Version Id |
+| --------------- | ----------------------------- |
+| 1.0.0.1         | 04t8c000000ZwKEAA0            |
+| 1.1.0.1         | 04t8c000000ZwKOAA0            |
+| 1.2.0.0         | 04t8c000001ItZkAAK            |
+| 1.3.0.0         | 04t8c000001ItbMAAS            |
+| 1.4.0.1         | 04t8c000001ItjQAAS            |
+| 1.5.0.1         | 04t8c000001ItjpAAC            |
+| 1.6.0.1         | 04t8c000001ItlRAAS            |
+| 1.7.0.1         | 04t8c000001ItmyAAC            |
+| 1.8.0.1         | 04t8c000001ItnrAAC            |
+| 1.9.0.1         | 04t8c000001ItpJAAS            |
+
+</details>
+
+<details><summary>UserInterface</summary>
+
+| Package Version | Subscriber Package Version Id |
+| --------------- | ----------------------------- |
+| 1.0.0.1         | 04t8c000000ZwKsAAK            |
+| 1.1.0.0         | 04t8c000001ItbqAAC            |
+| 1.2.0.1         | 04t8c000001ItpiAAC            |
+
+</details>
+
 ## Test Runtimes
 
 <details>
