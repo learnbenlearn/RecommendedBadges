@@ -7,7 +7,7 @@ const getPackageNameFromDependency = require('./getPackageNameFromDependency.js'
 const {PACKAGE_DIRECTORIES} = require('./constants.js');
 
 const OUTPUT_FILENAME = '/tmp/artifacts/packagesToUpdate.txt';
-const BASE_BRANCH = 'packaging';
+const BASE_BRANCH = 'main';
 
 async function getChangedPackageDirectories() {
     let changedFiles = [];
@@ -57,6 +57,7 @@ async function getSortedPackagesToUpdate() {
     await ensurePackageIdsInPackageAliases();
     let packagesToUpdate = await getPackagesToUpdate(changedPackageDirectories);
     let sortedPackagesToUpdate = await sortPackages(packagesToUpdate, PACKAGE_DIRECTORIES);
+    console.log(sortedPackagesToUpdate.join(' '));
     process.stdout.write(sortedPackagesToUpdate.join(' '));
     fs.writeFileSync(OUTPUT_FILENAME, sortedPackagesToUpdate.join('\n'))
 }

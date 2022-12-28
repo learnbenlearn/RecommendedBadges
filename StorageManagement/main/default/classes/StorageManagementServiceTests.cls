@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for StorageManagementService.
  * @author            : Ben Learn
- * @last modified on  : 09-11-2022
+ * @last modified on  : 12-22-2022
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -46,9 +46,9 @@ private class StorageManagementServiceTests {
             ));
         }
 
-        // badges/trails with Badge_Product_to_Delete__mdt records, should be deleted
-        List<Badge_Product_to_Delete__mdt> badgeProductsToDelete = [SELECT MasterLabel, Badge_Product__c, Trail_Product__c FROM Badge_Product_to_Delete__mdt];
-        for(Badge_Product_to_Delete__mdt badgeProductToDelete : badgeProductsToDelete) {
+        // badges/trails with Product_to_Delete__mdt records, should be deleted
+        List<Product_to_Delete__mdt> badgeProductsToDelete = [SELECT MasterLabel, Badge_Product__c, Trail_Product__c FROM Product_to_Delete__mdt];
+        for(Product_to_Delete__mdt badgeProductToDelete : badgeProductsToDelete) {
             for(Integer i = 0; i < 20; i++) {
                 if(badgeProductToDelete.Badge_Product__c) {
                     testBadges.add(new trailheadapp__Badge__c(
@@ -158,12 +158,12 @@ private class StorageManagementServiceTests {
         System.assertEquals(
             100+badgesToKeep.size(),
             remainingBadges.size(),
-            'Expected archived Badges and Badges with Badge_Product_to_Delete__mdt records to be deleted.'
+            'Expected archived Badges and Badges with Product_to_Delete__mdt records to be deleted.'
         );
         System.assertEquals(
             100,
             remainingTrails.size(),
-            'Expected archived Trails and Trails with Badge_Product_to_Delete__mdt records to be deleted.'
+            'Expected archived Trails and Trails with Product_to_Delete__mdt records to be deleted.'
         );
         System.assertEquals(
             0,

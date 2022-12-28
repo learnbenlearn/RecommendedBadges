@@ -2,8 +2,8 @@
 <PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
     <hasActivationRequired>false</hasActivationRequired>
     <label>Recommended Badges Permission Sets</label>
-    <permissionSets>Bens_View_Permissions</permissionSets>
     <permissionSets>Data_Model_Permissions</permissionSets>
+    <permissionSets>Private_View_Permissions</permissionSets>
     <permissionSets>Recommended_Badge_Mix_Permissions</permissionSets>
     <permissionSets>Shortcuts</permissionSets>
     <permissionSets>Sort_Custom_Metadata_Permissions</permissionSets>

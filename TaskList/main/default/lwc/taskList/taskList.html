@@ -2,7 +2,7 @@
   @description       : Simple LWC to display tasks in a "bulleted" list.
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 08-04-2022
+  @last modified on  : 12-22-2022
   @last modified by  : Ben Learn
 -->
 <template>
@@ -15,10 +15,15 @@
                 <span class="slds-align_absolute-center slds-text-heading_medium">Tasks</span>
             <br/>
 
-            <template for:each={taskList} for:item="task">
-                - <lightning-formatted-url key={task.Id} label={task.Subject} value={task.Id}></lightning-formatted-url>
-                <br key={task.Id}>
-            </template>
+            <div class="slds-scrollable" style="max-height:30vh">
+                <ul class="slds-list_dotted slds-has-block-links">
+                    <template for:each={taskList} for:item="task">
+                        <li key={task.Id}>
+                            <lightning-formatted-url label={task.Subject} value={task.Id}></lightning-formatted-url>
+                        </li>
+                    </template>
+                </ul>
+            </div>
         </template>
 
         <template if:true={noTasks}>

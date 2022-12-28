@@ -3,7 +3,7 @@
  *                      Tracker app.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 09-11-2022
+ * @last modified on  : 12-22-2022
  * @last modified by  : Ben Learn
 **/
 public with sharing class StorageManagementService {
@@ -29,14 +29,14 @@ public with sharing class StorageManagementService {
             badgesToKeepNames.add(btk.Badge_Name__c);
         }
 
-        List<Badge_Product_to_Delete__mdt> badgeProductsToDelete = [SELECT MasterLabel, Badge_Product__c, Trail_Product__c FROM Badge_Product_to_Delete__mdt];
+        List<Product_to_Delete__mdt> badgeProductsToDelete = [SELECT MasterLabel, Badge_Product__c, Trail_Product__c FROM Product_to_Delete__mdt];
 
         Map<String, List<String>> productsToDeleteMap = new Map<String, List<String>>();
         productsToDeleteMap.put('badges', new List<String>());
         productsToDeleteMap.put('trails', new List<String>());
         List<String> tempValues;
 
-        for(Badge_Product_to_Delete__mdt bptd : badgeProductsToDelete) {
+        for(Product_to_Delete__mdt bptd : badgeProductsToDelete) {
             if(bptd.Badge_Product__c) {
                 tempValues = productsToDeleteMap.get('badges');
                 tempValues.add(bptd.MasterLabel);
