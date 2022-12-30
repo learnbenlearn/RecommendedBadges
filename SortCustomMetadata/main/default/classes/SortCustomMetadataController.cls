@@ -1,10 +1,10 @@
 /**
  * @description       : Apex class to retrieve records of the Sortable Field custom metadata type.
  * @author            : Ben Learn
- * @last modified on  : 09-11-2022
+ * @last modified on  : 12-30-2022
  * @last modified by  : Ben Learn
 **/
-public without sharing class SortCustomMetadataService {
+public without sharing class SortCustomMetadataController {
     /**
     * @description Method to return sortable fields for table and treegrid views.
     * @author Ben Learn | 03-13-2022 

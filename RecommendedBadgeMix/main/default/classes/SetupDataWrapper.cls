@@ -1,8 +1,8 @@
 /**
- * @description       : Wrapper class for the RecommendedBadgeService.getSetupData(). Combines lists of mix categories grouped by
+ * @description       : Wrapper class for the RecommendedBadgeMixController.getSetupData(). Combines lists of mix categories grouped by
  *                      recommended badge mix and a string holding the name of the default mix.
  * @author            : Ben Learn
- * @last modified on  : 09-11-2022
+ * @last modified on  : 12-30-2022
  * @last modified by  : Ben Learn
 **/
 public class SetupDataWrapper {

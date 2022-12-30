@@ -1,11 +1,11 @@
 /**
- * @description       : Test class for SortCustomMetadataService.
+ * @description       : Test class for SortCustomMetadataController.
  * @author            : Ben Learn
- * @last modified on  : 11-23-2022
+ * @last modified on  : 12-30-2022
  * @last modified by  : Ben Learn
 **/
 @isTest
-private class SortCustomMetadataServiceTests {
+private class SortCustomMetadataControllerTests {
     @isTest
     private static void getSortOptions_test() {
         List<Sortable_Field__mdt> sortableFields = [

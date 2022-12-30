@@ -1,8 +1,8 @@
 import { LightningElement, wire } from 'lwc';
 
-import getSetupData from '@salesforce/apex/RecommendedBadgeMixService.getSetupData';
+import getSetupData from '@salesforce/apex/RecommendedBadgeMixController.getSetupData';
 
-import getSortOptions from '@salesforce/apex/SortCustomMetadataService.getSortOptions';
+import getSortOptions from '@salesforce/apex/SortCustomMetadataController.getSortOptions';
 
 import { sortAlphabetic, sortCustom } from 'c/sortUtility';
 

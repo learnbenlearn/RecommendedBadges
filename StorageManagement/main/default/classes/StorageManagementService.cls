@@ -1,21 +1,10 @@
 /**
- * @description       : Class containing methods to clear storage by deleting unused badges and debug logs created by the Trail
- *                      Tracker app.
+ * @description       : Service class containing methods to clear storage by deleting unused badges and debug logs created by the Trail Tracker app.
  * @author            : Ben Learn
- * @group             : 
- * @last modified on  : 12-22-2022
+ * @last modified on  : 12-30-2022
  * @last modified by  : Ben Learn
 **/
 public with sharing class StorageManagementService {
-    /**
-    * @description Method to manually invoke storage cleaning.
-    * @author Ben Learn | 03-13-2022 
-    **/
-    @AuraEnabled
-    public static void manualClean(){
-        clean();
-    }
-    
     /**
     * @description Method to clean storage by removing unused badges, trails, debug logs, and trailmixes.
     * @author Ben Learn | 03-13-2022 

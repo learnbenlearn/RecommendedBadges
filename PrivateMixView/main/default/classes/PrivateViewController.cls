@@ -1,10 +1,10 @@
 /**
  * @description       : Apex controller for privateViewContainer LWC.
  * @author            : Ben Learn
- * @last modified on  : 12-22-2022
+ * @last modified on  : 12-30-2022
  * @last modified by  : Ben Learn
 **/
-public with sharing class PrivateViewService {
+public with sharing class PrivateViewController {
 // change to private
 
     /**

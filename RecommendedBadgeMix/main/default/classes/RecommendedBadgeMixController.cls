@@ -1,10 +1,10 @@
 /**
  * @description       : Apex controller for recommendedBadgeMixContainer LWC.
  * @author            : Ben Learn
- * @last modified on  : 09-12-2022
+ * @last modified on  : 12-30-2022
  * @last modified by  : Ben Learn
 **/
-public without sharing class RecommendedBadgeMixService {
+public without sharing class RecommendedBadgeMixController {
     /**
     * @description Method to retrieve necessary data - including mix categories, recommended badges, and
         recommended trails for public recommended badge mixes, as well as the name of the default mix -

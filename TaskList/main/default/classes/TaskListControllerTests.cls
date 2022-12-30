@@ -1,11 +1,11 @@
 /**
- * @description       : Test class for TaskListService.
+ * @description       : Test class for TaskListController.
  * @author            : Ben Learn
- * @last modified on  : 08-26-2022
+ * @last modified on  : 12-30-2022
  * @last modified by  : Ben Learn
 **/
 @isTest
-private class TaskListServiceTests {
+private class TaskListControllerTests {
     @TestSetup
     static void makeData(){
         List<Task> tasks = new List<Task>();

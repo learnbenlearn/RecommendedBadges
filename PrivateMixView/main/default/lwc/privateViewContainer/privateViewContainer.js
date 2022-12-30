@@ -10,8 +10,8 @@ import TIME_ESTIMATE_FIELD from '@salesforce/schema/Recommended_Badge__c.Time_Es
 import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
 import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
 
-import getMixCategoryData from '@salesforce/apex/PrivateViewService.getMixCategoryData';
-import getPrivateMixRecommendedBadges from '@salesforce/apex/PrivateViewService.getPrivateMixRecommendedBadges';
+import getMixCategoryData from '@salesforce/apex/PrivateViewController.getMixCategoryData';
+import getPrivateMixRecommendedBadges from '@salesforce/apex/PrivateViewController.getPrivateMixRecommendedBadges';
 
 const CHANGE_MIX_CATEGORY = 'Change Mix Category';
 const DELETE_RECOMMENDED_BADGE = 'Delete Recommended Badge';

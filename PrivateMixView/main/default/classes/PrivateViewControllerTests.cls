@@ -2,11 +2,11 @@
  * @description       : 
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 12-22-2022
+ * @last modified on  : 12-30-2022
  * @last modified by  : Ben Learn
 **/
 @isTest
-private class PrivateViewServiceTests {
+private class PrivateViewControllerTests {
     private static List<String> levels = new List<String>{
         'Beginner',
         'Intermediate',

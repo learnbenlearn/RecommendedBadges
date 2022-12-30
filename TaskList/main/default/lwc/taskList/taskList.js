@@ -2,7 +2,7 @@ import { LightningElement, wire, track } from 'lwc';
 
 import { refreshApex } from '@salesforce/apex';
 
-import getTasks from '@salesforce/apex/TaskListService.getTasks';
+import getTasks from '@salesforce/apex/TaskListController.getTasks';
 
 export default class TaskList extends LightningElement {
     displaySpinner = true;

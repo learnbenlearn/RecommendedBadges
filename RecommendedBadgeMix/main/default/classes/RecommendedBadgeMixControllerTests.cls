@@ -1,11 +1,11 @@
 /**
  * @description       : Test class for RecommendedBadgeMixService.
  * @author            : Ben Learn
- * @last modified on  : 09-16-2022
+ * @last modified on  : 12-30-2022
  * @last modified by  : Ben Learn
 **/
 @isTest
-private class RecommendedBadgeMixServiceTests {
+private class RecommendedBadgeMixControllerTests {
     private static Map<String, List<Mix_Category__c>> generateData(Boolean includeDefaultMix){
         List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = new List<Recommended_Badge_Mix__c>();
         Boolean privateMix = false;

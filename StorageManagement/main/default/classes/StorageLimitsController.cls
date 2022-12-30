@@ -2,10 +2,10 @@
  * @description       : Apex controller for storageLimits LWC.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 09-11-2022
+ * @last modified on  : 12-30-2022
  * @last modified by  : Ben Learn
 **/
-public without sharing class StorageLimitsService {
+public without sharing class StorageLimitsController {
     /**
     * @description Method to retrieve available and consumed org storage.
     * @author Ben Learn | 02-27-2022 
