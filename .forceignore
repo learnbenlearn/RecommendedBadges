@@ -19,9 +19,9 @@ home_page_default.flexipage
 standard-home.tab
 
 # Ignored Packages
-#PrivateView
+PrivateView
 DataModel
-LWCUtils
+#LWCUtils
 fflib
 RecommendedBadgeMix
 SortCustomMetadata

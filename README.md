@@ -141,8 +141,7 @@
 | RecommendedBadgeMixControllerTests |  getSetupData_testDefaultBadgeMix                              | 0.281       |
 |                                    | getSetupData_testNoDefaultBadgeMix                             | 0.222       |
 | SortCustomMetadataControllerTests  | getSortOptions_test                                            | 0.056       |
-| StorageManagementControllerTests   | manualClean_test                                               | 28.989      |
-|                                    | getStorageLimitInfo_test                                       | 0.148       |
+| StorageManagementServiceTests      | manualClean_test                                               | 28.989      |
 | TaskListControllerTests            | testGetTasks                                                   | 0.061       |
 |                                    | testGetTasksRestrictiedUser                                    | 0.738       |
 | BadgeTrigger_HelperTests           | testCreateCMTDeleteTasks_bulk                                  | 5.618       |

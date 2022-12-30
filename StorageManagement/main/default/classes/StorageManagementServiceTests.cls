@@ -145,7 +145,7 @@ private class StorageManagementServiceTests {
         insert testTrailmixes;
 
         Test.startTest();
-        StorageManagementService.manualClean();
+        StorageManagementService.clean();
         Test.stopTest();
 
         List<trailheadapp__Badge__c> remainingBadges = [SELECT Id FROM trailheadapp__Badge__c];
