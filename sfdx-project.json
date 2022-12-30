@@ -19,7 +19,7 @@
         },
         {
             "path": "LWCUtils",
-            "default": false,
+            "default": true,
             "package": "LWCUtils",
             "versionNumber": "1.6.0.NEXT"
         },
@@ -78,7 +78,7 @@
         },
         {
             "path": "UserInterface",
-            "default": true,
+            "default": false,
             "package": "UserInterface",
             "versionNumber": "1.2.0.NEXT",
             "dependencies": [
