@@ -21,11 +21,12 @@ standard-home.tab
 # Ignored Packages
 PrivateView
 DataModel
-#LWCUtils
+LWCUtils
+#LWCErrorHandler
 fflib
 RecommendedBadgeMix
 SortCustomMetadata
-StorageManagement
+#StorageManagement
 TaskList
 Triggers
 UserInterface
