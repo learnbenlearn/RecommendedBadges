@@ -1,0 +1,12 @@
+<!--
+  @description       : Generic component to handle LWC errors. Displays exception type and message for end users, along with stack trace for administrators. 
+                       Always shows errors through a modal for administrators and uses the same for end users if configured to do so (errors for end users are 
+                       displayed as toasts by default). Creates a log using Nebula Logger (https://github.com/jongpie/NebulaLogger) in all cases.
+                       Modal size, administrator profiles, and Nebula Logger save method can be customized.
+  @author            : Ben Learn
+  @last modified on  : 01-06-2023
+  @last modified by  : Ben Learn
+-->
+<template>
+    <c-logger></c-logger>
+</template>
