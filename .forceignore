@@ -19,10 +19,10 @@ home_page_default.flexipage
 standard-home.tab
 
 # Ignored Packages
-PrivateView
+PrivateMixView
 DataModel
 LWCUtils
-#LWCErrorHandler
+LWCErrorHandler
 fflib
 RecommendedBadgeMix
 SortCustomMetadata

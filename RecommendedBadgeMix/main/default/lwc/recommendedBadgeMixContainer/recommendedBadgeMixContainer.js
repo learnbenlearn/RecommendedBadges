@@ -12,6 +12,8 @@ import NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Name';
 import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
 import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
 
+const SPINNER_TEXT = 'Retrieving recommended badges';
+
 const TREEGRID_COLUMNS = [
     {
         type: 'url',
@@ -45,6 +47,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     sortLabel = 'Sort By';
     sortOptions;
     sortValue;
+    spinnerText = SPINNER_TEXT;
     treegridColumns = TREEGRID_COLUMNS;
     treegridData;
     treegridDataByMix;

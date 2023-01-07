@@ -1,7 +1,7 @@
 /**
  * @description       : Service class containing methods to clear storage by deleting unused badges and debug logs created by the Trail Tracker app.
  * @author            : Ben Learn
- * @last modified on  : 12-30-2022
+ * @last modified on  : 01-07-2023
  * @last modified by  : Ben Learn
 **/
 public with sharing class StorageManagementService {
@@ -69,8 +69,9 @@ public with sharing class StorageManagementService {
             if(debugLogsToDelete.size() > 0) Database.emptyRecycleBin(debugLogsToDelete);
             if(trailmixesToDelete.size() > 0) Database.emptyRecycleBin(trailmixesToDelete);
             if(userBadges.size() > 0) Database.emptyRecycleBin(userBadges);
-        } catch(Exception e) {
+        } catch(DMLException e) {
             Database.rollback(savepoint);
+            throw new StackTraceDMLException(e);
             
         }
     }

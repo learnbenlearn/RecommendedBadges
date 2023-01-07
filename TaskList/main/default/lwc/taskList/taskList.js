@@ -4,12 +4,15 @@ import { refreshApex } from '@salesforce/apex';
 
 import getTasks from '@salesforce/apex/TaskListController.getTasks';
 
+const SPINNER_TEXT = 'Retrieving tasks';
+
 export default class TaskList extends LightningElement {
     displaySpinner = true;
     displayTaskList;
     noTasks;
     noTasksMessage = '<b>No tasks!</b>';
     parseTasksResponse;
+    spinnerText = SPINNER_TEXT;
     @track taskList;
 
     @wire(getTasks)

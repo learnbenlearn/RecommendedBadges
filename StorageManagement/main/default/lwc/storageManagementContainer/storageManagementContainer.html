@@ -2,11 +2,14 @@
   @description       : Container to hold functionality for clearing storage space in Recommended Badges org.
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 02-27-2022
+  @last modified on  : 01-07-2023
   @last modified by  : Ben Learn
 -->
 <template>
   <div class="slds-var-p-around_medium slds-theme_default slds-box">
+    <template if:true={displaySpinner}>
+      <lightning-spinner size="small" alternative-text={spinnerText}></lightning-spinner>
+    </template>
     <c-storage-limits></c-storage-limits>
     <br/>
 
