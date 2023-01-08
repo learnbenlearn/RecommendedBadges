@@ -10,6 +10,8 @@ public with sharing class StorageManagementService {
     * @author Ben Learn | 03-13-2022 
     **/
     public static void clean() {
+        System.debug(Request.getCurrent().getQuiddity());
+
         Savepoint savepoint = Database.setSavepoint();
         try {
             List<Badge_to_Keep__mdt> badgesToKeep = [SELECT Badge_Name__c FROM Badge_to_Keep__mdt];
@@ -71,8 +73,12 @@ public with sharing class StorageManagementService {
             if(userBadges.size() > 0) Database.emptyRecycleBin(userBadges);
         } catch(DMLException e) {
             Database.rollback(savepoint);
-            throw new StackTraceDMLException(e);
-            
+            if(Request.getCurrent().getQuiddity() == System.Quiddity.AURA) {
+                throw new StackTraceDMLException(e);
+            } else {
+                Logger.error(e.getMessage()).setExceptionDetails(e);
+                Logger.saveLog();
+            }
         }
     }
 }

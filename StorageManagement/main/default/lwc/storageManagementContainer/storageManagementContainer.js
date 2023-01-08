@@ -5,13 +5,16 @@ import manualClean from '@salesforce/apex/StorageManagementController.invokeManu
 const SPINNER_TEXT = 'Clearing storage';
 
 export default class StorageManagementContainer extends LightningElement {
+    displaySpinner;
     spinnerText = SPINNER_TEXT;
 
     async handleClearStorage() {
         try {
+            this.displaySpinner = true;
             await manualClean();
+            this.displaySpinner = false;
         } catch(err) {
-            console.error(err);
+            this.template.querySelector('c-error').handleError(err);
         }
     }
 }

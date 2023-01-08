@@ -7,7 +7,7 @@
       "default": false,
       "dependencies": [
         {
-          "package": "04t1Q000001ACOnQAO"
+          "package": "TrailTracker"
         }
       ]
     },
@@ -30,7 +30,7 @@
       "versionNumber": "1.9.0.NEXT",
       "dependencies": [
         {
-          "package": "04t1Q000001ACOnQAO"
+          "package": "TrailTracker"
         },
         {
           "package": "DataModel",
@@ -45,10 +45,10 @@
       "versionNumber": "1.7.0.NEXT",
       "dependencies": [
         {
-          "package": "04t1Q000001ACOnQAO"
+          "package": "TrailTracker"
         },
         {
-          "package": "04t5Y0000023RBpQAM"
+          "package": "NebulaLogger"
         },
         {
           "package": "DataModel",
@@ -67,7 +67,7 @@
       "versionNumber": "1.3.0.NEXT",
       "dependencies": [
         {
-          "package": "04t1Q000001ACOnQAO"
+          "package": "TrailTracker"
         },
         {
           "package": "DataModel",
@@ -90,7 +90,7 @@
       "versionNumber": "1.2.0.NEXT",
       "dependencies": [
         {
-          "package": "04t1Q000001ACOnQAO"
+          "package": "TrailTracker"
         },
         {
           "package": "DataModel",
@@ -101,7 +101,7 @@
           "versionNumber": "1.6.0.LATEST"
         },
         {
-          "package": "04t8c000000yXMAAA2"
+          "package": "Shortcuts"
         },
         {
           "package": "SortCustomMetadata",
@@ -149,7 +149,7 @@
       "versionDescription": "Package containing classes, LWCs, and Lightning pages for the private view portion of the Recommended Badges app.",
       "dependencies": [
         {
-          "package": "04t1Q000001ACOnQAO"
+          "package": "TrailTracker"
         },
         {
           "package": "DataModel",
@@ -172,7 +172,7 @@
       "versionDescription": "Package containing generic LWC error handler that makes use of Nebula Logger.",
       "dependencies": [
         {
-          "package": "04t5Y0000023RBpQAM"
+          "package": "NebulaLogger"
         }
       ]
     }
@@ -182,6 +182,10 @@
   "sfdcLoginUrl": "https://recommendedbadges-dev-ed.my.salesforce.com",
   "sourceApiVersion": "56.0",
   "packageAliases": {
+    "NebulaLogger": "04t5Y0000023RBpQAM",
+    "Shortcuts": "04t8c000000yXMAAA2",
+    "TrailTracker": "04t1Q000001ACOnQAO",
+
     "DataModel": "0Ho8c000000fxx5CAA",
     "TaskList": "0Ho8c000000fy1NCAQ",
     "LWCUtils": "0Ho8c000000fy64CAA",
