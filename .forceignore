@@ -20,7 +20,7 @@ standard-home.tab
 
 # Ignored Packages
 PrivateMixView
-DataModel
+#DataModel
 LWCUtils
 LWCErrorHandler
 fflib

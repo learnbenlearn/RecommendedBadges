@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Whitespace_in_Default_Implementation</fullName>
+    <active>true</active>
+    <description>The value of the Default Implementation field should be an Apex class name and therefore cannot contain whitespace.</description>
+    <errorConditionFormula>CONTAINS(DefaultImplementation__c, &apos; &apos;)</errorConditionFormula>
+    <errorDisplayField>DefaultImplementation__c</errorDisplayField>
+    <errorMessage>The Default Implementation cannot contain whitespace.</errorMessage>
+</ValidationRule>

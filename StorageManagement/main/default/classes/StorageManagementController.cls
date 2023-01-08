@@ -2,7 +2,7 @@
  * @description       : Controller for storageManagementContainer LWC.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 12-30-2022
+ * @last modified on  : 01-08-2023
  * @last modified by  : Ben Learn
 **/
 public with sharing class StorageManagementController {
@@ -12,6 +12,15 @@ public with sharing class StorageManagementController {
     **/
     @AuraEnabled
     public static void invokeManualClean(){
-        StorageManagementService.clean();
+        try {
+            List<String> objectsNotCleaned = StorageManagementService.clean();
+            if(objectsNotCleaned?.size() > 0) {
+                throw new AuraHandledException(
+                    'Did not clean the following objects as you do not have sufficient permissions:' + String.join(objectsNotCleaned, ' ,') + '.'
+                );
+            }
+        } catch(DMLException e) {
+            throw new StackTraceDMLException(e);
+        }
     }
 }

@@ -19,7 +19,7 @@
     },
     {
       "path": "LWCUtils",
-      "default": true,
+      "default": false,
       "package": "LWCUtils",
       "versionNumber": "1.6.0.NEXT"
     },
@@ -40,7 +40,7 @@
     },
     {
       "path": "StorageManagement",
-      "default": false,
+      "default": true,
       "package": "StorageManagement",
       "versionNumber": "1.7.0.NEXT",
       "dependencies": [
