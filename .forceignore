@@ -19,8 +19,8 @@ home_page_default.flexipage
 standard-home.tab
 
 # Ignored Packages
-PrivateMixView
-#DataModel
+#PrivateMixView
+#Core
 LWCUtils
 LWCErrorHandler
 fflib

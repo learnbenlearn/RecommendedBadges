@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 12-30-2022
+ * @last modified on  : 01-09-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -58,7 +58,7 @@ private class PrivateViewControllerTests {
         ];
 
         Test.startTest();
-        List<Mix_Category__c> mixCategoryData = PrivateViewService.getMixCategoryData();
+        List<Mix_Category__c> mixCategoryData = PrivateViewController.getMixCategoryData();
         Test.stopTest();
 
         System.assert(testMixCategories.equals(mixCategoryData), 'Expected Mix Category data to equal test data.');
@@ -156,7 +156,7 @@ private class PrivateViewControllerTests {
         }
 
         Test.startTest();
-        Map<String, List<Recommended_Badge__c>> privateViewMap = PrivateViewService.getPrivateMixRecommendedBadges();
+        Map<String, List<Recommended_Badge__c>> privateViewMap = PrivateViewController.getPrivateMixRecommendedBadges();
         Test.stopTest();
 
         System.assert(resultRecommendedBadgeMap.equals(privateViewMap), 'Expected private view Recommended Badges to equal test data.');

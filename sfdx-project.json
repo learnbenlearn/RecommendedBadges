@@ -1,13 +1,17 @@
 {
   "packageDirectories": [
     {
-      "path": "DataModel",
-      "package": "DataModel",
-      "versionNumber": "1.6.0.NEXT",
+      "path": "Core",
+      "package": "Core",
+      "versionNumber": "1.7.0.NEXT",
       "default": false,
       "dependencies": [
         {
           "package": "TrailTracker"
+        },
+        {
+          "package": "fflib",
+          "versionNumber": "1.1.0.LATEST"
         }
       ]
     },
@@ -27,14 +31,18 @@
       "path": "Triggers",
       "default": false,
       "package": "Triggers",
-      "versionNumber": "1.9.0.NEXT",
+      "versionNumber": "1.10.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
         },
         {
-          "package": "DataModel",
-          "versionNumber": "1.6.0.LATEST"
+          "package": "fflib",
+          "versionNumber": "1.1.0.LATEST"
+        },
+        {
+          "package": "Core",
+          "versionNumber": "1.7.0.LATEST"
         }
       ]
     },
@@ -42,7 +50,7 @@
       "path": "StorageManagement",
       "default": true,
       "package": "StorageManagement",
-      "versionNumber": "1.7.0.NEXT",
+      "versionNumber": "1.8.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -51,8 +59,12 @@
           "package": "NebulaLogger"
         },
         {
-          "package": "DataModel",
-          "versionNumber": "1.6.0.LATEST"
+          "package": "fflib",
+          "versionNumber": "1.1.0.LATEST"
+        },
+        {
+          "package": "Core",
+          "versionNumber": "1.7.0.LATEST"
         },
         {
           "package": "LWCErrorHandler",
@@ -70,8 +82,8 @@
           "package": "TrailTracker"
         },
         {
-          "package": "DataModel",
-          "versionNumber": "1.6.0.LATEST"
+          "package": "Core",
+          "versionNumber": "1.7.0.LATEST"
         },
         {
           "package": "LWCUtils",
@@ -79,6 +91,10 @@
         },
         {
           "package": "SortCustomMetadata",
+          "versionNumber": "1.1.0.LATEST"
+        },
+        {
+          "package": "fflib",
           "versionNumber": "1.1.0.LATEST"
         }
       ]
@@ -93,8 +109,12 @@
           "package": "TrailTracker"
         },
         {
-          "package": "DataModel",
-          "versionNumber": "1.6.0.LATEST"
+          "package": "Core",
+          "versionNumber": "1.7.0.LATEST"
+        },
+        {
+          "package": "fflib",
+          "versionNumber": "1.1.0.LATEST"
         },
         {
           "package": "LWCUtils",
@@ -117,7 +137,7 @@
         },
         {
           "package": "StorageManagement",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.8.0.LATEST"
         },
         {
           "package": "TaskList",
@@ -144,7 +164,7 @@
     {
       "path": "PrivateMixView",
       "package": "PrivateMixView",
-      "versionNumber": "1.2.0.NEXT",
+      "versionNumber": "1.3.0.NEXT",
       "default": false,
       "versionDescription": "Package containing classes, LWCs, and Lightning pages for the private view portion of the Recommended Badges app.",
       "dependencies": [
@@ -152,8 +172,12 @@
           "package": "TrailTracker"
         },
         {
-          "package": "DataModel",
-          "versionNumber": "1.6.0.LATEST"
+          "package": "fflib",
+          "versionNumber": "1.1.0.LATEST"
+        },
+        {
+          "package": "Core",
+          "versionNumber": "1.7.0.LATEST"
         },
         {
           "package": "LWCUtils",
@@ -185,14 +209,12 @@
     "NebulaLogger": "04t5Y0000023RBpQAM",
     "Shortcuts": "04t8c000000yXMAAA2",
     "TrailTracker": "04t1Q000001ACOnQAO",
-
-    "DataModel": "0Ho8c000000fxx5CAA",
+    "Core": "0Ho8c000000fxx5CAA",
     "TaskList": "0Ho8c000000fy1NCAQ",
     "LWCUtils": "0Ho8c000000fy64CAA",
     "Triggers": "0Ho8c000000fy69CAA",
     "StorageManagement": "0Ho8c000000fy6ECAQ",
     "RecommendedBadgeMix": "0Ho8c000000fy6OCAQ",
-    "BensView": "0Ho8c000000fy6TCAQ",
     "UserInterface": "0Ho8c000000fy6YCAQ",
     "SortCustomMetadata": "0Ho8c000000fy7CCAQ",
     "PrivateMixView": "0Ho8c000000sY9SCAU",
@@ -209,6 +231,11 @@
     "PrivateMixView@1.2.0-1": "04t8c000001ItpdAAC",
     "UserInterface@1.2.0-1": "04t8c000001ItpiAAC",
     "LWCErrorHandler@1.0.0-2": "04t8c000001ItylAAC",
-    "StorageManagement@1.7.0-2": "04t8c000001Itz0AAC"
+    "StorageManagement@1.7.0-2": "04t8c000001Itz0AAC",
+    "Core@1.7.0-1": "04t8c000001ItzFAAS",
+    "StorageManagement@1.7.0-3": "04t8c000001ItzKAAS",
+    "StorageManagement@1.8.0-1": "04t8c000001ItzPAAS",
+    "Triggers@1.10.0-1": "04t8c000001ItzUAAS",
+    "PrivateMixView@1.2.0-2": "04t8c000001Iu3mAAC"
   }
 }
