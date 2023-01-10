@@ -26,10 +26,10 @@ LWCErrorHandler
 fflib
 RecommendedBadgeMix
 SortCustomMetadata
-StorageManagement
+#StorageManagement
 TaskList
 Triggers
-#UserInterface
+UserInterface
 
 # Ignored Folders
 unpackageable
