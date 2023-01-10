@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for SortCustomMetadataController.
  * @author            : Ben Learn
- * @last modified on  : 12-30-2022
+ * @last modified on  : 01-09-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -27,7 +27,7 @@ private class SortCustomMetadataControllerTests {
         }
 
         Test.startTest();
-        List<Sortable_Field__mdt> sortOptions = SortCustomMetadataService.getSortOptions(testComponentName);
+        List<Sortable_Field__mdt> sortOptions = SortCustomMetadataController.getSortOptions(testComponentName);
         Test.stopTest();
 
         Map<Id, Sortable_Field__mdt> sortableFieldMap = new Map<Id, Sortable_Field__mdt>(sortableFields);

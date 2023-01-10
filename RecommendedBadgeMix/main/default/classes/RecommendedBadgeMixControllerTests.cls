@@ -1,7 +1,7 @@
 /**
- * @description       : Test class for RecommendedBadgeMixService.
+ * @description       : Test class for RecommendedBadgeMixController.
  * @author            : Ben Learn
- * @last modified on  : 12-30-2022
+ * @last modified on  : 01-09-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -57,7 +57,7 @@ private class RecommendedBadgeMixControllerTests {
         String defaultMixName = [SELECT Name FROM Recommended_Badge_Mix__c WHERE Default_Badge_Mix__c = true][0].Name;
 
         Test.startTest();
-        SetupDataWrapper testSetupData = RecommendedBadgeMixService.getSetupData();
+        SetupDataWrapper testSetupData = RecommendedBadgeMixController.getSetupData();
         Test.stopTest();
 
         System.assert(
@@ -81,7 +81,7 @@ private class RecommendedBadgeMixControllerTests {
         ][0].Recommended_Badge_Mix__r.Name;
 
         Test.startTest();
-        SetupDataWrapper testSetupData = RecommendedBadgeMixService.getSetupData();
+        SetupDataWrapper testSetupData = RecommendedBadgeMixController.getSetupData();
         Test.stopTest();
 
         System.assert(
