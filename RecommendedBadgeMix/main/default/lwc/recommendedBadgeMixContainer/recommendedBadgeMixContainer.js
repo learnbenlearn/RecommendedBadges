@@ -90,7 +90,6 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                     sortableFieldValues: option.Sortable_Field_Values__r
                 })   
             }
-
         } else if(error) {
             console.error(error);
         }
@@ -161,7 +160,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         tempTreegridData = this.treegridData;
 
         for(let sortOption of this.sortOptions) {
-            if((sortOption.value === event.detail) && this.sortOptions.sortableFieldValues) {
+            if((sortOption.value === event.detail) && sortOption.sortableFieldValues) {
                 sortableFieldValues = [];
 
                 for(let sortableFieldValue of sortOption.sortableFieldValues) {

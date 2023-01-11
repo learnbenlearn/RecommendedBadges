@@ -76,7 +76,7 @@
       "path": "RecommendedBadgeMix",
       "default": false,
       "package": "RecommendedBadgeMix",
-      "versionNumber": "1.3.0.NEXT",
+      "versionNumber": "1.4.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -95,7 +95,7 @@
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.1.0.LATEST"
+          "versionNumber": "1.2.0.LATEST"
         }
       ]
     },
@@ -109,12 +109,19 @@
           "package": "TrailTracker"
         },
         {
-          "package": "Core",
-          "versionNumber": "1.7.0.LATEST"
+          "package": "NebulaLogger"
         },
         {
           "package": "fflib",
           "versionNumber": "1.1.0.LATEST"
+        },
+        {
+          "package": "Core",
+          "versionNumber": "1.7.0.LATEST"
+        },
+        {
+          "package": "LWCErrorHandler",
+          "versionNumber": "1.0.0.LATEST"
         },
         {
           "package": "LWCUtils",
@@ -125,7 +132,7 @@
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.1.0.LATEST"
+          "versionNumber": "1.2.0.LATEST"
         },
         {
           "package": "PrivateMixView",
@@ -133,7 +140,7 @@
         },
         {
           "package": "RecommendedBadgeMix",
-          "versionNumber": "1.3.0.LATEST"
+          "versionNumber": "1.4.0.LATEST"
         },
         {
           "package": "StorageManagement",
@@ -185,7 +192,7 @@
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.1.0.LATEST"
+          "versionNumber": "1.2.0.LATEST"
         }
       ]
     },
@@ -239,6 +246,8 @@
     "PrivateMixView@1.2.0-2": "04t8c000001Iu3mAAC",
     "PrivateMixView@1.3.0-1": "04t8c000001Iu8OAAS",
     "SortCustomMetadata@1.1.0-1": "04t8c000001Iu8TAAS",
-    "SortCustomMetadata@1.2.0-1": "04t8c000001Iu8YAAS"
+    "SortCustomMetadata@1.2.0-1": "04t8c000001Iu8YAAS",
+    "RecommendedBadgeMix@1.3.0-2": "04t8c000001Iu9CAAS",
+    "RecommendedBadgeMix@1.4.0-1": "04t8c000001Iu9HAAS"
   }
 }

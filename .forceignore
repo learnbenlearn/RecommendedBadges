@@ -24,9 +24,9 @@ Core
 LWCUtils
 LWCErrorHandler
 fflib
-RecommendedBadgeMix
+#RecommendedBadgeMix
 SortCustomMetadata
-#StorageManagement
+StorageManagement
 TaskList
 Triggers
 UserInterface

@@ -79,7 +79,7 @@ public with sharing class StorageManagementServiceImplementation implements ISto
                 orderedSObjects.add(Schema.describeSObjects(new List<String>{'ScratchOrgInfo'})[0]);
                 sObjectsToClean.put(
                     Schema.describeSObjects(new List<String>{'ScratchOrgInfo'})[0],
-                    Database.query('SELECT Id FROM ScratchOrgInfo WHERE ExpirationDate < TODAY')
+                    Database.query('SELECT Id FROM ScratchOrgInfo WHERE Status != \'Active\'')
                 );
             } catch(NoAccessException e) {
                 // ignore - better pattern than this?
