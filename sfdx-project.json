@@ -17,7 +17,7 @@
     },
     {
       "path": "TaskList",
-      "default": false,
+      "default": true,
       "package": "TaskList",
       "versionNumber": "1.13.0.NEXT"
     },
@@ -29,7 +29,7 @@
     },
     {
       "path": "Triggers",
-      "default": true,
+      "default": false,
       "package": "Triggers",
       "versionNumber": "1.10.0.NEXT",
       "dependencies": [
@@ -199,6 +199,7 @@
     {
       "path": "LWCErrorHandler",
       "package": "LWCErrorHandler",
+      "default": false,
       "versionNumber": "1.0.0.NEXT",
       "versionDescription": "Package containing generic LWC error handler that makes use of Nebula Logger.",
       "dependencies": [

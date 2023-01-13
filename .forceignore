@@ -13,23 +13,24 @@ package.xml
 
 harness.auradefinitionbundle
 admin.profile
+**.fieldRestrictionRule
 
 ## Temp Ignored
 home_page_default.flexipage
 standard-home.tab
 
 # Ignored Packages
-PrivateMixView
-Core
-LWCUtils
-LWCErrorHandler
-fflib
-RecommendedBadgeMix
-SortCustomMetadata
-StorageManagement
-TaskList
+#PrivateMixView
+#Core
+#LWCUtils
+#LWCErrorHandler
+#fflib
+#RecommendedBadgeMix
+#SortCustomMetadata
+#StorageManagement
+#TaskList
 #Triggers
-UserInterface
+#UserInterface
 
 # Ignored Folders
 unpackageable
