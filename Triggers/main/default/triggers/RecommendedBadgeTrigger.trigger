@@ -4,7 +4,7 @@
  *                      metadata record on delete (if it exists).
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 09-08-2022
+ * @last modified on  : 01-12-2023
  * @last modified by  : Ben Learn
 **/
 trigger RecommendedBadgeTrigger on Recommended_Badge__c (before insert, before update, after delete) {
@@ -16,8 +16,8 @@ trigger RecommendedBadgeTrigger on Recommended_Badge__c (before insert, before u
         when BEFORE_UPDATE {
             BadgeTrigger_Helper.populateBadgeMixKeys(Trigger.new, Trigger.oldMap);
         }
-        when AFTER_DELETE {
+        /*when AFTER_DELETE {
             BadgeTrigger_Helper.createCMTDeleteTasks(Trigger.old);
-        }
+        }*/
     }
 }

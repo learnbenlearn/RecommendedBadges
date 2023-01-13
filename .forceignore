@@ -24,11 +24,11 @@ Core
 LWCUtils
 LWCErrorHandler
 fflib
-#RecommendedBadgeMix
+RecommendedBadgeMix
 SortCustomMetadata
 StorageManagement
 TaskList
-Triggers
+#Triggers
 UserInterface
 
 # Ignored Folders

@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for BadgeTrigger_Helper class.
  * @author            : Ben Learn
- * @last modified on  : 09-11-2022
+ * @last modified on  : 01-13-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -336,82 +336,6 @@ private class BadgeTrigger_HelperTests {
                 'Expected Recommended Trail level to be the same as parent Trail level.'
             );
         }
-    }
-
-    @isTest
-    private static void testCreateCMTDeleteTasks_singlePositive() {
-        List<Mix_Category__c> testMixCategories = [SELECT Id FROM Mix_Category__c];
-        List<trailheadapp__Badge__c> testBadges = [SELECT Id, Name FROM trailheadapp__Badge__c];
-
-        Integer testBadgeIndex = Integer.valueOf(Math.floor(Math.random()*testBadges.size()));
-
-        List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>{    
-            new Recommended_Badge__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Badge__c=testBadges[testBadgeIndex].Id,
-                Saved_By_CMT__c=true
-            )
-        };
-        insert testRecommendedBadges;
-
-        Test.startTest();
-        delete testRecommendedBadges;
-        Test.stopTest();
-
-        String taskSubject = 'Delete CMT Record for ' + testBadges[testBadgeIndex].Name;
-        List<Task> tasks = [SELECT Id FROM Task WHERE Priority='Normal' AND Status='New' AND Subject=:taskSubject];
-        System.assertEquals(1, tasks.size(), 'Expected task for deleting Recommended Badge with Saved By CMT selected.');
-    }
-
-    @isTest
-    private static void testCreateCMTDeleteTasks_singleNegative() {
-        List<Mix_Category__c> testMixCategories = [SELECT Id FROM Mix_Category__c];
-        List<trailheadapp__Badge__c> testBadges = [SELECT Id, Name FROM trailheadapp__Badge__c];
-
-        Integer testBadgeIndex = Integer.valueOf(Math.floor(Math.random()*testBadges.size()));
-
-        List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>{    
-            new Recommended_Badge__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Badge__c=testBadges[testBadgeIndex].Id
-            )
-        };
-        insert testRecommendedBadges;
-
-        Test.startTest();
-        delete testRecommendedBadges;
-        Test.stopTest();
-
-        String taskSubject = 'Delete CMT Record for ' + testBadges[testBadgeIndex].Name;
-        List<Task> tasks = [SELECT Id FROM Task WHERE Priority='Normal' AND Status='New' AND Subject=:taskSubject];
-        System.assertEquals(0, tasks.size(), 'Task should not be created when deleting Recommended Badge with Saved By CMT not selected.');
-    }
-
-    @isTest
-    private static void testCreateCMTDeleteTasks_bulk() {
-        List<Mix_Category__c> testMixCategories = [SELECT Id FROM Mix_Category__c];
-        List<trailheadapp__Badge__c> testBadges = [SELECT Id FROM trailheadapp__Badge__c];
-
-        List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>();
-
-        Boolean savedByCMT = false;
-
-        for(trailheadapp__Badge__c badge : testBadges) {
-            savedByCMT = !savedByCMT;
-            testRecommendedBadges.add(new Recommended_Badge__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Badge__c=badge.Id,
-                Saved_By_CMT__c=savedByCMT
-            ));
-        }
-        insert testRecommendedBadges;
-
-        Test.startTest();
-        delete testRecommendedBadges;
-        Test.stopTest();
-
-        List<Task> tasks = [SELECT Id FROM Task WHERE Priority='Normal' AND Status='New' AND Subject LIKE 'Delete CMT Record for%'];
-        System.assertEquals(testBadges.size()/2, tasks.size(), 'Expected tasks created when deleting Recommended Badges with Saved By CMT selected.');
     }
 
     @isTest
