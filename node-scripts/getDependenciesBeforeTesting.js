@@ -4,7 +4,7 @@ const util = require('util');
 const exec = util.promisify(require('child_process').exec);
 
 const ensurePackageIdsInPackageAliases = require('./ensurePackageIdsInPackageAliases.js');
-const {HUB_ALIAS, PACKAGE_ALIASES, PACKAGE_DIRECTORIES, PACKAGE_ID_PREFIX, PACKAGE_VERSION_ID_PREFIX} = require('./constants.js');
+const {HUB_ALIAS, PACKAGE_ALIASES, PACKAGE_DIRECTORIES, PACKAGE_ID_PREFIX, PACKAGE_VERSION_ID_PREFIX, PROJECT_PACKAGE_NAMES} = require('./constants.js');
 
 async function getDependenciesBeforeTesting() {
     await ensurePackageIdsInPackageAliases();
@@ -16,7 +16,7 @@ async function getDependenciesBeforeTesting() {
     for(let package of PACKAGE_DIRECTORIES) {
         for(let i in package.dependencies) {
             let requiredPackage = package.dependencies[i].package;
-            if(requiredPackage.startsWith(PACKAGE_VERSION_ID_PREFIX) && !PACKAGE_IDS.includes(requiredPackage)) {
+            if((requiredPackage.startsWith(PACKAGE_VERSION_ID_PREFIX) && !PACKAGE_IDS.includes(requiredPackage)) || (PROJECT_PACKAGE_NAMES.find(requiredPackage))) {
                 possibleRequiredPackageVersionIds.add(requiredPackage);
             } else if(requiredPackage.startsWith(PACKAGE_ID_PREFIX) && !PACKAGE_IDS.includes(requiredPackage)) {
                 requiredPackageVersionIds.add(await getPackageIdFromDependency(package.dependencies[i]));

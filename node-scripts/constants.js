@@ -9,9 +9,14 @@ const PACKAGE_DIRECTORIES = SFDX_PROJECT_JSON.packageDirectories;
 const PACKAGE_ID_PREFIX = '0Ho';
 const PACKAGE_IDS_TO_ALIASES = {};
 const PACKAGE_VERSION_ID_PREFIX = '04t';
+const PROJECT_PACKAGE_NAMES = [];
 
 for(let alias in PACKAGE_ALIASES) {
     PACKAGE_IDS_TO_ALIASES[PACKAGE_ALIASES[alias]] = alias;
+}
+
+for(let packageDirectory in PACKAGE_DIRECTORIES) {
+    PROJECT_PACKAGE_NAMES.push(packageDirectory.package);
 }
 
 module.exports = {
@@ -21,5 +26,6 @@ module.exports = {
     PACKAGE_DIRECTORIES,
     PACKAGE_ID_PREFIX,
     PACKAGE_VERSION_ID_PREFIX,
-    PACKAGE_IDS_TO_ALIASES
+    PACKAGE_IDS_TO_ALIASES,
+    PROJECT_PACKAGE_NAMES
 };
