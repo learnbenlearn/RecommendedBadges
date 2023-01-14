@@ -13,7 +13,7 @@ package.xml
 
 harness.auradefinitionbundle
 admin.profile
-**.fieldRestrictionRule
+**.fieldRestrictionRule*
 
 ## Temp Ignored
 home_page_default.flexipage
