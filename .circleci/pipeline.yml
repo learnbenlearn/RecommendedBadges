@@ -99,6 +99,7 @@ jobs:
           command: |
             packagesToInstall=()
             packagesToInstall+=$( (npm run --silent getDependenciesBeforeTesting) )
+            echo $packagesToInstall
             for packageToInstall in ${packagesToInstall[@]};
                 do sfdx force:package:beta:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
             done
