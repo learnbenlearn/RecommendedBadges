@@ -23,13 +23,12 @@ async function getDependenciesBeforeTesting() {
                 !requiredPackage.startsWith(PACKAGE_ID_PREFIX) && 
                 !requiredPackage.startsWith(PACKAGE_VERSION_ID_PREFIX)
                 ) {
-                possibleRequiredPackageVersionIds.add(PACKAGE_ALIASES[requiredPackage]);
+                requiredPackageVersionIds.add(PACKAGE_ALIASES[requiredPackage]);
             } else if(requiredPackage.startsWith(PACKAGE_ID_PREFIX) && !PACKAGE_IDS.includes(requiredPackage)) {
                 requiredPackageVersionIds.add(await getPackageIdFromDependency(package.dependencies[i]));
             }
         }
     }
-    console.log(requiredPackageVersionIds);
 
     if(possibleRequiredPackageVersionIds.size > 0) {
         let queryConditionIds = Array.from(possibleRequiredPackageVersionIds).map(x => '\'' + x + '\'').join(', ');
