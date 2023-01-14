@@ -52,7 +52,7 @@ jobs:
         - when:
             condition:
               and:
-                - equal: [ false, CIRCLE_PULL_REQUEST ]
+                - equal: [ true, CIRCLE_PULL_REQUEST ]
                 - not: 
                     equal: [ main, CIRCLE_BRANCH ]
             steps:
@@ -69,4 +69,4 @@ workflows:
     jobs:
       - setup
 
-# VS Code Extension Version: 1.5.0
+# VS Code Extension Version: 1.5.1
