@@ -18,7 +18,11 @@ async function getDependenciesBeforeTesting() {
             let requiredPackage = package.dependencies[i].package;
             if(requiredPackage.startsWith(PACKAGE_VERSION_ID_PREFIX) && !PACKAGE_IDS.includes(requiredPackage)) {
                 possibleRequiredPackageVersionIds.add(requiredPackage);
-            } else if(!PROJECT_PACKAGE_NAMES.includes(requiredPackage)) {
+            } else if(
+                !PROJECT_PACKAGE_NAMES.includes(requiredPackage) && 
+                !requiredPackage.startsWith(PACKAGE_ID_PREFIX) && 
+                !requiredPackage.startsWith(PACKAGE_VERSION_ID_PREFIX)
+                ) {
                 possibleRequiredPackageVersionIds.add(PACKAGE_ALIASES[requiredPackage]);
             } else if(requiredPackage.startsWith(PACKAGE_ID_PREFIX) && !PACKAGE_IDS.includes(requiredPackage)) {
                 requiredPackageVersionIds.add(await getPackageIdFromDependency(package.dependencies[i]));
