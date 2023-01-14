@@ -52,7 +52,8 @@ jobs:
         - when:
             condition:
               and:
-                - equal: [ true, CIRCLE_PULL_REQUEST ]
+                - not:
+                    equal: [ '', CIRCLE_PULL_REQUEST ]
                 - not: 
                     equal: [ main, CIRCLE_BRANCH ]
             steps:
