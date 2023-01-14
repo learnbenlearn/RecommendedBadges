@@ -16,7 +16,7 @@ async function getDependenciesBeforeTesting() {
     for(let package of PACKAGE_DIRECTORIES) {
         for(let i in package.dependencies) {
             let requiredPackage = package.dependencies[i].package;
-            if((requiredPackage.startsWith(PACKAGE_VERSION_ID_PREFIX) && !PACKAGE_IDS.includes(requiredPackage)) || (PROJECT_PACKAGE_NAMES.find(requiredPackage))) {
+            if((requiredPackage.startsWith(PACKAGE_VERSION_ID_PREFIX) && !PACKAGE_IDS.includes(requiredPackage)) || (PROJECT_PACKAGE_NAMES.includes(requiredPackage))) {
                 possibleRequiredPackageVersionIds.add(requiredPackage);
             } else if(requiredPackage.startsWith(PACKAGE_ID_PREFIX) && !PACKAGE_IDS.includes(requiredPackage)) {
                 requiredPackageVersionIds.add(await getPackageIdFromDependency(package.dependencies[i]));
