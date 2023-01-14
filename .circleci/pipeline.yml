@@ -121,6 +121,7 @@ jobs:
                     packagesToInstall=()
                     packagesToInstall+=$( (npm run --silent getSortedPackagesToInstall) )
                     for packageToInstall in ${packagesToInstall[@]};
+                      echo $packageToInstall
                       do sfdx force:package:beta:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
                     done
       - run:
@@ -148,4 +149,4 @@ workflows:
     jobs:
       - build
 
-# VS Code Extension Version: 1.5.0
+# VS Code Extension Version: 1.5.1
