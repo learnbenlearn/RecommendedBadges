@@ -6,6 +6,7 @@ const exec = util.promisify(require('child_process').exec);
 const {HUB_ALIAS, PACKAGE_ALIAS_DELIMITER, PACKAGE_ID_PREFIX, PACKAGE_VERSION_ID_PREFIX, REVERSE_PACKAGE_ALIASES} = require('./constants.js');
 
 async function getPackageNameFromDependency(dependentPackage) {
+    console.log(REVERSE_PACKAGE_ALIASES);
     let endIndex = dependentPackage.package.indexOf(PACKAGE_ALIAS_DELIMITER);
     if(endIndex == -1) {
         endIndex = dependentPackage.package.length;

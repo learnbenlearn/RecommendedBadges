@@ -23,6 +23,7 @@ async function getDependenciesBeforeTesting() {
             }
         }
     }
+    console.log(requiredPackageVersionIds);
 
     if(possibleRequiredPackageVersionIds.size > 0) {
         let queryConditionIds = Array.from(possibleRequiredPackageVersionIds).map(x => '\'' + x + '\'').join(', ');
