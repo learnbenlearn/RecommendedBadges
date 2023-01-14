@@ -1,12 +1,12 @@
 /**
  * @description       : Test class for TaskListController.
  * @author            : Ben Learn
- * @last modified on  : 12-30-2022
+ * @last modified on  : 01-14-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
 private class TaskListControllerTests {
-    @TestSetup
+    @testSetup
     static void makeData(){
         List<Task> tasks = new List<Task>();
 
@@ -24,7 +24,7 @@ private class TaskListControllerTests {
     @isTest
     static void testGetTasks() {
         Test.startTest();
-        List<Task> openTasks = TaskListService.getTasks();
+        List<Task> openTasks = TaskListController.getTasks();
         Test.stopTest();
 
         System.assertEquals(200, openTasks.size(), 'Should have 200 open tasks.');
@@ -49,7 +49,7 @@ private class TaskListControllerTests {
 
         System.runAs(u) {
             Test.startTest();
-            List<Task> openTasks = TaskListService.getTasks();
+            List<Task> openTasks = TaskListController.getTasks();
             Test.stopTest();
 
             System.assertEquals(0, openTasks.size(), 'No tasks should be accessible to restricted user.');
