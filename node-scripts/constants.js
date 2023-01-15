@@ -15,8 +15,10 @@ for(let alias in PACKAGE_ALIASES) {
     PACKAGE_IDS_TO_ALIASES[PACKAGE_ALIASES[alias]] = alias;
 }
 
-for(let packageDirectory in PACKAGE_DIRECTORIES) {
-    PROJECT_PACKAGE_NAMES.push(packageDirectory.package);
+for(let packageDirectory of PACKAGE_DIRECTORIES) {
+    if(packageDirectory.package) {
+        PROJECT_PACKAGE_NAMES.push(packageDirectory.package);
+    }
 }
 
 module.exports = {
