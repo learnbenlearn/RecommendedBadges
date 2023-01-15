@@ -32,7 +32,6 @@ export default class StorageLimits extends LightningElement {
     }
 
     @api refreshStorageLimitInfo() {
-        console.log('in refreshStorageLimitInfo');
         this.fetchStorageLimitInfo();
     }
 }

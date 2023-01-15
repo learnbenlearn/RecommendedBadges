@@ -17,8 +17,6 @@ export default class TaskList extends LightningElement {
 
     @wire(getTasks)
     parseTasks(value) {
-        console.log(value);
-        console.log(this.parseTasksResponse);
         if(this.parseTasksResponse === value) {
             this.displaySpinner = false;
         } else {

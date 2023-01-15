@@ -13,22 +13,18 @@ async function getDependenciesBeforeTesting() {
     let possibleRequiredPackageVersionIds = new Set();
     let requiredPackageVersionIds = new Set();
 
-    console.log(PROJECT_PACKAGE_NAMES);
     for(let package of PACKAGE_DIRECTORIES) {
         for(let i in package.dependencies) {
             let requiredPackage = package.dependencies[i].package;
             if(requiredPackage.startsWith(PACKAGE_VERSION_ID_PREFIX) && !PACKAGE_IDS.includes(requiredPackage)) {
-                console.log(`first conditional. dependency is ${requiredPackage}. package is ${package}`);
                 possibleRequiredPackageVersionIds.add(requiredPackage);
             } else if(
                 !PROJECT_PACKAGE_NAMES.includes(requiredPackage) && 
                 !requiredPackage.startsWith(PACKAGE_ID_PREFIX) && 
                 !requiredPackage.startsWith(PACKAGE_VERSION_ID_PREFIX)
                 ) {
-                console.log(`second conditional. dependency is ${requiredPackage}. package is ${package}`);
                 requiredPackageVersionIds.add(PACKAGE_ALIASES[requiredPackage]);
             } else if(requiredPackage.startsWith(PACKAGE_ID_PREFIX) && !PACKAGE_IDS.includes(requiredPackage)) {
-                console.log(`third conditional. dependency is ${requiredPackage}. package is ${package}`);
                 requiredPackageVersionIds.add(await getPackageIdFromDependency(package.dependencies[i]));
             }
         }
