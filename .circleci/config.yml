@@ -47,7 +47,6 @@ jobs:
         - run:
             name: Authorize Dev Hub
             command: |
-              echo $CIRCLE_PULL_REQUEST
               sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
         - when:
             condition:
@@ -69,6 +68,10 @@ jobs:
 
 workflows:
   setup:
+    when:
+      condition:
+        not:
+          - equal: [ main, << pipeline.git.branch >> ]
     jobs:
       - setup
 
