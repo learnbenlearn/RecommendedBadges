@@ -1,6 +1,6 @@
 import { LightningElement, api } from 'lwc';
 
-import getStorageLimitInfo from '@salesforce/apex/StorageLimitsService.getStorageLimitInfo';
+import getStorageLimitInfo from '@salesforce/apex/StorageLimitsController.getStorageLimitInfo';
 
 const DATA_STORAGE_URL = '/lightning/setup/CompanyResourceDisk/home';
 
@@ -32,7 +32,6 @@ export default class StorageLimits extends LightningElement {
     }
 
     @api refreshStorageLimitInfo() {
-        console.log('in refreshStorageLimitInfo');
         this.fetchStorageLimitInfo();
     }
 }

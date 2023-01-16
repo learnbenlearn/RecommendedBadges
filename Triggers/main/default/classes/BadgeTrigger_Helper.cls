@@ -2,7 +2,7 @@
  * @description       : A catchall trigger helper for TrailTrigger, BadgeTrigger, RecommendedBadgeTrigger, and RecommendedTrailTrigger.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 09-08-2022
+ * @last modified on  : 01-13-2023
  * @last modified by  : Ben Learn
 **/
 public without sharing class BadgeTrigger_Helper {
@@ -44,7 +44,7 @@ public without sharing class BadgeTrigger_Helper {
 
     /**
     * @description Method to copy Level__c and Type__c field values from parent trailheadapp__Badge__c/
-        trialheadapp__Trail__c to child Recommended_Badge__c/Recommended_Trail__c, respectively, after
+        trailheadapp__Trail__c to child Recommended_Badge__c/Recommended_Trail__c, respectively, after
         the parent is updated. (Necessary because these fields are picklist fields, so formula fields
         can't be used to copy their values from a parent to a child).
     * @author Ben Learn | 03-11-2022 
@@ -114,26 +114,6 @@ public without sharing class BadgeTrigger_Helper {
                 newRecord.put(picklists.get(String.valueOf(parentPicklist)), parentPicklistValue);
             }
         }
-    }
-
-    /**
-    * @description Method to create tasks to remind to delete custom metadata records previously used to
-        prevent badges from being deleted by StorageManagementService.
-    * @author Ben Learn | 03-11-2022 
-    * @param List<Recommended_Badge__c> recommendedBadges 
-    **/
-    public static void createCMTDeleteTasks(List<Recommended_Badge__c> recommendedBadges) {
-        List<Task> cmtDeleteTasks = new List<Task>();
-
-        for(Recommended_Badge__c recommendedBadge : recommendedBadges) {
-            if(recommendedBadge.Saved_By_CMT__c) {
-                Task t = new Task(Priority='Normal', Status='New', 
-                    Subject='Delete CMT Record for ' + recommendedBadge.Badge_Name__c);
-                cmtDeleteTasks.add(t);
-            }
-        }
-
-        insert cmtDeleteTasks;
     }
 
     /**

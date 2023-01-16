@@ -10,11 +10,8 @@ import TIME_ESTIMATE_FIELD from '@salesforce/schema/Recommended_Badge__c.Time_Es
 import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
 import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
 
-import getMixCategoryData from '@salesforce/apex/PrivateViewService.getMixCategoryData';
-import getPrivateMixRecommendedBadges from '@salesforce/apex/PrivateViewService.getPrivateMixRecommendedBadges';
-
-const CHANGE_MIX_CATEGORY = 'Change Mix Category';
-const DELETE_RECOMMENDED_BADGE = 'Delete Recommended Badge';
+import getMixCategoryData from '@salesforce/apex/PrivateViewController.getMixCategoryData';
+import getPrivateMixRecommendedBadges from '@salesforce/apex/PrivateViewController.getPrivateMixRecommendedBadges';
 
 const ACTIONS = [
     {
@@ -27,6 +24,10 @@ const ACTIONS = [
     }
 ]
 
+const CHANGE_MIX_CATEGORY = 'Change Mix Category';
+const DELETE_RECOMMENDED_BADGE = 'Delete Recommended Badge';
+
+
 const HIGH_PRIORITY_OPTION = {
     label: 'High Priority',
     value: 'High Priority'
@@ -34,10 +35,10 @@ const HIGH_PRIORITY_OPTION = {
 
 const HIGH_PRIORITY_PREFIX = 'HP';
 
-const PROMPT_HEADER = 'Change Mix Category';
-
 const LOOKUP_OBJECT_NAME = 'Mix Category';
+const PROMPT_HEADER = 'Change Mix Category';
 const RESULT_ICON_NAME = 'custom:custom46';
+const SPINNER_TEXT = 'Retreiving badges';
 
 const TABLE_COLUMNS = [
     {
@@ -81,6 +82,7 @@ export default class PrivateViewContainer extends LightningElement {
     promptIsLoading;
     @track recommendedBadgeData;
     selectedRecommendedBadge;
+    spinnerText = SPINNER_TEXT;
     tableColumns = TABLE_COLUMNS;
     @track tableData;
     viewOptions;

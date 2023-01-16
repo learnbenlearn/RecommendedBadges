@@ -1,8 +1,8 @@
 import { LightningElement, wire } from 'lwc';
 
-import getSetupData from '@salesforce/apex/RecommendedBadgeMixService.getSetupData';
+import getSetupData from '@salesforce/apex/RecommendedBadgeMixController.getSetupData';
 
-import getSortOptions from '@salesforce/apex/SortCustomMetadataService.getSortOptions';
+import getSortOptions from '@salesforce/apex/SortCustomMetadataController.getSortOptions';
 
 import { sortAlphabetic, sortCustom } from 'c/sortUtility';
 
@@ -11,6 +11,8 @@ import LEVEL_FIELD from '@salesforce/schema/Recommended_Badge__c.Level__c';
 import NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Name';
 import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
 import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
+
+const SPINNER_TEXT = 'Retrieving recommended badges';
 
 const TREEGRID_COLUMNS = [
     {
@@ -45,6 +47,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     sortLabel = 'Sort By';
     sortOptions;
     sortValue;
+    spinnerText = SPINNER_TEXT;
     treegridColumns = TREEGRID_COLUMNS;
     treegridData;
     treegridDataByMix;
@@ -87,7 +90,6 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                     sortableFieldValues: option.Sortable_Field_Values__r
                 })   
             }
-
         } else if(error) {
             console.error(error);
         }
@@ -158,7 +160,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         tempTreegridData = this.treegridData;
 
         for(let sortOption of this.sortOptions) {
-            if((sortOption.value === event.detail) && this.sortOptions.sortableFieldValues) {
+            if((sortOption.value === event.detail) && sortOption.sortableFieldValues) {
                 sortableFieldValues = [];
 
                 for(let sortableFieldValue of sortOption.sortableFieldValues) {

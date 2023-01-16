@@ -2,7 +2,7 @@
   @description       : Simple LWC to display tasks in a "bulleted" list.
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 12-22-2022
+  @last modified on  : 01-07-2023
   @last modified by  : Ben Learn
 -->
 <template>
@@ -33,7 +33,7 @@
         </template>
         
         <template if:true={displaySpinner}>
-            <lightning-spinner></lightning-spinner>
+            <lightning-spinner alternative-text={spinnerText}></lightning-spinner>
         </template>
     </div>
 </template>

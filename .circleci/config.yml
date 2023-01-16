@@ -51,7 +51,11 @@ jobs:
               sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
         - when:
             condition:
-              equal: [ fflib-migration, <<pipeline.git.branch>> ]
+              and:
+                - not:
+                    equal: [ '', CIRCLE_PULL_REQUEST ]
+                - not: 
+                    equal: [ main, CIRCLE_BRANCH ]
             steps:
               - run:
                   name: Populate Dynamic Parameters
@@ -66,4 +70,4 @@ workflows:
     jobs:
       - setup
 
-# VS Code Extension Version: 1.5.0
+# VS Code Extension Version: 1.5.1

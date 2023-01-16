@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for StorageManagementService.
  * @author            : Ben Learn
- * @last modified on  : 12-22-2022
+ * @last modified on  : 12-30-2022
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -145,7 +145,7 @@ private class StorageManagementServiceTests {
         insert testTrailmixes;
 
         Test.startTest();
-        StorageManagementService.manualClean();
+        StorageManagementService.clean();
         Test.stopTest();
 
         List<trailheadapp__Badge__c> remainingBadges = [SELECT Id FROM trailheadapp__Badge__c];

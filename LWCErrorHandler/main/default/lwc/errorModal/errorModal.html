@@ -1,0 +1,30 @@
+<!--
+  @description       : Modal component to display detailed errors for system administrators and fundamental/fatal errors to end users.
+  @author            : Ben Learn
+  @last modified on  : 01-06-2023
+  @last modified by  : Ben Learn
+-->
+<template>
+    <lightning-modal-header label={error.exceptionType}>
+        <lightning-icon icon-name="utility:error" variant="error" alternative-text="Error" title="Error"></lightning-icon>
+    </lightning-modal-header>
+
+    <lightning-modal-body>
+        <template if:true={sysAdminView}>
+            <div><b><u>Error Message</u></b></div>
+        </template>
+
+        <lightning-formatted-text value={error.message}></lightning-formatted-text>
+        <br/>
+        <br/>
+        
+        <template if:true={sysAdminView}>
+            <div><b><u>Stack Trace</u></b></div>
+            <lightning-formatted-text value={error.stackTrace}></lightning-formatted-text>
+        </template>
+    </lightning-modal-body>
+    
+    <lightning-modal-footer>
+        <lightning-button label="OK" onclick={handleOkay}></lightning-button>
+    </lightning-modal-footer>
+</template>

@@ -5,11 +5,11 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>StorageLimitsService</apexClass>
+        <apexClass>StorageLimitsController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>StorageManagementService</apexClass>
+        <apexClass>StorageManagementController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <customMetadataTypeAccesses>

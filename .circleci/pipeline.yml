@@ -24,6 +24,7 @@ jobs:
     - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
     - HUB_ALIAS: HubOrg
     - REQUIRED_SCRATCH_ORGS: 1
+    - SCRATCH_ORG_DEFINITION_FILE: config/default-scratch-def.json
     - TEST_LEVEL: RunLocalTests
     - TEST_ORG_ALIAS: TestOrg
     - UNPACKAGED_DIRECTORY: unpackageable
@@ -92,13 +93,14 @@ jobs:
             then
               exit 1
             else
-              sfdx force:org:create -v $HUB_ALIAS -s -f config/project-scratch-def.json -a $TEST_ORG_ALIAS -w $WAIT_TIME -d 1
+              sfdx force:org:create -v $HUB_ALIAS -s -f $SCRATCH_ORG_DEFINITION_FILE -a $TEST_ORG_ALIAS -w $WAIT_TIME -d 1
             fi
       - run: 
           name: Install External Dependencies in Scratch Org
           command: |
             packagesToInstall=()
             packagesToInstall+=$( (npm run --silent getDependenciesBeforeTesting) )
+            echo $packagesToInstall
             for packageToInstall in ${packagesToInstall[@]};
                 do sfdx force:package:beta:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
             done
@@ -148,4 +150,4 @@ workflows:
     jobs:
       - build
 
-# VS Code Extension Version: 1.5.0
+# VS Code Extension Version: 1.5.1

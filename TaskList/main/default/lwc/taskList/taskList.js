@@ -2,7 +2,9 @@ import { LightningElement, wire, track } from 'lwc';
 
 import { refreshApex } from '@salesforce/apex';
 
-import getTasks from '@salesforce/apex/TaskListService.getTasks';
+import getTasks from '@salesforce/apex/TaskListController.getTasks';
+
+const SPINNER_TEXT = 'Retrieving tasks';
 
 export default class TaskList extends LightningElement {
     displaySpinner = true;
@@ -10,12 +12,11 @@ export default class TaskList extends LightningElement {
     noTasks;
     noTasksMessage = '<b>No tasks!</b>';
     parseTasksResponse;
+    spinnerText = SPINNER_TEXT;
     @track taskList;
 
     @wire(getTasks)
     parseTasks(value) {
-        console.log(value);
-        console.log(this.parseTasksResponse);
         if(this.parseTasksResponse === value) {
             this.displaySpinner = false;
         } else {
