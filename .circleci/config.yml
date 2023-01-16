@@ -47,7 +47,6 @@ jobs:
         - run:
             name: Authorize Dev Hub
             command: |
-              echo $CIRCLE_PULL_REQUEST
               sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
         - when:
             condition:
@@ -60,6 +59,8 @@ jobs:
               - run:
                   name: Populate Dynamic Parameters
                   command: |
+                    echo $CIRCLE_PULL_REQUEST
+                    echo $CIRCLE_BRANCH
                     npm run populateParameters
               - continuation/continue:
                   configuration_path: .circleci/pipeline.yml
@@ -67,6 +68,10 @@ jobs:
 
 workflows:
   setup:
+    when:
+      condition:
+        not:
+          - equal: [ main, << pipeline.git.branch >> ]
     jobs:
       - setup
 
