@@ -1,7 +1,7 @@
 /**
  * @description       : Apex controller for privateViewContainer LWC.
  * @author            : Ben Learn
- * @last modified on  : 12-30-2022
+ * @last modified on  : 01-21-2023
  * @last modified by  : Ben Learn
 **/
 public with sharing class PrivateViewController {
@@ -57,6 +57,7 @@ public with sharing class PrivateViewController {
             }
         }
 
+        System.debug(privateViewMap);
         return privateViewMap;
     }
 }

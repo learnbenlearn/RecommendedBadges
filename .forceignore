@@ -20,7 +20,7 @@ home_page_default.flexipage
 standard-home.tab
 
 # Ignored Packages
-PrivateMixView
+#PrivateMixView
 Core
 LWCUtils
 LWCErrorHandler
@@ -29,8 +29,8 @@ RecommendedBadgeMix
 SortCustomMetadata
 StorageManagement
 TaskList
-#Triggers
-UserInterface
+Triggers
+#UserInterface
 
 # Ignored Folders
 unpackageable

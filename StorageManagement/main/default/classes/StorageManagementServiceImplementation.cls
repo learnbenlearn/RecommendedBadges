@@ -1,7 +1,7 @@
 /**
  * @description       : Service class containing methods to clear storage by deleting unused badges and debug logs created by the Trail Tracker app.
  * @author            : Ben Learn
- * @last modified on  : 01-10-2023
+ * @last modified on  : 01-20-2023
  * @last modified by  : Ben Learn
 **/
 public with sharing class StorageManagementServiceImplementation implements IStorageManagementService {
@@ -102,9 +102,11 @@ public with sharing class StorageManagementServiceImplementation implements ISto
 
     private static Boolean purgeRecords(List<sObject> records, Schema.DescribeSObjectResult sObjectDescribe) {
         Boolean objectCleaned;
-        if((sObjectDescribe.isDeletable() && records.size() > 0) || (Request.getCurrent().getQuiddity() == System.Quiddity.SCHEDULED)) {
-            delete records;
-            Database.emptyRecycleBin(records);
+        if(sObjectDescribe.isDeletable() || (Request.getCurrent().getQuiddity() == System.Quiddity.SCHEDULED)) {
+            if(records.size() > 0) {
+                delete records;
+                Database.emptyRecycleBin(records);
+            }
             objectCleaned = true;
         } else if (!sObjectDescribe.isDeletable()){
             objectCleaned = false;

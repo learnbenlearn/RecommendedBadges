@@ -13,6 +13,9 @@ import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
 import getMixCategoryData from '@salesforce/apex/PrivateViewController.getMixCategoryData';
 import getPrivateMixRecommendedBadges from '@salesforce/apex/PrivateViewController.getPrivateMixRecommendedBadges';
 
+const CHANGE_MIX_CATEGORY = 'Change Mix Category';
+const DELETE_RECOMMENDED_BADGE = 'Delete Recommended Badge';
+
 const ACTIONS = [
     {
         label: DELETE_RECOMMENDED_BADGE,
@@ -23,10 +26,6 @@ const ACTIONS = [
         name: CHANGE_MIX_CATEGORY
     }
 ]
-
-const CHANGE_MIX_CATEGORY = 'Change Mix Category';
-const DELETE_RECOMMENDED_BADGE = 'Delete Recommended Badge';
-
 
 const HIGH_PRIORITY_OPTION = {
     label: 'High Priority',
@@ -103,6 +102,7 @@ export default class PrivateViewContainer extends LightningElement {
             }
 
             this.recommendedBadgeData = await getPrivateMixRecommendedBadges();
+            console.log(this.recommendedBadgeData);
             this.tableData = this.recommendedBadgeData[this.dropdownViewValue]
             this.isLoading = false;
         } catch(err) {
