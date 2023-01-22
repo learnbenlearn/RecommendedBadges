@@ -5,7 +5,6 @@
  * @last modified by  : Ben Learn
 **/
 public with sharing class PrivateViewController {
-// change to private
 
     /**
     * @description Method to retrieve names of mix categories, names of parent Recommended Badge Mixes, and privacy status of parent Recommended Badge Mixes.
@@ -57,7 +56,6 @@ public with sharing class PrivateViewController {
             }
         }
 
-        System.debug(privateViewMap);
         return privateViewMap;
     }
 }
