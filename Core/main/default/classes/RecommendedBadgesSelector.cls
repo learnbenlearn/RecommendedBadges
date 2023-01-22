@@ -7,6 +7,7 @@
 public inherited sharing class RecommendedBadgesSelector extends ApplicationSelector {
     public List<Schema.SObjectField> getSObjectFieldList() {
         return new List<Schema.SObjectField> {
+            Recommended_Badge__c.Id,
             Recommended_Badge__c.Level__c,
             Recommended_Badge__c.Type__c
         };

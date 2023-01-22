@@ -7,6 +7,7 @@
 public inherited sharing class RecommendedTrailsSelector extends ApplicationSelector {
     public List<Schema.SObjectField> getSObjectFieldList() {
         return new List<Schema.SObjectField> {
+            Recommended_Trail__c.Id,
             Recommended_Trail__c.Level__c
         };
     }
