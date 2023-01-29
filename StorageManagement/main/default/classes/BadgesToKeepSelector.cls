@@ -14,4 +14,8 @@ public inherited sharing class BadgesToKeepSelector extends ApplicationSelector 
     public Schema.SObjectType getSObjectType() {
         return Badge_to_Keep__mdt.sObjectType;
     }
+
+    public List<Badge_to_Keep__mdt> selectAll() {
+        return (List<Badge_to_Keep__mdt>) Database.query(newQueryFactory().toSOQL());
+    }
 }

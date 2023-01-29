@@ -14,4 +14,8 @@ public inherited sharing class AsyncApexJobsSelector extends ApplicationSelector
     public Schema.SObjectType getSObjectType() {
         return AsyncApexJob.sObjectType;
     }
+
+    public List<AsyncApexJob> selectCompletedJobsByMethod(String methodName) {
+        return (List<AsyncApexJob>) Database.query(newQueryFactory().setCondition('CompletedDate=TODAY AND MethodName=\'' + methodName + '\'').toSOQL());
+    }
 }

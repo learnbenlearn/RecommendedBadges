@@ -14,4 +14,8 @@ public inherited sharing class UserBadgesSelector extends ApplicationSelector {
     public Schema.SObjectType getSObjectType() {
         return trailheadapp__User_Badge__c.sObjectType;
     }
+
+    public List<trailheadapp__User_Badge__c> selectAll() {
+        return (List<trailheadapp__User_Badge__c>) Database.query(newQueryFactory().toSOQL());
+    }
 }

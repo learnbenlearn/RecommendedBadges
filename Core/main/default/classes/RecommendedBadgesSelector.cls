@@ -1,7 +1,7 @@
 /**
  * @description       : Selector class for Recommended Badge custom object.
  * @author            : Ben Learn
- * @last modified on  : 01-22-2023
+ * @last modified on  : 01-29-2023
  * @last modified by  : Ben Learn
 **/
 public inherited sharing class RecommendedBadgesSelector extends ApplicationSelector {
@@ -15,5 +15,28 @@ public inherited sharing class RecommendedBadgesSelector extends ApplicationSele
 
     public Schema.sObjectType getSObjectType() {
         return Recommended_Badge__c.sObjectType;
+    }
+
+    public List<Recommended_Badge__c> selectAllRelatedToPrivateRecommendedBadgeMix() {
+        return (List<Recommended_Badge__c>) Database.query(
+            newQueryFactory().
+            selectFieldSet(Schema.SObjectType.Recommended_Badge__c.fieldSets.PrivateMixView, true).
+            setCondition('Mix_Category__r.Recommended_Badge_Mix__r.Private_Mix__c=true').
+            setOrdering(new fflib_QueryFactory.Ordering(
+                this.getSObjectType().getDescribe().getName(), 
+                Schema.SObjectType.Recommended_Badge__c.fields.Badge_Name__c.getName(), 
+                fflib_QueryFactory.SortOrder.ASCENDING
+            )).
+            toSOQL()
+        );
+    }
+
+    public List<Recommended_Badge__c> selectByBadges(Set<Id> badgeIds) {
+        return (List<Recommended_Badge__c>) Database.query(
+            newQueryFactory().
+            selectFieldSet(Schema.SObjectType.Recommended_Badge__c.fieldSets.Triggers).
+            setCondition('Badge__c IN :badgeIds').
+            toSOQL()
+        );
     }
 }

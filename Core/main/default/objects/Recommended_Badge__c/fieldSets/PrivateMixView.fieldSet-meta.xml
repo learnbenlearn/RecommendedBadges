@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>PrivateView</fullName>
+    <fullName>PrivateMixView</fullName>
     <description>Field set for PrivateMixView package.</description>
     <displayedFields>
         <field>Badge_Name__c</field>
@@ -37,5 +37,5 @@
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </displayedFields>
-    <label>Private View</label>
+    <label>Private Mix View</label>
 </FieldSet>

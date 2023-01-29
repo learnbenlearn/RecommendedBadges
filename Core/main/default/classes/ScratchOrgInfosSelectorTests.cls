@@ -8,7 +8,7 @@
 private class ScratchOrgInfosSelectorTests {
     @isTest
     private static void getSObjectFieldList_test() {
-        if(System.Type.forName('ScratchOrgInfo') != null) {
+        if(APPLICATION.IS_DEV_HUB_ORG) {
             List<Schema.SObjectField> expectedFieldList = new List<Schema.SObjectField> {
                 Schema.describeSObjects(new List<String>{'ScratchOrgInfo'})[0].fields.getMap().get('Id')
             };
@@ -20,7 +20,7 @@ private class ScratchOrgInfosSelectorTests {
 
     @isTest
     private static void getSObjectType_test() {
-        if(System.Type.forName('ScratchOrgInfo') != null) {
+        if(APPLICATION.IS_DEV_HUB_ORG) {
             Assert.areEqual(
                 Schema.describeSObjects(new List<String>{'ScratchOrgInfo'})[0].getSObjectType(), 
                 new ScratchOrgInfosSelector().getSObjectType(), 

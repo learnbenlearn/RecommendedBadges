@@ -16,4 +16,8 @@ public inherited sharing class ProductsToDeleteSelector extends ApplicationSelec
     public Schema.SObjectType getSObjectType() {
         return Product_to_Delete__mdt.sObjectType;
     }
+
+    public List<Product_to_Delete__mdt> selectAll() {
+        return (List<Product_to_Delete__mdt>) Database.query(newQueryFactory.toSOQL());
+    }
 }

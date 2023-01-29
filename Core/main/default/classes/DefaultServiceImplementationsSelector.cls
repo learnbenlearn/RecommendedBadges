@@ -15,4 +15,8 @@ public inherited sharing class DefaultServiceImplementationsSelector extends App
     public Schema.SObjectType getSObjectType() {
         return DefaultServiceImplementation__mdt.sObjectType;
     }
+
+    public List<DefaultServiceImplementation__mdt> selectAll() {
+        return (List<DefaultServiceImplementation__mdt>) Database.query(newQueryFactory().toSOQL());
+    }
 }

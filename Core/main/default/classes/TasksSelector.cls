@@ -15,4 +15,8 @@ public inherited sharing class TasksSelector extends ApplicationSelector {
     public Schema.SObjectType getSObjectType() {
         return Task.sObjectType;
     }
+
+    public List<Task> selectOpen() {
+        return (List<Task>) Database.query(newQueryFactory().setCondition('IsClosed=false').toSOQL());
+    }
 }

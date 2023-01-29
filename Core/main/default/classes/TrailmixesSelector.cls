@@ -14,4 +14,8 @@ public inherited sharing class TrailmixesSelector extends ApplicationSelector {
     public Schema.SObjectType getSObjectType() {
         return trailheadapp__Trailmix__c.sObjectType;
     }
+
+    public List<trailheadapp__Trailmix__c> selectAll() {
+        return (List<trailheadapp__Trailmix__c>) Database.query(newQueryFactory().toSOQL());
+    }
 }

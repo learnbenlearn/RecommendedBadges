@@ -19,6 +19,7 @@ admin.profile
 home_page_default.flexipage
 standard-home.tab
 **/Account-Account %28Support%29 Layout.layout-meta.xml
+Account-Account %28Support%29 Layout.layout
 
 # Ignored Packages
 PrivateMixView
@@ -27,10 +28,10 @@ LWCUtils
 LWCErrorHandler
 fflib
 RecommendedBadgeMix
-SortCustomMetadata
+#SortCustomMetadata
 StorageManagement
 TaskList
-Triggers
+#Triggers
 UserInterface
 
 # Ignored Folders

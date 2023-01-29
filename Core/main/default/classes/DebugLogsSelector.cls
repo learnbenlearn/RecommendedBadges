@@ -14,4 +14,8 @@ public inherited sharing class DebugLogsSelector extends ApplicationSelector {
     public Schema.SObjectType getSObjectType() {
         return trailheadapp__Debug_Log__c.sObjectType;
     }
+
+    public List<trailheadapp__Debug_Log__c> selectAll() {
+        return (List<trailheadapp__Debug_Log__c>) Database.query(newQueryFactory().toSOQL());
+    }
 }
