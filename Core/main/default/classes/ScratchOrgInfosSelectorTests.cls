@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for ScratchOrgInfosSelector.
  * @author            : Ben Learn
- * @last modified on  : 01-22-2023
+ * @last modified on  : 02-05-2023
  * @last modified by  : Ben Learn
 **/
 @isTest

@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for DefaultServiceImplementationsSelector.
  * @author            : Ben Learn
- * @last modified on  : 01-22-2023
+ * @last modified on  : 02-05-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -19,5 +19,12 @@ private class DefaultServiceImplementationSelectorTest {
     @isTest
     private static void getSObjectType_test() {
         Assert.areEqual(DefaultServiceImplementation__mdt.sObjectType, new DefaultServiceImplementationsSelector().getSObjectType(), SelectorTestErrorMessages.SOBJECT_TYPE_ERROR_MESSAGE);
+    }
+
+    @isTest
+    private static void selectAll_test() {
+        List<DefaultServiceImplementation__mdt> expectedDefaultServiceImplementations = [SELECT DeveloperName, DefaultImplementation__c FROM DefaultServiceImplementation__mdt];
+        List<DefaultServiceImplementation__mdt> resultDefaultServiceImplementations = new DefaultServiceImplementationsSelector().selectAll();
+        Assert.areEqual(expectedDefaultServiceImplementations, resultDefaultServiceImplementations, 'Expected all DefaultServiceImplementation records to be returned.');
     }
 }

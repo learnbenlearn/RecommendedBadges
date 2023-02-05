@@ -1,7 +1,7 @@
 /**
  * @description       : Selector class for Recommended Badge Mix custom object.
  * @author            : Ben Learn
- * @last modified on  : 01-29-2023
+ * @last modified on  : 02-05-2023
  * @last modified by  : Ben Learn
 **/
 public inherited sharing class RecommendedBadgeMixesSelector extends ApplicationSelector {
@@ -22,10 +22,6 @@ public inherited sharing class RecommendedBadgeMixesSelector extends Application
 
     public Schema.SObjectType getSObjectType() {
         return Recommended_Badge_Mix__c.sObjectType;
-    }
-
-    public override ApplicationSelector enableFieldSet(Schema.FieldSet fieldSet) {
-        return (RecommendedBadgeMixesSelector) super.enableFieldSet(fieldSet);
     }
 
     public List<Recommended_Badge_Mix__c> selectDefaultMix() {

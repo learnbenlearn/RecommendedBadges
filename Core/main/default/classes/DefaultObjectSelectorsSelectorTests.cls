@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for DefaultObjectSelectorsSelector.
  * @author            : Ben Learn
- * @last modified on  : 01-29-2023
+ * @last modified on  : 02-05-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -20,5 +20,13 @@ private class DefaultObjectSelectorsSelectorTests {
     @isTest
     private static void getSObjectType_test() {
         Assert.areEqual(DefaultObjectSelector__mdt.sObjectType, new DefaultObjectSelectorsSelector().getSObjectType(), SelectorTestErrorMessages.SOBJECT_TYPE_ERROR_MESSAGE);
+    }
+
+    @isTest
+    private static void selectAll_test() {
+        Map<Id, DefaultObjectSelector__mdt> expectedDefaultObjectSelectorsById = new Map<Id, DefaultObjectSelector__mdt>([SELECT Id FROM DefaultObjectSelector__mdt]);
+        Map<Id, DefaultObjectSelector__mdt> resultDefaultObjectSelectorsById = new Map<Id, DefaultObjectSelector__mdt>(new DefaultObjectSelectorsSelector().selectAll());
+
+        Assert.areEqual(expectedDefaultObjectSelectorsById.keySet(), resultDefaultObjectSelectorsById.keySet(), 'Expected all DefaultObjectSelector records to be returned.');
     }
 }

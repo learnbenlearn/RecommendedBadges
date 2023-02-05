@@ -179,7 +179,7 @@ public class TestDataFactory {
 
         public List<sObject> execute() {
             List<Mix_Category__c> testMixCategories = new List<Mix_Category__c>();
-            Integer counter = 0;
+
             for(Integer i = 0; i < this.NUMBER_TO_GENERATE; i++) {
                 testMixCategories.add(new Mix_Category__c(
                     Name = this.RECOMMENDED_BADGE_MIXES[Math.mod(i, 2)].Name + ' Category ' + i,
@@ -280,6 +280,14 @@ public class TestDataFactory {
             this.MIX_CATEGORIES = mixCategories;
         }
 
+        public RecommendedTrail(
+            Boolean insertRecords, Boolean returnCreatedRecords, Integer numberToGenerate, List<trailheadapp__Trail__c> trails, List<Mix_Category__c> mixCategories
+        ) {
+            super(insertRecords, returnCreatedRecords, numberToGenerate);
+            this.TRAILS = trails;
+            this.MIX_CATEGORIES = mixCategories;
+        }
+
         public List<sObject> execute() {
             List<Recommended_Trail__c> testRecommendedTrails = new List<Recommended_Trail__c>();
             for(Integer i = 0; i < this.NUMBER_TO_GENERATE; i++) {
@@ -291,6 +299,31 @@ public class TestDataFactory {
 
             if(this.INSERT_RECORDS) insert testRecommendedTrails;
             return this.RETURN_CREATED_RECORDS ? testRecommendedTrails : null;
+        }
+    }
+
+    public class Task extends RecordGenerationTemplate implements RecordGeneration {
+        public Task(Boolean insertRecords, Boolean returnCreatedRecords) {
+            super(insertRecords, returnCreatedRecords);
+        }
+
+        public Task(Boolean insertRecords, Boolean returnCreatedRecords, Integer numberToGenerate) {
+            super(insertRecords, returnCreatedRecords, numberToGenerate);
+        }
+
+        public List<sObject> execute() {
+            List<Schema.Task> testTasks = new List<Schema.Task>();
+
+            for(Integer i = 0; i < this.NUMBER_TO_GENERATE; i++) {
+                if(Math.mod(i, 2) == 0) {
+                    testTasks.add(new Schema.Task(Status='Not Started'));
+                } else {
+                    testTasks.add(new Schema.Task(Status='Completed'));
+                }
+            }
+
+            if(this.INSERT_RECORDS) insert testTasks;
+            return this.RETURN_CREATED_RECORDS ? testTasks : null;
         }
     }
 

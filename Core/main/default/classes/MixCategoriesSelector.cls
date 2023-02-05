@@ -1,7 +1,7 @@
 /**
  * @description       : Selector class for Mix Category custom object.
  * @author            : Ben Learn
- * @last modified on  : 01-29-2023
+ * @last modified on  : 02-05-2023
  * @last modified by  : Ben Learn
 **/
 public inherited sharing class MixCategoriesSelector extends ApplicationSelector {
@@ -27,7 +27,6 @@ public inherited sharing class MixCategoriesSelector extends ApplicationSelector
         return (List<Mix_Category__c>) Database.query(mixCategoriesQueryFactory.setCondition('Id IN :mixCategoryIds').toSOQL());
     }
 
-    // maybe refactor this in a second
     public List<Mix_Category__c> selectAllWithRecommendedBadgeMixInfos(Schema.FieldSet fieldSet) {
         fflib_QueryFactory mixCategoriesQueryFactory = newQueryFactory();
 

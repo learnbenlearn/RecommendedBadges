@@ -36,34 +36,4 @@ private class BadgesSelectorTests {
         Map<Id, trailheadapp__Badge__c> resultBadgesById = new Map<Id, trailheadapp__Badge__c>(new BadgesSelector().selectById(badgeIds));
         Assert.areEqual(badgeIds, resultBadgesById.keySet(), 'Expected IDs of returned badges to equal prescribed set of IDs.');
     }
-
-    @isTest
-    private static void selectAllArchivedOrInProductsToDelete_test() {
-        List<Badge_to_Keep__mdt> badgesToKeep = new BadgesToKeepSelector().selectAll();
-        List<String> badgesToKeepNames = new List<String>();
-        for(Badge_to_Keep__mdt badgeToKeep : badgesToKeep) {
-            badgesToKeepNames.add(badgeToKeep.Badge_Name__c);
-        }
-
-        List<Product_to_Delete__mdt> productsToDelete = new ProductsToDeleteSelector().selectAll();
-        List<String> badgeProductsToDelete = new List<String>();
-        for(Product_to_Delete__mdt productToDelete : productsToDelete) {
-            if(productToDelete.Badge_Product__c) badgeProductsToDelete.add(productToDelete.MasterLabel);
-        }
-
-        TestDataFactory.Badge badgeGenerator = new TestDataFactory.Badge(true, false, true, true, true, badgeProductsToDelete, badgesToKeepNames);
-        badgeGenerator.execute();
-
-        Map<Id, trailheadapp__Badge__c> resultBadgesById = new Map<Id, trailheadapp__Badge__c>([
-            SELECT Id, Name, trailheadapp__Archived__c, trailheadapp__Products__c 
-            FROM trailheadapp__Badge__c 
-            WHERE (trailheadapp__Products__c IN :badgeProductsToDelete AND Name NOT IN :badgesToKeepNames) OR trailheadapp__Archived__c=true
-        ]);
-
-        for(trailheadapp__Badge__c resultBadge : new BadgesSelector().selectAllArchivedOrInProductsToDelete(badgeProductsToDelete, badgesToKeepNames)) {
-            Assert.isTrue(resultBadgesById.keySet().contains(resultBadge.Id),
-                'Retrieved badges should either be (a) archived or (b) list products with corresponding Product to Delete records and not have a corresponding Badge to Keep record.'
-            );
-        }
-    }
 }
