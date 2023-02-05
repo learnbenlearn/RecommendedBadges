@@ -17,10 +17,13 @@ public inherited sharing class RecommendedBadgesSelector extends ApplicationSele
         return Recommended_Badge__c.sObjectType;
     }
 
-    public List<Recommended_Badge__c> selectAllRelatedToPrivateRecommendedBadgeMix() {
+    public List<Recommended_Badge__c> selectAllRelatedToPrivateRecommendedBadgeMixes() {
+        fflib_QueryFactory recommendedBadgesQueryFactory = newQueryFactory();
+
+        new MixCategoriesSelector().configureQueryFactoryFields(recommendedBadgesQueryFactory, Recommended_Badge__c.Mix_Category__c.getDescribe().getRelationshipName());
+
         return (List<Recommended_Badge__c>) Database.query(
-            newQueryFactory().
-            selectFieldSet(Schema.SObjectType.Recommended_Badge__c.fieldSets.PrivateMixView, true).
+            recommendedBadgesQueryFactory.selectFieldSet(Schema.SObjectType.Recommended_Badge__c.fieldSets.PrivateMixView, true).
             setCondition('Mix_Category__r.Recommended_Badge_Mix__r.Private_Mix__c=true').
             setOrdering(new fflib_QueryFactory.Ordering(
                 this.getSObjectType().getDescribe().getName(), 

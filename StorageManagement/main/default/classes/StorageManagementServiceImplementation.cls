@@ -1,7 +1,7 @@
 /**
  * @description       : Service class containing methods to clear storage by deleting unused badges and debug logs created by the Trail Tracker app.
  * @author            : Ben Learn
- * @last modified on  : 01-20-2023
+ * @last modified on  : 01-29-2023
  * @last modified by  : Ben Learn
 **/
 public with sharing class StorageManagementServiceImplementation implements IStorageManagementService {
@@ -12,7 +12,7 @@ public with sharing class StorageManagementServiceImplementation implements ISto
     public List<String> clean() {
         Savepoint savepoint = Database.setSavepoint();
         try {
-            List<Badge_to_Keep__mdt> badgesToKeep = [SELECT Badge_Name__c FROM Badge_to_Keep__mdt];
+            List<Badge_to_Keep__mdt> badgesToKeep = new BadgesToKeepSelector().selectAll();
     
             List<String> badgesToKeepNames = new List<String>();
     
@@ -20,7 +20,7 @@ public with sharing class StorageManagementServiceImplementation implements ISto
                 badgesToKeepNames.add(btk.Badge_Name__c);
             }
     
-            List<Product_to_Delete__mdt> badgeProductsToDelete = [SELECT MasterLabel, Badge_Product__c, Trail_Product__c FROM Product_to_Delete__mdt];
+            List<Product_to_Delete__mdt> badgeProductsToDelete = new ProductsToDeleteSelector().selectAll();
     
             Map<String, List<String>> productsToDeleteMap = new Map<String, List<String>>();
             productsToDeleteMap.put('badges', new List<String>());
@@ -47,39 +47,31 @@ public with sharing class StorageManagementServiceImplementation implements ISto
             Map<Schema.DescribeSObjectResult, List<sObject>> sObjectsToClean = new Map<Schema.DescribeSObjectResult, List<sObject>>();
 
             orderedSObjects.add(Schema.SObjectType.trailheadapp__User_Badge__c);
-            sObjectsToClean.put(Schema.SObjectType.trailheadapp__User_Badge__c, [SELECT Id FROM trailheadapp__User_Badge__c]);
+            sObjectsToClean.put(Schema.SObjectType.trailheadapp__User_Badge__c, new UserBadgesSelector().selectAll());
 
             orderedSObjects.add(Schema.SObjectType.trailheadapp__Badge__c);
             sObjectsToClean.put(
                 Schema.SObjectType.trailheadapp__Badge__c,
-                [
-                    SELECT Id
-                    FROM trailheadapp__Badge__c
-                    WHERE (trailheadapp__Products__c IN :productsToDeleteMap.get('badges') AND Name NOT IN :badgesToKeepNames) OR trailheadapp__Archived__c = true
-                ]
+                new BadgesSelector().selectAllArchivedOrInProductsToDelete(productsToDeleteMap.get('badges'), badgesToKeepNames)
             );
 
             orderedSObjects.add(Schema.SObjectType.trailheadapp__Trail__c);
             sObjectsToClean.put(
                 Schema.SObjectType.trailheadapp__Trail__c,
-                [
-                    SELECT Id
-                    FROM trailheadapp__Trail__c
-                    WHERE trailheadapp__Products__c IN : productsToDeleteMap.get('trails') OR trailheadapp__Archived__c = true
-                ]
+                new TrailsSelector().selectAllArchivedOrInProductsToDelete(productsToDeleteMap.get('trails'))
             );
 
             orderedSObjects.add(Schema.SObjectType.trailheadapp__Debug_Log__c);
-            sObjectsToClean.put(Schema.SObjectType.trailheadapp__Debug_Log__c, [SELECT Id FROM trailheadapp__Debug_Log__c]);
+            sObjectsToClean.put(Schema.SObjectType.trailheadapp__Debug_Log__c, new DebugLogsSelector().selectAll());
             orderedSObjects.add(Schema.SObjectType.trailheadapp__Trailmix__c);
-            sObjectsToClean.put(Schema.SObjectType.trailheadapp__Trailmix__c, [SELECT Id FROM trailheadapp__Trailmix__c]);
+            sObjectsToClean.put(Schema.SObjectType.trailheadapp__Trailmix__c, new TrailmixesSelector().selectAll());
 
             // I have a lot to say about these next 9 lines => https://github.com/learnbenlearn/RecommendedBadges/wiki/StorageManagement-and-Deleting-ScratchOrgInfos
             try {
                 orderedSObjects.add(Schema.describeSObjects(new List<String>{'ScratchOrgInfo'})[0]);
                 sObjectsToClean.put(
                     Schema.describeSObjects(new List<String>{'ScratchOrgInfo'})[0],
-                    Database.query('SELECT Id FROM ScratchOrgInfo WHERE Status != \'Active\'')
+                    new ScratchOrgInfosSelector().selectAllNotActive()
                 );
             } catch(NoAccessException e) {
                 // ignore - better pattern than this?

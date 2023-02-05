@@ -1,7 +1,7 @@
 /**
  * @description       : Apex controller for recommendedBadgeMixContainer LWC.
  * @author            : Ben Learn
- * @last modified on  : 12-30-2022
+ * @last modified on  : 01-29-2023
  * @last modified by  : Ben Learn
 **/
 public without sharing class RecommendedBadgeMixController {
@@ -14,13 +14,7 @@ public without sharing class RecommendedBadgeMixController {
     **/
     @AuraEnabled(cacheable=true)
     public static SetupDataWrapper getSetupData() {
-        List<Mix_Category__c> mixCategories = [
-            SELECT Name, Recommended_Badge_Mix__r.Name, 
-            (SELECT Description__c, Level__c, Trail_Name__c, URL__c FROM Recommended_Trails__r), 
-            (SELECT Badge_Name__c, Description__c, Level__c, Type__c, URL__c FROM Recommended_Badges__r) 
-            FROM Mix_Category__c WHERE Recommended_Badge_Mix__r.Private_Mix__c = false ORDER BY Name
-        ];
-
+        List<Mix_Category__c> mixCategories = new MixCategoriesSelector().selectRecommendedBadgesAndTrails();
         Map<String, List<Mix_Category__c>> categoriesByMix = new Map<String, List<Mix_Category__c>>();
 
         for(Mix_Category__c mixCategory : mixCategories) {
@@ -33,7 +27,7 @@ public without sharing class RecommendedBadgeMixController {
             }
         }
 
-        List<Recommended_Badge_Mix__c> defaultMix = [SELECT Name FROM Recommended_Badge_Mix__c WHERE Default_Badge_Mix__c = true];
+        List<Recommended_Badge_Mix__c> defaultMix = new RecommendedBadgeMixesSelector().selectDefaultMix();
         String defaultMixName;
         if(defaultMix.size() > 0) {
             defaultMixName = defaultMix[0].Name;

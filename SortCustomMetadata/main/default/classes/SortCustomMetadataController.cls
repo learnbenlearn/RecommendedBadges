@@ -1,7 +1,7 @@
 /**
  * @description       : Apex class to retrieve records of the Sortable Field custom metadata type.
  * @author            : Ben Learn
- * @last modified on  : 12-30-2022
+ * @last modified on  : 01-29-2023
  * @last modified by  : Ben Learn
 **/
 public without sharing class SortCustomMetadataController {
@@ -13,11 +13,6 @@ public without sharing class SortCustomMetadataController {
     **/
     @AuraEnabled(cacheable=true)
     public static List<Sortable_Field__mdt> getSortOptions(String componentName) {
-        return [
-            SELECT MasterLabel, Field_API_Name__c, 
-            (SELECT MasterLabel, Sort_Order__c FROM Sortable_Field_Values__r) 
-            FROM Sortable_Field__mdt 
-            WHERE Sortable_LWC__r.MasterLabel = :componentName
-        ];
+        return new SortableFieldsSelector().selectByComponentNameWithSortableFieldValues(componentName);
     }
 }

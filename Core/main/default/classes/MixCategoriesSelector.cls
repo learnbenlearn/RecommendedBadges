@@ -16,7 +16,7 @@ public inherited sharing class MixCategoriesSelector extends ApplicationSelector
         return Mix_Category__c.sObjectType;
     }
 
-    public List<Mix_Category__c> selectByIdWithRecommendedBadgeMixNames(List<Id> mixCategoryIds) {
+    public List<Mix_Category__c> selectByIdWithRecommendedBadgeMixNames(Set<Id> mixCategoryIds) {
         fflib_QueryFactory mixCategoriesQueryFactory = newQueryFactory();
 
         new RecommendedBadgeMixesSelector().configureQueryFactoryFields(
@@ -54,11 +54,11 @@ public inherited sharing class MixCategoriesSelector extends ApplicationSelector
 
         List<Schema.ChildRelationship> mixCategoriesChildRelationships = Schema.SObjectType.Mix_Category__c.getChildRelationships();
         for(Schema.ChildRelationship childRelationship : mixCategoriesChildRelationships) {
-            if(childRelationship.getChildSObject() == Recommended_Badge__c.getSObjectType()) {
+            if(childRelationship.getChildSObject() == Recommended_Badge__c.sObjectType) {
                 recommendedBadgesQueryFactory = new RecommendedBadgesSelector().
                     addQueryFactorySubselect(mixCategoriesQueryFactory, childRelationship.getRelationshipName(), true).
                     selectFieldSet(Schema.SObjectType.Recommended_Badge__c.fieldSets.RecommendedBadgeMix, true);
-            } else if(childRelationship.getChildSObject() == Recommended_Trail__c.getSObjectType()) {
+            } else if(childRelationship.getChildSObject() == Recommended_Trail__c.sObjectType) {
                 recommendedTrailsQueryFactory = new RecommendedTrailsSelector().
                     addQueryFactorySubselect(mixCategoriesQueryFactory, childRelationship.getRelationshipName(), true).
                     selectFieldSet(Schema.SObjectType.Recommended_Trail__c.fieldSets.RecommendedBadgeMix, true); 

@@ -1,7 +1,7 @@
 /**
  * @description       : Selector class for Sortable Field custom metadata type.
  * @author            : Ben Learn
- * @last modified on  : 01-28-2023
+ * @last modified on  : 01-29-2023
  * @last modified by  : Ben Learn
 **/
 public inherited sharing class SortableFieldsSelector extends ApplicationSelector {
@@ -22,7 +22,7 @@ public inherited sharing class SortableFieldsSelector extends ApplicationSelecto
         String relationshipName;
         List<Schema.ChildRelationship> sortableFieldsChildRelationships = Schema.SObjectType.Sortable_Field__mdt.getChildRelationships();
         for(Schema.ChildRelationship childRelationship : sortableFieldsChildRelationships) {
-            if(childRelationship.getChildSObject() == Sortable_Field_Value__mdt.getSObjectType()) {
+            if(childRelationship.getChildSObject() == Sortable_Field_Value__mdt.sObjectType) {
                 relationshipName = childRelationship.getRelationshipName();
             }
         }

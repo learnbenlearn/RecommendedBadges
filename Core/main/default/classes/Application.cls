@@ -1,7 +1,7 @@
 /**
  * @description       : Application class for fflib Factory definitions.
  * @author            : Ben Learn
- * @last modified on  : 01-22-2023
+ * @last modified on  : 01-29-2023
  * @last modified by  : Ben Learn
 **/
 public class Application {
@@ -11,9 +11,7 @@ public class Application {
     // Service factory instantiation
     private static Map<Type, Type> defaultServiceImplementationMap = new Map<Type, Type>();
     static {
-        List<DefaultServiceImplementation__mdt> defaultServiceImplementations = [
-            SELECT DeveloperName, DefaultImplementation__c FROM DefaultServiceImplementation__mdt
-        ];
+        List<DefaultServiceImplementation__mdt> defaultServiceImplementations = new DefaultServiceImplementationsSelector().selectAll();
         for(DefaultServiceImplementation__mdt dsi : defaultServiceImplementations) {
             defaultServiceImplementationMap.put(Type.forName(dsi.DeveloperName), Type.forName(dsi.DefaultImplementation__c));
         }
@@ -40,10 +38,10 @@ public class Application {
             selectorsBySObject.put(Schema.describeSObjects(new List<String>{'ScratchOrgInfo'})[0].getSObjectType(), ScratchOrgInfosSelector.class);
         }
 
-        List<DefaultObjectSelector__mdt> defaultObjectSelectors = [SELECT DeveloperName, DefaultSelector__c FROM DefaultObjectSelector__mdt];
+        List<DefaultObjectSelector__mdt> defaultObjectSelectors = new DefaultObjectSelectorsSelector().selectAll();
         for(DefaultObjectSelector__mdt defaultObjectSelector : defaultObjectSelectors) {
             selectorsBySObject.put(
-                Schema.describeSObjects(new List<String>{defaultObjectSelector.DeveloperName})[0].getSObjectType(), 
+                Schema.describeSObjects(new List<String>{defaultObjectSelector.DeveloperName + defaultObjectSelector.Suffix__c})[0].getSObjectType(), 
                 Type.forName(defaultObjectSelector.DefaultSelector__c)
             );
         }

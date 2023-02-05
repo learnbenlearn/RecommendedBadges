@@ -1,7 +1,7 @@
 /**
  * @description       : Selector class for Product to Delete custom metadata type.
  * @author            : Ben Learn
- * @last modified on  : 01-22-2023
+ * @last modified on  : 01-29-2023
  * @last modified by  : Ben Learn
 **/
 public inherited sharing class ProductsToDeleteSelector extends ApplicationSelector {
@@ -18,6 +18,6 @@ public inherited sharing class ProductsToDeleteSelector extends ApplicationSelec
     }
 
     public List<Product_to_Delete__mdt> selectAll() {
-        return (List<Product_to_Delete__mdt>) Database.query(newQueryFactory.toSOQL());
+        return (List<Product_to_Delete__mdt>) Database.query(newQueryFactory().toSOQL());
     }
 }

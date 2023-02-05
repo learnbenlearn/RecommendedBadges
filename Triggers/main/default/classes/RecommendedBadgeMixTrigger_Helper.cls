@@ -3,7 +3,7 @@
  *                      record is marked as the default.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 09-12-2022
+ * @last modified on  : 01-29-2023
  * @last modified by  : Ben Learn
 **/
 public without sharing class RecommendedBadgeMixTrigger_Helper {
@@ -14,13 +14,8 @@ public without sharing class RecommendedBadgeMixTrigger_Helper {
     **/
     public static void enforceSingleDefaultMix(Map<Id, Recommended_Badge_Mix__c> upsertedBadgeMixes) {
         Id defaultMixId;
-
         List<Id> upsertedBadgeMixIds = new List<Id>(upsertedBadgeMixes.keySet());
-        List<Recommended_Badge_Mix__c> existingDefaultBadgeMixes = [
-            SELECT Name 
-            FROM Recommended_Badge_Mix__c 
-            WHERE Id NOT IN :upsertedBadgeMixIds AND Default_Badge_Mix__c = true
-        ];
+        List<Recommended_Badge_Mix__c> existingDefaultBadgeMixes = new RecommendedBadgeMixesSelector().selectExistingDefaultMix(upsertedBadgeMixIds);
         
         for(Id rbmId : upsertedBadgeMixes.keySet()) {
             if(upsertedBadgeMixes.get(rbmId).Default_Badge_Mix__c) {

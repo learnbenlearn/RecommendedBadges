@@ -3,13 +3,13 @@
  *                      to new Recommended_Trail__c records.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 02-25-2022
+ * @last modified on  : 01-29-2023
  * @last modified by  : Ben Learn
 **/
 trigger RecommendedTrailTrigger on Recommended_Trail__c (before insert) {
     switch on Trigger.operationType {
         when BEFORE_INSERT {
-            BadgeTrigger_Helper.populateJunctionPicklists(Trigger.new, 'Recommended_Trail__c');
+            BadgeTrigger_Helper.populateJunctionPicklists(Trigger.new, Schema.SObjectType.Recommended_Trail__c.getName());
         }
     }
 }

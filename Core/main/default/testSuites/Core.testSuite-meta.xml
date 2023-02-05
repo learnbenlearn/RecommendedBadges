@@ -4,6 +4,7 @@
     <testClassName>AsyncApexJobsSelectorTests</testClassName>
     <testClassName>BadgesSelectorTests</testClassName>
     <testClassName>DebugLogsSelectorTests</testClassName>
+    <testClassName>DefaultObjectSelectorsSelectorTests</testClassName>
     <testClassName>DefaultServiceImplementationSelectorTest</testClassName>
     <testClassName>MixCategoriesSelectorTests</testClassName>
     <testClassName>RecommendedBadgeMixesSelectorTests</testClassName>

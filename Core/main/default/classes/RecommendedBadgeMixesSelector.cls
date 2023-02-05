@@ -28,15 +28,15 @@ public inherited sharing class RecommendedBadgeMixesSelector extends Application
         return (RecommendedBadgeMixesSelector) super.enableFieldSet(fieldSet);
     }
 
-    public List<Recommended_Badge_Mix__c> selectDefaultMixes() {
-        return this.selectExistingDefaultMixes(null);
+    public List<Recommended_Badge_Mix__c> selectDefaultMix() {
+        return this.selectExistingDefaultMix(null);
     }
 
-    public List<Recommended_Badge_Mix__c> selectExistingDefaultMixes(List<Id> mixIdsToExclude) {
+    public List<Recommended_Badge_Mix__c> selectExistingDefaultMix(List<Id> mixIdsToExclude) {
         if(mixIdsToExclude != null) {
             return (List<Recommended_Badge_Mix__c>) Database.query(
                 newQueryFactory().
-                setCondition('Id NOT IN :midIdsToExclude AND Default_Badge_Mix__c=true').
+                setCondition('Id NOT IN :mixIdsToExclude AND Default_Badge_Mix__c=true').
                 toSOQL()
             );
         } else {

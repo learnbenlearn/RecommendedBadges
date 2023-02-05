@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for BadgeTrigger_Helper class.
  * @author            : Ben Learn
- * @last modified on  : 01-13-2023
+ * @last modified on  : 02-05-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -20,52 +20,17 @@ private class BadgeTrigger_HelperTests {
 
     @testSetup
     private static void generateData(){
-        List<trailheadapp__Badge__c> testBadges = new List<trailheadapp__Badge__c>();
-        List<trailheadapp__Trail__c> testTrails = new List<trailheadapp__Trail__c>();
+        TestDataFactory.Badge badgeGenerator = new TestDataFactory.Badge(true, false);
+        badgeGenerator.execute();
 
-        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = new List<Recommended_Badge_Mix__c>{
-            new Recommended_Badge_Mix__c(Name='Test')
-        };
-        insert testRecommendedBadgeMixes;
+        TestDataFactory.Trail trailGenerator = new TestDataFactory.Trail(true, false);
+        trailGenerator.execute();
 
-        List<Mix_Category__c> testMixCategories = new List<Mix_Category__c>{
-            new Mix_Category__c(
-                Name='Test',
-                Recommended_Badge_Mix__c=testRecommendedBadgeMixes[0].Id
-            )
-        };
-        insert testMixCategories;
+        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 1, false);
+        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = recommendedBadgeMixGenerator.execute();
 
-        List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>();
-        List<Recommended_Trail__c> testRecommendedTrails = new List<Recommended_Trail__c>();
-
-        for(Integer i = 0; i < 200; i++) {
-            trailheadapp__Badge__c badge = new trailheadapp__Badge__c(
-                Name='Test Badge ' + i,
-                trailheadapp__Level__c=levels[Integer.valueOf(Math.floor(Math.random()*levels.size()))],
-                trailheadapp__Type__c=types[Integer.valueOf(Math.floor(Math.random()*types.size()))],
-                trailheadapp__API_Name__c='Test_Badge_' + i,
-                trailheadapp__Description__c='Test Description ' + i,
-                trailheadapp__Namespace__c='Test Namespace ' + i,
-                trailheadapp__URL__c='www.test' + i + '.com',
-                trailheadapp__Icon__c='www.testicon' + i + '.com'
-            );
-            testBadges.add(badge);
-
-            trailheadapp__Trail__c trail = new trailheadapp__Trail__c(
-                Name='Test Trail ' + i,
-                trailheadapp__Level__c=levels[Integer.valueOf(Math.floor(Math.random()*levels.size()))],
-                trailheadapp__API_Name__c='Test_Trail_' + i,
-                trailheadapp__Description__c='Test Description ' + i,
-                trailheadapp__Namespace__c='Test Namespace ' + i,
-                trailheadapp__URL__c='www.test' + i + '.com',
-                trailheadapp__Icon__c='www.testicon' + i + '.com'
-            );
-            testTrails.add(trail);
-        }
-
-        insert testBadges;
-        insert testTrails;
+        TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, false, 1, testRecommendedBadgeMixes);
+        mixCategoryGenerator.execute();
     }
 
     @isTest
@@ -106,14 +71,10 @@ private class BadgeTrigger_HelperTests {
         );
 
         Test.startTest();
-        List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>();
-        for(Integer i = 0; i < 200; i++) {
-            testRecommendedBadges.add(new Recommended_Badge__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Badge__c=testBadgeMap.values()[i].Id
-            ));
-        }
-        insert testRecommendedBadges;
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
+            true, false, testBadgeMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+        );
+        recommendedBadgeGenerator.execute();
         Test.stopTest();
 
         List<Recommended_Badge__c> resultRecommendedBadges = [SELECT Badge__c, Level__c, Type__c FROM Recommended_Badge__c];
@@ -243,13 +204,10 @@ private class BadgeTrigger_HelperTests {
         List<Recommended_Trail__c> testRecommendedTrails = new List<Recommended_Trail__c>();
 
         Test.startTest();
-        for(Integer i = 0; i < 200; i++) {
-            testRecommendedTrails.add(new Recommended_Trail__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Trail__c=testTrailMap.values()[i].Id
-            ));
-        }
-        insert testRecommendedTrails;
+        TestDataFactory.RecommendedTrail recommendedTrailGenerator = new TestDataFactory.RecommendedTrail(
+            true, false, testTrailMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+        );
+        recommendedTrailGenerator.execute();
         Test.stopTest();
 
         List<Recommended_Trail__c> resultRecommendedTrails = [SELECT Trail__c, Level__c FROM Recommended_Trail__c];
@@ -317,14 +275,10 @@ private class BadgeTrigger_HelperTests {
         Map<Id, trailheadapp__Trail__c> testTrailMap = new Map<Id, trailheadapp__Trail__c>([SELECT Id, trailheadapp__Level__c FROM trailheadapp__Trail__c]);
 
         Test.startTest();
-        List<Recommended_Trail__c> testRecommendedTrails = new List<Recommended_Trail__c>();
-        for(trailheadapp__Trail__c trail : testTrailMap.values()) {
-            testRecommendedTrails.add(new Recommended_Trail__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Trail__c=trail.Id
-            ));
-        }
-        insert testRecommendedTrails;
+        TestDataFactory.RecommendedTrail recommendedTrailGenerator = new TestDataFactory.RecommendedTrail(
+            true, false, testTrailMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+        );
+        recommendedTrailGenerator.execute();
         Test.stopTest();
 
         List<Recommended_Trail__c> resultRecommendedTrails = [SELECT Trail__c, Level__c FROM Recommended_Trail__c];
@@ -373,14 +327,10 @@ private class BadgeTrigger_HelperTests {
 
         try {
             Test.startTest();
-            List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>();
-            for(trailheadapp__Badge__c badge : testBadges) {
-                testRecommendedBadges.add(new Recommended_Badge__c(
-                    Mix_Category__c=testMixCategories[0].Id,
-                    Badge__c=badge.Id
-                ));
-            }
-            insert testRecommendedBadges;
+            TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
+                true, false, testBadges, new List<Mix_Category__c>{testMixCategories[0]}
+            );
+            recommendedBadgeGenerator.execute();
             Test.stopTest();
         } catch(Exception e) {
             caughtException = true;
@@ -431,14 +381,8 @@ private class BadgeTrigger_HelperTests {
 
         Integer testBadgeIndex = Integer.valueOf(Math.floor(Math.random() * testBadges.size()));
 
-        List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>();
-
-        for(trailheadapp__Badge__c badge : testBadges) {
-            testRecommendedBadges.add(new Recommended_Badge__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Badge__c=badge.Id
-            ));
-        }
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(false, true, testBadges, new List<Mix_Category__c>{testMixCategories[0]});
+        List<Recommended_Badge__c> testRecommendedBadges = recommendedBadgeGenerator.execute();
 
         testRecommendedBadges.add(new Recommended_Badge__c(
             Mix_Category__c=testMixCategories[0].Id,
@@ -515,14 +459,8 @@ private class BadgeTrigger_HelperTests {
 
         Boolean caughtException = false;
         
-        List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>();
-
-        for(Integer i = 0; i < 200; i++) {
-            testRecommendedBadges.add(new Recommended_Badge__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Badge__c=testBadges[i].Id
-            ));
-        }
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(false, true, testBadges, new List<Mix_Category__c>{testMixCategories[0]});
+        List<Recommended_Badge__c> testRecommendedBadges = recommendedBadgeGenerator.execute();
 
         try {
             Test.startTest();
@@ -536,7 +474,6 @@ private class BadgeTrigger_HelperTests {
             Test.stopTest();
         } catch(Exception e) {
             caughtException = true;
-            System.debug(e.getMessage());
         }
 
         System.assert(!caughtException, 'No exception expected.');
@@ -616,17 +553,12 @@ private class BadgeTrigger_HelperTests {
         Boolean caughtException = false;
         String exceptionMessage;
 
-        List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>();
-        for(trailheadapp__Badge__c badge : testBadges) {
-            testRecommendedBadges.add(new Recommended_Badge__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Badge__c=badge.Id
-            ));
-            testRecommendedBadges.add(new Recommended_Badge__c(
-                Mix_Category__c=testMixCategories[1].Id,
-                Badge__c=badge.Id
-            ));
-        }
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(false, true, testBadges, new List<Mix_Category__c>{testMixCategories[0]});
+        List<Recommended_Badge__c> testRecommendedBadges = recommendedBadgeGenerator.execute();
+        TestDataFactory.RecommendedBadge duplicateRecommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
+            false, true, testBadges, new List<Mix_Category__c>{testMixCategories[1]}
+        );
+        testRecommendedBadges.addAll((List<Recommended_Badge__c>) duplicateRecommendedBadgeGenerator.execute());
 
         try {
             Test.startTest();
@@ -789,14 +721,10 @@ private class BadgeTrigger_HelperTests {
             [SELECT Id, trailheadapp__Level__c, trailheadapp__Type__c FROM trailheadapp__Badge__c]
         );
         
-        List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>();
-        for(trailheadapp__Badge__c badge : testBadgeMap.values()) {
-            testRecommendedBadges.add(new Recommended_Badge__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Badge__c=badge.Id
-            ));
-        }
-        insert testRecommendedBadges;
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
+            true, false, testBadgeMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+        );
+        recommendedBadgeGenerator.execute();
 
         Test.startTest();
         for(trailheadapp__Badge__c badge : testBadgeMap.values()) {
@@ -829,14 +757,10 @@ private class BadgeTrigger_HelperTests {
             [SELECT Id, trailheadapp__Description__c, trailheadapp__Level__c, trailheadapp__Type__c FROM trailheadapp__Badge__c]
         );
 
-        List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>();
-        for(trailheadapp__Badge__c badge : testBadgeMap.values()) {
-            testRecommendedBadges.add(new Recommended_Badge__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Badge__c=badge.Id
-            ));
-        }
-        insert testRecommendedBadges;
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
+            true, false, testBadgeMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+        );
+        recommendedBadgeGenerator.execute();
 
         Test.startTest();
         for(trailheadapp__Badge__c badge : testBadgeMap.values()) {
@@ -923,19 +847,13 @@ private class BadgeTrigger_HelperTests {
     @isTest
     private static void testUpdateJunctionTypesAndLevels_bulkTrails() {
         List<Mix_Category__c> testMixCategories = [SELECT Id FROM Mix_Category__c];
-
         Map<Id, trailheadapp__Trail__c> testTrailMap = new Map<Id, trailheadapp__Trail__c>(
             [SELECT Id, trailheadapp__Level__c FROM trailheadapp__Trail__c]
         );
-
-        List<Recommended_Trail__c> testRecommendedTrails = new List<Recommended_Trail__c>();
-        for(trailheadapp__Trail__c trail : testTrailMap.values()) {
-            testRecommendedTrails.add(new Recommended_Trail__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Trail__c=trail.Id
-            ));
-        }
-        insert testRecommendedTrails;
+        TestDataFactory.RecommendedTrail recommendedTrailGenerator = new TestDataFactory.RecommendedTrail(
+            true, false, testTrailMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+        );
+        recommendedTrailGenerator.execute();
 
         Test.startTest();
         String currentLevel;
@@ -961,15 +879,10 @@ private class BadgeTrigger_HelperTests {
         Map<Id, trailheadapp__Trail__c> testTrailMap = new Map<Id, trailheadapp__Trail__c>(
             [SELECT Id, trailheadapp__Description__c, trailheadapp__Level__c FROM trailheadapp__Trail__c]
         );
-
-        List<Recommended_Trail__c> testRecommendedTrails = new List<Recommended_Trail__c>();
-        for(trailheadapp__Trail__c trail : testTrailMap.values()) {
-            testRecommendedTrails.add(new Recommended_Trail__c(
-                Mix_Category__c=testMixCategories[0].Id,
-                Trail__c=trail.Id
-            ));
-        }
-        insert testRecommendedTrails;
+        TestDataFactory.RecommendedTrail recommendedTrailGenerator = new TestDataFactory.RecommendedTrail(
+            true, false, testTrailMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+        );
+        recommendedTrailGenerator.execute();
 
         Test.startTest();
         for(trailheadapp__Trail__c trail : testTrailMap.values()) {
