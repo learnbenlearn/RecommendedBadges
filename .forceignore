@@ -1,6 +1,5 @@
 # List files or directories below to ignore them when running force:source:push, force:source:pull, and force:source:status
 # More information: https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm
-#
 
 package.xml
 
@@ -24,11 +23,11 @@ Account-Account %28Support%29 Layout.layout
 # Ignored Packages
 PrivateMixView
 #Core
-LWCUtils
+#LWCUtils
 LWCErrorHandler
 fflib
-RecommendedBadgeMix
-SortCustomMetadata
+#RecommendedBadgeMix
+#SortCustomMetadata
 StorageManagement
 TaskList
 Triggers

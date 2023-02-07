@@ -1,7 +1,7 @@
 /**
  * @description       : Apex controller for recommendedBadgeMixContainer LWC.
  * @author            : Ben Learn
- * @last modified on  : 01-29-2023
+ * @last modified on  : 02-07-2023
  * @last modified by  : Ben Learn
 **/
 public without sharing class RecommendedBadgeMixController {
@@ -10,10 +10,10 @@ public without sharing class RecommendedBadgeMixController {
         recommended trails for public recommended badge mixes, as well as the name of the default mix -
         for recommendedBadgeMixContainer.
     * @author Ben Learn | 03-11-2022 
-    * @return SetupDataWrapper 
+    * @return RecommendedBadgeMixWrapper 
     **/
     @AuraEnabled(cacheable=true)
-    public static SetupDataWrapper getSetupData() {
+    public static RecommendedBadgeMixWrapper getData() {
         List<Mix_Category__c> mixCategories = new MixCategoriesSelector().selectRecommendedBadgesAndTrails();
         Map<String, List<Mix_Category__c>> categoriesByMix = new Map<String, List<Mix_Category__c>>();
 
@@ -35,8 +35,8 @@ public without sharing class RecommendedBadgeMixController {
             defaultMixName = mixCategories[0].Recommended_Badge_Mix__r.Name;
         }
         
-        SetupDataWrapper setupData = new SetupDataWrapper(categoriesByMix, defaultMixName);
+        RecommendedBadgeMixWrapper data = new RecommendedBadgeMixWrapper(categoriesByMix, defaultMixName);
 
-        return setupData;
+        return data;
     }
 }

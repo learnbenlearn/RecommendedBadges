@@ -1,6 +1,6 @@
 import { LightningElement, wire } from 'lwc';
 
-import getSetupData from '@salesforce/apex/RecommendedBadgeMixController.getSetupData';
+import getData from '@salesforce/apex/RecommendedBadgeMixController.getData';
 
 import getSortOptions from '@salesforce/apex/SortCustomMetadataController.getSortOptions';
 
@@ -62,8 +62,8 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         }
     }
 
-    @wire(getSetupData)
-    parseSetupData({error, data}) {
+    @wire(getData)
+    parseData({error, data}) {
         if(data) {
             this.categoriesByMix = data.categoriesByMix;
             this.populateMixDropdown(data.defaultMix);

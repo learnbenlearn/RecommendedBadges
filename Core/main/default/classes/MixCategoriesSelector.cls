@@ -1,7 +1,7 @@
 /**
  * @description       : Selector class for Mix Category custom object.
  * @author            : Ben Learn
- * @last modified on  : 02-05-2023
+ * @last modified on  : 02-07-2023
  * @last modified by  : Ben Learn
 **/
 public inherited sharing class MixCategoriesSelector extends ApplicationSelector {
@@ -69,6 +69,9 @@ public inherited sharing class MixCategoriesSelector extends ApplicationSelector
             Mix_Category__c.Recommended_Badge_Mix__c.getDescribe().getRelationshipName()
         );
 
-        return (List<Mix_Category__c>) Database.query(mixCategoriesQueryFactory.setCondition('Recommended_Badge_Mix__r.Private_Mix__c = false').toSOQL());
+        return (List<Mix_Category__c>) Database.query(
+            mixCategoriesQueryFactory.selectFieldSet(Schema.SObjectType.Mix_Category__c.fieldSets.RecommendedBadgeMix).
+            setCondition('Recommended_Badge_Mix__r.Private_Mix__c = false').toSOQL()
+        );
     }
 }    
