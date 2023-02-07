@@ -17,6 +17,8 @@ public without sharing class RecommendedBadgeMixController {
         List<Mix_Category__c> mixCategories = new MixCategoriesSelector().selectRecommendedBadgesAndTrails();
         Map<String, List<Mix_Category__c>> categoriesByMix = new Map<String, List<Mix_Category__c>>();
 
+        System.debug(mixCategories[0].Recommended_Badge_Mix__r.Last_Updated_Date__c);
+
         for(Mix_Category__c mixCategory : mixCategories) {
             if(categoriesByMix.get(mixCategory.Recommended_Badge_Mix__r.Name) == null) {
                 categoriesByMix.put(mixCategory.Recommended_Badge_Mix__r.Name, new List<Mix_Category__c>{mixCategory});

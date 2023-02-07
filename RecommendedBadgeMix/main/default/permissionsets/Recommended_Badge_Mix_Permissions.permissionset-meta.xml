@@ -4,10 +4,6 @@
         <apexClass>RecommendedBadgeMixController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <classAccesses>
-        <apexClass>SetupDataWrapper</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Recommended Badge Mix Permissions</label>
 </PermissionSet>

@@ -40,6 +40,8 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     categoriesByMix;
     displayTable;
     isLoading = true;
+    currentLastUpdatedDate;
+    lastUpdatedDatesByRecommendedBadgeMix;
     mixLabel = 'Select Badge Mix';
     mixOptions;
     mixValue;
@@ -70,7 +72,9 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
 
             this.parseTreegridData();
 
+            this.currentLastUpdatedDate = this.lastUpdatedDatesByRecommendedBadgeMix[data.defaultMix];
             this.treegridData = this.treegridDataByMix[data.defaultMix];
+            console.log(this.currentLastUpdatedDate);
 
             this.displayTable = true;
             this.isLoading = false;
@@ -105,7 +109,9 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     }
 
     parseTreegridData() {
+        this.lastUpdatedDatesByRecommendedBadgeMix = {};
         this.treegridDataByMix = {};
+
         for(let mix in this.categoriesByMix) {
             let extensibleMix = this.categoriesByMix[mix].map(item => {
                 let newCategoryChildren = [];
@@ -117,10 +123,9 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                             Name: badge.Badge_Name__c,
                             Level__c: badge.Level__c,
                             Type__c: badge.Type__c,
-                            URL__c: badge.URL__c
+                            URL__c: badge.URL__c,
                         });
                     }
-
                 }
 
                 if(item.Recommended_Trails__r) {
@@ -139,8 +144,14 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                     Id: item.Id,
                     Name: item.Name,
                     URL__c: '/' + item.Id,
-                    _children: newCategoryChildren
+                    _children: newCategoryChildren,
+                    Recommended_Badge_Mix__c: item.Recommended_Badge_Mix__c,
+                    RecommendedBadgeMixLastUpdatedDate: item.Recommended_Badge_Mix__r.Last_Updated_Date__c
                 };
+
+                if(!(item.Recommended_Badge_Mix__r.Name in this.lastUpdatedDatesByRecommendedBadgeMix)) {
+                    this.lastUpdatedDatesByRecommendedBadgeMix[item.Recommended_Badge_Mix__r.Name] = item.Recommended_Badge_Mix__r.Last_Updated_Date__c;
+                }
 
                 return newCategory;
             });
@@ -150,6 +161,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     }
 
     handleMixChange(event) {
+        this.currentLastUpdatedDate = this.lastUpdatedDatesByRecommendedBadgeMix[event.detail];
         this.treegridData = this.treegridDataByMix[event.detail];
     }
 

@@ -2,7 +2,7 @@
   @description       : Container for a dropdown and treegrid to display recommended badge mixes.
   @author            : Ben Learn
   @group             : 
-  @last modified on  : 01-07-2023
+  @last modified on  : 02-07-2023
   @last modified by  : Ben Learn
 -->
 <template>
@@ -17,7 +17,15 @@
                 <c-dropdown label={sortLabel} value={sortValue} options={sortOptions} ondropdownchange={handleSortChange}></c-dropdown>
             </div>
 
-            <div class="slds-col slds-size_1-of-6"></div>
+            <div class="slds-col slds-size_1-of-4"></div>
+
+            <div class="slds-col slds-size_1-of-4 slds-text-align_right">
+                <template if:true={displayTable}>
+                    Last Updated &nbsp;
+                    <lightning-formatted-date-time value={currentLastUpdatedDate} year="numeric" month="short" day="numeric" time-zone="UTC"></lightning-formatted-date-time>
+                </template>
+            </div>
+
             <div class="slds-col slds-size_1-of-3">
                 <lightning-button variant="brand" label="Expand All" onclick={handleExpandAll}></lightning-button>
                 &nbsp;&nbsp;
