@@ -4,7 +4,7 @@
       "path": "Core",
       "package": "Core",
       "versionName": "Akron",
-      "versionNumber": "1.7.0.NEXT",
+      "versionNumber": "1.8.0.NEXT",
       "default": false,
       "dependencies": [
         {
@@ -21,7 +21,7 @@
       "default": false,
       "package": "TaskList",
       "versionName": "Akron",
-      "versionNumber": "1.13.0.NEXT"
+      "versionNumber": "1.14.0.NEXT"
     },
     {
       "path": "LWCUtils",
@@ -35,7 +35,7 @@
       "default": false,
       "package": "Triggers",
       "versionName": "Akron",
-      "versionNumber": "1.10.0.NEXT",
+      "versionNumber": "1.11.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -46,7 +46,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.8.0.LATEST"
         }
       ]
     },
@@ -55,7 +55,7 @@
       "default": false,
       "package": "StorageManagement",
       "versionName": "Akron",
-      "versionNumber": "1.8.0.NEXT",
+      "versionNumber": "1.9.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -69,11 +69,11 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.8.0.LATEST"
         },
         {
           "package": "LWCErrorHandler",
-          "versionNumber": "1.0.0.LATEST"
+          "versionNumber": "1.1.0.LATEST"
         }
       ]
     },
@@ -93,7 +93,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.8.0.LATEST"
         },
         {
           "package": "LWCUtils",
@@ -101,7 +101,7 @@
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.2.0.LATEST"
+          "versionNumber": "1.3.0.LATEST"
         }
       ]
     },
@@ -164,7 +164,7 @@
       "default": false,
       "package": "SortCustomMetadata",
       "versionName": "Akron",
-      "versionNumber": "1.2.0.NEXT"
+      "versionNumber": "1.3.0.NEXT"
     },
     {
       "path": "unpackageable",

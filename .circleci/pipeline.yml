@@ -93,7 +93,7 @@ jobs:
             then
               exit 1
             else
-              sfdx force:org:create -v $HUB_ALIAS -s -f $SCRATCH_ORG_DEFINITION_FILE -a $TEST_ORG_ALIAS -w $WAIT_TIME -d 1
+              sf env create scratch -f $SCRATCH_ORG_DEFINITION_FILE -v $HUB_ALIAS -d -a $TEST_ORG_ALIAS -w $WAIT_TIME -y 1
             fi
       - run: 
           name: Install External Dependencies in Scratch Org
@@ -102,7 +102,7 @@ jobs:
             packagesToInstall+=$( (npm run --silent getDependenciesBeforeTesting) )
             echo $packagesToInstall
             for packageToInstall in ${packagesToInstall[@]};
-                do sfdx package install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
+                do sfdx package install -p $packageToInstall -o $TEST_ORG_ALIAS -r -w $WAIT_TIME
             done
       - when:
             condition:
