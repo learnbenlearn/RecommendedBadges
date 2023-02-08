@@ -84,7 +84,7 @@ jobs:
                   packagesToUpdate+=$( (npm run --silent getSortedPackagesToUpdate) )
                   echo ${packagesToUpdate[@]}
                   for packageToUpdate in ${packagesToUpdate[@]};
-                      do sfdx force:package:version:create -p $packageToUpdate -x -w $WAIT_TIME --skipvalidation
+                      do sfdx package version create -p $packageToUpdate -x -w $WAIT_TIME --skip-validation
                   done
       - run:
           name: Create Scratch Org for Running Tests
@@ -102,7 +102,7 @@ jobs:
             packagesToInstall+=$( (npm run --silent getDependenciesBeforeTesting) )
             echo $packagesToInstall
             for packageToInstall in ${packagesToInstall[@]};
-                do sfdx force:package:beta:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
+                do sfdx package install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
             done
       - when:
             condition:
@@ -123,7 +123,7 @@ jobs:
                     packagesToInstall=()
                     packagesToInstall+=$( (npm run --silent getSortedPackagesToInstall) )
                     for packageToInstall in ${packagesToInstall[@]};
-                      do sfdx force:package:beta:install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
+                      do sfdx package install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
                     done
       - run:
           name: Run Tests in Scratch Org
