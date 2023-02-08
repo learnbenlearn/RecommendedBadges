@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for RecommendedBadgeMixController.
  * @author            : Ben Learn
- * @last modified on  : 02-05-2023
+ * @last modified on  : 02-07-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -34,29 +34,29 @@ private class RecommendedBadgeMixControllerTests {
     }
 
     @isTest
-    private static void getSetupData_testDefaultBadgeMix() {
+    private static void getData_testDefaultBadgeMix() {
         Map<String, List<Mix_Category__c>> testCategoriesByMix = generateData(true);
         String defaultMixName = [SELECT Name FROM Recommended_Badge_Mix__c WHERE Default_Badge_Mix__c = true][0].Name;
 
         Test.startTest();
-        SetupDataWrapper testSetupData = RecommendedBadgeMixController.getSetupData();
+        RecommendedBadgeMixWrapper testData = RecommendedBadgeMixController.getData();
         Test.stopTest();
 
         for(String mix : testCategoriesByMix.keySet()) {
             for(Integer i = 0; i < testCategoriesByMix.get(mix).size(); i++) {
-                Assert.areEqual(testCategoriesByMix.get(mix)[i].Id, testSetupData.categoriesByMix.get(mix)[i].Id, 'Expected Mix Categories by Recommended Badge Mix name to be equal.');
+                Assert.areEqual(testCategoriesByMix.get(mix)[i].Id, testData.categoriesByMix.get(mix)[i].Id, 'Expected Mix Categories by Recommended Badge Mix name to be equal.');
             }
         }
 
         Assert.areEqual(
             defaultMixName, 
-            testSetupData.defaultMix,
+            testData.defaultMix,
             'Expected name of default mix.'
         );
     }
 
     @isTest
-    private static void getSetupData_testNoDefaultBadgeMix() {
+    private static void getData_testNoDefaultBadgeMix() {
         Map<String, List<Mix_Category__c>> testCategoriesByMix = generateData(false);
         String defaultMixName = [
             SELECT Recommended_Badge_Mix__r.Name 
@@ -65,18 +65,18 @@ private class RecommendedBadgeMixControllerTests {
         ][0].Recommended_Badge_Mix__r.Name;
 
         Test.startTest();
-        SetupDataWrapper testSetupData = RecommendedBadgeMixController.getSetupData();
+        RecommendedBadgeMixWrapper testData = RecommendedBadgeMixController.getData();
         Test.stopTest();
 
         for(String mix : testCategoriesByMix.keySet()) {
             for(Integer i = 0; i < testCategoriesByMix.get(mix).size(); i++) {
-                Assert.areEqual(testCategoriesByMix.get(mix)[i].Id, testSetupData.categoriesByMix.get(mix)[i].Id, 'Expected Mix Categories by Recommended Badge Mix name to be equal.');
+                Assert.areEqual(testCategoriesByMix.get(mix)[i].Id, testData.categoriesByMix.get(mix)[i].Id, 'Expected Mix Categories by Recommended Badge Mix name to be equal.');
             }
         }
 
         Assert.areEqual(
             defaultMixName, 
-            testSetupData.defaultMix,
+            testData.defaultMix,
             'Expected name of default mix.'
         );
     }

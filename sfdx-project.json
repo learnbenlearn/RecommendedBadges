@@ -4,7 +4,7 @@
       "path": "Core",
       "package": "Core",
       "versionNumber": "1.7.0.NEXT",
-      "default": true,
+      "default": false,
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -101,7 +101,7 @@
     },
     {
       "path": "UserInterface",
-      "default": false,
+      "default": true,
       "package": "UserInterface",
       "versionNumber": "1.6.0.NEXT",
       "dependencies": [

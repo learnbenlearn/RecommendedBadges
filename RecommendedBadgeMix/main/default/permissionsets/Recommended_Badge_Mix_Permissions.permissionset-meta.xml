@@ -4,6 +4,10 @@
         <apexClass>RecommendedBadgeMixController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>RecommendedBadgeMixWrapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Recommended Badge Mix Permissions</label>
 </PermissionSet>
