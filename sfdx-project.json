@@ -21,7 +21,20 @@
       "default": false,
       "package": "TaskList",
       "versionName": "Akron",
-      "versionNumber": "1.14.0.NEXT"
+      "versionNumber": "1.14.0.NEXT",
+      "dependencies": [
+        {
+          "package": "TrailTracker"
+        },
+        {
+          "package": "fflib",
+          "versionNumber": "1.1.0.LATEST"
+        },
+        {
+          "package": "Core",
+          "versionNumber": "1.8.0.LATEST"
+        }
+      ]
     },
     {
       "path": "LWCUtils",
