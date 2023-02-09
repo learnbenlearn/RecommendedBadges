@@ -275,6 +275,13 @@
     "LWCUtils@1.9.0-1": "04t8c000001IuiMAAS",
     "RecommendedBadgeMix@1.6.0-1": "04t8c000001IuibAAC",
     "PrivateMixView@1.6.0-1": "04t8c000001IuivAAC",
-    "UserInterface@1.6.0-1": "04t8c000001Iuj0AAC"
+    "UserInterface@1.6.0-1": "04t8c000001Iuj0AAC",
+    "Core@1.9.0-1": "04t8c000001Iv9gAAC",
+    "LWCUtils@1.10.0-1": "04t8c000001Iv9lAAC",
+    "TaskList@1.15.0-1": "04t8c000001Iv9qAAC",
+    "Triggers@1.12.0-1": "04t8c000001IvAAAA0",
+    "StorageManagement@1.10.0-1": "04t8c000001IvAFAA0",
+    "SortCustomMetadata@1.4.0-1": "04t8c000001IvAKAA0",
+    "RecommendedBadgeMix@1.7.0-1": "04t8c000001IvAPAA0"
   }
 }

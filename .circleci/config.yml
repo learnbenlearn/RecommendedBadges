@@ -50,11 +50,8 @@ jobs:
               sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
         - when:
             condition:
-              and:
-                - not:
-                    equal: [ '', CIRCLE_PULL_REQUEST ]
-                - not: 
-                    equal: [ main, CIRCLE_BRANCH ]
+              not: 
+                equal: [ main, CIRCLE_BRANCH ]
             steps:
               - run:
                   name: Populate Dynamic Parameters
