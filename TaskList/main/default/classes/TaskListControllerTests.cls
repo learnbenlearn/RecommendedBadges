@@ -1,28 +1,15 @@
 /**
  * @description       : Test class for TaskListController.
  * @author            : Ben Learn
- * @last modified on  : 01-14-2023
+ * @last modified on  : 02-05-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
 private class TaskListControllerTests {
-    @testSetup
-    static void makeData(){
-        List<Task> tasks = new List<Task>();
-
-        for(Integer i = 0; i < 400; i++) {
-            if(Math.mod(i, 2) == 0) {
-                tasks.add(new Task(Status='Not Started'));
-            } else {
-                tasks.add(new Task(Status='Completed'));
-            }
-        }
-
-        insert tasks;
-    }
-    
     @isTest
     static void testGetTasks() {
+        TestDataFactory.Task taskGenerator = new TestDataFactory.Task(true, false, 400);
+        taskGenerator.execute();
         Test.startTest();
         List<Task> openTasks = TaskListController.getTasks();
         Test.stopTest();
@@ -32,6 +19,7 @@ private class TaskListControllerTests {
 
     @isTest
     static void testGetTasksRestrictedUser() {
+        TestDataFactory.Task taskGenerator = new TestDataFactory.Task(true, false, 400);
         Profile minimumAccess = [SELECT Id FROM Profile WHERE Name='Minimum Access - Salesforce'];
         User u = new User(
             firstName = 'Test',

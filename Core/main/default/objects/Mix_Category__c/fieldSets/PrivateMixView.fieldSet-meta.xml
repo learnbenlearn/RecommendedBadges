@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrivateMixView</fullName>
+    <description>Field set for PrivateMixView package.</description>
+    <displayedFields>
+        <field>Recommended_Badge_Mix__r.Private_Mix__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Private Mix View</label>
+</FieldSet>

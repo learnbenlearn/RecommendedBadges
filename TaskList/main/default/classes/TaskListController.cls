@@ -2,7 +2,7 @@
  * @description       : Apex controller for taskList LWC.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 01-14-2023
+ * @last modified on  : 01-29-2023
  * @last modified by  : Ben Learn
 **/
 public with sharing class TaskListController {
@@ -13,7 +13,6 @@ public with sharing class TaskListController {
     **/
     @AuraEnabled(cacheable=true)
     public static List<Task> getTasks() {
-        List<Task> tasks = [SELECT Id, Subject FROM Task WHERE IsClosed = false];
-        return tasks;
+        return new TasksSelector().selectOpen();
     }
 }

@@ -8,7 +8,12 @@ const PULL_REQUEST_URL = process.env.CIRCLE_PULL_REQUEST;
 async function postToPackagingApp() {
     try {
         let pullRequestNumber = PULL_REQUEST_URL.substring(PULL_REQUEST_URL.lastIndexOf('/') + 1);
-        let sortedPackagesToUpdate = fs.readFileSync(SORTED_PACKAGES_TO_UPDATE_FILE).split('\n');
+        let sortedPackagesToUpdate = fs.readFileSync(
+            SORTED_PACKAGES_TO_UPDATE_FILE,
+            {
+                "encoding": "utf8"
+            }
+        ).split('\n');
         const res = await axios.post(
             HEROKU_ENDPOINT,
             {

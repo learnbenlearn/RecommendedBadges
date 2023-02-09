@@ -2,7 +2,7 @@
  * @description       : A catchall trigger helper for TrailTrigger, BadgeTrigger, RecommendedBadgeTrigger, and RecommendedTrailTrigger.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 01-13-2023
+ * @last modified on  : 01-29-2023
  * @last modified by  : Ben Learn
 **/
 public without sharing class BadgeTrigger_Helper {
@@ -57,7 +57,6 @@ public without sharing class BadgeTrigger_Helper {
         List<String> fieldsToCheck = new List<String>(parentObjectInfo.parentJunctionPicklistMap.keySet());
 
         Set<Id> modifiedParentIds = new Set<Id>();
-
         for(sObject oldRecord : oldRecords) {
             if(!Boolean.valueOf(oldRecord.get('trailheadapp__Archived__c'))) {
                 for(String fieldToCheck : fieldsToCheck) {
@@ -68,11 +67,12 @@ public without sharing class BadgeTrigger_Helper {
             }
         }
 
-        String queryString = 'SELECT ' + parentObjectInfo.relationshipFieldName + ', ' + 
-            String.join(parentObjectInfo.parentJunctionPicklistMap.values(), ', ') + ' FROM ' + 
-            parentObjectInfo.childJunctionObjectType + ' WHERE ' + parentObjectInfo.relationshipFieldName + ' IN :modifiedParentIds';
-
-        List<sObject> junctionRecordsToUpdate = Database.query(queryString);
+        List<sObject> junctionRecordsToUpdate;
+        if(sObjectType == Schema.SObjectType.trailheadapp__Badge__c.getName()) {
+            junctionRecordsToUpdate = new RecommendedBadgesSelector().selectByBadges(modifiedParentIds);
+        } else if(sObjectType == Schema.SObjectType.trailheadapp__Trail__c.getName()) {
+            junctionRecordsToUpdate = new RecommendedTrailsSelector().selectByTrails(modifiedParentIds);
+        }
 
         for(sObject junctionRecord : junctionRecordsToUpdate) {
             for(String picklist : parentObjectInfo.parentJunctionPicklistMap.keySet()) {
@@ -98,15 +98,16 @@ public without sharing class BadgeTrigger_Helper {
         Map<String, String> picklists = childObject.parentJunctionPicklistMap;
 
         Set<Id> parentIdsToQuery = new Set<Id>();
-
         for(sObject newRecord : newRecords) {
             parentIdsToQuery.add(String.valueOf(newRecord.get(String.valueOf(childObject.relationshipFieldName))));
         }
 
-        String queryString = 'SELECT ' + String.join(new List<String>(picklists.keySet()), ', ') + ' FROM ' + childObject.parentObjectType + 
-            ' WHERE Id IN :parentIdsToQuery';
-
-        Map<Id, sObject> parentRecordMap = new Map<Id, sObject>(Database.query(queryString));
+        Map<Id, sObject> parentRecordMap;
+        if(sObjectType == Schema.SObjectType.Recommended_Badge__c.getName()) {
+            parentRecordMap = new Map<Id, sObject>(new BadgesSelector().selectById(parentIdsToQuery));
+        } else if(sObjectType == Schema.SObjectType.Recommended_Trail__c.getName()) {
+            parentRecordMap = new Map<Id, sObject>(new TrailsSelector().selectById(parentIdsToQuery));
+        }
 
         for(sObject newRecord : newRecords) {
             for(String parentPicklist : picklists.keySet()) {
@@ -136,9 +137,7 @@ public without sharing class BadgeTrigger_Helper {
             }
         }
 
-        Map<Id, Mix_Category__c> mixCategoryMap = new Map<Id, Mix_Category__c>([SELECT Id, 
-            Recommended_Badge_Mix__r.Name FROM Mix_Category__c WHERE Id IN :mixCategoryIds]);
-        
+        Map<Id, Mix_Category__c> mixCategoryMap = new Map<Id, Mix_Category__c>(new MixCategoriesSelector().selectByIdWithRecommendedBadgeMixNames(mixCategoryIds));
         for(Recommended_Badge__c newRecommendedBadge : newRecommendedBadges) {
             if(
                 (newRecommendedBadge.Badge_Mix_Key__c == null) || 

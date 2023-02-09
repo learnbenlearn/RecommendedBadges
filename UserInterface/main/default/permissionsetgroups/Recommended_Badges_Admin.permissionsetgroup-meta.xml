@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Recommended Badges Admin</label>
+    <permissionSets>Core_Permissions</permissionSets>
+    <permissionSets>LoggerAdmin</permissionSets>
+    <permissionSets>Private_View_Permissions</permissionSets>
+    <permissionSets>Recommended_Badge_Mix_Permissions</permissionSets>
+    <permissionSets>Shortcuts</permissionSets>
+    <permissionSets>Sort_Custom_Metadata_Permissions</permissionSets>
+    <permissionSets>Storage_Management_Permissions</permissionSets>
+    <permissionSets>Task_List_Permissions</permissionSets>
+    <permissionSets>User_Interface_Permissions</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

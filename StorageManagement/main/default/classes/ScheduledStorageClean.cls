@@ -2,7 +2,7 @@
  * @description       : Schedulable Apex class to clear storage space by deleting unused records created by Trail Tracker app.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 01-08-2023
+ * @last modified on  : 01-29-2023
  * @last modified by  : Ben Learn
 **/
 public without sharing class ScheduledStorageClean implements Schedulable {
@@ -15,7 +15,7 @@ public without sharing class ScheduledStorageClean implements Schedulable {
     * @param SchedulableContext sc 
     **/
     public void execute(SchedulableContext sc) {
-        List<AsyncApexJob> asyncJobs = [SELECT Id FROM AsyncApexJob WHERE CompletedDate=TODAY AND MethodName = :METHOD_NAME];
+        List<AsyncApexJob> asyncJobs = new AsyncApexJobsSelector().selectCompletedJobsByMethod(METHOD_NAME);
 
         if(asyncJobs.size() > 0){
             try {

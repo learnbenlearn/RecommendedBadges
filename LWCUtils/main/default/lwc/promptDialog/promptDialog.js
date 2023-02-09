@@ -1,6 +1,6 @@
 import { LightningElement, api } from 'lwc';
 
-export default class Prompt extends LightningElement {
+export default class PromptDialog extends LightningElement {
     @api cancelLabel;
     @api displayCancel;
     @api confirmLabel;

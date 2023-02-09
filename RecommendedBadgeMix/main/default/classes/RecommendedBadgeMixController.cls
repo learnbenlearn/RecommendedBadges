@@ -1,7 +1,7 @@
 /**
  * @description       : Apex controller for recommendedBadgeMixContainer LWC.
  * @author            : Ben Learn
- * @last modified on  : 12-30-2022
+ * @last modified on  : 02-07-2023
  * @last modified by  : Ben Learn
 **/
 public without sharing class RecommendedBadgeMixController {
@@ -10,18 +10,14 @@ public without sharing class RecommendedBadgeMixController {
         recommended trails for public recommended badge mixes, as well as the name of the default mix -
         for recommendedBadgeMixContainer.
     * @author Ben Learn | 03-11-2022 
-    * @return SetupDataWrapper 
+    * @return RecommendedBadgeMixWrapper 
     **/
     @AuraEnabled(cacheable=true)
-    public static SetupDataWrapper getSetupData() {
-        List<Mix_Category__c> mixCategories = [
-            SELECT Name, Recommended_Badge_Mix__r.Name, 
-            (SELECT Description__c, Level__c, Trail_Name__c, URL__c FROM Recommended_Trails__r), 
-            (SELECT Badge_Name__c, Description__c, Level__c, Type__c, URL__c FROM Recommended_Badges__r) 
-            FROM Mix_Category__c WHERE Recommended_Badge_Mix__r.Private_Mix__c = false ORDER BY Name
-        ];
-
+    public static RecommendedBadgeMixWrapper getData() {
+        List<Mix_Category__c> mixCategories = new MixCategoriesSelector().selectRecommendedBadgesAndTrails();
         Map<String, List<Mix_Category__c>> categoriesByMix = new Map<String, List<Mix_Category__c>>();
+
+        System.debug(mixCategories[0].Recommended_Badge_Mix__r.Last_Updated_Date__c);
 
         for(Mix_Category__c mixCategory : mixCategories) {
             if(categoriesByMix.get(mixCategory.Recommended_Badge_Mix__r.Name) == null) {
@@ -33,7 +29,7 @@ public without sharing class RecommendedBadgeMixController {
             }
         }
 
-        List<Recommended_Badge_Mix__c> defaultMix = [SELECT Name FROM Recommended_Badge_Mix__c WHERE Default_Badge_Mix__c = true];
+        List<Recommended_Badge_Mix__c> defaultMix = new RecommendedBadgeMixesSelector().selectDefaultMix();
         String defaultMixName;
         if(defaultMix.size() > 0) {
             defaultMixName = defaultMix[0].Name;
@@ -41,8 +37,8 @@ public without sharing class RecommendedBadgeMixController {
             defaultMixName = mixCategories[0].Recommended_Badge_Mix__r.Name;
         }
         
-        SetupDataWrapper setupData = new SetupDataWrapper(categoriesByMix, defaultMixName);
+        RecommendedBadgeMixWrapper data = new RecommendedBadgeMixWrapper(categoriesByMix, defaultMixName);
 
-        return setupData;
+        return data;
     }
 }

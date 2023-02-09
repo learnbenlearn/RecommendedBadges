@@ -8,7 +8,7 @@
         <target>lightning__AppPage</target>
     </targets>
     <targetConfigs>
-        <targetConfig targets="lightning__AppPage">
+        <targetConfig targets="lightning__AppPage,lightning__HomePage">
             <property label="Container Classes" name="divClasses" type="String"></property>
         </targetConfig>
     </targetConfigs>
