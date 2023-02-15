@@ -5,6 +5,7 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { deleteRecord, updateRecord } from 'lightning/uiRecordApi';
 
 import BADGE_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Badge_Name__c';
+import HIGH_PRIORITY_ID_FIELD from '@salesforce/schema/Recommended_Badge__c.High_Priority_Id__c';
 import ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
 import TIME_ESTIMATE_FIELD from '@salesforce/schema/Recommended_Badge__c.Time_Estimate__c';
 import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
@@ -15,6 +16,7 @@ import getPrivateMixRecommendedBadges from '@salesforce/apex/PrivateViewControll
 
 const CHANGE_MIX_CATEGORY = 'Change Mix Category';
 const DELETE_RECOMMENDED_BADGE = 'Delete Recommended Badge';
+const DROPDOWN_VIEW_LABEL = 'Select View';
 
 const ACTIONS = [
     {
@@ -37,7 +39,7 @@ const HIGH_PRIORITY_PREFIX = 'HP';
 const LOOKUP_OBJECT_NAME = 'Mix Category';
 const PROMPT_HEADER = 'Change Mix Category';
 const RESULT_ICON_NAME = 'custom:custom46';
-const SPINNER_TEXT = 'Retreiving badges';
+const SPINNER_TEXT = 'Retrieving badges';
 
 const TABLE_COLUMNS = [
     {
@@ -69,10 +71,10 @@ const TABLE_COLUMNS = [
 export default class PrivateViewContainer extends LightningElement {
     @api divClasses;
     displayPrompt;
-    dropdownViewLabel = 'Select View';
+    dropdownViewLabel = DROPDOWN_VIEW_LABEL;
     dropdownViewValue = 'High Priority';
     isLoading = true;
-    keyField = 'High_Priority_Id__c';
+    keyField = HIGH_PRIORITY_ID_FIELD.fieldApiName;
     lookupItems;
     lookupObjectName = LOOKUP_OBJECT_NAME;
     lookupResultIconName = RESULT_ICON_NAME;
@@ -123,7 +125,7 @@ export default class PrivateViewContainer extends LightningElement {
 
     handleDropdownChange(event) {
         if(event.detail === 'High Priority') {
-            this.keyField = 'High_Priority_Id__c';
+            this.keyField = HIGH_PRIORITY_ID_FIELD.fieldApiName;
         } else {
             this.keyField = ID_FIELD.fieldApiName;
         }

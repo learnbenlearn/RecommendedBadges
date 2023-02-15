@@ -24,14 +24,14 @@ Account-Account %28Support%29 Layout.layout
 #PrivateMixView
 #Core
 #LWCUtils
-#LWCErrorHandler
+LWCErrorHandler
 fflib
-#RecommendedBadgeMix
+RecommendedBadgeMix
 #SortCustomMetadata
-#StorageManagement
-#TaskList
-#Triggers
-#UserInterface
+StorageManagement
+TaskList
+Triggers
+UserInterface
 
 # Ignored Folders
 unpackageable
