@@ -4,7 +4,7 @@
       "path": "Core",
       "package": "Core",
       "versionName": "Akron",
-      "versionNumber": "1.9.0.NEXT",
+      "versionNumber": "1.10.0.NEXT",
       "default": false,
       "dependencies": [
         {
@@ -32,7 +32,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.9.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         }
       ]
     },
@@ -59,7 +59,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.9.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         }
       ]
     },
@@ -82,7 +82,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.9.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "LWCErrorHandler",
@@ -106,7 +106,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.9.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "LWCUtils",
@@ -137,7 +137,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.9.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "LWCErrorHandler",
@@ -188,7 +188,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.9.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         }
       ]
     },
@@ -220,7 +220,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.9.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "LWCUtils",
