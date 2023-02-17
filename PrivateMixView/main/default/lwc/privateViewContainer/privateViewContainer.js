@@ -104,8 +104,11 @@ export default class PrivateViewContainer extends LightningElement {
             }
 
             this.recommendedBadgeData = await getPrivateMixRecommendedBadges();
-            this.tableData = this.recommendedBadgeData[this.dropdownViewValue]
+            if(this.recommendedBadgeData) {
+                this.tableData = this.recommendedBadgeData[this.dropdownViewValue];
+            }
             this.isLoading = false;
+            
         } catch(err) {
             console.error(err);
         }
