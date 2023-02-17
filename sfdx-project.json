@@ -156,7 +156,7 @@
         },
         {
           "package": "PrivateMixView",
-          "versionNumber": "1.6.0.LATEST"
+          "versionNumber": "1.7.0.LATEST"
         },
         {
           "package": "RecommendedBadgeMix",
@@ -207,7 +207,7 @@
       "path": "PrivateMixView",
       "package": "PrivateMixView",
       "versionName": "Akron",
-      "versionNumber": "1.6.0.NEXT",
+      "versionNumber": "1.7.0.NEXT",
       "default": false,
       "versionDescription": "Package containing classes, LWCs, and Lightning pages for the private view portion of the Recommended Badges app.",
       "dependencies": [
