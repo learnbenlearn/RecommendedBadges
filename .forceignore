@@ -21,18 +21,18 @@ standard-home.tab
 Account-Account %28Support%29 Layout.layout
 
 # Ignored Packages
-#PrivateMixView
+PrivateMixView
 #Core
-#LWCUtils
+LWCUtils
 LWCErrorHandler
 fflib
-#RecommendedBadgeMix
-#SortCustomMetadata
+RecommendedBadgeMix
+SortCustomMetadata
 StorageManagement
 TaskList
 Triggers
-#UserInterface
+UserInterface
 
 # Ignored Folders
-#unpackageable
-unpackageable/main/default/appMenus
+unpackageable
+#unpackageable/main/default/appMenus
