@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for RecommendedBadgesSelector.
  * @author            : Ben Learn
- * @last modified on  : 02-05-2023
+ * @last modified on  : 02-17-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -37,13 +37,13 @@ private class RecommendedBadgesSelectorTests {
     }
 
     @isTest
-    private static void selectAllRelatedToPriveRecommendedBadgeMixes_test() {
+    private static void selectedAllRelatedToUserPrivateMix_test() {
         generateData(false);
         Map<Id, Recommended_Badge__c> expectedRecommendedBadgesById = new Map<Id, Recommended_Badge__c>([
             SELECT Id FROM Recommended_Badge__c WHERE Mix_Category__r.Recommended_Badge_Mix__r.Private_Mix__c = true
         ]);
         Map<Id, Recommended_Badge__c> resultRecommendedBadgesById = new Map<Id, Recommended_Badge__c>(
-            new RecommendedBadgesSelector().selectAllRelatedToPrivateRecommendedBadgeMixes()
+            new RecommendedBadgesSelector().selectedAllRelatedToUserPrivateMix()
         );
         Assert.areEqual(
             expectedRecommendedBadgesById.keySet(), 

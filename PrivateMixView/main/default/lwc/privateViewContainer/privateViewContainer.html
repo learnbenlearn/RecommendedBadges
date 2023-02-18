@@ -1,8 +1,7 @@
 <!--
   @description       : Container for a dropdown and datatable to display personal badge mixes.
   @author            : Ben Learn
-  @group             : 
-  @last modified on  : 01-21-2023
+  @last modified on  : 02-17-2023
   @last modified by  : Ben Learn
 -->
 <template>
@@ -11,9 +10,23 @@
       <lightning-spinner alternative-text={spinnerText}></lightning-spinner>
     </template>
     <template if:false={isLoading}>
-      <c-dropdown label={dropdownViewLabel} value={dropdownViewValue} options={viewOptions} ondropdownchange={handleDropdownChange}>
-      </c-dropdown>
-      <br/>
+      <template if:true={recommendedBadgeData}>
+        <c-dropdown label={dropdownViewLabel} value={dropdownViewValue} options={viewOptions} ondropdownchange={handleDropdownChange}>
+        </c-dropdown>
+        <br/>
+        
+        <div style="max-height:75vh;overflow:scroll">
+          <c-datatable key-field={keyField} table-data={tableData} columns={tableColumns} has-row-actions="true" 
+            onactionclick={handleRowAction}>
+          </c-datatable>
+        </div>
+      </template>
+
+      <template if:false={recommendedBadgeData}>
+        <div class="slds-align_absolute-center">
+          <p>It looks like you don't have a personal recommended badge mix. You can create one by selecting the Private Mix checkbox when making a new recommended badge mix.</p>
+        </div>
+      </template>
   
       <template if:true={displayPrompt}>
         <c-prompt-dialog prompt-header={promptHeader} confirm-label="Save" display-cancel="true" cancel-label="Cancel" onpromptclose={handlePromptClose} 
@@ -26,12 +39,6 @@
           </span>
         </c-prompt-dialog>
       </template>
-      
-      <div style="max-height:75vh;overflow:scroll">
-        <c-datatable key-field={keyField} table-data={tableData} columns={tableColumns} has-row-actions="true" 
-          onactionclick={handleRowAction}>
-        </c-datatable>
-      </div>
     </template>
   </div>
 </template>
