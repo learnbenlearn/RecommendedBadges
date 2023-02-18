@@ -44,6 +44,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Recommended_Badge_Mix__c.OwnerID__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Recommended_Badge_Mix__c.Private_Mix__c</field>
         <readable>true</readable>
