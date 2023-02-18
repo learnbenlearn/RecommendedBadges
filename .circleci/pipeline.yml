@@ -24,7 +24,7 @@ jobs:
     - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
     - HUB_ALIAS: HubOrg
     - REQUIRED_SCRATCH_ORGS: 1
-    - SCRATCH_ORG_DEFINITION_FILE: config/default-scratch-def.json
+    - SCRATCH_ORG_DEFINITION_FILE: config/org-shape-scratch-def.json
     - TEST_LEVEL: RunLocalTests
     - TEST_ORG_ALIAS: TestOrg
     - UNPACKAGED_DIRECTORY: unpackageable
@@ -93,7 +93,7 @@ jobs:
             then
               exit 1
             else
-              sf env create scratch -f $SCRATCH_ORG_DEFINITION_FILE -v $HUB_ALIAS -d -a $TEST_ORG_ALIAS -w $WAIT_TIME -y 1
+              sf org create scratch -f $SCRATCH_ORG_DEFINITION_FILE -v $HUB_ALIAS -d -a $TEST_ORG_ALIAS -w $WAIT_TIME -y 1
             fi
       - run: 
           name: Install External Dependencies in Scratch Org
@@ -123,7 +123,7 @@ jobs:
                     packagesToInstall=()
                     packagesToInstall+=$( (npm run --silent getSortedPackagesToInstall) )
                     for packageToInstall in ${packagesToInstall[@]};
-                      do sfdx package install -p $packageToInstall -u $TEST_ORG_ALIAS -r -w $WAIT_TIME
+                      do sfdx package install -p $packageToInstall -o $TEST_ORG_ALIAS -r -w $WAIT_TIME
                     done
       - run:
           name: Run Tests in Scratch Org

@@ -1,7 +1,7 @@
 /**
  * @description       : Apex controller for privateViewContainer LWC.
  * @author            : Ben Learn
- * @last modified on  : 01-29-2023
+ * @last modified on  : 02-16-2023
  * @last modified by  : Ben Learn
 **/
 public with sharing class PrivateViewController {
@@ -24,28 +24,33 @@ public with sharing class PrivateViewController {
     **/
     @AuraEnabled
     public static Map<String, List<Recommended_Badge__c>> getPrivateMixRecommendedBadges() {
-        List<Recommended_Badge__c> privateMixRecommendedBadges = new RecommendedBadgesSelector().selectAllRelatedToPrivateRecommendedBadgeMixes();
-        Map<String, List<Recommended_Badge__c>> privateViewMap = new Map<String, List<Recommended_Badge__c>>();
-        privateViewMap.put('High Priority', new List<Recommended_Badge__c>());
+        List<Recommended_Badge__c> privateMixRecommendedBadges = new RecommendedBadgesSelector().selectedAllRelatedToUserPrivateMix();
+        if(privateMixRecommendedBadges.size() > 0) {
+            Map<String, List<Recommended_Badge__c>> privateViewMap = new Map<String, List<Recommended_Badge__c>>();
+            privateViewMap.put('High Priority', new List<Recommended_Badge__c>());
 
-        List<Recommended_Badge__c> tempRecommendedBadges = new List<Recommended_Badge__c>();
+            List<Recommended_Badge__c> tempRecommendedBadges = new List<Recommended_Badge__c>();
 
-        for(Recommended_Badge__c rb : privateMixRecommendedBadges) {
-            if(rb.High_Priority__c) {
-                tempRecommendedBadges = privateViewMap.get('High Priority');
-                tempRecommendedBadges.add(rb);
-                privateViewMap.put('High Priority', tempRecommendedBadges);
+            for(Recommended_Badge__c rb : privateMixRecommendedBadges) {
+                if(rb.High_Priority__c) {
+                    tempRecommendedBadges = privateViewMap.get('High Priority');
+                    tempRecommendedBadges.add(rb);
+                    privateViewMap.put('High Priority', tempRecommendedBadges);
+                }
+
+                if(privateViewMap.get(rb.Mix_Category__r.Name) != null) {
+                    tempRecommendedBadges = privateViewMap.get(rb.Mix_Category__r.Name);
+                    tempRecommendedBadges.add(rb);
+                    privateViewMap.put(rb.Mix_Category__r.Name, tempRecommendedBadges);
+                } else {
+                    privateViewMap.put(rb.Mix_Category__r.Name, new List<Recommended_Badge__c>{rb});
+                }
             }
-
-            if(privateViewMap.get(rb.Mix_Category__r.Name) != null) {
-                tempRecommendedBadges = privateViewMap.get(rb.Mix_Category__r.Name);
-                tempRecommendedBadges.add(rb);
-                privateViewMap.put(rb.Mix_Category__r.Name, tempRecommendedBadges);
-            } else {
-                privateViewMap.put(rb.Mix_Category__r.Name, new List<Recommended_Badge__c>{rb});
-            }
+            
+            return privateViewMap;
+            
+        } else {
+            return null;
         }
-
-        return privateViewMap;
     }
 }

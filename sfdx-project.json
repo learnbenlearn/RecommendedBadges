@@ -4,7 +4,7 @@
       "path": "Core",
       "package": "Core",
       "versionName": "Akron",
-      "versionNumber": "1.8.0.NEXT",
+      "versionNumber": "1.10.0.NEXT",
       "default": false,
       "dependencies": [
         {
@@ -21,7 +21,7 @@
       "default": false,
       "package": "TaskList",
       "versionName": "Akron",
-      "versionNumber": "1.14.0.NEXT",
+      "versionNumber": "1.15.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -32,7 +32,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.8.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         }
       ]
     },
@@ -41,14 +41,14 @@
       "default": false,
       "package": "LWCUtils",
       "versionName": "Akron",
-      "versionNumber": "1.9.0.NEXT"
+      "versionNumber": "1.10.0.NEXT"
     },
     {
       "path": "Triggers",
       "default": false,
       "package": "Triggers",
       "versionName": "Akron",
-      "versionNumber": "1.11.0.NEXT",
+      "versionNumber": "1.12.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -59,7 +59,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.8.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         }
       ]
     },
@@ -68,7 +68,7 @@
       "default": false,
       "package": "StorageManagement",
       "versionName": "Akron",
-      "versionNumber": "1.9.0.NEXT",
+      "versionNumber": "1.10.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -82,7 +82,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.8.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "LWCErrorHandler",
@@ -95,7 +95,7 @@
       "default": false,
       "package": "RecommendedBadgeMix",
       "versionName": "Akron",
-      "versionNumber": "1.6.0.NEXT",
+      "versionNumber": "1.7.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -106,15 +106,15 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.8.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.9.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.3.0.LATEST"
+          "versionNumber": "1.4.0.LATEST"
         }
       ]
     },
@@ -137,7 +137,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.8.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "LWCErrorHandler",
@@ -145,30 +145,30 @@
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.9.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "Shortcuts"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.3.0.LATEST"
+          "versionNumber": "1.4.0.LATEST"
         },
         {
           "package": "PrivateMixView",
-          "versionNumber": "1.6.0.LATEST"
+          "versionNumber": "1.7.0.LATEST"
         },
         {
           "package": "RecommendedBadgeMix",
-          "versionNumber": "1.6.0.LATEST"
+          "versionNumber": "1.7.0.LATEST"
         },
         {
           "package": "StorageManagement",
-          "versionNumber": "1.9.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "TaskList",
-          "versionNumber": "1.14.0.LATEST"
+          "versionNumber": "1.15.0.LATEST"
         }
       ]
     },
@@ -177,7 +177,7 @@
       "default": false,
       "package": "SortCustomMetadata",
       "versionName": "Akron",
-      "versionNumber": "1.3.0.NEXT",
+      "versionNumber": "1.4.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -188,7 +188,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.8.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         }
       ]
     },
@@ -207,7 +207,7 @@
       "path": "PrivateMixView",
       "package": "PrivateMixView",
       "versionName": "Akron",
-      "versionNumber": "1.6.0.NEXT",
+      "versionNumber": "1.7.0.NEXT",
       "default": false,
       "versionDescription": "Package containing classes, LWCs, and Lightning pages for the private view portion of the Recommended Badges app.",
       "dependencies": [
@@ -220,15 +220,15 @@
         },
         {
           "package": "Core",
-          "versionNumber": "1.8.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.9.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.3.0.LATEST"
+          "versionNumber": "1.4.0.LATEST"
         }
       ]
     },

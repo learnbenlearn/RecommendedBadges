@@ -2,7 +2,7 @@
  * @description       : Test data factory for the Recommended Badges application. Currently inserts data into the database, will likely be refactored to be used with
  *                      mocks in the future.
  * @author            : Ben Learn
- * @last modified on  : 02-05-2023
+ * @last modified on  : 02-09-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -182,8 +182,8 @@ public class TestDataFactory {
 
             for(Integer i = 0; i < this.NUMBER_TO_GENERATE; i++) {
                 testMixCategories.add(new Mix_Category__c(
-                    Name = this.RECOMMENDED_BADGE_MIXES[Math.mod(i, 2)].Name + ' Category ' + i,
-                    Recommended_Badge_Mix__c = this.RECOMMENDED_BADGE_MIXES[Math.mod(i, 2)].Id
+                    Name = this.RECOMMENDED_BADGE_MIXES[Math.mod(i, RECOMMENDED_BADGE_MIXES.size())].Name + ' Category ' + i,
+                    Recommended_Badge_Mix__c = this.RECOMMENDED_BADGE_MIXES[Math.mod(i, RECOMMENDED_BADGE_MIXES.size())].Id
                 ));
             }
 
@@ -216,13 +216,13 @@ public class TestDataFactory {
             for(Integer i = 0; i < this.NUMBER_TO_GENERATE; i++) {
                 if(Math.mod(i, 10) == 0) {
                     testRecommendedBadges.add(new Recommended_Badge__c(
-                        Mix_Category__c=MIX_CATEGORIES[Integer.valueOf(Math.floor(MIX_CATEGORIES.size()/10))].Id,
+                        Mix_Category__c=MIX_CATEGORIES[Integer.valueOf(Math.floor(Math.mod(i, MIX_CATEGORIES.size())))].Id,
                         Badge__c=BADGES[i].Id,
                         High_Priority__c=true
                     ));
                 } else {
                     testRecommendedBadges.add(new Recommended_Badge__c(
-                        Mix_Category__c=MIX_CATEGORIES[Integer.valueOf(Math.floor(MIX_CATEGORIES.size()/10))].Id,
+                        Mix_Category__c=MIX_CATEGORIES[Integer.valueOf(Math.floor(Math.mod(i, MIX_CATEGORIES.size())))].Id,
                         Badge__c=BADGES[i].Id
                     ));
                 }

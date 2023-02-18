@@ -1,7 +1,7 @@
 /**
  * @description       : Selector class for Recommended Badge custom object.
  * @author            : Ben Learn
- * @last modified on  : 01-29-2023
+ * @last modified on  : 02-16-2023
  * @last modified by  : Ben Learn
 **/
 public inherited sharing class RecommendedBadgesSelector extends ApplicationSelector {
@@ -17,14 +17,14 @@ public inherited sharing class RecommendedBadgesSelector extends ApplicationSele
         return Recommended_Badge__c.sObjectType;
     }
 
-    public List<Recommended_Badge__c> selectAllRelatedToPrivateRecommendedBadgeMixes() {
+    public List<Recommended_Badge__c> selectedAllRelatedToUserPrivateMix() {
         fflib_QueryFactory recommendedBadgesQueryFactory = newQueryFactory();
 
         new MixCategoriesSelector().configureQueryFactoryFields(recommendedBadgesQueryFactory, Recommended_Badge__c.Mix_Category__c.getDescribe().getRelationshipName());
 
         return (List<Recommended_Badge__c>) Database.query(
             recommendedBadgesQueryFactory.selectFieldSet(Schema.SObjectType.Recommended_Badge__c.fieldSets.PrivateMixView, true).
-            setCondition('Mix_Category__r.Recommended_Badge_Mix__r.Private_Mix__c=true').
+            setCondition('Mix_Category__r.Recommended_Badge_Mix__r.Private_Mix__c = true AND Mix_Category__r.Recommended_Badge_Mix__r.OwnerId = \'' + UserInfo.getUserId() + '\'').
             setOrdering(new fflib_QueryFactory.Ordering(
                 this.getSObjectType().getDescribe().getName(), 
                 Schema.SObjectType.Recommended_Badge__c.fields.Badge_Name__c.getName(), 
