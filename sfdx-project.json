@@ -95,7 +95,7 @@
       "default": false,
       "package": "RecommendedBadgeMix",
       "versionName": "Akron",
-      "versionNumber": "1.7.0.NEXT",
+      "versionNumber": "1.9.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -123,7 +123,7 @@
       "default": true,
       "package": "UserInterface",
       "versionName": "Akron",
-      "versionNumber": "1.6.0.NEXT",
+      "versionNumber": "1.7.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -160,7 +160,7 @@
         },
         {
           "package": "RecommendedBadgeMix",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.9.0.LATEST"
         },
         {
           "package": "StorageManagement",

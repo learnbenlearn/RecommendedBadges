@@ -26,7 +26,7 @@ Account-Account %28Support%29 Layout.layout
 #LWCUtils
 LWCErrorHandler
 fflib
-RecommendedBadgeMix
+#RecommendedBadgeMix
 #SortCustomMetadata
 StorageManagement
 TaskList
@@ -34,4 +34,5 @@ Triggers
 #UserInterface
 
 # Ignored Folders
-unpackageable
+#unpackageable
+unpackageable/main/default/appMenus
