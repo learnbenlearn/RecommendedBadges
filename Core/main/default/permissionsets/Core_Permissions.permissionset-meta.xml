@@ -40,6 +40,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Recommended_Badge_Mix__c.ExamMix__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Recommended_Badge_Mix__c.Last_Updated_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
