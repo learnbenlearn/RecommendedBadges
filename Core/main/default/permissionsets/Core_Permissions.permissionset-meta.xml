@@ -175,6 +175,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Recommended_Trail__c.HyperlinkedName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Recommended_Trail__c.Icon__c</field>
         <readable>true</readable>
     </fieldPermissions>
