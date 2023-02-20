@@ -105,6 +105,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Recommended_Badge__c.HyperlinkedName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Recommended_Badge__c.Icon__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -121,11 +126,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Recommended_Badge__c.Products__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Recommended_Badge__c.Report_URL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
