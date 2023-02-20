@@ -23,18 +23,18 @@ appswitcher.appmenu
 ContactCenter_UtilityBar.flexipage
 
 # Ignored Packages
-PrivateMixView
 #Core
-LWCUtils
-LWCErrorHandler
-fflib
-RecommendedBadgeMix
-SortCustomMetadata
-StorageManagement
-TaskList
-Triggers
+#fflib
+#LWCErrorHandler
+#LWCUtils
+#PrivateMixView
+#RecommendedBadgeMix
+#SortCustomMetadata
+#StorageManagement
+#TaskList
+#Triggers
 UserInterface
 
 # Ignored Folders
 unpackageable
-#unpackageable/main/default/appMenus
+unpackageable/main/default/appMenus

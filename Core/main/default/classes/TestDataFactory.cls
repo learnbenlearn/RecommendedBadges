@@ -2,7 +2,7 @@
  * @description       : Test data factory for the Recommended Badges application. Currently inserts data into the database, will likely be refactored to be used with
  *                      mocks in the future.
  * @author            : Ben Learn
- * @last modified on  : 02-09-2023
+ * @last modified on  : 02-20-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -193,21 +193,27 @@ public class TestDataFactory {
     }
 
     public class RecommendedBadge extends RecordGenerationTemplate implements RecordGeneration {
+        public final Boolean BYPASS_DUPLICATE_RULES;
         public final List<trailheadapp__Badge__c> BADGES;
         public final List<Mix_Category__c> MIX_CATEGORIES;
 
-        public RecommendedBadge(Boolean insertRecords, Boolean returnCreatedRecords, List<trailheadapp__Badge__c> badges, List<Mix_Category__c> mixCategories) {
+        public RecommendedBadge(
+            Boolean insertRecords, Boolean returnCreatedRecords, List<trailheadapp__Badge__c> badges, List<Mix_Category__c> mixCategories, Boolean bypassDuplicateRules
+        ) {
             super(insertRecords, returnCreatedRecords);
             this.BADGES = badges;
             this.MIX_CATEGORIES = mixCategories;
+            this.BYPASS_DUPLICATE_RULES = bypassDuplicateRules;
         }
 
         public RecommendedBadge(
-            Boolean insertRecords, Boolean returnCreatedRecords, Integer numberToGenerate, List<trailheadapp__Badge__c> badges, List<Mix_Category__c> mixCategories
+            Boolean insertRecords, Boolean returnCreatedRecords, Integer numberToGenerate, List<trailheadapp__Badge__c> badges, List<Mix_Category__c> mixCategories, 
+            Boolean bypassDuplicateRules
         ) {
             super(insertRecords, returnCreatedRecords, numberToGenerate);
             this.BADGES = badges;
             this.MIX_CATEGORIES = mixCategories;
+            this.BYPASS_DUPLICATE_RULES = bypassDuplicateRules;
         }
 
         public List<sObject> execute() {
@@ -228,21 +234,28 @@ public class TestDataFactory {
                 }
             }
 
-            if(this.INSERT_RECORDS) insert testRecommendedBadges;
+            if(this.INSERT_RECORDS) {
+                Database.DMLOptions dmlOptions = new Database.DMLOptions();
+                dmlOptions.DuplicateRuleHeader.allowSave = this.BYPASS_DUPLICATE_RULES;
+                Database.insert(testRecommendedBadges, dmlOptions);
+            }
+
             return this.RETURN_CREATED_RECORDS ? testRecommendedBadges : null;
         }
     }
 
     public class RecommendedBadgeMix extends RecordGenerationTemplate implements RecordGeneration {
         public final Boolean INCLUDE_DEFAULT_MIX;
+        public final Boolean BYPASS_DUPLICATE_RULES;
 
         public RecommendedBadgeMix(Boolean insertRecords, Boolean returnCreatedRecords) {
-            this(insertRecords, returnCreatedRecords, 10, false);
+            this(insertRecords, returnCreatedRecords, 10, false, true);
         }
 
-        public RecommendedBadgeMix(Boolean insertRecords, Boolean returnCreatedRecords, Integer numberToGenerate, Boolean includeDefaultMix) {
+        public RecommendedBadgeMix(Boolean insertRecords, Boolean returnCreatedRecords, Integer numberToGenerate, Boolean includeDefaultMix, Boolean bypassDuplicateRules) {
             super(insertRecords, returnCreatedRecords, numberToGenerate);
             this.INCLUDE_DEFAULT_MIX = includeDefaultMix;
+            this.BYPASS_DUPLICATE_RULES = bypassDuplicateRules;
         }
 
         public List<sObject> execute() {
@@ -265,27 +278,38 @@ public class TestDataFactory {
                 privateMix = !privateMix;
             }
 
-            if(this.INSERT_RECORDS) insert testRecommendedBadgeMixes;
+            if(this.INSERT_RECORDS) {
+                Database.DMLOptions dmlOptions = new Database.DMLOptions();
+                dmlOptions.DuplicateRuleHeader.allowSave = this.BYPASS_DUPLICATE_RULES;
+                Database.insert(testRecommendedBadgeMixes, dmlOptions);
+            }
+            
             return this.RETURN_CREATED_RECORDS ? testRecommendedBadgeMixes : null;
         }
     }
 
     public class RecommendedTrail extends RecordGenerationTemplate implements RecordGeneration {
+        public final Boolean BYPASS_DUPLICATE_RULES;
         public final List<trailheadapp__Trail__c> TRAILS;
         public final List<Mix_Category__c> MIX_CATEGORIES;
 
-        public RecommendedTrail(Boolean insertRecords, Boolean returnCreatedRecords, List<trailheadapp__Trail__c> trails, List<Mix_Category__c> mixCategories) {
+        public RecommendedTrail(
+            Boolean insertRecords, Boolean returnCreatedRecords, List<trailheadapp__Trail__c> trails, List<Mix_Category__c> mixCategories, Boolean bypassDuplicateRules
+        ) {
             super(insertRecords, returnCreatedRecords);
             this.TRAILS = trails;
             this.MIX_CATEGORIES = mixCategories;
+            this.BYPASS_DUPLICATE_RULES = bypassDuplicateRules;
         }
 
         public RecommendedTrail(
-            Boolean insertRecords, Boolean returnCreatedRecords, Integer numberToGenerate, List<trailheadapp__Trail__c> trails, List<Mix_Category__c> mixCategories
+            Boolean insertRecords, Boolean returnCreatedRecords, Integer numberToGenerate, List<trailheadapp__Trail__c> trails, List<Mix_Category__c> mixCategories, 
+            Boolean bypassDuplicateRules
         ) {
             super(insertRecords, returnCreatedRecords, numberToGenerate);
             this.TRAILS = trails;
             this.MIX_CATEGORIES = mixCategories;
+            this.BYPASS_DUPLICATE_RULES = bypassDuplicateRules;
         }
 
         public List<sObject> execute() {
@@ -297,7 +321,12 @@ public class TestDataFactory {
                 ));
             }
 
-            if(this.INSERT_RECORDS) insert testRecommendedTrails;
+            if(this.INSERT_RECORDS) {
+                Database.DMLOptions dmlOptions = new Database.DMLOptions();
+                dmlOptions.DuplicateRuleHeader.allowSave = this.BYPASS_DUPLICATE_RULES;
+                Database.insert(testRecommendedTrails, dmlOptions);
+            }
+
             return this.RETURN_CREATED_RECORDS ? testRecommendedTrails : null;
         }
     }

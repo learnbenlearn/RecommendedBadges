@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for RecommendedTrailsSelector.
  * @author            : Ben Learn
- * @last modified on  : 02-05-2023
+ * @last modified on  : 02-20-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -23,7 +23,7 @@ private class RecommendedTrailsSelectorTests {
 
     @isTest
     private static void selectByTrails_test() {
-        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 1, false);
+        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 1, false, true);
         List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = (List<Recommended_Badge_Mix__c>) recommendedBadgeMixGenerator.execute();
 
         TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, true, 1, testRecommendedBadgeMixes);
@@ -32,7 +32,7 @@ private class RecommendedTrailsSelectorTests {
         TestDataFactory.Trail trailGenerator = new TestDataFactory.Trail(true, true);
         Map<Id, trailheadapp__Trail__c> testTrailsById = new Map<Id, trailheadapp__Trail__c>((List<trailheadapp__Trail__c>) trailGenerator.execute());
 
-        TestDataFactory.RecommendedTrail recommendedTrailGenerator = new TestDataFactory.RecommendedTrail(true, false, testTrailsById.values(), testMixCategories);
+        TestDataFactory.RecommendedTrail recommendedTrailGenerator = new TestDataFactory.RecommendedTrail(true, false, testTrailsById.values(), testMixCategories, true);
         recommendedTrailGenerator.execute();
 
         Set<Id> expectedTrailIds = new Set<Id>();

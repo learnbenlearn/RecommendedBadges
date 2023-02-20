@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for BadgeTrigger_Helper class.
  * @author            : Ben Learn
- * @last modified on  : 02-05-2023
+ * @last modified on  : 02-20-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -26,7 +26,7 @@ private class BadgeTrigger_HelperTests {
         TestDataFactory.Trail trailGenerator = new TestDataFactory.Trail(true, false);
         trailGenerator.execute();
 
-        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 1, false);
+        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 1, false, true);
         List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = recommendedBadgeMixGenerator.execute();
 
         TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, false, 1, testRecommendedBadgeMixes);
@@ -72,7 +72,7 @@ private class BadgeTrigger_HelperTests {
 
         Test.startTest();
         TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-            true, false, testBadgeMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+            true, false, testBadgeMap.values(), new List<Mix_Category__c>{testMixCategories[0]}, true
         );
         recommendedBadgeGenerator.execute();
         Test.stopTest();
@@ -205,7 +205,7 @@ private class BadgeTrigger_HelperTests {
 
         Test.startTest();
         TestDataFactory.RecommendedTrail recommendedTrailGenerator = new TestDataFactory.RecommendedTrail(
-            true, false, testTrailMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+            true, false, testTrailMap.values(), new List<Mix_Category__c>{testMixCategories[0]}, true
         );
         recommendedTrailGenerator.execute();
         Test.stopTest();
@@ -276,7 +276,7 @@ private class BadgeTrigger_HelperTests {
 
         Test.startTest();
         TestDataFactory.RecommendedTrail recommendedTrailGenerator = new TestDataFactory.RecommendedTrail(
-            true, false, testTrailMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+            true, false, testTrailMap.values(), new List<Mix_Category__c>{testMixCategories[0]}, true
         );
         recommendedTrailGenerator.execute();
         Test.stopTest();
@@ -328,7 +328,7 @@ private class BadgeTrigger_HelperTests {
         try {
             Test.startTest();
             TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-                true, false, testBadges, new List<Mix_Category__c>{testMixCategories[0]}
+                true, false, testBadges, new List<Mix_Category__c>{testMixCategories[0]}, true
             );
             recommendedBadgeGenerator.execute();
             Test.stopTest();
@@ -381,7 +381,9 @@ private class BadgeTrigger_HelperTests {
 
         Integer testBadgeIndex = Integer.valueOf(Math.floor(Math.random() * testBadges.size()));
 
-        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(false, true, testBadges, new List<Mix_Category__c>{testMixCategories[0]});
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
+            false, true, testBadges, new List<Mix_Category__c>{testMixCategories[0]}, true
+        );
         List<Recommended_Badge__c> testRecommendedBadges = recommendedBadgeGenerator.execute();
 
         testRecommendedBadges.add(new Recommended_Badge__c(
@@ -459,7 +461,9 @@ private class BadgeTrigger_HelperTests {
 
         Boolean caughtException = false;
         
-        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(false, true, testBadges, new List<Mix_Category__c>{testMixCategories[0]});
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
+            false, true, testBadges, new List<Mix_Category__c>{testMixCategories[0]}, true
+        );
         List<Recommended_Badge__c> testRecommendedBadges = recommendedBadgeGenerator.execute();
 
         try {
@@ -553,10 +557,12 @@ private class BadgeTrigger_HelperTests {
         Boolean caughtException = false;
         String exceptionMessage;
 
-        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(false, true, testBadges, new List<Mix_Category__c>{testMixCategories[0]});
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
+            false, true, testBadges, new List<Mix_Category__c>{testMixCategories[0]}, true
+        );
         List<Recommended_Badge__c> testRecommendedBadges = recommendedBadgeGenerator.execute();
         TestDataFactory.RecommendedBadge duplicateRecommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-            false, true, testBadges, new List<Mix_Category__c>{testMixCategories[1]}
+            false, true, testBadges, new List<Mix_Category__c>{testMixCategories[1]}, true
         );
         testRecommendedBadges.addAll((List<Recommended_Badge__c>) duplicateRecommendedBadgeGenerator.execute());
 
@@ -722,7 +728,7 @@ private class BadgeTrigger_HelperTests {
         );
         
         TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-            true, false, testBadgeMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+            true, false, testBadgeMap.values(), new List<Mix_Category__c>{testMixCategories[0]}, true
         );
         recommendedBadgeGenerator.execute();
 
@@ -758,7 +764,7 @@ private class BadgeTrigger_HelperTests {
         );
 
         TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-            true, false, testBadgeMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+            true, false, testBadgeMap.values(), new List<Mix_Category__c>{testMixCategories[0]}, true
         );
         recommendedBadgeGenerator.execute();
 
@@ -851,7 +857,7 @@ private class BadgeTrigger_HelperTests {
             [SELECT Id, trailheadapp__Level__c FROM trailheadapp__Trail__c]
         );
         TestDataFactory.RecommendedTrail recommendedTrailGenerator = new TestDataFactory.RecommendedTrail(
-            true, false, testTrailMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+            true, false, testTrailMap.values(), new List<Mix_Category__c>{testMixCategories[0]}, true
         );
         recommendedTrailGenerator.execute();
 
@@ -880,7 +886,7 @@ private class BadgeTrigger_HelperTests {
             [SELECT Id, trailheadapp__Description__c, trailheadapp__Level__c FROM trailheadapp__Trail__c]
         );
         TestDataFactory.RecommendedTrail recommendedTrailGenerator = new TestDataFactory.RecommendedTrail(
-            true, false, testTrailMap.values(), new List<Mix_Category__c>{testMixCategories[0]}
+            true, false, testTrailMap.values(), new List<Mix_Category__c>{testMixCategories[0]}, true
         );
         recommendedTrailGenerator.execute();
 

@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for RecommendedBadgesSelector.
  * @author            : Ben Learn
- * @last modified on  : 02-17-2023
+ * @last modified on  : 02-20-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -32,7 +32,7 @@ private class RecommendedBadgesSelectorTests {
         TestDataFactory.Badge badgeGenerator = new TestDataFactory.Badge(true, true);
         List<trailheadapp__Badge__c> testBadges = (List<trailheadapp__Badge__c>) badgeGenerator.execute();
 
-        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(true, returnRecommendedBadges, testBadges, testMixCategories);
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(true, returnRecommendedBadges, testBadges, testMixCategories, true);
         return recommendedBadgeGenerator.execute();
     }
 

@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for RecommendedBadgeMixesSelector.
  * @author            : Ben Learn
- * @last modified on  : 02-05-2023
+ * @last modified on  : 02-20-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -22,7 +22,7 @@ private class RecommendedBadgeMixesSelectorTests {
     }
 
     private static Id generateData() {
-        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 10, true);
+        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 10, true, true);
         List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = (List<Recommended_Badge_Mix__c>) recommendedBadgeMixGenerator.execute();
         
         Id defaultRecommendedBadgeMixId;
