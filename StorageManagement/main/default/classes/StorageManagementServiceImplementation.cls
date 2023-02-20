@@ -1,7 +1,7 @@
 /**
  * @description       : Service class containing methods to clear storage by deleting unused badges and debug logs created by the Trail Tracker app.
  * @author            : Ben Learn
- * @last modified on  : 01-29-2023
+ * @last modified on  : 02-20-2023
  * @last modified by  : Ben Learn
 **/
 public with sharing class StorageManagementServiceImplementation implements IStorageManagementService {
@@ -67,16 +67,13 @@ public with sharing class StorageManagementServiceImplementation implements ISto
             sObjectsToClean.put(Schema.SObjectType.trailheadapp__Trailmix__c, new TrailmixesSelector().selectAll());
 
             // I have a lot to say about these next 9 lines => https://github.com/learnbenlearn/RecommendedBadges/wiki/StorageManagement-and-Deleting-ScratchOrgInfos
-            try {
+            if(System.Type.forName('ScratchOrgInfo') != null) {
                 orderedSObjects.add(Schema.describeSObjects(new List<String>{'ScratchOrgInfo'})[0]);
                 sObjectsToClean.put(
                     Schema.describeSObjects(new List<String>{'ScratchOrgInfo'})[0],
                     new ScratchOrgInfosSelector().selectAllNotActive()
                 );
-            } catch(NoAccessException e) {
-                // ignore - better pattern than this?
             }
-
 
             List<String> objectsNotDeleted = new List<String>();
             for(Integer i = 0; i < orderedSObjects.size(); i++) {
