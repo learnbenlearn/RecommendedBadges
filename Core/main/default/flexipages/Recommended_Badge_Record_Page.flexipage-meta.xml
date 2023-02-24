@@ -192,8 +192,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Report_URL__c</fieldItem>
-                <identifier>RecordReport_URL_cField</identifier>
+                <fieldItem>Record.HyperlinkedName__c</fieldItem>
+                <identifier>RecordHyperlinkedName_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-16e82340-ce58-4a22-b3ea-352477b92768</name>

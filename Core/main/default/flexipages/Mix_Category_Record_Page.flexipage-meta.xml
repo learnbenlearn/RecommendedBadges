@@ -91,7 +91,7 @@
                             <value>trailheadapp__Badge__c.NAME</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Report_URL__c</value>
+                            <value>HyperlinkedName__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>High_Priority__c</value>
@@ -173,7 +173,7 @@
                             <value>trailheadapp__Badge__c.NAME</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Report_URL__c</value>
+                            <value>HyperlinkedName__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>trailheadapp__Badge__c.trailheadapp__Level__c</value>
