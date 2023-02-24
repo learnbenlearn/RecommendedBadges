@@ -48,7 +48,7 @@
       "default": false,
       "package": "Triggers",
       "versionName": "Akron",
-      "versionNumber": "1.12.0.NEXT",
+      "versionNumber": "1.13.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -68,7 +68,7 @@
       "default": false,
       "package": "StorageManagement",
       "versionName": "Akron",
-      "versionNumber": "1.10.0.NEXT",
+      "versionNumber": "1.11.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -114,7 +114,7 @@
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.4.0.LATEST"
+          "versionNumber": "1.5.0.LATEST"
         }
       ]
     },
@@ -152,11 +152,11 @@
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.4.0.LATEST"
+          "versionNumber": "1.5.0.LATEST"
         },
         {
           "package": "PrivateMixView",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.8.0.LATEST"
         },
         {
           "package": "RecommendedBadgeMix",
@@ -164,7 +164,7 @@
         },
         {
           "package": "StorageManagement",
-          "versionNumber": "1.10.0.LATEST"
+          "versionNumber": "1.11.0.LATEST"
         },
         {
           "package": "TaskList",
@@ -177,7 +177,7 @@
       "default": false,
       "package": "SortCustomMetadata",
       "versionName": "Akron",
-      "versionNumber": "1.4.0.NEXT",
+      "versionNumber": "1.5.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -207,7 +207,7 @@
       "path": "PrivateMixView",
       "package": "PrivateMixView",
       "versionName": "Akron",
-      "versionNumber": "1.7.0.NEXT",
+      "versionNumber": "1.8.0.NEXT",
       "default": false,
       "versionDescription": "Package containing classes, LWCs, and Lightning pages for the private view portion of the Recommended Badges app.",
       "dependencies": [
@@ -228,7 +228,7 @@
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.4.0.LATEST"
+          "versionNumber": "1.5.0.LATEST"
         }
       ]
     },
