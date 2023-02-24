@@ -2,7 +2,7 @@
 <CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Recommended_Badge_Compact_Layout</fullName>
     <fields>Badge_Name__c</fields>
-    <fields>Report_URL__c</fields>
+    <fields>HyperlinkedName__c</fields>
     <fields>Mix_Category__c</fields>
     <fields>Badge_Icon__c</fields>
     <fields>High_Priority__c</fields>
