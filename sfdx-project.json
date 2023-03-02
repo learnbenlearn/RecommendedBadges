@@ -265,16 +265,16 @@
     "PrivateMixView": "0Ho8c000000sY9SCAU",
     "fflib": "0Ho8c000000k9kfCAA",
     "LWCErrorHandler": "0Ho8c000000sYAzCAM",
-    "fflib@1.1.0-0": "04t8c000001ItbbAAC",
-    "LWCErrorHandler@1.1.0-1": "04t8c000001IueyAAC",
-    "Core@1.11.0-1": "04t8c000001IvOSAA0",
-    "LWCUtils@1.11.0-1": "04t8c000001IvOXAA0",
-    "TaskList@1.16.0-1": "04t8c000001IvOcAAK",
-    "Triggers@1.13.0-1": "04t8c000001IvOhAAK",
-    "StorageManagement@1.11.0-1": "04t8c000001IvOrAAK",
-    "SortCustomMetadata@1.5.0-1": "04t8c000001IvOwAAK",
-    "PrivateMixView@1.8.0-1": "04t8c000001IvP6AAK",
-    "RecommendedBadgeMix@1.9.0-1": "04t8c000001IvPfAAK",
-    "UserInterface@1.7.0-1": "04t8c000001IvPkAAK"
+    "LWCUtils@1.16.0-1": "04t8c000001IvcAAAS",
+    "fflib@1.6.0-1": "04t8c000001IvcFAAS",
+    "LWCErrorHandler@1.5.0-1": "04t8c000001IvcKAAS",
+    "Core@1.14.0-1": "04t8c000001IvcjAAC",
+    "TaskList@1.17.0-1": "04t8c000001IvdIAAS",
+    "Triggers@1.14.0-1": "04t8c000001IvdNAAS",
+    "StorageManagement@1.12.0-1": "04t8c000001IvdcAAC",
+    "SortCustomMetadata@1.6.0-1": "04t8c000001IvdmAAC",
+    "RecommendedBadgeMix@1.10.0-1": "04t8c000001IvdrAAC",
+    "PrivateMixView@1.9.0-1": "04t8c000001IvdwAAC",
+    "UserInterface@1.8.0-1": "04t8c000001Ive1AAC"
   }
 }

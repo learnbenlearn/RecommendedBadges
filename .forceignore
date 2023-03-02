@@ -27,7 +27,8 @@ ContactCenter_UtilityBar.flexipage
 #fflib
 #LWCErrorHandler
 #LWCUtils
-#PrivateMixView
+LWCErrorHandler
+fflib
 #RecommendedBadgeMix
 #SortCustomMetadata
 #StorageManagement

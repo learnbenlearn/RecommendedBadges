@@ -7,7 +7,7 @@ import getSortOptions from '@salesforce/apex/SortCustomMetadataController.getSor
 import { sortAlphabetic, sortCustom } from 'c/sortUtility';
 
 import ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
-import LEVEL_FIELD from '@salesforce/schema/Recommended_Badge__c.Level__c';
+import LEVEL_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
 import NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Name';
 import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
 import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
@@ -116,7 +116,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
             let extensibleMix = this.categoriesByMix[mix].map(item => {
                 let newCategoryChildren = [];
 
-                if(item.Recommended_Badges__r) {
+                /*if(item.Recommended_Badges__r) {
                     for(let badge of item.Recommended_Badges__r) {
                         newCategoryChildren.push({
                             Id: badge.Id,
@@ -139,7 +139,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                         })
                     }
                 }
-
+*/
                 let newCategory = {
                     Id: item.Id,
                     Name: item.Name,
