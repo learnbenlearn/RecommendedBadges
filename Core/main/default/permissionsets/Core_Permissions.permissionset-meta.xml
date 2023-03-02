@@ -40,7 +40,17 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Recommended_Badge_Mix__c.ExamMix__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Recommended_Badge_Mix__c.Last_Updated_Date__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Recommended_Badge_Mix__c.OwnerID__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -95,6 +105,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Recommended_Badge__c.HyperlinkedName__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Recommended_Badge__c.Icon__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -111,11 +126,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Recommended_Badge__c.Products__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Recommended_Badge__c.Report_URL__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -161,6 +171,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Recommended_Trail__c.Description__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Recommended_Trail__c.HyperlinkedName__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

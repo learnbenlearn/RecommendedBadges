@@ -1,7 +1,7 @@
 /**
  * @description       : Test class for PrivateViewController class.
  * @author            : Ben Learn
- * @last modified on  : 02-09-2023
+ * @last modified on  : 02-20-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
@@ -35,7 +35,7 @@ private class PrivateViewControllerTests {
         TestDataFactory.Trail trailGenerator = new TestDataFactory.Trail(true, false);
         trailGenerator.execute();
 
-        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 2, false);
+        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 2, false, true);
         List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = recommendedBadgeMixGenerator.execute();
 
         TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, true, 20, testRecommendedBadgeMixes);
@@ -43,7 +43,7 @@ private class PrivateViewControllerTests {
         System.debug(testMixCategories);
         System.debug([SELECT COUNT(Id), Recommended_Badge_Mix__r.Name FROM Mix_Category__c WHERE Recommended_Badge_Mix__r.Private_Mix__c = true GROUP BY Recommended_Badge_Mix__r.Name]);
 
-        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(true, false, testBadges, testMixCategories);
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(true, false, testBadges, testMixCategories, true);
         recommendedBadgeGenerator.execute();
 
         List<Recommended_Badge__c> resultRecommendedBadges = [

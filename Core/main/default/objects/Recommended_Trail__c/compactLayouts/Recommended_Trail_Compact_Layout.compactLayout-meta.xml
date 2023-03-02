@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recommended_Trail_Compact_Layout</fullName>
+    <fields>Trail_Name__c</fields>
+    <fields>Mix_Category__c</fields>
+    <fields>Badge_Icon__c</fields>
+    <fields>Level__c</fields>
+    <fields>URL__c</fields>
+    <label>Recommended Trail Compact Layout</label>
+</CompactLayout>

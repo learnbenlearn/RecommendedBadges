@@ -1,13 +1,13 @@
 /**
  * @description       : Test class for RecommendedBadgeMixController.
  * @author            : Ben Learn
- * @last modified on  : 02-07-2023
+ * @last modified on  : 02-20-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
 private class RecommendedBadgeMixControllerTests {
     private static Map<String, List<Mix_Category__c>> generateData(Boolean includeDefaultMix){
-        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 10, includeDefaultMix);
+        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 10, includeDefaultMix, true);
         Map<Id, Recommended_Badge_Mix__c> testRecommendedBadgeMixesById = new Map<Id, Recommended_Badge_Mix__c>(
             (List<Recommended_Badge_Mix__c>) recommendedBadgeMixGenerator.execute()
         );
