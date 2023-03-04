@@ -24,16 +24,17 @@ ContactCenter_UtilityBar.flexipage
 
 # Ignored Packages
 #Core
-#fflib
-#LWCErrorHandler
-#LWCUtils
+fflib
+LWCErrorHandler
+LWCUtils
 LWCErrorHandler
 fflib
-#RecommendedBadgeMix
-#SortCustomMetadata
+PrivateMixView
+RecommendedBadgeMix
+SortCustomMetadata
 #StorageManagement
-#TaskList
-#Triggers
+TaskList
+Triggers
 UserInterface
 
 # Ignored Folders
