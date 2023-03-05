@@ -5,6 +5,7 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { deleteRecord, updateRecord } from 'lightning/uiRecordApi';
 
 import BADGE_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Badge_Name__c';
+import HIGH_PRIORITY_FIELD from '@salesforce/schema/Recommended_Badge__c.High_Priority__c';
 import HIGH_PRIORITY_ID_FIELD from '@salesforce/schema/Recommended_Badge__c.High_Priority_Id__c';
 import ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
 import TIME_ESTIMATE_FIELD from '@salesforce/schema/Recommended_Badge__c.Time_Estimate__c';
@@ -17,6 +18,7 @@ import getPrivateMixRecommendedBadges from '@salesforce/apex/PrivateViewControll
 const CHANGE_MIX_CATEGORY = 'Change Mix Category';
 const DELETE_RECOMMENDED_BADGE = 'Delete Recommended Badge';
 const DROPDOWN_VIEW_LABEL = 'Select View';
+const TOGGLE_HIGH_PRIORITY = 'Toggle High Priority';
 
 const ACTIONS = [
     {
@@ -26,6 +28,10 @@ const ACTIONS = [
     {
         label: CHANGE_MIX_CATEGORY,
         name: CHANGE_MIX_CATEGORY
+    },
+    {
+        label: TOGGLE_HIGH_PRIORITY,
+        name: TOGGLE_HIGH_PRIORITY
     }
 ]
 
@@ -139,20 +145,57 @@ export default class PrivateViewContainer extends LightningElement {
 
     handleRowAction(event) {
         switch(event.detail.action.name) {
-            case DELETE_RECOMMENDED_BADGE:
-                this.handleDelete(event.detail.row);
-                break;
             case CHANGE_MIX_CATEGORY:
                 this.selectedRecommendedBadge = event.detail.row;
                 this.populateLookupItems();
                 this.displayPrompt = true;
                 break;
+            case DELETE_RECOMMENDED_BADGE:
+                this.handleDelete(event.detail.row);
+                break;
+            case TOGGLE_HIGH_PRIORITY:
+                this.toggleHighPriority(event.detail.row);
+                break;
         }
+    }
+
+    async toggleHighPriority(rowToToggle) {
+        this.isLoading = true;
+        let recommendedBadgeId;
+        let newHighPriorityValue;
+
+        if(this.dropdownViewValue === 'High Priority') {
+            recommendedBadgeId = rowToToggle.Id.replace(HIGH_PRIORITY_PREFIX, '');
+            newHighPriorityValue = false;
+        } else {
+            recommendedBadgeId = rowToToggle.Id;
+            newHighPriorityValue = true;
+        }
+
+        let fields = {};
+        fields[ID_FIELD.fieldApiName] = recommendedBadgeId;
+        fields[HIGH_PRIORITY_FIELD.fieldApiName] = newHighPriorityValue;
+        let recordInput = { fields };
+
+        try {
+            await updateRecord(recordInput);
+            this.refreshRecommendedBadgeData();
+
+            const showToastEvent = new ShowToastEvent({
+                title: 'Success',
+                message: 'Toggled high priority for ' + rowToToggle.Badge_Name__c + ' recommended badge.',
+                variant: 'success'
+            });
+            this.dispatchEvent(showToastEvent);
+        } catch(err) {
+            console.error(err);
+        }
+
+        this.isLoading = false;
     }
 
     async handleDelete(rowToDelete) {
         this.isLoading = true;
-
         let recommendedBadgeId;
 
         if(this.dropdownViewValue === 'High Priority') {
@@ -161,7 +204,7 @@ export default class PrivateViewContainer extends LightningElement {
             recommendedBadgeId = rowToDelete.Id;
         }
 
-        try{
+        try {
             await deleteRecord(recommendedBadgeId);
             this.refreshRecommendedBadgeData();
 
@@ -170,7 +213,6 @@ export default class PrivateViewContainer extends LightningElement {
                 message: 'Deleted ' + rowToDelete.Badge_Name__c + ' recommended badge.',
                 variant: 'success'
             });
-
             this.dispatchEvent(showToastEvent);
         } catch(err) {
             console.error(err);
