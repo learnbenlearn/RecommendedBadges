@@ -23,7 +23,7 @@ appswitcher.appmenu
 ContactCenter_UtilityBar.flexipage
 
 # Ignored Packages
-Core
+#Core
 fflib
 LWCErrorHandler
 #LWCUtils
