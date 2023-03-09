@@ -2,7 +2,7 @@
  * @description       : A catchall trigger helper for TrailTrigger, BadgeTrigger, RecommendedBadgeTrigger, and RecommendedTrailTrigger.
  * @author            : Ben Learn
  * @group             : 
- * @last modified on  : 01-29-2023
+ * @last modified on  : 03-05-2023
  * @last modified by  : Ben Learn
 **/
 public without sharing class BadgeTrigger_Helper {
@@ -86,7 +86,7 @@ public without sharing class BadgeTrigger_Helper {
 
     /**
     * @description Method to copy Level__c and Type__c field values from parent trailheadapp__Badge__c/
-        trialheadapp__Trail__c to child Recommended_Badge__c/Recommended_Trail__c, respectively, before
+        trailheadapp__Trail__c to child Recommended_Badge__c/Recommended_Trail__c, respectively, before
         the child is created. (Necessary because these fields are picklist fields, so formula fields 
         can't be used to copy their values from a parent to a child).
     * @author Ben Learn | 03-11-2022 

@@ -26,13 +26,13 @@ ContactCenter_UtilityBar.flexipage
 Core
 fflib
 LWCErrorHandler
-LWCUtils
+#LWCUtils
 LWCErrorHandler
 fflib
-#PrivateMixView
+PrivateMixView
 RecommendedBadgeMix
 SortCustomMetadata
-StorageManagement
+#StorageManagement
 TaskList
 Triggers
 UserInterface
