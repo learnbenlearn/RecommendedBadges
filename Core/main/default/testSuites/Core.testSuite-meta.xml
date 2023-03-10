@@ -10,7 +10,6 @@
     <testClassName>RecommendedBadgeMixesSelectorTests</testClassName>
     <testClassName>RecommendedBadgesSelectorTests</testClassName>
     <testClassName>RecommendedTrailsSelectorTests</testClassName>
-    <testClassName>ScratchOrgInfosSelectorTests</testClassName>
     <testClassName>SelectorTestErrorMessages</testClassName>
     <testClassName>TasksSelectorTests</testClassName>
     <testClassName>TrailmixesSelectorTests</testClassName>
