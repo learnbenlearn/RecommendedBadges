@@ -6,15 +6,12 @@
 **/
 @isTest
 private class StorageManagementServiceTests {
-
-    @isTest
-    private static void manualClean_test() {
-        List<Badge_to_Keep__mdt> badgesToKeep = [SELECT Badge_Name__c FROM Badge_to_Keep__mdt];
+    private static void makeData(){
+        List<Badge_to_Keep__mdt> badgesToKeep = new BadgesToKeepSelector().selectAll();
         List<String> badgesToKeepNames = new List<String>();
         for(Badge_to_Keep__mdt badgeToKeep : badgesToKeep) {
             badgesToKeepNames.add(badgeToKeep.Badge_Name__c);
         }
-
         List<Product_to_Delete__mdt> productsToDelete = [SELECT MasterLabel, Badge_Product__c, Trail_Product__c FROM Product_to_Delete__mdt];
         List<String> badgeProductsToDelete = new List<String>();
         List<String> trailProductsToDelete = new List<String>();
@@ -37,7 +34,12 @@ private class StorageManagementServiceTests {
 
         TestDataFactory.Trailmix trailmixGenerator = new TestDataFactory.Trailmix(true, false);
         trailmixGenerator.execute();
+    }
 
+    @isTest
+    private static void manualClean_test() {
+        makeData();
+        List<Badge_to_Keep__mdt> badgesToKeep = new BadgesToKeepSelector().selectAll();
         Test.startTest();
         StorageManagementService.clean();
         Test.stopTest();
@@ -48,7 +50,6 @@ private class StorageManagementServiceTests {
         Integer numberRemainingDebugLogs = [SELECT COUNT() FROM trailheadapp__Debug_Log__c];
         Integer numberRemainingTrailmixes = [SELECT COUNT() FROM trailheadapp__Trailmix__c];
         Integer numberRemainingUserBadges = [SELECT COUNT() FROM trailheadapp__User_Badge__c];
-
         System.assertEquals(
             100+badgesToKeep.size(),
             remainingBadges.size(),

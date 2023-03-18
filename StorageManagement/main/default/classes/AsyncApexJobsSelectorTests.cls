@@ -19,4 +19,9 @@ private class AsyncApexJobsSelectorTests {
     private static void getSObjectType_test() {
         Assert.areEqual(AsyncApexJob.sObjectType, new AsyncApexJobsSelector().getSObjectType(), SelectorTestErrorMessages.SOBJECT_TYPE_ERROR_MESSAGE);
     }
+
+    @isTest
+    private static void selectCompletedJobsByMethod_test() {
+        Assert.areEqual(0, new AsyncApexJobsSelector().selectCompletedJobsByMethod('startAsync').size(), 'Expected zero AsyncApexJob records.');
+    }
 }

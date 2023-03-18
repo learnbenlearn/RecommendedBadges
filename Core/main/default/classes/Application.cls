@@ -18,7 +18,6 @@ public class Application {
     // Selector factory instantiation
     private static Map<SObjectType, Type> selectorsBySObject = new Map<SObjectType, Type>();
     static {
-        selectorsBySObject.put(AsyncApexJob.sObjectType, AsyncApexJobsSelector.class);
         selectorsBySObject.put(DefaultServiceImplementation__mdt.sObjectType, DefaultServiceImplementationsSelector.class);
         selectorsBySObject.put(Mix_Category__c.sObjectType, MixCategoriesSelector.class);
         selectorsBySObject.put(Recommended_Badge_Mix__c.sObjectType, RecommendedBadgeMixesSelector.class);
@@ -33,8 +32,12 @@ public class Application {
 
         List<DefaultObjectSelector__mdt> defaultObjectSelectors = new DefaultObjectSelectorsSelector().selectAll();
         for(DefaultObjectSelector__mdt defaultObjectSelector : defaultObjectSelectors) {
+            String sObjectName = defaultObjectSelector.DeveloperName;
+            if(defaultObjectSelector.Suffix__c != null) {
+                sObjectName += defaultObjectSelector.Suffix__c;
+            }
             selectorsBySObject.put(
-                Schema.describeSObjects(new List<String>{defaultObjectSelector.DeveloperName + defaultObjectSelector.Suffix__c})[0].getSObjectType(), 
+                Schema.describeSObjects(new List<String>{sObjectName})[0].getSObjectType(), 
                 Type.forName(defaultObjectSelector.DefaultSelector__c)
             );
         }

@@ -10,33 +10,36 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-harness.auradefinitionbundle
 admin.profile
 **.fieldRestrictionRule*
 
 ## Temp Ignored
+**/CrisisCenter_UtilityBar.flexipage-meta.xml
+**/ContactCenter_UtilityBar.flexipage-meta.xml
+**/LightningSalesConsole_UtilityBar.flexipage-meta.xml
+**/LightningService_UtilityBar.flexipage-meta.xml
+**/Level.globalValueSet-meta.xml
 home_page_default.flexipage
 standard-home.tab
-**/Account-Account %28Support%29 Layout.layout-meta.xml
-Account-Account %28Support%29 Layout.layout
 appswitcher.appmenu
-ContactCenter_UtilityBar.flexipage
+#Core/main/default/objects/Recommended_Badge__c/fields/Level__c.field-meta.xml
+#Core/main/default/objects/Recommended_Trail__c/fields/Level__c.field-meta.xml
+level.globalvalueset
+security.settings
+
 
 # Ignored Packages
-#Core
+Core
 fflib
+LWCUtils
 LWCErrorHandler
-#LWCUtils
-LWCErrorHandler
-fflib
-PrivateMixView
+#PrivateMixView
 RecommendedBadgeMix
 SortCustomMetadata
-#StorageManagement
+StorageManagement
 TaskList
 Triggers
-UserInterface
+#UserInterface
 
 # Ignored Folders
 unpackageable
-unpackageable/main/default/appMenus

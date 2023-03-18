@@ -79,16 +79,18 @@ public with sharing class StorageManagementServiceImplementation implements ISto
             throw e;
         }
     }
-
+    
     private static Boolean purgeRecords(List<sObject> records, Schema.DescribeSObjectResult sObjectDescribe) {
         Boolean objectCleaned;
-        if(sObjectDescribe.isDeletable() || (Request.getCurrent().getQuiddity() == System.Quiddity.SCHEDULED)) {
+        
+        try {
             if(records.size() > 0) {
-                delete records;
+                delete as user records;
                 Database.emptyRecycleBin(records);
+                objectCleaned = true;
             }
-            objectCleaned = true;
-        } else if (!sObjectDescribe.isDeletable()){
+        } catch(Exception e) {
+            System.debug(e.getTypeName());
             objectCleaned = false;
         }
         return objectCleaned;

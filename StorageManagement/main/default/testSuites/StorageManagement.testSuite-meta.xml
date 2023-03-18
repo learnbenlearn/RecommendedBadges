@@ -3,7 +3,6 @@
     <testClassName>BadgesToKeepSelectorTests</testClassName>
     <testClassName>ProductsToDeleteSelectorTests</testClassName>
     <testClassName>ScheduledStorageCleanTests</testClassName>
-    <testClassName>StorageLimitsControllerTests</testClassName>
     <testClassName>StorageManagementControllerTests</testClassName>
     <testClassName>StorageManagementServiceTests</testClassName>
 </ApexTestSuite>

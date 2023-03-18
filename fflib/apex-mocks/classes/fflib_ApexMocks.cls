@@ -248,7 +248,6 @@ public with sharing class fflib_ApexMocks implements System.StubProvider
 	{
 		fflib_QualifiedMethod qm = new fflib_QualifiedMethod(extractTypeName(mockInstance), methodName, methodArgTypes, mockInstance);
 		fflib_MethodArgValues argValues = new fflib_MethodArgValues(methodArgValues);
-
 		fflib_InvocationOnMock invocation = new fflib_InvocationOnMock(qm, argValues, mockInstance);
 
 		if (this.verifying)

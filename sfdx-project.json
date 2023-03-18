@@ -4,7 +4,7 @@
       "path": "Core",
       "package": "Core",
       "versionName": "Akron",
-      "versionNumber": "1.11.0.NEXT",
+      "versionNumber": "1.20.0.NEXT",
       "default": false,
       "dependencies": [
         {
@@ -12,7 +12,7 @@
         },
         {
           "package": "fflib",
-          "versionNumber": "1.1.0.LATEST"
+          "versionNumber": "1.9.0.LATEST"
         }
       ]
     },
@@ -21,18 +21,18 @@
       "default": false,
       "package": "TaskList",
       "versionName": "Akron",
-      "versionNumber": "1.15.0.NEXT",
+      "versionNumber": "1.19.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
         },
         {
           "package": "fflib",
-          "versionNumber": "1.1.0.LATEST"
+          "versionNumber": "1.9.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "1.11.0.LATEST"
+          "versionNumber": "1.20.0.LATEST"
         }
       ]
     },
@@ -41,34 +41,34 @@
       "default": false,
       "package": "LWCUtils",
       "versionName": "Akron",
-      "versionNumber": "1.10.0.NEXT"
+      "versionNumber": "1.20.0.NEXT"
     },
     {
       "path": "Triggers",
       "default": false,
       "package": "Triggers",
       "versionName": "Akron",
-      "versionNumber": "1.13.0.NEXT",
+      "versionNumber": "1.16.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
         },
         {
           "package": "fflib",
-          "versionNumber": "1.1.0.LATEST"
+          "versionNumber": "1.9.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "1.11.0.LATEST"
+          "versionNumber": "1.20.0.LATEST"
         }
       ]
     },
     {
       "path": "StorageManagement",
-      "default": false,
+      "default": true,
       "package": "StorageManagement",
       "versionName": "Akron",
-      "versionNumber": "1.11.0.NEXT",
+      "versionNumber": "1.13.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -78,15 +78,19 @@
         },
         {
           "package": "fflib",
-          "versionNumber": "1.1.0.LATEST"
+          "versionNumber": "1.9.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "1.11.0.LATEST"
+          "versionNumber": "1.20.0.LATEST"
         },
         {
           "package": "LWCErrorHandler",
           "versionNumber": "1.1.0.LATEST"
+        },
+        {
+          "package": "LWCUtils",
+          "versionNumber": "1.20.0.LATEST"
         }
       ]
     },
@@ -95,26 +99,26 @@
       "default": false,
       "package": "RecommendedBadgeMix",
       "versionName": "Akron",
-      "versionNumber": "1.9.0.NEXT",
+      "versionNumber": "1.11.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
         },
         {
           "package": "fflib",
-          "versionNumber": "1.1.0.LATEST"
+          "versionNumber": "1.9.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "1.11.0.LATEST"
+          "versionNumber": "1.20.0.LATEST"
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.10.0.LATEST"
+          "versionNumber": "1.20.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.5.0.LATEST"
+          "versionNumber": "1.7.0.LATEST"
         }
       ]
     },
@@ -133,11 +137,11 @@
         },
         {
           "package": "fflib",
-          "versionNumber": "1.1.0.LATEST"
+          "versionNumber": "1.9.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "1.11.0.LATEST"
+          "versionNumber": "1.20.0.LATEST"
         },
         {
           "package": "LWCErrorHandler",
@@ -145,14 +149,14 @@
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.10.0.LATEST"
+          "versionNumber": "1.20.0.LATEST"
         },
         {
           "package": "Shortcuts"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.5.0.LATEST"
+          "versionNumber": "1.7.0.LATEST"
         },
         {
           "package": "PrivateMixView",
@@ -160,15 +164,15 @@
         },
         {
           "package": "RecommendedBadgeMix",
-          "versionNumber": "1.9.0.LATEST"
-        },
-        {
-          "package": "StorageManagement",
           "versionNumber": "1.11.0.LATEST"
         },
         {
+          "package": "StorageManagement",
+          "versionNumber": "1.13.0.LATEST"
+        },
+        {
           "package": "TaskList",
-          "versionNumber": "1.15.0.LATEST"
+          "versionNumber": "1.19.0.LATEST"
         }
       ]
     },
@@ -177,18 +181,18 @@
       "default": false,
       "package": "SortCustomMetadata",
       "versionName": "Akron",
-      "versionNumber": "1.5.0.NEXT",
+      "versionNumber": "1.7.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
         },
         {
           "package": "fflib",
-          "versionNumber": "1.1.0.LATEST"
+          "versionNumber": "1.9.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "1.11.0.LATEST"
+          "versionNumber": "1.20.0.LATEST"
         }
       ]
     },
@@ -198,10 +202,10 @@
     },
     {
       "path": "fflib",
-      "default": true,
+      "default": false,
       "package": "fflib",
       "versionName": "Akron",
-      "versionNumber": "1.1.0.NEXT"
+      "versionNumber": "1.9.0.NEXT"
     },
     {
       "path": "PrivateMixView",
@@ -216,19 +220,19 @@
         },
         {
           "package": "fflib",
-          "versionNumber": "1.1.0.LATEST"
+          "versionNumber": "1.9.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "1.11.0.LATEST"
+          "versionNumber": "1.20.0.LATEST"
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.10.0.LATEST"
+          "versionNumber": "1.20.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.5.0.LATEST"
+          "versionNumber": "1.7.0.LATEST"
         }
       ]
     },
@@ -275,6 +279,14 @@
     "SortCustomMetadata@1.6.0-1": "04t8c000001IvdmAAC",
     "RecommendedBadgeMix@1.10.0-1": "04t8c000001IvdrAAC",
     "PrivateMixView@1.9.0-1": "04t8c000001IvdwAAC",
-    "UserInterface@1.8.0-1": "04t8c000001Ive1AAC"
+    "UserInterface@1.8.0-1": "04t8c000001Ive1AAC",
+    "LWCUtils@1.20.0-1": "04t8c000001IvmBAAS",
+    "fflib@1.9.0-1": "04t8c000001IvmGAAS",
+    "Core@1.20.0-1": "04t8c000001IvpPAAS",
+    "Triggers@1.16.0-1": "04t8c000001IvpUAAS",
+    "TaskList@1.19.0-1": "04t8c000001IvpZAAS",
+    "StorageManagement@1.13.0-2": "04t8c000001IvpeAAC",
+    "SortCustomMetadata@1.7.0-1": "04t8c000001IvpjAAC",
+    "RecommendedBadgeMix@1.11.0-1": "04t8c000001IvpoAAC"
   }
 }
