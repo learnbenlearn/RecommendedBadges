@@ -87,8 +87,8 @@ public with sharing class StorageManagementServiceImplementation implements ISto
             if(records.size() > 0) {
                 delete as user records;
                 Database.emptyRecycleBin(records);
-                objectCleaned = true;
             }
+            objectCleaned = true;
         } catch(Exception e) {
             System.debug(e.getTypeName());
             objectCleaned = false;

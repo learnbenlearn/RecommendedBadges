@@ -65,10 +65,10 @@
     },
     {
       "path": "StorageManagement",
-      "default": true,
+      "default": false,
       "package": "StorageManagement",
       "versionName": "Akron",
-      "versionNumber": "1.13.0.NEXT",
+      "versionNumber": "1.14.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -127,7 +127,7 @@
       "default": false,
       "package": "UserInterface",
       "versionName": "Akron",
-      "versionNumber": "1.7.0.NEXT",
+      "versionNumber": "1.10.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -160,7 +160,7 @@
         },
         {
           "package": "PrivateMixView",
-          "versionNumber": "1.8.0.LATEST"
+          "versionNumber": "1.10.0.LATEST"
         },
         {
           "package": "RecommendedBadgeMix",
@@ -168,7 +168,7 @@
         },
         {
           "package": "StorageManagement",
-          "versionNumber": "1.13.0.LATEST"
+          "versionNumber": "1.14.0.LATEST"
         },
         {
           "package": "TaskList",
@@ -198,7 +198,7 @@
     },
     {
       "path": "unpackageable",
-      "default": false
+      "default": true
     },
     {
       "path": "fflib",
@@ -211,7 +211,7 @@
       "path": "PrivateMixView",
       "package": "PrivateMixView",
       "versionName": "Akron",
-      "versionNumber": "1.8.0.NEXT",
+      "versionNumber": "1.10.0.NEXT",
       "default": false,
       "versionDescription": "Package containing classes, LWCs, and Lightning pages for the private view portion of the Recommended Badges app.",
       "dependencies": [
@@ -269,24 +269,16 @@
     "PrivateMixView": "0Ho8c000000sY9SCAU",
     "fflib": "0Ho8c000000k9kfCAA",
     "LWCErrorHandler": "0Ho8c000000sYAzCAM",
-    "LWCUtils@1.16.0-1": "04t8c000001IvcAAAS",
-    "fflib@1.6.0-1": "04t8c000001IvcFAAS",
     "LWCErrorHandler@1.5.0-1": "04t8c000001IvcKAAS",
-    "Core@1.16.0-1": "04t8c000001Ivd3AAC",
-    "TaskList@1.17.0-1": "04t8c000001IvdIAAS",
-    "Triggers@1.14.0-1": "04t8c000001IvdNAAS",
-    "StorageManagement@1.12.0-1": "04t8c000001IvdcAAC",
-    "SortCustomMetadata@1.6.0-1": "04t8c000001IvdmAAC",
-    "RecommendedBadgeMix@1.10.0-1": "04t8c000001IvdrAAC",
-    "PrivateMixView@1.9.0-1": "04t8c000001IvdwAAC",
-    "UserInterface@1.8.0-1": "04t8c000001Ive1AAC",
     "LWCUtils@1.20.0-1": "04t8c000001IvmBAAS",
     "fflib@1.9.0-1": "04t8c000001IvmGAAS",
     "Core@1.20.0-1": "04t8c000001IvpPAAS",
     "Triggers@1.16.0-1": "04t8c000001IvpUAAS",
     "TaskList@1.19.0-1": "04t8c000001IvpZAAS",
-    "StorageManagement@1.13.0-2": "04t8c000001IvpeAAC",
     "SortCustomMetadata@1.7.0-1": "04t8c000001IvpjAAC",
-    "RecommendedBadgeMix@1.11.0-1": "04t8c000001IvpoAAC"
+    "RecommendedBadgeMix@1.11.0-1": "04t8c000001IvpoAAC",
+    "PrivateMixView@1.10.0-1": "04t8c000001IvpyAAC",
+    "StorageManagement@1.14.0-1": "04t8c000001IvqDAAS",
+    "UserInterface@1.10.0-1": "04t8c000001IvqIAAS"
   }
 }

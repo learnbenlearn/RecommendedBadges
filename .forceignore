@@ -26,7 +26,7 @@ appswitcher.appmenu
 #Core/main/default/objects/Recommended_Trail__c/fields/Level__c.field-meta.xml
 level.globalvalueset
 security.settings
-
+UserInterface/main/default/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-meta.xml
 
 # Ignored Packages
 Core
@@ -36,7 +36,7 @@ LWCErrorHandler
 #PrivateMixView
 RecommendedBadgeMix
 SortCustomMetadata
-StorageManagement
+#StorageManagement
 TaskList
 Triggers
 #UserInterface
