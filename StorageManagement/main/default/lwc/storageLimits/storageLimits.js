@@ -8,12 +8,12 @@ export default class StorageLimits extends LightningElement {
     cardTitle;
     dataStorageUrl = DATA_STORAGE_URL;
     displayCard;
-    limitLabel = 'Limit';
+    limitLabel = '<strong>Limit</strong>';
     limitNum;
     percentConsumedLabel = 'Percent Consumed';
     percentConsumed;
     percentConsumedNum;
-    valueLabel = 'Consumed';
+    valueLabel = '<strong>Consumed</strong>';
     valueNum;
 
     connectedCallback() {

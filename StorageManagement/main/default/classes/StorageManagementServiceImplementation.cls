@@ -1,7 +1,7 @@
 /**
  * @description       : Service class containing methods to clear storage by deleting unused badges and debug logs created by the Trail Tracker app.
  * @author            : Ben Learn
- * @last modified on  : 02-22-2023
+ * @last modified on  : 03-04-2023
  * @last modified by  : Ben Learn
 **/
 public with sharing class StorageManagementServiceImplementation implements IStorageManagementService {
@@ -66,15 +66,6 @@ public with sharing class StorageManagementServiceImplementation implements ISto
             orderedSObjects.add(Schema.SObjectType.trailheadapp__Trailmix__c);
             sObjectsToClean.put(Schema.SObjectType.trailheadapp__Trailmix__c, new TrailmixesSelector().selectAll());
 
-            // I have a lot to say about these next 9 lines => https://github.com/RecommendedBadges/RecommendedBadges/wiki/StorageManagement-and-Deleting-ScratchOrgInfos
-            if(System.Type.forName('ScratchOrgInfo') != null) {
-                orderedSObjects.add(Schema.describeSObjects(new List<String>{'ScratchOrgInfo'})[0]);
-                sObjectsToClean.put(
-                    Schema.describeSObjects(new List<String>{'ScratchOrgInfo'})[0],
-                    new ScratchOrgInfosSelector().selectAllNotActive()
-                );
-            }
-
             List<String> objectsNotDeleted = new List<String>();
             for(Integer i = 0; i < orderedSObjects.size(); i++) {
                 if(!purgeRecords(sObjectsToClean.get(orderedSObjects[i]), orderedSObjects[i])) {
@@ -88,16 +79,18 @@ public with sharing class StorageManagementServiceImplementation implements ISto
             throw e;
         }
     }
-
+    
     private static Boolean purgeRecords(List<sObject> records, Schema.DescribeSObjectResult sObjectDescribe) {
         Boolean objectCleaned;
-        if(sObjectDescribe.isDeletable() || (Request.getCurrent().getQuiddity() == System.Quiddity.SCHEDULED)) {
+        
+        try {
             if(records.size() > 0) {
-                delete records;
+                delete as user records;
                 Database.emptyRecycleBin(records);
             }
             objectCleaned = true;
-        } else if (!sObjectDescribe.isDeletable()){
+        } catch(Exception e) {
+            System.debug(e.getTypeName());
             objectCleaned = false;
         }
         return objectCleaned;

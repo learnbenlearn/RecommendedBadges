@@ -1,10 +1,22 @@
 {
     "orgname": "Recommended Badges",
-    "sourceOrg": "00D8c000005JlFQ",
-    "features": ["EnableSetPasswordInApi"],
+    "sourceOrg": "00DDm000000H65oMAC",
+    "features": ["EnableSetPasswordInApi", "Communities", "Sites"],
     "settings": {
+        "communitiesSettings": {
+            "enableNetworksEnabled": true
+        },
+        "experienceBundleSettings": {
+            "enableExperienceBundleMetadata": true
+        },
+        "languageSettings": {
+            "enableTranslationWorkbench": true
+        },
         "lightningExperienceSettings": {
             "enableS1DesktopEnabled": true
+        },
+        "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
         }
     }
 }

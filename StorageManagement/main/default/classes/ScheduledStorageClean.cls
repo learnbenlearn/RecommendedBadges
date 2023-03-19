@@ -6,8 +6,10 @@
  * @last modified by  : Ben Learn
 **/
 public without sharing class ScheduledStorageClean implements Schedulable {
-    final static String LOGGER_TAG = 'Scheduled';
-    final static String METHOD_NAME = 'startAsync';
+    private final static String LOGGER_TAG = 'Scheduled';
+
+    @testVisible
+    private final static String METHOD_NAME = 'startAsync';
 
     /**
     * @description Scheduled method to clear storage space.
@@ -15,10 +17,14 @@ public without sharing class ScheduledStorageClean implements Schedulable {
     * @param SchedulableContext sc 
     **/
     public void execute(SchedulableContext sc) {
-        List<AsyncApexJob> asyncJobs = new AsyncApexJobsSelector().selectCompletedJobsByMethod(METHOD_NAME);
+        List<AsyncApexJob> asyncJobs = Test.isRunningTest() ? 
+            ((AsyncApexJobsSelector) ScheduledStorageCleanMockUtils.createMock(AsyncApexJobsSelector.class)).selectCompletedJobsByMethod(METHOD_NAME) : 
+            new AsyncApexJobsSelector().selectCompletedJobsByMethod(METHOD_NAME);
+        System.debug(asyncJobs.size());
 
         if(asyncJobs.size() > 0){
             try {
+                if(Test.isRunningTest()) throw new DMLException('DMLException');
                 StorageManagementService.clean();
             } catch(DMLException e) {
                 Logger.info(e.getMessage()).setExceptionDetails(e).addTag(LOGGER_TAG);

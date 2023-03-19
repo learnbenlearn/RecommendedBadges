@@ -1,13 +1,10 @@
 /**
  * @description       : Application class for fflib Factory definitions.
  * @author            : Ben Learn
- * @last modified on  : 01-29-2023
+ * @last modified on  : 03-04-2023
  * @last modified by  : Ben Learn
 **/
 public class Application {
-    // Constants
-    public static Boolean IS_DEV_HUB_ORG = System.Type.forName('ScratchOrgInfo') != null;
-
     // Service factory instantiation
     private static Map<Type, Type> defaultServiceImplementationMap = new Map<Type, Type>();
     static {
@@ -21,7 +18,6 @@ public class Application {
     // Selector factory instantiation
     private static Map<SObjectType, Type> selectorsBySObject = new Map<SObjectType, Type>();
     static {
-        selectorsBySObject.put(AsyncApexJob.sObjectType, AsyncApexJobsSelector.class);
         selectorsBySObject.put(DefaultServiceImplementation__mdt.sObjectType, DefaultServiceImplementationsSelector.class);
         selectorsBySObject.put(Mix_Category__c.sObjectType, MixCategoriesSelector.class);
         selectorsBySObject.put(Recommended_Badge_Mix__c.sObjectType, RecommendedBadgeMixesSelector.class);
@@ -34,14 +30,14 @@ public class Application {
         selectorsBySObject.put(trailheadapp__Trail__c.sObjectType, TrailsSelector.class);
         selectorsBySObject.put(trailheadapp__User_Badge__c.sObjectType, UserBadgesSelector.class);
 
-        if(APPLICATION.IS_DEV_HUB_ORG) {
-            selectorsBySObject.put(Schema.describeSObjects(new List<String>{'ScratchOrgInfo'})[0].getSObjectType(), ScratchOrgInfosSelector.class);
-        }
-
         List<DefaultObjectSelector__mdt> defaultObjectSelectors = new DefaultObjectSelectorsSelector().selectAll();
         for(DefaultObjectSelector__mdt defaultObjectSelector : defaultObjectSelectors) {
+            String sObjectName = defaultObjectSelector.DeveloperName;
+            if(defaultObjectSelector.Suffix__c != null) {
+                sObjectName += defaultObjectSelector.Suffix__c;
+            }
             selectorsBySObject.put(
-                Schema.describeSObjects(new List<String>{defaultObjectSelector.DeveloperName + defaultObjectSelector.Suffix__c})[0].getSObjectType(), 
+                Schema.describeSObjects(new List<String>{sObjectName})[0].getSObjectType(), 
                 Type.forName(defaultObjectSelector.DefaultSelector__c)
             );
         }

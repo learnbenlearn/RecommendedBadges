@@ -7,10 +7,10 @@ do
     esac
 done
 
-username=${username:-$(sfdx config:get defaultusername --json | jq -r '.result[0].value')}
+username=${username:-$(sf config get target-org --json | jq -r '.result[0].value')}
 package=${package:?"Please input the package to install the dependencies of."}
 
-jsonDependencies=($(sfdx force:data:soql:query -u RecommendedBadges -t -q "SELECT Dependencies FROM SubscriberPackageVersion WHERE Id='$package'" --json | jq -c '[.result.records[0].Dependencies.ids | .[].subscriberPackageVersionId]'))
+jsonDependencies=($(sf data query -o RecommendedBadges -t -q "SELECT Dependencies FROM SubscriberPackageVersion WHERE Id='$package'" --json | jq -c '[.result.records[0].Dependencies.ids | .[].subscriberPackageVersionId]'))
 dependencies=()
 dependencies+=( $(echo ${jsonDependencies:1:(${#jsonDependencies}-2)} | tr "," " " | tr -d '"') )
 
@@ -19,7 +19,7 @@ then
     for id in ${dependencies[@]}
     do
         echo "Installing dependent package: "$id
-        sfdx package install -p $id -o $username -r -w 20
+        sf package install -p $id -o $username -r -w 20
         echo ""
     done
 fi
