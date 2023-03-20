@@ -195,11 +195,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Recommended_Trail__c.Roles__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Recommended_Trail__c.Tags__c</field>
         <readable>true</readable>
     </fieldPermissions>
