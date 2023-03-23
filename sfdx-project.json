@@ -248,6 +248,14 @@
           "package": "NebulaLogger"
         }
       ]
+    },
+    {
+      "path": "SFXOrgSubscriber",
+      "package": "SFXOrgSubscriber",
+      "versionName": "Akron",
+      "versionNumber": "1.0.0.NEXT",
+      "default": false,
+      "versionDescription": "Unlocked package holding authentication provider, external data source, and permission set to subscribe to the Trail Tracker Provider org."
     }
   ],
   "name": "RecommendedBadges",
@@ -269,6 +277,7 @@
     "PrivateMixView": "0Ho8c000000sY9SCAU",
     "fflib": "0Ho8c000000k9kfCAA",
     "LWCErrorHandler": "0Ho8c000000sYAzCAM",
+    "SFXOrgSubscriber": "0Ho8c000000sYCMCA2",
     "LWCErrorHandler@1.5.0-1": "04t8c000001IvcKAAS",
     "LWCUtils@1.20.0-1": "04t8c000001IvmBAAS",
     "fflib@1.9.0-1": "04t8c000001IvmGAAS",
@@ -279,6 +288,7 @@
     "RecommendedBadgeMix@1.11.0-1": "04t8c000001IvpoAAC",
     "PrivateMixView@1.10.0-1": "04t8c000001IvpyAAC",
     "StorageManagement@1.14.0-1": "04t8c000001IvqDAAS",
-    "UserInterface@1.10.0-1": "04t8c000001IvqIAAS"
+    "UserInterface@1.10.0-1": "04t8c000001IvqIAAS",
+    "SFXOrgSubscriber@1.0.0-1": "04t8c000001IvruAAC"
   }
 }

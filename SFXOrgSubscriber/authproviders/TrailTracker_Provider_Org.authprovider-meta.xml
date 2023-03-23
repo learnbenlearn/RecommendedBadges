@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <consumerKey>3MVG9IeKOu9pMLcJQRb09uHPyU6cbzuSB8RaXbaaUYBY9j_JJI.KQ0am6_A8bUzVT6Dywc.DAoS0q.5RDgPvG</consumerKey>
+    <consumerSecret>Placeholder_Value</consumerSecret>
+    <friendlyName>TrailTracker Provider Org</friendlyName>
+    <includeOrgIdInIdentifier>true</includeOrgIdInIdentifier>
+    <providerType>Salesforce</providerType>
+    <sendAccessTokenInHeader>false</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+</AuthProvider>

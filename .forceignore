@@ -29,12 +29,13 @@ security.settings
 UserInterface/main/default/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-meta.xml
 
 # Ignored Packages
-#Core
+Core
 fflib
 LWCUtils
 LWCErrorHandler
 PrivateMixView
 RecommendedBadgeMix
+#SFXOrgSubscriber
 SortCustomMetadata
 StorageManagement
 TaskList
