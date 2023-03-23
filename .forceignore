@@ -29,8 +29,8 @@ security.settings
 UserInterface/main/default/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-meta.xml
 
 # Ignored Packages
-Core
-#fflib
+#Core
+fflib
 LWCUtils
 LWCErrorHandler
 PrivateMixView
