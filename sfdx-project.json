@@ -5,7 +5,7 @@
       "package": "Core",
       "versionName": "Akron",
       "versionNumber": "1.20.0.NEXT",
-      "default": false,
+      "default": true,
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -198,7 +198,7 @@
     },
     {
       "path": "unpackageable",
-      "default": true
+      "default": false
     },
     {
       "path": "fflib",
