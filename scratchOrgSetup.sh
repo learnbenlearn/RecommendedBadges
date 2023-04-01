@@ -1,13 +1,13 @@
 #! /bin/bash
-while getopts u:p: flag
+while getopts o:p: flag
 do
     case "${flag}" in
-        u) username=${OPTARG};;
+        o) targetorg=${OPTARG};;
         p) package=${OPTARG};;
     esac
 done
 
-username=${username:-$(sf config get target-org --json | jq -r '.result[0].value')}
+targetorg=${targetorg:-$(sf config get target-org --json | jq -r '.result[0].value')}
 package=${package:?"Please input the package to install the dependencies of."}
 
 jsonDependencies=($(sf data query -o RecommendedBadges -t -q "SELECT Dependencies FROM SubscriberPackageVersion WHERE Id='$package'" --json | jq -c '[.result.records[0].Dependencies.ids | .[].subscriberPackageVersionId]'))
@@ -19,7 +19,7 @@ then
     for id in ${dependencies[@]}
     do
         echo "Installing dependent package: "$id
-        sf package install -p $id -o $username -r -w 20
+        sf package install -p $id -o $targetorg -r -w 20
         echo ""
     done
 fi
