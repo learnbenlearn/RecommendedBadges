@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexTestSuite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <testClassName>ApplicationTests</testClassName>
+    <testClassName>BadgesSelectorTests</testClassName>
+    <testClassName>DebugLogsSelectorTests</testClassName>
+    <testClassName>DefaultObjectSelectorsSelectorTests</testClassName>
+    <testClassName>DefaultServiceImplementationSelectorTest</testClassName>
+    <testClassName>MixCategoriesSelectorTests</testClassName>
+    <testClassName>RecommendedBadgeMixesSelectorTests</testClassName>
+    <testClassName>RecommendedBadgesSelectorTests</testClassName>
+    <testClassName>RecommendedTrailsSelectorTests</testClassName>
+    <testClassName>SelectorTestErrorMessages</testClassName>
+    <testClassName>TasksSelectorTests</testClassName>
+    <testClassName>TrailmixesSelectorTests</testClassName>
+    <testClassName>TrailsSelectorTests</testClassName>
+    <testClassName>UserBadgesSelectorTests</testClassName>
+</ApexTestSuite>

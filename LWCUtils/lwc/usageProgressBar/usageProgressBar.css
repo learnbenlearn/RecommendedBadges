@@ -1,0 +1,23 @@
+:host {
+  --border-radius: 10px;
+  --progress-bar-height: 10px;
+  --progress-bar-width: 0px;
+  --progress-bar-color-background: white;
+  --progress-bar-color: black;
+}
+
+.progress-bar {
+  display: block;
+  height: (var(--progress-bar-height) * 2);
+  background: var(--progress-bar-color-background);
+  border-radius: var(--border-radius);
+  position: relative;
+}
+
+.progress-bar__value {
+  border-radius: var(--border-radius);
+  width: var(--progress-bar-width);
+  display: inline-block;
+  background: var(--progress-bar-color);
+  height: 100%;
+}

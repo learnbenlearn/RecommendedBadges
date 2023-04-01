@@ -171,6 +171,14 @@
           "versionNumber": "1.15.0.LATEST"
         },
         {
+          "package": "RecommendedBadgeMix",
+          "versionNumber": "1.11.0.LATEST"
+        },
+        {
+          "package": "StorageManagement",
+          "versionNumber": "1.14.0.LATEST"
+        },
+        {
           "package": "TaskList",
           "versionNumber": "1.20.0.LATEST"
         }
