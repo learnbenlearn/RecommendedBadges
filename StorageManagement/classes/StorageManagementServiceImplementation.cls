@@ -90,7 +90,6 @@ public with sharing class StorageManagementServiceImplementation implements ISto
             }
             objectCleaned = true;
         } catch(Exception e) {
-            System.debug(e.getTypeName());
             objectCleaned = false;
         }
         return objectCleaned;
