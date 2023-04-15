@@ -13,7 +13,7 @@ public without sharing class RecommendedBadgeMixController {
     * @return RecommendedBadgeMixWrapper 
     **/
     @AuraEnabled(cacheable=true)
-    public static RecommendedBadgeMixWrapper getData() {
+    public static DataWrapper getData() {
         List<Mix_Category__c> mixCategories = new MixCategoriesSelector().selectRecommendedBadgesAndTrails();
         Map<String, List<Mix_Category__c>> categoriesByMix = new Map<String, List<Mix_Category__c>>();
 
@@ -35,8 +35,19 @@ public without sharing class RecommendedBadgeMixController {
             defaultMixName = mixCategories[0].Recommended_Badge_Mix__r.Name;
         }
         
-        RecommendedBadgeMixWrapper data = new RecommendedBadgeMixWrapper(categoriesByMix, defaultMixName);
+        DataWrapper data = new DataWrapper(categoriesByMix, defaultMixName);
 
         return data;
+    }
+
+    @testVisible
+    private class DataWrapper {
+        @AuraEnabled public Map<String, List<Mix_Category__c>> categoriesByMix {get;set;}
+        @AuraEnabled public String defaultMix {get;set;}
+    
+        private DataWrapper(Map<String, List<Mix_Category__c>> categoriesByMix, String defaultMix) {
+            this.categoriesByMix = categoriesByMix;
+            this.defaultMix = defaultMix;
+        }
     }
 }
