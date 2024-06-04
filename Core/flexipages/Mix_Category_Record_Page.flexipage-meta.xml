@@ -7,6 +7,16 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.Name</fieldItem>
+                <identifier>RecordNameField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Exam__c</fieldItem>
                 <identifier>RecordExam_cField1</identifier>
                 <visibilityRule>
@@ -141,6 +151,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-285a77d4-916e-4d11-9d73-83f811832f77</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
