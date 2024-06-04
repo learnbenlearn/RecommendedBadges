@@ -10,13 +10,7 @@
             <div class="slds-combobox_container">
                 <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click">
                     <label>{objectName}</label>
-                    <template if:false={selectedItem}>
-                        <lightning-input label={objectName} variant="label-hidden" type="search" onfocus={handleInputFocus} onblur={handleInputBlur} 
-                            onchange={handleInputChange}>
-                        </lightning-input>
-                    </template>
-                    
-                    <template if:true={selectedItem}>
+                    <template lwc:if={selectedItem}>
                         <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right slds-input_faux" role="none">
                             <lightning-icon icon-name={resultIconName}></lightning-icon>
                             <button type="button" class="slds-combobox__input slds-combobox__input-value slds-input_faux">
@@ -24,6 +18,12 @@
                             </button>
                             <lightning-button-icon icon-name="utility:close" variant="container" onclick={handleRemoveSelectedItem}></lightning-button-icon>
                         </div>
+                    </template>
+
+                    <template lwc:else>
+                        <lightning-input label={objectName} variant="label-hidden" type="search" onfocus={handleInputFocus} onblur={handleInputBlur} 
+                            onchange={handleInputChange}>
+                        </lightning-input>
                     </template>
 
                     <div class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">

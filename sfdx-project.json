@@ -297,6 +297,10 @@
     "SortCustomMetadata@1.8.0-1": "04t8c000000qYORAA2",
     "RecommendedBadgeMix@1.13.0-1": "04t8c000000qYObAAM",
     "PrivateMixView@1.11.0-1": "04t8c000000qYOgAAM",
-    "UserInterface@1.11.0-1": "04t8c000000qYOlAAM"
+    "UserInterface@1.11.0-1": "04t8c000000qYOlAAM",
+    "Core@1.21.0-2": "04t8c000000vFyDAAU",
+    "Core@1.21.0-3": "04t8c000000vFyIAAU",
+    "Core@1.21.0-4": "04t8c000000vFyNAAU",
+    "Core@1.21.0-5": "04t8c000000vFySAAU"
   }
 }

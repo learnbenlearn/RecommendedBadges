@@ -6,11 +6,11 @@
   @last modified by  : Ben Learn
 -->
 <template>
-    <template if:true={hasRowActions}>
+    <template lwc:if={hasRowActions}>
       <lightning-datatable key-field={keyField} data={tableData} columns={columns} onrowaction={handleRowAction} hide-checkbox-column>
       </lightning-datatable>
     </template>
-    <template if:false={hasRowActions}>
+    <template lwc:else>
       <lightning-datatable key-field={keyField} data={tableData} columns={columns} hide-checkbox-column></lightning-datatable>
     </template>
 </template>

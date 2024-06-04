@@ -3,11 +3,6 @@
     <fullName>RecommendedBadgeMix</fullName>
     <description>Field set for Recommended Badge Mix package.</description>
     <displayedFields>
-        <field>Description__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </displayedFields>
-    <displayedFields>
         <field>Level__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>

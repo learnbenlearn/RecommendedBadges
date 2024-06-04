@@ -1,0 +1,18 @@
+<template>
+    <th aria-label={label} aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate" scope="col">
+        <a class="slds-th__action slds-text-link_reset" href="#" role="button" tabindex="-1">
+          <span class="slds-assistive-text">Sort by: </span>
+          <span>
+            <span class="slds-truncate" title={label}>{label}</span>
+            <lightning-icon icon-name="utility:arrowdown" class="slds-is-sortable__icon" size="x-small"></lightning-icon>
+          </span>
+        </a>
+        <lightning-button-icon icon-name="utility:chevrondown" alternative-text="Show Phone Number column actions" icon-class="slds-button__icon_hint slds-th__action-button" size="small" variant="bare"></lightning-button-icon>
+        <div class="slds-resizable">
+          <input type="range" aria-label="Phone Number column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-138" max="1000" min="20" tabindex="-1" />
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+    </th>
+</template>

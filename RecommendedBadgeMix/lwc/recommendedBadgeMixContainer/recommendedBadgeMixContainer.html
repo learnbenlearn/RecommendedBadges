@@ -20,7 +20,7 @@
             <div class="slds-col slds-size_1-of-4"></div>
 
             <div class="slds-col slds-size_1-of-4 slds-text-align_right">
-                <template if:true={displayTable}>
+                <template lwc:if={displayTable}>
                     Last Updated &nbsp;
                     <lightning-formatted-date-time value={currentLastUpdatedDate} year="numeric" month="short" day="numeric" time-zone="UTC"></lightning-formatted-date-time>
                 </template>
@@ -33,14 +33,15 @@
             </div>
         </div>
 
-        <template if:true={isLoading}>
+        <template lwc:if={isLoading}>
             <lightning-spinner alternative-text={spinnerText}></lightning-spinner>
         </template>
 
-        <template if:true={displayTable}>
+        <template lwc:if={displayTable}>
             <div style="max-height:60vh;overflow:scroll;display:block">
                 <br/>
-                <c-treegrid columns={treegridColumns} treegrid-data={treegridData} key-field={keyField}></c-treegrid>
+                <!--<c-treegrid columns={treegridColumns} treegrid-data={treegridData} key-field={keyField}></c-treegrid>-->
+                <c-custom-treegrid columns={treegridColumns} data={treegridData} key-field={keyField}></c-custom-treegrid>
             </div>
         </template>
     </div>

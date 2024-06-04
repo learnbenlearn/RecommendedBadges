@@ -6,11 +6,11 @@
 -->
 <template>
   <div class={divClasses}>
-    <template if:true={isLoading}>
+    <template lwc:if={isLoading}>
       <lightning-spinner alternative-text={spinnerText}></lightning-spinner>
     </template>
-    <template if:false={isLoading}>
-      <template if:true={recommendedBadgeData}>
+    <template lwc:else>
+      <template lwc:if={recommendedBadgeData}>
         <c-dropdown label={dropdownViewLabel} value={dropdownViewValue} options={viewOptions} ondropdownchange={handleDropdownChange}>
         </c-dropdown>
         <br/>
@@ -22,18 +22,18 @@
         </div>
       </template>
 
-      <template if:false={recommendedBadgeData}>
+      <template lwc:else>
         <div class="slds-align_absolute-center">
           <p>It looks like you don't have a personal recommended badge mix. You can create one by selecting the Private Mix checkbox when making a new recommended badge mix.</p>
         </div>
       </template>
   
-      <template if:true={displayPrompt}>
+      <template lwc:if={displayPrompt}>
         <c-prompt-dialog prompt-header={promptHeader} confirm-label="Save" display-cancel="true" cancel-label="Cancel" onpromptclose={handlePromptClose} 
           onpromptconfirm={handlePromptConfirm}>
           <span slot="promptInput">
             <c-lookup object-name={lookupObjectName} result-icon-name={lookupResultIconName} lookup-items={lookupItems}></c-lookup>
-            <template if:true={promptIsLoading}>
+            <template lwc:if={promptIsLoading}>
               <lightning-spinner></lightning-spinner>
             </template>
           </span>

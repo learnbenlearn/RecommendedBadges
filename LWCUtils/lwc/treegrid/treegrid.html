@@ -6,6 +6,176 @@
   @last modified by  : Ben Learn
 -->
 <template>
+  <template lwc:if={displayCustomTreegrid}>
+    <table aria-multiselectable="true" class="slds-table slds-table_bordered slds-table_edit slds-table_fixed-layout slds-table_resizable-cols slds-tree slds-table_tree" role="treegrid" aria-label="Example default tree grid">
+      <thead>
+        <tr class="slds-line-height_reset">
+          <th aria-label="Account Name" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+            <a class="slds-th__action slds-text-link_reset" href="#" role="button" tabindex="-1">
+              <span class="slds-assistive-text">Sort by: </span>
+              <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                <span class="slds-truncate" title="Account Name">Account Name</span>
+                <span class="slds-icon_container slds-icon-utility-arrowdown">
+                  <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+            <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Account Name column actions">
+              <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+              </svg>
+              <span class="slds-assistive-text">Show Account Name column actions</span>
+            </button>
+            <div class="slds-resizable">
+              <input type="range" aria-label="Account Name column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-136" max="1000" min="20" tabindex="-1" />
+              <span class="slds-resizable__handle">
+                <span class="slds-resizable__divider"></span>
+              </span>
+            </div>
+          </th>
+          <th aria-label="Employees" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+            <a class="slds-th__action slds-text-link_reset" href="#" role="button" tabindex="-1">
+              <span class="slds-assistive-text">Sort by: </span>
+              <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                <span class="slds-truncate" title="Employees">Employees</span>
+                <span class="slds-icon_container slds-icon-utility-arrowdown">
+                  <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+            <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Employees column actions">
+              <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+              </svg>
+              <span class="slds-assistive-text">Show Employees column actions</span>
+            </button>
+            <div class="slds-resizable">
+              <input type="range" aria-label="Employees column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-137" max="1000" min="20" tabindex="-1" />
+              <span class="slds-resizable__handle">
+                <span class="slds-resizable__divider"></span>
+              </span>
+            </div>
+          </th>
+
+          <th aria-label="Phone Number" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate" scope="col">
+            <a class="slds-th__action slds-text-link_reset" href="#" role="button" tabindex="-1">
+              <span class="slds-assistive-text">Sort by: </span>
+              <span class="s">
+                <span class="slds-truncate" title="Phone Number">Phone Number</span>
+                <lightning-icon icon-name="utility:arrowdown" class="slds-is-sortable__icon" size="x-small"></lightning-icon>
+              </span>
+            </a>
+            <lightning-button-icon icon-name="utility:chevrondown" alternative-text="Show Phone Number column actions" icon-class="slds-button__icon_hint slds-th__action-button" size="small" variant="bare"></lightning-button-icon>
+            <div class="slds-resizable">
+              <input type="range" aria-label="Phone Number column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-138" max="1000" min="20" tabindex="-1" />
+              <span class="slds-resizable__handle">
+                <span class="slds-resizable__divider"></span>
+              </span>
+            </div>
+          </th>
+
+          <th aria-label="Account Owner" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+            <a class="slds-th__action slds-text-link_reset" href="#" role="button" tabindex="-1">
+              <span class="slds-assistive-text">Sort by: </span>
+              <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                <span class="slds-truncate" title="Account Owner">Account Owner</span>
+                <span class="slds-icon_container slds-icon-utility-arrowdown">
+                  <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+            <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Account Owner column actions">
+              <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+              </svg>
+              <span class="slds-assistive-text">Show Account Owner column actions</span>
+            </button>
+            <div class="slds-resizable">
+              <input type="range" aria-label="Account Owner column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-139" max="1000" min="20" tabindex="-1" />
+              <span class="slds-resizable__handle">
+                <span class="slds-resizable__divider"></span>
+              </span>
+            </div>
+          </th>
+          <th aria-label="Billing City" aria-sort="none" class="slds-has-button-menu slds-is-resizable slds-is-sortable" scope="col">
+            <a class="slds-th__action slds-text-link_reset" href="#" role="button" tabindex="-1">
+              <span class="slds-assistive-text">Sort by: </span>
+              <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                <span class="slds-truncate" title="Billing City">Billing City</span>
+                <span class="slds-icon_container slds-icon-utility-arrowdown">
+                  <svg class="slds-icon slds-icon-text-default slds-is-sortable__icon " aria-hidden="true">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#arrowdown"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+            <button class="slds-button slds-button_icon slds-th__action-button slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="Show Billing City column actions">
+              <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevrondown"></use>
+              </svg>
+              <span class="slds-assistive-text">Show Billing City column actions</span>
+            </button>
+            <div class="slds-resizable">
+              <input type="range" aria-label="Billing City column width" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-140" max="1000" min="20" tabindex="-1" />
+              <span class="slds-resizable__handle">
+                <span class="slds-resizable__divider"></span>
+              </span>
+            </div>
+          </th>
+          <th class="" scope="col" style="width:3.25rem">
+            <div class="slds-truncate slds-assistive-text" title="Actions">Actions</div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr aria-level="1" aria-posinset="1" aria-selected="false" aria-setsize="4" class="slds-hint-parent" tabindex="0">
+          <th class="slds-tree__item" data-label="Account Name" scope="row">
+            <button class="slds-button slds-button_icon slds-button_icon-x-small slds-m-right_x-small slds-is-disabled" aria-hidden="true" tabindex="-1" title="Expand Rewis Inc">
+              <svg class="slds-button__icon slds-button__icon_small" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+              </svg>
+              <span class="slds-assistive-text">Expand Rewis Inc</span>
+            </button>
+            <div class="slds-truncate" title="Rewis Inc">
+              <a href="#" tabindex="-1">Rewis Inc</a>
+            </div>
+          </th>
+          <td data-label="Employees" role="gridcell">
+            <div class="slds-truncate" title="3,100">3,100</div>
+          </td>
+
+          <td data-label="Phone Number" role="gridcell">
+            <div class="slds-truncate" title="837-555-1212">837-555-1212</div>
+          </td>
+          
+          <td data-label="Account Owner" role="gridcell">
+            <div class="slds-truncate" title="Jane Doe">
+              <a href="#" tabindex="-1">Jane Doe</a>
+            </div>
+          </td>
+          <td data-label="Billing City" role="gridcell">
+            <div class="slds-truncate" title="Phoenix, AZ">Phoenix, AZ</div>
+          </td>
+          <td role="gridcell" style="width:3.25rem">
+            <button class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small" aria-haspopup="true" tabindex="-1" title="More actions for Rewis Inc">
+              <svg class="slds-button__icon slds-button__icon_hint slds-button__icon_small" aria-hidden="true">
+                <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+              </svg>
+              <span class="slds-assistive-text">More actions for Rewis Inc</span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </template>
+  <template lwc:else>
     <lightning-tree-grid columns={columns} data={treegridData} hide-checkbox-column key-field={keyField}>
     </lightning-tree-grid>
+  </template>
 </template>

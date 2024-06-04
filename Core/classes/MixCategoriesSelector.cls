@@ -64,11 +64,13 @@ public inherited sharing class MixCategoriesSelector extends ApplicationSelector
             if(childRelationship.getChildSObject() == Recommended_Badge__c.sObjectType) {
                 recommendedBadgesQueryFactory = new RecommendedBadgesSelector().
                     addQueryFactorySubselect(mixCategoriesQueryFactory, childRelationship.getRelationshipName(), true).
-                    selectFieldSet(Schema.SObjectType.Recommended_Badge__c.fieldSets.RecommendedBadgeMix, true);
+                    selectFieldSet(Schema.SObjectType.Recommended_Badge__c.fieldSets.RecommendedBadgeMix, true).
+                    selectField('HyperlinkedName__c');
             } else if(childRelationship.getChildSObject() == Recommended_Trail__c.sObjectType) {
                 recommendedTrailsQueryFactory = new RecommendedTrailsSelector().
                     addQueryFactorySubselect(mixCategoriesQueryFactory, childRelationship.getRelationshipName(), true).
-                    selectFieldSet(Schema.SObjectType.Recommended_Trail__c.fieldSets.RecommendedBadgeMix, true); 
+                    selectFieldSet(Schema.SObjectType.Recommended_Trail__c.fieldSets.RecommendedBadgeMix, true).
+                    selectField('HyperlinkedName__c'); 
             }
         }
 
