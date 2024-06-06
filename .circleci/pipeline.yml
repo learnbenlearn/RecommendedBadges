@@ -57,11 +57,11 @@ jobs:
       - run:
           name: Decrypt Server Key
           command: |
-            openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
+            openssl enc -nosalt -aes-256-cbc -d -in ${SERVER_KEY_ENC} -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
       - run:
           name: Authorize Dev Hub
           command: |
-            sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
+            sf org login jwt -i $HUB_CONSUMER_KEY -f assets/server.key -o $HUB_USER_NAME -d -a $HUB_ALIAS
       - when:
           condition:
             and:
