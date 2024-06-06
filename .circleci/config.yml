@@ -43,7 +43,7 @@ jobs:
         - run:
             name: Decrypt Server Key
             command: |
-              openssl enc -nosalt -aes-256-cbc -d -in $SERVER_KEY_ENC -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
+              openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out assets/server.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
         - run:
             name: Authorize Dev Hub
             command: |
