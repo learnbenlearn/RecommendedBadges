@@ -5,7 +5,7 @@
   @last modified by  : Ben Learn
 -->
 <template>
-    <template if:true={displayCard}>
+    <template lwc:if={displayCard}>
         <h1>
             <b><lightning-formatted-url label={cardTitle} value={dataStorageUrl} target="_blank"></lightning-formatted-url></b>
         </h1>

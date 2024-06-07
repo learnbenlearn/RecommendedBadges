@@ -35,11 +35,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>trailheadapp__Badge__c.Test_External_Id__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>trailheadapp__Badge__c.trailheadapp__Archived__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -81,11 +76,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>trailheadapp__Badge__c.trailheadapp__Type__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>trailheadapp__Trail__c.Test_External_Id__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>

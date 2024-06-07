@@ -10,7 +10,7 @@
     </lightning-modal-header>
 
     <lightning-modal-body>
-        <template if:true={sysAdminView}>
+        <template lwc:if={sysAdminView}>
             <div><b><u>Error Message</u></b></div>
         </template>
 
@@ -18,7 +18,7 @@
         <br/>
         <br/>
         
-        <template if:true={sysAdminView}>
+        <template lwc:if={sysAdminView}>
             <div><b><u>Stack Trace</u></b></div>
             <lightning-formatted-text value={error.stackTrace}></lightning-formatted-text>
         </template>

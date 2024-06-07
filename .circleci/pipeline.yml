@@ -61,7 +61,7 @@ jobs:
       - run:
           name: Authorize Dev Hub
           command: |
-            sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_USER_NAME -d -a $HUB_ALIAS
+            sf org login jwt -i $HUB_CONSUMER_KEY -f assets/server.key -o $HUB_USER_NAME -d -a $HUB_ALIAS
       - when:
           condition:
             and:

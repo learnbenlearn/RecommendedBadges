@@ -39,7 +39,7 @@ private class RecommendedBadgeMixControllerTests {
         String defaultMixName = [SELECT Name FROM Recommended_Badge_Mix__c WHERE Default_Badge_Mix__c = true][0].Name;
 
         Test.startTest();
-        RecommendedBadgeMixWrapper testData = RecommendedBadgeMixController.getData();
+        RecommendedBadgeMixController.DataWrapper testData = RecommendedBadgeMixController.getData();
         Test.stopTest();
 
         for(String mix : testCategoriesByMix.keySet()) {
@@ -65,7 +65,7 @@ private class RecommendedBadgeMixControllerTests {
         ][0].Recommended_Badge_Mix__r.Name;
 
         Test.startTest();
-        RecommendedBadgeMixWrapper testData = RecommendedBadgeMixController.getData();
+        RecommendedBadgeMixController.DataWrapper testData = RecommendedBadgeMixController.getData();
         Test.stopTest();
 
         for(String mix : testCategoriesByMix.keySet()) {

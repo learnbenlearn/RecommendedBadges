@@ -40,9 +40,7 @@ private class PrivateViewControllerTests {
 
         TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, true, 20, testRecommendedBadgeMixes);
         List<Mix_Category__c> testMixCategories = mixCategoryGenerator.execute();
-        System.debug(testMixCategories);
-        System.debug([SELECT COUNT(Id), Recommended_Badge_Mix__r.Name FROM Mix_Category__c WHERE Recommended_Badge_Mix__r.Private_Mix__c = true GROUP BY Recommended_Badge_Mix__r.Name]);
-
+        
         TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(true, false, testBadges, testMixCategories, true);
         recommendedBadgeGenerator.execute();
 
@@ -51,8 +49,6 @@ private class PrivateViewControllerTests {
             FROM Recommended_Badge__c 
             WHERE Mix_Category__r.Recommended_Badge_Mix__r.Private_Mix__c = true ORDER BY Badge_Name__c
         ];
-
-        System.debug(resultRecommendedBadges);
 
         Map<String, List<Recommended_Badge__c>> resultRecommendedBadgeMap = new Map<String, List<Recommended_Badge__c>>();
         resultRecommendedBadgeMap.put('High Priority', new List<Recommended_Badge__c>());

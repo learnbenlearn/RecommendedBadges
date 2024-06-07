@@ -4,6 +4,7 @@ export default class Treegrid extends LightningElement {
     @api columns;
     @api treegridData;
     @api keyField;
+    @api displayCustomTreegrid;
 
     @api expandAll() {
         this.template.querySelector('lightning-tree-grid').expandAll();

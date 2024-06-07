@@ -17,7 +17,7 @@
             </div>
             
             <div class="slds-modal__footer slds-theme_default">
-                <template if:true={displayCancel}>
+                <template lwc:if={displayCancel}>
                     <lightning-button label={cancelLabel} onclick={handleCancel} variant="brand"></lightning-button>
                 </template>
                 &nbsp;

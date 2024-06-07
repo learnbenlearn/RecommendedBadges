@@ -1,13 +1,16 @@
 import { LightningElement, wire } from 'lwc';
 
-import getData from '@salesforce/apex/RecommendedBadgeMixController.getData';
+import { CurrentPageReference } from 'lightning/navigation';
 
+import getData from '@salesforce/apex/RecommendedBadgeMixController.getData';
 import getSortOptions from '@salesforce/apex/SortCustomMetadataController.getSortOptions';
 
 import { sortAlphabetic, sortCustom } from 'c/sortUtility';
 
+// import trail fields as well
 import ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
-import LEVEL_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
+import LEVEL_FIELD from '@salesforce/schema/Recommended_Badge__c.Level__c';
+import HYPERLINKEDNAME_FIELD from '@salesforce/schema/Recommended_Badge__c.HyperlinkedName__c';
 import NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Name';
 import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
 import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
@@ -33,8 +36,40 @@ const TREEGRID_COLUMNS = [
     {
         fieldName: LEVEL_FIELD.fieldApiName,
         label: 'Level'
-    }
+    },
 ]
+
+/*
+{
+    "type": "comm__namedPage",
+    "attributes": {
+        "name": "Home"
+    },
+    "state": {
+        "app": "commeditor",
+        "redirect": "false"
+    }
+}
+*/
+/*
+{
+    "type": "comm__namedPage",
+    "attributes": {
+        "name": "Home"
+    },
+    "state": {
+        "app": "commeditor"
+    }
+}
+
+{
+    "type": "standard__namedPage",
+    "attributes": {
+        "pageName": "home"
+    },
+    "state": {}
+}
+*/
 
 export default class RecommendedBadgeMixContainer extends LightningElement {
     categoriesByMix;
@@ -63,6 +98,9 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
             this.isLoading = false;
         }
     }
+
+    @wire(CurrentPageReference)
+    pageRef;
 
     @wire(getData)
     parseData({error, data}) {
@@ -114,7 +152,6 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         for(let mix in this.categoriesByMix) {
             let extensibleMix = this.categoriesByMix[mix].map(item => {
                 let newCategoryChildren = [];
-
                 if(item.Recommended_Badges__r) {
                     for(let badge of item.Recommended_Badges__r) {
                         newCategoryChildren.push({
@@ -134,15 +171,16 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                             Name: trail.Trail_Name__c,
                             Level__c: trail.Level__c,
                             Type__c: 'Trail',
-                            URL__c: trail.URL__c
+                            URL__c: trail.URL__c,
+                            HyperlinkedName__c: trail.HyperlinkedName__c
                         })
                     }
                 }
-
+                
                 let newCategory = {
                     Id: item.Id,
                     Name: item.Name,
-                    URL__c: '/' + item.Id,
+                    URL__c: '/' + item.Id, // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
                     _children: newCategoryChildren,
                     Recommended_Badge_Mix__c: item.Recommended_Badge_Mix__c,
                     RecommendedBadgeMixLastUpdatedDate: item.Recommended_Badge_Mix__r.Last_Updated_Date__c
@@ -154,7 +192,6 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
 
                 return newCategory;
             });
-
             this.treegridDataByMix[mix] = extensibleMix;
         }
     }

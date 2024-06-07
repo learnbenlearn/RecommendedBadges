@@ -20,7 +20,6 @@ public without sharing class ScheduledStorageClean implements Schedulable {
         List<AsyncApexJob> asyncJobs = Test.isRunningTest() ? 
             ((AsyncApexJobsSelector) ScheduledStorageCleanMockUtils.createMock(AsyncApexJobsSelector.class)).selectCompletedJobsByMethod(METHOD_NAME) : 
             new AsyncApexJobsSelector().selectCompletedJobsByMethod(METHOD_NAME);
-        System.debug(asyncJobs.size());
 
         if(asyncJobs.size() > 0){
             try {

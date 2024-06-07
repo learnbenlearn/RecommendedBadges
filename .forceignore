@@ -18,41 +18,26 @@ admin.profile
 **/ContactCenter_UtilityBar.flexipage-meta.xml
 **/LightningSalesConsole_UtilityBar.flexipage-meta.xml
 **/LightningService_UtilityBar.flexipage-meta.xml
-#**/Level.globalValueSet-meta.xml
 home_page_default.flexipage
 standard-home.tab
-appswitcher.appmenu
-#Core/objects/Recommended_Badge__c/fields/Level__c.field-meta.xml
-#Core/objects/Recommended_Trail__c/fields/Level__c.field-meta.xml
-#level.globalvalueset
+AppSwitcher.appMenu
 security.settings
+Recommended_Badge_Mix__c.External_Read_Access_to_Public_Mixes.sharingRules
 UserInterface/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-meta.xml
-
-#Core/classes/RecommendedBadgesSelector.cls
-#Core/classes/RecommendedBadgesSelector.cls-meta.xml
-#Core/flexipages/Recommended_Badge_Record_Page.flexipage-meta.xml
-#Core/classes/RecommendedBadgesSelectorTests.cls
-#Core/classes/RecommendedBadgesSelectorTests.cls-meta.xml
-#Core/flexipages/Recommended_Trail_Record_Page.flexipage-meta.xml
-#Core/classes/RecommendedTrailsSelector.cls
-#Core/classes/RecommendedTrailsSelector.cls-meta.xml
-#Core/classes/RecommendedTrailsSelectorTests.cls
-#Core/classes/RecommendedTrailsSelectorTests.cls-meta.xml
-#Core/objects/Recommended_Trail__c/fieldsets/RecommendedBadgeMix.fieldSet-meta.xml
 
 # Ignored Packages
 #Core
-fflib
-LWCUtils
-LWCErrorHandler
-PrivateMixView
-RecommendedBadgeMix
-SFXOrgSubscriber
-SortCustomMetadata
-StorageManagement
-TaskList
-Triggers
-UserInterface
+#fflib
+#LWCUtils
+#LWCErrorHandler
+#PrivateMixView
+#RecommendedBadgeMix
+#SFXOrgSubscriber
+#SortCustomMetadata
+#StorageManagement
+#TaskList
+#Triggers
+#UserInterface
 
 # Ignored Folders
 unpackageable
