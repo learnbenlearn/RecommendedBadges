@@ -20,8 +20,9 @@ admin.profile
 **/LightningService_UtilityBar.flexipage-meta.xml
 home_page_default.flexipage
 standard-home.tab
-appswitcher.appmenu
+AppSwitcher.appMenu
 security.settings
+Recommended_Badge_Mix__c.External_Read_Access_to_Public_Mixes.sharingRules
 UserInterface/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-meta.xml
 
 # Ignored Packages

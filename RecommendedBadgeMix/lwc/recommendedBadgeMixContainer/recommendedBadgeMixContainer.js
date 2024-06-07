@@ -9,7 +9,7 @@ import { sortAlphabetic, sortCustom } from 'c/sortUtility';
 
 // import trail fields as well
 import ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
-import LEVEL_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
+import LEVEL_FIELD from '@salesforce/schema/Recommended_Badge__c.Level__c';
 import HYPERLINKEDNAME_FIELD from '@salesforce/schema/Recommended_Badge__c.HyperlinkedName__c';
 import NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Name';
 import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
@@ -37,11 +37,6 @@ const TREEGRID_COLUMNS = [
         fieldName: LEVEL_FIELD.fieldApiName,
         label: 'Level'
     },
-    {
-        fieldName: HYPERLINKEDNAME_FIELD.fieldApiName,
-        label: 'Hyperlinked Name',
-        type: 'formattedRichText'
-    }
 ]
 
 /*
@@ -165,9 +160,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                             Level__c: badge.Level__c,
                             Type__c: badge.Type__c,
                             URL__c: badge.URL__c,
-                            HyperlinkedName__c: badge.HyperlinkedName__c
                         });
-                        console.log(badge.HyperlinkedName__c);
                     }
                 }
 
@@ -186,8 +179,8 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                 
                 let newCategory = {
                     Id: item.Id,
-                    Name__c: item.Name,
-                    URL__c: this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
+                    Name: item.Name,
+                    URL__c: '/' + item.Id, // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
                     _children: newCategoryChildren,
                     Recommended_Badge_Mix__c: item.Recommended_Badge_Mix__c,
                     RecommendedBadgeMixLastUpdatedDate: item.Recommended_Badge_Mix__r.Last_Updated_Date__c

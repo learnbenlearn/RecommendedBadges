@@ -99,7 +99,7 @@
       "default": false,
       "package": "RecommendedBadgeMix",
       "versionName": "Akron",
-      "versionNumber": "1.14.0.NEXT",
+      "versionNumber": "1.16.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -127,7 +127,7 @@
       "default": false,
       "package": "UserInterface",
       "versionName": "Akron",
-      "versionNumber": "1.12.0.NEXT",
+      "versionNumber": "1.14.0.NEXT",
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -168,7 +168,7 @@
         },
         {
           "package": "RecommendedBadgeMix",
-          "versionNumber": "1.14.0.LATEST"
+          "versionNumber": "1.16.0.LATEST"
         },
         {
           "package": "TaskList",
@@ -298,8 +298,11 @@
     "Triggers@1.18.0-1": "04t8c000000vG2jAAE",
     "StorageManagement@1.16.0-1": "04t8c000000vG2oAAE",
     "SortCustomMetadata@1.9.0-1": "04t8c000000vG2tAAE",
-    "RecommendedBadgeMix@1.14.0-1": "04t8c000000vG2yAAE",
     "PrivateMixView@1.12.0-1": "04t8c000000vG33AAE",
-    "UserInterface@1.12.0-1": "04t8c000000vG38AAE"
+    "UserInterface@1.12.0-1": "04t8c000000vG38AAE",
+    "RecommendedBadgeMix@1.15.0-1": "04t8c000000vG3DAAU",
+    "UserInterface@1.13.0-1": "04t8c000000vG3IAAU",
+    "RecommendedBadgeMix@1.16.0-1": "04t8c000000vG3NAAU",
+    "UserInterface@1.14.0-1": "04t8c000000vG3SAAU"
   }
 }
