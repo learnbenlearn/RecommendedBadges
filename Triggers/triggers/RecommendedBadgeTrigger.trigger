@@ -10,7 +10,6 @@
 trigger RecommendedBadgeTrigger on Recommended_Badge__c (before insert, before update, after delete) {
     switch on Trigger.operationType {
         when BEFORE_INSERT {
-            BadgeTrigger_Helper.populateJunctionPicklists(Trigger.new, Schema.SObjectType.Recommended_Badge__c.getName());
             BadgeTrigger_Helper.populateBadgeMixKeys(Trigger.new, Trigger.oldMap);
         }
         when BEFORE_UPDATE {

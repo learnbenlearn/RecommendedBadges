@@ -9,7 +9,6 @@
 trigger RecommendedTrailTrigger on Recommended_Trail__c (before insert) {
     switch on Trigger.operationType {
         when BEFORE_INSERT {
-            BadgeTrigger_Helper.populateJunctionPicklists(Trigger.new, Schema.SObjectType.Recommended_Trail__c.getName());
         }
     }
 }

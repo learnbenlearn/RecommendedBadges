@@ -223,12 +223,14 @@ public class TestDataFactory {
                 if(Math.mod(i, 10) == 0) {
                     testRecommendedBadges.add(new Recommended_Badge__c(
                         Mix_Category__c=MIX_CATEGORIES[Integer.valueOf(Math.floor(Math.mod(i, MIX_CATEGORIES.size())))].Id,
+                        BadgeAPIName__c=BADGES[i].trailheadapp__API_Name__c,
                         Badge__c=BADGES[i].Id,
                         High_Priority__c=true
                     ));
                 } else {
                     testRecommendedBadges.add(new Recommended_Badge__c(
                         Mix_Category__c=MIX_CATEGORIES[Integer.valueOf(Math.floor(Math.mod(i, MIX_CATEGORIES.size())))].Id,
+                        BadgeAPIName__c=BADGES[i].trailheadapp__API_Name__c,
                         Badge__c=BADGES[i].Id
                     ));
                 }
