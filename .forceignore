@@ -10,7 +10,7 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-admin.profile
+Admin.profile
 **.fieldRestrictionRule*
 
 ## Temp Ignored
@@ -27,17 +27,17 @@ UserInterface/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-me
 
 # Ignored Packages
 #Core
-#fflib
+fflib
 #LWCUtils
-#LWCErrorHandler
-#PrivateMixView
-#RecommendedBadgeMix
+LWCErrorHandler
+PrivateMixView
+RecommendedBadgeMix
 #SFXOrgSubscriber
-#SortCustomMetadata
-#StorageManagement
-#TaskList
+SortCustomMetadata
+StorageManagement
+TaskList
 #Triggers
-#UserInterface
+UserInterface
 
 # Ignored Folders
 unpackageable

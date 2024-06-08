@@ -2,11 +2,17 @@ import { LightningElement, api, track } from 'lwc';
 
 export default class Lookup extends LightningElement {
   allowBlur = true;
+  firstRender = true;
+  isSearchLoading = false;
   _lookupItems;
   @api objectName;
+  @api placeholder;
   @api resultIconName;
+  @api required = false;
   @track searchResults;
-  _selectedItem
+  _selectedId;
+  _selectedItem;
+  timeoutId;
 
   @api
   get selectedItem() {
@@ -14,6 +20,19 @@ export default class Lookup extends LightningElement {
   }
   set selectedItem(value) {
     this._selectedItem = value;
+  }
+
+  get selectedId() {
+    return this._selectedId;
+  }
+  @api
+  set selectedId(value) {
+    if(value) {
+      this._selectedId = value;
+      if(this.lookupItems.length > 0) {
+        this.selectedItem = this.lookupItems.find(lookupItem => lookupItem.Id === value);
+      }
+    }
   }
 
   get lookupItems() {
@@ -25,16 +44,39 @@ export default class Lookup extends LightningElement {
     this.searchResults = value;
   }
 
-  handleInputChange(event) {
-    if(event.target.value.length === 0) {
-      this.searchResults = this._lookupItems;
-    } else {
-      this.searchResults = this.searchResults.filter(searchResult => searchResult.Name.toLowerCase().includes(event.target.value));
+  renderedCallback() {
+    if(this.lookupItems.length > 0 && this.selectedId && this.firstRender) {
+      this.selectedItem = this.lookupItems.find(lookupItem => lookupItem.Id === this.selectedId);
+      this.firstRender = false;
     }
   }
 
+  @api reset() {
+    if(this.selectedId) {
+      this.selectedItem = this.lookupItems.find(lookupItem => lookupItem.Id === this.selectedId);
+    } else {
+      this.selectedItem = null;
+    }
+  }
+
+  handleInputChange(event) {
+    this.isSearchLoading = true;
+    clearTimeout(this.timeoutId);
+    this.timeoutId = setTimeout(this.filterSearchResults.bind(this), 500, event.target.value);
+  }
+
+  filterSearchResults(searchTerm) {
+    if(searchTerm.length === 0) {
+      this.searchResults = this.lookupItems.slice(0, 200);
+    } else {
+      this.searchResults = this.lookupItems.filter(searchResult => searchResult.Name.toLowerCase().includes(searchTerm));
+      this.searchResults = this.searchResults.slice(0, 200);
+    }
+    this.isSearchLoading = false;
+  }
+
   handleInputFocus() {
-      let div = this.template.querySelector('div.slds-combobox.slds-dropdown-trigger.slds-dropdown-trigger_click');
+      let div = this.refs.dropdownDiv;
       if(!div.classList.contains('slds-is-open')) {
           div.classList.add('slds-is-open');
       }
@@ -49,6 +91,7 @@ export default class Lookup extends LightningElement {
   handleItemClick(event) {
     this.selectedItem = event.detail;
     this.closeDropdown();
+    this.dispatchEvent(new CustomEvent('itemselect', {detail: this.selectedItem}));
   }
 
   handleItemMouseDown() {
@@ -60,12 +103,12 @@ export default class Lookup extends LightningElement {
   }
 
   handleRemoveSelectedItem() {
-    this.searchResults = this._lookupItems;
+    this.searchResults = this.lookupItems;
     this.selectedItem = null;
   }
 
   closeDropdown() {
-    let div = this.template.querySelector('div.slds-combobox.slds-dropdown-trigger.slds-dropdown-trigger_click');
+    let div = this.refs.dropdownDiv;
     if(div.classList.contains('slds-is-open')) {
         div.classList.remove('slds-is-open');
     }

@@ -1,3 +1,7 @@
 button {
     --slds-c-input-color-border: transparent;
 }
+
+.selectedItem {
+    color: var(--slds-g-color-neutral-base-10)
+}

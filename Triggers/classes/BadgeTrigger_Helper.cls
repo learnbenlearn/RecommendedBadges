@@ -109,12 +109,12 @@ public without sharing class BadgeTrigger_Helper {
             parentRecordMap = new Map<Id, sObject>(new TrailsSelector().selectById(parentIdsToQuery));
         }
 
-        for(sObject newRecord : newRecords) {
+        /*for(sObject newRecord : newRecords) {
             for(String parentPicklist : picklists.keySet()) {
                 String parentPicklistValue = String.valueOf(parentRecordMap.get(String.valueOf(newRecord.get(childObject.relationshipFieldName))).get(parentPicklist));
                 newRecord.put(picklists.get(String.valueOf(parentPicklist)), parentPicklistValue);
             }
-        }
+        }*/
     }
 
     /**
@@ -144,7 +144,7 @@ public without sharing class BadgeTrigger_Helper {
                 (oldRecommendedBadgeMap?.get(newRecommendedBadge.Id).Mix_Category__c != newRecommendedBadge.Mix_Category__c)
             ){
                 String recommendedBadgeMixName = mixCategoryMap.get(newRecommendedBadge.Mix_Category__c).Recommended_Badge_Mix__r.Name;
-                newRecommendedBadge.Badge_Mix_Key__c = newRecommendedBadge.Badge_Name__c + '-' + recommendedBadgeMixName;
+                newRecommendedBadge.Badge_Mix_Key__c = newRecommendedBadge.BadgeAPIName__c + '-' + recommendedBadgeMixName; // change this
             }
         }
     }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Hours_Estimate__c</fullName>
+    <deprecated>false</deprecated>
     <externalId>false</externalId>
     <label>Hours Estimate</label>
     <precision>2</precision>

@@ -5,7 +5,7 @@
       "package": "Core",
       "versionName": "Akron",
       "versionNumber": "1.22.0.NEXT",
-      "default": true,
+      "default": false,
       "dependencies": [
         {
           "package": "TrailTracker"
@@ -13,6 +13,13 @@
         {
           "package": "fflib",
           "versionNumber": "1.11.0.LATEST"
+        },
+        {
+          "package": "LWCErrorHandler",
+          "versionNumber": "1.7.0.LATEST"
+        },
+        {
+          "package": "NebulaLogger"
         }
       ]
     },
@@ -33,6 +40,13 @@
         {
           "package": "Core",
           "versionNumber": "1.22.0.LATEST"
+        },
+        {
+          "package": "LWCErrorHandler",
+          "versionNumber": "1.7.0.LATEST"
+        },
+        {
+          "package": "NebulaLogger"
         }
       ]
     },
@@ -60,6 +74,13 @@
         {
           "package": "Core",
           "versionNumber": "1.22.0.LATEST"
+        },
+        {
+          "package": "LWCErrorHandler",
+          "versionNumber": "1.7.0.LATEST"
+        },
+        {
+          "package": "NebulaLogger"
         }
       ]
     },
@@ -91,6 +112,9 @@
         {
           "package": "LWCUtils",
           "versionNumber": "1.23.0.LATEST"
+        },
+        {
+          "package": "NebulaLogger"
         }
       ]
     },
@@ -111,6 +135,13 @@
         {
           "package": "Core",
           "versionNumber": "1.22.0.LATEST"
+        },
+        {
+          "package": "LWCErrorHandler",
+          "versionNumber": "1.7.0.LATEST"
+        },
+        {
+          "package": "NebulaLogger"
         },
         {
           "package": "LWCUtils",
@@ -146,6 +177,9 @@
         {
           "package": "LWCErrorHandler",
           "versionNumber": "1.7.0.LATEST"
+        },
+        {
+          "package": "NebulaLogger"
         },
         {
           "package": "LWCUtils",
@@ -193,6 +227,13 @@
         {
           "package": "Core",
           "versionNumber": "1.22.0.LATEST"
+        },
+        {
+          "package": "LWCErrorHandler",
+          "versionNumber": "1.7.0.LATEST"
+        },
+        {
+          "package": "NebulaLogger"
         }
       ]
     },
@@ -227,6 +268,13 @@
           "versionNumber": "1.22.0.LATEST"
         },
         {
+          "package": "LWCErrorHandler",
+          "versionNumber": "1.7.0.LATEST"
+        },
+        {
+          "package": "NebulaLogger"
+        },
+        {
           "package": "LWCUtils",
           "versionNumber": "1.23.0.LATEST"
         },
@@ -254,7 +302,7 @@
       "package": "SFXOrgSubscriber",
       "versionName": "Akron",
       "versionNumber": "1.0.0.NEXT",
-      "default": false,
+      "default": true,
       "versionDescription": "Unlocked package holding authentication provider, external data source, and permission set to subscribe to the Trail Tracker Provider org."
     }
   ],

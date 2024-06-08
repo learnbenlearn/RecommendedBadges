@@ -39,6 +39,10 @@
                 <behavior>Edit</behavior>
                 <field>Category_Rank__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>BadgeAPIName__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
