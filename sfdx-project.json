@@ -81,6 +81,9 @@
         },
         {
           "package": "NebulaLogger"
+        },
+        {
+          "package": "TriggerHandler"
         }
       ]
     },
