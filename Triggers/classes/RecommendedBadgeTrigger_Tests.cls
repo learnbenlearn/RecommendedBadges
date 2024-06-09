@@ -1,11 +1,11 @@
 /**
- * @description       : Test class for BadgeTrigger_Helper class.
+ * @description       : Test class for RecommendedB class.
  * @author            : Ben Learn
  * @last modified on  : 02-20-2023
  * @last modified by  : Ben Learn
 **/
 @isTest
-private class BadgeTrigger_HelperTests {
+private class RecommendedBadgeTrigger_Tests {
     private static List<String> levels = new List<String>{
         'Beginner',
         'Intermediate',

@@ -6,10 +6,6 @@
  * @last modified on  : 08-28-2022
  * @last modified by  : Ben Learn
 **/
-trigger RecommendedBadgeMixTrigger on Recommended_Badge_Mix__c (after insert, after update) {
-    switch on Trigger.operationType {
-        when AFTER_INSERT, AFTER_UPDATE {
-            RecommendedBadgeMixTrigger_Helper.enforceSingleDefaultMix(Trigger.newMap);
-        }
-    }
+trigger RecommendedBadgeMixTrigger on Recommended_Badge_Mix__c (before insert, after insert, before update, after update, before delete, after delete, after undelete) {
+    new RecommendedBadgeMixTriggerHandler().execute();
 }

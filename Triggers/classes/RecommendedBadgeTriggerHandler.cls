@@ -1,11 +1,16 @@
-/**
- * @description       : A catchall trigger helper for RecommendedBadgeTrigger and RecommendedTrailTrigger.
- * @author            : Ben Learn
- * @group             : 
- * @last modified on  : 03-05-2023
- * @last modified by  : Ben Learn
-**/
-public without sharing class BadgeTrigger_Helper {
+public without sharing class RecommendedBadgeTriggerHandler extends TriggerHandler {
+    public RecommendedBadgeTriggerHandler() {
+        super();
+    }
+
+    protected override void beforeInsert(List<sObject> newRecords) {
+        populateBadgeMixKeys((List<Recommended_Badge__c>) newRecords, null);
+    }
+
+    protected override void beforeUpdate(Map<Id, sObject> updatedRecordsMap, Map<Id, sObject> oldRecordsMap) {
+        populateBadgeMixKeys((List<Recommended_Badge__c>) updatedRecordsMap.values(), (Map<Id, Recommended_Badge__c>) oldRecordsMap);
+    }
+
     /**
     * @description Method to populate unique key in the format [Badge Name]-[Recommended Badge Mix Name].
         Done to ensure that there aren't any duplicated recommended badges within the same recommended
@@ -14,7 +19,7 @@ public without sharing class BadgeTrigger_Helper {
     * @param List<Recommended_Badge__c> newRecommendedBadges 
     * @param Map<Id, Recommended_Badge__c> oldRecommendedBadgeMap
     **/
-    public static void populateBadgeMixKeys(List<Recommended_Badge__c> newRecommendedBadges, Map<Id, Recommended_Badge__c> oldRecommendedBadgeMap) {
+    private static void populateBadgeMixKeys(List<Recommended_Badge__c> newRecommendedBadges, Map<Id, Recommended_Badge__c> oldRecommendedBadgeMap) {
         Set<Id> mixCategoryIds = new Set<Id>();
 
         for(Recommended_Badge__c newRecommendedBadge : newRecommendedBadges) {

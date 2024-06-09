@@ -1,11 +1,11 @@
 /**
- * @description       : Test class for RecommendedBadgeMixTrigger_Helper class.
+ * @description       : Test class for RecommendedBadgeMixTriggerHandler class.
  * @author            : Ben Learn]
  * @last modified on  : 09-12-2022
  * @last modified by  : Ben Learn
 **/
 @isTest
-private class RecommendedBadgeMixTrigger_HelperTests {
+private class RecommendedBadgeMixTrigger_Tests {
     private static String NO_EXCEPTION_EXPECTED_MESSAGE = 'No exception expected.';
 
     private static List<Recommended_Badge_Mix__c> generateTestData(Integer numberRecommendedBadgeMixes, Integer numberDefaultRecommendedBadgeMixes) {
