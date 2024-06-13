@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Icon__c</fullName>
+    <deprecated>false</deprecated>
     <externalId>false</externalId>
     <formula>Trail__r.trailheadapp__Icon__c</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>

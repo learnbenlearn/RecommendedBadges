@@ -26,13 +26,13 @@ Recommended_Badge_Mix__c.External_Read_Access_to_Public_Mixes.sharingRules
 UserInterface/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-meta.xml
 
 # Ignored Packages
-Core
+#Core
 fflib
-#LWCUtils
+LWCUtils
 LWCErrorHandler
 PrivateMixView
 RecommendedBadgeMix
-#SFXOrgSubscriber
+SFXOrgSubscriber
 SortCustomMetadata
 StorageManagement
 TaskList

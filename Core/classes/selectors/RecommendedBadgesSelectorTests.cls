@@ -53,14 +53,13 @@ private class RecommendedBadgesSelectorTests {
     }
 
     @isTest
-    private static void selectByBadges_test() {
-        generateData(true);
-
-        Map<Id, trailheadapp__Badge__c> expectedBadgesById = new Map<Id, trailheadapp__Badge__c>([SELECT Id FROM trailheadapp__Badge__c LIMIT 100]);
-        List<Recommended_Badge__c> resultRecommendedBadges = new RecommendedBadgesSelector().selectByBadges(expectedBadgesById.keySet());
-
-        for(Recommended_Badge__c recommendedBadge : resultRecommendedBadges) {
-            Assert.isTrue(expectedBadgesById.keySet().contains(recommendedBadge.Badge__c), 'Expected all Recommended Badges related to provided Badges to be returned.');
-        }
+    private static void selectBadgeAPINameById_test() {
+        generateData(false);
+        Recommended_Badge__c expectedBadge = [SELECT Id, BadgeAPIName__c FROM Recommended_Badge__c LIMIT 1];
+        Assert.areEqual(
+            expectedBadge.BadgeAPIName__c, 
+            new RecommendedBadgesSelector().selectBadgeAPINameById(expectedBadge.Id).BadgeAPIName__c,
+            'Expected Badge API Name of corresponding Recommended Badge to be returned.'
+        );
     }
 }

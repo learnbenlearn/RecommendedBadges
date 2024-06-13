@@ -290,49 +290,6 @@ public class TestDataFactory {
         }
     }
 
-    public class RecommendedTrail extends RecordGenerationTemplate implements RecordGeneration {
-        public final Boolean BYPASS_DUPLICATE_RULES;
-        public final List<trailheadapp__Trail__c> TRAILS;
-        public final List<Mix_Category__c> MIX_CATEGORIES;
-
-        public RecommendedTrail(
-            Boolean insertRecords, Boolean returnCreatedRecords, List<trailheadapp__Trail__c> trails, List<Mix_Category__c> mixCategories, Boolean bypassDuplicateRules
-        ) {
-            super(insertRecords, returnCreatedRecords);
-            this.TRAILS = trails;
-            this.MIX_CATEGORIES = mixCategories;
-            this.BYPASS_DUPLICATE_RULES = bypassDuplicateRules;
-        }
-
-        public RecommendedTrail(
-            Boolean insertRecords, Boolean returnCreatedRecords, Integer numberToGenerate, List<trailheadapp__Trail__c> trails, List<Mix_Category__c> mixCategories, 
-            Boolean bypassDuplicateRules
-        ) {
-            super(insertRecords, returnCreatedRecords, numberToGenerate);
-            this.TRAILS = trails;
-            this.MIX_CATEGORIES = mixCategories;
-            this.BYPASS_DUPLICATE_RULES = bypassDuplicateRules;
-        }
-
-        public List<sObject> execute() {
-            List<Recommended_Trail__c> testRecommendedTrails = new List<Recommended_Trail__c>();
-            for(Integer i = 0; i < this.NUMBER_TO_GENERATE; i++) {
-                testRecommendedTrails.add(new Recommended_Trail__c(
-                    Mix_Category__c=MIX_CATEGORIES[Integer.valueOf(Math.floor(MIX_CATEGORIES.size()/10))].Id,
-                    Trail__c=TRAILS[i].Id
-                ));
-            }
-
-            if(this.INSERT_RECORDS) {
-                Database.DMLOptions dmlOptions = new Database.DMLOptions();
-                dmlOptions.DuplicateRuleHeader.allowSave = this.BYPASS_DUPLICATE_RULES;
-                Database.insert(testRecommendedTrails, dmlOptions);
-            }
-
-            return this.RETURN_CREATED_RECORDS ? testRecommendedTrails : null;
-        }
-    }
-
     public class Task extends RecordGenerationTemplate implements RecordGeneration {
         public Task(Boolean insertRecords, Boolean returnCreatedRecords) {
             super(insertRecords, returnCreatedRecords);

@@ -16,12 +16,11 @@ public inherited sharing class RecommendedTrailsSelector extends ApplicationSele
         return Recommended_Trail__c.sObjectType;
     }
 
-    public List<Recommended_Trail__c> selectByTrails(Set<Id> trailIds) {
-        return (List<Recommended_Trail__c>) Database.query(
-            newQueryFactory().
-            selectFieldSet(Schema.SObjectType.Recommended_Trail__c.fieldSets.Triggers).
-            setCondition('Trail__c IN :trailIds').
+    public Recommended_Trail__c selectTrailAPINameById(Id recommendedTrailId) {
+        return (Recommended_Trail__c) Database.query(
+            newQueryFactory().selectFieldSet(Schema.SObjectType.Recommended_Trail__c.fieldSets.Triggers, false).
+            setCondition('Id = \'' + recommendedTrailId + '\'').
             toSOQL()
-        );
+        )[0];
     }
 }

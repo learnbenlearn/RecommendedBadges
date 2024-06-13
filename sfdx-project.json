@@ -20,6 +20,9 @@
         },
         {
           "package": "NebulaLogger"
+        },
+        {
+          "package": "TestSupport"
         }
       ]
     },
@@ -47,6 +50,9 @@
         },
         {
           "package": "NebulaLogger"
+        },
+        {
+          "package": "TestSupport"
         }
       ]
     },
@@ -59,7 +65,7 @@
     },
     {
       "path": "Triggers",
-      "default": false,
+      "default": true,
       "package": "Triggers",
       "versionName": "Akron",
       "versionNumber": "1.18.0.NEXT",
@@ -84,6 +90,9 @@
         },
         {
           "package": "TriggerHandler"
+        },
+        {
+          "package": "TestSupport"
         }
       ]
     },
@@ -118,6 +127,9 @@
         },
         {
           "package": "NebulaLogger"
+        },
+        {
+          "package": "TestSupport"
         }
       ]
     },
@@ -153,6 +165,9 @@
         {
           "package": "SortCustomMetadata",
           "versionNumber": "1.9.0.LATEST"
+        },
+        {
+          "package": "TestSupport"
         }
       ]
     },
@@ -210,6 +225,9 @@
         {
           "package": "TaskList",
           "versionNumber": "1.21.0.LATEST"
+        },
+        {
+          "package": "TestSupport"
         }
       ]
     },
@@ -237,6 +255,9 @@
         },
         {
           "package": "NebulaLogger"
+        },
+        {
+          "package": "TestSupport"
         }
       ]
     },
@@ -284,6 +305,9 @@
         {
           "package": "SortCustomMetadata",
           "versionNumber": "1.9.0.LATEST"
+        },
+        {
+          "package": "TestSupport"
         }
       ]
     },
@@ -305,7 +329,7 @@
       "package": "SFXOrgSubscriber",
       "versionName": "Akron",
       "versionNumber": "1.0.0.NEXT",
-      "default": true,
+      "default": false,
       "versionDescription": "Unlocked package holding authentication provider, external data source, and permission set to subscribe to the Trail Tracker Provider org."
     }
   ],
@@ -314,8 +338,9 @@
   "sfdcLoginUrl": "https://recommendedbadges-dev-ed.my.salesforce.com",
   "sourceApiVersion": "57.0",
   "packageAliases": {
-    "NebulaLogger": "04t5Y0000023RBpQAM",
+    "NebulaLogger": "04t5Y0000027L98QAE",
     "Shortcuts": "04t8c000000yXMAAA2",
+    "TestSupport": "04t8c000000vFyhAAE",
     "TrailTracker": "04t1Q000001ACOnQAO",
     "TriggerHandler": "04t8b000000jtsMAAQ",
     "Core": "0Ho8c000000fxx5CAA",

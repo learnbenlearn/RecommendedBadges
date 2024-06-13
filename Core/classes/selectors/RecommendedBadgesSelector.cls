@@ -34,12 +34,11 @@ public inherited sharing class RecommendedBadgesSelector extends ApplicationSele
         );
     }
 
-    public List<Recommended_Badge__c> selectByBadges(Set<Id> badgeIds) {
-        return (List<Recommended_Badge__c>) Database.query(
-            newQueryFactory().
-            selectFieldSet(Schema.SObjectType.Recommended_Badge__c.fieldSets.Triggers).
-            setCondition('Badge__c IN :badgeIds').
+    public Recommended_Badge__c selectBadgeAPINameById(Id recommendedBadgeId) {
+        return (Recommended_Badge__c) Database.query(
+            newQueryFactory().selectFieldSet(Schema.SObjectType.Recommended_Badge__c.fieldSets.Triggers, false).
+            setCondition('Id = \'' + recommendedBadgeId + '\'').
             toSOQL()
-        );
+        )[0];
     }
 }

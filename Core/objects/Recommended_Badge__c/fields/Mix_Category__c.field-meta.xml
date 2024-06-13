@@ -7,7 +7,7 @@
     <referenceTo>Mix_Category__c</referenceTo>
     <relationshipLabel>Recommended Badges</relationshipLabel>
     <relationshipName>Recommended_Badges</relationshipName>
-    <relationshipOrder>1</relationshipOrder>
+    <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>true</reparentableMasterDetail>
     <trackTrending>false</trackTrending>
     <type>MasterDetail</type>

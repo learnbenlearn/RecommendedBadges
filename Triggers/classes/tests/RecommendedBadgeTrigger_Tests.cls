@@ -1,23 +1,5 @@
-/**
- * @description       : Test class for RecommendedB class.
- * @author            : Ben Learn
- * @last modified on  : 02-20-2023
- * @last modified by  : Ben Learn
-**/
 @isTest
 private class RecommendedBadgeTrigger_Tests {
-    private static List<String> levels = new List<String>{
-        'Beginner',
-        'Intermediate',
-        'Advanced'
-    };
-
-    private static List<String> types = new List<String>{
-        'Module',
-        'Project',
-        'Superbadge'
-    };
-
     @testSetup
     private static void generateData(){
         TestDataFactory.Badge badgeGenerator = new TestDataFactory.Badge(true, false);
@@ -282,5 +264,77 @@ private class RecommendedBadgeTrigger_Tests {
         } catch(Exception e) {
             Assert.isTrue(e.getMessage().contains('DUPLICATE_VALUE'), 'Expected exception with duplicate Recommended Badges in one Recommended Badge Mix.');
         }
+    }
+
+    @isTest
+    private static void it_should_enqueue_jobs() {
+        RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
+            new Map<String, Object> {
+                'generateMasterRecords' => false,
+                'generateRecordIDs' => false,
+                'numberToGenerate' => Limits.getLimitQueueableJobs()
+            },
+            new List<TestSupport.TestDataField>{
+                new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, sObject>([SELECT Id FROM Mix_Category__c])).keySet())
+            }
+        );
+        
+        Test.startTest();
+        insert badgeGenerator.generate();
+        List<AsyncApexJob> queuedJobs = [SELECT Id FROM AsyncApexJob WHERE ApexClass.Name = 'QueueableTrailTrackerProviderCallout' AND JobType = 'Queueable' AND Status = 'Queued'];
+        Assert.areEqual(badgeGenerator.records.size(), queuedJobs.size(), 'Expected one queued Trail Tracker Provider callout per Recommended Badge.');
+
+        // cleanup
+        for(AsyncApexJob queuedJob : queuedJobs) {
+            System.abortJob(queuedJob.Id);
+        }
+        Test.stopTest();
+    }
+
+    @isTest
+    private static void it_should_enqueue_jobs_and_publish_record_events() {
+        // make Recommended Badge Mix private so record triggered flows on Recommended Badge and Mix Category don't invoke DML
+        Recommended_Badge_Mix__c testBadgeMix = [SELECT Id FROM Recommended_Badge_Mix__c];
+        testBadgeMix.Private_Mix__c = true;
+        update testBadgeMix; 
+        RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
+            new Map<String, Object> {
+                'generateMasterRecords' => false,
+                'generateRecordIDs' => false
+            },
+            new List<TestSupport.TestDataField>{
+                new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, sObject>([SELECT Id FROM Mix_Category__c])).keySet())
+            }
+        );
+        
+        Test.startTest();
+        System.debug(Limits.getDmlStatements());
+        insert badgeGenerator.generate();
+
+        List<AsyncApexJob> queuedJobs = [SELECT Id FROM AsyncApexJob WHERE ApexClass.Name = 'QueueableTrailTrackerProviderCallout' AND JobType = 'Queueable' AND Status = 'Queued'];
+        Integer numPublishedRecordEvents = Limits.getDmlRows() - badgeGenerator.records.size();
+
+        Assert.areEqual(
+            Limits.getLimitQueueableJobs(), 
+            queuedJobs.size(), 
+            'Expected the number of queued Trail Tracker Provider callouts to equal the Apex governor on queued jobs.'
+        );
+        Assert.areEqual(
+            2,
+            Limits.getDmlStatements(), 
+            'Expected two DML statements - one to insert Recommended Badges and one to publish NewRecommendedBadgeTrailEvent__e platform events.'
+        );
+        Assert.areEqual(
+            badgeGenerator.records.size() - Limits.getLimitQueueableJobs(), 
+            numPublishedRecordEvents, 
+            'Expected the number of published NewRecommendedBadgeTrailEvent__e events to equal the number of Recommended Badges minus the Apex governor limit on queued jobs.'
+        );
+
+        // cleanup
+        for(AsyncApexJob queuedJob : queuedJobs) {
+            System.abortJob(queuedJob.Id);
+        }
+        Test.getEventBus().fail();
+        Test.stopTest();
     }
 }

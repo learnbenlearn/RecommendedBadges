@@ -5,10 +5,10 @@
         <name>Is_Recommended_Badge_Mix_Private</name>
         <label>Is Recommended Badge Mix Private?</label>
         <locationX>182</locationX>
-        <locationY>335</locationY>
-        <defaultConnectorLabel>Recommended Badge Mix Is Private</defaultConnectorLabel>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Private</defaultConnectorLabel>
         <rules>
-            <name>Recommended_Badge_Mix_Is_Not_Private</name>
+            <name>Not_Private</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Recommended_Badge_Mix__r.Private_Mix__c</leftValueReference>
@@ -20,7 +20,7 @@
             <connector>
                 <targetReference>Update_Recommended_Badge_Mix_Last_Updated_Date</targetReference>
             </connector>
-            <label>Recommended Badge Mix Is Not Private</label>
+            <label>Not Private</label>
         </rules>
     </decisions>
     <environments>Default</environments>
@@ -60,7 +60,7 @@
         <name>Update_Recommended_Badge_Mix_Last_Updated_Date</name>
         <label>Update Recommended Badge Mix Last Updated Date</label>
         <locationX>50</locationX>
-        <locationY>455</locationY>
+        <locationY>431</locationY>
         <flowName>Update_Recommended_Badge_Mix_Last_Updated_Date</flowName>
         <inputAssignments>
             <name>recommendedBadgeMixId</name>

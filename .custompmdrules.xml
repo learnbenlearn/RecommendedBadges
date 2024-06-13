@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 
-<ruleset name="Custom Rules"
+<ruleset name="PMD Rule Customizations"
     xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
@@ -9,10 +9,19 @@
         Custom rules.
     </description>
 
-    <rule ref="category/apex/codestyle.xml/MethodNamingConventions" message="No underscores in non-test method names.">
+    <rule ref="category/apex/documentation.xml/ApexDoc">
         <properties>
-            <property name="testPattern" value="[a-z][a-zA-Z0-9]*(\_)?[a-z][a-zA-Z0-9]*" />
+            <property name="reportMissingDescription" value="false" />
+            <property name="reportPrivate" value="false" />
+            <property name="reportProtected" value="false" />
         </properties>
     </rule>
 
+    <rule ref="category/apex/codestyle.xml/MethodNamingConventions" message="No underscores in non-test method names.">
+        <properties>
+            <property name="testPattern" value="[a-z][a-zA-Z0-9_]*" />
+        </properties>
+    </rule>
+
+    <exclude-pattern>.*/.sfdx/.*</exclude-pattern>
 </ruleset>

@@ -5,7 +5,9 @@
  * @group Triggers
 **/
 public without sharing class RecommendedBadgeMixTriggerHandler extends TriggerHandler {
-
+    /**
+     * Constructor for trigger handler
+     */
     public RecommendedBadgeMixTriggerHandler() {
         super();
     }
@@ -20,8 +22,9 @@ public without sharing class RecommendedBadgeMixTriggerHandler extends TriggerHa
     
     /**
      * Validates that only one recommended badge mix is marked as a default. Throws a MultipleDefaultBadgeMixException if multiple are marked as defaults.
-     * @param List<Recommended_Badge_Mix__c> upsertedBadgeMixes 
-    */
+     * @param upsertedBadgeMixes 
+     * @exception MultipleDefaultBadgeMixException
+     */
     private static void enforceSingleDefaultMix(Map<Id, Recommended_Badge_Mix__c> upsertedBadgeMixes) {
         Id defaultMixId;
         List<Id> upsertedBadgeMixIds = new List<Id>(upsertedBadgeMixes.keySet());

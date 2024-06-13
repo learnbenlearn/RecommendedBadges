@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TrailTrackerProviderObjectMapping__c</fullName>
+    <description>Custom object mapping to object in the Trail Tracker Provider org.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Trail Tracker Provider Object Mapping</label>
+    <referenceTo>TrailTrackerProviderObjectMapping__mdt</referenceTo>
+    <relationshipName>TrailTrackerProviderMappings</relationshipName>
+    <required>true</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>
