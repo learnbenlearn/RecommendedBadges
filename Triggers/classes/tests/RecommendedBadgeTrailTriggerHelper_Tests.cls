@@ -9,6 +9,7 @@ private class RecommendedBadgeTrailTriggerHelper_Tests {
         });
         
         Test.startTest();
+        RecommendedBadgeTrailTriggerHelper.enabledForTesting = true;
         RecommendedBadgeTrailTriggerHelper.queueTrailTrackerProviderCallouts(Recommended_Badge__c.getSObjectType(), new Map<Id, sObject>(badgeGenerator.generate()));
         List<AsyncApexJob> queuedJobs = [SELECT Id FROM AsyncApexJob WHERE ApexClass.Name = 'QueueableTrailTrackerProviderCallout' AND JobType = 'Queueable' AND Status = 'Queued'];
         Assert.areEqual(badgeGenerator.records.size(), queuedJobs.size(), 'Expected one queued Trail Tracker Provider callout per Recommended Badge.');
@@ -27,6 +28,7 @@ private class RecommendedBadgeTrailTriggerHelper_Tests {
         });
         
         Test.startTest();
+        RecommendedBadgeTrailTriggerHelper.enabledForTesting = true;
         RecommendedBadgeTrailTriggerHelper.queueTrailTrackerProviderCallouts(Recommended_Trail__c.getSObjectType(), new Map<Id, sObject>(trailGenerator.generate()));
         List<AsyncApexJob> queuedJobs = [SELECT Id FROM AsyncApexJob WHERE ApexClass.Name = 'QueueableTrailTrackerProviderCallout' AND JobType = 'Queueable' AND Status = 'Queued'];
         Assert.areEqual(trailGenerator.records.size(), queuedJobs.size(), 'Expected one queued Trail Tracker Provider callout per Recommended Trail.');
@@ -44,6 +46,7 @@ private class RecommendedBadgeTrailTriggerHelper_Tests {
         });
         
         Test.startTest();
+        RecommendedBadgeTrailTriggerHelper.enabledForTesting = true;
         RecommendedBadgeTrailTriggerHelper.queueTrailTrackerProviderCallouts(Recommended_Badge__c.getSObjectType(), new Map<Id, sObject>(badgeGenerator.generate()));
         List<AsyncApexJob> queuedJobs = [SELECT Id FROM AsyncApexJob WHERE ApexClass.Name = 'QueueableTrailTrackerProviderCallout' AND JobType = 'Queueable' AND Status = 'Queued'];
 
@@ -72,6 +75,7 @@ private class RecommendedBadgeTrailTriggerHelper_Tests {
         });
         
         Test.startTest();
+        RecommendedBadgeTrailTriggerHelper.enabledForTesting = true;
         RecommendedBadgeTrailTriggerHelper.queueTrailTrackerProviderCallouts(Recommended_Trail__c.getSObjectType(), new Map<Id, sObject>(trailGenerator.generate()));
         List<AsyncApexJob> queuedJobs = [SELECT Id FROM AsyncApexJob WHERE ApexClass.Name = 'QueueableTrailTrackerProviderCallout' AND JobType = 'Queueable' AND Status = 'Queued'];
 

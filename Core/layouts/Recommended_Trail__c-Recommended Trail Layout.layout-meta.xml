@@ -8,10 +8,6 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>Trail__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
                 <field>Mix_Category__c</field>
             </layoutItems>
             <layoutItems>
@@ -21,6 +17,26 @@
             <layoutItems>
                 <behavior>Required</behavior>
                 <field>TrailAPIName__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Description__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>TrailName__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Products__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>URL__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Icon__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns/>
@@ -55,7 +71,6 @@
         <style>CustomLinks</style>
     </layoutSections>
     <miniLayout>
-        <fields>Trail__c</fields>
         <fields>Mix_Category__c</fields>
     </miniLayout>
     <showEmailCheckbox>false</showEmailCheckbox>

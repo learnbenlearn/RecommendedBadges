@@ -15,6 +15,5 @@
     <permissionSets>Task_List_Permissions</permissionSets>
     <permissionSets>Triggers_Permissions</permissionSets>
     <permissionSets>User_Interface_Permissions</permissionSets>
-    <permissionSets>trailheadapp__Th_Badge_User</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>

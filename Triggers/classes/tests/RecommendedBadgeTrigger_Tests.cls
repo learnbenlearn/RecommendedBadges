@@ -1,14 +1,7 @@
 @isTest
 private class RecommendedBadgeTrigger_Tests {
     @testSetup
-    private static void generateData(){
-        TestDataFactory.Badge badgeGenerator = new TestDataFactory.Badge(true, false);
-        badgeGenerator.execute();
-
-        TestDataFactory.Trail trailGenerator = new TestDataFactory.Trail(true, false);
-        trailGenerator.execute();
-
-        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 1, false, true);
+    private static void generateData(){TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 1, false, true);
         List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = recommendedBadgeMixGenerator.execute();
 
         TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, false, 1, testRecommendedBadgeMixes);
@@ -18,16 +11,13 @@ private class RecommendedBadgeTrigger_Tests {
     @isTest
     private static void testPopulateBadgeMixKeys_singlePositiveInsert() {
         List<Mix_Category__c> testMixCategories = [SELECT Id FROM Mix_Category__c];
-        List<trailheadapp__Badge__c> testBadges = [SELECT Id, trailheadapp__API_Name__c FROM trailheadapp__Badge__c];
-
-        Integer testBadgeIndex = Integer.valueOf(Math.floor(Math.random()*testBadges.size()));
 
         try {
             Test.startTest();
             List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>{
                 new Recommended_Badge__c(
                     Mix_Category__c=testMixCategories[0].Id,
-                    BadgeAPIName__c=testBadges[testBadgeIndex].trailheadapp__API_Name__c
+                    BadgeAPIName__c='Test_Badge_1'
                 )
             };
             insert testRecommendedBadges;
@@ -40,12 +30,11 @@ private class RecommendedBadgeTrigger_Tests {
     @isTest
     private static void testPopulateBadgeMixKeys_bulkPositiveInsert() {
         List<Mix_Category__c> testMixCategories = [SELECT Id FROM Mix_Category__c];
-        List<trailheadapp__Badge__c> testBadges = [SELECT Id, trailheadapp__API_Name__c FROM trailheadapp__Badge__c];
 
         try {
             Test.startTest();
             TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-                true, false, testBadges, new List<Mix_Category__c>{testMixCategories[0]}, true
+                true, false, new List<Mix_Category__c>{testMixCategories[0]}, true
             );
             recommendedBadgeGenerator.execute();
             Test.stopTest();
@@ -57,14 +46,12 @@ private class RecommendedBadgeTrigger_Tests {
     @isTest
     private static void testPopulateBadgeMixKeys_negativeInsert() {
         List<Mix_Category__c> testMixCategories = [SELECT Id FROM Mix_Category__c];
-        List<trailheadapp__Badge__c> testBadges = [SELECT Id, trailheadapp__API_Name__c FROM trailheadapp__Badge__c];
 
-        Integer testBadgeIndex = Integer.valueOf(Math.floor(Math.random() * testBadges.size()));
         List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>();
         for(Integer i = 0; i < 2; i++) {
             testRecommendedBadges.add(new Recommended_Badge__c(
                 Mix_Category__c=testMixCategories[0].Id,
-                BadgeAPIName__c=testBadges[testBadgeIndex].trailheadapp__API_Name__c
+                BadgeAPIName__c='Test_Badge_1'
             ));
         }
 
@@ -81,17 +68,14 @@ private class RecommendedBadgeTrigger_Tests {
     @isTest
     private static void testPopulateBadgeMixKeys_bulkNegativeInsert() {
         List<Mix_Category__c> testMixCategories = [SELECT Id FROM Mix_Category__c];
-        List<trailheadapp__Badge__c> testBadges = [SELECT Id, trailheadapp__API_Name__c FROM trailheadapp__Badge__c];
-
-        Integer testBadgeIndex = Integer.valueOf(Math.floor(Math.random() * testBadges.size()));
 
         TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-            false, true, testBadges, new List<Mix_Category__c>{testMixCategories[0]}, true
+            false, true, new List<Mix_Category__c>{testMixCategories[0]}, true
         );
         List<Recommended_Badge__c> testRecommendedBadges = recommendedBadgeGenerator.execute();
         testRecommendedBadges.add(new Recommended_Badge__c(
             Mix_Category__c=testMixCategories[0].Id,
-            BadgeAPIName__c=testBadges[testBadgeIndex].trailheadapp__API_Name__c
+            BadgeAPIName__c='Test_Badge_' + Integer.valueOf(Math.floor(Math.random() * testRecommendedBadges.size()))
         ));
 
         try {
@@ -112,19 +96,18 @@ private class RecommendedBadgeTrigger_Tests {
             new Mix_Category__c(
                 Name='Test Mix Category',
                 Recommended_Badge_Mix__c=testRecommendedBadgeMixes[0].Id
+            ),
+            new Mix_Category__c(
+                Name='Test Mix Category 2',
+                Recommended_Badge_Mix__c=testRecommendedBadgeMixes[0].Id
             )
         };
         insert testMixCategories;
 
-        testMixCategories = [SELECT Id FROM Mix_Category__c];
-        List<trailheadapp__Badge__c> testBadges = [SELECT Id, trailheadapp__API_Name__c FROM trailheadapp__Badge__c];
-
-        Integer testBadgeIndex = Integer.valueOf(Math.floor(Math.random() * testBadges.size()));
-
         List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>{
             new Recommended_Badge__c(
                 Mix_Category__c=testMixCategories[0].Id,
-                BadgeAPIName__c=testBadges.remove(testBadgeIndex).trailheadapp__API_Name__c
+                BadgeAPIName__c='Test_Badge_1'
             )
         };
 
@@ -153,11 +136,8 @@ private class RecommendedBadgeTrigger_Tests {
         insert testMixCategories;
 
         testMixCategories = [SELECT Id FROM Mix_Category__c];
-        List<trailheadapp__Badge__c> testBadges = [SELECT Id, trailheadapp__API_Name__c FROM trailheadapp__Badge__c];
         
-        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-            false, true, testBadges, new List<Mix_Category__c>{testMixCategories[0]}, true
-        );
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(false, true, new List<Mix_Category__c>{testMixCategories[0]}, true);
         List<Recommended_Badge__c> testRecommendedBadges = recommendedBadgeGenerator.execute();
 
         try {
@@ -193,18 +173,14 @@ private class RecommendedBadgeTrigger_Tests {
         insert testMixCategories;
         testMixCategories = [SELECT Id FROM Mix_Category__c];
 
-        List<trailheadapp__Badge__c> testBadges = [SELECT Id, trailheadapp__API_Name__c FROM trailheadapp__Badge__c];
-
-        Integer testBadgeIndex = Integer.valueOf(Math.floor(Math.random() * testBadges.size()));
-
         List<Recommended_Badge__c> testRecommendedBadges = new List<Recommended_Badge__c>();
         testRecommendedBadges.add(new Recommended_Badge__c(
             Mix_Category__c=testMixCategories[0].Id,
-            BadgeAPIName__c=testBadges[testBadgeIndex].trailheadapp__API_Name__c
+            BadgeAPIName__c='Test_Badge_1'
         ));
         testRecommendedBadges.add(new Recommended_Badge__c(
             Mix_Category__c=testMixCategories[1].Id,
-            BadgeAPIName__c=testBadges[testBadgeIndex].trailheadapp__API_Name__c
+            BadgeAPIName__c='Test_Badge_1'
         ));
 
         try {
@@ -238,14 +214,12 @@ private class RecommendedBadgeTrigger_Tests {
         insert testMixCategories;
         testMixCategories = [SELECT Id FROM Mix_Category__c];
 
-        List<trailheadapp__Badge__c> testBadges = [SELECT Id, trailheadapp__API_Name__c FROM trailheadapp__Badge__c];
-
         TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-            false, true, testBadges, new List<Mix_Category__c>{testMixCategories[0]}, true
+            false, true, new List<Mix_Category__c>{testMixCategories[0]}, true
         );
         List<Recommended_Badge__c> testRecommendedBadges = recommendedBadgeGenerator.execute();
         TestDataFactory.RecommendedBadge duplicateRecommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-            false, true, testBadges, new List<Mix_Category__c>{testMixCategories[1]}, true
+            false, true, new List<Mix_Category__c>{testMixCategories[1]}, true
         );
         testRecommendedBadges.addAll((List<Recommended_Badge__c>) duplicateRecommendedBadgeGenerator.execute());
 
@@ -280,6 +254,7 @@ private class RecommendedBadgeTrigger_Tests {
         );
         
         Test.startTest();
+        RecommendedBadgeTrailTriggerHelper.enabledForTesting = true;
         insert badgeGenerator.generate();
         List<AsyncApexJob> queuedJobs = [SELECT Id FROM AsyncApexJob WHERE ApexClass.Name = 'QueueableTrailTrackerProviderCallout' AND JobType = 'Queueable' AND Status = 'Queued'];
         Assert.areEqual(badgeGenerator.records.size(), queuedJobs.size(), 'Expected one queued Trail Tracker Provider callout per Recommended Badge.');
@@ -308,7 +283,7 @@ private class RecommendedBadgeTrigger_Tests {
         );
         
         Test.startTest();
-        System.debug(Limits.getDmlStatements());
+        RecommendedBadgeTrailTriggerHelper.enabledForTesting = true;
         insert badgeGenerator.generate();
 
         List<AsyncApexJob> queuedJobs = [SELECT Id FROM AsyncApexJob WHERE ApexClass.Name = 'QueueableTrailTrackerProviderCallout' AND JobType = 'Queueable' AND Status = 'Queued'];

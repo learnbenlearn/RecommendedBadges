@@ -16,7 +16,14 @@ public class RecommendedBadgeTS extends TestSupport.DataGeneration {
 
     protected override Map<Schema.SObjectField, TestSupport.TestDataField> loadDefaultSpecsByField() {
         return new Map<Schema.SObjectField, TestSupport.TestDataField>{
-            Recommended_Badge__c.BadgeAPIName__c => new CounterSuffixField(Recommended_Badge__c.BadgeAPIName__c, 'Test_Badge_')
+            Recommended_Badge__c.BadgeAPIName__c => new CounterSuffixField(Recommended_Badge__c.BadgeAPIName__c, 'Test_Badge_'),
+            Recommended_Badge__c.BadgeName__c => new CounterSuffixField(Recommended_Badge__c.BadgeName__c, 'Test Badge '),
+            Recommended_Badge__c.Description__c => new TestSupport.TestDataField(Recommended_Badge__c.Description__c, 'Test description.'),
+            Recommended_Badge__c.Icon__c => new TestSupport.TestDataField(Recommended_Badge__c.Icon__c, 'www.testicon.com'),
+            Recommended_Badge__c.Level__c => new RandomPicklistValueField(Recommended_Badge__c.Level__c),
+            Recommended_Badge__c.Products__c => new TestSupport.TestDataField(Recommended_Badge__c.Products__c, 'Test products'),
+            Recommended_Badge__c.Type__c => new RandomPicklistValueField(Recommended_Badge__c.Type__c),
+            Recommended_Badge__c.URL__c => new TestSupport.TestDataField(Recommended_Badge__c.URL__c, 'www.test.com')
         };
     }
 

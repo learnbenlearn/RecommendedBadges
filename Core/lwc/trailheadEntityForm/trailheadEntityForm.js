@@ -11,14 +11,14 @@ import { NavigationMixin } from 'lightning/navigation';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 import BADGE_API_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.BadgeAPIName__c';
-import BADGE_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Badge_Name__c';
+import BADGE_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.BadgeName__c';
 import CATEGORY_RANK_FIELD from '@salesforce/schema/Recommended_Badge__c.Category_Rank__c';
 import HIGH_PRIORITY_FIELD from '@salesforce/schema/Recommended_Badge__c.High_Priority__c';
 import HOURS_ESTIMATE_FIELD from '@salesforce/schema/Recommended_Badge__c.Hours_Estimate__c';
 import MINUTES_ESTIMATE_FIELD from '@salesforce/schema/Recommended_Badge__c.Minutes_Estimate__c';
 import BADGE_MIX_CATEGORY_FIELD from '@salesforce/schema/Recommended_Badge__c.Mix_Category__c';
 import TRAIL_API_NAME_FIELD from '@salesforce/schema/Recommended_Trail__c.TrailAPIName__c';
-import TRAIL_NAME_FIELD from '@salesforce/schema/Recommended_Trail__c.Trail_Name__c';
+import TRAIL_NAME_FIELD from '@salesforce/schema/Recommended_Trail__c.TrailName__c';
 import TRAIL_MIX_CATEGORY_FIELD from '@salesforce/schema/Recommended_Trail__c.Mix_Category__c';
 
 import getTraillheadEntitiesByApiName from '@salesforce/apex/TrailheadEntityFormController.getTrailheadEntitiesByAPIName';

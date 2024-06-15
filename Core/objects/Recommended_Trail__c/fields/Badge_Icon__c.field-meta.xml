@@ -2,8 +2,9 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Badge_Icon__c</fullName>
     <deprecated>false</deprecated>
+    <description>Rendered icon for the corresponding trailheadapp__Trail__c.</description>
     <externalId>false</externalId>
-    <formula>IMAGE( Icon__c , Trail_Name__c , 50, 50)</formula>
+    <formula>IMAGE( Icon__c , TrailName__c , 50, 50)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Trail Icon</label>
     <required>false</required>
