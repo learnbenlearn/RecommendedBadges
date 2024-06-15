@@ -5,7 +5,7 @@
         <name>Does_Custom_Metadata_Record_Exist</name>
         <label>Does Custom Metadata Record Exist?</label>
         <locationX>182</locationX>
-        <locationY>431</locationY>
+        <locationY>395</locationY>
         <defaultConnectorLabel>Custom Metadata Record Does Not Exist</defaultConnectorLabel>
         <rules>
             <name>Custom_Metadata_Record_Exists</name>
@@ -54,7 +54,7 @@
         <name>Create_Task_to_Delete_Custom_Metadata</name>
         <label>Create Task to Delete Custom Metadata</label>
         <locationX>50</locationX>
-        <locationY>551</locationY>
+        <locationY>503</locationY>
         <inputAssignments>
             <field>OwnerId</field>
             <value>
@@ -86,7 +86,7 @@
         <name>Get_Badge_to_Keep_Custom_Metadata</name>
         <label>Get Badge to Keep Custom Metadata</label>
         <locationX>182</locationX>
-        <locationY>311</locationY>
+        <locationY>287</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Does_Custom_Metadata_Record_Exist</targetReference>
@@ -96,7 +96,7 @@
             <field>Badge_Name__c</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>$Record.Badge_Name__c</elementReference>
+                <elementReference>$Record.BadgeName__c</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>

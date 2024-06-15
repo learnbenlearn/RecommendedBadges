@@ -26,6 +26,7 @@ private class RecommendedTrailTrigger_Tests {
         );
         
         Test.startTest();
+        RecommendedBadgeTrailTriggerHelper.enabledForTesting = true;
         insert trailGenerator.generate();
         List<AsyncApexJob> queuedJobs = [SELECT Id FROM AsyncApexJob WHERE ApexClass.Name = 'QueueableTrailTrackerProviderCallout' AND JobType = 'Queueable' AND Status = 'Queued'];
         Assert.areEqual(trailGenerator.records.size(), queuedJobs.size(), 'Expected one queued Trail Tracker Provider callout per Recommended Trail.');
@@ -63,6 +64,7 @@ private class RecommendedTrailTrigger_Tests {
         
         Test.startTest();
 
+        RecommendedBadgeTrailTriggerHelper.enabledForTesting = true;
         insert trailGenerator.generate();
         
         List<AsyncApexJob> queuedJobs = [SELECT Id FROM AsyncApexJob WHERE ApexClass.Name = 'QueueableTrailTrackerProviderCallout' AND JobType = 'Queueable' AND Status = 'Queued'];

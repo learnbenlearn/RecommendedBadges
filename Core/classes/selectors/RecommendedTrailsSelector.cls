@@ -16,6 +16,14 @@ public inherited sharing class RecommendedTrailsSelector extends ApplicationSele
         return Recommended_Trail__c.sObjectType;
     }
 
+    public List<Recommended_Trail__c> selectTrailsByAPINames(Set<String> trailAPINames) {
+        return (List<Recommended_Trail__c>) Database.query(
+            newQueryFactory().selectFieldSet(Schema.SObjectType.Recommended_Trail__c.fieldSets.Core, false).
+            setCondition('TrailAPIName__c IN :trailAPINames').
+            toSOQL()
+        );
+    }
+
     public Recommended_Trail__c selectTrailAPINameById(Id recommendedTrailId) {
         return (Recommended_Trail__c) Database.query(
             newQueryFactory().selectFieldSet(Schema.SObjectType.Recommended_Trail__c.fieldSets.Triggers, false).

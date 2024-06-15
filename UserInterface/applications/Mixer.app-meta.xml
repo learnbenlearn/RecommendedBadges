@@ -23,8 +23,6 @@
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
     <tabs>Recommended_Badge_Mix__c</tabs>
-    <tabs>trailheadapp__Badge__c</tabs>
-    <tabs>trailheadapp__Trail__c</tabs>
     <tabs>Mix_Category__c</tabs>
     <tabs>standard-report</tabs>
     <uiType>Lightning</uiType>

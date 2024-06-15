@@ -17,6 +17,14 @@ public inherited sharing class RecommendedBadgesSelector extends ApplicationSele
         return Recommended_Badge__c.sObjectType;
     }
 
+    public List<Recommended_Badge__c> selectBadgesByAPINames(Set<String> badgeAPINames) {
+        return (List<Recommended_Badge__c>) Database.query(
+            newQueryFactory().selectFieldSet(Schema.SObjectType.Recommended_Badge__c.fieldSets.Core, false).
+            setCondition('BadgeAPIName__c IN :badgeAPINames').
+            toSOQL()
+        );
+    }
+
     public List<Recommended_Badge__c> selectedAllRelatedToUserPrivateMix() {
         fflib_QueryFactory recommendedBadgesQueryFactory = newQueryFactory();
 
@@ -27,7 +35,7 @@ public inherited sharing class RecommendedBadgesSelector extends ApplicationSele
             setCondition('Mix_Category__r.Recommended_Badge_Mix__r.Private_Mix__c = true AND Mix_Category__r.Recommended_Badge_Mix__r.OwnerId = \'' + UserInfo.getUserId() + '\'').
             setOrdering(new fflib_QueryFactory.Ordering(
                 this.getSObjectType().getDescribe().getName(), 
-                Schema.SObjectType.Recommended_Badge__c.fields.Badge_Name__c.getName(), 
+                Schema.SObjectType.Recommended_Badge__c.fields.BadgeName__c.getName(), 
                 fflib_QueryFactory.SortOrder.ASCENDING
             )).
             toSOQL()

@@ -9,10 +9,6 @@
         <type>CustomApplication</type>
     </appMenuItems>
     <appMenuItems>
-        <name>trailheadapp__Trailhead_Tracker</name>
-        <type>CustomApplication</type>
-    </appMenuItems>
-    <appMenuItems>
         <name>Recommended Badges</name>
         <type>Network</type>
     </appMenuItems>

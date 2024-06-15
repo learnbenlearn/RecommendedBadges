@@ -21,9 +21,13 @@ private class NewRecommendedBadgeTrailEventTgr_Tests {
 
         Test.startTest();
         EventBus.publish(recordEventGenerator.generate());
-        Test.stopTest();
-
+        Test.getEventBus().deliver();
         List<AsyncApexJob> queuedJobs = [SELECT Id FROM AsyncApexJob WHERE ApexClass.Name = 'QueueableTrailTrackerProviderCallout' AND JobType = 'Queueable' AND Status = 'Queued'];
         Assert.areEqual(50, queuedJobs.size(), 'Expected one queued Trail Tracker Provider for each NewRecommendedBadgeTrailEvent__e.');
+
+        for(AsyncApexJob job : queuedJobs) {
+            System.abortJob(job.Id);
+        }
+        Test.stopTest();
     }
 }

@@ -9,12 +9,7 @@
   <c-error></c-error>
 
   <div class="slds-var-p-around_medium slds-theme_default slds-box">
-    <template lwc:if={displaySpinner}>
-      <lightning-spinner size="small" alternative-text={spinnerText}></lightning-spinner>
-    </template>
     <c-storage-limits></c-storage-limits>
     <br/>
-
-    <lightning-button label="Clear Storage" onclick={handleClearStorage} variant="destructive"></lightning-button>
   </div>
 </template>

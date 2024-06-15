@@ -11,12 +11,18 @@ private class QueueableTrailTrkrProviderCallout_Tests {
         insert mixCategoryGenerator.generate();
         RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
             new Map<String, Object>{'generateMasterRecords' => false, 'generateRecordIDs' => false, 'numberToGenerate' => 1},
-            new List<TestSupport.TestDataField>{new TestSupport.TestDataField(Recommended_Badge__c.Mix_Category__c, mixCategoryGenerator.records[0].Id)}
+            new List<TestSupport.TestDataField>{
+				new TestSupport.TestDataField(Recommended_Badge__c.Level__c, 'Beginner'),
+				new TestSupport.TestDataField(Recommended_Badge__c.Mix_Category__c, mixCategoryGenerator.records[0].Id)
+			}
         );
         insert badgeGenerator.generate();
 		RecommendedTrailTS trailGenerator = new RecommendedTrailTS(
 			new Map<String, Object>{'generateMasterRecords' => false, 'generateRecordIDs' => false, 'numberToGenerate' => 1},
-			new List<TestSupport.TestDataField>{new TestSupport.TestDataField(Recommended_Trail__c.Mix_Category__c, mixCategoryGenerator.records[0].Id)}
+			new List<TestSupport.TestDataField>{
+				new TestSupport.TestDataField(Recommended_Trail__c.Level__c, 'Beginner'),
+				new TestSupport.TestDataField(Recommended_Trail__c.Mix_Category__c, mixCategoryGenerator.records[0].Id)
+			}
 		);
 		insert trailGenerator.generate();
     }

@@ -7,34 +7,46 @@ import getSortOptions from '@salesforce/apex/SortCustomMetadataController.getSor
 
 import { sortAlphabetic, sortCustom } from 'c/sortUtility';
 
-// import trail fields as well
-import ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
-import LEVEL_FIELD from '@salesforce/schema/Recommended_Badge__c.Level__c';
-import HYPERLINKEDNAME_FIELD from '@salesforce/schema/Recommended_Badge__c.HyperlinkedName__c';
-import NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Name';
-import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
-import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
+import BADGE_ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
+import BADGE_LEVEL_FIELD from '@salesforce/schema/Recommended_Badge__c.Level__c';
+import BADGE_HYPERLINKEDNAME_FIELD from '@salesforce/schema/Recommended_Badge__c.HyperlinkedName__c';
+import BADGE_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.BadgeName__c';
+import RECOMMENDED_BADGE_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.Name';
+import BADGE_TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
+import BADGE_URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
+import TRAIL_ID_FIELD from '@salesforce/schema/Recommended_Trail__c.Id';
+import TRAIL_LEVEL_FIELD from '@salesforce/schema/Recommended_Trail__c.Level__c';
+import TRAIL_HYPERLINKEDNAME_FIELD from '@salesforce/schema/Recommended_Trail__c.HyperlinkedName__c';
+import TRAIL_NAME_FIELD from '@salesforce/schema/Recommended_Trail__c.TrailName__c';
+import RECOMMENDED_TRAIL_NAME_FIELD from '@salesforce/schema/Recommended_Trail__c.Name';
+import TRAIL_URL_FIELD from '@salesforce/schema/Recommended_Trail__c.URL__c';
+import MIX_CATEGORY_ID_FIELD from '@salesforce/schema/Mix_Category__c.Id';
+import MIX_CATEGORY_NAME_FIELD from '@salesforce/schema/Mix_Category__c.Name';
+import MIX_CATEGORY_RECOMMENDED_BADGE_MIX_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__c';
+import RECOMMENDED_BADGE_MIX_NAME_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__r.Name';
+import RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__r.Last_Updated_Date__c';
+
 
 const SPINNER_TEXT = 'Retrieving recommended badges';
 
 const TREEGRID_COLUMNS = [
     {
         type: 'url',
-        fieldName: URL_FIELD.fieldApiName,
+        fieldName: BADGE_URL_FIELD.fieldApiName,
         label: 'Name',
         typeAttributes: {
             label: {
-                fieldName: NAME_FIELD.fieldApiName
+                fieldName: RECOMMENDED_BADGE_NAME_FIELD.fieldApiName
             }
         },
         initialWidth: 500
     },
     {
-        fieldName: TYPE_FIELD.fieldApiName,
+        fieldName: BADGE_TYPE_FIELD.fieldApiName,
         label: 'Type'
     },
     {
-        fieldName: LEVEL_FIELD.fieldApiName,
+        fieldName: BADGE_LEVEL_FIELD.fieldApiName,
         label: 'Level'
     },
 ]
@@ -80,7 +92,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     mixLabel = 'Select Badge Mix';
     mixOptions;
     mixValue;
-    keyField = ID_FIELD.fieldApiName;
+    keyField = BADGE_ID_FIELD.fieldApiName;
     sortLabel = 'Sort By';
     sortOptions;
     sortValue;
@@ -155,11 +167,11 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                 if(item.Recommended_Badges__r) {
                     for(let badge of item.Recommended_Badges__r) {
                         newCategoryChildren.push({
-                            Id: badge.Id,
-                            Name: badge.Badge_Name__c,
-                            Level__c: badge.Level__c,
-                            Type__c: badge.Type__c,
-                            URL__c: badge.URL__c,
+                            Id: badge[BADGE_ID_FIELD.fieldApiName],
+                            Name: badge[BADGE_NAME_FIELD.fieldApiName],
+                            Level__c: badge[BADGE_LEVEL_FIELD.fieldApiName],
+                            Type__c: badge[BADGE_TYPE_FIELD.fieldApiName],
+                            URL__c: badge[BADGE_URL_FIELD.fieldApiName],
                         });
                     }
                 }
@@ -167,27 +179,27 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                 if(item.Recommended_Trails__r) {
                     for(let trail of item.Recommended_Trails__r) {
                         newCategoryChildren.push({
-                            Id: trail.Id,
-                            Name: trail.Trail_Name__c,
-                            Level__c: trail.Level__c,
+                            Id: trail[TRAIL_ID_FIELD.fieldApiName],
+                            Name: trail[TRAIL_NAME_FIELD.fieldApiName],
+                            Level__c: trail[TRAIL_LEVEL_FIELD.fieldApiName],
                             Type__c: 'Trail',
-                            URL__c: trail.URL__c,
-                            HyperlinkedName__c: trail.HyperlinkedName__c
+                            URL__c: trail[TRAIL_URL_FIELD.fieldApiName],
+                            HyperlinkedName__c: trail[TRAIL_HYPERLINKEDNAME_FIELD.fieldApiName]
                         })
                     }
                 }
                 
                 let newCategory = {
-                    Id: item.Id,
-                    Name: item.Name,
-                    URL__c: '/' + item.Id, // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
+                    Id: item[MIX_CATEGORY_ID_FIELD.fieldApiName],
+                    Name: item[MIX_CATEGORY_NAME_FIELD.fieldApiName],
+                    URL__c: '/' + item[MIX_CATEGORY_ID_FIELD.fieldApiName], // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
                     _children: newCategoryChildren,
-                    Recommended_Badge_Mix__c: item.Recommended_Badge_Mix__c,
-                    RecommendedBadgeMixLastUpdatedDate: item.Recommended_Badge_Mix__r.Last_Updated_Date__c
+                    Recommended_Badge_Mix__c: item[MIX_CATEGORY_RECOMMENDED_BADGE_MIX_FIELD.fieldApiName],
+                    RecommendedBadgeMixLastUpdatedDate: item[RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD.fieldApiName]
                 };
 
                 if(!(item.Recommended_Badge_Mix__r.Name in this.lastUpdatedDatesByRecommendedBadgeMix)) {
-                    this.lastUpdatedDatesByRecommendedBadgeMix[item.Recommended_Badge_Mix__r.Name] = item.Recommended_Badge_Mix__r.Last_Updated_Date__c;
+                    this.lastUpdatedDatesByRecommendedBadgeMix[item[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName]] = item[RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD.fieldApiName];
                 }
 
                 return newCategory;

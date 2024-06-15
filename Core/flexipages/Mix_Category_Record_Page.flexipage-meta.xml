@@ -201,7 +201,7 @@
                             <value>Badge_Icon__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Badge_Name__c</value>
+                            <value>BadgeName__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>HyperlinkedName__c</value>
@@ -283,7 +283,7 @@
                             <value>Badge_Icon__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Badge_Name__c</value>
+                            <value>BadgeName__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>HyperlinkedName__c</value>
@@ -362,7 +362,7 @@
                             <value>Badge_Icon__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Trail_Name__c</value>
+                            <value>TrailName__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>Level__c</value>
