@@ -3,6 +3,7 @@
     <testClassName>ApplicationTests</testClassName>
     <testClassName>DefaultObjectSelectorsSelectorTests</testClassName>
     <testClassName>DefaultServiceImplementationSelectorTest</testClassName>
+    <testClassName>DMLUtils_Tests</testClassName>
     <testClassName>MixCategoriesSelectorTests</testClassName>
     <testClassName>RecommendedBadgeMixesSelectorTests</testClassName>
     <testClassName>RecommendedBadgesSelectorTests</testClassName>
