@@ -26,18 +26,18 @@ security.settings
 #UserInterface/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-meta.xml
 
 # Ignored Packages
-#Core
+Core
 fflib
 LWCUtils
 LWCErrorHandler
-#PrivateMixView
+PrivateMixView
 RecommendedBadgeMix
 SFXOrgSubscriber
 SortCustomMetadata
 #StorageManagement
 TaskList
-#Triggers
-UserInterface
+Triggers
+#UserInterface
 
 # Ignored Folders
 unpackageable

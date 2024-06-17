@@ -85,7 +85,7 @@ public with sharing class QueueableTrailTrackerProviderCallout implements Queuea
 
         sObject recordToUpdate = this.RECORD_ID.getSObjectType().newSObject(this.RECORD_ID);
         HttpRequest request = new HttpRequest();
-        request.setEndpoint('callout:Provider_Scratch/services/data/v60.0/query/?q=' + EncodingUtil.urlEncode(query, 'UTF-8'));
+        request.setEndpoint('callout:Trail_Tracker_Provider/services/data/v60.0/query/?q=' + EncodingUtil.urlEncode(query, 'UTF-8'));
         request.setMethod('GET');
         HttpResponse response;
 

@@ -37,7 +37,7 @@ public with sharing class TrailheadEntityFormController {
                  new List<Object>{providerSObjectsByChildEntityType.get(childEntityType)}
             );
             HttpRequest request = new HttpRequest();
-            request.setEndpoint('callout:Provider_Scratch/services/data/v60.0/query/?q=' + EncodingUtil.urlEncode(query, 'UTF-8'));
+            request.setEndpoint('callout:Trail_Tracker_Provider/services/data/v60.0/query/?q=' + EncodingUtil.urlEncode(query, 'UTF-8'));
             request.setMethod('GET');
             try {
                 HttpResponse response = new Http().send(request);

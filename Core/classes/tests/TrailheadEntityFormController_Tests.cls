@@ -16,6 +16,7 @@ private class TrailheadEntityFormController_Tests {
         Test.startTest();
         Map<String, Object> responseBody = TrailheadEntityFormController.getTrailheadEntitiesByAPIName('Recommended_Badge__c');
         Test.stopTest();
+        System.debug(responseBody);
         
         Assert.areEqual((Map<String, Object>) JSON.deserializeUntyped(testResponse), responseBody, 'Expected response body to match provided value.');
     }
