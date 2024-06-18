@@ -7,10 +7,15 @@ import { deleteRecord, updateRecord } from 'lightning/uiRecordApi';
 import BADGE_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.BadgeName__c';
 import HIGH_PRIORITY_FIELD from '@salesforce/schema/Recommended_Badge__c.High_Priority__c';
 import HIGH_PRIORITY_ID_FIELD from '@salesforce/schema/Recommended_Badge__c.High_Priority_Id__c';
-import ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
+import BADGE_ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
 import TIME_ESTIMATE_FIELD from '@salesforce/schema/Recommended_Badge__c.Time_Estimate__c';
 import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
 import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
+import MIX_CATEGORY_NAME_FIELD from '@salesforce/schema/Mix_Category__c.Name';
+import MIX_CATEGORY_ID_FIELD from '@salesforce/schema/Mix_Category__c.Id';
+import RECOMMENDED_BADGE_MIX_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__c';
+import RECOMMENDED_BADGE_MIX_NAME_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__r.Name';
+import PRIVATE_MIX_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__r.Private_Mix__c';
 
 import getMixCategoryData from '@salesforce/apex/PrivateViewController.getMixCategoryData';
 import getPrivateMixRecommendedBadges from '@salesforce/apex/PrivateViewController.getPrivateMixRecommendedBadges';
@@ -101,10 +106,10 @@ export default class PrivateViewContainer extends LightningElement {
             this.viewOptions.push(HIGH_PRIORITY_OPTION);
 
             for(let mixCategory of this.mixCategoryData) {
-                if(mixCategory.Recommended_Badge_Mix__r.Private_Mix__c) {
+                if(mixCategory[PRIVATE_MIX_FIELD.fieldApiName]) {
                     this.viewOptions.push({
-                        label: mixCategory.Name,
-                        value: mixCategory.Name
+                        label: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
+                        value: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName]
                     });
                 }
             }
@@ -124,10 +129,10 @@ export default class PrivateViewContainer extends LightningElement {
         this.lookupItems = [];
         for(let mixCategory of this.mixCategoryData) {
             this.lookupItems.push({
-                Id: mixCategory.Id,
-                Name: mixCategory.Name,
-                SecondaryFieldValue: mixCategory.Recommended_Badge_Mix__r.Name,
-                ParentId: mixCategory.Recommended_Badge_Mix__c
+                Id: mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName],
+                Name: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
+                SecondaryFieldValue: mixCategory[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName],
+                ParentId: mixCategory[RECOMMENDED_BADGE_MIX_FIELD.fieldApiName]
             });
         }
     }
@@ -136,7 +141,7 @@ export default class PrivateViewContainer extends LightningElement {
         if(event.detail === 'High Priority') {
             this.keyField = HIGH_PRIORITY_ID_FIELD.fieldApiName;
         } else {
-            this.keyField = ID_FIELD.fieldApiName;
+            this.keyField = BADGE_ID_FIELD.fieldApiName;
         }
 
         this.dropdownViewValue = event.detail;
@@ -173,7 +178,7 @@ export default class PrivateViewContainer extends LightningElement {
         }
 
         let fields = {};
-        fields[ID_FIELD.fieldApiName] = recommendedBadgeId;
+        fields[BADGE_ID_FIELD.fieldApiName] = recommendedBadgeId;
         fields[HIGH_PRIORITY_FIELD.fieldApiName] = newHighPriorityValue;
         let recordInput = { fields };
 
@@ -183,7 +188,7 @@ export default class PrivateViewContainer extends LightningElement {
 
             const showToastEvent = new ShowToastEvent({
                 title: 'Success',
-                message: 'Toggled high priority for ' + rowToToggle.Badge_Name__c + ' recommended badge.',
+                message: `Toggled high priority for ${rowToToggle[BADGE_NAME_FIELD.fieldApiName]} recommended badge.`,
                 variant: 'success'
             });
             this.dispatchEvent(showToastEvent);
@@ -210,7 +215,7 @@ export default class PrivateViewContainer extends LightningElement {
 
             const showToastEvent = new ShowToastEvent({
                 title: 'Success',
-                message: 'Deleted ' + rowToDelete.Badge_Name__c + ' recommended badge.',
+                message: `Deleted ${rowToDelete[BADGE_NAME_FIELD.fieldApiName]} recommended badge.`,
                 variant: 'success'
             });
             this.dispatchEvent(showToastEvent);
@@ -229,8 +234,8 @@ export default class PrivateViewContainer extends LightningElement {
         this.promptIsLoading = true;
         let selectedMixCategory = this.template.querySelector('c-lookup').selectedItem;
         let recommendedBadge = {
-            Id: this.selectedRecommendedBadge.Id,
-            Mix_Category__c: selectedMixCategory.Id
+            Id: this.selectedRecommendedBadge[BADGE_ID_FIELD.fieldApiName],
+            Mix_Category__c: selectedMixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName]
         };
 
         try {
@@ -243,7 +248,7 @@ export default class PrivateViewContainer extends LightningElement {
 
             const showToastEvent = new ShowToastEvent({
                 title: 'Success',
-                message: 'Changed Mix Category for ' + this.selectedRecommendedBadge.Badge_Name__c + ' to ' + selectedMixCategory.Name,
+                message: `Changed Mix Category for ${this.selectedRecommendedBadge[BADGE_NAME_FIELD.fieldApiName]} to ${selectedMixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName]}`,
                 variant: 'success'
             });
             this.dispatchEvent(showToastEvent);
