@@ -76,7 +76,7 @@ export default class TrailheadEntityForm extends NavigationMixin(LightningElemen
                 });
             }
         } else if(error) {
-            this.template.querySelector('c-error').handleError(err);
+            this.template.querySelector('c-error').handleError(error);
         }
     }
 
