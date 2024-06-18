@@ -4,14 +4,6 @@
         <apexClass>StorageLimitsController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
-    <customMetadataTypeAccesses>
-        <enabled>true</enabled>
-        <name>Product_to_Delete__mdt</name>
-    </customMetadataTypeAccesses>
-    <customMetadataTypeAccesses>
-        <enabled>true</enabled>
-        <name>Badge_to_Keep__mdt</name>
-    </customMetadataTypeAccesses>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Storage Management Permissions</label>
 </PermissionSet>

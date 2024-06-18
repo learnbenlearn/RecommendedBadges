@@ -28,37 +28,6 @@
       ]
     },
     {
-      "path": "TaskList",
-      "default": false,
-      "package": "TaskList",
-      "versionName": "Akron",
-      "versionNumber": "1.22.0.NEXT",
-      "dependencies": [
-        {
-          "package": "fflib",
-          "versionNumber": "1.11.0.LATEST"
-        },
-        {
-          "package": "NebulaLogger"
-        },
-        {
-          "package": "TestSupport"
-        },
-        {
-          "package": "LWCUtils",
-          "versionNumber": "1.24.0.LATEST"
-        },
-        {
-          "package": "LWCErrorHandler",
-          "versionNumber": "1.7.0.LATEST"
-        },
-        {
-          "package": "Core",
-          "versionNumber": "2.1.0.LATEST"
-        }
-      ]
-    },
-    {
       "path": "LWCUtils",
       "default": false,
       "package": "LWCUtils",

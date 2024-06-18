@@ -18,7 +18,7 @@ Admin.profile
 **/ContactCenter_UtilityBar.flexipage-meta.xml
 **/LightningSalesConsole_UtilityBar.flexipage-meta.xml
 **/LightningService_UtilityBar.flexipage-meta.xml
-home_page_default.flexipage
+#home_page_default.flexipage
 standard-home.tab
 AppSwitcher.appMenu
 security.settings
