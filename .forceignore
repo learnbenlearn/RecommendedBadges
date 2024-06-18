@@ -27,16 +27,16 @@ security.settings
 
 # Ignored Packages
 #Core
-fflib
-LWCUtils
-LWCErrorHandler
-PrivateMixView
-RecommendedBadgeMix
-SFXOrgSubscriber
-SortCustomMetadata
+#fflib
+#LWCUtils
+#LWCErrorHandler
+#PrivateMixView
+#ecommendedBadgeMix
+#SFXOrgSubscriber
+#SortCustomMetadata
 #StorageManagement
-TaskList
-Triggers
+#TaskList
+#Triggers
 #UserInterface
 
 # Ignored Folders
