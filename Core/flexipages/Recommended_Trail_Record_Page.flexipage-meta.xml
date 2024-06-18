@@ -55,10 +55,10 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Trail__c</fieldItem>
-                <identifier>RecordTrail_cField</identifier>
+                <fieldItem>Record.TrailAPIName__c</fieldItem>
+                <identifier>RecordTrailAPIName_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -77,18 +77,18 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Level__c</fieldItem>
-                <identifier>RecordLevel_cField</identifier>
+                <fieldItem>Record.Badge_Icon__c</fieldItem>
+                <identifier>RecordBadge_Icon_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Mix_Category__c</fieldItem>
-                <identifier>RecordMix_Category_cField</identifier>
+                <fieldItem>Record.Products__c</fieldItem>
+                <identifier>RecordProducts_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-cb5b229e-75ee-4053-98e1-d9a54b42fc96</name>
@@ -101,8 +101,28 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Badge_Icon__c</fieldItem>
-                <identifier>RecordBadge_Icon_cField</identifier>
+                <fieldItem>Record.HyperlinkedName__c</fieldItem>
+                <identifier>RecordHyperlinkedName_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Mix_Category__c</fieldItem>
+                <identifier>RecordMix_Category_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Level__c</fieldItem>
+                <identifier>RecordLevel_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-65cfabbe-ca31-4dfc-81c7-f16a1a067d48</name>

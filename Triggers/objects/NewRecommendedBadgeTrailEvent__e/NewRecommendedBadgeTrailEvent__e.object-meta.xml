@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Platform event published when new Recommended Badge/Recommended Trail records are created in bulk (i.e. more than 50 at a time).</description>
+    <eventType>HighVolume</eventType>
+    <label>New Recommended Badge Trail Event</label>
+    <pluralLabel>New Recommended Badge Trail Events</pluralLabel>
+    <publishBehavior>PublishAfterCommit</publishBehavior>
+</CustomObject>

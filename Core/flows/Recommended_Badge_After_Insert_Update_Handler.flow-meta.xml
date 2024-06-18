@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>57.0</apiVersion>
+    <decisions>
+        <name>Is_Recommended_Badge_Mix_Private</name>
+        <label>Is Recommended Badge Mix Private?</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <defaultConnectorLabel>Private</defaultConnectorLabel>
+        <rules>
+            <name>Not_Private</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Mix_Category__r.Recommended_Badge_Mix__r.Private_Mix__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Recommended_Badge_Mix_Last_Updated_Date</targetReference>
+            </connector>
+            <label>Not Private</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <interviewLabel>Recommended Badge Insert &amp; Update Handler {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Recommended Badge Insert &amp; Update Handler</label>
@@ -24,10 +46,10 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <start>
-        <locationX>50</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_Recommended_Badge_Mix_Last_Updated_Date</targetReference>
+            <targetReference>Is_Recommended_Badge_Mix_Private</targetReference>
         </connector>
         <object>Recommended_Badge__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
@@ -37,8 +59,8 @@
     <subflows>
         <name>Update_Recommended_Badge_Mix_Last_Updated_Date</name>
         <label>Update Recommended Badge Mix Last Updated Date</label>
-        <locationX>176</locationX>
-        <locationY>335</locationY>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
         <flowName>Update_Recommended_Badge_Mix_Last_Updated_Date</flowName>
         <inputAssignments>
             <name>recommendedBadgeMixId</name>

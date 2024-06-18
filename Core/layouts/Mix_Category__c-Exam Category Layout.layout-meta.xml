@@ -117,40 +117,31 @@
             <sortOrder>8</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>RecordShareHierarchy</actionName>
+            <actionName>Edit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>9</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Share</actionName>
+            <actionName>ChangeOwnerOne</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>10</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Edit</actionName>
+            <actionName>Delete</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>11</sortOrder>
         </platformActionListItems>
-        <platformActionListItems>
-            <actionName>ChangeOwnerOne</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>12</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Delete</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>13</sortOrder>
-        </platformActionListItems>
     </platformActionList>
     <relatedLists>
-        <fields>Trail_Name__c</fields>
+        <fields>TrailName__c</fields>
         <fields>Level__c</fields>
         <relatedList>Recommended_Trail__c.Mix_Category__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>trailheadapp__Badge__c.NAME</fields>
-        <fields>trailheadapp__Badge__c.trailheadapp__Level__c</fields>
-        <fields>trailheadapp__Badge__c.trailheadapp__Type__c</fields>
+        <fields>NAME</fields>
+        <fields>BadgeName__c</fields>
+        <fields>Level__c</fields>
+        <fields>Type__c</fields>
         <relatedList>Recommended_Badge__c.Mix_Category__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
@@ -159,7 +150,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h7A000000gq2J</masterLabel>
+        <masterLabel>00hDR00000DG07G</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

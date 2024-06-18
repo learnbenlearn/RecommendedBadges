@@ -56,6 +56,16 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.BadgeAPIName__c</fieldItem>
+                <identifier>RecordBadgeAPIName_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
                     <value>readonly</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.Name</fieldItem>
@@ -76,20 +86,10 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>required</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Badge__c</fieldItem>
-                <identifier>RecordBadge_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>required</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Mix_Category__c</fieldItem>
-                <identifier>RecordMix_Category_cField</identifier>
+                <fieldItem>Record.Products__c</fieldItem>
+                <identifier>RecordProducts_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -112,16 +112,6 @@
                 <identifier>RecordSaved_by_CMT_cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Category_Rank__c</fieldItem>
-                <identifier>RecordCategory_Rank_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-dea88db6-cef8-4b4a-999d-03c06c91f487</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -130,10 +120,20 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>readonly</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Badge_Name__c</fieldItem>
-                <identifier>RecordBadge_Name_cField</identifier>
+                <fieldItem>Record.HyperlinkedName__c</fieldItem>
+                <identifier>RecordHyperlinkedName_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Mix_Category__c</fieldItem>
+                <identifier>RecordMix_Category_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -160,30 +160,10 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>readonly</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Products__c</fieldItem>
-                <identifier>RecordProducts_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>readonly</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.URL__c</fieldItem>
-                <identifier>RecordURL_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.HyperlinkedName__c</fieldItem>
-                <identifier>RecordHyperlinkedName_cField</identifier>
+                <fieldItem>Record.Category_Rank__c</fieldItem>
+                <identifier>RecordCategory_Rank_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-16e82340-ce58-4a22-b3ea-352477b92768</name>
@@ -273,6 +253,10 @@
                     <value>Facet-8692481a-4fad-479f-ae75-34fb00b05701</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Information</value>
                 </componentInstanceProperties>
@@ -285,6 +269,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-94e844dc-8ec8-4977-89e4-dbfd0e81018e</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -384,11 +372,22 @@
                     <value>Facet-d07baf39-b21c-4866-86b9-543c738fdd7e</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Time</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection2</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.Mix_Category__r.Recommended_Badge_Mix__r.Private_Mix__c}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>true</rightValue>
+                    </criteria>
+                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

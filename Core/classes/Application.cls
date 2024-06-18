@@ -24,11 +24,6 @@ public class Application {
         selectorsBySObject.put(Recommended_Badge__c.sObjectType, RecommendedBadgesSelector.class);
         selectorsBySObject.put(Recommended_Trail__c.sObjectType, RecommendedTrailsSelector.class);
         selectorsBySObject.put(Task.sObjectType, TasksSelector.class);
-        selectorsBySObject.put(trailheadapp__Badge__c.sObjectType, BadgesSelector.class);
-        selectorsBySObject.put(trailheadapp__Debug_Log__c.sObjectType, DebugLogsSelector.class);
-        selectorsBySObject.put(trailheadapp__Trailmix__c.sObjectType, TrailmixesSelector.class);
-        selectorsBySObject.put(trailheadapp__Trail__c.sObjectType, TrailsSelector.class);
-        selectorsBySObject.put(trailheadapp__User_Badge__c.sObjectType, UserBadgesSelector.class);
 
         List<DefaultObjectSelector__mdt> defaultObjectSelectors = new DefaultObjectSelectorsSelector().selectAll();
         for(DefaultObjectSelector__mdt defaultObjectSelector : defaultObjectSelectors) {

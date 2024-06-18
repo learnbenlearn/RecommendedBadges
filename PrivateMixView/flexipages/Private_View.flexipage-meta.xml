@@ -7,15 +7,6 @@
                     <name>tabs</name>
                     <valueList>
                         <valueListItems>
-                            <value>trailheadapp__Badge__c</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>trailheadapp__Trail__c</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>trailheadapp__Trailmix__c</value>
-                        </valueListItems>
-                        <valueListItems>
                             <value>Recommended_Badge_Mix__c</value>
                         </valueListItems>
                         <valueListItems>

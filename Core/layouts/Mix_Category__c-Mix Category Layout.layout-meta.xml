@@ -124,14 +124,16 @@
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
-        <fields>trailheadapp__Trail__c.NAME</fields>
-        <fields>trailheadapp__Trail__c.trailheadapp__Level__c</fields>
+        <fields>NAME</fields>
+        <fields>TrailName__c</fields>
+        <fields>Level__c</fields>
         <relatedList>Recommended_Trail__c.Mix_Category__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>trailheadapp__Badge__c.NAME</fields>
-        <fields>trailheadapp__Badge__c.trailheadapp__Level__c</fields>
-        <fields>trailheadapp__Badge__c.trailheadapp__Type__c</fields>
+        <fields>NAME</fields>
+        <fields>BadgeName__c</fields>
+        <fields>Level__c</fields>
+        <fields>Type__c</fields>
         <relatedList>Recommended_Badge__c.Mix_Category__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
@@ -140,7 +142,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00hDM0000028puz</masterLabel>
+        <masterLabel>00hDR00000DG07L</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

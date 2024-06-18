@@ -198,10 +198,10 @@
                     <name>relatedListFieldAliases</name>
                     <valueList>
                         <valueListItems>
-                            <value>trailheadapp__Badge__c.trailheadapp__Badge_Icon__c</value>
+                            <value>Badge_Icon__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>trailheadapp__Badge__c.NAME</value>
+                            <value>BadgeName__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>HyperlinkedName__c</value>
@@ -213,10 +213,10 @@
                             <value>Time_Estimate__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>trailheadapp__Badge__c.trailheadapp__Level__c</value>
+                            <value>Level__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>trailheadapp__Badge__c.trailheadapp__Type__c</value>
+                            <value>Type__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>NAME</value>
@@ -280,19 +280,19 @@
                     <name>relatedListFieldAliases</name>
                     <valueList>
                         <valueListItems>
-                            <value>trailheadapp__Badge__c.trailheadapp__Badge_Icon__c</value>
+                            <value>Badge_Icon__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>trailheadapp__Badge__c.NAME</value>
+                            <value>BadgeName__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>HyperlinkedName__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>trailheadapp__Badge__c.trailheadapp__Level__c</value>
+                            <value>Level__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>trailheadapp__Badge__c.trailheadapp__Type__c</value>
+                            <value>Type__c</value>
                         </valueListItems>
                         <valueListItems>
                             <value>NAME</value>
@@ -359,16 +359,13 @@
                     <name>relatedListFieldAliases</name>
                     <valueList>
                         <valueListItems>
-                            <value>trailheadapp__Trail__c.trailheadapp__Badge_Icon__c</value>
+                            <value>Badge_Icon__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>trailheadapp__Trail__c.NAME</value>
+                            <value>TrailName__c</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>Trail_Name__c</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>trailheadapp__Trail__c.trailheadapp__Level__c</value>
+                            <value>Level__c</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>

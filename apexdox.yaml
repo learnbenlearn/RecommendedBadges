@@ -1,0 +1,23 @@
+engine:
+  targetDirectory: "${workspaceFolder}/documentation"
+  source:
+    - path: "${workspaceFolder}/Core/classes"
+    - path: "${workspaceFolder}/LWCErrorHandler/classes"
+    - path: "${workspaceFolder}/PrivateMixView/classes"
+    - path: "${workspaceFolder}/RecommendedBadgeMix/classes"
+    - path: "${workspaceFolder}/SortCustomMetadata/classes"
+    - path: "${workspaceFolder}/StorageManagement/classes"
+    - path: "${workspaceFolder}/TaskList/classes"
+    - path: "${workspaceFolder}/Triggers/classes"
+  homePagePath: "${workspaceFolder}/ApexDoxHomePage.html"
+  excludes: [
+    "*_Tests.cls",
+    "*TS.cls"
+  ]
+  scope: [
+    "global",
+    "public", 
+    "protected",
+    "webService" 
+  ]
+  title: "Recommended Badges"

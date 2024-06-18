@@ -1,0 +1,3 @@
+<aura:component implements="lightning:actionOverride,force:hasRecordId,force:hasSObjectName">
+    <c:trailheadEntityForm sObjectName="{!v.sObjectName}" recordId="{!v.recordId}"></c:trailheadEntityForm>
+</aura:component>

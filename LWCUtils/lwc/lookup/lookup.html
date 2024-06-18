@@ -8,13 +8,18 @@
     <div class="slds-form-element">
         <div class="slds-form-element__control">
             <div class="slds-combobox_container">
-                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click">
-                    <label>{objectName}</label>
+                <div lwc:ref="dropdownDiv" class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click">
+                    <label class="slds-form-element__label">
+                        <template lwc:if={required}>
+                            <abbr class="slds-required" title="required">*</abbr>
+                        </template>
+                        {objectName}
+                    </label>
                     <template lwc:if={selectedItem}>
                         <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right slds-input_faux" role="none">
-                            <lightning-icon icon-name={resultIconName}></lightning-icon>
+                            <lightning-icon class="slds-combobox__input-entity-icon" icon-name={resultIconName}></lightning-icon>
                             <button type="button" class="slds-combobox__input slds-combobox__input-value slds-input_faux">
-                                <span class="slds-truncate">{selectedItem.Name}</span>
+                                <span class="slds-truncate selectedItem">{selectedItem.Name}</span>
                             </button>
                             <lightning-button-icon icon-name="utility:close" variant="container" onclick={handleRemoveSelectedItem}></lightning-button-icon>
                         </div>
@@ -22,7 +27,7 @@
 
                     <template lwc:else>
                         <lightning-input label={objectName} variant="label-hidden" type="search" onfocus={handleInputFocus} onblur={handleInputBlur} 
-                            onchange={handleInputChange}>
+                            onchange={handleInputChange} required={required} placeholder={placeholder} is-loading={isSearchLoading}>
                         </lightning-input>
                     </template>
 

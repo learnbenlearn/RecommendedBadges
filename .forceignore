@@ -10,7 +10,7 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-admin.profile
+Admin.profile
 **.fieldRestrictionRule*
 
 ## Temp Ignored
@@ -22,21 +22,21 @@ home_page_default.flexipage
 standard-home.tab
 AppSwitcher.appMenu
 security.settings
-Recommended_Badge_Mix__c.External_Read_Access_to_Public_Mixes.sharingRules
-UserInterface/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-meta.xml
+#Recommended_Badge_Mix__c.External_Read_Access_to_Public_Mixes.sharingRules
+#UserInterface/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-meta.xml
 
 # Ignored Packages
-#Core
-#fflib
-#LWCUtils
-#LWCErrorHandler
-#PrivateMixView
-#RecommendedBadgeMix
-#SFXOrgSubscriber
-#SortCustomMetadata
+Core
+fflib
+LWCUtils
+LWCErrorHandler
+PrivateMixView
+RecommendedBadgeMix
+SFXOrgSubscriber
+SortCustomMetadata
 #StorageManagement
-#TaskList
-#Triggers
+TaskList
+Triggers
 #UserInterface
 
 # Ignored Folders

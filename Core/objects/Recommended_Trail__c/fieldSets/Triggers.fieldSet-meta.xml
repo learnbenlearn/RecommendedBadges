@@ -3,7 +3,7 @@
     <fullName>Triggers</fullName>
     <description>Field set for Triggers package.</description>
     <displayedFields>
-        <field>Trail__c</field>
+        <field>TrailAPIName__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
     </displayedFields>

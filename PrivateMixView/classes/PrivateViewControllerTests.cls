@@ -29,25 +29,19 @@ private class PrivateViewControllerTests {
 
     @isTest
     private static void getPrivateMixRecommendedBadges_test() {
-        TestDataFactory.Badge badgeGenerator = new TestDataFactory.Badge(true, true);
-        List<trailheadapp__Badge__c> testBadges = badgeGenerator.execute();
-
-        TestDataFactory.Trail trailGenerator = new TestDataFactory.Trail(true, false);
-        trailGenerator.execute();
-
         TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 2, false, true);
         List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = recommendedBadgeMixGenerator.execute();
 
         TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, true, 20, testRecommendedBadgeMixes);
         List<Mix_Category__c> testMixCategories = mixCategoryGenerator.execute();
         
-        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(true, false, testBadges, testMixCategories, true);
+        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(true, false, testMixCategories, true);
         recommendedBadgeGenerator.execute();
 
         List<Recommended_Badge__c> resultRecommendedBadges = [
-            SELECT Badge_Name__c, High_Priority__c, High_Priority_Id__c, Level__c, Time_Estimate_Minutes__c, Time_Estimate__c, Type__c, URL__c, Mix_Category__r.Name 
+            SELECT BadgeName__c, High_Priority__c, High_Priority_Id__c, Level__c, Time_Estimate_Minutes__c, Time_Estimate__c, Type__c, URL__c, Mix_Category__r.Name 
             FROM Recommended_Badge__c 
-            WHERE Mix_Category__r.Recommended_Badge_Mix__r.Private_Mix__c = true ORDER BY Badge_Name__c
+            WHERE Mix_Category__r.Recommended_Badge_Mix__r.Private_Mix__c = true ORDER BY BadgeName__c
         ];
 
         Map<String, List<Recommended_Badge__c>> resultRecommendedBadgeMap = new Map<String, List<Recommended_Badge__c>>();
@@ -72,6 +66,13 @@ private class PrivateViewControllerTests {
         Map<String, List<Recommended_Badge__c>> privateViewMap = PrivateViewController.getPrivateMixRecommendedBadges();
         Test.stopTest();
 
-        System.assert(resultRecommendedBadgeMap.equals(privateViewMap), 'Expected private view Recommended Badges to equal test data.');
+        Assert.isTrue(resultRecommendedBadgeMap.keySet().equals(privateViewMap.keySet()), 'Expected private view Recommended Badges to equal test data.');
+        for(String mixCategory : privateViewMap.keySet()) {
+            List<Recommended_Badge__c> expectedMixCategoryBadges = resultRecommendedBadgeMap.get(mixCategory);
+            for(Recommended_Badge__c badge : privateViewMap.get(mixCategory)) {
+                expectedMixCategoryBadges.remove(expectedMixCategoryBadges.indexOf(badge));
+            }
+            Assert.areEqual(0, expectedMixCategoryBadges.size(), 'Expected private view Recommended Badges to equal test data.');
+        }
     }
 }

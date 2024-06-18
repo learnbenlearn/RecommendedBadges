@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Recommended Badges</title>
+    <meta charset="UTF-8">
+    <script type="module" src="./assets/index.js"></script>
+    <script type="module" src="./assets/search-idx.js"></script>
+    <script type="module" src="./assets/search.js"></script>
+    <script charset="UTF-8" src="./assets/highlight.js"></script>
+    <script charset="UTF-8" src="./assets/mark.js"></script>
+    <script charset="UTF-8" src="./assets/lunr.js"></script>
+    <link rel="stylesheet" href="./assets/highlight.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/index.css" />
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" />
+  </head>
+
+  <body>
+    <div id="side-bar">
+
+      <div id="logo-container">
+        <div class="title">
+          Recommended Badges
+        </div>
+        <img src="assets/logo.png" />
+        <div class="subtitle">
+          Powered by <a target="_blank" rel="noopener noreferrer" href="https://github.com/no-stack-dub-sack/apexdox-vs-code">ApexDox VS Code</a>'
+        </div>
+      </div>
+      <div id="search-wrapper">
+        <div class="search-icon"></div>
+        <input id="search-input" type="text" autocomplete="off" placeholder="Search...">
+      </div>
+      <ul id="search-results" class=""></ul>
+      <div class="navbar">
+        <nav role="navigation">
+          <a class="nav-header" id="home" href="javascript:void(0)" onclick="goToLocation('index.html');">
+            Home
+          </a>
+          <details id="@last_modified_by_:_Ben_Learn" class="group-name">
+            <summary id="header-@last_modified_by_:_Ben_Learn" class="nav-header">
+              <span>@last modified by  : Ben Learn</span>
+            </summary>
+            <ul>
+              <!-- menu items -->
+              <li title="ScheduledStorageClean" id="item-ScheduledStorageClean" class="nav-item class " onclick="goToLocation('ScheduledStorageClean.html');">
+                <a tabindex="1" href="javascript:void(0)">ScheduledStorageClean</a>
+              </li>
+              <li title="StorageLimitsController" id="item-StorageLimitsController" class="nav-item class " onclick="goToLocation('StorageLimitsController.html');">
+                <a tabindex="1" href="javascript:void(0)">StorageLimitsController</a>
+              </li>
+              <li title="StorageManagementController" id="item-StorageManagementController" class="nav-item class " onclick="goToLocation('StorageManagementController.html');">
+                <a tabindex="1" href="javascript:void(0)">StorageManagementController</a>
+              </li>
+              <li title="TaskListController" id="item-TaskListController" class="nav-item class " onclick="goToLocation('TaskListController.html');">
+                <a tabindex="1" href="javascript:void(0)">TaskListController</a>
+              </li>
+            </ul>
+          </details>
+          <details id="Core" class="group-name">
+            <summary id="header-Core" class="nav-header">
+              <span>Core</span>
+            </summary>
+            <ul>
+              <!-- menu items -->
+              <li title="TrailheadEntityFormController" id="item-TrailheadEntityFormController" class="nav-item class " onclick="goToLocation('TrailheadEntityFormController.html');">
+                <a tabindex="1" href="javascript:void(0)">TrailheadEntityFormController</a>
+              </li>
+            </ul>
+          </details>
+          <details id="Miscellaneous" class="group-name">
+            <summary id="header-Miscellaneous" class="nav-header">
+              <span>Miscellaneous</span>
+            </summary>
+            <ul>
+              <!-- menu items -->
+              <li title="Application" id="item-Application" class="nav-item class " onclick="goToLocation('Application.html');">
+                <a tabindex="1" href="javascript:void(0)">Application</a>
+              </li>
+              <li title="ApplicationSelector" id="item-ApplicationSelector" class="nav-item class " onclick="goToLocation('ApplicationSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">ApplicationSelector</a>
+              </li>
+              <li title="Badges" id="item-Badges" class="nav-item class " onclick="goToLocation('Badges.html');">
+                <a tabindex="1" href="javascript:void(0)">Badges</a>
+              </li>
+              <li title="BadgesSelector" id="item-BadgesSelector" class="nav-item class " onclick="goToLocation('BadgesSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">BadgesSelector</a>
+              </li>
+              <li title="DebugLogsSelector" id="item-DebugLogsSelector" class="nav-item class " onclick="goToLocation('DebugLogsSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">DebugLogsSelector</a>
+              </li>
+              <li title="DefaultObjectSelectorsSelector" id="item-DefaultObjectSelectorsSelector" class="nav-item class " onclick="goToLocation('DefaultObjectSelectorsSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">DefaultObjectSelectorsSelector</a>
+              </li>
+              <li title="DefaultServiceImplementationsSelector" id="item-DefaultServiceImplementationsSelector" class="nav-item class " onclick="goToLocation('DefaultServiceImplementationsSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">DefaultServiceImplementationsSelector</a>
+              </li>
+              <li title="MixCategoriesSelector" id="item-MixCategoriesSelector" class="nav-item class " onclick="goToLocation('MixCategoriesSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">MixCategoriesSelector</a>
+              </li>
+              <li title="RecommendedBadgeMixes" id="item-RecommendedBadgeMixes" class="nav-item class " onclick="goToLocation('RecommendedBadgeMixes.html');">
+                <a tabindex="1" href="javascript:void(0)">RecommendedBadgeMixes</a>
+              </li>
+              <li title="RecommendedBadgeMixesSelector" id="item-RecommendedBadgeMixesSelector" class="nav-item class " onclick="goToLocation('RecommendedBadgeMixesSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">RecommendedBadgeMixesSelector</a>
+              </li>
+              <li title="RecommendedBadges" id="item-RecommendedBadges" class="nav-item class " onclick="goToLocation('RecommendedBadges.html');">
+                <a tabindex="1" href="javascript:void(0)">RecommendedBadges</a>
+              </li>
+              <li title="RecommendedBadgesSelector" id="item-RecommendedBadgesSelector" class="nav-item class " onclick="goToLocation('RecommendedBadgesSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">RecommendedBadgesSelector</a>
+              </li>
+              <li title="RecommendedTrails" id="item-RecommendedTrails" class="nav-item class " onclick="goToLocation('RecommendedTrails.html');">
+                <a tabindex="1" href="javascript:void(0)">RecommendedTrails</a>
+              </li>
+              <li title="RecommendedTrailsSelector" id="item-RecommendedTrailsSelector" class="nav-item class " onclick="goToLocation('RecommendedTrailsSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">RecommendedTrailsSelector</a>
+              </li>
+              <li title="SelectorTestErrorMessages" id="item-SelectorTestErrorMessages" class="nav-item class " onclick="goToLocation('SelectorTestErrorMessages.html');">
+                <a tabindex="1" href="javascript:void(0)">SelectorTestErrorMessages</a>
+              </li>
+              <li title="TasksSelector" id="item-TasksSelector" class="nav-item class " onclick="goToLocation('TasksSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">TasksSelector</a>
+              </li>
+              <li title="TestDataFactory" id="item-TestDataFactory" class="nav-item class " onclick="goToLocation('TestDataFactory.html');">
+                <a tabindex="1" href="javascript:void(0)">TestDataFactory</a>
+              </li>
+              <li title="TrailmixesSelector" id="item-TrailmixesSelector" class="nav-item class " onclick="goToLocation('TrailmixesSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">TrailmixesSelector</a>
+              </li>
+              <li title="Trails" id="item-Trails" class="nav-item class " onclick="goToLocation('Trails.html');">
+                <a tabindex="1" href="javascript:void(0)">Trails</a>
+              </li>
+              <li title="TrailsSelector" id="item-TrailsSelector" class="nav-item class " onclick="goToLocation('TrailsSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">TrailsSelector</a>
+              </li>
+              <li title="UserBadgesSelector" id="item-UserBadgesSelector" class="nav-item class " onclick="goToLocation('UserBadgesSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">UserBadgesSelector</a>
+              </li>
+              <li title="StackTraceDMLException" id="item-StackTraceDMLException" class="nav-item class " onclick="goToLocation('StackTraceDMLException.html');">
+                <a tabindex="1" href="javascript:void(0)">StackTraceDMLException</a>
+              </li>
+              <li title="PrivateViewController" id="item-PrivateViewController" class="nav-item class " onclick="goToLocation('PrivateViewController.html');">
+                <a tabindex="1" href="javascript:void(0)">PrivateViewController</a>
+              </li>
+              <li title="RecommendedBadgeMixController" id="item-RecommendedBadgeMixController" class="nav-item class " onclick="goToLocation('RecommendedBadgeMixController.html');">
+                <a tabindex="1" href="javascript:void(0)">RecommendedBadgeMixController</a>
+              </li>
+              <li title="SortCustomMetadataController" id="item-SortCustomMetadataController" class="nav-item class " onclick="goToLocation('SortCustomMetadataController.html');">
+                <a tabindex="1" href="javascript:void(0)">SortCustomMetadataController</a>
+              </li>
+              <li title="SortableFieldValuesSelector" id="item-SortableFieldValuesSelector" class="nav-item class " onclick="goToLocation('SortableFieldValuesSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">SortableFieldValuesSelector</a>
+              </li>
+              <li title="SortableFieldsSelector" id="item-SortableFieldsSelector" class="nav-item class " onclick="goToLocation('SortableFieldsSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">SortableFieldsSelector</a>
+              </li>
+              <li title="TestErrorMessages" id="item-TestErrorMessages" class="nav-item class " onclick="goToLocation('TestErrorMessages.html');">
+                <a tabindex="1" href="javascript:void(0)">TestErrorMessages</a>
+              </li>
+              <li title="AsyncApexJobsSelector" id="item-AsyncApexJobsSelector" class="nav-item class " onclick="goToLocation('AsyncApexJobsSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">AsyncApexJobsSelector</a>
+              </li>
+              <li title="BadgesToKeepSelector" id="item-BadgesToKeepSelector" class="nav-item class " onclick="goToLocation('BadgesToKeepSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">BadgesToKeepSelector</a>
+              </li>
+              <li title="IStorageManagementService" id="item-IStorageManagementService" class="nav-item class " onclick="goToLocation('IStorageManagementService.html');">
+                <a tabindex="1" href="javascript:void(0)">IStorageManagementService</a>
+              </li>
+              <li title="ProductsToDeleteSelector" id="item-ProductsToDeleteSelector" class="nav-item class " onclick="goToLocation('ProductsToDeleteSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">ProductsToDeleteSelector</a>
+              </li>
+              <li title="ScheduledStorageCleanMockProvider" id="item-ScheduledStorageCleanMockProvider" class="nav-item class " onclick="goToLocation('ScheduledStorageCleanMockProvider.html');">
+                <a tabindex="1" href="javascript:void(0)">ScheduledStorageCleanMockProvider</a>
+              </li>
+              <li title="ScheduledStorageCleanMockUtils" id="item-ScheduledStorageCleanMockUtils" class="nav-item class " onclick="goToLocation('ScheduledStorageCleanMockUtils.html');">
+                <a tabindex="1" href="javascript:void(0)">ScheduledStorageCleanMockUtils</a>
+              </li>
+              <li title="StorageManagementService" id="item-StorageManagementService" class="nav-item class " onclick="goToLocation('StorageManagementService.html');">
+                <a tabindex="1" href="javascript:void(0)">StorageManagementService</a>
+              </li>
+              <li title="StorageManagementServiceImplementation" id="item-StorageManagementServiceImplementation" class="nav-item class " onclick="goToLocation('StorageManagementServiceImplementation.html');">
+                <a tabindex="1" href="javascript:void(0)">StorageManagementServiceImplementation</a>
+              </li>
+              <li title="StorageManagementServiceStub" id="item-StorageManagementServiceStub" class="nav-item class " onclick="goToLocation('StorageManagementServiceStub.html');">
+                <a tabindex="1" href="javascript:void(0)">StorageManagementServiceStub</a>
+              </li>
+              <li title="RecommendedBadgeTriggerHandler" id="item-RecommendedBadgeTriggerHandler" class="nav-item class " onclick="goToLocation('RecommendedBadgeTriggerHandler.html');">
+                <a tabindex="1" href="javascript:void(0)">RecommendedBadgeTriggerHandler</a>
+              </li>
+              <li title="RecommendedTrailTriggerHandler" id="item-RecommendedTrailTriggerHandler" class="nav-item class " onclick="goToLocation('RecommendedTrailTriggerHandler.html');">
+                <a tabindex="1" href="javascript:void(0)">RecommendedTrailTriggerHandler</a>
+              </li>
+            </ul>
+          </details>
+          <details id="Triggers" class="group-name">
+            <summary id="header-Triggers" class="nav-header">
+              <span>Triggers</span>
+            </summary>
+            <ul>
+              <!-- menu items -->
+              <li title="RecommendedBadgeMixTriggerHandler" id="item-RecommendedBadgeMixTriggerHandler" class="nav-item class " onclick="goToLocation('RecommendedBadgeMixTriggerHandler.html');">
+                <a tabindex="1" href="javascript:void(0)">RecommendedBadgeMixTriggerHandler</a>
+              </li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+    </div>
+    <table id="content">
+      <tr>
+        <td class="scoping-panel">
+          Show: <input type="checkbox" checked="true" id="cbx-all" onclick="toggleAllScopes(this.checked);" />
+          <label for="cbx-all">All</label>&nbsp;&nbsp;
+          <input type="checkbox" checked="true" id="cbx-global" onclick="toggleScope('global', this.checked);" />
+          <label for="cbx-global">
+            global
+          </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-public" onclick="toggleScope('public', this.checked);" />
+          <label for="cbx-public">
+            public
+          </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-protected" onclick="toggleScope('protected', this.checked);" />
+          <label for="cbx-protected">
+            protected
+          </label>&nbsp;&nbsp;<input type="checkbox" checked="true" id="cbx-webservice" onclick="toggleScope('webservice', this.checked);" />
+          <label for="cbx-webservice">
+            webService
+          </label>
+        </td>
+      </tr>
+      <tr>
+        <td class="doc-page">
+
+          <div class="section">
+
+            <h2 class="class-title top-level-type" id="Application">
+              <span>Application</span>
+            </h2>
+            <div class="class-container">
+
+              <div class="class-description">
+                : Application class for fflib Factory definitions.
+              </div>
+              <div class="class-subtitle">
+                Signature
+              </div>
+
+              <div class="class-signature">
+                public class Application
+              </div>
+              <div class="class-subtitle">
+                Author
+              </div>
+              <div class="class-subtitle-description">
+                : Ben Learn @last modified on : 03-04-2023 @last modified by : Ben Learn
+              </div>
+            </div>
+            <div class="subsection properties Application">
+              <h3 class="subsection-title properties">Application Properties</h3>
+              <table class="attributes-table properties">
+
+                <tr>
+                  <th>Name</th>
+                  <th>Signature</th>
+
+
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>Selector</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public static final fflib_Application.SelectorFactory Selector
+                    </div>
+                  </td>
+
+
+                </tr>
+                <tr class="property ">
+                  <td class="attribute-name"><span>Service</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public static final fflib_Application.ServiceFactory Service
+                    </div>
+                  </td>
+
+
+                </tr>
+              </table>
+            </div>
+          </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="footer">
+
+          <div>
+            <a href="https://github.com/no-stack-dub-sack/apexdox-vs-code" target="_blank" rel="noopener noreferrer">
+              Powered By ApexDox VS Code
+            </a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+
+</html>

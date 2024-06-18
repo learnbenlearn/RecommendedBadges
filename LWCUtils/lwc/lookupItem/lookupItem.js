@@ -8,12 +8,12 @@ export default class LookupItem extends LightningElement {
     @api secondaryFieldValue;
 
     handleItemClick() {
-        let id = this.id.substring(0, this.id.indexOf('-'));
+        let id = this.id.substring(0, this.id.lastIndexOf('-'));
         const itemClickEvent = new CustomEvent('itemclick', {
             bubbles: true,
             detail: {
                 Id: id,
-                Name: this.name
+                Name: this.name,
             }
         });
         this.dispatchEvent(itemClickEvent);
