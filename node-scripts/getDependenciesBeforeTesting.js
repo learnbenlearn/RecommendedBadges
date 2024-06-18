@@ -34,7 +34,7 @@ async function getDependenciesBeforeTesting() {
         let queryConditionIds = Array.from(possibleRequiredPackageVersionIds).map(x => '\'' + x + '\'').join(', ');
 
         const {stdout, stderr} = await exec(
-            `sfdx force:data:soql:query -q "SELECT SubscriberPackageVersionId, Package2Id, Package2.Name FROM Package2Version WHERE SubscriberPackageVersionId IN (${queryConditionIds})" -t -u ${HUB_ALIAS} --json`
+            `sf data query -q "SELECT SubscriberPackageVersionId, Package2Id, Package2.Name FROM Package2Version WHERE SubscriberPackageVersionId IN (${queryConditionIds})" -t -o ${HUB_ALIAS} --json`
         );
         if(stderr) {
             process.stderr.write(`Error in getDependenciesBeforeTesting(): ${stderr}`);
@@ -63,13 +63,13 @@ async function getPackageIdFromDependency(dependency) {
 
     let queryBase = `SELECT SubscriberPackageVersionId FROM Package2Version WHERE Package2Id = '${dependency.package}' AND MajorVersion = ${versionNumber[0]} AND MinorVersion = ${versionNumber[1]} AND PatchVersion = ${versionNumber[2]}`;
     if(dependency.versionNumber.includes('LATEST')) {
-        ({stdout, stderr} = await exec(`sfdx force:data:soql:query -q "${queryBase} ORDER BY BuildNumber DESC LIMIT 1" -u ${HUB_ALIAS} -t --json`));
+        ({stdout, stderr} = await exec(`sf data query -q "${queryBase} ORDER BY BuildNumber DESC LIMIT 1" -o ${HUB_ALIAS} -t --json`));
     } else if(dependency.versionNumber.includes('RELEASED')) {
         ({stdout, stderr} = await exec(
-            `sfdx force:data:soql:query -q "${queryBase} AND IsReleased = true ORDER BY MinorVersion,PatchVersion LIMIT 1" -u ${HUB_ALIAS} -t --json`
+            `sf data query -q "${queryBase} AND IsReleased = true ORDER BY MinorVersion,PatchVersion LIMIT 1" -o ${HUB_ALIAS} -t --json`
         ));
     } else {
-        ({stdout, stderr} = await exec(`sfdx force:data:soql:query -q "${queryBase} AND BuildNumber = ${versionNumber[3]} LIMIT 1" -u ${HUB_ALIAS} -t --json`));
+        ({stdout, stderr} = await exec(`sf data query -q "${queryBase} AND BuildNumber = ${versionNumber[3]} LIMIT 1" -o ${HUB_ALIAS} -t --json`));
     }
 
     if(stderr) {
