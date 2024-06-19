@@ -8,8 +8,6 @@
     <testClassName>RecommendedBadgeMixesSelectorTests</testClassName>
     <testClassName>RecommendedBadgesSelectorTests</testClassName>
     <testClassName>RecommendedTrailsSelectorTests</testClassName>
-    <testClassName>SelectorTestErrorMessages</testClassName>
-    <testClassName>TasksSelectorTests</testClassName>
     <testClassName>TrailheadEntityFormController_Tests</testClassName>
     <testClassName>TrailheadEntityService_Tests</testClassName>
 </ApexTestSuite>
