@@ -23,7 +23,9 @@ standard-home.tab
 AppSwitcher.appMenu
 security.settings
 Recommended_Badge_Mix__c.External_Read_Access_to_Public_Mixes.sharingRules
-#UserInterface/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-meta.xml
+Recommended_Badges_Manager_Permissions.permissionSet
+Recommended_Badges_Manager.permissionSetGroup
+Recommended_Badges_Manager_Muted.mutingPermissionSet
 
 # Ignored Packages
 #Core
@@ -40,4 +42,4 @@ Recommended_Badge_Mix__c.External_Read_Access_to_Public_Mixes.sharingRules
 #UserInterface
 
 # Ignored Folders
-unpackageable
+#unpackageable
