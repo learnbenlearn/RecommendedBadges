@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Custom metadata type to hold URL mappings for Badges, Projects, Superbadges, and Trails from the default https://developer.salesforce.com domain to the https://trailhead.salesforce.com domain.</description>
+    <label>Trailhead Entity URL Mapping</label>
+    <pluralLabel>Trailhead Entity URL Mappings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

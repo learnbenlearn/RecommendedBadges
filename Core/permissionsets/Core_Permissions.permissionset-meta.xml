@@ -20,6 +20,10 @@
         <enabled>true</enabled>
         <name>TrailTrackerProviderObjectMapping__mdt</name>
     </customMetadataTypeAccesses>
+    <customMetadataTypeAccesses>
+        <enabled>true</enabled>
+        <name>TrailheadEntityURLMapping__mdt</name>
+    </customMetadataTypeAccesses>
     <fieldPermissions>
         <editable>true</editable>
         <field>Mix_Category__c.Exam__c</field>

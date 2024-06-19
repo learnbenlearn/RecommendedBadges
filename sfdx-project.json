@@ -5,7 +5,7 @@
       "package": "Core",
       "versionName": "Akron",
       "versionNumber": "2.1.0.NEXT",
-      "default": false,
+      "default": true,
       "dependencies": [
         {
           "package": "fflib",
@@ -36,7 +36,7 @@
     },
     {
       "path": "Triggers",
-      "default": true,
+      "default": false,
       "package": "Triggers",
       "versionName": "Akron",
       "versionNumber": "2.0.0.NEXT",

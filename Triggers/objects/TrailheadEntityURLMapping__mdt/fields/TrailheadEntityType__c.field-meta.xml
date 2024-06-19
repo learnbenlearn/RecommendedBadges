@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TrailheadEntityType__c</fullName>
+    <description>Type of Trailhead Entity for URL mapping.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Trailhead Entity Type</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Module</fullName>
+                <default>true</default>
+                <label>Module</label>
+            </value>
+            <value>
+                <fullName>Project</fullName>
+                <default>false</default>
+                <label>Project</label>
+            </value>
+            <value>
+                <fullName>Superbadge</fullName>
+                <default>false</default>
+                <label>Superbadge</label>
+            </value>
+            <value>
+                <fullName>Trail</fullName>
+                <default>false</default>
+                <label>Trail</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
