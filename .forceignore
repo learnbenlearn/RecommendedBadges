@@ -22,7 +22,7 @@ Admin.profile
 standard-home.tab
 AppSwitcher.appMenu
 security.settings
-#Recommended_Badge_Mix__c.External_Read_Access_to_Public_Mixes.sharingRules
+Recommended_Badge_Mix__c.External_Read_Access_to_Public_Mixes.sharingRules
 #UserInterface/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-meta.xml
 
 # Ignored Packages
