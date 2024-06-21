@@ -4,7 +4,7 @@
  * @last modified on  : 01-22-2023
  * @last modified by  : Ben Learn
 **/
-@isTest
+@isTest(IsParallel=true)
 private class SortableFieldValuesSelectorTests {
     @isTest
     private static void getSObjectFieldList_test() {

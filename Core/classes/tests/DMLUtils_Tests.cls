@@ -1,5 +1,4 @@
-
-@isTest
+@isTest(IsParallel=true)
 private class DMLUtils_Tests {
     @isTest
     private static void it_should_log_insert_failures() {

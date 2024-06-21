@@ -1,4 +1,4 @@
-@isTest
+@isTest(IsParallel=true)
 private class TrailheadEntityFormController_Tests {
     @testSetup
     private static void setupMetadata() {

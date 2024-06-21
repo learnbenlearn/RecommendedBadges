@@ -4,7 +4,7 @@
  * @last modified on  : 01-09-2023
  * @last modified by  : Ben Learn
 **/
-@isTest
+@isTest(IsParallel=true)
 private class SortCustomMetadataControllerTests {
     @isTest
     private static void getSortOptions_test() {
