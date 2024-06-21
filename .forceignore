@@ -25,18 +25,17 @@ standard-home.tab
 
 ## Temp Ignored
 #home_page_default.flexipage
-**layout**
 
 # Ignored Packages
 #Core
 fflib
-#LWCErrorHandler
+LWCErrorHandler
 LWCUtils
-#PrivateMixView
-#RecommendedBadgeMix
-#SortCustomMetadata
-#StorageManagement
-#Triggers
+PrivateMixView
+RecommendedBadgeMix
+SortCustomMetadata
+StorageManagement
+Triggers
 UserInterface
 
 # Ignored Folders
