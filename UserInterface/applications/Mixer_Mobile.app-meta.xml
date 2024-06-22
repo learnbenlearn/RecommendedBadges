@@ -13,6 +13,9 @@
     <label>Mixer Mobile</label>
     <navType>Standard</navType>
     <tabs>Private_View</tabs>
+    <tabs>Recommended_Badge_Mix__c</tabs>
+    <tabs>Mix_Category__c</tabs>
+    <tabs>standard-report</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Mixer_Mobile_UtilityBar</utilityBar>
 </CustomApplication>

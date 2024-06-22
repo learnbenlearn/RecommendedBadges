@@ -295,26 +295,15 @@
     "PrivateMixView": "0Ho8c000000sY9SCAU",
     "fflib": "0Ho8c000000k9kfCAA",
     "LWCErrorHandler": "0Ho8c000000sYAzCAM",
-    "LWCUtils@1.22.0-1": "04t8c000000qYNnAAM",
-    "fflib@1.10.0-1": "04t8c000000qYNsAAM",
-    "LWCErrorHandler@1.6.0-1": "04t8c000000qYNxAAM",
     "fflib@1.11.0-1": "04t8c000000vG2PAAU",
-    "LWCErrorHandler@1.7.0-1": "04t8c000000vG2UAAU",
     "LWCUtils@1.24.0-1": "04t8c000000vG6gAAE",
-    "Core@2.1.0-1": "04t8c000000vG6qAAE",
-    "Triggers@2.0.0-1": "04t8c000000vG70AAE",
-    "StorageManagement@1.17.0-2": "04t8c000000vG7AAAU",
-    "SortCustomMetadata@1.10.0-1": "04t8c000000vG7FAAU",
-    "PrivateMixView@1.13.0-1": "04t8c000000vG7KAAU",
-    "RecommendedBadgeMix@1.17.0-1": "04t8c000000vG7UAAU",
-    "UserInterface@1.15.0-3": "04t8c000000vG7jAAE",
     "LWCErrorHandler@1.8.0-1": "04t8c000000vG7oAAE",
     "Core@2.2.0-1": "04t8c000000vG7tAAE",
     "Triggers@2.1.0-1": "04t8c000000vG83AAE",
     "StorageManagement@1.18.0-1": "04t8c000000vG88AAE",
-    "SortCustomMetadata@1.10.0-2": "04t8c000000vG8DAAU",
     "SortCustomMetadata@1.11.0-1": "04t8c000000vG8IAAU",
     "PrivateMixView@1.14.0-1": "04t8c000000vG8NAAU",
-    "RecommendedBadgeMix@1.18.0-1": "04t8c000000vG8SAAU"
+    "RecommendedBadgeMix@1.18.0-1": "04t8c000000vG8SAAU",
+    "UserInterface@1.16.0-1": "04t8c000000vG8XAAU"
   }
 }
