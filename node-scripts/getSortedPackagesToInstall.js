@@ -12,7 +12,7 @@ async function getLatestPackageVersionIds() {
     for(let packageDirectory of PACKAGE_DIRECTORIES) {
         if(packageDirectory.package) {
             const {stdout, stderr} = await exec(
-                `sfdx force:data:soql:query -q "SELECT SubscriberPackageVersionId FROM Package2Version WHERE Package2.Name='${packageDirectory.package}' ORDER BY MajorVersion DESC, MinorVersion DESC, PatchVersion DESC, BuildNumber DESC LIMIT 1" -t -u ${HUB_ALIAS} --json`
+                `sf data query -q "SELECT SubscriberPackageVersionId FROM Package2Version WHERE Package2.Name='${packageDirectory.package}' ORDER BY MajorVersion DESC, MinorVersion DESC, PatchVersion DESC, BuildNumber DESC LIMIT 1" -t -o ${HUB_ALIAS} --json`
             );
             if(stderr) {
                 process.stderr.write(`Error in getLatestPackageVersionIds(): ${stderr}`);

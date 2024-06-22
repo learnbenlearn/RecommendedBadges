@@ -9,7 +9,6 @@
     <permissionSets>Shortcuts</permissionSets>
     <permissionSets>Sort_Custom_Metadata_Permissions</permissionSets>
     <permissionSets>Storage_Management_Permissions</permissionSets>
-    <permissionSets>Task_List_Permissions</permissionSets>
     <permissionSets>User_Interface_Permissions</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>

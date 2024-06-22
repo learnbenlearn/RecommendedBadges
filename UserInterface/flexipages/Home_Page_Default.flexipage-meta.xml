@@ -88,14 +88,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>taskList</componentName>
-                <identifier>c_taskList1</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>storageManagementContainer</componentName>
-                <identifier>c_storageManagementContainer1</identifier>
+                <componentName>storageLimits</componentName>
+                <identifier>c_storageLimits</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-40a933e6-f2ad-4934-b977-4bf695b7cd09</name>

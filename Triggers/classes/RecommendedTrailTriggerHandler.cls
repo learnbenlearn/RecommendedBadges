@@ -11,7 +11,15 @@ public without sharing class RecommendedTrailTriggerHandler extends TriggerHandl
         super();
     }
 
+    protected override void beforeInsert(List<sObject> newRecords) {
+        RecommendedBadgeTrailTriggerHelper.updateURLPaths(Recommended_Trail__c.getSObjectType(), newRecords, null);
+    }
+
     protected override void afterInsert(Map<Id, sObject> newRecordsMap) {
-        RecommendedBadgeTrailTriggerHelper.queueTrailTrackerProviderCallouts(Recommended_Badge__c.getSObjectType(), newRecordsMap);
+        RecommendedBadgeTrailTriggerHelper.queueTrailTrackerProviderCallouts(Recommended_Trail__c.getSObjectType(), newRecordsMap);
+    }
+
+    protected override void beforeUpdate(Map<Id, SObject> updatedRecordsMap, Map<Id, SObject> oldRecordsMap) {
+        RecommendedBadgeTrailTriggerHelper.updateURLPaths(Recommended_Trail__c.getSObjectType(), updatedRecordsMap.values(), oldRecordsMap);
     }
 }

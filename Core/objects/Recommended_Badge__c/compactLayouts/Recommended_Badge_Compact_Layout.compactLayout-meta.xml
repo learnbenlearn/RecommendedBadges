@@ -8,6 +8,5 @@
     <fields>Time_Estimate__c</fields>
     <fields>Level__c</fields>
     <fields>Type__c</fields>
-    <fields>Saved_by_CMT__c</fields>
     <label>Recommended Badge Compact Layout</label>
 </CompactLayout>

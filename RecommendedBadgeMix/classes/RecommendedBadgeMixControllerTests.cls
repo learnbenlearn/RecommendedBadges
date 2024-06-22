@@ -4,7 +4,7 @@
  * @last modified on  : 02-20-2023
  * @last modified by  : Ben Learn
 **/
-@isTest
+@isTest(IsParallel=true)
 private class RecommendedBadgeMixControllerTests {
     private static Map<String, List<Mix_Category__c>> generateData(Boolean includeDefaultMix){
         TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 10, includeDefaultMix, true);

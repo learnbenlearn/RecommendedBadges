@@ -12,6 +12,7 @@ public without sharing class RecommendedBadgeTriggerHandler extends TriggerHandl
     }
 
     protected override void beforeInsert(List<sObject> newRecords) {
+        RecommendedBadgeTrailTriggerHelper.updateURLPaths(Recommended_Badge__c.getSObjectType(), newRecords, null);
         populateBadgeMixKeys((List<Recommended_Badge__c>) newRecords, null);
     }
 
@@ -20,6 +21,7 @@ public without sharing class RecommendedBadgeTriggerHandler extends TriggerHandl
     }
 
     protected override void beforeUpdate(Map<Id, sObject> updatedRecordsMap, Map<Id, sObject> oldRecordsMap) {
+        RecommendedBadgeTrailTriggerHelper.updateURLPaths(Recommended_Badge__c.getSObjectType(), updatedRecordsMap.values(), oldRecordsMap);
         populateBadgeMixKeys((List<Recommended_Badge__c>) updatedRecordsMap.values(), (Map<Id, Recommended_Badge__c>) oldRecordsMap);
     }
 

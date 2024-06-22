@@ -1,7 +1,8 @@
 @isTest
 private class RecommendedBadgeTrigger_Tests {
     @testSetup
-    private static void generateData(){TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 1, false, true);
+    private static void generateData(){
+        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 1, false, true);
         List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = recommendedBadgeMixGenerator.execute();
 
         TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, false, 1, testRecommendedBadgeMixes);
@@ -259,10 +260,7 @@ private class RecommendedBadgeTrigger_Tests {
         List<AsyncApexJob> queuedJobs = [SELECT Id FROM AsyncApexJob WHERE ApexClass.Name = 'QueueableTrailTrackerProviderCallout' AND JobType = 'Queueable' AND Status = 'Queued'];
         Assert.areEqual(badgeGenerator.records.size(), queuedJobs.size(), 'Expected one queued Trail Tracker Provider callout per Recommended Badge.');
 
-        // cleanup
-        for(AsyncApexJob queuedJob : queuedJobs) {
-            System.abortJob(queuedJob.Id);
-        }
+        cleanup(queuedJobs, false);
         Test.stopTest();
     }
 
@@ -304,12 +302,110 @@ private class RecommendedBadgeTrigger_Tests {
             numPublishedRecordEvents, 
             'Expected the number of published NewRecommendedBadgeTrailEvent__e events to equal the number of Recommended Badges minus the Apex governor limit on queued jobs.'
         );
-
-        // cleanup
-        for(AsyncApexJob queuedJob : queuedJobs) {
-            System.abortJob(queuedJob.Id);
-        }
-        Test.getEventBus().fail();
+        
+        cleanup(queuedJobs, true);
         Test.stopTest();
+    }
+
+    @isTest
+    private static void it_should_update_urls_for_new_badges() {
+        Integer numberToGenerate = 50;
+        RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
+            new Map<String, Object> {
+                'generateMasterRecords' => false,
+                'generateRecordIDs' => false,
+                'generatorReturnValue' => 'all',
+                'numberToGenerate' => numberToGenerate
+            },
+            new List<TestSupport.TestDataField>{
+                new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, sObject>([SELECT Id FROM Mix_Category__c])).keySet()),
+                new TestSupport.TestDataField(Recommended_Badge__c.Type__c, 'Module'),
+                new CounterSuffixField(Recommended_Badge__c.URL__c, RecommendedBadgeTrailTriggerHelper.TRAILHEAD_URL_MAPPINGS.get('Module').defaultPath + '/Test_Badge_')
+            }
+        );
+        badgeGenerator.generate();
+        badgeGenerator.setFieldSpec(new TestSupport.TestDataField(Recommended_Badge__c.URL__c, '')).generate();
+        badgeGenerator.setFieldSpecs(new List<TestSupport.TestDataField>{
+            new CounterSuffixField(Recommended_Badge__c.BadgeAPIName__c, 'Test_Project_'),
+            new TestSupport.TestDataField(Recommended_Badge__c.Type__c, 'Project'),
+            new CounterSuffixField(Recommended_Badge__c.URL__c, RecommendedBadgeTrailTriggerHelper.TRAILHEAD_URL_MAPPINGS.get('Project').defaultPath + '/Test_Project_')
+        }).generate();
+        List<Recommended_Badge__c> testBadges = (List<Recommended_Badge__c>) badgeGenerator.setFieldSpecs(new List<TestSupport.TestDataField>{
+            new CounterSuffixField(Recommended_Badge__c.BadgeAPIName__c, 'Test_Superbadge_'),
+            new TestSupport.TestDataField(Recommended_Badge__c.Type__c, 'Superbadge'),
+            new CounterSuffixField(Recommended_Badge__c.URL__c, RecommendedBadgeTrailTriggerHelper.TRAILHEAD_URL_MAPPINGS.get('Superbadge').defaultPath + '/Test_Superbadge_')
+        }).generate();
+
+        Test.startTest();
+        insert testBadges;
+        Test.stopTest();
+
+        testBadges = [SELECT Id, BadgeAPIName__c, Type__c, URL__c FROM Recommended_Badge__c];
+        Integer numNullURLs = 0;
+        for(Recommended_Badge__c badge : testBadges) {
+            if(badge.URL__c == null) {
+                numNullURLs++;
+            } else {
+                Assert.areEqual(
+                    RecommendedBadgeTrailTriggerHelper.TRAILHEAD_URL_MAPPINGS.get(badge.Type__c).trailheadPath + '/' + badge.BadgeAPIName__c,
+                    badge.URL__c,
+                    'Expected URL to be updated to Trailhead path from default path.'
+                );
+            }
+        }
+        Assert.areEqual(numberToGenerate, numNullURLs, 'Expected null URL to be unchanged by RecommendedBadgeTrailTriggerHelper.updateURLPaths().');
+    }
+
+    @isTest
+    private static void it_should_update_urls_for_updated_badges() {
+        String testURL = 'www.test.com';
+        List<Recommended_Badge__c> testBadges = (List<Recommended_Badge__c>) new RecommendedBadgeTS(
+            new Map<String, Object> {
+                'generateMasterRecords' => false,
+                'generateRecordIDs' => false
+            },
+            new List<TestSupport.TestDataField>{
+                new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, sObject>([SELECT Id FROM Mix_Category__c])).keySet()),
+                new TestSupport.TestDataField(Recommended_Badge__c.URL__c, testURL)
+            }
+        ).generate();
+        insert testBadges;
+
+        Integer counter = 0;
+        for(Recommended_Badge__c badge : testBadges) {
+            if(counter < 150) {
+                badge.URL__c = RecommendedBadgeTrailTriggerHelper.TRAILHEAD_URL_MAPPINGS.get(badge.Type__c).defaultPath + '/' + badge.BadgeAPIName__c;
+                counter++;
+            }
+            badge.Description__c = 'Updated description.';
+        }
+
+        Test.startTest();
+        update testBadges;
+        Test.stopTest();
+
+        testBadges = [SELECT Id, BadgeAPIName__c, Type__c, URL__c FROM Recommended_Badge__c];
+        Integer numUnchangedURLs = 0;
+        for(Recommended_Badge__c badge : testBadges) {
+            if(badge.URL__c == testURL) {
+                numUnchangedURLs++;
+            } else {
+                Assert.areEqual(
+                    RecommendedBadgeTrailTriggerHelper.TRAILHEAD_URL_MAPPINGS.get(badge.Type__c).trailheadPath + '/' + badge.BadgeAPIName__c,
+                    badge.URL__c,
+                    'Expected URL to be updated to Trailhead path from default path.'
+                );
+            }
+        }
+        Assert.areEqual(50, numUnchangedURLs, 'Expected unchanged URL to be unchanged by RecommendedBadgeTrailTriggerHelper.updateURLPaths().');
+    }
+
+    private static void cleanup(List<AsyncApexJob> jobs, Boolean failEventDelivery) {
+        if(failEventDelivery) {
+            Test.getEventBus().fail();
+        }
+        for(AsyncApexJob job : jobs) {
+            System.abortJob(job.Id);
+        }
     }
 }

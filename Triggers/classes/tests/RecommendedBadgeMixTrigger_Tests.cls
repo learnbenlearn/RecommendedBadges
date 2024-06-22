@@ -1,4 +1,4 @@
-@isTest
+@isTest(IsParallel=true)
 private class RecommendedBadgeMixTrigger_Tests {
     private static String NO_EXCEPTION_EXPECTED_MESSAGE = 'No exception expected.';
 

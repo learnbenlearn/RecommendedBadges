@@ -4,8 +4,8 @@
       "path": "Core",
       "package": "Core",
       "versionName": "Akron",
-      "versionNumber": "2.1.0.NEXT",
-      "default": false,
+      "versionNumber": "2.2.0.NEXT",
+      "default": true,
       "dependencies": [
         {
           "package": "fflib",
@@ -16,7 +16,7 @@
         },
         {
           "package": "LWCErrorHandler",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.8.0.LATEST"
         },
         {
           "package": "TestSupport"
@@ -24,37 +24,6 @@
         {
           "package": "LWCUtils",
           "versionNumber": "1.24.0.LATEST"
-        }
-      ]
-    },
-    {
-      "path": "TaskList",
-      "default": false,
-      "package": "TaskList",
-      "versionName": "Akron",
-      "versionNumber": "1.22.0.NEXT",
-      "dependencies": [
-        {
-          "package": "fflib",
-          "versionNumber": "1.11.0.LATEST"
-        },
-        {
-          "package": "NebulaLogger"
-        },
-        {
-          "package": "TestSupport"
-        },
-        {
-          "package": "LWCUtils",
-          "versionNumber": "1.24.0.LATEST"
-        },
-        {
-          "package": "LWCErrorHandler",
-          "versionNumber": "1.7.0.LATEST"
-        },
-        {
-          "package": "Core",
-          "versionNumber": "2.1.0.LATEST"
         }
       ]
     },
@@ -67,10 +36,10 @@
     },
     {
       "path": "Triggers",
-      "default": true,
+      "default": false,
       "package": "Triggers",
       "versionName": "Akron",
-      "versionNumber": "2.0.0.NEXT",
+      "versionNumber": "2.1.0.NEXT",
       "dependencies": [
         {
           "package": "fflib",
@@ -87,7 +56,7 @@
         },
         {
           "package": "LWCErrorHandler",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.8.0.LATEST"
         },
         {
           "package": "LWCUtils",
@@ -95,7 +64,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.1.0.LATEST"
+          "versionNumber": "2.2.0.LATEST"
         }
       ]
     },
@@ -104,7 +73,7 @@
       "default": false,
       "package": "StorageManagement",
       "versionName": "Akron",
-      "versionNumber": "1.17.0.NEXT",
+      "versionNumber": "1.18.0.NEXT",
       "dependencies": [
         {
           "package": "NebulaLogger"
@@ -122,11 +91,11 @@
         },
         {
           "package": "LWCErrorHandler",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.8.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "2.1.0.LATEST"
+          "versionNumber": "2.2.0.LATEST"
         }
       ]
     },
@@ -135,7 +104,7 @@
       "default": false,
       "package": "RecommendedBadgeMix",
       "versionName": "Akron",
-      "versionNumber": "1.17.0.NEXT",
+      "versionNumber": "1.18.0.NEXT",
       "dependencies": [
         {
           "package": "TestSupport"
@@ -149,7 +118,7 @@
         },
         {
           "package": "LWCErrorHandler",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.8.0.LATEST"
         },
         {
           "package": "LWCUtils",
@@ -157,11 +126,11 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.1.0.LATEST"
+          "versionNumber": "2.2.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.10.0.LATEST"
+          "versionNumber": "1.11.0.LATEST"
         }
       ]
     },
@@ -170,7 +139,7 @@
       "default": false,
       "package": "UserInterface",
       "versionName": "Akron",
-      "versionNumber": "1.15.0.NEXT",
+      "versionNumber": "1.16.0.NEXT",
       "dependencies": [
         {
           "package": "NebulaLogger"
@@ -191,31 +160,27 @@
         },
         {
           "package": "LWCErrorHandler",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.8.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "2.1.0.LATEST"
+          "versionNumber": "2.2.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.10.0.LATEST"
+          "versionNumber": "1.11.0.LATEST"
         },
         {
           "package": "PrivateMixView",
-          "versionNumber": "1.13.0.LATEST"
+          "versionNumber": "1.14.0.LATEST"
         },
         {
           "package": "StorageManagement",
-          "versionNumber": "1.17.0.LATEST"
+          "versionNumber": "1.18.0.LATEST"
         },
         {
           "package": "RecommendedBadgeMix",
-          "versionNumber": "1.17.0.LATEST"
-        },
-        {
-          "package": "TaskList",
-          "versionNumber": "1.22.0.LATEST"
+          "versionNumber": "1.18.0.LATEST"
         }
       ]
     },
@@ -224,7 +189,7 @@
       "default": false,
       "package": "SortCustomMetadata",
       "versionName": "Akron",
-      "versionNumber": "1.10.0.NEXT",
+      "versionNumber": "1.11.0.NEXT",
       "dependencies": [
         {
           "package": "NebulaLogger"
@@ -238,7 +203,7 @@
         },
         {
           "package": "LWCErrorHandler",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.8.0.LATEST"
         },
         {
           "package": "LWCUtils",
@@ -246,7 +211,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.1.0.LATEST"
+          "versionNumber": "2.2.0.LATEST"
         }
       ]
     },
@@ -265,7 +230,7 @@
       "path": "PrivateMixView",
       "package": "PrivateMixView",
       "versionName": "Akron",
-      "versionNumber": "1.13.0.NEXT",
+      "versionNumber": "1.14.0.NEXT",
       "default": false,
       "versionDescription": "Package containing classes, LWCs, and Lightning pages for the private view portion of the Recommended Badges app.",
       "dependencies": [
@@ -281,7 +246,7 @@
         },
         {
           "package": "LWCErrorHandler",
-          "versionNumber": "1.7.0.LATEST"
+          "versionNumber": "1.8.0.LATEST"
         },
         {
           "package": "LWCUtils",
@@ -289,11 +254,11 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.1.0.LATEST"
+          "versionNumber": "2.2.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.10.0.LATEST"
+          "versionNumber": "1.11.0.LATEST"
         }
       ]
     },
@@ -301,7 +266,7 @@
       "path": "LWCErrorHandler",
       "package": "LWCErrorHandler",
       "default": false,
-      "versionNumber": "1.7.0.NEXT",
+      "versionNumber": "1.8.0.NEXT",
       "versionName": "Akron",
       "versionDescription": "Package containing generic LWC error handler that makes use of Nebula Logger.",
       "dependencies": [
@@ -309,14 +274,6 @@
           "package": "NebulaLogger"
         }
       ]
-    },
-    {
-      "path": "SFXOrgSubscriber",
-      "package": "SFXOrgSubscriber",
-      "versionName": "Akron",
-      "versionNumber": "1.0.0.NEXT",
-      "default": false,
-      "versionDescription": "Unlocked package holding authentication provider, external data source, and permission set to subscribe to the Trail Tracker Provider org."
     }
   ],
   "name": "RecommendedBadges",
@@ -327,10 +284,8 @@
     "NebulaLogger": "04t5Y0000027L98QAE",
     "Shortcuts": "04t8c000000yXMAAA2",
     "TestSupport": "04t8c000000vG3cAAE",
-    "TrailTracker": "04t1Q000001ACOnQAO",
     "TriggerHandler": "04t8b000000jtsMAAQ",
     "Core": "0Ho8c000000fxx5CAA",
-    "TaskList": "0Ho8c000000fy1NCAQ",
     "LWCUtils": "0Ho8c000000fy64CAA",
     "Triggers": "0Ho8c000000fy69CAA",
     "StorageManagement": "0Ho8c000000fy6ECAQ",
@@ -340,41 +295,15 @@
     "PrivateMixView": "0Ho8c000000sY9SCAU",
     "fflib": "0Ho8c000000k9kfCAA",
     "LWCErrorHandler": "0Ho8c000000sYAzCAM",
-    "SFXOrgSubscriber": "0Ho8c000000sYCMCA2",
-    "LWCUtils@1.22.0-1": "04t8c000000qYNnAAM",
-    "fflib@1.10.0-1": "04t8c000000qYNsAAM",
-    "LWCErrorHandler@1.6.0-1": "04t8c000000qYNxAAM",
-    "SFXOrgSubscriber@1.1.0-1": "04t8c000000qYO2AAM",
-    "Core@1.21.0-1": "04t8c000000qYO7AAM",
-    "TaskList@1.20.0-1": "04t8c000000qYOCAA2",
-    "Triggers@1.17.0-1": "04t8c000000qYOHAA2",
-    "StorageManagement@1.15.0-1": "04t8c000000qYOMAA2",
-    "SortCustomMetadata@1.8.0-1": "04t8c000000qYORAA2",
-    "RecommendedBadgeMix@1.13.0-1": "04t8c000000qYObAAM",
-    "PrivateMixView@1.11.0-1": "04t8c000000qYOgAAM",
-    "UserInterface@1.11.0-1": "04t8c000000qYOlAAM",
-    "LWCUtils@1.23.0-1": "04t8c000000vG2KAAU",
     "fflib@1.11.0-1": "04t8c000000vG2PAAU",
-    "LWCErrorHandler@1.7.0-1": "04t8c000000vG2UAAU",
-    "Core@1.22.0-1": "04t8c000000vG2ZAAU",
-    "TaskList@1.21.0-1": "04t8c000000vG2eAAE",
-    "Triggers@1.18.0-1": "04t8c000000vG2jAAE",
-    "StorageManagement@1.16.0-1": "04t8c000000vG2oAAE",
-    "SortCustomMetadata@1.9.0-1": "04t8c000000vG2tAAE",
-    "PrivateMixView@1.12.0-1": "04t8c000000vG33AAE",
-    "UserInterface@1.12.0-1": "04t8c000000vG38AAE",
-    "RecommendedBadgeMix@1.15.0-1": "04t8c000000vG3DAAU",
-    "UserInterface@1.13.0-1": "04t8c000000vG3IAAU",
-    "RecommendedBadgeMix@1.16.0-1": "04t8c000000vG3NAAU",
-    "UserInterface@1.14.0-1": "04t8c000000vG3SAAU",
     "LWCUtils@1.24.0-1": "04t8c000000vG6gAAE",
-    "Core@2.1.0-1": "04t8c000000vG6qAAE",
-    "TaskList@1.22.0-1": "04t8c000000vG6vAAE",
-    "Triggers@2.0.0-1": "04t8c000000vG70AAE",
-    "StorageManagement@1.17.0-2": "04t8c000000vG7AAAU",
-    "SortCustomMetadata@1.10.0-1": "04t8c000000vG7FAAU",
-    "PrivateMixView@1.13.0-1": "04t8c000000vG7KAAU",
-    "RecommendedBadgeMix@1.17.0-1": "04t8c000000vG7UAAU",
-    "UserInterface@1.15.0-3": "04t8c000000vG7jAAE"
+    "LWCErrorHandler@1.8.0-1": "04t8c000000vG7oAAE",
+    "Core@2.2.0-1": "04t8c000000vG7tAAE",
+    "Triggers@2.1.0-1": "04t8c000000vG83AAE",
+    "StorageManagement@1.18.0-1": "04t8c000000vG88AAE",
+    "SortCustomMetadata@1.11.0-1": "04t8c000000vG8IAAU",
+    "PrivateMixView@1.14.0-1": "04t8c000000vG8NAAU",
+    "RecommendedBadgeMix@1.18.0-1": "04t8c000000vG8SAAU",
+    "UserInterface@1.16.0-1": "04t8c000000vG8XAAU"
   }
 }

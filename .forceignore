@@ -11,32 +11,31 @@ package.xml
 **/__tests__/**
 
 Admin.profile
-**.fieldRestrictionRule*
-
-## Temp Ignored
+**/fieldRestrictionRules/**
+standard-home.tab
+**AppSwitcher.appMenu**
+**Recommended_Badge_Mix__c.sharingRules**
+**Recommended_Badges_Manager_Permissions.permissionSet**
+**Recommended_Badges_Manager.permissionSetGroup**
+**Recommended_Badges_Manager_Muted.mutingPermissionSet**
 **/CrisisCenter_UtilityBar.flexipage-meta.xml
 **/ContactCenter_UtilityBar.flexipage-meta.xml
 **/LightningSalesConsole_UtilityBar.flexipage-meta.xml
 **/LightningService_UtilityBar.flexipage-meta.xml
-home_page_default.flexipage
-standard-home.tab
-AppSwitcher.appMenu
-security.settings
-#Recommended_Badge_Mix__c.External_Read_Access_to_Public_Mixes.sharingRules
-#UserInterface/permissionsetgroups/Recommended_Badges_Admin.permissionsetgroup-meta.xml
+
+## Temp Ignored
+#home_page_default.flexipage
 
 # Ignored Packages
-Core
+#Core
 fflib
+#LWCErrorHandler
 LWCUtils
-LWCErrorHandler
-PrivateMixView
-RecommendedBadgeMix
-SFXOrgSubscriber
-SortCustomMetadata
+#PrivateMixView
+#RecommendedBadgeMix
+#SortCustomMetadata
 #StorageManagement
-TaskList
-Triggers
+#Triggers
 #UserInterface
 
 # Ignored Folders

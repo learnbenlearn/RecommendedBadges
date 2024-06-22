@@ -4,7 +4,7 @@
  * @last modified on  : 02-20-2023
  * @last modified by  : Ben Learn
 **/
-@isTest
+@isTest(IsParallel=true)
 private class RecommendedBadgesSelectorTests {
     @isTest
     private static void getSObjectFieldList_test() {

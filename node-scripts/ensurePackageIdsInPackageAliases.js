@@ -16,7 +16,7 @@ async function ensurePackageIdsInPackageAliases() {
     if(packagesToQuery.length > 0) {
         let queryConditionNames = packagesToQuery.map(x => '\'' + x + '\'').join(', ');
         const {stdout, stderr} = await exec(
-            `sfdx force:data:soql:query -q "SELECT Id, Name FROM Package2 WHERE Name IN (${queryConditionNames})" -u ${HUB_ALIAS} -t --json`
+            `sf data query -q "SELECT Id, Name FROM Package2 WHERE Name IN (${queryConditionNames})" -o ${HUB_ALIAS} -t --json`
         );
         if(stderr) {
             process.stderr.write(`Error in ensurePackageIdsInPackageAliases(): ${stderr}`);

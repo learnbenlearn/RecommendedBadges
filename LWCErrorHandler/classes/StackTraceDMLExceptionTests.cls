@@ -4,7 +4,7 @@
  * @last modified on  : 01-06-2023
  * @last modified by  : Ben Learn
 **/
-@isTest
+@isTest(IsParallel=true)
 private class StackTraceDMLExceptionTests {
     @isTest
     private static void stackTraceDMLException_test() {

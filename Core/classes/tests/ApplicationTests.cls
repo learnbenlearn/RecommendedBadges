@@ -4,7 +4,7 @@
  * @last modified on  : 01-08-2023
  * @last modified by  : Ben Learn
 **/
-@isTest
+@isTest(IsParallel=true)
 private class ApplicationTests {
     @isTest
     private static void getVariables() {

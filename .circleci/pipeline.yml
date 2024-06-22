@@ -53,7 +53,7 @@ jobs:
           command: |
             export PATH=~/sfdx/bin:$PATH
             echo "export PATH=~/sfdx/bin:$PATH" >> $BASH_ENV
-            sfdx
+            sf
       - run:
           name: Decrypt Server Key
           command: |
@@ -84,7 +84,7 @@ jobs:
                   packagesToUpdate+=$( (npm run --silent getSortedPackagesToUpdate) )
                   echo $packagesToUpdate
                   for packageToUpdate in ${packagesToUpdate[@]};
-                      do sfdx package version create -p $packageToUpdate -x -w $WAIT_TIME --skip-validation
+                      do sf package version create -p $packageToUpdate -x -w $WAIT_TIME --skip-validation
                   done
       - run:
           name: Create Scratch Org for Running Tests
@@ -102,7 +102,7 @@ jobs:
             packagesToInstall+=$( (npm run --silent getDependenciesBeforeTesting) )
             echo $packagesToInstall
             for packageToInstall in ${packagesToInstall[@]};
-                do sfdx package install -p $packageToInstall -o $TEST_ORG_ALIAS -r -w $WAIT_TIME
+                do sf package install -p $packageToInstall -o $TEST_ORG_ALIAS -r -w $WAIT_TIME
             done
       - when:
             condition:
@@ -112,7 +112,7 @@ jobs:
                   name: Push Source to Scratch Org
                   command: |
                     npm run --silent updateForceIgnore
-                    sfdx force:source:push -u $TEST_ORG_ALIAS
+                    sf project deploy start -o $TEST_ORG_ALIAS
       - when:
             condition:
               equal: [ true, << pipeline.parameters.create-packages >> ]
@@ -123,18 +123,18 @@ jobs:
                     packagesToInstall=()
                     packagesToInstall+=$( (npm run --silent getSortedPackagesToInstall) )
                     for packageToInstall in ${packagesToInstall[@]};
-                      do sfdx package install -p $packageToInstall -o $TEST_ORG_ALIAS -r -w $WAIT_TIME
+                      do sf package install -p $packageToInstall -o $TEST_ORG_ALIAS -r -w $WAIT_TIME
                     done
       - run:
           name: Run Tests in Scratch Org
           command: |
             mkdir -p /tmp/artifacts
-            sfdx force:apex:test:run -l $TEST_LEVEL -u $TEST_ORG_ALIAS -c -d /tmp/artifacts -r json -y -w $WAIT_TIME
+            sf apex run test -l $TEST_LEVEL -o $TEST_ORG_ALIAS -c -d /tmp/artifacts -r json -w $WAIT_TIME
       - store_artifacts:
           path: /tmp/artifacts
       - run:
           name: Delete Testing Scratch Org
-          command: sfdx force:org:delete -u $TEST_ORG_ALIAS -p
+          command: sf org delete scratch -o $TEST_ORG_ALIAS -p
       - when:
             condition:
               equal: [ true, << pipeline.parameters.create-packages >> ]

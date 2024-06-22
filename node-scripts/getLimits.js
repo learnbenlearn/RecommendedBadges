@@ -9,7 +9,7 @@ const PACKAGE_VERSION_NO_VALIDATION_LIMIT = 'Package2VersionCreatesWithoutValida
 
 async function getLimits() {
     try {
-        const {stdout, stderr} = await exec(`sfdx force:limits:api:display -u ${process.env.HUB_ALIAS} --json`);
+        const {stdout, stderr} = await exec(`sf org list limits -o ${process.env.HUB_ALIAS} --json`);
         if(stderr) {
             process.stderr.write(`Error in getLimits(): ${stderr}`);
             process.exit(1);

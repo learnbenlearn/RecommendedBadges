@@ -16,7 +16,7 @@ async function getPackageNameFromDependency(dependentPackage) {
         return alias.slice(0, alias.indexOf(PACKAGE_ALIAS_DELIMITER));
     } else if(dependentPackage.package.startsWith(PACKAGE_VERSION_ID_PREFIX)) {
         const {stderr, stdout} = await exec(
-            `sfdx force:data:soql:query -q "SELECT Package2Id FROM Package2Version WHERE SubscriberPackageVersionId='${dependentPackage.package}'" -t -u ${HUB_ALIAS} --json`
+            `sf data query -q "SELECT Package2Id FROM Package2Version WHERE SubscriberPackageVersionId='${dependentPackage.package}'" -t -o ${HUB_ALIAS} --json`
         );
         if(stderr) {
             process.stderr.write(`Error in getPackageNameFromDependency(): ${stderr}`);

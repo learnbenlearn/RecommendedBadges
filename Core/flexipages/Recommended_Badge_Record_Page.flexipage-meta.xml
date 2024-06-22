@@ -102,16 +102,6 @@
                 <identifier>RecordHigh_Priority_cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Saved_by_CMT__c</fieldItem>
-                <identifier>RecordSaved_by_CMT_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-dea88db6-cef8-4b4a-999d-03c06c91f487</name>
         <type>Facet</type>
     </flexiPageRegions>

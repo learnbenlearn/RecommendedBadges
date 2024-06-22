@@ -1,4 +1,4 @@
-@isTest
+@isTest(IsParallel=true)
 private class StorageLimitsController_Tests {
     @isTest
     private static void it_should_return_storage_limits() {

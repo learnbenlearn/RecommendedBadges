@@ -23,7 +23,6 @@ public class Application {
         selectorsBySObject.put(Recommended_Badge_Mix__c.sObjectType, RecommendedBadgeMixesSelector.class);
         selectorsBySObject.put(Recommended_Badge__c.sObjectType, RecommendedBadgesSelector.class);
         selectorsBySObject.put(Recommended_Trail__c.sObjectType, RecommendedTrailsSelector.class);
-        selectorsBySObject.put(Task.sObjectType, TasksSelector.class);
 
         List<DefaultObjectSelector__mdt> defaultObjectSelectors = new DefaultObjectSelectorsSelector().selectAll();
         for(DefaultObjectSelector__mdt defaultObjectSelector : defaultObjectSelectors) {
