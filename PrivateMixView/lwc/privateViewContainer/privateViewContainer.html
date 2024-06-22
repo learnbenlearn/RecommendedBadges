@@ -28,17 +28,17 @@
         </div>
       </template>
   
-      <template lwc:if={displayPrompt}>
+      <div lwc:if={displayPrompt} style="min-height: 600px">
         <c-prompt-dialog prompt-header={promptHeader} confirm-label="Save" display-cancel="true" cancel-label="Cancel" onpromptclose={handlePromptClose} 
           onpromptconfirm={handlePromptConfirm}>
           <span slot="promptInput">
             <c-lookup object-name={lookupObjectName} result-icon-name={lookupResultIconName} lookup-items={lookupItems}></c-lookup>
-            <template lwc:if={promptIsLoading}>
+            <div lwc:if={promptIsLoading}>
               <lightning-spinner></lightning-spinner>
-            </template>
+            </div>
           </span>
         </c-prompt-dialog>
-      </template>
+      </div>
     </template>
   </div>
 </template>

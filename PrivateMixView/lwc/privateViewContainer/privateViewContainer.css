@@ -1,3 +1,10 @@
 :host {
     --prompt-input-height: 25vh;
 }
+
+@media (max-width: 768px) {
+    :host {
+        --prompt-input-height: 300px;
+    }
+}
+

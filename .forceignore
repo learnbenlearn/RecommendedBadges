@@ -30,7 +30,7 @@ standard-home.tab
 Core
 fflib
 LWCErrorHandler
-LWCUtils
+#LWCUtils
 #PrivateMixView
 #RecommendedBadgeMix
 SortCustomMetadata
