@@ -7,10 +7,10 @@
 -->
 <template>
     <template lwc:if={hasRowActions}>
-      <lightning-datatable key-field={keyField} data={tableData} columns={columns} onrowaction={handleRowAction} hide-checkbox-column>
+      <lightning-datatable key-field={keyField} data={tableData} columns={columns} onrowaction={handleRowAction} hide-checkbox-column column-widths-mode="auto">
       </lightning-datatable>
     </template>
     <template lwc:else>
-      <lightning-datatable key-field={keyField} data={tableData} columns={columns} hide-checkbox-column></lightning-datatable>
+      <lightning-datatable key-field={keyField} data={tableData} columns={columns} hide-checkbox-column column-widths-mode="auto"></lightning-datatable>
     </template>
 </template>

@@ -27,16 +27,16 @@ standard-home.tab
 #home_page_default.flexipage
 
 # Ignored Packages
-#Core
+Core
 fflib
-#LWCErrorHandler
-LWCUtils
-#PrivateMixView
-#RecommendedBadgeMix
-#SortCustomMetadata
-#StorageManagement
-#Triggers
-#UserInterface
+LWCErrorHandler
+#LWCUtils
+PrivateMixView
+RecommendedBadgeMix
+SortCustomMetadata
+StorageManagement
+Triggers
+UserInterface
 
 # Ignored Folders
 unpackageable
