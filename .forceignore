@@ -10,9 +10,9 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-Admin.profile
+**Admin.profile**
 **/fieldRestrictionRules/**
-standard-home.tab
+**Standard-Home.tab**
 **AppSwitcher.appMenu**
 **Recommended_Badge_Mix__c.sharingRules**
 **Recommended_Badges_Manager_Permissions.permissionSet**
@@ -27,7 +27,7 @@ standard-home.tab
 **Home_Page_Default.flexipage**
 
 # Ignored Packages
-Core
+#Core
 fflib
 LWCErrorHandler
 #LWCUtils
