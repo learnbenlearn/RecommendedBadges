@@ -7,7 +7,10 @@
 @RestResource(urlMapping='/TrailheadEntities/*')
 global with sharing class TrailheadEntityService {
     @TestVisible
-    private final static String DML_ERROR_MESSAGE = 'One or more Recommended Badges/Recommended Trails failed the update operation.';
+    private final static String DML_UPDATE_ERROR_MESSAGE = 'One or more Recommended Badges/Recommended Trails failed the update operation.';
+
+    @TestVisible
+    private final static String DML_DELETE_ERROR_MESSAGE = 'One or more Recommended Badges/Recommended Trails failed the delete operation.';
 
     /**
      * Updates Recommended Badges/Trails using data provided in PATCH call.
@@ -46,19 +49,49 @@ global with sharing class TrailheadEntityService {
             trailsToUpdate.add(tempTrail);
         }
 
-        Boolean hasDMLFailures = false;
+        Boolean hasBadgeDMLFailures = false;
         if(badgesToUpdate.size() > 0) {
             List<Database.SaveResult> saveResults = Database.update(badgesToUpdate, false);
-            hasDMLFailures = DMLUtils.logErrors(saveResults, 'TrailheadEntityService', true);
+            hasBadgeDMLFailures = DMLUtils.logErrors(saveResults, 'TrailheadEntityService', true);
         }
         
+        Boolean hasTrailDMLFailures = false;
         if(trailsToUpdate.size() > 0) {
             List<Database.SaveResult> saveResults = Database.update(trailsToUpdate, false);
-            hasDMLFailures = DMLUtils.logErrors(saveResults, 'TrailheadEntityService', true);
+            hasTrailDMLFailures = DMLUtils.logErrors(saveResults, 'TrailheadEntityService', true);
         }
 
-        if(hasDMLFailures) {
-            throw new TrailheadEntityServiceException(DML_ERROR_MESSAGE);
+        if(hasBadgeDMLFailures || hasTrailDMLFailures) {
+            throw new TrailheadEntityServiceException(DML_UPDATE_ERROR_MESSAGE);
+        }
+    }
+
+    /**
+     * Deletes Recommended Badges/Trails that correspond to Badges/Trails with API names provided in DELETE call.
+     */    
+    @HttpDelete
+    global static void doDelete() {
+        Map<String, Set<String>> body = (Map<String, Set<String>>) JSON.deserialize(RestContext.request.requestBody.toString(), Map<String, Set<String>>.class);
+        Set<String> deletedBadgeAPINames = body.get('deletedBadgeAPINames');
+        Set<String> deletedTrailAPINames = body.get('deletedTrailAPINames');
+
+        List<Recommended_Badge__c> badgesToDelete = [SELECT Id FROM Recommended_Badge__c WHERE BadgeAPIName__c IN :deletedBadgeAPINames];
+        List<Recommended_Trail__c> trailsToDelete = [SELECT Id FROM Recommended_Trail__c WHERE TrailAPIName__c IN :deletedTrailAPINames];
+        
+        Boolean hasBadgeDMLFailures = false;
+        if(badgesToDelete.size() > 0) {
+            List<Database.DeleteResult> deleteResults = Database.delete(badgesToDelete, false);
+            hasBadgeDMLFailures = DMLUtils.logErrors(deleteResults, 'TrailheadEntityService');
+        }
+        
+        Boolean hasTrailDMLFailures = false;
+        if(trailsToDelete.size() > 0) {
+            List<Database.DeleteResult> deleteResults = Database.delete(trailsToDelete, false);
+            hasTrailDMLFailures = DMLUtils.logErrors(deleteResults, 'TrailheadEntityService');
+        }
+
+        if(hasBadgeDMLFailures || hasTrailDMLFailures) {
+            throw new TrailheadEntityServiceException(DML_DELETE_ERROR_MESSAGE);
         }
     }
 

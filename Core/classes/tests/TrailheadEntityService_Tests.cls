@@ -113,6 +113,7 @@ private class TrailheadEntityService_Tests {
 
         List<Recommended_Badge__c> updatedBadges = [SELECT BadgeAPIName__c, Level__c, Products__c FROM Recommended_Badge__c];
         List<Recommended_Trail__c> updatedTrails = [SELECT TrailAPIName__c, Level__c, Products__c FROM Recommended_Trail__c];
+        List<LogEntry__c> logEntries = [SELECT Id FROM LogEntry__c];
         for(Recommended_Badge__c badge : updatedBadges) {
             Assert.areEqual(badgesByAPIName.get(badge.BadgeAPIName__c).Level__c, badge.Level__c, 'Expected Recommended Badge level to be updated by PATCH call.');
             Assert.areEqual(badgesByAPIName.get(badge.BadgeAPIName__c).Products__c, badge.Products__c, 'Expected Recommended Badge products field to be updated by PATCH call.');
@@ -121,10 +122,11 @@ private class TrailheadEntityService_Tests {
             Assert.areEqual(trailsByAPIName.get(trail.TrailAPIName__c).Level__c, trail.Level__c, 'Expected Recommended Trail level to be updated by PATCH call.');
             Assert.areEqual(trailsByAPIName.get(trail.TrailAPIName__c).Products__c, trail.Products__c, 'Expected Recommended Trail products field to be updated by PATCH call.');
         }
+        Assert.areEqual(0, logEntries.size(), 'Expected PATCH call to execute successfully.');
     }
 
     @isTest
-    private static void it_should_update_badges_with_same_name_in_different_mixes() {
+    private static void it_should_update_badges_and_trails_with_same_name_in_different_mixes() {
         List<Recommended_Badge_Mix__c> badgeMixes = [SELECT Id, (SELECT Id FROM Mix_Categories__r) FROM Recommended_Badge_Mix__c];
         RecommendedBadgeTS badgeGenerator = generateRecommendedBadges((new Map<Id, Mix_Category__c>(badgeMixes[0].Mix_Categories__r)).keySet());
         insert badgeGenerator.setFieldSpecs(new List<TestSupport.TestDataField>{
@@ -132,23 +134,7 @@ private class TrailheadEntityService_Tests {
                 new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, Mix_Category__c>(badgeMixes[1].Mix_Categories__r).keySet()))
             }).
             generate();
-        
-        Map<String, Recommended_Badge__c> badgesByAPIName = generateRecommendedBadgesByAPIName(badgeGenerator);
-        Test.startTest();
-        TrailheadEntityService.doPatch(badgesByAPIName, new Map<String, Recommended_Trail__c>());
-        Test.stopTest();
 
-        List<Recommended_Badge__c> updatedBadges = [SELECT BadgeAPIName__c, Level__c, Products__c FROM Recommended_Badge__c];
-        for(Recommended_Badge__c badge : updatedBadges) {
-            Assert.areEqual(badgesByAPIName.get(badge.BadgeAPIName__c).Level__c, badge.Level__c, 'Expected Recommended Badge level to be updated by PATCH call.');
-            Assert.areEqual(badgesByAPIName.get(badge.BadgeAPIName__c).Products__c, badge.Products__c, 'Expected Recommended Badge products field to be updated by PATCH call.');
-        }
-    }
-
-
-    @isTest
-    private static void it_should_update_trails_with_same_name_in_different_mixes() {
-        List<Recommended_Badge_Mix__c> badgeMixes = [SELECT Id, (SELECT Id FROM Mix_Categories__r) FROM Recommended_Badge_Mix__c];
         RecommendedTrailTS trailGenerator = generateRecommendedTrails((new Map<Id, Mix_Category__c>(badgeMixes[0].Mix_Categories__r)).keySet());
         insert trailGenerator.setFieldSpecs(new List<TestSupport.TestDataField>{
                 new CounterSuffixField(Recommended_Trail__c.TrailAPIName__c, 'Test_Trail_'),
@@ -156,25 +142,10 @@ private class TrailheadEntityService_Tests {
             }).
             generate();
         
+        Map<String, Recommended_Badge__c> badgesByAPIName = generateRecommendedBadgesByAPIName(badgeGenerator);
         Map<String, Recommended_Trail__c> trailsByAPIName = generateRecommendedTrailsByAPIName(trailGenerator);
         Test.startTest();
-        TrailheadEntityService.doPatch(new Map<String, Recommended_Badge__c>(), trailsByAPIName);
-        Test.stopTest();
-
-        List<Recommended_Trail__c> updatedTrails = [SELECT TrailAPIName__c, Level__c, Products__c FROM Recommended_Trail__c];
-        for(Recommended_Trail__c trail : updatedTrails) {
-            Assert.areEqual(trailsByAPIName.get(trail.TrailAPIName__c).Level__c, trail.Level__c, 'Expected Recommended Trail level to be updated by PATCH call.');
-            Assert.areEqual(trailsByAPIName.get(trail.TrailAPIName__c).Products__c, trail.Products__c, 'Expected Recommended Trail products field to be updated by PATCH call.');
-        }
-    }
-
-    @isTest
-    private static void it_should_update_badges_when_no_trail_updates() {
-        Set<Id> mixCategoryIds = (new Map<Id, sObject>([SELECT Id FROM Mix_Category__c])).keySet();
-        Map<String, Recommended_Badge__c> badgesByAPIName = generateRecommendedBadgesByAPIName(generateRecommendedBadges(mixCategoryIds));
-
-        Test.startTest();
-        TrailheadEntityService.doPatch(badgesByAPIName, new Map<String, Recommended_Trail__c>());
+        TrailheadEntityService.doPatch(badgesByAPIName, trailsByAPIName);
         Test.stopTest();
 
         List<Recommended_Badge__c> updatedBadges = [SELECT BadgeAPIName__c, Level__c, Products__c FROM Recommended_Badge__c];
@@ -182,22 +153,15 @@ private class TrailheadEntityService_Tests {
             Assert.areEqual(badgesByAPIName.get(badge.BadgeAPIName__c).Level__c, badge.Level__c, 'Expected Recommended Badge level to be updated by PATCH call.');
             Assert.areEqual(badgesByAPIName.get(badge.BadgeAPIName__c).Products__c, badge.Products__c, 'Expected Recommended Badge products field to be updated by PATCH call.');
         }
-    }
-
-    @isTest
-    private static void it_should_update_trails_when_no_badge_updates() {
-        Set<Id> mixCategoryIds = (new Map<Id, sObject>([SELECT id FROM Mix_Category__c])).keySet();
-        Map<String, Recommended_Trail__c> trailsByAPIName = generateRecommendedTrailsByAPIName(generateRecommendedTrails(mixCategoryIds));
-
-        Test.startTest();
-        TrailheadEntityService.doPatch(new Map<String, Recommended_Badge__c>(), trailsByAPIName);
-        Test.stopTest();
 
         List<Recommended_Trail__c> updatedTrails = [SELECT TrailAPIName__c, Level__c, Products__c FROM Recommended_Trail__c];
         for(Recommended_Trail__c trail : updatedTrails) {
             Assert.areEqual(trailsByAPIName.get(trail.TrailAPIName__c).Level__c, trail.Level__c, 'Expected Recommended Trail level to be updated by PATCH call.');
             Assert.areEqual(trailsByAPIName.get(trail.TrailAPIName__c).Products__c, trail.Products__c, 'Expected Recommended Trail products field to be updated by PATCH call.');
         }
+
+        List<LogEntry__c> logEntries = [SELECT Id FROM LogEntry__c];
+        Assert.areEqual(0, logEntries.size(), 'Expected PATCH call to execute successfully.');
     }
 
     @isTest
@@ -212,7 +176,7 @@ private class TrailheadEntityService_Tests {
             Assert.fail('Expected exception when or more Recommended Badges fails update.');
         } catch(Exception e) {
             Assert.areEqual('TrailheadEntityService.TrailheadEntityServiceException', e.getTypeName(), 'Expected exception when one or more Recommended Badges fails update.');
-            Assert.areEqual(TrailheadEntityService.DML_ERROR_MESSAGE, e.getMessage(), 'Expected exception when one or more Recommended Badges fails update.');
+            Assert.areEqual(TrailheadEntityService.DML_UPDATE_ERROR_MESSAGE, e.getMessage(), 'Expected exception when one or more Recommended Badges fails update.');
         }
         Test.stopTest();
 
@@ -255,7 +219,7 @@ private class TrailheadEntityService_Tests {
             Assert.fail('Expected exception when or more Recommended Trails fails update.');
         } catch(Exception e) {
             Assert.areEqual('TrailheadEntityService.TrailheadEntityServiceException', e.getTypeName(), 'Expected exception when one or more Recommended Trails fails update.');
-            Assert.areEqual(TrailheadEntityService.DML_ERROR_MESSAGE, e.getMessage(), 'Expected exception when one or more Recommended Trails fails update.');
+            Assert.areEqual(TrailheadEntityService.DML_UPDATE_ERROR_MESSAGE, e.getMessage(), 'Expected exception when one or more Recommended Trails fails update.');
         }
         Test.stopTest();
 
@@ -300,7 +264,7 @@ private class TrailheadEntityService_Tests {
             Assert.fail('Expected exception when or more Recommended Badges fails update.');
         } catch(Exception e) {
             Assert.areEqual('TrailheadEntityService.TrailheadEntityServiceException', e.getTypeName(), 'Expected exception when one or more Recommended Badges fails update.');
-            Assert.areEqual(TrailheadEntityService.DML_ERROR_MESSAGE, e.getMessage(), 'Expected exception when one or more Recommended Badges fails update.');
+            Assert.areEqual(TrailheadEntityService.DML_UPDATE_ERROR_MESSAGE, e.getMessage(), 'Expected exception when one or more Recommended Badges fails update.');
         }
         Test.stopTest();
 
@@ -363,6 +327,67 @@ private class TrailheadEntityService_Tests {
             }
             failedUpdate = false;
         }
+    }
+
+    @isTest
+    private static void it_should_delete_badges_and_trails() {
+        Set<Id> mixCategoryIds = (new Map<Id, sObject>([SELECT Id FROM Mix_Category__c])).keySet();
+        Set<String> badgeAPINames = generateRecommendedBadgesByAPIName(generateRecommendedBadges(mixCategoryIds)).keySet();
+        Set<String> trailAPINames = generateRecommendedTrailsByAPIName(generateRecommendedTrails(mixCategoryIds)).keySet();
+        RestRequest request = new RestRequest();
+        request.requestURI = '/TrailheadEntities';
+        request.httpMethod = 'DELETE';
+        request.addHeader('Content-Type', 'application/json');
+        request.requestBody = Blob.valueOf('{"deletedBadgeAPINames": ' + JSON.serialize(badgeAPINames) + ', "deletedTrailAPINames": ' + JSON.serialize(trailAPINames) + '}');
+        RestContext.request = request;
+
+        Test.startTest();
+        TrailheadEntityService.doDelete();
+        Test.stopTest();
+
+        List<Recommended_Badge__c> badges = [SELECT Id FROM Recommended_Badge__c];
+        List<Recommended_Trail__c> trails = [SELECT Id FROM Recommended_Trail__c];
+        List<LogEntry__c> logEntries = [SELECT Id FROM LogEntry__c];
+        Assert.areEqual(0, badges.size(), 'Expected Recommended Badges to be deleted by DELETE call.');
+        Assert.areEqual(0, trails.size(), 'Expected Recommended Trails to be deleted by DELETE call.');
+        Assert.areEqual(0, logEntries.size(), 'Expected DELETE call to execute successfully.');
+    }
+
+    @isTest
+    private static void it_should_delete_badges_and_trails_with_same_name_in_different_mixes() {
+        List<Recommended_Badge_Mix__c> badgeMixes = [SELECT Id, (SELECT Id FROM Mix_Categories__r) FROM Recommended_Badge_Mix__c];
+        RecommendedBadgeTS badgeGenerator = generateRecommendedBadges((new Map<Id, Mix_Category__c>(badgeMixes[0].Mix_Categories__r)).keySet());
+        insert badgeGenerator.setFieldSpecs(new List<TestSupport.TestDataField>{
+                new CounterSuffixField(Recommended_Badge__c.BadgeAPIName__c, 'Test_Badge_'),
+                new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, Mix_Category__c>(badgeMixes[1].Mix_Categories__r).keySet()))
+            }).
+            generate();
+
+        RecommendedTrailTS trailGenerator = generateRecommendedTrails((new Map<Id, Mix_Category__c>(badgeMixes[0].Mix_Categories__r)).keySet());
+        insert trailGenerator.setFieldSpecs(new List<TestSupport.TestDataField>{
+                new CounterSuffixField(Recommended_Trail__c.TrailAPIName__c, 'Test_Trail_'),
+                new RelationshipField(Recommended_Trail__c.Mix_Category__c, (new Map<Id, Mix_Category__c>(badgeMixes[1].Mix_Categories__r).keySet()))
+            }).
+            generate();
         
+        Set<String> badgeAPINames = generateRecommendedBadgesByAPIName(badgeGenerator).keySet();
+        Set<String> trailAPINames = generateRecommendedTrailsByAPIName(trailGenerator).keySet();
+        RestRequest request = new RestRequest();
+        request.requestURI = '/TrailheadEntities';
+        request.httpMethod = 'DELETE';
+        request.addHeader('Content-Type', 'application/json');
+        request.requestBody = Blob.valueOf('{"deletedBadgeAPINames": ' + JSON.serialize(badgeAPINames) + ', "deletedTrailAPINames": ' + JSON.serialize(trailAPINames) + '}');
+        RestContext.request = request;
+
+        Test.startTest();
+        TrailheadEntityService.doDelete();
+        Test.stopTest();
+
+        List<Recommended_Badge__c> badges = [SELECT Id FROM Recommended_Badge__c];
+        List<Recommended_Trail__c> trails = [SELECT Id FROM Recommended_Trail__c];
+        List<LogEntry__c> logEntries = [SELECT Id FROM LogEntry__c];
+        Assert.areEqual(0, badges.size(), 'Expected Recommended Badges to be deleted by DELETE call.');
+        Assert.areEqual(0, trails.size(), 'Expected Recommended Trails to be deleted by DELETE call.');
+        Assert.areEqual(0, logEntries.size(), 'Expected DELETE call to execute successfully.');
     }
 }
