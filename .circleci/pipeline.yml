@@ -66,9 +66,7 @@ jobs:
           condition:
             and:
               - equal: [ true, << pipeline.parameters.create-packages >> ]
-              - matches:
-                  pattern: "[^m(?!ain)(?<!m)a(?!in)(?<!ma)i(?!n)(?<!mai)n]"
-                  value: << pipeline.git.branch>> ]
+              - $CIRCLE_PULL_REQUEST
           steps:
             - run:
                 name: Get Packages to Update
@@ -119,9 +117,7 @@ jobs:
             condition:
               and:
                 - equal: [ true, << pipeline.parameters.create-packages >> ]
-                - matches:
-                    pattern: "[^m(?!ain)(?<!m)a(?!in)(?<!ma)i(?!n)(?<!mai)n]"
-                    value: << pipeline.git.branch>> ]
+                - $CIRCLE_PULL_REQUEST
             steps:
               - run:
                   name: Install Packages in Scratch Org
@@ -145,9 +141,7 @@ jobs:
             condition:
               and:
                 - equal: [ true, << pipeline.parameters.create-packages >> ]
-                - matches:
-                    pattern: "[^m(?!ain)(?<!m)a(?!in)(?<!ma)i(?!n)(?<!mai)n]"
-                    value: << pipeline.git.branch>> ]
+                - $CIRCLE_PULL_REQUEST
             steps:
               - run:
                   name: Make Request to Packaging App
