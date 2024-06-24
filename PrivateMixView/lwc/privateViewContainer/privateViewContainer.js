@@ -14,8 +14,8 @@ import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
 import MIX_CATEGORY_NAME_FIELD from '@salesforce/schema/Mix_Category__c.Name';
 import MIX_CATEGORY_ID_FIELD from '@salesforce/schema/Mix_Category__c.Id';
 import RECOMMENDED_BADGE_MIX_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__c';
-import RECOMMENDED_BADGE_MIX_NAME_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__r.Name';
-import PRIVATE_MIX_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__r.Private_Mix__c';
+import RECOMMENDED_BADGE_MIX_NAME_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.Name';
+import PRIVATE_MIX_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.Private_Mix__c';
 
 import getMixCategoryData from '@salesforce/apex/PrivateViewController.getMixCategoryData';
 import getPrivateMixRecommendedBadges from '@salesforce/apex/PrivateViewController.getPrivateMixRecommendedBadges';
@@ -81,7 +81,7 @@ const TABLE_COLUMNS = [
 
 export default class PrivateViewContainer extends LightningElement {
     @api divClasses;
-    displayPrompt;
+    displayPrompt = false;
     dropdownViewLabel = DROPDOWN_VIEW_LABEL;
     dropdownViewValue = 'High Priority';
     isLoading = true;
@@ -106,7 +106,7 @@ export default class PrivateViewContainer extends LightningElement {
             this.viewOptions.push(HIGH_PRIORITY_OPTION);
 
             for(let mixCategory of this.mixCategoryData) {
-                if(mixCategory[PRIVATE_MIX_FIELD.fieldApiName]) {
+                if(mixCategory.Recommended_Badge_Mix__r[PRIVATE_MIX_FIELD.fieldApiName]) {
                     this.viewOptions.push({
                         label: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
                         value: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName]
@@ -119,7 +119,6 @@ export default class PrivateViewContainer extends LightningElement {
                 this.tableData = this.recommendedBadgeData[this.dropdownViewValue];
             }
             this.isLoading = false;
-            
         } catch(err) {
             console.error(err);
         }
@@ -131,7 +130,7 @@ export default class PrivateViewContainer extends LightningElement {
             this.lookupItems.push({
                 Id: mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName],
                 Name: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
-                SecondaryFieldValue: mixCategory[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName],
+                SecondaryFieldValue: mixCategory.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName],
                 ParentId: mixCategory[RECOMMENDED_BADGE_MIX_FIELD.fieldApiName]
             });
         }

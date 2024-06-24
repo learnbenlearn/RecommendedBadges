@@ -23,5 +23,5 @@
         </properties>
     </rule>
 
-    <exclude-pattern>.*/.sfdx/.*</exclude-pattern>
+    <exclude-pattern>.*/.sfdx.*</exclude-pattern>
 </ruleset>

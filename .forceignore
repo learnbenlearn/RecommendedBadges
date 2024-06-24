@@ -10,9 +10,9 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-Admin.profile
+**Admin.profile**
 **/fieldRestrictionRules/**
-standard-home.tab
+**Standard-Home.tab**
 **AppSwitcher.appMenu**
 **Recommended_Badge_Mix__c.sharingRules**
 **Recommended_Badges_Manager_Permissions.permissionSet**
@@ -24,13 +24,13 @@ standard-home.tab
 **/LightningService_UtilityBar.flexipage-meta.xml
 
 ## Temp Ignored
-#home_page_default.flexipage
+#**Home_Page_Default.flexipage**
 
 # Ignored Packages
 #Core
 fflib
-#LWCErrorHandler
-LWCUtils
+LWCErrorHandler
+#LWCUtils
 #PrivateMixView
 #RecommendedBadgeMix
 #SortCustomMetadata

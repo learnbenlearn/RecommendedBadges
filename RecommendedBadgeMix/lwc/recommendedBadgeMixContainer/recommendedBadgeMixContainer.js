@@ -23,8 +23,9 @@ import TRAIL_URL_FIELD from '@salesforce/schema/Recommended_Trail__c.URL__c';
 import MIX_CATEGORY_ID_FIELD from '@salesforce/schema/Mix_Category__c.Id';
 import MIX_CATEGORY_NAME_FIELD from '@salesforce/schema/Mix_Category__c.Name';
 import MIX_CATEGORY_RECOMMENDED_BADGE_MIX_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__c';
-import RECOMMENDED_BADGE_MIX_NAME_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__r.Name';
-import RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__r.Last_Updated_Date__c';
+import RECOMMENDED_BADGE_MIX_NAME_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.Name';
+import RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.Last_Updated_Date__c';
+//import RECOMMENDED_BADGE_MIX_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__r';
 
 
 const SPINNER_TEXT = 'Retrieving recommended badges';
@@ -195,11 +196,10 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                     URL__c: '/' + item[MIX_CATEGORY_ID_FIELD.fieldApiName], // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
                     _children: newCategoryChildren,
                     Recommended_Badge_Mix__c: item[MIX_CATEGORY_RECOMMENDED_BADGE_MIX_FIELD.fieldApiName],
-                    RecommendedBadgeMixLastUpdatedDate: item[RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD.fieldApiName]
                 };
 
-                if(!(item.Recommended_Badge_Mix__r.Name in this.lastUpdatedDatesByRecommendedBadgeMix)) {
-                    this.lastUpdatedDatesByRecommendedBadgeMix[item[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName]] = item[RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD.fieldApiName];
+                if(!(item.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName] in this.lastUpdatedDatesByRecommendedBadgeMix)) {
+                    this.lastUpdatedDatesByRecommendedBadgeMix[item.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName]] = item.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD.fieldApiName];
                 }
 
                 return newCategory;

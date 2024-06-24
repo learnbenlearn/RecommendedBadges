@@ -66,7 +66,7 @@ jobs:
           condition:
             and:
               - equal: [ true, << pipeline.parameters.create-packages >> ]
-              - equal: [ fflib-migration, << pipeline.git.branch >> ]
+              - $CIRCLE_PULL_REQUEST
           steps:
             - run:
                 name: Get Packages to Update
@@ -115,7 +115,9 @@ jobs:
                     sf project deploy start -o $TEST_ORG_ALIAS
       - when:
             condition:
-              equal: [ true, << pipeline.parameters.create-packages >> ]
+              and:
+                - equal: [ true, << pipeline.parameters.create-packages >> ]
+                - $CIRCLE_PULL_REQUEST
             steps:
               - run:
                   name: Install Packages in Scratch Org
@@ -137,7 +139,9 @@ jobs:
           command: sf org delete scratch -o $TEST_ORG_ALIAS -p
       - when:
             condition:
-              equal: [ true, << pipeline.parameters.create-packages >> ]
+              and:
+                - equal: [ true, << pipeline.parameters.create-packages >> ]
+                - $CIRCLE_PULL_REQUEST
             steps:
               - run:
                   name: Make Request to Packaging App
