@@ -24,7 +24,7 @@ package.xml
 **/LightningService_UtilityBar.flexipage-meta.xml
 
 ## Temp Ignored
-**Home_Page_Default.flexipage**
+#**Home_Page_Default.flexipage**
 
 # Ignored Packages
 #Core
