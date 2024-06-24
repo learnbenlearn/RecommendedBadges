@@ -1,0 +1,806 @@
+{
+    "totalSize": 100,
+    "done": true,
+    "records": [
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4d0AAA"
+            },
+            "trailheadapp__API_Name__c": "accelerate-your-sales-team-with-high-velocity-sales",
+            "Name": "Accelerate Your Sales Team with Sales Engagement"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4d1AAA"
+            },
+            "trailheadapp__API_Name__c": "service_einstein",
+            "Name": "Make Service Cloud Smarter"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4d2AAA"
+            },
+            "trailheadapp__API_Name__c": "force_com_admin_advanced",
+            "Name": "Admin Advanced"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4d3AAA"
+            },
+            "trailheadapp__API_Name__c": "get-to-know-communications-cloud",
+            "Name": "Get to Know Communications Cloud"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4d4AAA"
+            },
+            "trailheadapp__API_Name__c": "discover-salesforce-functions",
+            "Name": "Discover Salesforce Functions"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4d5AAA"
+            },
+            "trailheadapp__API_Name__c": "apply-a-salesforce-b2c-commerce-functional-solution",
+            "Name": "Apply a Salesforce B2C Commerce Functional Solution"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4d6AAA"
+            },
+            "trailheadapp__API_Name__c": "deliver-it-success-with-mulesoft-catalyst",
+            "Name": "Deliver IT Success with MuleSoft Catalyst"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4d7AAA"
+            },
+            "trailheadapp__API_Name__c": "learn-privacy-and-data-protection-law",
+            "Name": "Learn Privacy and Data Protection Law"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4d8AAA"
+            },
+            "trailheadapp__API_Name__c": "heroku_enterprise",
+            "Name": "Develop Apps with Heroku"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4d9AAA"
+            },
+            "trailheadapp__API_Name__c": "lead-during-challenging-times",
+            "Name": "Lead During Challenging Times"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dZAAQ"
+            },
+            "trailheadapp__API_Name__c": "explore-nonprofit-success-pack",
+            "Name": "Explore Nonprofit Success Pack (NPSP)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4daAAA"
+            },
+            "trailheadapp__API_Name__c": "use-consumer-goods-cloud-offline-mobile-app",
+            "Name": "Use Consumer Goods Cloud Offline Mobile App"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dbAAA"
+            },
+            "trailheadapp__API_Name__c": "optimize-search-engine-awareness-for-your-salesforce-b2c-commerce-storefront",
+            "Name": "Optimize Search Engine Awareness for Your Salesforce B2C Commerce Storefront"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4ddAAA"
+            },
+            "trailheadapp__API_Name__c": "wave_analytics_explorer",
+            "Name": "Explore with CRM Analytics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4deAAA"
+            },
+            "trailheadapp__API_Name__c": "prepare-for-success-with-nonprofit-cloud",
+            "Name": "Prepare for Success with Salesforce for Nonprofits"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dfAAA"
+            },
+            "trailheadapp__API_Name__c": "journey-builder-tasks",
+            "Name": "Complete Journey Builder Tasks"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dgAAA"
+            },
+            "trailheadapp__API_Name__c": "create-and-send-targeted-emails-with-email-studio",
+            "Name": "Create and Send Targeted Emails"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dhAAA"
+            },
+            "trailheadapp__API_Name__c": "create-compelling-content-with-content-builder",
+            "Name": "Create Compelling Content with Content Builder"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4diAAA"
+            },
+            "trailheadapp__API_Name__c": "enhance-emails-with-interactivity",
+            "Name": "Enhance Emails with Interactivity"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4djAAA"
+            },
+            "trailheadapp__API_Name__c": "get-started-with-datorama",
+            "Name": "Get Started with Marketing Cloud Intelligence"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dkAAA"
+            },
+            "trailheadapp__API_Name__c": "integrate-salesforce-and-google-platforms",
+            "Name": "Integrate Salesforce and Google Platforms"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dlAAA"
+            },
+            "trailheadapp__API_Name__c": "optimize-data-audiences-and-digital-advertising",
+            "Name": "Optimize Data, Audiences, and Digital Advertising"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dmAAA"
+            },
+            "trailheadapp__API_Name__c": "understand-your-web-users-with-google-analytics",
+            "Name": "Understand Your Web Users with Google Analytics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dnAAA"
+            },
+            "trailheadapp__API_Name__c": "study-for-the-marketing-cloud-administrator-exam",
+            "Name": "Study for the Marketing Cloud Administrator Exam"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4doAAA"
+            },
+            "trailheadapp__API_Name__c": "journey-builder-strategies",
+            "Name": "Use Journey Builder Strategies"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dpAAA"
+            },
+            "trailheadapp__API_Name__c": "measure-your-marketing-impact",
+            "Name": "Measure Your Marketing Impact"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dqAAA"
+            },
+            "trailheadapp__API_Name__c": "shield",
+            "Name": "Secure Your Apps with Salesforce Shield"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4drAAA"
+            },
+            "trailheadapp__API_Name__c": "use-einstein-features-in-marketing-cloud",
+            "Name": "Use Einstein Features in Marketing Cloud Engagement"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dsAAA"
+            },
+            "trailheadapp__API_Name__c": "manage-your-mission-with-nonprofit-cloud",
+            "Name": "Manage Your Mission with Salesforce for Nonprofits"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dtAAA"
+            },
+            "trailheadapp__API_Name__c": "discover-trailhead-sample-apps",
+            "Name": "Discover Trailhead Sample Apps"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4duAAA"
+            },
+            "trailheadapp__API_Name__c": "build-platform-apps-in-lightning-experience",
+            "Name": "Build Platform Apps"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dvAAA"
+            },
+            "trailheadapp__API_Name__c": "microsoft_dotnet",
+            "Name": "Apply .NET Skills to Salesforce"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dwAAA"
+            },
+            "trailheadapp__API_Name__c": "build-your-business-skills",
+            "Name": "Build Your Business Skills"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dxAAA"
+            },
+            "trailheadapp__API_Name__c": "empower-your-salesforce-users",
+            "Name": "Empower Your Salesforce Users"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4cxAAA"
+            },
+            "trailheadapp__API_Name__c": "assess-site-performance-with-b2c-commerce-reports-dashboards",
+            "Name": "Assess Site Performance with B2C Commerce Reports & Dashboards"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eAAAQ"
+            },
+            "trailheadapp__API_Name__c": "deploy-commerce-cloud-einstein",
+            "Name": "Deploy Commerce Cloud Einstein"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eBAAQ"
+            },
+            "trailheadapp__API_Name__c": "code-with-ampscript",
+            "Name": "Code with AMPscript"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eCAAQ"
+            },
+            "trailheadapp__API_Name__c": "get-to-know-relationship-design",
+            "Name": "Get to Know Relationship Design"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eDAAQ"
+            },
+            "trailheadapp__API_Name__c": "manage-your-marketing-cloud-account",
+            "Name": "Manage Your Marketing Cloud Engagement Account"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eEAAQ"
+            },
+            "trailheadapp__API_Name__c": "develop-for-marketing-cloud",
+            "Name": "Learn Developer Fundamentals in Marketing Cloud Engagement"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eFAAQ"
+            },
+            "trailheadapp__API_Name__c": "administrator-certification-prep",
+            "Name": "Study for the Administrator Certification Exam"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eGAAQ"
+            },
+            "trailheadapp__API_Name__c": "marketing-cloud-developer-languages",
+            "Name": "Use Developer Languages in Marketing Cloud Engagement"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eHAAQ"
+            },
+            "trailheadapp__API_Name__c": "build-soft-skills-to-succeed-as-a-salesforce-partner",
+            "Name": "Build Soft Skills to Succeed as a Salesforce Partner"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eIAAQ"
+            },
+            "trailheadapp__API_Name__c": "build-better-ux",
+            "Name": "Build Better with UX"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eJAAQ"
+            },
+            "trailheadapp__API_Name__c": "drive-sales-with-operational-excellence",
+            "Name": "Drive Sales with Operational Excellence"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eKAAQ"
+            },
+            "trailheadapp__API_Name__c": "build-your-data-literacy",
+            "Name": "Build Your Data Literacy"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eLAAQ"
+            },
+            "trailheadapp__API_Name__c": "design-eventdriven-apps-for-realtime-integration",
+            "Name": "Design Event-Driven Apps for Real-Time Integration"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eMAAQ"
+            },
+            "trailheadapp__API_Name__c": "import-data-with-nonprofit-success-pack-npsp",
+            "Name": "Import Data With Nonprofit Success Pack (NPSP)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eNAAQ"
+            },
+            "trailheadapp__API_Name__c": "automate-content-in-marketing-cloud",
+            "Name": "Automate Content in Marketing Cloud Engagement"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dyAAA"
+            },
+            "trailheadapp__API_Name__c": "get-started-with-sales-cloud",
+            "Name": "Get Started with Sales Cloud"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dzAAA"
+            },
+            "trailheadapp__API_Name__c": "wave_analytics_apps",
+            "Name": "Accelerate CRM Analytics with Apps"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4e0AAA"
+            },
+            "trailheadapp__API_Name__c": "achieve-your-goals-with-success-cloud",
+            "Name": "Achieve Your Goals with Salesforce Customer Success"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4e1AAA"
+            },
+            "trailheadapp__API_Name__c": "connect-with-customers-using-financial-services-cloud",
+            "Name": "Connect with Customers Using Financial Services Cloud"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4e2AAA"
+            },
+            "trailheadapp__API_Name__c": "get_smart_einstein",
+            "Name": "Get Smart with Salesforce Einstein"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4e3AAA"
+            },
+            "trailheadapp__API_Name__c": "fsc_build_loyalty",
+            "Name": "Inspire Customer Loyalty with Financial Services Cloud"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4e4AAA"
+            },
+            "trailheadapp__API_Name__c": "expand-service-cloud-with-digital-engagement",
+            "Name": "Expand Service Cloud with Digital Engagement"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4e6AAA"
+            },
+            "trailheadapp__API_Name__c": "force_com_admin_beginner",
+            "Name": "Admin Beginner"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4e7AAA"
+            },
+            "trailheadapp__API_Name__c": "complete-admin-tasks-in-marketing-cloud",
+            "Name": "Complete Admin Tasks in Marketing Cloud Engagement"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4e8AAA"
+            },
+            "trailheadapp__API_Name__c": "build-your-marketing-cloud-consulting-practice",
+            "Name": "Build Your Marketing Cloud Engagement Consulting Practice"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4e9AAA"
+            },
+            "trailheadapp__API_Name__c": "marketing-cloud-developer-tasks",
+            "Name": "Complete Developer Tasks in Marketing Cloud Engagement"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dCAAQ"
+            },
+            "trailheadapp__API_Name__c": "wave_analytics_enable_and_produce",
+            "Name": "Build and Administer CRM Analytics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dDAAQ"
+            },
+            "trailheadapp__API_Name__c": "get-back-to-business-with-workcom",
+            "Name": "Discover a New Way to Work with Work.com"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dEAAQ"
+            },
+            "trailheadapp__API_Name__c": "discover-salesforce-maps",
+            "Name": "Discover Salesforce Maps"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dFAAQ"
+            },
+            "trailheadapp__API_Name__c": "architect-solutions-with-the-right-api",
+            "Name": "Design Solutions with Salesforce APIs"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dGAAQ"
+            },
+            "trailheadapp__API_Name__c": "build-apex-coding-skills",
+            "Name": "Build Apex Coding Skills"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dHAAQ"
+            },
+            "trailheadapp__API_Name__c": "great-integrations-mulesoft",
+            "Name": "Build Great APIs and Integrations with MuleSoft"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dIAAQ"
+            },
+            "trailheadapp__API_Name__c": "enhance-service-cloud-with-lightning-knowledge",
+            "Name": "Enhance Service Cloud with Lightning Knowledge"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dJAAQ"
+            },
+            "trailheadapp__API_Name__c": "get-started-with-cloud-security-engineering",
+            "Name": "Get Started with Cloud Security Engineering"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dKAAQ"
+            },
+            "trailheadapp__API_Name__c": "get-started-with-executive-cyber-leadership",
+            "Name": "Get Started with Executive Cyber Leadership"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dLAAQ"
+            },
+            "trailheadapp__API_Name__c": "get-started-with-security-awareness",
+            "Name": "Get Started with Security Awareness"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dMAAQ"
+            },
+            "trailheadapp__API_Name__c": "implement-cybersecurity-best-practices-in-your-organization",
+            "Name": "Implement Cybersecurity Best Practices in Your Organization"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dNAAQ"
+            },
+            "trailheadapp__API_Name__c": "quip-for-customer-360",
+            "Name": "Administer Quip"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dPAAQ"
+            },
+            "trailheadapp__API_Name__c": "manage-loyalty-processes",
+            "Name": "Manage Loyalty Processes"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dQAAQ"
+            },
+            "trailheadapp__API_Name__c": "mulesoft-integration-trailblazer",
+            "Name": "Become an Integration Champion"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dRAAQ"
+            },
+            "trailheadapp__API_Name__c": "build-guided-experiences-with-omnistudio",
+            "Name": "Build Guided Experiences with OmniStudio"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dSAAQ"
+            },
+            "trailheadapp__API_Name__c": "build-your-customer-service-management-toolkit",
+            "Name": "Build Your Customer Service Management Toolkit"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dTAAQ"
+            },
+            "trailheadapp__API_Name__c": "grow-your-career-as-a-customer-service-agent",
+            "Name": "Grow Your Career as a Customer Service Agent"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dUAAQ"
+            },
+            "trailheadapp__API_Name__c": "get-to-know-omnistudio",
+            "Name": "Get to Know OmniStudio"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dVAAQ"
+            },
+            "trailheadapp__API_Name__c": "build-integrations-using-connected-apps",
+            "Name": "Build Integrations Using Connected Apps"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dWAAQ"
+            },
+            "trailheadapp__API_Name__c": "get-started-with-design-strategy",
+            "Name": "Learn Strategy Design"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dXAAQ"
+            },
+            "trailheadapp__API_Name__c": "consulting_partner",
+            "Name": "Build Your Practice as a Consulting Partner"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4dYAAQ"
+            },
+            "trailheadapp__API_Name__c": "use-tableau-crm-for-consumer-goods-cloud",
+            "Name": "Use CRM Analytics for Consumer Goods Cloud"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eTAAQ"
+            },
+            "trailheadapp__API_Name__c": "service-cloud-for-slack",
+            "Name": "Service Cloud for Slack"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eUAAQ"
+            },
+            "trailheadapp__API_Name__c": "reach_audience_rad",
+            "Name": "Reach Your Audience with Great Content"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eVAAQ"
+            },
+            "trailheadapp__API_Name__c": "wave_analytics_einstein_discovery",
+            "Name": "Gain Insight and Improve Outcomes with Einstein Discovery"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eXAAQ"
+            },
+            "trailheadapp__API_Name__c": "explore-public-sector-solutions",
+            "Name": "Administer Public Sector Solutions"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4eYAAQ"
+            },
+            "trailheadapp__API_Name__c": "explore-the-pre-built-apps-in-pss",
+            "Name": "Explore License and Permit Management for the Public Sector"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4bwAAA"
+            },
+            "trailheadapp__API_Name__c": "plan-salesforce-scheduler-implementation",
+            "Name": "Plan Salesforce Scheduler Implementation"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4bxAAA"
+            },
+            "trailheadapp__API_Name__c": "get-started-with-product-designer",
+            "Name": "Get Started with Product Designer"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4byAAA"
+            },
+            "trailheadapp__API_Name__c": "grow-your-customer-loyalty-program",
+            "Name": "Grow Your Customer Loyalty Program"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4bzAAA"
+            },
+            "trailheadapp__API_Name__c": "grantmaking-in-salesforce",
+            "Name": "Manage Grantmaking with Salesforce"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4c0AAA"
+            },
+            "trailheadapp__API_Name__c": "explore-manufacturing-cloud-for-sales",
+            "Name": "Explore Manufacturing Cloud for Sales"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4c1AAA"
+            },
+            "trailheadapp__API_Name__c": "develop-loyalty-programs-to-enhance-engagement",
+            "Name": "Develop Loyalty Programs to Enhance Engagement"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4c2AAA"
+            },
+            "trailheadapp__API_Name__c": "learn-about-the-admin-role",
+            "Name": "Learn About the Salesforce Admin Role"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4c3AAA"
+            },
+            "trailheadapp__API_Name__c": "explore-lightning-experience-reports-dashboards",
+            "Name": "Explore Lightning Experience Reports & Dashboards"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4c4AAA"
+            },
+            "trailheadapp__API_Name__c": "dive-into-sales-cloud-for-admins",
+            "Name": "Dive Into Sales Cloud for Admins"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4c5AAA"
+            },
+            "trailheadapp__API_Name__c": "dive-into-service-cloud-for-salesforce-admins",
+            "Name": "Dive Into Service Cloud for Salesforce Admins"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4c6AAA"
+            },
+            "trailheadapp__API_Name__c": "learn-about-trailhead-and-salesforce",
+            "Name": "Learn About Trailhead and Salesforce"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4c7AAA"
+            },
+            "trailheadapp__API_Name__c": "manage-data-as-a-salesforce-admin",
+            "Name": "Manage Data as a Salesforce Admin"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Trail__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Trail__c/a048b00000hh4c8AAA"
+            },
+            "trailheadapp__API_Name__c": "secure-your-crm",
+            "Name": "Secure Your CRM"
+        }
+    ]
+}

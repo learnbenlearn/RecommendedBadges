@@ -40,8 +40,8 @@ export default class Lookup extends LightningElement {
   };
   @api
   set lookupItems(value) {
-    this._lookupItems = value;
-    this.searchResults = value;
+    this._lookupItems = JSON.parse(JSON.stringify([...value]));
+    this.searchResults = JSON.parse(JSON.stringify([...value]));
   }
 
   renderedCallback() {

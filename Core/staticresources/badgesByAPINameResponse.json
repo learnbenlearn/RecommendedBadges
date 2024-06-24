@@ -1,0 +1,806 @@
+{
+    "totalSize": 100,
+    "done": true,
+    "records": [
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po05AAA"
+            },
+            "trailheadapp__API_Name__c": "salesforce-reorder-portal-quick-look",
+            "Name": "Salesforce Reorder Portal: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po06AAA"
+            },
+            "trailheadapp__API_Name__c": "actionable-segmentation-for-financial-services-cloud",
+            "Name": "Actionable Segmentation for Financial Services Cloud"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po07AAA"
+            },
+            "trailheadapp__API_Name__c": "prompt-builder-basics",
+            "Name": "Prompt Builder Basics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po08AAA"
+            },
+            "trailheadapp__API_Name__c": "platform-developer-i-certification-maintenance-winter-24",
+            "Name": "Platform Developer I Certification Maintenance (Winter '24)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po09AAA"
+            },
+            "trailheadapp__API_Name__c": "platform-app-builder-certification-maintenance-winter-24",
+            "Name": "Platform App Builder Certification Maintenance (Winter '24)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0AAAQ"
+            },
+            "trailheadapp__API_Name__c": "artificial-intelligence-and-cybersecurity",
+            "Name": "Artificial Intelligence and Cybersecurity"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0BAAQ"
+            },
+            "trailheadapp__API_Name__c": "set-up-einstein-conversation-insights",
+            "Name": "Einstein Conversation Insights Setup"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0CAAQ"
+            },
+            "trailheadapp__API_Name__c": "revenue-intelligence-setup",
+            "Name": "Revenue Intelligence Setup"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0DAAQ"
+            },
+            "trailheadapp__API_Name__c": "critical-thinking-and-decision-making-with-data-and-ai",
+            "Name": "Critical Thinking and Decision-Making with Data and AI"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0EAAQ"
+            },
+            "trailheadapp__API_Name__c": "image-generation-and-diffusion-models",
+            "Name": "Generative AI for Images"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0FAAQ"
+            },
+            "trailheadapp__API_Name__c": "change-management-for-ai-implementation",
+            "Name": "Change Management for AI Implementation"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0HAAQ"
+            },
+            "trailheadapp__API_Name__c": "large-language-models",
+            "Name": "Large Language Models"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0IAAQ"
+            },
+            "trailheadapp__API_Name__c": "model-fine-tuning",
+            "Name": "Model Fine-Tuning"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0JAAQ"
+            },
+            "trailheadapp__API_Name__c": "prompt-fundamentals",
+            "Name": "Prompt Fundamentals"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0KAAQ"
+            },
+            "trailheadapp__API_Name__c": "industries-products-and-product-bundles",
+            "Name": "Industries Products and Product Bundles"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0GAAQ"
+            },
+            "trailheadapp__API_Name__c": "generative-ai-for-organizations",
+            "Name": "Generative AI for Organizations"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po21AAA"
+            },
+            "trailheadapp__API_Name__c": "superbadge-user-experience-sbu",
+            "Name": "User Experience Superbadge Unit"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po22AAA"
+            },
+            "trailheadapp__API_Name__c": "superbadge_sales_opps_sbu",
+            "Name": "Sales Opportunities Superbadge Unit"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po23AAA"
+            },
+            "trailheadapp__API_Name__c": "superbadge-case-management-specialist",
+            "Name": "Case Management Specialist Superbadge"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po24AAA"
+            },
+            "trailheadapp__API_Name__c": "superbadge-case-handling-fundamentals-sbu",
+            "Name": "Case Handling Fundamentals Superbadge Unit"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po25AAA"
+            },
+            "trailheadapp__API_Name__c": "superbadge-channel-routing-sbu",
+            "Name": "Channel Routing Superbadge Unit"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po26AAA"
+            },
+            "trailheadapp__API_Name__c": "superbadge-case-lifecycle-sbu",
+            "Name": "Case Lifecycle Superbadge Unit"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnyiAAA"
+            },
+            "trailheadapp__API_Name__c": "cross-disciplinary-collaboration",
+            "Name": "Cross-Disciplinary Collaboration"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0LAAQ"
+            },
+            "trailheadapp__API_Name__c": "customized-marketing-assets",
+            "Name": "Customized Marketing Assets"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0MAAQ"
+            },
+            "trailheadapp__API_Name__c": "cert-prep-data-cloud-consultant",
+            "Name": "Cert Prep: Data Cloud Consultant"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0OAAQ"
+            },
+            "trailheadapp__API_Name__c": "salesforce-pay-now-quick-look",
+            "Name": "Salesforce Pay Now: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0PAAQ"
+            },
+            "trailheadapp__API_Name__c": "live-reports-and-app2app-communication-with-consumer-goods-modeler",
+            "Name": "Live Reports and App2App Communication with Consumer Goods Modeler"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0QAAQ"
+            },
+            "trailheadapp__API_Name__c": "introduction-to-nodejs-on-heroku",
+            "Name": "Introduction to Node.js on Heroku"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0RAAQ"
+            },
+            "trailheadapp__API_Name__c": "b2c-commerce-developer-certification-maintenance-spring-24",
+            "Name": "B2C Commerce Developer Certification Maintenance (Spring '24)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0SAAQ"
+            },
+            "trailheadapp__API_Name__c": "scale-test-quick-look",
+            "Name": "Scale Test: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0TAAQ"
+            },
+            "trailheadapp__API_Name__c": "administrator-certification-maintenance-spring-24",
+            "Name": "Administrator Certification Maintenance (Spring '24)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0UAAQ"
+            },
+            "trailheadapp__API_Name__c": "cpq-specialist-certification-maintenance-spring-24",
+            "Name": "CPQ Specialist Certification Maintenance (Spring '24)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0VAAQ"
+            },
+            "trailheadapp__API_Name__c": "strategy-designer-certification-maintenance-spring-24",
+            "Name": "Strategy Designer Certification Maintenance (Spring '24)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0WAAQ"
+            },
+            "trailheadapp__API_Name__c": "pipeline-inspection-quick-look",
+            "Name": "Pipeline Inspection: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0XAAQ"
+            },
+            "trailheadapp__API_Name__c": "tableau-crm-enstein-disc-cons-certification-maintenance-spring-24",
+            "Name": "Tableau CRM Einstein Disc. Cons. Certification Maintenance (Spring '24)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0YAAQ"
+            },
+            "trailheadapp__API_Name__c": "sell-smarter-with-pipeline-inspection",
+            "Name": "Sell Smarter with Pipeline Inspection"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0ZAAQ"
+            },
+            "trailheadapp__API_Name__c": "salesforce-maps-quick-look",
+            "Name": "Salesforce Maps: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0aAAA"
+            },
+            "trailheadapp__API_Name__c": "territory-design-and-management-quick-look",
+            "Name": "Territory Design and Management: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnyjAAA"
+            },
+            "trailheadapp__API_Name__c": "threat-modeling-for-threat-hunters",
+            "Name": "Threat Modeling for Threat Hunters"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnylAAA"
+            },
+            "trailheadapp__API_Name__c": "industries-cpq-discounts",
+            "Name": "Industries CPQ Discounts"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnymAAA"
+            },
+            "trailheadapp__API_Name__c": "automated-data-extraction-with-intelligent-document-reader",
+            "Name": "Automated Data Extraction with Intelligent Document Reader"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnynAAA"
+            },
+            "trailheadapp__API_Name__c": "cybersecurity-during-election-periods",
+            "Name": "Cybersecurity During Election Periods"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnyoAAA"
+            },
+            "trailheadapp__API_Name__c": "interest-tags-for-financial-services-cloud",
+            "Name": "Interest Tags for Financial Services Cloud"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnypAAA"
+            },
+            "trailheadapp__API_Name__c": "equality-fundamentals",
+            "Name": "Equality Fundamentals"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnyqAAA"
+            },
+            "trailheadapp__API_Name__c": "fundamentals-of-maps",
+            "Name": "Fundamentals of Maps"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0cAAA"
+            },
+            "trailheadapp__API_Name__c": "marketing-content-management-quick-look",
+            "Name": "Marketing Content Management: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0dAAA"
+            },
+            "trailheadapp__API_Name__c": "code-builder-basics",
+            "Name": "Code Builder Basics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0eAAA"
+            },
+            "trailheadapp__API_Name__c": "apex-testing-write-unit-tests",
+            "Name": "Apex Testing: Write Unit Tests"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0fAAA"
+            },
+            "trailheadapp__API_Name__c": "apex-testing-review-testing-fundamentals",
+            "Name": "Apex Testing: Review Testing Fundamentals"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0gAAA"
+            },
+            "trailheadapp__API_Name__c": "effective-decision-making",
+            "Name": "Effective Decision-Making"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0hAAA"
+            },
+            "trailheadapp__API_Name__c": "industries-advanced-pricing",
+            "Name": "Industries Advanced Pricing"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0iAAA"
+            },
+            "trailheadapp__API_Name__c": "batch-data-transforms-in-data-cloud-quick-look",
+            "Name": "Batch Data Transforms in Data Cloud: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0jAAA"
+            },
+            "trailheadapp__API_Name__c": "unified-knowledge-quick-look",
+            "Name": "Unified Knowledge: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0kAAA"
+            },
+            "trailheadapp__API_Name__c": "byol-data-shares-in-data-cloud-quick-look",
+            "Name": "BYOL Data Shares in Data Cloud: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0lAAA"
+            },
+            "trailheadapp__API_Name__c": "list-view-quick-check",
+            "Name": "List View: Quick Check"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0mAAA"
+            },
+            "trailheadapp__API_Name__c": "apex-testing-prepare-for-unit-testing",
+            "Name": "Apex Testing: Prepare for Unit Testing"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0bAAA"
+            },
+            "trailheadapp__API_Name__c": "conversational-marketing-with-whatsapp",
+            "Name": "Conversational Marketing with WhatsApp"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0nAAA"
+            },
+            "trailheadapp__API_Name__c": "trailhead-profile-updates-quick-look",
+            "Name": "Trailhead Profile Updates: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0oAAA"
+            },
+            "trailheadapp__API_Name__c": "quotes-and-orders-with-enterprise-sales-management",
+            "Name": "Quotes and Orders with Enterprise Sales Management"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0pAAA"
+            },
+            "trailheadapp__API_Name__c": "calendar-integration-options-for-salesforce-scheduler",
+            "Name": "Calendar Integration Options for Salesforce Scheduler"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0qAAA"
+            },
+            "trailheadapp__API_Name__c": "prompt-studio-quick-look",
+            "Name": "Prompt Builder: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0rAAA"
+            },
+            "trailheadapp__API_Name__c": "trailhead-road-to-ranger",
+            "Name": "Trailhead Road to Ranger"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0sAAA"
+            },
+            "trailheadapp__API_Name__c": "spring-24-release-highlights",
+            "Name": "Spring '24 Release Highlights"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0tAAA"
+            },
+            "trailheadapp__API_Name__c": "service-automation-with-service-catalog",
+            "Name": "Accelerated Service Automation with Service Catalog"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnyrAAA"
+            },
+            "trailheadapp__API_Name__c": "marketing-cloud-administrator-certification-maintenance-winter-24",
+            "Name": "Marketing Cloud Administrator Certification Maintenance (Winter '24)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnysAAA"
+            },
+            "trailheadapp__API_Name__c": "outcome-management-quick-look",
+            "Name": "Outcome Management: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0uAAA"
+            },
+            "trailheadapp__API_Name__c": "messaging-optimization-for-in-app-and-web",
+            "Name": "Messaging for In-App and Web Optimization"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0vAAA"
+            },
+            "trailheadapp__API_Name__c": "service-catalog-quick-look",
+            "Name": "Service Catalog: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0wAAA"
+            },
+            "trailheadapp__API_Name__c": "a-skills-first-approach-to-cybersecurity",
+            "Name": "A Skills-First Approach to Cybersecurity"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0xAAA"
+            },
+            "trailheadapp__API_Name__c": "tableau-viz-extensions-quick-look",
+            "Name": "Tableau Viz Extensions: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0yAAA"
+            },
+            "trailheadapp__API_Name__c": "salesforce-architect-certification-maintenance-winter-24",
+            "Name": "Salesforce Architect Certification Maintenance (Winter '24)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po0zAAA"
+            },
+            "trailheadapp__API_Name__c": "einstein-conversation-insights-for-sales-quick-look",
+            "Name": "Einstein Conversation Insights for Sales: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po10AAA"
+            },
+            "trailheadapp__API_Name__c": "the-tableau-data-model",
+            "Name": "The Tableau Data Model"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po11AAA"
+            },
+            "trailheadapp__API_Name__c": "trailhead-in-your-language",
+            "Name": "Trailhead in Your Language"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po12AAA"
+            },
+            "trailheadapp__API_Name__c": "mulesoft-idp-basics",
+            "Name": "MuleSoft IDP Basics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po13AAA"
+            },
+            "trailheadapp__API_Name__c": "the-einstein-trust-layer",
+            "Name": "The Einstein Trust Layer"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po14AAA"
+            },
+            "trailheadapp__API_Name__c": "summer-24-release-highlights",
+            "Name": "Summer '24 Release Highlights"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po15AAA"
+            },
+            "trailheadapp__API_Name__c": "detailed-data-analysis",
+            "Name": "Detailed Data Analysis"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po16AAA"
+            },
+            "trailheadapp__API_Name__c": "metadata-management-in-tableau",
+            "Name": "Metadata Management in Tableau"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnytAAA"
+            },
+            "trailheadapp__API_Name__c": "accessible-data-visualizations-in-tableau",
+            "Name": "Accessible Data Visualizations in Tableau"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnyuAAA"
+            },
+            "trailheadapp__API_Name__c": "custom-arc-graphs-in-financial-services-cloud",
+            "Name": "Custom ARC Graphs in Financial Services Cloud"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnyvAAA"
+            },
+            "trailheadapp__API_Name__c": "data-cloud-consultant-certification-maintenance-winter-24",
+            "Name": "Data Cloud Consultant Certification Maintenance (Winter '24)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnywAAA"
+            },
+            "trailheadapp__API_Name__c": "tableau-pulse-quick-look",
+            "Name": "Tableau Pulse: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnyxAAA"
+            },
+            "trailheadapp__API_Name__c": "claims-management-basics-in-consumer-goods-cloud",
+            "Name": "Claims Management Basics in Consumer Goods Cloud"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnyyAAA"
+            },
+            "trailheadapp__API_Name__c": "funds-planning-in-trade-promotion-management",
+            "Name": "Funds Planning in Trade Promotion Management"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnyzAAA"
+            },
+            "trailheadapp__API_Name__c": "funds-administration-in-trade-promotion-management",
+            "Name": "Funds Administration in Trade Promotion Management"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnz0AAA"
+            },
+            "trailheadapp__API_Name__c": "impact-management-quick-look",
+            "Name": "Impact Management: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnz1AAA"
+            },
+            "trailheadapp__API_Name__c": "impact-management-tactics-and-practices",
+            "Name": "Impact Management Tactics and Practices"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnz2AAA"
+            },
+            "trailheadapp__API_Name__c": "industries-cpq-promotions",
+            "Name": "Industries CPQ Promotions"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012pnz3AAA"
+            },
+            "trailheadapp__API_Name__c": "industries-order-management-orchestration-foundations",
+            "Name": "Industries Order Management Orchestration Foundations"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po17AAA"
+            },
+            "trailheadapp__API_Name__c": "data-presentation-in-tableau",
+            "Name": "Data Presentation in Tableau"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po18AAA"
+            },
+            "trailheadapp__API_Name__c": "salesforce-labs-basics",
+            "Name": "Salesforce Labs Basics"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po19AAA"
+            },
+            "trailheadapp__API_Name__c": "claims-creation-for-insurance",
+            "Name": "Claims Creation for Insurance"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po1AAAQ"
+            },
+            "trailheadapp__API_Name__c": "marketing-cloud-email-specialist-certification-maintenance-spring-24",
+            "Name": "Marketing Cloud Email Specialist Certification Maintenance (Spring '24)"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po1BAAQ"
+            },
+            "trailheadapp__API_Name__c": "slack-solutions-and-tools",
+            "Name": "Slack Solutions and Tools"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po1CAAQ"
+            },
+            "trailheadapp__API_Name__c": "einstein-pricing-quick-look",
+            "Name": "Einstein Pricing: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po1DAAQ"
+            },
+            "trailheadapp__API_Name__c": "industries-object-types",
+            "Name": "Industries Object Types"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po1EAAQ"
+            },
+            "trailheadapp__API_Name__c": "streaming-data-transforms-quick-look",
+            "Name": "Streaming Data Transforms in Data Cloud: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po1FAAQ"
+            },
+            "trailheadapp__API_Name__c": "crm-analytics-for-slack-quick-look",
+            "Name": "CRM Analytics for Slack: Quick Look"
+        },
+        {
+            "attributes": {
+                "type": "trailheadapp__Badge__c",
+                "url": "/services/data/v60.0/sobjects/trailheadapp__Badge__c/a018b000012po1GAAQ"
+            },
+            "trailheadapp__API_Name__c": "benefit-management-data-model-in-public-sector-solutions",
+            "Name": "Benefit Management Data Model in Public Sector Solutions"
+        }
+    ]
+}

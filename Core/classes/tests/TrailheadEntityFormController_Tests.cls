@@ -10,27 +10,42 @@ private class TrailheadEntityFormController_Tests {
 
     @isTest
     private static void it_should_get_badges_by_api_name() {
-        String testResponse = '{"test": "response"}';
-        Test.setMock(HttpCalloutMock.class, new CustomHttpCalloutMock(testResponse, 200));
+        StaticResourceCalloutMock mock = new StaticResourceCalloutMock();
+        mock.setStaticResource('badgesByAPINameResponse');
+        mock.setStatusCode(200);
+        mock.setHeader('Content-Type', 'application/json');
+        Test.setMock(HttpCalloutMock.class, mock);
 
         Test.startTest();
-        Map<String, Object> responseBody = TrailheadEntityFormController.getTrailheadEntitiesByAPIName('Recommended_Badge__c');
+        List<TrailheadEntityFormController.LookupItem> lookupItems = TrailheadEntityFormController.getTrailheadEntitiesByAPIName('Recommended_Badge__c');
         Test.stopTest();
-        System.debug(responseBody);
-        
-        Assert.areEqual((Map<String, Object>) JSON.deserializeUntyped(testResponse), responseBody, 'Expected response body to match provided value.');
+
+        for(TrailheadEntityFormController.LookupItem lookupItem : lookupItems) {
+            Assert.isTrue(lookupItem.Id == lookupItem.SecondaryFieldValue, 'Expected Id and SecondaryFieldValue to equal each other.');
+            Assert.isNotNull(lookupItem.Id, 'Expected lookup item Id to be populated.');
+            Assert.isNotNull(lookupItem.Name, 'Expected lookup item Id to be populated.');
+            Assert.isNotNull(lookupItem.SecondaryFieldValue, 'Expected lookup item Id to be populated.');
+        }
     }
 
     @isTest
     private static void it_should_get_trails_by_api_name() {
-        String testResponse = '{"test": "response"}';
-        Test.setMock(HttpCalloutMock.class, new CustomHttpCalloutMock(testResponse, 200));
+        StaticResourceCalloutMock mock = new StaticResourceCalloutMock();
+        mock.setStaticResource('trailsByAPINameResponse');
+        mock.setStatusCode(200);
+        mock.setHeader('Content-Type', 'application/json');
+        Test.setMock(HttpCalloutMock.class, mock);
 
         Test.startTest();
-        Map<String, Object> responseBody = TrailheadEntityFormController.getTrailheadEntitiesByAPIName('Recommended_Trail__c');
+        List<TrailheadEntityFormController.LookupItem> lookupItems = TrailheadEntityFormController.getTrailheadEntitiesByAPIName('Recommended_Badge__c');
         Test.stopTest();
-        
-        Assert.areEqual((Map<String, Object>) JSON.deserializeUntyped(testResponse), responseBody, 'Expected response body to match provided value.');
+
+        for(TrailheadEntityFormController.LookupItem lookupItem : lookupItems) {
+            Assert.isTrue(lookupItem.Id == lookupItem.SecondaryFieldValue, 'Expected Id and SecondaryFieldValue to equal each other.');
+            Assert.isNotNull(lookupItem.Id, 'Expected lookup item Id to be populated.');
+            Assert.isNotNull(lookupItem.Name, 'Expected lookup item Id to be populated.');
+            Assert.isNotNull(lookupItem.SecondaryFieldValue, 'Expected lookup item Id to be populated.');
+        }
     }
 
     @isTest

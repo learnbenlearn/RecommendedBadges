@@ -30,7 +30,7 @@ public with sharing class TrailheadEntityFormController {
      * @return  `Map<String, Object>`
      */
     @AuraEnabled(cacheable=true)
-    public static Map<String, Object> getTrailheadEntitiesByAPIName(String childEntityType) {
+    public static List<LookupItem> getTrailheadEntitiesByAPIName(String childEntityType) {
         if(childEntityType != null && providerSObjectsByChildEntityType.get(childEntityType) != null) {
             String query = String.format(
                 'SELECT trailheadapp__API_Name__c, Name FROM {0} WHERE trailheadapp__Archived__c = false',
@@ -42,7 +42,9 @@ public with sharing class TrailheadEntityFormController {
             try {
                 HttpResponse response = new Http().send(request);
                 if(response.getStatusCode() == 200) {
-                    return (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
+                    DataWeave.Script dwscript = new DataWeaveScriptResource.trailheadEntityFormMapping();
+                    DataWeave.Result dwresult = dwscript.execute(new Map<String, Object>{'payload' => response.getBody()});
+                    return (List<LookupItem>) dwresult.getValue();
                 } else {
                     throw new AuraHandledException(response.toString() + '\n' + response.getBody());
                 }
@@ -51,5 +53,17 @@ public with sharing class TrailheadEntityFormController {
             }
         }
         return null;
+    }
+
+    /**
+     * Wrapper class for lookup items for lookup util LWC.
+     */    
+    public class LookupItem {
+        @AuraEnabled
+        public String Id;
+        @AuraEnabled
+        public String Name;
+        @AuraEnabled
+        public String SecondaryFieldValue;
     }
 }

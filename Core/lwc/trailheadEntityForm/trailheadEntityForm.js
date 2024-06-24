@@ -65,16 +65,9 @@ export default class TrailheadEntityForm extends NavigationMixin(LightningElemen
     }
 
     @wire(getTraillheadEntitiesByApiName, { childEntityType: '$objectApiName'})
-    parseBadgesByApiName({error, data}) {
+    parseTrailheadEntitiesByApiName({error, data}) {
         if(data) {
-            this.lookupItems = [];
-            for(let record of data.records) {
-                this.lookupItems.push({
-                    Id: record.trailheadapp__API_Name__c,
-                    Name: record.Name,
-                    SecondaryFieldValue: record.trailheadapp__API_Name__c
-                });
-            }
+            this.lookupItems = [...data];
         } else if(error) {
             this.template.querySelector('c-error').handleError(error);
         }
