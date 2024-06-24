@@ -66,7 +66,9 @@ jobs:
           condition:
             and:
               - equal: [ true, << pipeline.parameters.create-packages >> ]
-              - equal: [ fflib-migration, << pipeline.git.branch >> ]
+              - matches:
+                  pattern: "[^m(?!ain)(?<!m)a(?!in)(?<!ma)i(?!n)(?<!mai)n]"
+                  value: << pipeline.git.branch>> ]
           steps:
             - run:
                 name: Get Packages to Update
@@ -115,7 +117,11 @@ jobs:
                     sf project deploy start -o $TEST_ORG_ALIAS
       - when:
             condition:
-              equal: [ true, << pipeline.parameters.create-packages >> ]
+              and:
+                - equal: [ true, << pipeline.parameters.create-packages >> ]
+                - matches:
+                    pattern: "[^m(?!ain)(?<!m)a(?!in)(?<!ma)i(?!n)(?<!mai)n]"
+                    value: << pipeline.git.branch>> ]
             steps:
               - run:
                   name: Install Packages in Scratch Org
@@ -137,7 +143,11 @@ jobs:
           command: sf org delete scratch -o $TEST_ORG_ALIAS -p
       - when:
             condition:
-              equal: [ true, << pipeline.parameters.create-packages >> ]
+              and:
+                - equal: [ true, << pipeline.parameters.create-packages >> ]
+                - matches:
+                    pattern: "[^m(?!ain)(?<!m)a(?!in)(?<!ma)i(?!n)(?<!mai)n]"
+                    value: << pipeline.git.branch>> ]
             steps:
               - run:
                   name: Make Request to Packaging App
