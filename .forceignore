@@ -30,13 +30,13 @@ package.xml
 #Core
 fflib
 LWCErrorHandler
-#LWCUtils
-#PrivateMixView
-#RecommendedBadgeMix
-#SortCustomMetadata
-#StorageManagement
-#Triggers
-#UserInterface
+LWCUtils
+PrivateMixView
+RecommendedBadgeMix
+SortCustomMetadata
+StorageManagement
+Triggers
+UserInterface
 
 # Ignored Folders
 unpackageable

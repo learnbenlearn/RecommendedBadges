@@ -51,7 +51,7 @@ jobs:
         - when:
             condition:
               not: 
-                equal: [ main, CIRCLE_BRANCH ]
+                equal: [ main, $CIRCLE_BRANCH ]
             steps:
               - run:
                   name: Populate Dynamic Parameters
