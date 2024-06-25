@@ -1,10 +1,10 @@
 /**
- * @description       : Selector class for Mix Category custom object.
- * @author            : Ben Learn
- * @last modified on  : 02-16-2023
- * @last modified by  : Ben Learn
-**/
+ * Selector class for Mix Category custom object.
+ * @author Ben Learn
+ * @since 02-16-2023
+ */
 public inherited sharing class MixCategoriesSelector extends ApplicationSelector {
+    @SuppressWarnings('Apex.PMD')
     public List<Schema.SObjectField> getSObjectFieldList() {
         return new List<Schema.SObjectField> {
             Mix_Category__c.Id,
@@ -12,10 +12,16 @@ public inherited sharing class MixCategoriesSelector extends ApplicationSelector
         };
     }
 
+    @SuppressWarnings('Apex.PMD')
     public Schema.SObjectType getSObjectType() {
         return Mix_Category__c.sObjectType;
     }
 
+    /**
+     * Selector method to return Mix Category and parent Recommended Badge Mix Name for provided mixCategoryIds.
+     * @param mixCategoryIds 
+     * @return  `List<Mix_Category__c>`
+     */    
     public List<Mix_Category__c> selectByIdWithRecommendedBadgeMixNames(Set<Id> mixCategoryIds) {
         fflib_QueryFactory mixCategoriesQueryFactory = newQueryFactory();
 
@@ -27,20 +33,38 @@ public inherited sharing class MixCategoriesSelector extends ApplicationSelector
         return (List<Mix_Category__c>) Database.query(mixCategoriesQueryFactory.setCondition('Id IN :mixCategoryIds').toSOQL());
     }
 
+    /**
+     * Selector method to return Mix Category and value of Private Mix field on parent Recommended Badge Mix for provided mixCategoryIds.
+     * @param mixCategoryIds 
+     * @return  `List<Mix_Category__c>`
+     */    
+    public List<Mix_Category__c> selectByIdWithRecommendedBadgeMixPrivateMix(Set<Id> mixCategoryIds) {
+        fflib_QueryFactory mixCategoriesQueryFactory = newQueryFactory();
+        
+        new RecommendedBadgeMixesSelector().configureQueryFactoryFields(
+            mixCategoriesQueryFactory, 
+            Mix_Category__c.Recommended_Badge_Mix__c.getDescribe().getRelationshipName()
+        );
+        
+        return (List<Mix_Category__c>) Database.query(
+            mixCategoriesQueryFactory.selectFieldSet(Schema.SObjectType.Mix_Category__c.fieldSets.Triggers, true).
+            setCondition('Id IN :mixCategoryIds').
+            toSOQL()
+        );
+    }
+
+    /**
+     * Selector method to return all Mix Category records (including fields from psecified field set) that are related to either a public Recommended Badge Mix or a private
+     * Recommended Badge Mix owned by the running user.
+     * @param fieldSet 
+     * @return  `List<Mix_Category__c>`
+     */    
     public List<Mix_Category__c> selectAllWithRecommendedBadgeMixInfos(Schema.FieldSet fieldSet) {
         fflib_QueryFactory mixCategoriesQueryFactory = newQueryFactory();
+        new RecommendedBadgeMixesSelector().configureQueryFactoryFields(mixCategoriesQueryFactory, Mix_Category__c.Recommended_Badge_Mix__c.getDescribe().getRelationshipName());
 
         if(fieldSet != null) {
-            new RecommendedBadgeMixesSelector().configureQueryFactoryFields(
-                mixCategoriesQueryFactory,
-                Mix_Category__c.Recommended_Badge_Mix__c.getDescribe().getRelationshipName()
-            );
             mixCategoriesQueryFactory.selectFieldSet(fieldSet, true);
-        } else {
-            new RecommendedBadgeMixesSelector().configureQueryFactoryFields(
-                mixCategoriesQueryFactory, 
-                Mix_Category__c.Recommended_Badge_Mix__c.getDescribe().getRelationshipName()
-            );
         }
         
         return (List<Mix_Category__c>) Database.query(
@@ -54,6 +78,11 @@ public inherited sharing class MixCategoriesSelector extends ApplicationSelector
         );
     }
 
+    /**
+     * Selector method to return all Mix Category records related to a non-private Recommended Badge Mix, along with children Recommended Badges and Recommended Trails, as well
+     * as parent Recommended Badge Mix information.
+     * @return  `List<Mix_Category__c>`
+     */    
     public List<Mix_Category__c> selectRecommendedBadgesAndTrails() {
         fflib_QueryFactory mixCategoriesQueryFactory = newQueryFactory();
         fflib_QueryFactory recommendedBadgesQueryFactory;

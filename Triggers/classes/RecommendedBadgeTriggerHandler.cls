@@ -22,6 +22,7 @@ public without sharing class RecommendedBadgeTriggerHandler extends TriggerHandl
 
     protected override void beforeUpdate(Map<Id, sObject> updatedRecordsMap, Map<Id, sObject> oldRecordsMap) {
         RecommendedBadgeTrailTriggerHelper.updateURLPaths(Recommended_Badge__c.getSObjectType(), updatedRecordsMap.values(), oldRecordsMap);
+        clearTimeEstimatesAndHighPriority((List<Recommended_Badge__c>) updatedRecordsMap.values(), (Map<Id, Recommended_Badge__c>) oldRecordsMap);
         populateBadgeMixKeys((List<Recommended_Badge__c>) updatedRecordsMap.values(), (Map<Id, Recommended_Badge__c>) oldRecordsMap);
     }
 
@@ -51,6 +52,34 @@ public without sharing class RecommendedBadgeTriggerHandler extends TriggerHandl
             ){
                 String recommendedBadgeMixName = mixCategoryMap.get(newRecommendedBadge.Mix_Category__c).Recommended_Badge_Mix__r.Name;
                 newRecommendedBadge.Badge_Mix_Key__c = newRecommendedBadge.BadgeAPIName__c + '-' + recommendedBadgeMixName;
+            }
+        }
+    }
+
+    private static void clearTimeEstimatesAndHighPriority(List<Recommended_Badge__c> newRecommendedBadges, Map<Id, Recommended_Badge__c> oldRecommendedBadgeMap) {
+        Set<Id> newMixCategoryIds = new Set<Id>();
+        Set<Id> oldMixCategoryIds = new Set<Id>();
+        for(Recommended_Badge__c newRecommendedBadge : newRecommendedBadges) {
+            if(newRecommendedBadge.Mix_Category__c != oldRecommendedBadgeMap.get(newRecommendedBadge.Id).Mix_Category__c) {
+                newMixCategoryIds.add(newRecommendedBadge.Mix_Category__c);
+                oldMixCategoryIds.add(oldRecommendedBadgeMap.get(newRecommendedBadge.Id).Mix_Category__c);
+            }
+        }
+
+        if((newMixCategoryIds.size() > 0) && (oldMixCategoryIds.size() > 0)) {
+            Map<Id, Mix_Category__c> oldMixCategoryMap = new Map<Id, Mix_Category__c>(new MixCategoriesSelector().selectByIdWithRecommendedBadgeMixPrivateMix(oldMixCategoryIds));
+            Map<Id, Mix_Category__c> newMixCategoryMap = new Map<Id, Mix_CategorY__c>(new MixCategoriesSelector().selectByIdWithRecommendedBadgeMixPrivateMix(newMixCategoryIds));
+    
+            for(Recommended_Badge__c newRecommendedBadge : newRecommendedBadges) {
+                if(
+                    (newRecommendedBadge.Mix_Category__c != oldRecommendedBadgeMap.get(newRecommendedBadge.Id).Mix_Category__c) && 
+                    !newMixCategoryMap.get(newRecommendedBadge.Mix_Category__c).Recommended_Badge_Mix__r.Private_Mix__c && 
+                    oldMixCategoryMap.get(oldRecommendedBadgeMap.get(newRecommendedBadge.Id).Mix_Category__c).Recommended_Badge_Mix__r.Private_Mix__c
+                ) {
+                    newRecommendedBadge.Hours_Estimate__c = null;
+                    newRecommendedBadge.Minutes_Estimate__c = null;
+                    newRecommendedBadge.High_Priority__c = false;
+                }
             }
         }
     }

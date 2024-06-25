@@ -2,11 +2,14 @@
 private class RecommendedBadgeTrigger_Tests {
     @testSetup
     private static void generateData(){
-        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 1, false, true);
-        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = recommendedBadgeMixGenerator.execute();
+        RecommendedBadgeMixTS badgeMixGenerator = new RecommendedBadgeMixTS(new Map<String, Object>{'generateRecordIDs' => false, 'numberToGenerate' => 2});
+        insert badgeMixGenerator.generate();
 
-        TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, false, 1, testRecommendedBadgeMixes);
-        mixCategoryGenerator.execute();
+        MixCategoryTS mixCategoryGenerator = new MixCategoryTS(
+            new Map<String, Object>{'generateRecordIDs' => false, 'generateMasterRecords' => false, 'numberToGenerate' => 4},
+            new List<TestSupport.TestDataField>{new RelationshipField(Mix_Category__c.Recommended_Badge_Mix__c, (new Map<Id, sObject>(badgeMixGenerator.records)).keySet())}
+        );
+        insert mixCategoryGenerator.generate();
     }
 
     @isTest
@@ -266,17 +269,17 @@ private class RecommendedBadgeTrigger_Tests {
 
     @isTest
     private static void it_should_enqueue_jobs_and_publish_record_events() {
-        // make Recommended Badge Mix private so record triggered flows on Recommended Badge and Mix Category don't invoke DML
-        Recommended_Badge_Mix__c testBadgeMix = [SELECT Id FROM Recommended_Badge_Mix__c];
-        testBadgeMix.Private_Mix__c = true;
-        update testBadgeMix; 
+        // use private Recommended Badge Mix so record triggered flows on Recommended Badge and Mix Category don't invoke DML
         RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
             new Map<String, Object> {
                 'generateMasterRecords' => false,
                 'generateRecordIDs' => false
             },
             new List<TestSupport.TestDataField>{
-                new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, sObject>([SELECT Id FROM Mix_Category__c])).keySet())
+                new RelationshipField(
+                    Recommended_Badge__c.Mix_Category__c, 
+                    (new Map<Id, sObject>([SELECT Id FROM Mix_Category__c WHERE Recommended_Badge_Mix__r.Private_Mix__c = true])).keySet()
+                )
             }
         );
         
@@ -398,6 +401,93 @@ private class RecommendedBadgeTrigger_Tests {
             }
         }
         Assert.areEqual(50, numUnchangedURLs, 'Expected unchanged URL to be unchanged by RecommendedBadgeTrailTriggerHelper.updateURLPaths().');
+    }
+
+    @isTest
+    private static void it_should_clear_time_estimates_and_high_priority_on_change_to_public_mix() {
+        RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
+            new Map<String, Object> {
+                'generateMasterRecords' => false,
+                'generateRecordIDs' => false
+            },
+            new List<TestSupport.TestDataField>{
+                new RelationshipField(
+                    Recommended_Badge__c.Mix_Category__c, 
+                    (new Map<Id, sObject>([SELECT Id FROM Mix_Category__c WHERE Recommended_Badge_Mix__r.Private_Mix__c = true])).keySet()
+                ),
+                new TestSupport.TestDataField(Recommended_Badge__c.High_Priority__c, true),
+                new RandomIntegerField(Recommended_Badge__c.Hours_Estimate__c, 0, 60),
+                new RandomIntegerField(Recommended_Badge__c.Minutes_Estimate__c, 0, 60)
+            }
+        );
+        insert badgeGenerator.generate();
+
+        badgeGenerator.changeField(
+            Recommended_Badge__c.Mix_Category__c, 
+            [SELECT Id FROM Mix_Category__c WHERE Recommended_Badge_Mix__r.Private_Mix__c = false LIMIT 1].Id
+        );
+
+        Test.startTest();
+        update badgeGenerator.modifiedRecords;
+        Test.stopTest();
+
+        List<Recommended_Badge__c> badges = [SELECT Id FROM Recommended_Badge__c WHERE High_Priority__c = false AND Hours_Estimate__c = null AND Minutes_Estimate__c = null];
+        Assert.areEqual(
+            badgeGenerator.modifiedRecords.size(), 
+            badges.size(), 
+            'Expected High Priority, Hours Estimate, and Minutes Estimate fields to be reset when Recommended Badge is moved to a public mix.'
+        );
+    }
+
+    @isTest
+    private static void it_should_leave_time_estimates_and_high_priority_on_change_to_private_mix() {
+        List<Id> privateMixCategories = new List<Id>(
+            (new Map<Id, Mix_Category__c>([SELECT Id FROM Mix_Category__c WHERE Recommended_Badge_Mix__r.Private_Mix__c = true])).keySet()
+        );
+        RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
+            new Map<String, Object> {
+                'generateMasterRecords' => false,
+                'generateRecordIDs' => false
+            },
+            new List<TestSupport.TestDataField>{
+                new RelationshipField(Recommended_Badge__c.Mix_Category__c, new Set<Id>{privateMixCategories[0]}),
+                new TestSupport.TestDataField(Recommended_Badge__c.High_Priority__c, true),
+                new RandomIntegerField(Recommended_Badge__c.Hours_Estimate__c, 0, 60),
+                new RandomIntegerField(Recommended_Badge__c.Minutes_Estimate__c, 0, 60)
+            }
+        );
+        insert badgeGenerator.generate();
+
+        badgeGenerator.changeField(Recommended_Badge__c.Mix_Category__c, privateMixCategories[1]);
+
+        Test.startTest();
+        update badgeGenerator.modifiedRecords;
+        Test.stopTest();
+
+        List<Recommended_Badge__c> badges = [
+            SELECT Id, Hours_Estimate__c, Minutes_Estimate__c 
+            FROM Recommended_Badge__c 
+            WHERE High_Priority__c = true AND Hours_Estimate__c != null AND Minutes_Estimate__c != null
+        ];
+        Assert.areEqual(
+            badgeGenerator.modifiedRecords.size(), 
+            badges.size(), 
+            'Expected High Priority field to be unchanged when Recommended Badge is moved elsewhere within the same private mix or to a different private mix.'
+        );
+
+        Map<Id, Recommended_Badge__c> modifiedRecordsMap = new Map<Id, Recommended_Badge__c>((List<Recommended_Badge__c>) badgeGenerator.modifiedRecords);
+        for(Recommended_Badge__c badge : badges) {
+            Assert.areEqual(
+                modifiedRecordsMap.get(badge.Id).Hours_Estimate__c, 
+                badge.Hours_Estimate__c, 
+                'Expected Hours Estimate field to be unchanged when Recommended Badge is moved elsewhere within the same private mix or to a different private mix.'
+            );
+            Assert.areEqual(
+                modifiedRecordsMap.get(badge.Id).Minutes_Estimate__c,
+                badge.Minutes_Estimate__c,
+                'Expected Minutes Estimate field to be unchanged when Recommended Badge is moved elsewhere within the same private mix or to a different private mix.'
+            );
+        }
     }
 
     private static void cleanup(List<AsyncApexJob> jobs, Boolean failEventDelivery) {
