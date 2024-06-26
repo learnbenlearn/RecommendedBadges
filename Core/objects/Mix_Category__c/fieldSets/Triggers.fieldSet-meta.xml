@@ -72,16 +72,6 @@
         <isRequired>false</isRequired>
     </availableFields>
     <availableFields>
-        <field>Recommended_Badge_Mix__r.LastReferencedDate</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <availableFields>
-        <field>LastReferencedDate</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <availableFields>
         <field>Recommended_Badge_Mix__r.LastViewedDate</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>
