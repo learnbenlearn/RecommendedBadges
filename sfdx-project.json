@@ -279,11 +279,11 @@
   "name": "RecommendedBadges",
   "namespace": "",
   "sfdcLoginUrl": "https://recommendedbadges-dev-ed.my.salesforce.com",
-  "sourceApiVersion": "57.0",
+  "sourceApiVersion": "61.0",
   "packageAliases": {
     "NebulaLogger": "04t5Y0000027L98QAE",
     "Shortcuts": "04t8c000000yXMAAA2",
-    "TestSupport": "04t8c000000vG3cAAE",
+    "TestSupport": "04t8c000000vGAnAAM",
     "TriggerHandler": "04t8b000000jtsMAAQ",
     "Core": "0Ho8c000000fxx5CAA",
     "LWCUtils": "0Ho8c000000fy64CAA",

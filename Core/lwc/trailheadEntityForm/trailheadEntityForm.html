@@ -5,20 +5,20 @@
             onload={handleLoad} onsubmit={handleSubmit} onsuccess={handleSuccess}>
             <lightning-messages class="slds-col slds-size_1-of-1"></lightning-messages>
             
-            <c-lookup class="slds-col slds-size_1-of-2 inputMargin" object-name={lookupObjectName} result-icon-name={lookupResultIconName} lookup-items={lookupItems} 
-                placeholder={lookupPlaceholder} selected-id={selectedLookupId} required onitemselect={handleLookupSelect}>
+            <c-lookup class="slds-col slds-size_1-of-2 slds-medium-size_1-of-1 slds-large-size_1-of-2 inputMargin" object-name={lookupObjectName} result-icon-name={lookupResultIconName} 
+                lookup-items={lookupItems} placeholder={lookupPlaceholder} selected-id={selectedLookupId} required onitemselect={handleLookupSelect}>
             </c-lookup>
             <template for:each={fields} for:item="field" key>
-                <lightning-input-field class="slds-col slds-size_1-of-2" key={field.fieldApiName} field-name={field.fieldApiName}></lightning-input-field>
+                <lightning-input-field class="slds-col slds-size_1-of-2 slds-medium-size_1-of-1 slds-large-size_1-of-2" key={field.fieldApiName} field-name={field.fieldApiName}></lightning-input-field>
             </template>
             
             <div class="slds-col slds-size_1-of-1"></div>
             <br/>
-            <span class="slds-col slds-size_2-of-5"></span>
+            <span class="slds-col slds-size_2-of-5 slds-medium-size_1-of-3 slds-large-size_2-of-5"></span>
             <lightning-button class="slds-col slds-grow-none" type="reset" label="Cancel" onclick={handleCancel}></lightning-button>
             <lightning-button class="slds-col slds-grow-none" type="submit" label="Save & New" onclick={handleSaveAndNew}></lightning-button>
             <lightning-button class="slds-col slds-grow-none" variant="brand" type="submit" label="Save" onclick={handleSave}></lightning-button>          
-            <span class="slds-col slds-size_2-of-5"></span>
+            <span class="slds-col slds-size_2-of-5 slds-medium-size_1-of-3 slds-large-size_2-of-5"></span>
 
         </lightning-record-edit-form>
     </lightning-card>

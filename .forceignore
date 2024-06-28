@@ -22,6 +22,9 @@ package.xml
 **/ContactCenter_UtilityBar.flexipage-meta.xml
 **/LightningSalesConsole_UtilityBar.flexipage-meta.xml
 **/LightningService_UtilityBar.flexipage-meta.xml
+**externalCredentials**
+**certs**
+**namedCredentials**
 
 ## Temp Ignored
 #**Home_Page_Default.flexipage**
@@ -31,12 +34,12 @@ package.xml
 fflib
 LWCErrorHandler
 #LWCUtils
-#PrivateMixView
-#RecommendedBadgeMix
-#SortCustomMetadata
-#StorageManagement
+PrivateMixView
+RecommendedBadgeMix
+SortCustomMetadata
+StorageManagement
 #Triggers
-#UserInterface
+UserInterface
 
 # Ignored Folders
 unpackageable
