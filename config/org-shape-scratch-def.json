@@ -1,6 +1,7 @@
 {
     "orgname": "Recommended Badges",
     "sourceOrg": "00DDm000000H65oMAC",
+    "edition": "Developer",
     "features": ["EnableSetPasswordInApi"],
     "settings": {
         "lightningExperienceSettings": {

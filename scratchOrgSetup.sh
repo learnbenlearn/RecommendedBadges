@@ -19,7 +19,7 @@ then
     for id in ${dependencies[@]}
     do
         echo "Installing dependent package: "$id
-        sf package install -p $id -o $targetorg -r -w 20
+        sf package install --skip-handlers -p $id -o $targetorg -r -w 20
         echo ""
     done
 fi
