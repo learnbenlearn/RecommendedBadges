@@ -1,15 +1,9 @@
 /**
- * @description       : Apex controller for recommendedBadgeMixContainer LWC.
- * @author            : Ben Learn
- * @last modified on  : 02-07-2023
- * @last modified by  : Ben Learn
-**/
+ * Apex controller for recommendedBadgeMixContainer LWC.
+ * @author Ben Learn
+ * @since 02-07-2023
+ */
 public without sharing class RecommendedBadgeMixController {
-    /**
-    * @description 
-    * @author Ben Learn | 03-11-2022 
-    * @return RecommendedBadgeMixWrapper 
-    **/
     /**
      * Method to retrieve necessary data - including mix categories, recommended badges, and recommended trails for public recommended
      *  badge mixes, as well as the name of the default mix - for recommendedBadgeMixContainer.
