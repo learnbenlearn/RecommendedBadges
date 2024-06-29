@@ -3,7 +3,6 @@
     <fullName>Type__c</fullName>
     <deprecated>false</deprecated>
     <description>Value of trailheadapp__Type__c field on corresponding trailheadapp__Badge__c.</description>
-    <externalId>false</externalId>
     <label>Type</label>
     <required>false</required>
     <trackTrending>false</trackTrending>

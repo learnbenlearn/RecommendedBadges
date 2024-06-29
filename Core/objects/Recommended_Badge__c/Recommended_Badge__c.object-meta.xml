@@ -162,7 +162,7 @@
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>true</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
@@ -173,7 +173,13 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Recommended Badges</pluralLabel>
-    <searchLayouts></searchLayouts>
+    <searchLayouts>
+        <searchResultsAdditionalFields>BadgeName__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>BadgeAPIName__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Mix_Category__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Products__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>

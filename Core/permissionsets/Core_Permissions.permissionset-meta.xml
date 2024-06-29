@@ -4,6 +4,10 @@
         <apexClass>TrailheadEntityFormController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>TrailheadEntityService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <customMetadataTypeAccesses>
         <enabled>true</enabled>
         <name>DefaultObjectSelector__mdt</name>
@@ -263,5 +267,13 @@
     <tabSettings>
         <tab>Recommended_Badge_Mix__c</tab>
         <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Recommended_Badge__c</tab>
+        <visibility>Available</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Recommended_Trail__c</tab>
+        <visibility>Available</visibility>
     </tabSettings>
 </PermissionSet>

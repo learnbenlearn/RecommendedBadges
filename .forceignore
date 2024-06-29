@@ -11,6 +11,7 @@ package.xml
 **/__tests__/**
 
 **Admin.profile**
+**B2B Reordering Portal Buyer Profile**
 **/fieldRestrictionRules/**
 **Standard-Home.tab**
 **AppSwitcher.appMenu**
@@ -33,12 +34,12 @@ package.xml
 #Core
 fflib
 LWCErrorHandler
-#LWCUtils
+LWCUtils
 PrivateMixView
-RecommendedBadgeMix
-SortCustomMetadata
+#RecommendedBadgeMix
+#SortCustomMetadata
 StorageManagement
-#Triggers
+Triggers
 UserInterface
 
 # Ignored Folders
