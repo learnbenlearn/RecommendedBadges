@@ -4,6 +4,10 @@
         <apexClass>TrailheadEntityFormController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>TrailheadEntityService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <customMetadataTypeAccesses>
         <enabled>true</enabled>
         <name>DefaultObjectSelector__mdt</name>
