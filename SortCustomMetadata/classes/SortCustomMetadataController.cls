@@ -6,12 +6,11 @@
 **/
 public without sharing class SortCustomMetadataController {
     /**
-    * @description Method to return sortable fields for table and treegrid views.
-    * @author Ben Learn | 03-13-2022 
-    * @param String componentName 
-    * @return List<Sortable_Field__mdt> 
-    **/
-    @AuraEnabled(cacheable=true)
+     * Method to return sortable fields for table and treegrid views.
+     * @param componentName 
+     * @return  `List<Sortable_Field__mdt>`
+     */
+     @AuraEnabled(cacheable=true scope='global')
     public static List<Sortable_Field__mdt> getSortOptions(String componentName) {
         return new SortableFieldsSelector().selectByComponentNameWithSortableFieldValues(componentName);
     }
