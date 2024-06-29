@@ -264,4 +264,12 @@
         <tab>Recommended_Badge_Mix__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
+    <tabSettings>
+        <tab>Recommended_Badge__c</tab>
+        <visibility>Available</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Recommended_Trail__c</tab>
+        <visibility>Available</visibility>
+    </tabSettings>
 </PermissionSet>
