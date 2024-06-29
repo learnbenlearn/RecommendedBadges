@@ -1,7 +1,7 @@
 const axios = require('axios');
 const fs = require('fs');
 
-const HEROKU_ENDPOINT = 'https://recommended-badges-warehouse.herokuapp.com/job';
+const HEROKU_ENDPOINT = 'https://recommended-badges-warehouse.herokuapp.com/job/create';
 const SORTED_PACKAGES_TO_UPDATE_FILE = '/tmp/artifacts/packagesToUpdate.txt';
 const PULL_REQUEST_URL = process.env.CIRCLE_PULL_REQUEST;
 
