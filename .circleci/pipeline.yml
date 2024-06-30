@@ -102,7 +102,7 @@ jobs:
             packagesToInstall+=$( (npm run --silent getDependenciesBeforeTesting) )
             echo $packagesToInstall
             for packageToInstall in ${packagesToInstall[@]};
-                do sf package install --skip-handlers -p $packageToInstall -o $TEST_ORG_ALIAS -r -w $WAIT_TIME
+                do sf package install --skip-handlers FeatureEnforcement -p $packageToInstall -o $TEST_ORG_ALIAS -r -w $WAIT_TIME
             done
       - when:
             condition:
@@ -125,7 +125,7 @@ jobs:
                     packagesToInstall=()
                     packagesToInstall+=$( (npm run --silent getSortedPackagesToInstall) )
                     for packageToInstall in ${packagesToInstall[@]};
-                      do sf package install --skip-handlers -p $packageToInstall -o $TEST_ORG_ALIAS -r -w $WAIT_TIME
+                      do sf package install --skip-handlers FeatureEnforcement -p $packageToInstall -o $TEST_ORG_ALIAS -r -w $WAIT_TIME
                     done
       - run:
           name: Run Tests in Scratch Org
