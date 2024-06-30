@@ -13,6 +13,7 @@
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "postinstall": "husky install",
+    "createScratchOrg": "node -e 'require(\"./node-scripts/createScratchOrg.js\").createScratchOrg()",
     "populateParameters": "node -e 'require(\"./node-scripts/populateParameters.js\").populateParameters()'",
     "getSortedPackagesToUpdate": "node -e 'require(\"./node-scripts/getSortedPackagesToUpdate.js\").getSortedPackagesToUpdate()'",
     "getDependenciesBeforeTesting": "node -e 'require(\"./node-scripts/getDependenciesBeforeTesting.js\").getDependenciesBeforeTesting()'",
