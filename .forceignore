@@ -36,8 +36,8 @@ fflib
 LWCErrorHandler
 LWCUtils
 PrivateMixView
-#RecommendedBadgeMix
-#SortCustomMetadata
+RecommendedBadgeMix
+SortCustomMetadata
 StorageManagement
 Triggers
 UserInterface
