@@ -93,7 +93,8 @@ jobs:
             then
               exit 1
             else
-              sf org create scratch -f $SCRATCH_ORG_DEFINITION_FILE -v $HUB_ALIAS -d -a $TEST_ORG_ALIAS --no-track-source -w $WAIT_TIME -y 1 --json
+              npm run --silent createScratchOrg
+              # sf org create scratch -f $SCRATCH_ORG_DEFINITION_FILE -v $HUB_ALIAS -d -a $TEST_ORG_ALIAS --no-track-source -w $WAIT_TIME -y 1 --json
             fi
       - run: 
           name: Install External Dependencies in Scratch Org
