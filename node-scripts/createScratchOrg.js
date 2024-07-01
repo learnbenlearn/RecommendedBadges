@@ -17,7 +17,7 @@ async function createScratchOrg() {
         }
     } catch(e) {
         process.stdout.write(`error ${e}`);
-        if(error.endsWith('Creating Scratch Org... done')) {
+        if(e.endsWith('Creating Scratch Org... done')) {
             while(true) {
                 ({stdout, stderr} = await exec(`sf org list --json --skip-connection-status`));
                 if((stdout.result.scratchOrgs.length > 0) && (stdout.result.scratchOrgs[0].orgName === 'TestOrg')) {
