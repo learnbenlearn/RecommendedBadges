@@ -9,14 +9,26 @@ async function createScratchOrg() {
         process.stdout.write(`stdout ${stdout}`);
     
         if(stderr) {
-            //process.stderr.write(`Error in createScratchOrg(): ${stderr}`);
+            process.stderr.write(`Error in createScratchOrg(): ${stderr}`);
             fs.writeFileSync('/tmp/artifacts/createScratchOrgError.json', stderr)
             process.exit(1);
         } else if(stdout) {
-            //process.stdout.write(`Created scratch org: ${stdout}`);
+            process.stdout.write(`Created scratch org: ${stdout}`);
         }
     } catch(e) {
         process.stdout.write(`error ${e}`);
+        if(error.endsWith('Creating Scratch Org... done')) {
+            while(true) {
+                ({stdout, stderr} = await exec(`sf org list --json --skip-connection-status`));
+                if((stdout.result.scratchOrgs.length > 0) && (stdout.result.scratchOrgs[0].orgName === 'TestOrg')) {
+                    process.stdout.write(`Created scratch org: ${stdout}`);
+                    break;
+                } else {
+                    process.stdout.write(`Waiting for scratch org to be created...`);
+                    await exec('sleep 5000');
+                }
+            }
+        }
     }
 }
 
