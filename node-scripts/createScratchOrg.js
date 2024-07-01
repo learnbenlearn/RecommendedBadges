@@ -24,6 +24,8 @@ async function createScratchOrg() {
                     await exec('sleep 5000');
                 }
             }
+        } else {
+            process.stderr.write(`Error in createScratchOrg(): ${e}`);
         }
     }
 }
