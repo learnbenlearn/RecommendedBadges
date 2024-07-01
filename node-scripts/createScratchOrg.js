@@ -10,11 +10,9 @@ async function createScratchOrg() {
             process.stdout.write(`Created scratch org: ${stdout}`);
         } else if(stderr) {
             process.stderr.write(`Error in createScratchOrg(): ${stderr}`);
-            fs.writeFileSync('/tmp/artifacts/createScratchOrgError.json', stderr)
             process.exit(1);
         }
     } catch(e) {
-        process.stdout.write(`error ${e}`);
         if(e.endsWith('Creating Scratch Org... done')) {
             while(true) {
                 ({stdout, stderr} = await exec(`sf org list --json --skip-connection-status`));
