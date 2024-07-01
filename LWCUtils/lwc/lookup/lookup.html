@@ -8,14 +8,16 @@
     <div class="slds-form-element">
         <div class="slds-form-element__control">
             <div class="slds-combobox_container">
-                <div lwc:ref="dropdownDiv" class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click">
-                    <label class="slds-form-element__label">
-                        <template lwc:if={required}>
-                            <abbr class="slds-required" title="required">*</abbr>
-                        </template>
-                        {objectName}
-                    </label>
-                    <template lwc:if={selectedItem}>
+                <div lwc:ref="dropdownDiv" class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-grid slds-wrap">
+                    <span class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-1">
+                        <label class="slds-form-element__label">
+                            <template lwc:if={required}>
+                                <abbr class="slds-required" title="required">*</abbr>
+                            </template>
+                            {objectName}
+                        </label>
+                    </span>
+                    <div lwc:if={selectedItem} class="slds-col slds-size_1-of-1 slds-medium-size_2-of-3 slds-large-size_1-of-1">
                         <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right slds-input_faux" role="none">
                             <lightning-icon class="slds-combobox__input-entity-icon" icon-name={resultIconName}></lightning-icon>
                             <button type="button" class="slds-combobox__input slds-combobox__input-value slds-input_faux">
@@ -23,13 +25,13 @@
                             </button>
                             <lightning-button-icon icon-name="utility:close" variant="container" onclick={handleRemoveSelectedItem}></lightning-button-icon>
                         </div>
-                    </template>
+                    </div>
 
-                    <template lwc:else>
+                    <div lwc:else class="slds-col slds-size_1-of-1 slds-medium-size_2-of-3 slds-large-size_1-of-1">
                         <lightning-input label={objectName} variant="label-hidden" type="search" onfocus={handleInputFocus} onblur={handleInputBlur} 
                             onchange={handleInputChange} required={required} placeholder={placeholder} is-loading={isSearchLoading}>
                         </lightning-input>
-                    </template>
+                    </div>
 
                     <div class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
                         <ul class="slds-listbox slds-listbox_vertical" role="presentation" onitemclick={handleItemClick} onmousedown={handleItemMouseDown} 

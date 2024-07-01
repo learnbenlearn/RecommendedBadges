@@ -5,7 +5,7 @@ const exec = util.promisify(require('child_process').exec);
 
 const ensurePackageIdsInPackageAliases = require('./ensurePackageIdsInPackageAliases.js');
 const sortPackages = require('./sortPackages.js');
-const {HUB_ALIAS, PACKAGE_DIRECTORIES, PACKAGE_ALIASES} = require('./constants.js');
+const {HUB_ALIAS, PACKAGE_DIRECTORIES} = require('./constants.js');
 
 async function getLatestPackageVersionIds() {
     let latestPackageVersionIds = {};
