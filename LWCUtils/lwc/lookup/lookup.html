@@ -5,11 +5,14 @@
   @last modified by  : Ben Learn
 -->
 <template>
+    <c-logger></c-logger>
+    <lightning-input type="checkbox" label="Search Info Logging" lwc:ref="searchInfoLogging" onchange={handleSearchInfoLogging}></lightning-input>
+
     <div class="slds-form-element">
         <div class="slds-form-element__control">
             <div class="slds-combobox_container">
-                <div lwc:ref="dropdownDiv" class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-grid slds-wrap">
-                    <span class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3 slds-large-size_1-of-1">
+                <div lwc:ref="dropdownDiv" class="slds-dropdown-trigger slds-dropdown-trigger_click slds-grid slds-wrap slds-var-m-horizontal_xx-small">
+                    <span lwc:ref="lookupLabel" class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
                         <label class="slds-form-element__label">
                             <template lwc:if={required}>
                                 <abbr class="slds-required" title="required">*</abbr>
@@ -17,21 +20,21 @@
                             {objectName}
                         </label>
                     </span>
-                    <div lwc:if={selectedItem} class="slds-col slds-size_1-of-1 slds-medium-size_2-of-3 slds-large-size_1-of-1">
-                        <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_left-right slds-input_faux" role="none">
-                            <lightning-icon class="slds-combobox__input-entity-icon" icon-name={resultIconName}></lightning-icon>
-                            <button type="button" class="slds-combobox__input slds-combobox__input-value slds-input_faux">
+                    <span lwc:if={selectedItem} lwc:ref="lookupSelect" class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1">
+                        <div class="slds-input-has-icon slds-input-has-icon_left-right slds-input_faux" role="none">
+                            <lightning-icon icon-name={resultIconName}></lightning-icon>
+                            <button type="button" class="slds-input_faux">
                                 <span class="slds-truncate selectedItem">{selectedItem.Name}</span>
                             </button>
                             <lightning-button-icon icon-name="utility:close" variant="container" onclick={handleRemoveSelectedItem}></lightning-button-icon>
                         </div>
-                    </div>
+                    </span>
 
-                    <div lwc:else class="slds-col slds-size_1-of-1 slds-medium-size_2-of-3 slds-large-size_1-of-1">
+                    <span lwc:else lwc:ref="lookupSearch" class="slds-col slds-size_1-of-1 slds-medium-size_1-of-1">
                         <lightning-input label={objectName} variant="label-hidden" type="search" onfocus={handleInputFocus} onblur={handleInputBlur} 
                             onchange={handleInputChange} required={required} placeholder={placeholder} is-loading={isSearchLoading}>
                         </lightning-input>
-                    </div>
+                    </span>
 
                     <div class="slds-dropdown slds-dropdown_length-with-icon-7 slds-dropdown_fluid" role="listbox">
                         <ul class="slds-listbox slds-listbox_vertical" role="presentation" onitemclick={handleItemClick} onmousedown={handleItemMouseDown} 

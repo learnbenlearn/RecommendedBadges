@@ -39,7 +39,7 @@ PrivateMixView
 RecommendedBadgeMix
 SortCustomMetadata
 StorageManagement
-Triggers
+#Triggers
 UserInterface
 
 # Ignored Folders

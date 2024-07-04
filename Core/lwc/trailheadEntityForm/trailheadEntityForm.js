@@ -5,7 +5,7 @@
  * @since 06-08-2024
  * @group Core
  */
-import { LightningElement, api, wire } from 'lwc';
+import { LightningElement, api, wire, track } from 'lwc';
 
 import { NavigationMixin } from 'lightning/navigation';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
@@ -32,7 +32,7 @@ export default class TrailheadEntityForm extends NavigationMixin(LightningElemen
     selectedName;
     selectedApiName;
     trailFields = [TRAIL_MIX_CATEGORY_FIELD];
-    fields;
+    @track recordFields;
 
     lookupObjectName;
     lookupPlaceholder;
@@ -49,14 +49,14 @@ export default class TrailheadEntityForm extends NavigationMixin(LightningElemen
         switch(value) {
             case 'Recommended_Badge__c':
                 this.cardTitle = 'New Recommended Badge';
-                this.fields = [BADGE_MIX_CATEGORY_FIELD, HOURS_ESTIMATE_FIELD, MINUTES_ESTIMATE_FIELD, CATEGORY_RANK_FIELD, HIGH_PRIORITY_FIELD];
+                this.recordFields = [BADGE_MIX_CATEGORY_FIELD, HOURS_ESTIMATE_FIELD, MINUTES_ESTIMATE_FIELD, CATEGORY_RANK_FIELD, HIGH_PRIORITY_FIELD];
                 this.lookupObjectName = 'Badge';
                 this.lookupPlaceholder = 'Search Badges...';
                 this.lookupResultIconName = 'custom:custom48';
                 break;
             case 'Recommended_Trail__c':
                 this.cardTitle = 'New Recommended Trail';
-                this.fields = [TRAIL_MIX_CATEGORY_FIELD];
+                this.recordFields = [TRAIL_MIX_CATEGORY_FIELD];
                 this.lookupObjectName = 'Trail';
                 this.lookupPlaceholder = 'Search Trails...';
                 this.lookupResultIconName = 'custom:custom64';
@@ -132,8 +132,8 @@ export default class TrailheadEntityForm extends NavigationMixin(LightningElemen
                 fields[BADGE_NAME_FIELD.fieldApiName] = this.selectedName;
                 break;
             case 'Recommended_Trail__c':                
-            fields[TRAIL_API_NAME_FIELD.fieldApiName] = this.selectedApiName;
-            fields[TRAIL_NAME_FIELD.fieldApiName] = this.selectedName;
+                fields[TRAIL_API_NAME_FIELD.fieldApiName] = this.selectedApiName;
+                fields[TRAIL_NAME_FIELD.fieldApiName] = this.selectedName;
                 break;
         }
         this.template.querySelector('lightning-record-edit-form').submit(fields);

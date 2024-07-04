@@ -32,7 +32,12 @@
       "default": false,
       "package": "LWCUtils",
       "versionName": "Akron",
-      "versionNumber": "1.25.0.NEXT"
+      "versionNumber": "1.25.0.NEXT",
+      "dependencies": [
+        {
+          "package": "NebulaLogger"
+        }
+      ]
     },
     {
       "path": "Triggers",
