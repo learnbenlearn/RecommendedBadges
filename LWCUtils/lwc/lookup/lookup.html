@@ -6,6 +6,9 @@
 -->
 <template>
     <c-error></c-error>
+    <c-logger></c-logger>
+    <lightning-input type="checkbox" label="Search Info Logging" lwc:ref="searchInfoLogging" onchange={handleSearchInfoLogging}></lightning-input>
+
     <div class="slds-form-element">
         <div class="slds-form-element__control">
             <div class="slds-combobox_container">

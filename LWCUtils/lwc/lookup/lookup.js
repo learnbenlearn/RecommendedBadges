@@ -2,6 +2,9 @@ import { LightningElement, api, track } from 'lwc';
 
 import FORM_FACTOR from "@salesforce/client/formFactor";
 
+// temp
+const LOGGER_NAME = 'c-logger';
+const SAVE_METHOD = 'SYNCHRONOUS_DML';
 
 export default class Lookup extends LightningElement {
 	allowBlur = true;
@@ -17,6 +20,7 @@ export default class Lookup extends LightningElement {
 	_selectedItem;
 	timeoutId;
 	_twoColumnLayout = false;
+	infoLogging = false; // temp
 
 	get twoColumnLayout() {
 		return this._twoColumnLayout;
@@ -93,6 +97,11 @@ export default class Lookup extends LightningElement {
 			this.searchResults = this.searchResults.slice(0, 200);
 		}
 		this.isSearchLoading = false;
+
+		// temp
+		if(this.infoLogging) {		
+			this.log(`searchTerm: ${searchTerm}\n searchResults: ${this.searchResults}\n lookupItems first 5: ${this.lookupItems.slice(0, 5)}`);
+		}
 	}
 
 	handleInputFocus() {
@@ -132,5 +141,17 @@ export default class Lookup extends LightningElement {
 		if(div.classList.contains('slds-is-open')) {
 				div.classList.remove('slds-is-open');
 		}
+	}
+
+	// temp
+    log(message) {
+        const logger = this.template.querySelector(LOGGER_NAME);
+		console.log(message);
+        logger.info(message);
+        logger.saveLog(SAVE_METHOD);
+    }
+
+	handleSearchInfoLogging() {
+		this.infoLogging = true;
 	}
 }
