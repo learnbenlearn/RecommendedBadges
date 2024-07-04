@@ -105,10 +105,10 @@ export default class Lookup extends LightningElement {
 	}
 
 	handleInputFocus() {
-			let div = this.refs.dropdownDiv;
-			if(!div.classList.contains('slds-is-open')) {
-					div.classList.add('slds-is-open');
-			}
+		let div = this.refs.dropdownDiv;
+		if(!div.classList.contains('slds-is-open')) {
+				div.classList.add('slds-is-open');
+		}
 	}
 
 	handleInputBlur() {
