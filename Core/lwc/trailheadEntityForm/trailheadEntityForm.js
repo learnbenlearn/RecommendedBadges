@@ -21,18 +21,28 @@ import TRAIL_API_NAME_FIELD from '@salesforce/schema/Recommended_Trail__c.TrailA
 import TRAIL_NAME_FIELD from '@salesforce/schema/Recommended_Trail__c.TrailName__c';
 import TRAIL_MIX_CATEGORY_FIELD from '@salesforce/schema/Recommended_Trail__c.Mix_Category__c';
 
-import getTraillheadEntitiesByApiName from '@salesforce/apex/TrailheadEntityFormController.getTrailheadEntitiesByAPIName';
+import getTrailheadEntitiesByApiName from '@salesforce/apex/TrailheadEntityFormController.getTrailheadEntitiesByAPIName';
+
+const BADGE_FIELDS = [
+    {fieldApiName: BADGE_MIX_CATEGORY_FIELD.fieldApiName, key: `${BADGE_MIX_CATEGORY_FIELD.objectApiName}.${BADGE_MIX_CATEGORY_FIELD.fieldApiName}`},
+    {fieldApiName: HOURS_ESTIMATE_FIELD.fieldApiName, key: `${HOURS_ESTIMATE_FIELD.objectApiName}.${HOURS_ESTIMATE_FIELD.fieldApiName}`},
+    {fieldApiName: MINUTES_ESTIMATE_FIELD.fieldApiName, key: `${MINUTES_ESTIMATE_FIELD.objectApiName}.${MINUTES_ESTIMATE_FIELD.fieldApiName}`},
+    {fieldApiName: CATEGORY_RANK_FIELD.fieldApiName, key: `${CATEGORY_RANK_FIELD.objectApiName}.${CATEGORY_RANK_FIELD.fieldApiName}`},
+    {fieldApiName: HIGH_PRIORITY_FIELD.fieldApiName, key: `${HIGH_PRIORITY_FIELD.objectApiName}.${HIGH_PRIORITY_FIELD.fieldApiName}`}
+]
+
+const TRAIL_FIELDS = [
+    {fieldApiName: TRAIL_MIX_CATEGORY_FIELD.fieldApiName, key: `${TRAIL_MIX_CATEGORY_FIELD.objectApiName}.${TRAIL_MIX_CATEGORY_FIELD.fieldApiName}`},
+]
 
 export default class TrailheadEntityForm extends NavigationMixin(LightningElement) {
     cardTitle;
     objectApiName;
+    @track recordFields;
     @api recordId;
-    badgeFields = [BADGE_MIX_CATEGORY_FIELD, HOURS_ESTIMATE_FIELD, MINUTES_ESTIMATE_FIELD, CATEGORY_RANK_FIELD, HIGH_PRIORITY_FIELD];
     saveAndNew = false;
     selectedName;
     selectedApiName;
-    trailFields = [TRAIL_MIX_CATEGORY_FIELD];
-    @track recordFields;
 
     lookupObjectName;
     lookupPlaceholder;
@@ -45,26 +55,28 @@ export default class TrailheadEntityForm extends NavigationMixin(LightningElemen
     }
     @api
     set sObjectName(value) {
-        this.objectApiName = value;
-        switch(value) {
-            case 'Recommended_Badge__c':
-                this.cardTitle = 'New Recommended Badge';
-                this.recordFields = [BADGE_MIX_CATEGORY_FIELD, HOURS_ESTIMATE_FIELD, MINUTES_ESTIMATE_FIELD, CATEGORY_RANK_FIELD, HIGH_PRIORITY_FIELD];
-                this.lookupObjectName = 'Badge';
-                this.lookupPlaceholder = 'Search Badges...';
-                this.lookupResultIconName = 'custom:custom48';
-                break;
-            case 'Recommended_Trail__c':
-                this.cardTitle = 'New Recommended Trail';
-                this.recordFields = [TRAIL_MIX_CATEGORY_FIELD];
-                this.lookupObjectName = 'Trail';
-                this.lookupPlaceholder = 'Search Trails...';
-                this.lookupResultIconName = 'custom:custom64';
-                break;
+        if(this.objectApiName !== value) {
+            this.objectApiName = value;
+            switch(value) {
+                case 'Recommended_Badge__c':
+                    this.cardTitle = 'New Recommended Badge';
+                    this.recordFields = BADGE_FIELDS;
+                    this.lookupObjectName = 'Badge';
+                    this.lookupPlaceholder = 'Search Badges...';
+                    this.lookupResultIconName = 'custom:custom48';
+                    break;
+                case 'Recommended_Trail__c':
+                    this.cardTitle = 'New Recommended Trail';
+                    this.recordFields = TRAIL_FIELDS;
+                    this.lookupObjectName = 'Trail';
+                    this.lookupPlaceholder = 'Search Trails...';
+                    this.lookupResultIconName = 'custom:custom64';
+                    break;
+            }
         }
     }
 
-    @wire(getTraillheadEntitiesByApiName, { childEntityType: '$objectApiName'})
+    @wire(getTrailheadEntitiesByApiName, { childEntityType: '$objectApiName'})
     parseTrailheadEntitiesByApiName({error, data}) {
         if(data) {
             this.lookupItems = [...data];

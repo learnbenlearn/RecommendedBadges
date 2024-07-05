@@ -26,6 +26,7 @@ package.xml
 **externalCredentials**
 **certs**
 **namedCredentials**
+**Security.settings**
 
 ## Temp Ignored
 #**Home_Page_Default.flexipage**
@@ -39,8 +40,8 @@ PrivateMixView
 RecommendedBadgeMix
 SortCustomMetadata
 StorageManagement
-#Triggers
-UserInterface
+Triggers
+#UserInterface
 
 # Ignored Folders
 unpackageable
