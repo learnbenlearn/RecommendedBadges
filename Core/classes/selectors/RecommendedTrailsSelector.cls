@@ -1,10 +1,14 @@
 /**
- * @description       : Selector class for Recommended Trail custom object.
- * @author            : Ben Learn
- * @last modified on  : 01-29-2023
- * @last modified by  : Ben Learn
-**/
+ * Selector class for Recommended Trail custom object.
+ * @author Ben Learn
+ * @since 01-29-2023
+ * @group Core
+ */
 public inherited sharing class RecommendedTrailsSelector extends ApplicationSelector {
+    /**
+     * fflib method to hold the fields to always be queried by the selector
+     * @return  `List<Schema.SObjectField>`
+     */
     public List<Schema.SObjectField> getSObjectFieldList() {
         return new List<Schema.SObjectField> {
             Recommended_Trail__c.Id,
@@ -12,10 +16,19 @@ public inherited sharing class RecommendedTrailsSelector extends ApplicationSele
         };
     }
 
+    /**
+     * fflib method to return the sObjectType of the object being queried
+     * @return  `Schema.SObjectType`
+     */    
     public Schema.SObjectType getSObjectType() {
         return Recommended_Trail__c.sObjectType;
     }
 
+    /**
+     * Returns all Recommended_Trail__c records that have a matching TrailAPIName__c, including fields in the Core field set
+     * @param trailAPINames 
+     * @return  `List<Recommended_Trail__c>`
+     */
     public List<Recommended_Trail__c> selectTrailsByAPINames(Set<String> trailAPINames) {
         return (List<Recommended_Trail__c>) Database.query(
             newQueryFactory().selectFieldSet(Schema.SObjectType.Recommended_Trail__c.fieldSets.Core, false).
@@ -24,6 +37,11 @@ public inherited sharing class RecommendedTrailsSelector extends ApplicationSele
         );
     }
 
+    /**
+     * Returns the API name of the Recommended_Trail__c with the provided Id by including fields from the Triggers field set
+     * @param recommendedTrailId 
+     * @return  `Recommended_Trail__c`
+     */
     public Recommended_Trail__c selectTrailAPINameById(Id recommendedTrailId) {
         return (Recommended_Trail__c) Database.query(
             newQueryFactory().selectFieldSet(Schema.SObjectType.Recommended_Trail__c.fieldSets.Triggers, false).

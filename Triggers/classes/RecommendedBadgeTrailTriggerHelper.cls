@@ -2,6 +2,7 @@
  * Helper class for common functionality from RecommendedBadgeTriggerHandler and RecommendedTrailTriggerHandler.
  * @author Ben Learn
  * @since 06-10-2024
+ * @group Triggers
  */
 public with sharing class RecommendedBadgeTrailTriggerHelper {
     @TestVisible

@@ -1,16 +1,14 @@
 /**
- * @description       : Apex controller for storageLimits LWC.
- * @author            : Ben Learn
- * @group             : 
- * @last modified on  : 12-30-2022
- * @last modified by  : Ben Learn
-**/
+ * Apex controller for storageLimits LWC.
+ * @author Ben Learn
+ * @since 12-30-2022
+ * @group StorageManagement
+ */
 public without sharing class StorageLimitsController {
     /**
-    * @description Method to retrieve available and consumed org storage.
-    * @author Ben Learn | 02-27-2022 
-    * @return Map<String, String> 
-    **/
+     * Method to retrieve available and consumed org storage.
+     * @return  `Map<String, String>`
+     */
     @AuraEnabled
     public static Map<String, String> getStorageLimitInfo(){
         Map<String, System.OrgLimit> orgLimitMap = OrgLimits.getMap();

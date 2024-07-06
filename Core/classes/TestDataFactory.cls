@@ -1,10 +1,3 @@
-/**
- * @description       : Test data factory for the Recommended Badges application. Currently inserts data into the database, will likely be refactored to be used with
- *                      mocks in the future.
- * @author            : Ben Learn
- * @last modified on  : 02-20-2023
- * @last modified by  : Ben Learn
-**/
 @isTest
 public class TestDataFactory {
     public interface RecordGeneration {

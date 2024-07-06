@@ -1,10 +1,14 @@
 /**
- * @description       : Selector class for Sortable Field custom metadata type.
- * @author            : Ben Learn
- * @last modified on  : 01-29-2023
- * @last modified by  : Ben Learn
-**/
+ * Selector class for Sortable Field custom metadata type.
+ * @author Ben Learn
+ * @since 01-29-2023
+ * @group SortCustomMetadata
+ */
 public inherited sharing class SortableFieldsSelector extends ApplicationSelector {
+    /**
+     * fflib method to hold the fields to always be queried by the selector
+     * @return  `List<Schema.SObjectField>`
+     */
     public List<Schema.SObjectField> getSObjectFieldList() {
         return new List<Schema.SObjectField> {
             Sortable_Field__mdt.MasterLabel,
@@ -12,10 +16,19 @@ public inherited sharing class SortableFieldsSelector extends ApplicationSelecto
         };
     }
 
+    /**
+     * fflib method to return the sObjectType of the object being queried
+     * @return  `Schema.SObjectType`
+     */
     public Schema.SObjectType getSObjectType() {
         return Sortable_Field__mdt.sObjectType;
     }
 
+    /**
+     * Retrieves all Sortable_Field__mdt records (along with children Sortable_Field_Value__mdt records) with a Sortable_LWC__mdt whose label matches the provided value
+     * @param componentName 
+     * @return  `List<Schema.Sortable_Field__mdt>`
+     */
     public List<Schema.Sortable_Field__mdt> selectByComponentNameWithSortableFieldValues(String componentName) {
         fflib_QueryFactory sortableFieldsQueryFactory = newQueryFactory();
 

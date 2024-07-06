@@ -1,3 +1,4 @@
+/* eslint-disable one-var */
 import { LightningElement, api } from 'lwc';
 
 export default class Datatable extends LightningElement {
@@ -7,8 +8,7 @@ export default class Datatable extends LightningElement {
     @api hasRowActions;
 
     handleRowAction(event) {
-        const action = event.detail.action;
-        const row = event.detail.row;
+        const { action, row } = event.detail;
 
         const actionClickEvent = new CustomEvent('actionclick', {
             detail: {

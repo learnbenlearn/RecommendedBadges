@@ -2,6 +2,7 @@
  * Apex controller for recommendedBadgeMixContainer LWC.
  * @author Ben Learn
  * @since 02-07-2023
+ * @group RecommendedBadgeMix
  */
 public without sharing class RecommendedBadgeMixController {
     /**

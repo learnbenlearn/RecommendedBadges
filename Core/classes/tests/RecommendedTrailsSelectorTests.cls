@@ -1,9 +1,3 @@
-/**
- * @description       : Test class for RecommendedTrailsSelector.
- * @author            : Ben Learn
- * @last modified on  : 02-20-2023
- * @last modified by  : Ben Learn
-**/
 @isTest(IsParallel=true)
 private class RecommendedTrailsSelectorTests {
     @isTest

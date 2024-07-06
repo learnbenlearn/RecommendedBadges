@@ -1,3 +1,4 @@
+/* eslint-disable one-var, sort-imports */
 import { LightningElement, api, wire } from 'lwc';
 
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
@@ -26,18 +27,20 @@ export default class Error extends LightningElement {
     error;
     sysAdminView;
 
+    /* eslint-disable sort-keys */
     @wire(getRecord, {recordId: `${USER_ID}`, fields: [PROFILE_ID_FIELD, PROFILE_NAME_FIELD]})
     parseRecord({error, data}) {
         if(error) {
-            handleError(error);
+            this.handleError(error);
         } else if(data) {
-            if(this.admProfiles.indexOf(data.fields.Profile.displayValue) != -1) {
+            /* eslint-disable no-magic-numbers */
+            if(this.admProfiles.indexOf(data.fields.Profile.displayValue) !== -1) {
                 this.sysAdminView = true;
             }
         }
     }
 
-    @api async handleError(error, displayModal) {
+    @api handleError(error, displayModal) {
         this.logError(error);
         if(this.sysAdminView || displayModal) {
             this.openModal(error);
@@ -47,6 +50,7 @@ export default class Error extends LightningElement {
     }
 
     displayErrorToast(error) {
+        /* eslint-disable sort-keys */
         this.dispatchEvent(new ShowToastEvent({
             variant: ERROR_VARIANT,
             message: error.body.message,
@@ -60,6 +64,7 @@ export default class Error extends LightningElement {
         logger.saveLog(this.saveMethod);
     }
 
+    /* eslint-disable @lwc/lwc/no-async-await */
     async openModal(error) {
         this.error = {
             exceptionType: error.body.exceptionType,

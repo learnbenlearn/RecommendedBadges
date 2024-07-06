@@ -19,5 +19,7 @@
     "**/Thumbs.db": true,
     ".mule": true
   },
-  "circleci.filters.branchFilter": "currentBranch"
+  "circleci.filters.branchFilter": "currentBranch",
+  "codeAnalyzer.pMD.customConfigFile": ".custompmdrules.xml",
+  "codeAnalyzer.analyzeOnOpen.enabled": false
 }

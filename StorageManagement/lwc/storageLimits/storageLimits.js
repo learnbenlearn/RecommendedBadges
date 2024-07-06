@@ -1,3 +1,4 @@
+/* eslint-disable @lwc/lwc/no-async-await */
 import { LightningElement, api } from 'lwc';
 
 import getStorageLimitInfo from '@salesforce/apex/StorageLimitsController.getStorageLimitInfo';
@@ -21,12 +22,12 @@ export default class StorageLimits extends LightningElement {
     }
 
     async fetchStorageLimitInfo() {
-        let storageLimitInfo = await getStorageLimitInfo();
+        const storageLimitInfo = await getStorageLimitInfo();
         this.cardTitle = storageLimitInfo.Name;
         this.limitNum = storageLimitInfo.Limit;
         this.valueNum = storageLimitInfo.Value;
         this.percentConsumed = this.valueNum / this.limitNum;
-        this.percentConsumedNum = parseInt((this.percentConsumed) * 100);
+        this.percentConsumedNum = parseInt((this.percentConsumed) * 100, 10); // eslint-disable-line no-magic-numbers
 
         this.displayCard = true;
     }

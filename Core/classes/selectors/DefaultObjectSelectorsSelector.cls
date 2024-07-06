@@ -1,10 +1,14 @@
 /**
- * @description       : Selector class for Default Object Selector custom metadata type.
- * @author            : Ben Learn
- * @last modified on  : 01-29-2023
- * @last modified by  : Ben Learn
-**/
+ * Selector class for Default Object Selector custom metadata type.
+ * @author Ben Learn
+ * @since 01-29-2023
+ * @group Core
+ */
 public inherited sharing class DefaultObjectSelectorsSelector extends ApplicationSelector {
+    /**
+     * fflib method to hold the fields to always be queried by the selector
+     * @return  `List<Schema.SObjectField>`
+     */
     public List<Schema.SObjectField> getSObjectFieldList() {
         return new List<Schema.SObjectField> {
             DefaultObjectSelector__mdt.DeveloperName,
@@ -13,10 +17,18 @@ public inherited sharing class DefaultObjectSelectorsSelector extends Applicatio
         };
     }
 
+    /**
+     * fflib method to return the sObjectType of the object being queried
+     * @return  `Schema.SObjectType`
+     */    
     public Schema.SObjectType getSObjectType() {
         return DefaultObjectSelector__mdt.sObjectType;
     }
 
+    /**
+     * returns all DefaultObjectSelector__mdt records
+     * @return  `List<DefaultObjectSelector__mdt>`
+     */    
     public List<DefaultObjectSelector__mdt> selectAll() {
         return (List<DefaultObjectSelector__mdt>) Database.query(newQueryFactory().toSOQL());
     }

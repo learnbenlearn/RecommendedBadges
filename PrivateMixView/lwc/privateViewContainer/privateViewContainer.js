@@ -1,3 +1,4 @@
+/* eslint-disable sort-imports, one-var, @lwc/lwc/no-async-await, @lwc/lwc/no-for-of */
 import { LightningElement, api, track } from 'lwc';
 
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
@@ -8,11 +9,14 @@ import BADGE_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.BadgeName_
 import HIGH_PRIORITY_FIELD from '@salesforce/schema/Recommended_Badge__c.High_Priority__c';
 import HIGH_PRIORITY_ID_FIELD from '@salesforce/schema/Recommended_Badge__c.High_Priority_Id__c';
 import BADGE_ID_FIELD from '@salesforce/schema/Recommended_Badge__c.Id';
+import MIX_CATEGORY_FIELD from '@salesforce/schema/Recommended_Badge__c.Mix_Category__c';
 import TIME_ESTIMATE_FIELD from '@salesforce/schema/Recommended_Badge__c.Time_Estimate__c';
 import TYPE_FIELD from '@salesforce/schema/Recommended_Badge__c.Type__c';
 import URL_FIELD from '@salesforce/schema/Recommended_Badge__c.URL__c';
+
 import MIX_CATEGORY_NAME_FIELD from '@salesforce/schema/Mix_Category__c.Name';
 import MIX_CATEGORY_ID_FIELD from '@salesforce/schema/Mix_Category__c.Id';
+
 import RECOMMENDED_BADGE_MIX_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__c';
 import RECOMMENDED_BADGE_MIX_NAME_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.Name';
 import PRIVATE_MIX_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.Private_Mix__c';
@@ -52,6 +56,7 @@ const PROMPT_HEADER = 'Change Mix Category';
 const RESULT_ICON_NAME = 'custom:custom46';
 const SPINNER_TEXT = 'Retrieving badges';
 
+/* eslint-disable sort-keys */
 const TABLE_COLUMNS = [
     {
         label: 'Badge',
@@ -102,31 +107,22 @@ export default class PrivateViewContainer extends LightningElement {
     async connectedCallback() {
         try {
             this.mixCategoryData = await getMixCategoryData();
-            this.viewOptions = [];
-            this.viewOptions.push(HIGH_PRIORITY_OPTION);
-
-            for(let mixCategory of this.mixCategoryData) {
-                if(mixCategory.Recommended_Badge_Mix__r[PRIVATE_MIX_FIELD.fieldApiName]) {
-                    this.viewOptions.push({
-                        label: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
-                        value: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName]
-                    });
-                }
-            }
-
+            this.populateViewOptions();
+            
             this.recommendedBadgeData = await getPrivateMixRecommendedBadges();
             if(this.recommendedBadgeData) {
                 this.tableData = this.recommendedBadgeData[this.dropdownViewValue];
             }
             this.isLoading = false;
         } catch(err) {
-            console.error(err);
+            this.template.querySelector('c-error').handleError(err);
         }
     }
 
     populateLookupItems() {
         this.lookupItems = [];
-        for(let mixCategory of this.mixCategoryData) {
+        for(const mixCategory of this.mixCategoryData) {
+            /* eslint-disable sort-keys */
             this.lookupItems.push({
                 Id: mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName],
                 Name: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
@@ -134,6 +130,19 @@ export default class PrivateViewContainer extends LightningElement {
                 ParentId: mixCategory[RECOMMENDED_BADGE_MIX_FIELD.fieldApiName]
             });
         }
+    }
+
+    populateViewOptions() {
+        const viewOptions = [HIGH_PRIORITY_OPTION];
+        for(const mixCategory of this.mixCategoryData) {
+            if(mixCategory.Recommended_Badge_Mix__r[PRIVATE_MIX_FIELD.fieldApiName]) {
+                viewOptions.push({
+                    label: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
+                    value: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName]
+                });
+            }
+        }
+        this.viewOptions = viewOptions;
     }
 
     handleDropdownChange(event) {
@@ -148,6 +157,7 @@ export default class PrivateViewContainer extends LightningElement {
     }
 
     handleRowAction(event) {
+        /* eslint-disable default-case */
         switch(event.detail.action.name) {
             case CHANGE_MIX_CATEGORY:
                 this.selectedRecommendedBadge = event.detail.row;
@@ -163,36 +173,29 @@ export default class PrivateViewContainer extends LightningElement {
         }
     }
 
+    /* eslint-disable init-declarations */
     async toggleHighPriority(rowToToggle) {
         this.isLoading = true;
-        let recommendedBadgeId;
-        let newHighPriorityValue;
-
-        if(this.dropdownViewValue === 'High Priority') {
-            recommendedBadgeId = rowToToggle.Id.replace(HIGH_PRIORITY_PREFIX, '');
-            newHighPriorityValue = false;
-        } else {
-            recommendedBadgeId = rowToToggle.Id;
-            newHighPriorityValue = true;
-        }
-
-        let fields = {};
-        fields[BADGE_ID_FIELD.fieldApiName] = recommendedBadgeId;
-        fields[HIGH_PRIORITY_FIELD.fieldApiName] = newHighPriorityValue;
-        let recordInput = { fields };
+        const newHighPriorityValue = !(this.dropdownViewValue === 'High Priority');
+        const recordInput = {
+            fields : {
+                [BADGE_ID_FIELD.fieldApiName]: rowToToggle.Id.replace(HIGH_PRIORITY_PREFIX, ''),
+                [HIGH_PRIORITY_FIELD.fieldApiName]: newHighPriorityValue
+            }
+        };
 
         try {
             await updateRecord(recordInput);
             this.refreshRecommendedBadgeData();
 
-            const showToastEvent = new ShowToastEvent({
+            /* eslint-disable sort-keys */
+            this.dispatchEvent(new ShowToastEvent({
                 title: 'Success',
-                message: `Toggled high priority for ${rowToToggle[BADGE_NAME_FIELD.fieldApiName]} recommended badge.`,
+                message: `Set High Priority for ${rowToToggle[BADGE_NAME_FIELD.fieldApiName]} recommended badge to ${newHighPriorityValue}.`,
                 variant: 'success'
-            });
-            this.dispatchEvent(showToastEvent);
+            }));
         } catch(err) {
-            console.error(err);
+            this.template.querySelector('c-error').handleError(err);
         }
 
         this.isLoading = false;
@@ -200,18 +203,12 @@ export default class PrivateViewContainer extends LightningElement {
 
     async handleDelete(rowToDelete) {
         this.isLoading = true;
-        let recommendedBadgeId;
-
-        if(this.dropdownViewValue === 'High Priority') {
-            recommendedBadgeId = rowToDelete.Id.replace(HIGH_PRIORITY_PREFIX, '');
-        } else {
-            recommendedBadgeId = rowToDelete.Id;
-        }
-
+        
         try {
-            await deleteRecord(recommendedBadgeId);
+            await deleteRecord(rowToDelete.Id.replace(HIGH_PRIORITY_PREFIX, ''));
             this.refreshRecommendedBadgeData();
 
+            /* eslint-disable sort-keys */
             const showToastEvent = new ShowToastEvent({
                 title: 'Success',
                 message: `Deleted ${rowToDelete[BADGE_NAME_FIELD.fieldApiName]} recommended badge.`,
@@ -219,7 +216,7 @@ export default class PrivateViewContainer extends LightningElement {
             });
             this.dispatchEvent(showToastEvent);
         } catch(err) {
-            console.error(err);
+            this.template.querySelector('c-error').handleError(err);
         }
 
         this.isLoading = false;
@@ -231,28 +228,28 @@ export default class PrivateViewContainer extends LightningElement {
 
     async handlePromptConfirm() {
         this.promptIsLoading = true;
-        let selectedMixCategory = this.template.querySelector('c-lookup').selectedItem;
-        let recommendedBadge = {
-            Id: this.selectedRecommendedBadge[BADGE_ID_FIELD.fieldApiName],
-            Mix_Category__c: selectedMixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName]
+        const selectedMixCategory = this.template.querySelector('c-lookup').selectedItem;
+        /* eslint-disable camelcase */
+        const recordInput = {
+            fields: {
+                [BADGE_ID_FIELD.fieldApiName]: this.selectedRecommendedBadge[BADGE_ID_FIELD.fieldApiName],
+                [MIX_CATEGORY_FIELD.fieldApiName]: selectedMixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName]
+            }
         };
 
         try {
-            const fields = recommendedBadge;
-            const recommendedBadgeToUpdate = { fields };
-            await updateRecord(recommendedBadgeToUpdate);
+            await updateRecord(recordInput);
             this.refreshRecommendedBadgeData(); 
             this.promptIsLoading = false;
             this.displayPrompt = false;
 
-            const showToastEvent = new ShowToastEvent({
+            this.dispatchEvent(new ShowToastEvent({
                 title: 'Success',
-                message: `Changed Mix Category for ${this.selectedRecommendedBadge[BADGE_NAME_FIELD.fieldApiName]} to ${selectedMixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName]}`,
+                message: `Changed Mix Category for ${this.selectedRecommendedBadge[BADGE_NAME_FIELD.fieldApiName]} to ${selectedMixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName]}.`,
                 variant: 'success'
-            });
-            this.dispatchEvent(showToastEvent);
+            }));
         } catch(err) {
-            console.error(err);
+            this.template.querySelector('c-error').handleError(err);
         }
     }
 
