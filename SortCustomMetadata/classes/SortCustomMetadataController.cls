@@ -2,6 +2,7 @@
  * Apex class to retrieve records of the Sortable Field custom metadata type.
  * @author Ben Learn
  * @since 01-29-2023
+ * @group SortCustomMetadata
  */
 public without sharing class SortCustomMetadataController {
     /**

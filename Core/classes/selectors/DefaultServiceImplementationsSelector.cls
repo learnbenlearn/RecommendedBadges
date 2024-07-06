@@ -2,6 +2,7 @@
  * Selector class for Default Service Implementation custom metadata type.
  * @author Ben Learn
  * @since 01-22-2023
+ * @group Core
  */
 public inherited sharing class DefaultServiceImplementationsSelector extends ApplicationSelector {
     /**

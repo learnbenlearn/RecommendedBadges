@@ -2,6 +2,7 @@
  * Trigger handler for Recommended_Trail__c object
  * @author Ben Learn
  * @since 06-10-2024
+ * @group Triggers
  */
 public without sharing class RecommendedTrailTriggerHandler extends TriggerHandler {
     /**

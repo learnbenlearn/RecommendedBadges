@@ -1,9 +1,3 @@
-/**
- * @description       : Test class for DefaultObjectSelectorsSelector.
- * @author            : Ben Learn
- * @last modified on  : 02-05-2023
- * @last modified by  : Ben Learn
-**/
 @isTest(IsParallel=true)
 private class DefaultObjectSelectorsSelectorTests {
     @isTest

@@ -1,9 +1,3 @@
-/**
- * @description       : Test class for StackTraceDMLException custom exception class.
- * @author            : Ben Learn
- * @last modified on  : 01-06-2023
- * @last modified by  : Ben Learn
-**/
 @isTest(IsParallel=true)
 private class StackTraceDMLExceptionTests {
     @isTest

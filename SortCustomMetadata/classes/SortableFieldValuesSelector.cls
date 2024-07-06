@@ -1,9 +1,9 @@
 /**
- * @description       : Selector class for Sortable Field Value custom metadata type.
- * @author            : Ben Learn
- * @last modified on  : 01-22-2023
- * @last modified by  : Ben Learn
-**/
+ * Selector class for Sortable Field Value custom metadata type.
+ * @author Ben Learn
+ * @since 01-22-2023
+ * @group SortCustomMetadata
+ */
 public inherited sharing class SortableFieldValuesSelector extends ApplicationSelector {
     /**
      * fflib method to hold the fields to always be queried by the selector

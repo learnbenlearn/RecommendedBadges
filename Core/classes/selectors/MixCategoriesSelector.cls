@@ -2,6 +2,7 @@
  * Selector class for Mix Category custom object.
  * @author Ben Learn
  * @since 02-16-2023
+ * @group Core
  */
 public inherited sharing class MixCategoriesSelector extends ApplicationSelector {
     /**

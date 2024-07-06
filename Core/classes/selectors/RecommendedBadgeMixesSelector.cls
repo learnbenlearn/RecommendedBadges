@@ -2,6 +2,7 @@
  * Selector class for Recommended Badge Mix custom object.
  * @author Ben Learn
  * @since 02-05-2023
+ * @group Core
  */
 public inherited sharing class RecommendedBadgeMixesSelector extends ApplicationSelector {
     @SuppressWarnings('PMD.ApexDoc')

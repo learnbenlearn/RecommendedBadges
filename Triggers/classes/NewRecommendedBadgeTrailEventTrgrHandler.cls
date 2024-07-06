@@ -2,6 +2,7 @@
  * Trigger handler for NewRecommendedBadgeTrailEvent__e platform event.
  * @author Ben Learn
  * @since 06-10-2024
+ * @group Triggers
  */
 public with sharing class NewRecommendedBadgeTrailEventTrgrHandler extends TriggerHandler {
     /**

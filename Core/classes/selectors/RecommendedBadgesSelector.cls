@@ -2,6 +2,7 @@
  * Selector class for Recommended Badge custom object.
  * @author Ben Learn
  * @since 02-16-2023
+ * @group Core
  */
 public inherited sharing class RecommendedBadgesSelector extends ApplicationSelector {
     /**

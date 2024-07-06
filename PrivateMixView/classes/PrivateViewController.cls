@@ -1,16 +1,14 @@
 /**
- * @description       : Apex controller for privateViewContainer LWC.
- * @author            : Ben Learn
- * @last modified on  : 02-16-2023
- * @last modified by  : Ben Learn
-**/
+ * Apex controller for privateViewContainer LWC.
+ * @author Ben Learn
+ * @since 02-16-2023
+ * @group PrivateMixView
+ */
 public with sharing class PrivateViewController {
-
     /**
-    * @description Method to retrieve names of mix categories, names of parent Recommended Badge Mixes, and privacy status of parent Recommended Badge Mixes.
-    * @author Ben Learn | 03-11-2022 
-    * @return List<Mix_Category__c> 
-    **/
+     * Method to retrieve names of mix categories, names of parent Recommended Badge Mixes, and privacy status of parent Recommended Badge Mixes.
+     * @return  `List<Mix_Category__c>`
+     */
     @AuraEnabled(cacheable=true)
     public static List<Mix_Category__c> getMixCategoryData() {
         List<Mix_Category__c> mixCategoryData = new MixCategoriesSelector().selectAllWithRecommendedBadgeMixInfos(Schema.SObjectType.Mix_Category__c.fieldSets.PrivateMixView);
@@ -18,10 +16,9 @@ public with sharing class PrivateViewController {
     }
 
     /**
-    * @description Method to retrieve recommended badges for personal recommended badge mix.
-    * @author Ben Learn | 03-11-2022 
-    * @return Map<String, List<Recommended_Badge__c>> 
-    **/
+     * Method to retrieve recommended badges for personal recommended badge mix.
+     * @return  `Map<String, List<Recommended_Badge__c>>`
+     */
     @AuraEnabled
     public static Map<String, List<Recommended_Badge__c>> getPrivateMixRecommendedBadges() {
         List<Recommended_Badge__c> privateMixRecommendedBadges = new RecommendedBadgesSelector().selectedAllRelatedToUserPrivateMix();

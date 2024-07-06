@@ -1,9 +1,9 @@
 /**
- * @description       : Application class for fflib Factory definitions.
- * @author            : Ben Learn
- * @last modified on  : 03-04-2023
- * @last modified by  : Ben Learn
-**/
+ * Application class for fflib Factory definitions.
+ * @author Ben Learn
+ * @since 03-04-2023
+ * @group Core
+ */
 public class Application {
     // Service factory instantiation
     private static Map<Type, Type> defaultServiceImplementationMap = new Map<Type, Type>();

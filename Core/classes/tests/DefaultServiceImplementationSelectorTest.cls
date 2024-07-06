@@ -1,9 +1,3 @@
-/**
- * @description       : Test class for DefaultServiceImplementationsSelector.
- * @author            : Ben Learn
- * @last modified on  : 02-05-2023
- * @last modified by  : Ben Learn
-**/
 @isTest
 private class DefaultServiceImplementationSelectorTest {
     @isTest

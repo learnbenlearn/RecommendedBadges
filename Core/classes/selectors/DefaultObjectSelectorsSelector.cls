@@ -2,6 +2,7 @@
  * Selector class for Default Object Selector custom metadata type.
  * @author Ben Learn
  * @since 01-29-2023
+ * @group Core
  */
 public inherited sharing class DefaultObjectSelectorsSelector extends ApplicationSelector {
     /**
