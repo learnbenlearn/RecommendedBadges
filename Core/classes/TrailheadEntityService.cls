@@ -3,6 +3,7 @@
  * Apex rest service to update Recommended Badges/Trails using data provided from Trail Tracker Provider.
  * @author Ben Learn
  * @since 06-13-2024
+ * @group Core
  */
 @RestResource(urlMapping='/TrailheadEntities/*')
 global with sharing class TrailheadEntityService {

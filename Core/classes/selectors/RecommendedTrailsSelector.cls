@@ -2,6 +2,7 @@
  * Selector class for Recommended Trail custom object.
  * @author Ben Learn
  * @since 01-29-2023
+ * @group Core
  */
 public inherited sharing class RecommendedTrailsSelector extends ApplicationSelector {
     /**

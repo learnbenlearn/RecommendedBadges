@@ -1,9 +1,3 @@
-/**
- * @description       : Test class for RecommendedBadgeMixController.
- * @author            : Ben Learn
- * @last modified on  : 02-20-2023
- * @last modified by  : Ben Learn
-**/
 @isTest(IsParallel=true)
 private class RecommendedBadgeMixControllerTests {
     private static Map<String, List<Mix_Category__c>> generateData(Boolean includeDefaultMix){

@@ -3,6 +3,7 @@
  * the related Badge/Trail records.
  * @author Ben Learn
  * @since 06-10-2024
+ * @group Triggers
  */
 public with sharing class QueueableTrailTrackerProviderCallout implements Queueable, Database.AllowsCallouts {
     private final Id RECORD_ID;

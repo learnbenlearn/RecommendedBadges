@@ -98,6 +98,26 @@
               </li>
             </ul>
           </details>
+          <details id="Miscellaneous" class="group-name">
+            <summary id="header-Miscellaneous" class="nav-header">
+              <span>Miscellaneous</span>
+            </summary>
+            <ul>
+              <!-- menu items -->
+              <li title="TestDataFactory" id="item-TestDataFactory" class="nav-item class " onclick="goToLocation('TestDataFactory.html');">
+                <a tabindex="1" href="javascript:void(0)">TestDataFactory</a>
+              </li>
+              <li title="CustomHttpCalloutMock" id="item-CustomHttpCalloutMock" class="nav-item class " onclick="goToLocation('CustomHttpCalloutMock.html');">
+                <a tabindex="1" href="javascript:void(0)">CustomHttpCalloutMock</a>
+              </li>
+              <li title="SelectorTestErrorMessages" id="item-SelectorTestErrorMessages" class="nav-item class " onclick="goToLocation('SelectorTestErrorMessages.html');">
+                <a tabindex="1" href="javascript:void(0)">SelectorTestErrorMessages</a>
+              </li>
+              <li title="TestErrorMessages" id="item-TestErrorMessages" class="nav-item class " onclick="goToLocation('TestErrorMessages.html');">
+                <a tabindex="1" href="javascript:void(0)">TestErrorMessages</a>
+              </li>
+            </ul>
+          </details>
           <details id="PrivateMixView" class="group-name">
             <summary id="header-PrivateMixView" class="nav-header">
               <span>PrivateMixView</span>
@@ -202,232 +222,83 @@
 
           <div class="section">
 
-            <h2 class="class-title top-level-type" id="MixCategoriesSelector">
-              <span>MixCategoriesSelector</span>
+            <h2 class="class-title top-level-type" id="CustomHttpCalloutMock">
+              <span>CustomHttpCalloutMock</span>
             </h2>
             <div class="class-container">
 
-              <div class="class-description">
-                Selector class for Mix Category custom object.
-              </div>
               <div class="class-subtitle">
                 Signature
               </div>
-
+              <div class="class-annotations">@isTest</div>
               <div class="class-signature">
-                public inherited sharing class MixCategoriesSelector extends ApplicationSelector
-              </div>
-              <div class="class-subtitle">
-                Author
-              </div>
-              <div class="class-subtitle-description">
-                Ben Learn
-              </div>
-              <div class="class-subtitle">
-                Since
-              </div>
-              <div class="class-subtitle-description">
-                <li>02-16-2023</li>
+                public class CustomHttpCalloutMock implements HttpCalloutMock
               </div>
             </div>
             <div class="subsection methods">
-              <h3 class="subsection-title methods">MixCategoriesSelector Methods</h3>
+              <h3 class="subsection-title methods">CustomHttpCalloutMock Constructors</h3>
               <div class="methods-container">
                 <ul class="methods-toc">
                   <li class="method public">
-                    <a class="methods-toc__entry " href="#MixCategoriesSelector.getSObjectFieldList">
-                      getSObjectFieldList ()
+                    <a class="methods-toc__entry " href="#CustomHttpCalloutMock.CustomHttpCalloutMock">
+                      CustomHttpCalloutMock (response, responseStatusCode)
                     </a>
 
-                    <div class="methods-toc__description">
-                      fflib method to hold the fields to always be queried by the selector
-                    </div>
                   </li>
                   <li class="method public">
-                    <a class="methods-toc__entry " href="#MixCategoriesSelector.getSObjectType">
-                      getSObjectType ()
+                    <a class="methods-toc__entry " href="#CustomHttpCalloutMock.CustomHttpCalloutMock_1">
+                      CustomHttpCalloutMock (response, responseStatusCode, responseStatus)
                     </a>
 
-                    <div class="methods-toc__description">
-                      fflib method to return the sObjectType of the object being queried
-                    </div>
-                  </li>
-                  <li class="method public">
-                    <a class="methods-toc__entry " href="#MixCategoriesSelector.selectAllWithRecommendedBadgeMixInfos">
-                      selectAllWithRecommendedBadgeMixInfos (fieldSet)
-                    </a>
-
-                    <div class="methods-toc__description">
-                      Selector method to return all Mix Category records (including fields from psecified field set) that are related to either a public Recommended Badge Mix or a private Recommended Badge Mix owned by the running user.
-                    </div>
-                  </li>
-                  <li class="method public">
-                    <a class="methods-toc__entry " href="#MixCategoriesSelector.selectByIdWithRecommendedBadgeMixNames">
-                      selectByIdWithRecommendedBadgeMixNames (mixCategoryIds)
-                    </a>
-
-                    <div class="methods-toc__description">
-                      Selector method to return Mix Category and parent Recommended Badge Mix Name for provided mixCategoryIds.
-                    </div>
-                  </li>
-                  <li class="method public">
-                    <a class="methods-toc__entry " href="#MixCategoriesSelector.selectByIdWithRecommendedBadgeMixPrivateMix">
-                      selectByIdWithRecommendedBadgeMixPrivateMix (mixCategoryIds)
-                    </a>
-
-                    <div class="methods-toc__description">
-                      Selector method to return Mix Category and value of Private Mix field on parent Recommended Badge Mix for provided mixCategoryIds.
-                    </div>
-                  </li>
-                  <li class="method public">
-                    <a class="methods-toc__entry " href="#MixCategoriesSelector.selectRecommendedBadgesAndTrails">
-                      selectRecommendedBadgesAndTrails ()
-                    </a>
-
-                    <div class="methods-toc__description">
-                      Selector method to return all Mix Category records related to a non-private Recommended Badge Mix, along with children Recommended Badges and Recommended Trails, as well as parent Recommended Badge Mix information.
-                    </div>
                   </li>
                 </ul>
                 <div class="method public">
-                  <h4 class="method-title " id="MixCategoriesSelector.getSObjectFieldList">
-                    <span>getSObjectFieldList()</span>
+                  <h4 class="method-title " id="CustomHttpCalloutMock.CustomHttpCalloutMock">
+                    <span>CustomHttpCalloutMock(response, responseStatusCode)</span>
                   </h4>
-                  <div class="method-description">
-                    fflib method to hold the fields to always be queried by the selector
-                  </div>
                   <div class="method-subtitle">
                     Signature
                   </div>
-
+                  <div class="method-annotations">@SuppressWarnings('PMD.ApexDoc')</div>
                   <div class="method-signature">
-                    public List&lt;Schema.SObjectField&gt; getSObjectFieldList()
-                  </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">List&lt;Schema.SObjectField&gt;</code>
+                    public CustomHttpCalloutMock(String response, Integer responseStatusCode)
                   </div>
                 </div>
                 <div class="method public">
-                  <h4 class="method-title " id="MixCategoriesSelector.getSObjectType">
-                    <span>getSObjectType()</span>
+                  <h4 class="method-title " id="CustomHttpCalloutMock.CustomHttpCalloutMock_1">
+                    <span>CustomHttpCalloutMock(response, responseStatusCode, responseStatus)</span>
                   </h4>
-                  <div class="method-description">
-                    fflib method to return the sObjectType of the object being queried
-                  </div>
                   <div class="method-subtitle">
                     Signature
                   </div>
-
+                  <div class="method-annotations">@SuppressWarnings('PMD.ApexDoc')</div>
                   <div class="method-signature">
-                    public Schema.SObjectType getSObjectType()
-                  </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">Schema.SObjectType</code>
+                    public CustomHttpCalloutMock(String response, Integer responseStatusCode, String responseStatus)
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="subsection methods">
+              <h3 class="subsection-title methods">CustomHttpCalloutMock Methods</h3>
+              <div class="methods-container">
+                <ul class="methods-toc">
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#CustomHttpCalloutMock.respond">
+                      respond (req)
+                    </a>
+
+                  </li>
+                </ul>
                 <div class="method public">
-                  <h4 class="method-title " id="MixCategoriesSelector.selectAllWithRecommendedBadgeMixInfos">
-                    <span>selectAllWithRecommendedBadgeMixInfos(fieldSet)</span>
+                  <h4 class="method-title " id="CustomHttpCalloutMock.respond">
+                    <span>respond(req)</span>
                   </h4>
-                  <div class="method-description">
-                    Selector method to return all Mix Category records (including fields from psecified field set) that are related to either a public Recommended Badge Mix or a private Recommended Badge Mix owned by the running user.
-                  </div>
                   <div class="method-subtitle">
                     Signature
                   </div>
-
+                  <div class="method-annotations">@SuppressWarnings('PMD.ApexDoc')</div>
                   <div class="method-signature">
-                    public List&lt;Mix_Category__c&gt; selectAllWithRecommendedBadgeMixInfos(Schema.FieldSet fieldSet)
-                  </div>
-                  <div class="method-subtitle">Parameters</div>
-                  <div class="param-name">fieldSet</div>
-                  <div class="param-type">
-                    Type: <code class="code-inline">Schema.FieldSet</code>
-                  </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">List&lt;Mix_Category__c&gt;</code>
-                  </div>
-                </div>
-                <div class="method public">
-                  <h4 class="method-title " id="MixCategoriesSelector.selectByIdWithRecommendedBadgeMixNames">
-                    <span>selectByIdWithRecommendedBadgeMixNames(mixCategoryIds)</span>
-                  </h4>
-                  <div class="method-description">
-                    Selector method to return Mix Category and parent Recommended Badge Mix Name for provided mixCategoryIds.
-                  </div>
-                  <div class="method-subtitle">
-                    Signature
-                  </div>
-
-                  <div class="method-signature">
-                    public List&lt;Mix_Category__c&gt; selectByIdWithRecommendedBadgeMixNames(Set&lt;Id&gt; mixCategoryIds)
-                  </div>
-                  <div class="method-subtitle">Parameters</div>
-                  <div class="param-name">mixCategoryIds</div>
-                  <div class="param-type">
-                    Type: <code class="code-inline">Set&lt;Id&gt;</code>
-                  </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">List&lt;Mix_Category__c&gt;</code>
-                  </div>
-                </div>
-                <div class="method public">
-                  <h4 class="method-title " id="MixCategoriesSelector.selectByIdWithRecommendedBadgeMixPrivateMix">
-                    <span>selectByIdWithRecommendedBadgeMixPrivateMix(mixCategoryIds)</span>
-                  </h4>
-                  <div class="method-description">
-                    Selector method to return Mix Category and value of Private Mix field on parent Recommended Badge Mix for provided mixCategoryIds.
-                  </div>
-                  <div class="method-subtitle">
-                    Signature
-                  </div>
-
-                  <div class="method-signature">
-                    public List&lt;Mix_Category__c&gt; selectByIdWithRecommendedBadgeMixPrivateMix(Set&lt;Id&gt; mixCategoryIds)
-                  </div>
-                  <div class="method-subtitle">Parameters</div>
-                  <div class="param-name">mixCategoryIds</div>
-                  <div class="param-type">
-                    Type: <code class="code-inline">Set&lt;Id&gt;</code>
-                  </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">List&lt;Mix_Category__c&gt;</code>
-                  </div>
-                </div>
-                <div class="method public">
-                  <h4 class="method-title " id="MixCategoriesSelector.selectRecommendedBadgesAndTrails">
-                    <span>selectRecommendedBadgesAndTrails()</span>
-                  </h4>
-                  <div class="method-description">
-                    Selector method to return all Mix Category records related to a non-private Recommended Badge Mix, along with children Recommended Badges and Recommended Trails, as well as parent Recommended Badge Mix information.
-                  </div>
-                  <div class="method-subtitle">
-                    Signature
-                  </div>
-
-                  <div class="method-signature">
-                    public List&lt;Mix_Category__c&gt; selectRecommendedBadgesAndTrails()
-                  </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">List&lt;Mix_Category__c&gt;</code>
+                    public HttpResponse respond(HttpRequest req)
                   </div>
                 </div>
               </div>

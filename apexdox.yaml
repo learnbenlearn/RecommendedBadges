@@ -7,12 +7,15 @@ engine:
     - path: "${workspaceFolder}/RecommendedBadgeMix/classes"
     - path: "${workspaceFolder}/SortCustomMetadata/classes"
     - path: "${workspaceFolder}/StorageManagement/classes"
-    - path: "${workspaceFolder}/TaskList/classes"
     - path: "${workspaceFolder}/Triggers/classes"
   homePagePath: "${workspaceFolder}/ApexDoxHomePage.html"
   excludes: [
     "*_Tests.cls",
-    "*TS.cls"
+    "*TS.cls",
+    "CustomHttpCalloutMock.cls",
+    "SelectorTestErrorMessages.cls",
+    "TestDataFactory.cls",
+    "TestErrorMessages.cls"
   ]
   scope: [
     "global",

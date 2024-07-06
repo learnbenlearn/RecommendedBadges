@@ -202,20 +202,20 @@
 
           <div class="section">
 
-            <h2 class="class-title top-level-type" id="MixCategoriesSelector">
-              <span>MixCategoriesSelector</span>
+            <h2 class="class-title top-level-type" id="NewRecommendedBadgeTrailEventTrgrHandler">
+              <span>NewRecommendedBadgeTrailEventTrgrHandler</span>
             </h2>
             <div class="class-container">
 
               <div class="class-description">
-                Selector class for Mix Category custom object.
+                Trigger handler for NewRecommendedBadgeTrailEvent__e platform event.
               </div>
               <div class="class-subtitle">
                 Signature
               </div>
 
               <div class="class-signature">
-                public inherited sharing class MixCategoriesSelector extends ApplicationSelector
+                public with sharing class NewRecommendedBadgeTrailEventTrgrHandler extends TriggerHandler
               </div>
               <div class="class-subtitle">
                 Author
@@ -227,207 +227,72 @@
                 Since
               </div>
               <div class="class-subtitle-description">
-                <li>02-16-2023</li>
+                <li>06-10-2024</li>
               </div>
             </div>
             <div class="subsection methods">
-              <h3 class="subsection-title methods">MixCategoriesSelector Methods</h3>
+              <h3 class="subsection-title methods">NewRecommendedBadgeTrailEventTrgrHandler Constructors</h3>
               <div class="methods-container">
                 <ul class="methods-toc">
                   <li class="method public">
-                    <a class="methods-toc__entry " href="#MixCategoriesSelector.getSObjectFieldList">
-                      getSObjectFieldList ()
+                    <a class="methods-toc__entry " href="#NewRecommendedBadgeTrailEventTrgrHandler.NewRecommendedBadgeTrailEventTrgrHandler">
+                      NewRecommendedBadgeTrailEventTrgrHandler ()
                     </a>
 
                     <div class="methods-toc__description">
-                      fflib method to hold the fields to always be queried by the selector
-                    </div>
-                  </li>
-                  <li class="method public">
-                    <a class="methods-toc__entry " href="#MixCategoriesSelector.getSObjectType">
-                      getSObjectType ()
-                    </a>
-
-                    <div class="methods-toc__description">
-                      fflib method to return the sObjectType of the object being queried
-                    </div>
-                  </li>
-                  <li class="method public">
-                    <a class="methods-toc__entry " href="#MixCategoriesSelector.selectAllWithRecommendedBadgeMixInfos">
-                      selectAllWithRecommendedBadgeMixInfos (fieldSet)
-                    </a>
-
-                    <div class="methods-toc__description">
-                      Selector method to return all Mix Category records (including fields from psecified field set) that are related to either a public Recommended Badge Mix or a private Recommended Badge Mix owned by the running user.
-                    </div>
-                  </li>
-                  <li class="method public">
-                    <a class="methods-toc__entry " href="#MixCategoriesSelector.selectByIdWithRecommendedBadgeMixNames">
-                      selectByIdWithRecommendedBadgeMixNames (mixCategoryIds)
-                    </a>
-
-                    <div class="methods-toc__description">
-                      Selector method to return Mix Category and parent Recommended Badge Mix Name for provided mixCategoryIds.
-                    </div>
-                  </li>
-                  <li class="method public">
-                    <a class="methods-toc__entry " href="#MixCategoriesSelector.selectByIdWithRecommendedBadgeMixPrivateMix">
-                      selectByIdWithRecommendedBadgeMixPrivateMix (mixCategoryIds)
-                    </a>
-
-                    <div class="methods-toc__description">
-                      Selector method to return Mix Category and value of Private Mix field on parent Recommended Badge Mix for provided mixCategoryIds.
-                    </div>
-                  </li>
-                  <li class="method public">
-                    <a class="methods-toc__entry " href="#MixCategoriesSelector.selectRecommendedBadgesAndTrails">
-                      selectRecommendedBadgesAndTrails ()
-                    </a>
-
-                    <div class="methods-toc__description">
-                      Selector method to return all Mix Category records related to a non-private Recommended Badge Mix, along with children Recommended Badges and Recommended Trails, as well as parent Recommended Badge Mix information.
+                      Constructor for trigger handler.
                     </div>
                   </li>
                 </ul>
                 <div class="method public">
-                  <h4 class="method-title " id="MixCategoriesSelector.getSObjectFieldList">
-                    <span>getSObjectFieldList()</span>
+                  <h4 class="method-title " id="NewRecommendedBadgeTrailEventTrgrHandler.NewRecommendedBadgeTrailEventTrgrHandler">
+                    <span>NewRecommendedBadgeTrailEventTrgrHandler()</span>
                   </h4>
                   <div class="method-description">
-                    fflib method to hold the fields to always be queried by the selector
+                    Constructor for trigger handler.
                   </div>
                   <div class="method-subtitle">
                     Signature
                   </div>
 
                   <div class="method-signature">
-                    public List&lt;Schema.SObjectField&gt; getSObjectFieldList()
-                  </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">List&lt;Schema.SObjectField&gt;</code>
+                    public NewRecommendedBadgeTrailEventTrgrHandler()
                   </div>
                 </div>
-                <div class="method public">
-                  <h4 class="method-title " id="MixCategoriesSelector.getSObjectType">
-                    <span>getSObjectType()</span>
+              </div>
+            </div>
+            <div class="subsection methods">
+              <h3 class="subsection-title methods">NewRecommendedBadgeTrailEventTrgrHandler Methods</h3>
+              <div class="methods-container">
+                <ul class="methods-toc">
+                  <li class="method protected">
+                    <a class="methods-toc__entry " href="#NewRecommendedBadgeTrailEventTrgrHandler.afterInsert">
+                      afterInsert (newRecordsMap)
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Enqueues Trail Tracker Provider callouts to retrieve field values for new Recommended Badge/Recommended Trail records.
+                    </div>
+                  </li>
+                </ul>
+                <div class="method protected">
+                  <h4 class="method-title " id="NewRecommendedBadgeTrailEventTrgrHandler.afterInsert">
+                    <span>afterInsert(newRecordsMap)</span>
                   </h4>
                   <div class="method-description">
-                    fflib method to return the sObjectType of the object being queried
+                    Enqueues Trail Tracker Provider callouts to retrieve field values for new Recommended Badge/Recommended Trail records.
                   </div>
                   <div class="method-subtitle">
                     Signature
                   </div>
 
                   <div class="method-signature">
-                    public Schema.SObjectType getSObjectType()
-                  </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">Schema.SObjectType</code>
-                  </div>
-                </div>
-                <div class="method public">
-                  <h4 class="method-title " id="MixCategoriesSelector.selectAllWithRecommendedBadgeMixInfos">
-                    <span>selectAllWithRecommendedBadgeMixInfos(fieldSet)</span>
-                  </h4>
-                  <div class="method-description">
-                    Selector method to return all Mix Category records (including fields from psecified field set) that are related to either a public Recommended Badge Mix or a private Recommended Badge Mix owned by the running user.
-                  </div>
-                  <div class="method-subtitle">
-                    Signature
-                  </div>
-
-                  <div class="method-signature">
-                    public List&lt;Mix_Category__c&gt; selectAllWithRecommendedBadgeMixInfos(Schema.FieldSet fieldSet)
+                    protected override void afterInsert(Map&lt;Id, sObject&gt; newRecordsMap)
                   </div>
                   <div class="method-subtitle">Parameters</div>
-                  <div class="param-name">fieldSet</div>
+                  <div class="param-name">newRecordsMap</div>
                   <div class="param-type">
-                    Type: <code class="code-inline">Schema.FieldSet</code>
-                  </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">List&lt;Mix_Category__c&gt;</code>
-                  </div>
-                </div>
-                <div class="method public">
-                  <h4 class="method-title " id="MixCategoriesSelector.selectByIdWithRecommendedBadgeMixNames">
-                    <span>selectByIdWithRecommendedBadgeMixNames(mixCategoryIds)</span>
-                  </h4>
-                  <div class="method-description">
-                    Selector method to return Mix Category and parent Recommended Badge Mix Name for provided mixCategoryIds.
-                  </div>
-                  <div class="method-subtitle">
-                    Signature
-                  </div>
-
-                  <div class="method-signature">
-                    public List&lt;Mix_Category__c&gt; selectByIdWithRecommendedBadgeMixNames(Set&lt;Id&gt; mixCategoryIds)
-                  </div>
-                  <div class="method-subtitle">Parameters</div>
-                  <div class="param-name">mixCategoryIds</div>
-                  <div class="param-type">
-                    Type: <code class="code-inline">Set&lt;Id&gt;</code>
-                  </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">List&lt;Mix_Category__c&gt;</code>
-                  </div>
-                </div>
-                <div class="method public">
-                  <h4 class="method-title " id="MixCategoriesSelector.selectByIdWithRecommendedBadgeMixPrivateMix">
-                    <span>selectByIdWithRecommendedBadgeMixPrivateMix(mixCategoryIds)</span>
-                  </h4>
-                  <div class="method-description">
-                    Selector method to return Mix Category and value of Private Mix field on parent Recommended Badge Mix for provided mixCategoryIds.
-                  </div>
-                  <div class="method-subtitle">
-                    Signature
-                  </div>
-
-                  <div class="method-signature">
-                    public List&lt;Mix_Category__c&gt; selectByIdWithRecommendedBadgeMixPrivateMix(Set&lt;Id&gt; mixCategoryIds)
-                  </div>
-                  <div class="method-subtitle">Parameters</div>
-                  <div class="param-name">mixCategoryIds</div>
-                  <div class="param-type">
-                    Type: <code class="code-inline">Set&lt;Id&gt;</code>
-                  </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">List&lt;Mix_Category__c&gt;</code>
-                  </div>
-                </div>
-                <div class="method public">
-                  <h4 class="method-title " id="MixCategoriesSelector.selectRecommendedBadgesAndTrails">
-                    <span>selectRecommendedBadgesAndTrails()</span>
-                  </h4>
-                  <div class="method-description">
-                    Selector method to return all Mix Category records related to a non-private Recommended Badge Mix, along with children Recommended Badges and Recommended Trails, as well as parent Recommended Badge Mix information.
-                  </div>
-                  <div class="method-subtitle">
-                    Signature
-                  </div>
-
-                  <div class="method-signature">
-                    public List&lt;Mix_Category__c&gt; selectRecommendedBadgesAndTrails()
-                  </div>
-                  <div class="method-subtitle">
-                    Returns
-                  </div>
-                  <div class="method-subtitle-description">
-                    <code class="code-inline">List&lt;Mix_Category__c&gt;</code>
+                    Type: <code class="code-inline">Map&lt;Id, sObject&gt;</code>
                   </div>
                 </div>
               </div>

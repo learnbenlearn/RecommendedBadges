@@ -1,9 +1,3 @@
-/**
- * @description       : Test class for SortableFieldsSelector.
- * @author            : Ben Learn
- * @last modified on  : 01-22-2023
- * @last modified by  : Ben Learn
-**/
 @isTest(IsParallel=true)
 private class SortableFieldsSelectorTests {
     @isTest

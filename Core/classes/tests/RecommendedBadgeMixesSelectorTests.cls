@@ -1,9 +1,3 @@
-/**
- * @description       : Test class for RecommendedBadgeMixesSelector.
- * @author            : Ben Learn
- * @last modified on  : 02-20-2023
- * @last modified by  : Ben Learn
-**/
 @isTest(IsParallel=true)
 private class RecommendedBadgeMixesSelectorTests {
     @isTest

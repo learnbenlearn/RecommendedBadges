@@ -2,6 +2,7 @@
  * Utility class for DML operations.
  * @author Ben Learn
  * @since 06-13-2024
+ * @group Core
  */
 public with sharing class DMLUtils {
     /**
