@@ -1,35 +1,10 @@
-const sortAlphabetic = (fieldName, data, sortDirection = 'asc') => {
-    let sortedFieldOrder = [];
+/*eslint max-params: ["error", 4]*/
+/* eslint-disable one-var, @lwc/lwc/no-for-of */
+const groupRecordsBySortedField = (fieldName, data) => {
+    const recordsBySortedField = [];
 
-    let recordsBySortedField = groupRecordsBySortedField(fieldName, data);
-
-    if(sortDirection === 'asc') {
-        sortedFieldOrder = Object.keys(recordsBySortedField).sort();
-    } else if(sortDirection === 'desc') {
-        sortedFieldOrder = Object.keys(recordsBySortedField).sort().reverse();
-    }
-
-    let sortedData = sortRecords(sortedFieldOrder, recordsBySortedField);
-
-    return sortedData;
-}
-
-const sortCustom = (fieldName, data, sortedFieldOrder, sortDirection = 'asc') => {
-    let recordsBySortedField = groupRecordsBySortedField(fieldName, data);
-
-    if(sortDirection === 'desc') {
-        sortedFieldOrder = sortedFieldOrder.reverse();
-    }
-    
-    let sortedData = sortRecords(sortedFieldOrder, recordsBySortedField);
-
-    return sortedData;
-}
-
-let groupRecordsBySortedField = (fieldName, data) => {
-    let recordsBySortedField = [];
-
-    for(let a of data) {
+    /* eslint-disable id-length */
+    for(const a of data) {
         if(recordsBySortedField[a[fieldName]]) {
             recordsBySortedField[a[fieldName]].push(a);
         } else {
@@ -40,14 +15,42 @@ let groupRecordsBySortedField = (fieldName, data) => {
     return recordsBySortedField;
 }
 
-let sortRecords = (sortedFieldOrder, recordsBySortedField) => {
-    let sortedData = [];
+const sortRecords = (sortedFieldOrder, recordsBySortedField) => {
+    const sortedData = [];
 
-    for(let a of sortedFieldOrder) {
+    /* eslint-disable id-length */
+    for(const a of sortedFieldOrder) {
         if(recordsBySortedField[a]) {
             sortedData.push(... recordsBySortedField[a]);
         }
     }
+
+    return sortedData;
+}
+
+const sortAlphabetic = (fieldName, data, sortDirection = 'asc') => {
+    let sortedFieldOrder = [];
+    const recordsBySortedField = groupRecordsBySortedField(fieldName, data);
+
+    if(sortDirection === 'asc') {
+        sortedFieldOrder = Object.keys(recordsBySortedField).sort();
+    } else if(sortDirection === 'desc') {
+        sortedFieldOrder = Object.keys(recordsBySortedField).sort().reverse();
+    }
+
+    const sortedData = sortRecords(sortedFieldOrder, recordsBySortedField);
+
+    return sortedData;
+}
+
+const sortCustom = (fieldName, data, sortedFieldOrder, sortDirection = 'asc') => {
+    const recordsBySortedField = groupRecordsBySortedField(fieldName, data);
+
+    if(sortDirection === 'desc') {
+        sortedFieldOrder = sortedFieldOrder.reverse(); // eslint-disable-line no-param-reassign
+    }
+    
+    const sortedData = sortRecords(sortedFieldOrder, recordsBySortedField);
 
     return sortedData;
 }

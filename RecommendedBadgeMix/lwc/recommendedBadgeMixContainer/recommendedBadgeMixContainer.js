@@ -1,3 +1,4 @@
+/* eslint-disable sort-imports, one-var, @lwc/lwc/no-for-of, no-underscore-dangle */
 import { LightningElement, wire } from 'lwc';
 
 import { CurrentPageReference } from 'lightning/navigation';
@@ -30,6 +31,7 @@ import RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD from '@salesforce/schema/Re
 
 const SPINNER_TEXT = 'Retrieving recommended badges';
 
+/* eslint-disable sort-keys */
 const TREEGRID_COLUMNS = [
     {
         type: 'url',
@@ -63,8 +65,6 @@ const TREEGRID_COLUMNS = [
         "redirect": "false"
     }
 }
-*/
-/*
 {
     "type": "comm__namedPage",
     "attributes": {
@@ -137,7 +137,8 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     parseSortOptions({error, data}) {
         if(data) {
             this.sortOptions = [];
-            for(let option of data) {
+            for(const option of data) {
+                /* eslint-disable sort-keys */
                 this.sortOptions.push({
                     label: option.MasterLabel,
                     value: option.Field_API_Name__c,
@@ -150,8 +151,9 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     }
 
     populateMixDropdown(defaultMix) {
-        let options = [];
-        for(let a of Object.keys(this.categoriesByMix)) {
+        const options = [];
+        /* eslint-disable id-length */
+        for(const a of Object.keys(this.categoriesByMix)) {
             options.push({label: a, value: a});
         }
         this.mixOptions = options;
@@ -162,11 +164,12 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         this.lastUpdatedDatesByRecommendedBadgeMix = {};
         this.treegridDataByMix = {};
 
-        for(let mix in this.categoriesByMix) {
-            let extensibleMix = this.categoriesByMix[mix].map(item => {
-                let newCategoryChildren = [];
+        for(const mix in this.categoriesByMix) {
+            const extensibleMix = this.categoriesByMix[mix].map(item => {
+                const newCategoryChildren = [];
                 if(item.Recommended_Badges__r) {
-                    for(let badge of item.Recommended_Badges__r) {
+                    for(const badge of item.Recommended_Badges__r) {
+                        /* eslint-disable sort-keys, camelcase */
                         newCategoryChildren.push({
                             Id: badge[BADGE_ID_FIELD.fieldApiName],
                             Name: badge[BADGE_NAME_FIELD.fieldApiName],
@@ -178,7 +181,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                 }
 
                 if(item.Recommended_Trails__r) {
-                    for(let trail of item.Recommended_Trails__r) {
+                    for(const trail of item.Recommended_Trails__r) {
                         newCategoryChildren.push({
                             Id: trail[TRAIL_ID_FIELD.fieldApiName],
                             Name: trail[TRAIL_NAME_FIELD.fieldApiName],
@@ -190,10 +193,10 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                     }
                 }
                 
-                let newCategory = {
+                const newCategory = {
                     Id: item[MIX_CATEGORY_ID_FIELD.fieldApiName],
                     Name: item[MIX_CATEGORY_NAME_FIELD.fieldApiName],
-                    URL__c: '/' + item[MIX_CATEGORY_ID_FIELD.fieldApiName], // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
+                    URL__c: `/${item[MIX_CATEGORY_ID_FIELD.fieldApiName]}`, // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
                     _children: newCategoryChildren,
                     Recommended_Badge_Mix__c: item[MIX_CATEGORY_RECOMMENDED_BADGE_MIX_FIELD.fieldApiName],
                 };
@@ -219,18 +222,19 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         let tempTreegridData = [];
         tempTreegridData = this.treegridData;
 
-        for(let sortOption of this.sortOptions) {
+        for(const sortOption of this.sortOptions) {
             if((sortOption.value === event.detail) && sortOption.sortableFieldValues) {
                 sortableFieldValues = [];
 
-                for(let sortableFieldValue of sortOption.sortableFieldValues) {
+                for(const sortableFieldValue of sortOption.sortableFieldValues) {
                     sortableFieldValues.splice(sortableFieldValue.Sort_Order__c - 1, 0, sortableFieldValue.MasterLabel);
                 }
                 break;
             }
         }
 
-        for(let category of tempTreegridData) {
+        for(const category of tempTreegridData) {
+            /* eslint-disable no-magic-numbers */
             if(category._children.length > 1) {
                 if(sortableFieldValues) {
                     category._children = sortCustom(event.detail, category._children, sortableFieldValues);

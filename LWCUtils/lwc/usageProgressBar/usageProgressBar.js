@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle, no-ternary */
 import { LightningElement, api } from 'lwc';
 
 export default class UsageProgressBar extends LightningElement {
@@ -27,20 +28,21 @@ export default class UsageProgressBar extends LightningElement {
         return this._progressBarPercent;
     }
     @api set progressBarPercent(value) {
+        // eslint-disable-next-line no-magic-numbers
         this._progressBarPercent = value < 0 ? 0 : value;
     }
 
+    /* eslint-disable no-magic-numbers */
     renderedCallback() {
         this.progressBarWidth = getComputedStyle(this.template.querySelector('.progress-bar')).getPropertyValue('width').replace('px', '') * this.progressBarPercent / 100;
         if(this.progressBarPercent <= 100) {
             this.template.host.style.setProperty('--progress-bar-width', `${this.progressBarWidth}px`);
+            this.template.host.style.setProperty('--progress-bar-color', this.progressBarColor);
+            this.template.host.style.setProperty('--progress-bar-color-background', this.progressBarColorBackground);
         } else {
             this.template.host.style.setProperty('--progress-bar-width', getComputedStyle(this.template.querySelector('.progress-bar')).getPropertyValue('width'));
-            this.progressBarColor = 'red';
-            this.progressBarColorBackground = 'white';
+            this.template.host.style.setProperty('--progress-bar-color', 'red');
+            this.template.host.style.setProperty('--progress-bar-color-background', 'white');
         }
-
-        this.template.host.style.setProperty('--progress-bar-color', this.progressBarColor);
-        this.template.host.style.setProperty('--progress-bar-color-background', this.progressBarColorBackground);
     }
 }

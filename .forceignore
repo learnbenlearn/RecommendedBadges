@@ -34,12 +34,12 @@ package.xml
 # Ignored Packages
 #Core
 fflib
-LWCErrorHandler
+#LWCErrorHandler
 #LWCUtils
-PrivateMixView
-RecommendedBadgeMix
+#PrivateMixView
+#RecommendedBadgeMix
 SortCustomMetadata
-StorageManagement
+#StorageManagement
 Triggers
 #UserInterface
 

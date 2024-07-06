@@ -4,15 +4,21 @@
  * @since 02-16-2023
  */
 public inherited sharing class MixCategoriesSelector extends ApplicationSelector {
-    @SuppressWarnings('Apex.PMD')
+    /**
+     * fflib method to hold the fields to always be queried by the selector
+     * @return  `List<Schema.SObjectField>`
+     */
     public List<Schema.SObjectField> getSObjectFieldList() {
         return new List<Schema.SObjectField> {
             Mix_Category__c.Id,
             Mix_Category__c.Name
         };
     }
-
-    @SuppressWarnings('Apex.PMD')
+    
+    /**
+     * fflib method to return the sObjectType of the object being queried
+     * @return  `Schema.SObjectType`
+     */
     public Schema.SObjectType getSObjectType() {
         return Mix_Category__c.sObjectType;
     }

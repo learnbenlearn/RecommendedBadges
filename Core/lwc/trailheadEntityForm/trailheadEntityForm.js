@@ -5,21 +5,22 @@
  * @since 06-08-2024
  * @group Core
  */
-import { LightningElement, api, wire, track } from 'lwc';
+/* eslint-disable one-var */
+import { LightningElement, api, track, wire } from 'lwc';
 
 import { NavigationMixin } from 'lightning/navigation';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
-import BADGE_API_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.BadgeAPIName__c';
+import BADGE_API_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.BadgeAPIName__c'; // eslint-disable-line sort-imports
+import BADGE_MIX_CATEGORY_FIELD from '@salesforce/schema/Recommended_Badge__c.Mix_Category__c';
 import BADGE_NAME_FIELD from '@salesforce/schema/Recommended_Badge__c.BadgeName__c';
 import CATEGORY_RANK_FIELD from '@salesforce/schema/Recommended_Badge__c.Category_Rank__c';
 import HIGH_PRIORITY_FIELD from '@salesforce/schema/Recommended_Badge__c.High_Priority__c';
 import HOURS_ESTIMATE_FIELD from '@salesforce/schema/Recommended_Badge__c.Hours_Estimate__c';
 import MINUTES_ESTIMATE_FIELD from '@salesforce/schema/Recommended_Badge__c.Minutes_Estimate__c';
-import BADGE_MIX_CATEGORY_FIELD from '@salesforce/schema/Recommended_Badge__c.Mix_Category__c';
 import TRAIL_API_NAME_FIELD from '@salesforce/schema/Recommended_Trail__c.TrailAPIName__c';
-import TRAIL_NAME_FIELD from '@salesforce/schema/Recommended_Trail__c.TrailName__c';
 import TRAIL_MIX_CATEGORY_FIELD from '@salesforce/schema/Recommended_Trail__c.Mix_Category__c';
+import TRAIL_NAME_FIELD from '@salesforce/schema/Recommended_Trail__c.TrailName__c';
 
 import getTrailheadEntitiesByApiName from '@salesforce/apex/TrailheadEntityFormController.getTrailheadEntitiesByAPIName';
 
@@ -35,6 +36,7 @@ const TRAIL_FIELDS = [
     {fieldApiName: TRAIL_MIX_CATEGORY_FIELD.fieldApiName, key: `${TRAIL_MIX_CATEGORY_FIELD.objectApiName}.${TRAIL_MIX_CATEGORY_FIELD.fieldApiName}`},
 ]
 
+/* eslint-disable new-cap */
 export default class TrailheadEntityForm extends NavigationMixin(LightningElement) {
     cardTitle;
     objectApiName;
@@ -57,6 +59,7 @@ export default class TrailheadEntityForm extends NavigationMixin(LightningElemen
     set sObjectName(value) {
         if(this.objectApiName !== value) {
             this.objectApiName = value;
+            /* eslint-disable default-case */
             switch(value) {
                 case 'Recommended_Badge__c':
                     this.cardTitle = 'New Recommended Badge';
@@ -90,12 +93,14 @@ export default class TrailheadEntityForm extends NavigationMixin(LightningElemen
         this.selectedApiName = event.detail.Id;
     }
     
+    /* eslint-disable class-methods-use-this, @lwc/lwc/no-unsupported-ssr-properties, @lwc/lwc/no-restricted-browser-globals-during-ssr */
     handleCancel() {
         window.history.back();
     }
 
     handleLoad(event) {
-        let record = event.detail.record ?? Object.values(event.detail.records)[0];
+        /* eslint-disable no-magic-numbers */
+        const record = event.detail.record ?? Object.values(event.detail.records)[0];
         switch(this.objectApiName) {
             case 'Recommended_Badge__c':
                 this.selectedLookupId = record.fields[BADGE_API_NAME_FIELD.fieldApiName].value;
@@ -116,15 +121,17 @@ export default class TrailheadEntityForm extends NavigationMixin(LightningElemen
 
     handleSuccess(event) {
         if(this.saveAndNew) {
-            let inputFields = this.template.querySelectorAll('lightning-input-field');
+            const inputFields = this.template.querySelectorAll('lightning-input-field');
             inputFields.forEach(inputField => inputField.reset());
             this.template.querySelector('c-lookup').reset();
+            /* eslint-disable sort-keys, @lwc/lwc/no-unsupported-ssr-properties, @lwc/lwc/no-restricted-browser-globals-during-ssr */
             this.dispatchEvent(new ShowToastEvent({
                 title: 'Success',
                 message: `${event.detail.fields.Name.value} was saved.`,
                 variant: 'success'
             }))
         } else {
+            /* eslint-disable sort-keys */
             this[NavigationMixin.Navigate]({
                 type: 'standard__recordPage',
                 attributes: {
@@ -137,7 +144,7 @@ export default class TrailheadEntityForm extends NavigationMixin(LightningElemen
 
     handleSubmit(event) {
         event.preventDefault();
-        const fields = event.detail.fields;
+        const { fields } = event.detail;
         switch(this.objectApiName) {
             case 'Recommended_Badge__c':
                 fields[BADGE_API_NAME_FIELD.fieldApiName] = this.selectedApiName;

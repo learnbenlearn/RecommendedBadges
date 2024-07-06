@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { LightningElement } from 'lwc';
 
 const OPTIONS = [
@@ -15,6 +16,7 @@ export default class TrailheadEntityFormWrapper extends LightningElement {
     set sObjectName(value) {
         this._sObjectName = value;
 
+        /* eslint-disable default-case */
         switch(value) {
             case 'Recommended_Badge__c':
                 this.refs.badgeForm.classList.replace('slds-hide', 'slds-show');

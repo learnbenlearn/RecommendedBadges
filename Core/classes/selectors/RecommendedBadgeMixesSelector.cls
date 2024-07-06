@@ -1,18 +1,23 @@
 /**
- * @description       : Selector class for Recommended Badge Mix custom object.
- * @author            : Ben Learn
- * @last modified on  : 02-05-2023
- * @last modified by  : Ben Learn
-**/
+ * Selector class for Recommended Badge Mix custom object.
+ * @author Ben Learn
+ * @since 02-05-2023
+ */
 public inherited sharing class RecommendedBadgeMixesSelector extends ApplicationSelector {
+    @SuppressWarnings('PMD.ApexDoc')
     public RecommendedBadgeMixesSelector() {
         this(false);
     }
 
+    @SuppressWarnings('PMD.ApexDoc')
     public RecommendedBadgeMixesSelector(Boolean includeFieldSetFields) {
         super(includeFieldSetFields);
     }
 
+    /**
+     * fflib method to hold the fields to always be queried by the selector
+     * @return  `List<Schema.SObjectField>`
+     */
     public List<Schema.SObjectField> getSObjectFieldList() {
         return new List<Schema.SObjectField> {
             Recommended_Badge_Mix__c.Id,
@@ -20,14 +25,27 @@ public inherited sharing class RecommendedBadgeMixesSelector extends Application
         };
     }
 
+    /**
+     * fflib method to return the sObjectType of the object being queried
+     * @return  `Schema.SObjectType`
+     */
     public Schema.SObjectType getSObjectType() {
         return Recommended_Badge_Mix__c.sObjectType;
     }
 
+    /**
+     * Returns default Recommended_Badge_Mix__c
+     * @return  `List<Recommended_Badge_Mix__c>`
+     */
     public List<Recommended_Badge_Mix__c> selectDefaultMix() {
         return this.selectExistingDefaultMix(null);
     }
 
+    /**
+     * Returns default Recommended_Badge_Mix__c. If mixIdsToExclude is not null, filters out Recommended_Badge_Mix__c records with matching IDs
+     * @param mixIdsToExclude 
+     * @return  `List<Recommended_Badge_Mix__c>`
+     */
     public List<Recommended_Badge_Mix__c> selectExistingDefaultMix(List<Id> mixIdsToExclude) {
         if(mixIdsToExclude != null) {
             return (List<Recommended_Badge_Mix__c>) Database.query(
