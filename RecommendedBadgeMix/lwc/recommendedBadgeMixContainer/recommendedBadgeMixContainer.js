@@ -129,7 +129,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
             this.displayTable = true;
             this.isLoading = false;
         } else if(error) {
-            console.error(error);
+            this.template.querySelector('c-error').handleError(error);
         }
     }
 
@@ -146,7 +146,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                 })   
             }
         } else if(error) {
-            console.error(error);
+            this.template.querySelector('c-error').handleError(error);
         }
     }
 
