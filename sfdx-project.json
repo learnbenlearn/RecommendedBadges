@@ -5,7 +5,7 @@
       "package": "Core",
       "versionName": "Akron",
       "versionNumber": "2.9.0.NEXT",
-      "default": false,
+      "default": true,
       "dependencies": [
         {
           "package": "fflib",
@@ -136,7 +136,7 @@
     },
     {
       "path": "UserInterface",
-      "default": true,
+      "default": false,
       "package": "UserInterface",
       "versionName": "Akron",
       "versionNumber": "1.22.0.NEXT",

@@ -32,13 +32,13 @@ package.xml
 **Home_Page_Default.flexipage**
 
 # Ignored Packages
-Core
+#Core
 fflib
 #LWCErrorHandler
 LWCUtils
 PrivateMixView
 #RecommendedBadgeMix
-SortCustomMetadata
+#SortCustomMetadata
 StorageManagement
 Triggers
 UserInterface
