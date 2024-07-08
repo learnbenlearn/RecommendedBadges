@@ -76,8 +76,12 @@ global with sharing class TrailheadEntityService {
         Set<String> deletedBadgeAPINames = body.get('deletedBadgeAPINames');
         Set<String> deletedTrailAPINames = body.get('deletedTrailAPINames');
 
-        List<Recommended_Badge__c> badgesToDelete = [SELECT Id FROM Recommended_Badge__c WHERE BadgeAPIName__c IN :deletedBadgeAPINames];
-        List<Recommended_Trail__c> trailsToDelete = [SELECT Id FROM Recommended_Trail__c WHERE TrailAPIName__c IN :deletedTrailAPINames];
+        List<Recommended_Badge__c> badgesToDelete = deletedBadgeAPINames == null ? new List<Recommended_Badge__c>() : [
+            SELECT Id FROM Recommended_Badge__c WHERE BadgeAPIName__c IN :deletedBadgeAPINames
+        ];
+        List<Recommended_Trail__c> trailsToDelete = deletedTrailAPINames == null ? new List<Recommended_Trail__c>() :[
+            SELECT Id FROM Recommended_Trail__c WHERE TrailAPIName__c IN :deletedTrailAPINames
+        ];
         
         Boolean hasBadgeDMLFailures = false;
         if(badgesToDelete.size() > 0) {
