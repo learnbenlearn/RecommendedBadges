@@ -1,8 +1,12 @@
 /* eslint-disable one-var, sort-imports */
 import { LightningElement, api, wire } from 'lwc';
 
+import { CurrentPageReference } from 'lightning/navigation';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { getRecord } from 'lightning/uiRecordApi';
+
+import Toast from 'lightning/toast';
+import ToastContainer from 'lightning/toastContainer';
 
 import PROFILE_ID_FIELD from '@salesforce/schema/User.ProfileId';
 import PROFILE_NAME_FIELD from '@salesforce/schema/User.Profile.Name';
@@ -15,6 +19,7 @@ const ERROR_VARIANT = 'error';
 const ERROR_MODAL_DESCRIPTION = 'Displays error message';
 const ERROR_MODAL_LABEL = 'Error Modal';
 const ERROR_MODAL_SIZE = 'small';
+const EXPERIENCE_PAGE_TYPE_PREFIX = 'comm__';
 const LOGGER_NAME = 'c-logger';
 const SAVE_METHOD = 'EVENT_BUS';
 const SYSTEM_ADMINISTRATOR_PROFILE = 'System Administrator';
@@ -26,6 +31,10 @@ export default class Error extends LightningElement {
     @api saveMethod = SAVE_METHOD;
     error;
     sysAdminView;
+    toastContainer;
+
+    @wire(CurrentPageReference)
+    pageRef;
 
     /* eslint-disable sort-keys */
     @wire(getRecord, {recordId: `${USER_ID}`, fields: [PROFILE_ID_FIELD, PROFILE_NAME_FIELD]})
@@ -40,6 +49,10 @@ export default class Error extends LightningElement {
         }
     }
 
+    connectedCallback() {
+        this.toastContainer = ToastContainer.instance();
+    }
+
     @api handleError(error, displayModal) {
         this.logError(error);
         if(this.sysAdminView || displayModal) {
@@ -50,12 +63,20 @@ export default class Error extends LightningElement {
     }
 
     displayErrorToast(error) {
-        /* eslint-disable sort-keys */
-        this.dispatchEvent(new ShowToastEvent({
-            variant: ERROR_VARIANT,
-            message: error.body.message,
-            title: error.body.exceptionType
-        }));
+        if(this.pageRef.type.startsWith(EXPERIENCE_PAGE_TYPE_PREFIX)) {
+            Toast.show({
+                variant: ERROR_VARIANT,
+                message: error.body?.message,
+                label: error.body?.exceptionType
+            }, this);
+        } else {
+            /* eslint-disable sort-keys */
+            this.dispatchEvent(new ShowToastEvent({
+                variant: ERROR_VARIANT,
+                message: error.body.message,
+                title: error.body.exceptionType
+            }));
+        }
     }
 
     logError(error) {

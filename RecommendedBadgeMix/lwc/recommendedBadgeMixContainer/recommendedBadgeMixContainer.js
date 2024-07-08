@@ -1,4 +1,4 @@
-/* eslint-disable sort-imports, one-var, @lwc/lwc/no-for-of, no-underscore-dangle */
+/* eslint-disable sort-imports, one-var, @lwc/lwc/no-for-of, no-underscore-dangle, no-ternary */
 import { LightningElement, wire } from 'lwc';
 
 import { CurrentPageReference } from 'lightning/navigation';
@@ -129,7 +129,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
             this.displayTable = true;
             this.isLoading = false;
         } else if(error) {
-            console.error(error);
+            this.template.querySelector('c-error').handleError(error);
         }
     }
 
@@ -146,7 +146,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                 })   
             }
         } else if(error) {
-            console.error(error);
+            this.template.querySelector('c-error').handleError(error);
         }
     }
 
@@ -164,33 +164,30 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         this.lastUpdatedDatesByRecommendedBadgeMix = {};
         this.treegridDataByMix = {};
 
+        /* eslint-disable guard-for-in */
         for(const mix in this.categoriesByMix) {
             const extensibleMix = this.categoriesByMix[mix].map(item => {
                 const newCategoryChildren = [];
                 if(item.Recommended_Badges__r) {
-                    for(const badge of item.Recommended_Badges__r) {
-                        /* eslint-disable sort-keys, camelcase */
-                        newCategoryChildren.push({
-                            Id: badge[BADGE_ID_FIELD.fieldApiName],
-                            Name: badge[BADGE_NAME_FIELD.fieldApiName],
-                            Level__c: badge[BADGE_LEVEL_FIELD.fieldApiName],
-                            Type__c: badge[BADGE_TYPE_FIELD.fieldApiName],
-                            URL__c: badge[BADGE_URL_FIELD.fieldApiName],
-                        });
-                    }
+                    /* eslint-disable sort-keys, camelcase */
+                    newCategoryChildren.push(...item.Recommended_Badges__r.map(badge => ({
+                        Id: badge[BADGE_ID_FIELD.fieldApiName],
+                        Name: badge[BADGE_NAME_FIELD.fieldApiName],
+                        Level__c: badge[BADGE_LEVEL_FIELD.fieldApiName],
+                        Type__c: badge[BADGE_TYPE_FIELD.fieldApiName],
+                        URL__c: badge[BADGE_URL_FIELD.fieldApiName]
+                    })));
                 }
 
                 if(item.Recommended_Trails__r) {
-                    for(const trail of item.Recommended_Trails__r) {
-                        newCategoryChildren.push({
-                            Id: trail[TRAIL_ID_FIELD.fieldApiName],
-                            Name: trail[TRAIL_NAME_FIELD.fieldApiName],
-                            Level__c: trail[TRAIL_LEVEL_FIELD.fieldApiName],
-                            Type__c: 'Trail',
-                            URL__c: trail[TRAIL_URL_FIELD.fieldApiName],
-                            HyperlinkedName__c: trail[TRAIL_HYPERLINKEDNAME_FIELD.fieldApiName]
-                        })
-                    }
+                    newCategoryChildren.push(...item.Recommended_Trails__r.map(trail => ({
+                        Id: trail[TRAIL_ID_FIELD.fieldApiName],
+                        Name: trail[TRAIL_NAME_FIELD.fieldApiName],
+                        Level__c: trail[TRAIL_LEVEL_FIELD.fieldApiName],
+                        Type__c: 'Trail',
+                        URL__c: trail[TRAIL_URL_FIELD.fieldApiName],
+                        HyperlinkedName__c: trail[TRAIL_HYPERLINKEDNAME_FIELD.fieldApiName]
+                    })));
                 }
                 
                 const newCategory = {
@@ -202,7 +199,9 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                 };
 
                 if(!(item.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName] in this.lastUpdatedDatesByRecommendedBadgeMix)) {
-                    this.lastUpdatedDatesByRecommendedBadgeMix[item.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName]] = item.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD.fieldApiName];
+                    this.lastUpdatedDatesByRecommendedBadgeMix[item.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName]] = item.Recommended_Badge_Mix__r[
+                        RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD.fieldApiName
+                    ];
                 }
 
                 return newCategory;
@@ -218,29 +217,15 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
 
     handleSortChange(event) {
         this.displayTable = false;
-        let sortableFieldValues;
-        let tempTreegridData = [];
-        tempTreegridData = this.treegridData;
-
-        for(const sortOption of this.sortOptions) {
-            if((sortOption.value === event.detail) && sortOption.sortableFieldValues) {
-                sortableFieldValues = [];
-
-                for(const sortableFieldValue of sortOption.sortableFieldValues) {
-                    sortableFieldValues.splice(sortableFieldValue.Sort_Order__c - 1, 0, sortableFieldValue.MasterLabel);
-                }
-                break;
-            }
-        }
+        const sortableFieldValues = this.sortOptions.find(option => (option.value === event.detail) && option.sortableFieldValues)?.sortableFieldValues.map(s => s.MasterLabel);
+        const tempTreegridData = [...this.treegridData];
 
         for(const category of tempTreegridData) {
             /* eslint-disable no-magic-numbers */
             if(category._children.length > 1) {
-                if(sortableFieldValues) {
-                    category._children = sortCustom(event.detail, category._children, sortableFieldValues);
-                } else {
-                    category._children = sortAlphabetic(event.detail, category._children);
-                }
+                category._children = sortableFieldValues ? sortCustom(event.detail, category._children, sortableFieldValues) : sortAlphabetic(
+                    event.detail, category._children
+                );
             }
         }
 

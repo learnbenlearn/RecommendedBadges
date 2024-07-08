@@ -40,7 +40,12 @@ public inherited sharing class SortableFieldsSelector extends ApplicationSelecto
             }
         }
 
-        fflib_QueryFactory sortableFieldValuesSubQueryFactory = new SortableFieldValuesSelector().addQueryFactorySubselect(sortableFieldsQueryFactory, relationshipName, true);
+        fflib_QueryFactory sortableFieldValuesSubQueryFactory = new SortableFieldValuesSelector().addQueryFactorySubselect(sortableFieldsQueryFactory, relationshipName, true).
+            setOrdering(new fflib_QueryFactory.Ordering(
+                Schema.SObjectType.Sortable_Field_Value__mdt.getName(),
+                Schema.SObjectType.Sortable_Field_Value__mdt.fields.Sort_Order__c.getName(),
+                fflib_QueryFactory.SortOrder.ASCENDING
+            ));
         return (List<Sortable_Field__mdt>) Database.query(sortableFieldsQueryFactory.setCondition('Sortable_LWC__r.MasterLabel = :componentName').toSOQL());
     }
 }
