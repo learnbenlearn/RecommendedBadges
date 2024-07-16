@@ -8,7 +8,7 @@ private class RecommendedBadgesSelectorTests {
             Recommended_Badge__c.Type__c
         };
 
-        Assert.areEqual(expectedFieldList, new RecommendedBadgesSelector().getSObjectFieldList(), 'Expected prescribed field list.');
+        Assert.areEqual(expectedFieldList, new RecommendedBadgesSelector(false, fflib_SObjectSelector.DataAccess.LEGACY).getSObjectFieldList(), 'Expected prescribed field list.');
     }
 
     @isTest

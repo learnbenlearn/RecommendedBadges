@@ -7,7 +7,7 @@ private class RecommendedTrailsSelectorTests {
             Recommended_Trail__c.Level__c
         };
 
-        Assert.areEqual(expectedFieldList, new RecommendedTrailsSelector().getSObjectFieldList(), SelectorTestErrorMessages.SOBJECT_FIELD_LIST_ERROR_MESSAGE);
+        Assert.areEqual(expectedFieldList, new RecommendedTrailsSelector(false, fflib_SObjectSelector.DataAccess.LEGACY).getSObjectFieldList(), SelectorTestErrorMessages.SOBJECT_FIELD_LIST_ERROR_MESSAGE);
     }
 
     @isTest

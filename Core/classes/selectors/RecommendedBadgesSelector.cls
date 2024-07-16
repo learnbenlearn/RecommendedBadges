@@ -26,6 +26,22 @@ public inherited sharing class RecommendedBadgesSelector extends ApplicationSele
     }
 
     /**
+     * default constructor
+     */    
+    public RecommendedBadgesSelector() {
+        super();
+    }
+
+    /**
+     * constructor to call fflib_SObjectSelector constructor with/without field set fields included and using specified DataAccess
+     * @param includeFieldSetFields 
+     * @param dataAccess 
+     */    
+    public RecommendedBadgesSelector(Boolean includeFieldSetFields, fflib_SObjectSelector.DataAccess dataAccess) {
+        super(includeFieldSetFields, dataAccess);
+    }
+
+    /**
      * Returns all Recommended_Badge__c records that have a matching BadgeAPIName__c, including fields in the Core field set
      * @param badgeAPINames 
      * @return  `List<Recommended_Badge__c>`
