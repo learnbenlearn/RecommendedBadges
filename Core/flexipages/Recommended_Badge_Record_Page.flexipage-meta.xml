@@ -7,9 +7,6 @@
                     <name>actionNames</name>
                     <valueList>
                         <valueListItems>
-                            <value>Global.NewTask</value>
-                        </valueListItems>
-                        <valueListItems>
                             <value>ChangeOwnerOne</value>
                         </valueListItems>
                         <valueListItems>
@@ -270,12 +267,6 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection3</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>force:recordDetailPanelMobile</componentName>
-                <identifier>force_recordDetailPanelMobile</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

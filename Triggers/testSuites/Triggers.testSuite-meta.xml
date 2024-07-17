@@ -6,4 +6,5 @@
     <testClassName>RecommendedBadgeTrailTriggerHelper_Tests</testClassName>
     <testClassName>RecommendedBadgeTrigger_Tests</testClassName>
     <testClassName>RecommendedTrailTrigger_Tests</testClassName>
+    <testClassName>TrailheadEntityURLMappingsSelector_Tests</testClassName>
 </ApexTestSuite>

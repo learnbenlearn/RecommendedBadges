@@ -13,7 +13,7 @@ public with sharing class RecommendedBadgeTrailTriggerHelper {
         get {
             if(TRAILHEAD_URL_MAPPINGS == null) {
                 TRAILHEAD_URL_MAPPINGS = new Map<String, URLMapping>();
-                List<TrailheadEntityURLMapping__mdt> urlMappings = [SELECT DefaultPath__c, TrailheadEntityType__c, TrailheadPath__c FROM TrailheadEntityURLMapping__mdt];
+                List<TrailheadEntityURLMapping__mdt> urlMappings = new TrailheadEntityURLMappingsSelector().selectAll();
                 for(TrailheadEntityURLMapping__mdt urlMapping : urlMappings) {
                     TRAILHEAD_URL_MAPPINGS.put(
                         urlMapping.TrailheadEntityType__c, 

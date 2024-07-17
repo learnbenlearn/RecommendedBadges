@@ -6,7 +6,9 @@
  * @group Core
  */
 public inherited sharing abstract class ApplicationSelector extends fflib_SObjectSelector {
-    @SuppressWarnings('PMD.ApexDoc')
+    /**
+     * default constructor
+     */
     public ApplicationSelector() {
         this(false);
     }
@@ -17,5 +19,14 @@ public inherited sharing abstract class ApplicationSelector extends fflib_SObjec
      */
     public ApplicationSelector(Boolean includeFieldSetFields) {
         super(includeFieldSetFields);
+    }
+
+    /**
+     * Constructor to call fflib_SObjectSelector constructor with/without field set fields included and using specified DataAccess
+     * @param includeFieldSetFields 
+     * @param dataAccess 
+     */    
+    public ApplicationSelector(Boolean includeFieldSetFields, fflib_SObjectSelector.DataAccess dataAccess) {
+        super(includeFieldSetFields, dataAccess);
     }
 }

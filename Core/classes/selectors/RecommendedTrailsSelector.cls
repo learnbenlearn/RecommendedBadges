@@ -25,6 +25,22 @@ public inherited sharing class RecommendedTrailsSelector extends ApplicationSele
     }
 
     /**
+     * default constructor
+     */    
+    public RecommendedTrailsSelector() {
+        super();
+    }
+
+    /**
+     * constructor to call fflib_SObjectSelector constructor with/without field set fields included and using specified DataAccess
+     * @param includeFieldSetFields 
+     * @param dataAccess 
+     */
+    public RecommendedTrailsSelector(Boolean includeFieldSetFields, fflib_SObjectSelector.DataAccess dataAccess) {
+        super(includeFieldSetFields, dataAccess);
+    }
+
+    /**
      * Returns all Recommended_Trail__c records that have a matching TrailAPIName__c, including fields in the Core field set
      * @param trailAPINames 
      * @return  `List<Recommended_Trail__c>`

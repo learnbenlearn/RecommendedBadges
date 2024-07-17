@@ -52,13 +52,13 @@ global with sharing class TrailheadEntityService {
 
         Boolean hasBadgeDMLFailures = false;
         if(badgesToUpdate.size() > 0) {
-            List<Database.SaveResult> saveResults = Database.update(badgesToUpdate, false);
+            List<Database.SaveResult> saveResults = Database.update(badgesToUpdate, false, AccessLevel.SYSTEM_MODE);
             hasBadgeDMLFailures = DMLUtils.logErrors(saveResults, 'TrailheadEntityService', true);
         }
         
         Boolean hasTrailDMLFailures = false;
         if(trailsToUpdate.size() > 0) {
-            List<Database.SaveResult> saveResults = Database.update(trailsToUpdate, false);
+            List<Database.SaveResult> saveResults = Database.update(trailsToUpdate, false, AccessLevel.SYSTEM_MODE);
             hasTrailDMLFailures = DMLUtils.logErrors(saveResults, 'TrailheadEntityService', true);
         }
 
@@ -76,18 +76,18 @@ global with sharing class TrailheadEntityService {
         Set<String> deletedBadgeAPINames = body.get('deletedBadgeAPINames');
         Set<String> deletedTrailAPINames = body.get('deletedTrailAPINames');
 
-        List<Recommended_Badge__c> badgesToDelete = [SELECT Id FROM Recommended_Badge__c WHERE BadgeAPIName__c IN :deletedBadgeAPINames];
-        List<Recommended_Trail__c> trailsToDelete = [SELECT Id FROM Recommended_Trail__c WHERE TrailAPIName__c IN :deletedTrailAPINames];
+        List<Recommended_Badge__c> badgesToDelete = deletedBadgeAPINames == null ? new List<Recommended_Badge__c>() : new RecommendedBadgesSelector(false, fflib_SObjectSelector.DataAccess.SYSTEM_MODE).selectBadgesByAPINames(deletedBadgeAPINames);
+        List<Recommended_Trail__c> trailsToDelete = deletedTrailAPINames == null ? new List<Recommended_Trail__c>() : new RecommendedTrailsSelector(false, fflib_SObjectSelector.DataAccess.SYSTEM_MODE).selectTrailsByAPINames(deletedTrailAPINames);
         
         Boolean hasBadgeDMLFailures = false;
         if(badgesToDelete.size() > 0) {
-            List<Database.DeleteResult> deleteResults = Database.delete(badgesToDelete, false);
+            List<Database.DeleteResult> deleteResults = Database.delete(badgesToDelete, false, AccessLevel.SYSTEM_MODE);
             hasBadgeDMLFailures = DMLUtils.logErrors(deleteResults, 'TrailheadEntityService');
         }
         
         Boolean hasTrailDMLFailures = false;
         if(trailsToDelete.size() > 0) {
-            List<Database.DeleteResult> deleteResults = Database.delete(trailsToDelete, false);
+            List<Database.DeleteResult> deleteResults = Database.delete(trailsToDelete, false, AccessLevel.SYSTEM_MODE);
             hasTrailDMLFailures = DMLUtils.logErrors(deleteResults, 'TrailheadEntityService');
         }
 
