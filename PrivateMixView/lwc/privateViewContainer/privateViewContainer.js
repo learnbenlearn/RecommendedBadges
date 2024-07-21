@@ -69,6 +69,15 @@ const TABLE_COLUMNS = [
         }
     },
     {
+        label: 'Priority',
+        fieldName: HIGH_PRIORITY_FIELD.fieldApiName,
+        type: 'button-icon',
+        typeAttributes: {
+            disabled: true,
+            iconName: ''
+        }
+    },
+    {
         label: 'Type',
         fieldName: TYPE_FIELD.fieldApiName
     },
