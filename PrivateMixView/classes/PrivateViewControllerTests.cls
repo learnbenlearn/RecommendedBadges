@@ -2,13 +2,26 @@
 private class PrivateViewControllerTests {
     @isTest
     private static void getMixCategoryData_test() {
-        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true);
-        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = recommendedBadgeMixGenerator.execute();
+        RecommendedBadgeMixTS badgeMixGenerator = new RecommendedBadgeMixTS(new Map<String, Object>{
+            'generateRecordIDs' => false,
+            'generatorReturnValue' => 'all',
+            'numberToGenerate' => 9
+        });
+        badgeMixGenerator.generate();
+        badgeMixGenerator.numberToGenerate = 1;
+        List<Recommended_Badge_Mix__c> badgeMixes = (List<Recommended_Badge_Mix__c>) badgeMixGenerator.setFieldSpec(
+            new TestSupport.TestDataField(Recommended_Badge_Mix__c.Default_Badge_Mix__c, true)
+        ).generate();
+        insert badgeMixes;
+        
+        MixCategoryTS mixCategoryGenerator = new MixCategoryTS(
+            new Map<String, Object>{'generateRecordIDs' => false, 'numberToGenerate' => 4},
+            new List<TestSupport.TestDataField>{new RelationshipField(Mix_Category__c.Recommended_Badge_Mix__c, (new Map<Id, Recommended_Badge_Mix__c>(badgeMixes)).keySet())}
+        );
+        List<Mix_Category__c> mixCategories = (List<Mix_Category__c>) mixCategoryGenerator.generate();
+        insert mixCategories;
 
-        TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, false, testRecommendedBadgeMixes);
-        List<Mix_Category__c> testMixCategories = mixCategoryGenerator.execute();
-
-        testMixCategories = [
+        mixCategories = [
             SELECT Name, Recommended_Badge_Mix__r.Name, Recommended_Badge_Mix__r.Private_Mix__c
             FROM Mix_Category__c
             ORDER BY Name
@@ -18,19 +31,30 @@ private class PrivateViewControllerTests {
         List<Mix_Category__c> mixCategoryData = PrivateViewController.getMixCategoryData();
         Test.stopTest();
 
-        System.assert(testMixCategories.equals(mixCategoryData), 'Expected Mix Category data to equal test data.');
+        System.assert(mixCategories.equals(mixCategoryData), 'Expected Mix Category data to equal test data.');
     }
 
     @isTest
     private static void getPrivateMixRecommendedBadges_test() {
-        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 2, false, true);
-        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = recommendedBadgeMixGenerator.execute();
+        RecommendedBadgeMixTS badgeMixGenerator = new RecommendedBadgeMixTS(new Map<String, Object>{'generateRecordIDs' => false, 'numberToGenerate' => 2});
+        List<Recommended_Badge_Mix__c> badgeMixes = (List<Recommended_Badge_Mix__c>) badgeMixGenerator.generate();
+        insert badgeMixes;
 
-        TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, true, 20, testRecommendedBadgeMixes);
-        List<Mix_Category__c> testMixCategories = mixCategoryGenerator.execute();
-        
-        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(true, false, testMixCategories, true);
-        recommendedBadgeGenerator.execute();
+        MixCategoryTS mixCategoryGenerator = new MixCategoryTS(
+            new Map<String, Object>{'generateRecordIDs' => false, 'numberToGenerate' => 20},
+            new List<TestSupport.TestDataField>{new RelationshipField(Mix_Category__c.Recommended_Badge_Mix__c, (new Map<Id, Recommended_Badge_Mix__c>(badgeMixes)).keySet())}
+        );
+        List<Mix_Category__c> mixCategories = (List<Mix_Category__c>) mixCategoryGenerator.generate();
+        insert mixCategories;
+
+        RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
+            new Map<String, Object>{'generateRecordIDs' => false}, 
+            new List<TestSupport.TestDataField>{
+                new BooleanField(Recommended_Badge__c.High_Priority__c, true),
+                new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, Mix_Category__c>(mixCategories)).keySet())}
+        );
+        List<Recommended_Badge__c> badges = (List<Recommended_Badge__c>) badgeGenerator.generate();
+        insert badges;
 
         List<Recommended_Badge__c> resultRecommendedBadges = [
             SELECT BadgeName__c, High_Priority__c, High_Priority_Id__c, Level__c, Time_Estimate_Minutes__c, Time_Estimate__c, Type__c, URL__c, Mix_Category__r.Name 
