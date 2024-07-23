@@ -37,10 +37,13 @@ private class RecommendedBadgeTrigger_Tests {
 
         try {
             Test.startTest();
-            TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-                true, false, new List<Mix_Category__c>{testMixCategories[0]}, true
+            RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
+                new Map<String, Object>{'generateRecordIDs' => false}, 
+                new List<TestSupport.TestDataField>{
+                    new BooleanField(Recommended_Badge__c.High_Priority__c, true),
+                    new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, Mix_Category__c>{testMixCategories[0].Id => testMixCategories[0]}).keySet())}
             );
-            recommendedBadgeGenerator.execute();
+            insert badgeGenerator.generate();
             Test.stopTest();
         } catch(Exception e) {
             Assert.fail('No exception expected.');
@@ -73,18 +76,21 @@ private class RecommendedBadgeTrigger_Tests {
     private static void testPopulateBadgeMixKeys_bulkNegativeInsert() {
         List<Mix_Category__c> testMixCategories = [SELECT Id FROM Mix_Category__c];
 
-        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-            false, true, new List<Mix_Category__c>{testMixCategories[0]}, true
+        RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
+            new Map<String, Object>{'generateRecordIDs' => false}, 
+            new List<TestSupport.TestDataField>{
+                new BooleanField(Recommended_Badge__c.High_Priority__c, true),
+                new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, Mix_Category__c>{testMixCategories[0].Id => testMixCategories[0]}).keySet())}
         );
-        List<Recommended_Badge__c> testRecommendedBadges = recommendedBadgeGenerator.execute();
-        testRecommendedBadges.add(new Recommended_Badge__c(
+        List<Recommended_Badge__c> badges = (List<Recommended_Badge__c>) badgeGenerator.generate();
+        badges.add(new Recommended_Badge__c(
             Mix_Category__c=testMixCategories[0].Id,
-            BadgeAPIName__c='Test_Badge_' + Integer.valueOf(Math.floor(Math.random() * testRecommendedBadges.size()))
+            BadgeAPIName__c='Test_Badge_' + Integer.valueOf(Math.floor(Math.random() * badges.size()))
         ));
 
         try {
             Test.startTest();
-            insert testRecommendedBadges;
+            insert badges;
             Test.stopTest();
             Assert.fail('Expected exception with duplicate Recommended Badges in one Recommended Badge Mix.');
         } catch(Exception e) {
@@ -141,18 +147,23 @@ private class RecommendedBadgeTrigger_Tests {
 
         testMixCategories = [SELECT Id FROM Mix_Category__c];
         
-        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(false, true, new List<Mix_Category__c>{testMixCategories[0]}, true);
-        List<Recommended_Badge__c> testRecommendedBadges = recommendedBadgeGenerator.execute();
+        RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
+            new Map<String, Object>{'generateRecordIDs' => false}, 
+            new List<TestSupport.TestDataField>{
+                new BooleanField(Recommended_Badge__c.High_Priority__c, true),
+                new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, Mix_Category__c>{testMixCategories[0].Id => testMixCategories[0]}).keySet())}
+        );
+        List<Recommended_Badge__c> badges = (List<Recommended_Badge__c>) badgeGenerator.generate();
 
         try {
             Test.startTest();
-            insert testRecommendedBadges;
+            insert badges;
 
             for(Integer i = 0; i < 200; i++) {
-                testRecommendedBadges[i].Mix_Category__c = testMixCategories[1].Id;
+                badges[i].Mix_Category__c = testMixCategories[1].Id;
             }
 
-            update testRecommendedBadges;
+            update badges;
             Test.stopTest();
         } catch(Exception e) {
             Assert.fail('No exception expected.');
@@ -218,25 +229,29 @@ private class RecommendedBadgeTrigger_Tests {
         insert testMixCategories;
         testMixCategories = [SELECT Id FROM Mix_Category__c];
 
-        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-            false, true, new List<Mix_Category__c>{testMixCategories[0]}, true
+
+        RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
+            new Map<String, Object>{'generateRecordIDs' => false, 'generatorReturnValue' => 'all'}, 
+            new List<TestSupport.TestDataField>{
+                new BooleanField(Recommended_Badge__c.High_Priority__c, true),
+                new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, Mix_Category__c>{testMixCategories[0].Id => testMixCategories[0]}).keySet())}
         );
-        List<Recommended_Badge__c> testRecommendedBadges = recommendedBadgeGenerator.execute();
-        TestDataFactory.RecommendedBadge duplicateRecommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(
-            false, true, new List<Mix_Category__c>{testMixCategories[1]}, true
-        );
-        testRecommendedBadges.addAll((List<Recommended_Badge__c>) duplicateRecommendedBadgeGenerator.execute());
+        badgeGenerator.generate();
+        List<Recommended_Badge__c> badges = (List<Recommended_Badge__c>) badgeGenerator.setFieldSpecs(new List<TestSupport.TestDataField>{
+            new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, Mix_Category__c>{testMixCategories[1].Id => testMixCategories[1]}.keySet())),
+            new CounterSuffixField(Recommended_Badge__c.BadgeAPIName__c, 'Test_Badge_')
+        }).generate();
 
         try {
             Test.startTest();
-            insert testRecommendedBadges;
+            insert badges;
             
-            for(Recommended_Badge__c rb : testRecommendedBadges) {
+            for(Recommended_Badge__c rb : badges) {
                 if(rb.Mix_Category__c == testMixCategories[0].Id) {
                     rb.Mix_Category__c = testMixCategories[1].Id;
                 }
             }
-            update testRecommendedBadges;
+            update badges;
             Test.stopTest();
             Assert.fail('Expected exception with duplicate Recommended Badges in one Recommended Badge Mix.');
         } catch(Exception e) {

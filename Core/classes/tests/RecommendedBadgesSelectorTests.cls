@@ -16,15 +16,27 @@ private class RecommendedBadgesSelectorTests {
         Assert.areEqual(Recommended_Badge__c.sObjectType, new RecommendedBadgesSelector().getSObjectType(), 'Expected prescribed sObjectType.');
     }
 
-    private static List<Recommended_Badge__c> generateData(Boolean returnRecommendedBadges) {        
-        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true);
-        List<Recommended_Badge_Mix__c> testRecommendedBadgeMixes = (List<Recommended_Badge_Mix__c>) recommendedBadgeMixGenerator.execute();
+    private static List<Recommended_Badge__c> generateData(Boolean returnRecommendedBadges) {
+        RecommendedBadgeMixTS badgeMixGenerator = new RecommendedBadgeMixTS(new Map<String, Object>{'generateRecordIDs' => false, 'numberToGenerate' => 10});
+        List<Recommended_Badge_Mix__c> badgeMixes = (List<Recommended_Badge_Mix__c>) badgeMixGenerator.generate();
+        insert badgeMixes;
 
-        TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, true, testRecommendedBadgeMixes);
-        List<Mix_Category__c> testMixCategories = (List<Mix_Category__c>) mixCategoryGenerator.execute();
+        MixCategoryTS mixCategoryGenerator = new MixCategoryTS(
+            new Map<String, Object>{'generateRecordIDs' => false, 'numberToGenerate' => 4},
+            new List<TestSupport.TestDataField>{new RelationshipField(Mix_Category__c.Recommended_Badge_Mix__c, (new Map<Id, Recommended_Badge_Mix__c>(badgeMixes)).keySet())}
+        );
+        List<Mix_Category__c> mixCategories = (List<Mix_Category__c>) mixCategoryGenerator.generate();
+        insert mixCategories;
 
-        TestDataFactory.RecommendedBadge recommendedBadgeGenerator = new TestDataFactory.RecommendedBadge(true, returnRecommendedBadges, testMixCategories, true);
-        return recommendedBadgeGenerator.execute();
+        RecommendedBadgeTS badgeGenerator = new RecommendedBadgeTS(
+            new Map<String, Object>{'generateRecordIDs' => false}, 
+            new List<TestSupport.TestDataField>{
+                new BooleanField(Recommended_Badge__c.High_Priority__c, true),
+                new RelationshipField(Recommended_Badge__c.Mix_Category__c, (new Map<Id, Mix_Category__c>(mixCategories)).keySet())}
+        );
+        List<Recommended_Badge__c> badges = (List<Recommended_Badge__c>) badgeGenerator.generate();
+        insert badges;
+        return badges;
     }
 
     @isTest

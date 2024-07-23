@@ -14,7 +14,6 @@ engine:
     "*TS.cls",
     "CustomHttpCalloutMock.cls",
     "SelectorTestErrorMessages.cls",
-    "TestDataFactory.cls",
     "TestErrorMessages.cls"
   ]
   scope: [

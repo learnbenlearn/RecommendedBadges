@@ -1,20 +1,39 @@
 @isTest(IsParallel=true)
 private class RecommendedBadgeMixControllerTests {
     private static Map<String, List<Mix_Category__c>> generateData(Boolean includeDefaultMix){
-        TestDataFactory.RecommendedBadgeMix recommendedBadgeMixGenerator = new TestDataFactory.RecommendedBadgeMix(true, true, 10, includeDefaultMix, true);
-        Map<Id, Recommended_Badge_Mix__c> testRecommendedBadgeMixesById = new Map<Id, Recommended_Badge_Mix__c>(
-            (List<Recommended_Badge_Mix__c>) recommendedBadgeMixGenerator.execute()
+        RecommendedBadgeMixTS badgeMixGenerator;
+        List<Recommended_Badge_Mix__c> badgeMixes;
+        if(includeDefaultMix) {
+            badgeMixGenerator = new RecommendedBadgeMixTS(new Map<String, Object>{
+                'generateRecordIDs' => false,
+                'generatorReturnValue' => 'all',
+                'numberToGenerate' => 9
+            });
+            badgeMixGenerator.generate();
+            badgeMixGenerator.numberToGenerate = 1;
+            badgeMixGenerator.setFieldSpec(new TestSupport.TestDataField(Recommended_Badge_Mix__c.Default_Badge_Mix__c, true));
+        } else {
+            badgeMixGenerator = new RecommendedBadgeMixTS(new Map<String, Object>{'generateRecordIDs' => false, 'numberToGenerate' => 10});
+        }
+        badgeMixes = (List<Recommended_Badge_Mix__c>) badgeMixGenerator.generate();
+        insert badgeMixes;
+
+        Map<Id, Recommended_Badge_Mix__c> badgeMixesById = new Map<Id, Recommended_Badge_Mix__c>(badgeMixes);
+        
+        MixCategoryTS mixCategoryGenerator = new MixCategoryTS(
+            new Map<String, Object>{'generateRecordIDs' => false, 'numberToGenerate' => 4},
+            new List<TestSupport.TestDataField>{new RelationshipField(Mix_Category__c.Recommended_Badge_Mix__c, (new Map<Id, Recommended_Badge_Mix__c>(badgeMixes)).keySet())}
         );
-        TestDataFactory.MixCategory mixCategoryGenerator = new TestDataFactory.MixCategory(true, true, 4, testRecommendedBadgeMixesById.values());
-        List<Mix_Category__c> testMixCategories = mixCategoryGenerator.execute();
+        List<Mix_Category__c> mixCategories = (List<Mix_Category__c>) mixCategoryGenerator.generate();
+        insert mixCategories;
 
         Map<String, List<Mix_Category__c>> testCategoriesByMix = new Map<String, List<Mix_Category__c>>();
         String recommendedBadgeMixName;
         Boolean privateRecommendedBadgeMix;
 
-        for(Mix_Category__c mc : testMixCategories) {
-            recommendedBadgeMixName = testRecommendedBadgeMixesById.get(mc.Recommended_Badge_Mix__c).Name;
-            privateRecommendedBadgeMix = testRecommendedBadgeMixesById.get(mc.Recommended_Badge_Mix__c).Private_Mix__c;
+        for(Mix_Category__c mc : mixCategories) {
+            recommendedBadgeMixName = badgeMixesById.get(mc.Recommended_Badge_Mix__c).Name;
+            privateRecommendedBadgeMix = badgeMixesById.get(mc.Recommended_Badge_Mix__c).Private_Mix__c;
 
             if(testCategoriesByMix.get(recommendedBadgeMixName) == null && !privateRecommendedBadgeMix) {
                 testCategoriesByMix.put(recommendedBadgeMixName, new List<Mix_Category__c>{mc});
