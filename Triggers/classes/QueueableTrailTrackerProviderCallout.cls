@@ -6,8 +6,30 @@
  * @group Triggers
  */
 public with sharing class QueueableTrailTrackerProviderCallout implements Queueable, Database.AllowsCallouts {
+    private static final String BADGE_LEVEL_FIELD_API_NAME = 'trailheadapp__Level__c';
+    private static final String RECOMMENDED_BADGE_LEVEL_FIELD_API_NAME = 'Level__c';
+    private static final String NAME_FIELD_API_NAME = 'Name';
+    private static final String SUPERBADGE_UNIT_LEVEL = 'Superbadge Unit';
+    private static final String SUPERBADGE_LEVEL = 'Superbadge';
+    private static final String SUPER_SET_LEVEL = 'Super Set';
+    private static final String SUPERBADGE_UNIT_SUFFIX = 'Unit';
+    private static final String SUPERBADGE_SUFFIX = 'Superbadge';
+    private static final String SUPER_SET_SUFFIX = 'Set';
+
+    private final static Set<String> IGNORED_FIELDS {
+        get {
+            if(IGNORED_FIELDS == null) {
+                IGNORED_FIELDS = new Set<String>{'attributes', 'trailheadapp__API_Name__c'};
+            }
+            return IGNORED_FIELDS;
+        }
+        set;
+    }
+
     private final Id RECORD_ID;
     private final String SOBJECT_API_NAME;
+
+
     private final Map<String, String> PROVIDER_SOBJECTS_BY_OBJECT_API_NAME {
         get {
             if(this.PROVIDER_SOBJECTS_BY_OBJECT_API_NAME == null) {
@@ -102,8 +124,19 @@ public with sharing class QueueableTrailTrackerProviderCallout implements Queuea
             Map<String, Object> record = getRecordFromResponseBody(response.getBody());
             Set<String> providerFields = PROVIDER_TO_RECOMMENDED_BADGES_FIELD_MAP.keySet();
             for(String field : record.keySet()) {
-                if((field != 'attributes') && providerFields.contains(field) && (field != 'trailheadapp__API_Name__c')) {
-                    recordToUpdate.put(this.PROVIDER_TO_RECOMMENDED_BADGES_FIELD_MAP.get(field), record.get(field));
+                if((IGNORED_FIELDS.contains(field) == false) && providerFields.contains(field)) {
+                    if((field == BADGE_LEVEL_FIELD_API_NAME) && (record.get(field) == null) && (this.SOBJECT_API_NAME == 'Recommended_Badge__c')) {
+                        String badgeName = String.valueOf(record.get(NAME_FIELD_API_NAME));
+                        if(badgeName.endsWith(SUPERBADGE_UNIT_SUFFIX)) {
+                            recordToUpdate.put(RECOMMENDED_BADGE_LEVEL_FIELD_API_NAME, SUPERBADGE_UNIT_LEVEL);
+                        } else if(badgeName.endsWith(SUPERBADGE_SUFFIX)) {
+                            recordToUpdate.put(RECOMMENDED_BADGE_LEVEL_FIELD_API_NAME, SUPERBADGE_LEVEL);
+                        } else if(badgeName.endsWith(SUPER_SET_SUFFIX)) {
+                            recordToUpdate.put(RECOMMENDED_BADGE_LEVEL_FIELD_API_NAME, SUPER_SET_LEVEL);
+                        }
+                    } else {
+                        recordToUpdate.put(this.PROVIDER_TO_RECOMMENDED_BADGES_FIELD_MAP.get(field), record.get(field));
+                    }
                 }
             }
         } else {

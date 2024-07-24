@@ -298,12 +298,12 @@
     "fflib@1.11.0-1": "04t8c000000vG2PAAU",
     "LWCUtils@1.33.0-1": "04t8c000000vGYQAA2",
     "LWCErrorHandler@1.10.0-1": "04t8c000000vGbjAAE",
-    "Core@2.11.0-1": "04t8c000000vGd1AAE",
-    "Triggers@2.9.0-1": "04t8c000000vGd6AAE",
-    "StorageManagement@1.26.0-1": "04t8c000000vGdBAAU",
-    "SortCustomMetadata@1.19.0-1": "04t8c000000vGdGAAU",
-    "RecommendedBadgeMix@1.26.0-1": "04t8c000000vGdLAAU",
-    "PrivateMixView@1.22.0-1": "04t8c000000vGdQAAU",
-    "UserInterface@1.24.0-1": "04t8c000000vGdVAAU"
+    "Core@2.13.0-1": "04t8c000000vGiWAAU",
+    "Triggers@2.10.0-1": "04t8c000000vGibAAE",
+    "StorageManagement@1.27.0-1": "04t8c000000vGigAAE",
+    "SortCustomMetadata@1.20.0-1": "04t8c000000vGilAAE",
+    "RecommendedBadgeMix@1.27.0-1": "04t8c000000vGiqAAE",
+    "PrivateMixView@1.23.0-1": "04t8c000000vGivAAE",
+    "UserInterface@1.25.0-1": "04t8c000000vGj0AAE"
   }
 }

@@ -15,6 +15,21 @@
         <default>false</default>
         <label>Advanced</label>
     </customValue>
+    <customValue>
+        <fullName>Superbadge Unit</fullName>
+        <default>false</default>
+        <label>Superbadge Unit</label>
+    </customValue>
+    <customValue>
+        <fullName>Superbadge</fullName>
+        <default>false</default>
+        <label>Superbadge</label>
+    </customValue>
+    <customValue>
+        <fullName>Super Set</fullName>
+        <default>false</default>
+        <label>Super Set</label>
+    </customValue>
     <masterLabel>Level</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>
