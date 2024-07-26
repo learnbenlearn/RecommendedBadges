@@ -136,6 +136,7 @@ export default class Lookup extends LightningElement {
 	handleRemoveSelectedItem() {
 		this.searchResults = this.lookupItems;
 		this.selectedItem = null; // eslint-disable-line @lwc/lwc/no-api-reassignments -- only getter is public, not setter
+		this.dispatchEvent(new CustomEvent('selectioncleared'));
 	}
 
 	closeDropdown() {

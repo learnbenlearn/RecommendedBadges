@@ -30,10 +30,12 @@
       </template>
   
       <div lwc:if={displayPrompt} style="min-height: 600px">
-        <c-prompt-dialog prompt-header={promptHeader} confirm-label="Save" display-cancel="true" cancel-label="Cancel" onpromptclose={handlePromptClose} 
+        <c-prompt-dialog prompt-header={promptHeader} confirm-label="Save" confirm-disabled={disableChangeMixCategorySave} display-cancel="true" cancel-label="Cancel" onpromptclose={handlePromptClose} 
           onpromptconfirm={handlePromptConfirm}>
           <span slot="promptInput">
-            <c-lookup object-name={lookupObjectName} result-icon-name={lookupResultIconName} lookup-items={lookupItems}></c-lookup>
+            <c-lookup object-name={lookupObjectName} result-icon-name={lookupResultIconName} lookup-items={lookupItems} onitemselect={handleMixCategorySelect} 
+              onselectioncleared={handleMixCategorySelectionCleared}>
+            </c-lookup>
             <div lwc:if={promptIsLoading}>
               <lightning-spinner></lightning-spinner>
             </div>

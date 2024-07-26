@@ -87,6 +87,7 @@ const TABLE_COLUMNS = [
 export default class PrivateViewContainer extends LightningElement {
     @api divClasses;
     displayPrompt = false;
+    disableChangeMixCategorySave = true;
     dropdownViewLabel = DROPDOWN_VIEW_LABEL;
     dropdownViewValue = 'High Priority';
     isLoading = true;
@@ -253,6 +254,14 @@ export default class PrivateViewContainer extends LightningElement {
         } catch(err) {
             this.template.querySelector('c-error').handleError(err);
         }
+    }
+
+    handleMixCategorySelect() {
+        this.disableChangeMixCategorySave = false;
+    }
+
+    handleMixCategorySelectionCleared() {
+        this.disableChangeMixCategorySave = true;
     }
 
     async refreshRecommendedBadgeData() {
