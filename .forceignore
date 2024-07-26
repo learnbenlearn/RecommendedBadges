@@ -29,18 +29,18 @@ package.xml
 **Security.settings**
 
 ## Temp Ignored
-#**Home_Page_Default.flexipage**
+**Home_Page_Default.flexipage**
 
 # Ignored Packages
-#Core
+Core
 fflib
 LWCErrorHandler
 LWCUtils
-PrivateMixView
+#PrivateMixView
 RecommendedBadgeMix
 SortCustomMetadata
 StorageManagement
-#Triggers
+Triggers
 UserInterface
 
 # Ignored Folders

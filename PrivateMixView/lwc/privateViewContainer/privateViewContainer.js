@@ -121,15 +121,17 @@ export default class PrivateViewContainer extends LightningElement {
 
     populateLookupItems() {
         this.lookupItems = [];
-        for(const mixCategory of this.mixCategoryData) {
-            /* eslint-disable sort-keys */
-            this.lookupItems.push({
-                Id: mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName],
-                Name: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
-                SecondaryFieldValue: mixCategory.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName],
-                ParentId: mixCategory[RECOMMENDED_BADGE_MIX_FIELD.fieldApiName]
-            });
-        }
+        this.mixCategoryData.forEach((mixCategory) => {
+            if(this.selectedRecommendedBadge.Mix_Category__c !== mixCategory.Id) {
+                /* eslint-disable sort-keys */
+                this.lookupItems.push({
+                    Id: mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName],
+                    Name: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
+                    SecondaryFieldValue: mixCategory.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName],
+                    ParentId: mixCategory[RECOMMENDED_BADGE_MIX_FIELD.fieldApiName]
+                });
+            }
+        });
     }
 
     populateViewOptions() {
