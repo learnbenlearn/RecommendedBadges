@@ -36,8 +36,8 @@ package.xml
 fflib
 LWCErrorHandler
 LWCUtils
-#PrivateMixView
-#RecommendedBadgeMix
+PrivateMixView
+RecommendedBadgeMix
 SortCustomMetadata
 StorageManagement
 #Triggers
