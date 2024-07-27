@@ -57,7 +57,7 @@ private class RecommendedBadgeMixControllerTests {
 
         for(String mix : testCategoriesByMix.keySet()) {
             for(Integer i = 0; i < testCategoriesByMix.get(mix).size(); i++) {
-                Assert.areEqual(testCategoriesByMix.get(mix)[i].Id, testData.categoriesByMix.get(mix)[i].Id, 'Expected Mix Categories by Recommended Badge Mix name to be equal.');
+                Assert.areEqual(testCategoriesByMix.get(mix)[i].Id, testData.categoriesByMix.get(mix)[i].mixCategory.Id, 'Expected Mix Categories by Recommended Badge Mix name to be equal.');
             }
         }
 
@@ -83,7 +83,7 @@ private class RecommendedBadgeMixControllerTests {
 
         for(String mix : testCategoriesByMix.keySet()) {
             for(Integer i = 0; i < testCategoriesByMix.get(mix).size(); i++) {
-                Assert.areEqual(testCategoriesByMix.get(mix)[i].Id, testData.categoriesByMix.get(mix)[i].Id, 'Expected Mix Categories by Recommended Badge Mix name to be equal.');
+                Assert.areEqual(testCategoriesByMix.get(mix)[i].Id, testData.categoriesByMix.get(mix)[i].mixCategory.Id, 'Expected Mix Categories by Recommended Badge Mix name to be equal.');
             }
         }
 

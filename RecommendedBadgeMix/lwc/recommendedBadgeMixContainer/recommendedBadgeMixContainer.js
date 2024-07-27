@@ -35,7 +35,7 @@ const SPINNER_TEXT = 'Retrieving recommended badges';
 const TREEGRID_COLUMNS = [
     {
         type: 'url',
-        fieldName: BADGE_URL_FIELD.fieldApiName,
+        fieldName: BADGE_URL_FIELD.fieldApiName.replace('__c', ''),
         label: 'Name',
         typeAttributes: {
             label: {
@@ -45,11 +45,11 @@ const TREEGRID_COLUMNS = [
         initialWidth: 500
     },
     {
-        fieldName: BADGE_TYPE_FIELD.fieldApiName,
+        fieldName: BADGE_TYPE_FIELD.fieldApiName.replace('__c', ''),
         label: 'Type'
     },
     {
-        fieldName: BADGE_LEVEL_FIELD.fieldApiName,
+        fieldName: BADGE_LEVEL_FIELD.fieldApiName.replace('__c', ''),
         label: 'Level'
     },
 ]
@@ -163,43 +163,22 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     parseTreegridData() {
         this.lastUpdatedDatesByRecommendedBadgeMix = {};
         this.treegridDataByMix = {};
+        console.log(BADGE_LEVEL_FIELD);
 
         /* eslint-disable guard-for-in */
         for(const mix in this.categoriesByMix) {
             const extensibleMix = this.categoriesByMix[mix].map(item => {
-                const newCategoryChildren = [];
-                if(item.Recommended_Badges__r) {
-                    /* eslint-disable sort-keys, camelcase */
-                    newCategoryChildren.push(...item.Recommended_Badges__r.map(badge => ({
-                        Id: badge[BADGE_ID_FIELD.fieldApiName],
-                        Name: badge[BADGE_NAME_FIELD.fieldApiName],
-                        Level__c: badge[BADGE_LEVEL_FIELD.fieldApiName],
-                        Type__c: badge[BADGE_TYPE_FIELD.fieldApiName],
-                        URL__c: badge[BADGE_URL_FIELD.fieldApiName]
-                    })));
-                }
-
-                if(item.Recommended_Trails__r) {
-                    newCategoryChildren.push(...item.Recommended_Trails__r.map(trail => ({
-                        Id: trail[TRAIL_ID_FIELD.fieldApiName],
-                        Name: trail[TRAIL_NAME_FIELD.fieldApiName],
-                        Level__c: trail[TRAIL_LEVEL_FIELD.fieldApiName],
-                        Type__c: 'Trail',
-                        URL__c: trail[TRAIL_URL_FIELD.fieldApiName],
-                        HyperlinkedName__c: trail[TRAIL_HYPERLINKEDNAME_FIELD.fieldApiName]
-                    })));
-                }
-                
+                /* eslint-disable sort-keys, camelcase */                
                 const newCategory = {
-                    Id: item[MIX_CATEGORY_ID_FIELD.fieldApiName],
-                    Name: item[MIX_CATEGORY_NAME_FIELD.fieldApiName],
-                    URL__c: `/${item[MIX_CATEGORY_ID_FIELD.fieldApiName]}`, // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
-                    _children: newCategoryChildren,
-                    Recommended_Badge_Mix__c: item[MIX_CATEGORY_RECOMMENDED_BADGE_MIX_FIELD.fieldApiName],
+                    Id: item.mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName],
+                    Name: item.mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
+                    URL: `/${item.mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName]}`, // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
+                    _children: item.children,
+                    Recommended_Badge_Mix__c: item.mixCategory[MIX_CATEGORY_RECOMMENDED_BADGE_MIX_FIELD.fieldApiName],
                 };
 
-                if(!(item.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName] in this.lastUpdatedDatesByRecommendedBadgeMix)) {
-                    this.lastUpdatedDatesByRecommendedBadgeMix[item.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName]] = item.Recommended_Badge_Mix__r[
+                if(!(item.mixCategory.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName] in this.lastUpdatedDatesByRecommendedBadgeMix)) {
+                    this.lastUpdatedDatesByRecommendedBadgeMix[item.mixCategory.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName]] = item.mixCategory.Recommended_Badge_Mix__r[
                         RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD.fieldApiName
                     ];
                 }
@@ -211,6 +190,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     }
 
     handleMixChange(event) {
+        this.isExamMix = this.
         this.currentLastUpdatedDate = this.lastUpdatedDatesByRecommendedBadgeMix[event.detail];
         this.treegridData = this.treegridDataByMix[event.detail];
     }
