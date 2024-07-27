@@ -3,6 +3,7 @@ import { LightningElement, api } from 'lwc';
 export default class PromptDialog extends LightningElement {
     @api cancelLabel;
     @api displayCancel;
+    @api confirmDisabled = false;
     @api confirmLabel;
     @api promptHeader;
 

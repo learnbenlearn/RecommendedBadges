@@ -87,6 +87,7 @@ const TABLE_COLUMNS = [
 export default class PrivateViewContainer extends LightningElement {
     @api divClasses;
     displayPrompt = false;
+    disableChangeMixCategorySave = true;
     dropdownViewLabel = DROPDOWN_VIEW_LABEL;
     dropdownViewValue = 'High Priority';
     isLoading = true;
@@ -121,15 +122,17 @@ export default class PrivateViewContainer extends LightningElement {
 
     populateLookupItems() {
         this.lookupItems = [];
-        for(const mixCategory of this.mixCategoryData) {
-            /* eslint-disable sort-keys */
-            this.lookupItems.push({
-                Id: mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName],
-                Name: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
-                SecondaryFieldValue: mixCategory.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName],
-                ParentId: mixCategory[RECOMMENDED_BADGE_MIX_FIELD.fieldApiName]
-            });
-        }
+        this.mixCategoryData.forEach((mixCategory) => {
+            if(this.selectedRecommendedBadge.Mix_Category__c !== mixCategory.Id) {
+                /* eslint-disable sort-keys */
+                this.lookupItems.push({
+                    Id: mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName],
+                    Name: mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
+                    SecondaryFieldValue: mixCategory.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName],
+                    ParentId: mixCategory[RECOMMENDED_BADGE_MIX_FIELD.fieldApiName]
+                });
+            }
+        });
     }
 
     populateViewOptions() {
@@ -251,6 +254,14 @@ export default class PrivateViewContainer extends LightningElement {
         } catch(err) {
             this.template.querySelector('c-error').handleError(err);
         }
+    }
+
+    handleMixCategorySelect() {
+        this.disableChangeMixCategorySave = false;
+    }
+
+    handleMixCategorySelectionCleared() {
+        this.disableChangeMixCategorySave = true;
     }
 
     async refreshRecommendedBadgeData() {
