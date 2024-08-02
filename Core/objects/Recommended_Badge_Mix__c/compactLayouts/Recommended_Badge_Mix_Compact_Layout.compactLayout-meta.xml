@@ -3,7 +3,6 @@
     <fullName>Recommended_Badge_Mix_Compact_Layout</fullName>
     <fields>Name</fields>
     <fields>Private_Mix__c</fields>
-    <fields>ExamMix__c</fields>
     <fields>Default_Badge_Mix__c</fields>
     <label>Recommended Badge Mix Compact Layout</label>
 </CompactLayout>

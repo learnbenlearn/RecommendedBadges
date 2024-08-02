@@ -12,7 +12,7 @@ package.xml
 **/fieldRestrictionRules/**
 **Standard-Home.tab**
 **AppSwitcher.appMenu**
-**Recommended_Badge_Mix__c.sharingRules**
+#**Recommended_Badge_Mix__c.sharingRules**
 **Recommended_Badges_Manager_Permissions.permissionSet**
 **Recommended_Badges_Manager.permissionSetGroup**
 **Recommended_Badges_Manager_Muted.mutingPermissionSet**
@@ -25,14 +25,37 @@ package.xml
 **namedCredentials**
 **Security.settings**
 
+# Experience Site
+**audience-meta.xml
+**CommunitiesLanding.page**
+**CommunitiesLandingController**
+**cspTrustedSite-meta.xml
+**dashboard-meta.xml
+**dashboardFolder-meta.xml
+**Digital_Experiences_Permissions**
+**digitalExperiences**
+**Guest_User_Permissions**
+**network-meta.xml
+**networkBranding**
+**rbNavigationMenu**
+**RBNavigationMenuController**
+**Recommended Badges Profile**
+**Recommended_Badges_Enhanced**
+**Recommended_Badges**
+**report-meta.xml
+**reportFolder-meta.xml
+**reportType-meta.xml
+**singleRegionThemeLayout**
+**trailhead800x500**
+
 ## Temp Ignored
-#**Home_Page_Default.flexipage**
+**Home_Page_Default.flexipage**
 
 # Ignored Packages
-Core
+#Core
 fflib
 LWCErrorHandler
-LWCUtils
+#LWCUtils
 PrivateMixView
 #RecommendedBadgeMix
 SortCustomMetadata
@@ -42,3 +65,6 @@ UserInterface
 
 # Ignored Folders
 #unpackageable
+**/tsconfig.json
+
+**/*.ts

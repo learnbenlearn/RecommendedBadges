@@ -27,11 +27,6 @@
         <isRequired>false</isRequired>
     </availableFields>
     <availableFields>
-        <field>Recommended_Badge_Mix__r.ExamMix__c</field>
-        <isFieldManaged>false</isFieldManaged>
-        <isRequired>false</isRequired>
-    </availableFields>
-    <availableFields>
         <field>Exam__c</field>
         <isFieldManaged>false</isFieldManaged>
         <isRequired>false</isRequired>

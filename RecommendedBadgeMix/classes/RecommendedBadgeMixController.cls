@@ -13,6 +13,8 @@ public without sharing class RecommendedBadgeMixController {
     @AuraEnabled(cacheable=true scope='global')
     public static DataWrapper getData() {
         List<Mix_Category__c> mixCategories = new MixCategoriesSelector().selectRecommendedBadgesAndTrails();
+
+        Map<String, Recommended_Badge_Mix__c> badgeMixesByName = new Map<String, Recommended_Badge_Mix__c>();
         Map<String, List<MixCategoryWrapper>> categoriesByMix = new Map<String, List<MixCategoryWrapper>>();
         List<MixCategoryChild> mixCategoryChildren;
         List<MixCategoryWrapper> existingMixCategories;
@@ -37,6 +39,10 @@ public without sharing class RecommendedBadgeMixController {
                 existingMixCategories.add(new MixCategoryWrapper(mixCategory, mixCategoryChildren));
                 categoriesByMix.put(mixCategory.Recommended_Badge_Mix__r.Name, existingMixCategories);
             }
+
+            if(badgeMixesByName.get(mixCategory.Recommended_Badge_Mix__r.Name) == null) {
+                badgeMixesByName.put(mixCategory.Recommended_Badge_Mix__r.Name, mixCategory.Recommended_Badge_Mix__r);
+            }
         }
 
         List<Recommended_Badge_Mix__c> defaultMix = new RecommendedBadgeMixesSelector().selectDefaultMix();
@@ -47,8 +53,7 @@ public without sharing class RecommendedBadgeMixController {
             defaultMixName = mixCategories[0].Recommended_Badge_Mix__r.Name;
         }
         
-        DataWrapper data = new DataWrapper(categoriesByMix, defaultMixName);
-
+        DataWrapper data = new DataWrapper(categoriesByMix, defaultMixName, badgeMixesByName);
         return data;
     }
 
@@ -65,10 +70,17 @@ public without sharing class RecommendedBadgeMixController {
          */        
         @AuraEnabled 
         public String defaultMix {get;set;}
+
+        /**
+         * Last updated dates by Recommended Badge Mix
+         */        
+        @AuraEnabled
+        public Map<String, Recommended_Badge_Mix__c> badgeMixesByName {get;set;}
     
-        private DataWrapper(Map<String, List<MixCategoryWrapper>> categoriesByMix, String defaultMix) {
+        private DataWrapper(Map<String, List<MixCategoryWrapper>> categoriesByMix, String defaultMix, Map<String, Recommended_Badge_Mix__c> badgeMixesByName) {
             this.categoriesByMix = categoriesByMix;
             this.defaultMix = defaultMix;
+            this.badgeMixesByName = badgeMixesByName;
         }
     }
 

@@ -2,6 +2,7 @@
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Exam_Category</fullName>
     <active>true</active>
+    <description>Record type for mix categories that are children of a certification exam-specific badge mix.</description>
     <label>Exam Category</label>
     <picklistValues>
         <picklist>Exam__c</picklist>
