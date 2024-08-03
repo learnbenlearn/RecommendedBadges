@@ -14,16 +14,21 @@
         <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
     </brand>
+    <description>Manage Recommended Badge Mixes (desktop).</description>
     <formFactors>Small</formFactors>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Mixer</label>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
     <tabs>Recommended_Badge_Mix__c</tabs>
     <tabs>Mix_Category__c</tabs>
+    <tabs>Recommended_Badge__c</tabs>
+    <tabs>Recommended_Trail__c</tabs>
+    <tabs>RecommendedArticle__c</tabs>
     <tabs>standard-report</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Mixer_UtilityBar</utilityBar>

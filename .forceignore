@@ -40,6 +40,7 @@ package.xml
 **rbNavigationMenu**
 **RBNavigationMenuController**
 **Recommended Badges Profile**
+**Recommended Badges (Enhanced) Profile**
 **Recommended_Badges_Enhanced**
 **Recommended_Badges**
 **report-meta.xml
@@ -47,9 +48,10 @@ package.xml
 **reportType-meta.xml
 **singleRegionThemeLayout**
 **trailhead800x500**
+**Rremovebgpreview**
 
 ## Temp Ignored
-**Home_Page_Default.flexipage**
+#**Home_Page_Default.flexipage**
 
 # Ignored Packages
 #Core
@@ -61,7 +63,7 @@ PrivateMixView
 SortCustomMetadata
 StorageManagement
 Triggers
-UserInterface
+#UserInterface
 
 # Ignored Folders
 #unpackageable
