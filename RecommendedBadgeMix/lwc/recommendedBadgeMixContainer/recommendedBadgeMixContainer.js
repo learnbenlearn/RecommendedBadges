@@ -62,34 +62,34 @@ const TREEGRID_COLUMNS = [
 ]
 
 /*
-{
-    "type": "comm__namedPage",
-    "attributes": {
-        "name": "Home"
-    },
-    "state": {
-        "app": "commeditor",
-        "redirect": "false"
-    }
-}
-{
-    "type": "comm__namedPage",
-    "attributes": {
-        "name": "Home"
-    },
-    "state": {
-        "app": "commeditor"
-    }
-}
-
-{
-    "type": "standard__namedPage",
-    "attributes": {
-        "pageName": "home"
-    },
-    "state": {}
-}
-*/
+ * {
+ *   "type": "comm__namedPage",
+ *   "attributes": {
+ *       "name": "Home"
+ *   },
+ *   "state": {
+ *       "app": "commeditor",
+ *       "redirect": "false"
+ *   }
+ * }
+ * {
+ *   "type": "comm__namedPage",
+ *   "attributes": {
+ *       "name": "Home"
+ *   },
+ *   "state": {
+ *       "app": "commeditor"
+ *   }
+ * }
+ * 
+ * {
+ *   "type": "standard__namedPage",
+ *   "attributes": {
+ *       "pageName": "home"
+ *   },
+ *   "state": {}
+ * }
+ */
 
 export default class RecommendedBadgeMixContainer extends LightningElement {
     badgeMixesByName;
@@ -175,7 +175,6 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
             this.displayTable = true;
             this.isLoading = false;
         } else if(error) {
-            console.error(error);
             this.template.querySelector('c-error').handleError(error);
         }
     }
@@ -217,7 +216,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
                 const newCategory = {
                     Id: item.mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName],
                     Name: item.mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
-                    URL: '#', //`/${item.mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName]}`, // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
+                    URL: `/${item.mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName]}`, // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
                     _children: item.children,
                     Recommended_Badge_Mix__c: item.mixCategory[MIX_CATEGORY_RECOMMENDED_BADGE_MIX_FIELD.fieldApiName],
                 };
