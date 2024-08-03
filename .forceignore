@@ -48,10 +48,10 @@ package.xml
 **reportType-meta.xml
 **singleRegionThemeLayout**
 **trailhead800x500**
-**Rremovebgpreview**
+**contentassets/Rremovebgpreview**
 
 ## Temp Ignored
-#**Home_Page_Default.flexipage**
+**Home_Page_Default.flexipage**
 
 # Ignored Packages
 #Core
