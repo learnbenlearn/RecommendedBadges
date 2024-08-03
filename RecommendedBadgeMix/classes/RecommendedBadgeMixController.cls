@@ -4,7 +4,7 @@
  * @since 02-07-2023
  * @group RecommendedBadgeMix
  */
-public without sharing class RecommendedBadgeMixController {
+public with sharing class RecommendedBadgeMixController {
     /**
      * Method to retrieve necessary data - including mix categories, recommended badges, and recommended trails for public recommended
      *  badge mixes, as well as the name of the default mix - for recommendedBadgeMixContainer.

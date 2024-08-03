@@ -222,7 +222,7 @@
                 <visibilityRule>
                     <criteria>
                         <leftValue>{!Record.RecordType.Name}</leftValue>
-                        <operator>EQUAL</operator>
+                        <operator>NE</operator>
                         <rightValue>Exam</rightValue>
                     </criteria>
                 </visibilityRule>

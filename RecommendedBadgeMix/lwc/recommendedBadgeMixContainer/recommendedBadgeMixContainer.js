@@ -94,7 +94,6 @@ const TREEGRID_COLUMNS = [
 export default class RecommendedBadgeMixContainer extends LightningElement {
     badgeMixesByName;
     categoriesByMix;
-    disabledMixCategoryLinks = false;
     _displayExamResources = false;
     displayTable;
     freeSFBenPracticeExam;
@@ -146,11 +145,6 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         if(this.isLoading && this.treegridData) {
             this.isLoading = false;
         }
-
-        if(this.treegridData && !this.disabledMixCategoryLinks) { // more here,, maybe delete this
-            console.log(this.template.querySelectorAll('a[href="https://#"]'));
-            this.disabledMixCategoryLinks = this.template.querySelectorAll('a[href="https://#"]').length > 0;
-        }
     }
 
     @wire(CurrentPageReference)
@@ -181,6 +175,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
             this.displayTable = true;
             this.isLoading = false;
         } else if(error) {
+            console.error(error);
             this.template.querySelector('c-error').handleError(error);
         }
     }
