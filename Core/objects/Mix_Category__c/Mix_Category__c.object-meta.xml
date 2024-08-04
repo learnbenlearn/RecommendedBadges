@@ -149,6 +149,8 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>Mix_Category_Compact_Layout</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Category of recommended Trailhead badges and trails.</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>

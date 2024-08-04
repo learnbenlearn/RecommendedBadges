@@ -154,9 +154,9 @@
                 <identifier>lst_dynamicRelatedList2</identifier>
                 <visibilityRule>
                     <criteria>
-                        <leftValue>{!Record.ExamMix__c}</leftValue>
+                        <leftValue>{!Record.RecordType.Name}</leftValue>
                         <operator>EQUAL</operator>
-                        <rightValue>true</rightValue>
+                        <rightValue>Exam</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
@@ -221,9 +221,9 @@
                 <identifier>lst_dynamicRelatedList</identifier>
                 <visibilityRule>
                     <criteria>
-                        <leftValue>{!Record.ExamMix__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>false</rightValue>
+                        <leftValue>{!Record.RecordType.Name}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Exam</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
@@ -269,8 +269,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.ExamMix__c</fieldItem>
-                <identifier>RecordExamMix_cField</identifier>
+                <fieldItem>Record.RecordTypeId</fieldItem>
+                <identifier>RecordRecordTypeIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-28ca7302-a55a-4864-accb-908d71423c4c</name>
@@ -326,6 +326,64 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.OfficialExamGuide__c</fieldItem>
+                <identifier>RecordOfficialExamGuide__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.OfficialExamTrailmix__c</fieldItem>
+                <identifier>RecordOfficialExamTrailmix__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.OfficialPracticeExam__c</fieldItem>
+                <identifier>RecordOfficialPracticeExam__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.FreeSFBenPracticeExam__c</fieldItem>
+                <identifier>RecordFreeSFBenPracticeExam__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-4b6a10aa-a926-4057-b65a-aa4e41e10849</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-4b6a10aa-a926-4057-b65a-aa4e41e10849</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-e7065d52-1ca5-4568-bd82-2c4a647a2291</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
                     <name>columns</name>
@@ -341,6 +399,31 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>flexipage_fieldSection1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>columns</name>
+                    <value>Facet-e7065d52-1ca5-4568-bd82-2c4a647a2291</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>label</name>
+                    <value>Exam Resources</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection</identifier>
+                <visibilityRule>
+                    <criteria>
+                        <leftValue>{!Record.RecordType.Name}</leftValue>
+                        <operator>EQUAL</operator>
+                        <rightValue>Exam</rightValue>
+                    </criteria>
+                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

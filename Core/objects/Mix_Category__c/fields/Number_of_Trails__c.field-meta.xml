@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Number_of_Trails__c</fullName>
-    <externalId>false</externalId>
+    <deprecated>false</deprecated>
     <label>Number of Trails</label>
     <summaryForeignKey>Recommended_Trail__c.Mix_Category__c</summaryForeignKey>
     <summaryOperation>count</summaryOperation>

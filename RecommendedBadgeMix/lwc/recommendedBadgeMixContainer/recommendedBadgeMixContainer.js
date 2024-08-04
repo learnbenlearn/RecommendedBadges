@@ -2,6 +2,7 @@
 import { LightningElement, wire } from 'lwc';
 
 import { CurrentPageReference } from 'lightning/navigation';
+import { getObjectInfo } from 'lightning/uiObjectInfoApi';
 
 import getData from '@salesforce/apex/RecommendedBadgeMixController.getData';
 import getSortOptions from '@salesforce/apex/SortCustomMetadataController.getSortOptions';
@@ -24,18 +25,24 @@ import TRAIL_URL_FIELD from '@salesforce/schema/Recommended_Trail__c.URL__c';
 import MIX_CATEGORY_ID_FIELD from '@salesforce/schema/Mix_Category__c.Id';
 import MIX_CATEGORY_NAME_FIELD from '@salesforce/schema/Mix_Category__c.Name';
 import MIX_CATEGORY_RECOMMENDED_BADGE_MIX_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__c';
+import RECOMMENDED_BADGE_MIX_OBJECT from '@salesforce/schema/Recommended_Badge_Mix__c';
 import RECOMMENDED_BADGE_MIX_NAME_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.Name';
+import RECOMMENDED_BADGE_MIX_FREE_SF_BEN_PRACTICE_EXAM_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.FreeSFBenPracticeExam__c';
 import RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.Last_Updated_Date__c';
+import RECOMMENDED_BADGE_MIX_OFFICIAL_EXAM_GUIDE_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.OfficialExamGuide__c';
+import RECOMMENDED_BADGE_MIX_OFFICIAL_EXAM_TRAILMIX_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.OfficialExamTrailmix__c';
+import RECOMMENDED_BADGE_MIX_OFFICIAL_PRACTICE_EXAM_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.OfficialPracticeExam__c';
+import RECOMMENDED_BADGE_MIX_RECORD_TYPE_ID_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.RecordTypeId';
 //import RECOMMENDED_BADGE_MIX_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__r';
 
-
+const EXPERIENCE_SITE_PAGE_TYPE = 'comm__namedPage';
 const SPINNER_TEXT = 'Retrieving recommended badges';
 
 /* eslint-disable sort-keys */
 const TREEGRID_COLUMNS = [
     {
         type: 'url',
-        fieldName: BADGE_URL_FIELD.fieldApiName,
+        fieldName: BADGE_URL_FIELD.fieldApiName.replace('__c', ''),
         label: 'Name',
         typeAttributes: {
             label: {
@@ -45,55 +52,62 @@ const TREEGRID_COLUMNS = [
         initialWidth: 500
     },
     {
-        fieldName: BADGE_TYPE_FIELD.fieldApiName,
+        fieldName: BADGE_TYPE_FIELD.fieldApiName.replace('__c', ''),
         label: 'Type'
     },
     {
-        fieldName: BADGE_LEVEL_FIELD.fieldApiName,
+        fieldName: BADGE_LEVEL_FIELD.fieldApiName.replace('__c', ''),
         label: 'Level'
     },
 ]
 
 /*
-{
-    "type": "comm__namedPage",
-    "attributes": {
-        "name": "Home"
-    },
-    "state": {
-        "app": "commeditor",
-        "redirect": "false"
-    }
-}
-{
-    "type": "comm__namedPage",
-    "attributes": {
-        "name": "Home"
-    },
-    "state": {
-        "app": "commeditor"
-    }
-}
-
-{
-    "type": "standard__namedPage",
-    "attributes": {
-        "pageName": "home"
-    },
-    "state": {}
-}
-*/
+ * {
+ *   "type": "comm__namedPage",
+ *   "attributes": {
+ *       "name": "Home"
+ *   },
+ *   "state": {
+ *       "app": "commeditor",
+ *       "redirect": "false"
+ *   }
+ * }
+ * {
+ *   "type": "comm__namedPage",
+ *   "attributes": {
+ *       "name": "Home"
+ *   },
+ *   "state": {
+ *       "app": "commeditor"
+ *   }
+ * }
+ * 
+ * {
+ *   "type": "standard__namedPage",
+ *   "attributes": {
+ *       "pageName": "home"
+ *   },
+ *   "state": {}
+ * }
+ */
 
 export default class RecommendedBadgeMixContainer extends LightningElement {
+    badgeMixesByName;
     categoriesByMix;
+    _displayExamResources = false;
     displayTable;
+    freeSFBenPracticeExam;
+    _isExamMix = false;
     isLoading = true;
     currentLastUpdatedDate;
-    lastUpdatedDatesByRecommendedBadgeMix;
+    keyField = BADGE_ID_FIELD.fieldApiName;
     mixLabel = 'Select Badge Mix';
     mixOptions;
     mixValue;
-    keyField = BADGE_ID_FIELD.fieldApiName;
+    officialExamGuide;
+    officialExamTrailmix;
+    officialPracticeExam;
+    recordTypeNamesById;
     sortLabel = 'Sort By';
     sortOptions;
     sortValue;
@@ -101,6 +115,27 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     treegridColumns = TREEGRID_COLUMNS;
     treegridData;
     treegridDataByMix;
+
+    get displayExamResources() {
+        if(this.isExamMix && this.pageRef?.type === EXPERIENCE_SITE_PAGE_TYPE) {
+            this.displayExamResources = true;
+        } else {
+            this.displayExamResources = false;
+        }
+        return this._displayExamResources;
+    }
+    set displayExamResources(value) {
+        this._displayExamResources = value;
+    }
+
+    get isExamMix() {
+        return this._isExamMix;
+    }
+    set isExamMix(badgeMixName) {
+        // eslint-disable-next-line no-magic-numbers
+        const recordTypeName = this.recordTypeNamesById[this.badgeMixesByName[badgeMixName][RECOMMENDED_BADGE_MIX_RECORD_TYPE_ID_FIELD.fieldApiName]];
+        this._isExamMix = recordTypeName === 'Exam';
+    }
 
     renderedCallback() {
         if(this.treegridData && !this.displayTable) {
@@ -115,16 +150,27 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     @wire(CurrentPageReference)
     pageRef;
 
+    @wire(getObjectInfo, { objectApiName : RECOMMENDED_BADGE_MIX_OBJECT })
+    parseRecommendedBadgeMixObjectInfo({error, data}) {
+        if(data) {
+            this.recordTypeNamesById = {};
+            for(const recordTypeInfo of Object.values(data.recordTypeInfos)) {
+                this.recordTypeNamesById[recordTypeInfo.recordTypeId] = recordTypeInfo.name;
+            }
+        } else if(error) {
+            this.template.querySelector('c-error').handleError(error);
+        }
+    }
+
     @wire(getData)
     parseData({error, data}) {
         if(data) {
             this.categoriesByMix = data.categoriesByMix;
+            this.badgeMixesByName = data.badgeMixesByName;
             this.populateMixDropdown(data.defaultMix);
-
-            this.parseTreegridData();
-
-            this.currentLastUpdatedDate = this.lastUpdatedDatesByRecommendedBadgeMix[data.defaultMix];
-            this.treegridData = this.treegridDataByMix[data.defaultMix];
+            this.parseTreegridData(data.defaultMix);
+            this.currentLastUpdatedDate = this.badgeMixesByName[data.defaultMix][RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD.fieldApiName];
+            this.isExamMix = data.defaultMix;
 
             this.displayTable = true;
             this.isLoading = false;
@@ -160,58 +206,37 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         this.mixValue = defaultMix;
     }
 
-    parseTreegridData() {
-        this.lastUpdatedDatesByRecommendedBadgeMix = {};
+    parseTreegridData(defaultMix) {
         this.treegridDataByMix = {};
 
         /* eslint-disable guard-for-in */
         for(const mix in this.categoriesByMix) {
             const extensibleMix = this.categoriesByMix[mix].map(item => {
-                const newCategoryChildren = [];
-                if(item.Recommended_Badges__r) {
-                    /* eslint-disable sort-keys, camelcase */
-                    newCategoryChildren.push(...item.Recommended_Badges__r.map(badge => ({
-                        Id: badge[BADGE_ID_FIELD.fieldApiName],
-                        Name: badge[BADGE_NAME_FIELD.fieldApiName],
-                        Level__c: badge[BADGE_LEVEL_FIELD.fieldApiName],
-                        Type__c: badge[BADGE_TYPE_FIELD.fieldApiName],
-                        URL__c: badge[BADGE_URL_FIELD.fieldApiName]
-                    })));
-                }
-
-                if(item.Recommended_Trails__r) {
-                    newCategoryChildren.push(...item.Recommended_Trails__r.map(trail => ({
-                        Id: trail[TRAIL_ID_FIELD.fieldApiName],
-                        Name: trail[TRAIL_NAME_FIELD.fieldApiName],
-                        Level__c: trail[TRAIL_LEVEL_FIELD.fieldApiName],
-                        Type__c: 'Trail',
-                        URL__c: trail[TRAIL_URL_FIELD.fieldApiName],
-                        HyperlinkedName__c: trail[TRAIL_HYPERLINKEDNAME_FIELD.fieldApiName]
-                    })));
-                }
-                
+                /* eslint-disable sort-keys, camelcase */                
                 const newCategory = {
-                    Id: item[MIX_CATEGORY_ID_FIELD.fieldApiName],
-                    Name: item[MIX_CATEGORY_NAME_FIELD.fieldApiName],
-                    URL__c: `/${item[MIX_CATEGORY_ID_FIELD.fieldApiName]}`, // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
-                    _children: newCategoryChildren,
-                    Recommended_Badge_Mix__c: item[MIX_CATEGORY_RECOMMENDED_BADGE_MIX_FIELD.fieldApiName],
+                    Id: item.mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName],
+                    Name: item.mixCategory[MIX_CATEGORY_NAME_FIELD.fieldApiName],
+                    URL: `/${item.mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName]}`, // this.pageRef.type === "comm__namedPage" ? undefined : '/' + item.Id,
+                    _children: item.children,
+                    Recommended_Badge_Mix__c: item.mixCategory[MIX_CATEGORY_RECOMMENDED_BADGE_MIX_FIELD.fieldApiName],
                 };
-
-                if(!(item.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName] in this.lastUpdatedDatesByRecommendedBadgeMix)) {
-                    this.lastUpdatedDatesByRecommendedBadgeMix[item.Recommended_Badge_Mix__r[RECOMMENDED_BADGE_MIX_NAME_FIELD.fieldApiName]] = item.Recommended_Badge_Mix__r[
-                        RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD.fieldApiName
-                    ];
-                }
-
                 return newCategory;
             });
+
             this.treegridDataByMix[mix] = extensibleMix;
         }
+        this.treegridData = this.treegridDataByMix[defaultMix];
     }
 
     handleMixChange(event) {
-        this.currentLastUpdatedDate = this.lastUpdatedDatesByRecommendedBadgeMix[event.detail];
+        this.isExamMix = event.detail;
+        if(this.isExamMix) {
+            this.freeSFBenPracticeExam = this.badgeMixesByName[event.detail][RECOMMENDED_BADGE_MIX_FREE_SF_BEN_PRACTICE_EXAM_FIELD.fieldApiName];
+            this.officialExamGuide = this.badgeMixesByName[event.detail][RECOMMENDED_BADGE_MIX_OFFICIAL_EXAM_GUIDE_FIELD.fieldApiName];
+            this.officialExamTrailmix = this.badgeMixesByName[event.detail][RECOMMENDED_BADGE_MIX_OFFICIAL_EXAM_TRAILMIX_FIELD.fieldApiName];
+            this.officialPracticeExam = this.badgeMixesByName[event.detail][RECOMMENDED_BADGE_MIX_OFFICIAL_PRACTICE_EXAM_FIELD.fieldApiName];
+        }
+        this.currentLastUpdatedDate = this.badgeMixesByName[event.detail][RECOMMENDED_BADGE_MIX_LAST_UPDATED_DATE_FIELD.fieldApiName];
         this.treegridData = this.treegridDataByMix[event.detail];
     }
 

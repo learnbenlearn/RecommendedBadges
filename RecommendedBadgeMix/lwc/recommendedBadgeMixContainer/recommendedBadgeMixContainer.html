@@ -7,7 +7,7 @@
 -->
 <template>
     <c-error></c-error>
-    <div class="slds-box slds-var-p-around_small" style="min-height:300px">
+    <div class="slds-var-p-around-small" style="min-height:300px">
         <div class="slds-grid slds-wrap slds-gutters" style="min-height:125px">
             <div class="slds-col slds-size_1-of-4">
                 <c-dropdown label={mixLabel} value={mixValue} options={mixOptions} ondropdownchange={handleMixChange}>
@@ -20,11 +20,23 @@
 
             <div class="slds-col slds-size_1-of-4"></div>
 
-            <div class="slds-col slds-size_1-of-4 slds-text-align_right">
-                <template lwc:if={displayTable}>
-                    Last Updated &nbsp;
+            <div class="slds-col slds-size_1-of-4">
+                <div lwc:if={displayTable}>
+                    Last Updated&nbsp;
                     <lightning-formatted-date-time value={currentLastUpdatedDate} year="numeric" month="short" day="numeric" time-zone="UTC"></lightning-formatted-date-time>
-                </template>
+
+                    <div lwc:if={displayExamResources}>
+                        <a href={officialExamGuide} class="resourceLink" target="_blank">Official Exam Guide</a>
+                        <br/>
+                        <a href={officialExamTrailmix} class="resourceLink" target="_blank">Official Exam Trailmix</a>
+                        <br/>
+                        <template lwc:if={officialPracticeExam}>
+                            <a href={officialPracticeExam} class="resourceLink" target="_blank">Official Practice Exam</a>
+                            <br/>
+                        </template>
+                        <a href={freeSFBenPracticeExam} class="resourceLink" target="_blank">Free Salesforce Ben Practice Exam</a>
+                    </div>
+                </div>
             </div>
 
             <div class="slds-col slds-size_1-of-3">
