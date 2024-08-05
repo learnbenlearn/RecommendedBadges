@@ -240,6 +240,10 @@
       ]
     },
     {
+      "path": "RecommendedArticles",
+      "default": false
+    },
+    {
       "path": "unpackageable",
       "default": false
     }
