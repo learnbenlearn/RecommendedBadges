@@ -12,6 +12,6 @@ public with sharing class RecommendedArticlesController {
 
     @AuraEnabled(cacheable=true)
     public static List<Topic> getTopics() {
-        return [SELECT Name FROM Topic ORDER BY Name];
+        return [SELECT Name FROM Topic WHERE Id IN (SELECT TopicId FROM TopicAssignment WHERE EntityType = 'RecommendedArticle__c') ORDER BY Name];
     }
 }
