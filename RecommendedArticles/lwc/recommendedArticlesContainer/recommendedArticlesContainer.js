@@ -1,7 +1,7 @@
 import { LightningElement, track, wire } from 'lwc';
 
-import getRecommendedArticles from '@salesforce/apex/RecommendedArticlesController.getRecommendedArticles';
-import getTopics from '@salesforce/apex/RecommendedArticlesController.getTopics';
+import getRecommendedArticles from '@salesforce/apex/RecommendedArticlesContainerController.getRecommendedArticles';
+import getTopics from '@salesforce/apex/RecommendedArticlesContainerController.getTopics';
 
 export default class RecommendedArticlesContainer extends LightningElement {
     @track currentArticles = [];

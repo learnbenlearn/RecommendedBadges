@@ -38,9 +38,4 @@ public class TopicTS extends TestSupport.DataGeneration {
             Topic.Name => new CounterSuffixField(Topic.Name, 'Topic ')
         };
     }
-
-    public TopicTS setTopics(List<Topic> topics) {
-        this.records = topics;
-        return this;
-    }
 }
