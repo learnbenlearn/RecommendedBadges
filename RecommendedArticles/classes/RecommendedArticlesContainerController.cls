@@ -4,7 +4,7 @@
  * @since 08-05-2024
  * @group RecommendedArticles
  */
-public with sharing class RecommendedArticlesContainerController {
+public without sharing class RecommendedArticlesContainerController {
     /**
      * Returns all RecommendedArticle__c records along with the names of related Topics
      * @return  `List<RecommendedArticle__c>`
