@@ -2,16 +2,24 @@
  * Apex controller for recommendedArticlesContainer component
  * @author Ben Learn
  * @since 08-05-2024
+ * @group RecommendedArticles
  */
 public with sharing class RecommendedArticlesController {
+    /**
+     * Returns all RecommendedArticle__c records along with the names of related Topics
+     * @return  `List<RecommendedArticle__c>`
+     */    
     @AuraEnabled(cacheable=true)
     public static List<RecommendedArticle__c> getRecommendedArticles() {
-        List<RecommendedArticle__c> articles = [SELECT Id, Name, Title__c, URL__c, (SELECT Id, Topic.Name FROM TopicAssignments) FROM RecommendedArticle__c];
-        return articles;
+        return new RecommendedArticlesSelector().selectAllWithTopics();
     }
 
+    /**
+     * Returns all Topics that have an TopicAssignment related to a RecommendedArticle__c record.
+     * @return  `List<Topic>`
+     */    
     @AuraEnabled(cacheable=true)
     public static List<Topic> getTopics() {
-        return [SELECT Name FROM Topic WHERE Id IN (SELECT TopicId FROM TopicAssignment WHERE EntityType = 'RecommendedArticle__c') ORDER BY Name];
+        return new TopicsSelector().selectAllTaggingRecommendedArticles();
     }
 }

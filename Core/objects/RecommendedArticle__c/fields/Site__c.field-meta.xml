@@ -10,7 +10,9 @@
         IF(CONTAINS(URL__c, &quot;https://medium.com/geekculture&quot;), &quot;Medium&quot;,
           IF(CONTAINS(URL__c, &quot;https://engineering.salesforce.com&quot;), &quot;Salesforce Engineering&quot;,
             IF(CONTAINS(URL__c, &quot;https://wiki.sfxd.org&quot;), &quot;SFXD&quot;, 
-              IF(CONTAINS(URL__c, &quot;https://www.youtube.com/&quot;), &quot;YouTube&quot;, &quot;Other&quot;)
+              IF(CONTAINS(URL__c, &quot;https://www.youtube.com/&quot;), &quot;YouTube&quot;, 
+                IF(CONTAINS(URL__c, &quot;https://admin.salesforce.com/blog&quot;), &quot;Salesforce Admins Blog&quot;, &quot;Other&quot;)
+              )
             )
           )
         )
