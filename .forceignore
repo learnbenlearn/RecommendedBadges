@@ -12,7 +12,7 @@ package.xml
 **/fieldRestrictionRules/**
 **Standard-Home.tab**
 **AppSwitcher.appMenu**
-#**Recommended_Badge_Mix__c.sharingRules**
+**Recommended_Badge_Mix__c.sharingRules**
 **Recommended_Badges_Manager_Permissions.permissionSet**
 **Recommended_Badges_Manager.permissionSetGroup**
 **Recommended_Badges_Manager_Muted.mutingPermissionSet**
@@ -32,6 +32,7 @@ package.xml
 **cspTrustedSite-meta.xml
 **dashboard-meta.xml
 **dashboardFolder-meta.xml
+**Default_Navigation1**
 **Digital_Experiences_Permissions**
 **digitalExperiences**
 **Guest_User_Permissions**
@@ -55,13 +56,13 @@ package.xml
 
 # Ignored Packages
 #Core
-#fflib
-#LWCErrorHandler
+fflib
+LWCErrorHandler
 #LWCUtils
 #PrivateMixView
+#RecommendedArticles
 #RecommendedBadgeMix
-#SortCustomMetadata
-#StorageManagement
+SortCustomMetadata
 #Triggers
 #UserInterface
 
