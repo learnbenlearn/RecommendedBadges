@@ -32,6 +32,7 @@ package.xml
 **cspTrustedSite-meta.xml
 **dashboard-meta.xml
 **dashboardFolder-meta.xml
+**Default_Navigation1**
 **Digital_Experiences_Permissions**
 **digitalExperiences**
 **Guest_User_Permissions**
@@ -58,13 +59,12 @@ package.xml
 fflib
 LWCErrorHandler
 #LWCUtils
-PrivateMixView
+#PrivateMixView
 #RecommendedArticles
-RecommendedBadgeMix
+#RecommendedBadgeMix
 SortCustomMetadata
-StorageManagement
 #Triggers
-UserInterface
+#UserInterface
 
 # Ignored Folders
 #unpackageable

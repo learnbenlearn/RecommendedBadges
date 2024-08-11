@@ -25,13 +25,13 @@
       "default": false,
       "package": "LWCUtils",
       "versionName": "Akron",
-      "versionNumber": "1.36.0.NEXT"
+      "versionNumber": "1.37.0.NEXT"
     },
     {
       "path": "Core",
       "package": "Core",
       "versionName": "Akron",
-      "versionNumber": "2.18.0.NEXT",
+      "versionNumber": "2.19.0.NEXT",
       "default": true,
       "dependencies": [
         {
@@ -50,7 +50,7 @@
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.36.0.LATEST"
+          "versionNumber": "1.37.0.LATEST"
         }
       ]
     },
@@ -59,7 +59,7 @@
       "default": false,
       "package": "Triggers",
       "versionName": "Akron",
-      "versionNumber": "2.14.0.NEXT",
+      "versionNumber": "2.15.0.NEXT",
       "dependencies": [
         {
           "package": "fflib",
@@ -80,11 +80,11 @@
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.36.0.LATEST"
+          "versionNumber": "1.37.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "2.18.0.LATEST"
+          "versionNumber": "2.19.0.LATEST"
         }
       ]
     },
@@ -93,7 +93,7 @@
       "default": false,
       "package": "SortCustomMetadata",
       "versionName": "Akron",
-      "versionNumber": "1.23.0.NEXT",
+      "versionNumber": "1.24.0.NEXT",
       "dependencies": [
         {
           "package": "NebulaLogger"
@@ -111,11 +111,11 @@
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.36.0.LATEST"
+          "versionNumber": "1.37.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "2.18.0.LATEST"
+          "versionNumber": "2.19.0.LATEST"
         }
       ]
     },
@@ -124,7 +124,7 @@
       "default": false,
       "package": "RecommendedBadgeMix",
       "versionName": "Akron",
-      "versionNumber": "1.30.0.NEXT",
+      "versionNumber": "1.31.0.NEXT",
       "dependencies": [
         {
           "package": "TestSupport"
@@ -142,15 +142,15 @@
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.36.0.LATEST"
+          "versionNumber": "1.37.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "2.18.0.LATEST"
+          "versionNumber": "2.19.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.23.0.LATEST"
+          "versionNumber": "1.24.0.LATEST"
         }
       ]
     },
@@ -158,7 +158,7 @@
       "path": "PrivateMixView",
       "package": "PrivateMixView",
       "versionName": "Akron",
-      "versionNumber": "1.26.0.NEXT",
+      "versionNumber": "1.27.0.NEXT",
       "default": false,
       "versionDescription": "Package containing classes, LWCs, and Lightning pages for the private view portion of the Recommended Badges app.",
       "dependencies": [
@@ -178,15 +178,15 @@
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.36.0.LATEST"
+          "versionNumber": "1.37.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "2.18.0.LATEST"
+          "versionNumber": "2.19.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.23.0.LATEST"
+          "versionNumber": "1.24.0.LATEST"
         }
       ]
     },
@@ -195,7 +195,7 @@
       "default": false,
       "package": "UserInterface",
       "versionName": "Akron",
-      "versionNumber": "1.28.0.NEXT",
+      "versionNumber": "1.29.0.NEXT",
       "dependencies": [
         {
           "package": "NebulaLogger"
@@ -215,7 +215,7 @@
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.36.0.LATEST"
+          "versionNumber": "1.37.0.LATEST"
         },
         {
           "package": "LWCErrorHandler",
@@ -223,19 +223,19 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.18.0.LATEST"
+          "versionNumber": "2.19.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.23.0.LATEST"
+          "versionNumber": "1.24.0.LATEST"
         },
         {
           "package": "PrivateMixView",
-          "versionNumber": "1.26.0.LATEST"
+          "versionNumber": "1.27.0.LATEST"
         },
         {
           "package": "RecommendedBadgeMix",
-          "versionNumber": "1.30.0.LATEST"
+          "versionNumber": "1.31.0.LATEST"
         }
       ]
     },
@@ -263,13 +263,21 @@
         },
         {
           "package": "LWCUtils",
-          "versionNumber": "1.36.0.LATEST"
+          "versionNumber": "1.37.0.LATEST"
         },
         {
           "package": "Core",
-          "versionNumber": "2.18.0.LATEST"
+          "versionNumber": "2.19.0.LATEST"
         }
-      ]
+      ],
+      "unpackagedMetadata": {
+        "path": "Core/topicsForObjects"
+      },
+      "apexTestAccess": {
+        "permissionSets": [
+          "Core_Permissions"
+        ]
+      }
     },
     {
       "path": "unpackageable",
@@ -298,12 +306,13 @@
     "RecommendedArticles": "0Ho8c0000008OwpCAE",
     "fflib@1.11.0-1": "04t8c000000vG2PAAU",
     "LWCErrorHandler@1.10.0-1": "04t8c000000vGbjAAE",
-    "LWCUtils@1.36.0-1": "04t8c000000vGqVAAU",
-    "Core@2.18.0-1": "04t8c000000vGqaAAE",
-    "Triggers@2.14.0-1": "04t8c000000vGqfAAE",
-    "SortCustomMetadata@1.23.0-1": "04t8c000000vGqkAAE",
-    "RecommendedBadgeMix@1.30.0-1": "04t8c000000vGqpAAE",
-    "PrivateMixView@1.26.0-1": "04t8c000000vGquAAE",
-    "UserInterface@1.28.0-1": "04t8c000000vGqzAAE"
+    "LWCUtils@1.37.0-1": "04t8c000000vGtFAAU",
+    "Core@2.19.0-1": "04t8c000000vGtKAAU",
+    "Triggers@2.15.0-1": "04t8c000000vGtPAAU",
+    "SortCustomMetadata@1.24.0-1": "04t8c000000vGtUAAU",
+    "RecommendedArticles@1.1.0-2": "04t8c000000vGtjAAE",
+    "RecommendedBadgeMix@1.31.0-1": "04t8c000000vGttAAE",
+    "PrivateMixView@1.27.0-1": "04t8c000000vGtyAAE",
+    "UserInterface@1.29.0-1": "04t8c000000vGu3AAE"
   }
 }

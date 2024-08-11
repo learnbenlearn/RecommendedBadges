@@ -20,6 +20,7 @@ private class RecommendedArticlesContainerCntlr_Tests {
             }
         );
         insert topicAssignmentGenerator.generate();
+
         Map<Id, TopicAssignment> topicAssignmentMap = new Map<Id, TopicAssignment>((List<TopicAssignment>) topicAssignmentGenerator.records);
 
         Test.startTest();
