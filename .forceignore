@@ -12,7 +12,7 @@ package.xml
 **/fieldRestrictionRules/**
 **Standard-Home.tab**
 **AppSwitcher.appMenu**
-#**Recommended_Badge_Mix__c.sharingRules**
+**Recommended_Badge_Mix__c.sharingRules**
 **Recommended_Badges_Manager_Permissions.permissionSet**
 **Recommended_Badges_Manager.permissionSetGroup**
 **Recommended_Badges_Manager_Muted.mutingPermissionSet**
