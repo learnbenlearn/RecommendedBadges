@@ -55,14 +55,14 @@ package.xml
 #**Home_Page_Default.flexipage**
 
 # Ignored Packages
-Core
+#Core
 fflib
-LWCErrorHandler
-LWCUtils
-PrivateMixView
-RecommendedArticles
-RecommendedBadgeMix
-SortCustomMetadata
+#LWCErrorHandler
+#LWCUtils
+#PrivateMixView
+#RecommendedArticles
+#RecommendedBadgeMix
+#SortCustomMetadata
 #Triggers
 UserInterface
 
