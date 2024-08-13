@@ -21,6 +21,7 @@ private class QueueableTrailTrkrProviderCallout_Tests {
         badgeGenerator.generate();
         badgeGenerator.setFieldSpec(new TestSupport.TestDataField(Recommended_Badge__c.BadgeName__c, 'Test Superbadge Unit')).generate();
         badgeGenerator.setFieldSpec(new TestSupport.TestDataField(Recommended_Badge__c.BadgeName__c, 'Test Superbadge')).generate();
+        badgeGenerator.setFieldSpec(new TestSupport.TestDataField(Recommended_Badge__c.BadgeName__c, 'Test Specialist')).generate();
         insert badgeGenerator.setFieldSpec(new TestSupport.TestDataField(Recommended_Badge__c.BadgeName__c, 'Test Super Set')).generate();
 
 		RecommendedTrailTS trailGenerator = new RecommendedTrailTS(

@@ -7,8 +7,9 @@
  */
 public with sharing class QueueableTrailTrackerProviderCallout implements Queueable, Database.AllowsCallouts {
     private static final String BADGE_LEVEL_FIELD_API_NAME = 'trailheadapp__Level__c';
-    private static final String RECOMMENDED_BADGE_LEVEL_FIELD_API_NAME = 'Level__c';
     private static final String NAME_FIELD_API_NAME = 'Name';
+    private static final String RECOMMENDED_BADGE_LEVEL_FIELD_API_NAME = 'Level__c';
+    private static final String SPECIALIST_SUFFIX = 'Specialist';
     private static final String SUPERBADGE_UNIT_LEVEL = 'Superbadge Unit';
     private static final String SUPERBADGE_LEVEL = 'Superbadge';
     private static final String SUPER_SET_LEVEL = 'Super Set';
@@ -129,7 +130,7 @@ public with sharing class QueueableTrailTrackerProviderCallout implements Queuea
                         String badgeName = String.valueOf(record.get(NAME_FIELD_API_NAME));
                         if(badgeName.endsWith(SUPERBADGE_UNIT_SUFFIX)) {
                             recordToUpdate.put(RECOMMENDED_BADGE_LEVEL_FIELD_API_NAME, SUPERBADGE_UNIT_LEVEL);
-                        } else if(badgeName.endsWith(SUPERBADGE_SUFFIX)) {
+                        } else if(badgeName.endsWith(SUPERBADGE_SUFFIX) || badgeName.endsWith(SPECIALIST_SUFFIX)) {
                             recordToUpdate.put(RECOMMENDED_BADGE_LEVEL_FIELD_API_NAME, SUPERBADGE_LEVEL);
                         } else if(badgeName.endsWith(SUPER_SET_SUFFIX)) {
                             recordToUpdate.put(RECOMMENDED_BADGE_LEVEL_FIELD_API_NAME, SUPER_SET_LEVEL);
