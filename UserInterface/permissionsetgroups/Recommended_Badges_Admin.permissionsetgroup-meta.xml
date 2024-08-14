@@ -5,6 +5,7 @@
     <permissionSets>Core_Permissions</permissionSets>
     <permissionSets>LoggerAdmin</permissionSets>
     <permissionSets>Private_View_Permissions</permissionSets>
+    <permissionSets>RecommendedArticlesPermissions</permissionSets>
     <permissionSets>Recommended_Badge_Mix_Permissions</permissionSets>
     <permissionSets>Shortcuts</permissionSets>
     <permissionSets>Sort_Custom_Metadata_Permissions</permissionSets>
