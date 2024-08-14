@@ -15,7 +15,7 @@ public with sharing class RecommendedBadgeMixController {
         List<Mix_Category__c> mixCategories = new MixCategoriesSelector().selectRecommendedBadgesAndTrails();
 
         Map<String, Recommended_Badge_Mix__c> badgeMixesByName = new Map<String, Recommended_Badge_Mix__c>();
-        Map<String, List<MixCategoryWrapper>> categoriesByMix = new Map<String, List<MixCategoryWrapper>>();
+        Map<String, List<MixCategoryWrapper>> categoriesByBadgeMix = new Map<String, List<MixCategoryWrapper>>();
         List<MixCategoryChild> mixCategoryChildren;
         List<MixCategoryWrapper> existingMixCategories;
         DataWeave.Script dwscript = new DataWeaveScriptResource.recommendedBadgeMixContainerMapping();
@@ -32,12 +32,12 @@ public with sharing class RecommendedBadgeMixController {
                 mixCategoryChildren.addAll((List<MixCategoryChild>) dwresult.getValue());
             }
 
-            if(categoriesByMix.get(mixCategory.Recommended_Badge_Mix__r.Name) == null) {
-                categoriesByMix.put(mixCategory.Recommended_Badge_Mix__r.Name, new List<MixCategoryWrapper>{new MixCategoryWrapper(mixCategory, mixCategoryChildren)});
+            if(categoriesByBadgeMix.get(mixCategory.Recommended_Badge_Mix__r.Name) == null) {
+                categoriesByBadgeMix.put(mixCategory.Recommended_Badge_Mix__r.Name, new List<MixCategoryWrapper>{new MixCategoryWrapper(mixCategory, mixCategoryChildren)});
             } else {
-                existingMixCategories = categoriesByMix.get(mixCategory.Recommended_Badge_Mix__r.Name);
+                existingMixCategories = categoriesByBadgeMix.get(mixCategory.Recommended_Badge_Mix__r.Name);
                 existingMixCategories.add(new MixCategoryWrapper(mixCategory, mixCategoryChildren));
-                categoriesByMix.put(mixCategory.Recommended_Badge_Mix__r.Name, existingMixCategories);
+                categoriesByBadgeMix.put(mixCategory.Recommended_Badge_Mix__r.Name, existingMixCategories);
             }
 
             if(badgeMixesByName.get(mixCategory.Recommended_Badge_Mix__r.Name) == null) {
@@ -53,7 +53,7 @@ public with sharing class RecommendedBadgeMixController {
             defaultMixName = mixCategories[0].Recommended_Badge_Mix__r.Name;
         }
         
-        DataWrapper data = new DataWrapper(categoriesByMix, defaultMixName, badgeMixesByName);
+        DataWrapper data = new DataWrapper(categoriesByBadgeMix, defaultMixName, badgeMixesByName);
         return data;
     }
 
@@ -63,7 +63,7 @@ public with sharing class RecommendedBadgeMixController {
          * Mix Categories (including children Recommended Badges/Trails) by parent Recommended Badge Mix
          */
         @AuraEnabled
-        public Map<String, List<MixCategoryWrapper>> categoriesByMix {get;set;}
+        public Map<String, List<MixCategoryWrapper>> categoriesByBadgeMix {get;set;}
 
         /**
          * Name of default Recommended Badge Mix
@@ -77,8 +77,8 @@ public with sharing class RecommendedBadgeMixController {
         @AuraEnabled
         public Map<String, Recommended_Badge_Mix__c> badgeMixesByName {get;set;}
     
-        private DataWrapper(Map<String, List<MixCategoryWrapper>> categoriesByMix, String defaultMix, Map<String, Recommended_Badge_Mix__c> badgeMixesByName) {
-            this.categoriesByMix = categoriesByMix;
+        private DataWrapper(Map<String, List<MixCategoryWrapper>> categoriesByBadgeMix, String defaultMix, Map<String, Recommended_Badge_Mix__c> badgeMixesByName) {
+            this.categoriesByBadgeMix = categoriesByBadgeMix;
             this.defaultMix = defaultMix;
             this.badgeMixesByName = badgeMixesByName;
         }

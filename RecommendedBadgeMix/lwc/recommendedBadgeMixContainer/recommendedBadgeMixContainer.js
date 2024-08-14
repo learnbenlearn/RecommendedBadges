@@ -93,7 +93,7 @@ const TREEGRID_COLUMNS = [
 
 export default class RecommendedBadgeMixContainer extends LightningElement {
     badgeMixesByName;
-    categoriesByMix;
+    categoriesByBadgeMix;
     _displayExamResources = false;
     displayTable;
     freeSFBenPracticeExam;
@@ -165,7 +165,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     @wire(getData)
     parseData({error, data}) {
         if(data) {
-            this.categoriesByMix = data.categoriesByMix;
+            this.categoriesByBadgeMix = data.categoriesByBadgeMix;
             this.badgeMixesByName = data.badgeMixesByName;
             this.populateMixDropdown(data.defaultMix);
             this.parseTreegridData(data.defaultMix);
@@ -199,7 +199,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     populateMixDropdown(defaultMix) {
         const options = [];
         /* eslint-disable id-length */
-        for(const a of Object.keys(this.categoriesByMix)) {
+        for(const a of Object.keys(this.categoriesByBadgeMix)) {
             options.push({label: a, value: a});
         }
         this.mixOptions = options;
@@ -210,8 +210,8 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         this.treegridDataByMix = {};
 
         /* eslint-disable guard-for-in */
-        for(const mix in this.categoriesByMix) {
-            const extensibleMix = this.categoriesByMix[mix].map(item => {
+        for(const mix in this.categoriesByBadgeMix) {
+            const extensibleMix = this.categoriesByBadgeMix[mix].map(item => {
                 /* eslint-disable sort-keys, camelcase */                
                 const newCategory = {
                     Id: item.mixCategory[MIX_CATEGORY_ID_FIELD.fieldApiName],
