@@ -4,6 +4,20 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>divClasses</name>
+                    <value>slds-box slds-theme_default slds-var-p-around_small</value>
+                </componentInstanceProperties>
+                <componentName>privateViewContainer</componentName>
+                <identifier>c_privateViewContainer1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-f938140c-4b7e-4e52-ba8e-e6eea56ebad3</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>tabs</name>
                     <valueList>
                         <valueListItems>
@@ -35,6 +49,20 @@
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-f938140c-4b7e-4e52-ba8e-e6eea56ebad3</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Private Mix View</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab3</identifier>
+            </componentInstance>
+        </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
@@ -79,16 +107,6 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tabset</componentName>
                 <identifier>flexipage_tabset</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>divClasses</name>
-                    <value>slds-box slds-theme_default slds-var-p-around_small</value>
-                </componentInstanceProperties>
-                <componentName>privateViewContainer</componentName>
-                <identifier>c_privateViewContainer1</identifier>
             </componentInstance>
         </itemInstances>
         <name>main</name>
