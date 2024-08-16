@@ -31,7 +31,7 @@
       "path": "Core",
       "package": "Core",
       "versionName": "Akron",
-      "versionNumber": "2.21.0.NEXT",
+      "versionNumber": "2.22.0.NEXT",
       "default": true,
       "dependencies": [
         {
@@ -59,7 +59,7 @@
       "default": false,
       "package": "Triggers",
       "versionName": "Akron",
-      "versionNumber": "2.17.0.NEXT",
+      "versionNumber": "2.18.0.NEXT",
       "dependencies": [
         {
           "package": "fflib",
@@ -84,7 +84,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.21.0.LATEST"
+          "versionNumber": "2.22.0.LATEST"
         }
       ]
     },
@@ -93,7 +93,7 @@
       "default": false,
       "package": "SortCustomMetadata",
       "versionName": "Akron",
-      "versionNumber": "1.26.0.NEXT",
+      "versionNumber": "1.27.0.NEXT",
       "dependencies": [
         {
           "package": "NebulaLogger"
@@ -115,7 +115,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.21.0.LATEST"
+          "versionNumber": "2.22.0.LATEST"
         }
       ]
     },
@@ -124,7 +124,7 @@
       "default": false,
       "package": "RecommendedBadgeMix",
       "versionName": "Akron",
-      "versionNumber": "1.33.0.NEXT",
+      "versionNumber": "1.34.0.NEXT",
       "dependencies": [
         {
           "package": "TestSupport"
@@ -146,11 +146,11 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.21.0.LATEST"
+          "versionNumber": "2.22.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.26.0.LATEST"
+          "versionNumber": "1.27.0.LATEST"
         }
       ]
     },
@@ -158,7 +158,7 @@
       "path": "PrivateMixView",
       "package": "PrivateMixView",
       "versionName": "Akron",
-      "versionNumber": "1.29.0.NEXT",
+      "versionNumber": "1.30.0.NEXT",
       "default": false,
       "versionDescription": "Package containing classes, LWCs, and Lightning pages for the private view portion of the Recommended Badges app.",
       "dependencies": [
@@ -182,11 +182,11 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.21.0.LATEST"
+          "versionNumber": "2.22.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.26.0.LATEST"
+          "versionNumber": "1.27.0.LATEST"
         }
       ]
     },
@@ -195,7 +195,7 @@
       "default": false,
       "package": "UserInterface",
       "versionName": "Akron",
-      "versionNumber": "1.31.0.NEXT",
+      "versionNumber": "1.32.0.NEXT",
       "dependencies": [
         {
           "package": "NebulaLogger"
@@ -223,25 +223,25 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.21.0.LATEST"
+          "versionNumber": "2.22.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.26.0.LATEST"
+          "versionNumber": "1.27.0.LATEST"
         },
         {
           "package": "PrivateMixView",
-          "versionNumber": "1.29.0.LATEST"
+          "versionNumber": "1.30.0.LATEST"
         },
         {
           "package": "RecommendedBadgeMix",
-          "versionNumber": "1.33.0.LATEST"
+          "versionNumber": "1.34.0.LATEST"
         }
       ]
     },
     {
       "versionName": "Ripley",
-      "versionNumber": "1.3.0.NEXT",
+      "versionNumber": "1.4.0.NEXT",
       "path": "RecommendedArticles",
       "default": false,
       "package": "RecommendedArticles",
@@ -267,7 +267,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.21.0.LATEST"
+          "versionNumber": "2.22.0.LATEST"
         }
       ],
       "unpackagedMetadata": {
@@ -307,12 +307,12 @@
     "fflib@1.11.0-1": "04t8c000000vG2PAAU",
     "LWCUtils@1.38.0-1": "04t8c000000vGuwAAE",
     "LWCErrorHandler@1.13.0-1": "04t8c000000vGwxAAE",
-    "Core@2.21.0-1": "04t8c000000vGx2AAE",
-    "Triggers@2.17.0-1": "04t8c000000vGx7AAE",
-    "SortCustomMetadata@1.26.0-1": "04t8c000000vGxCAAU",
-    "RecommendedArticles@1.3.0-1": "04t8c000000vGxHAAU",
-    "RecommendedBadgeMix@1.33.0-1": "04t8c000000vGxMAAU",
-    "PrivateMixView@1.29.0-1": "04t8c000000vGxRAAU",
-    "UserInterface@1.31.0-1": "04t8c000000vGxWAAU"
+    "Core@2.22.0-1": "04t8c000000vGyPAAU",
+    "Triggers@2.18.0-1": "04t8c000000vGyUAAU",
+    "SortCustomMetadata@1.27.0-1": "04t8c000000vGyZAAU",
+    "RecommendedArticles@1.4.0-1": "04t8c000000vGyeAAE",
+    "RecommendedBadgeMix@1.34.0-1": "04t8c000000vGyjAAE",
+    "PrivateMixView@1.30.0-1": "04t8c000000vGyoAAE",
+    "UserInterface@1.32.0-2": "04t8c000000vGyyAAE"
   }
 }
