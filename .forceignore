@@ -43,7 +43,7 @@ package.xml
 **Recommended Badges Profile**
 **Recommended Badges (Enhanced) Profile**
 **Recommended_Badges_Enhanced**
-**Recommended_Badges**
+#**Recommended_Badges**
 **report-meta.xml
 **reportFolder-meta.xml
 **reportType-meta.xml
@@ -57,14 +57,14 @@ package.xml
 # Ignored Packages
 #Core
 fflib
-#LWCErrorHandler
-#LWCUtils
-#PrivateMixView
+LWCErrorHandler
+LWCUtils
+PrivateMixView
 #RecommendedArticles
-#RecommendedBadgeMix
-#SortCustomMetadata
-#Triggers
-UserInterface
+RecommendedBadgeMix
+SortCustomMetadata
+Triggers
+#UserInterface
 
 # Ignored Folders
 unpackageable

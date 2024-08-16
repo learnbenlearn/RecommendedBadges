@@ -1,4 +1,4 @@
-@isTest(IsParallel=true)
+@isTest
 private class TopicsSelector_Tests {
     @isTest
     private static void getSObjectFieldList_test() {
@@ -17,32 +17,38 @@ private class TopicsSelector_Tests {
 
     @isTest
     private static void selectAllTaggingRecommendedArticles_Test() {
-        TopicTS topicGenerator = new TopicTS(new Map<String, Object>{'numberToGenerate' => 20, 'generateRecordIDs' => false});
-        List<Topic> topics = (List<Topic>) topicGenerator.generate();
-        insert topics;
+        User u = TestSupport.generateTestUser('test', 'test@test.com', 'TestName', 'System Administrator', 'test@aol.fake.com');
+        insert u;
+        PermissionSet corePermissions = [SELECT Id FROM PermissionSet WHERE Name = 'Core_Permissions'];
+        insert new PermissionSetAssignment(AssigneeId = u.Id, PermissionSetId = corePermissions.Id);
+        System.runAs(u) {
+            TopicTS topicGenerator = new TopicTS(new Map<String, Object>{'numberToGenerate' => 20, 'generateRecordIDs' => false});
+            List<Topic> topics = (List<Topic>) topicGenerator.generate();
+            insert topics;
 
-        // get a random 9 of the 20 topics
-        List<Topic> expectedTopics = new List<Topic>();
-        for(Integer i = 0; i < 9; i++) {
-            expectedTopics.add(topics.remove(Integer.valueOf(Math.floor(Math.random() * topics.size()))));
-        }
-
-        RecommendedArticleTS articleGenerator = new RecommendedArticleTS(new Map<String, Object>{'numberToGenerate' => 100, 'generateRecordIDs' => false});
-        insert articleGenerator.generate();
-
-        TopicAssignmentTS topicAssignmentGenerator = new TopicAssignmentTS(
-            new Map<String, Object>{'generateRecordIDs' => false},
-            new List<TestSupport.TestDataField>{
-                new RelationshipField(TopicAssignment.TopicId, (new Map<Id, Topic>(expectedTopics)).keySet()),
-                new RelationshipField(TopicAssignment.EntityId, (new Map<Id, RecommendedArticle__c>((List<RecommendedArticle__c>) articleGenerator.records)).keySet())
+            // get a random 9 of the 20 topics
+            List<Topic> expectedTopics = new List<Topic>();
+            for(Integer i = 0; i < 9; i++) {
+                expectedTopics.add(topics.remove(Integer.valueOf(Math.floor(Math.random() * topics.size()))));
             }
-        );
-        insert topicAssignmentGenerator.generate();
 
-        Test.startTest();
-        List<Topic> actualTopics = new TopicsSelector().selectAllTaggingRecommendedArticles();
-        Test.stopTest();
-        
-        Assert.areEqual(new Set<Topic>(expectedTopics), new Set<Topic>(actualTopics), 'Expected Topics tagging Recommended Articles to be returned.');
+            RecommendedArticleTS articleGenerator = new RecommendedArticleTS(new Map<String, Object>{'numberToGenerate' => 100, 'generateRecordIDs' => false});
+            insert articleGenerator.generate();
+
+            TopicAssignmentTS topicAssignmentGenerator = new TopicAssignmentTS(
+                new Map<String, Object>{'generateRecordIDs' => false},
+                new List<TestSupport.TestDataField>{
+                    new RelationshipField(TopicAssignment.TopicId, (new Map<Id, Topic>(expectedTopics)).keySet()),
+                    new RelationshipField(TopicAssignment.EntityId, (new Map<Id, RecommendedArticle__c>((List<RecommendedArticle__c>) articleGenerator.records)).keySet())
+                }
+            );
+            insert topicAssignmentGenerator.generate();
+
+            Test.startTest();
+            List<Topic> actualTopics = new TopicsSelector().selectAllTaggingRecommendedArticles();
+            Test.stopTest();
+            
+            Assert.areEqual(new Set<Topic>(expectedTopics), new Set<Topic>(actualTopics), 'Expected Topics tagging Recommended Articles to be returned.');
+        }
     }
 }
