@@ -113,6 +113,14 @@ jobs:
                   command: |
                     npm run --silent updateForceIgnore
                     sf project deploy start -o $TEST_ORG_ALIAS
+              - run:
+                  name: Run Tests in Scratch Org
+                  command: |
+                    mkdir -p /tmp/artifacts
+                    sf apex run test -y -s Core -s fflib -s LWCErrorHandler -s PrivateMixView -s RecommendedBadgeMix -s SortCustomMetadata -s StorageManagement -s Triggers -o $TEST_ORG_ALIAS -c -d /tmp/artifacts -r json
+                    sf apex run test -y -s RecommendedArticles -o $TEST_ORG_ALIAS -c -d /tmp/artifacts -r json
+              - store_artifacts:
+                  path: /tmp/artifacts
       - when:
             condition:
               and:
@@ -127,13 +135,13 @@ jobs:
                     for packageToInstall in ${packagesToInstall[@]};
                       do sf package install --skip-handlers FeatureEnforcement -p $packageToInstall -o $TEST_ORG_ALIAS -r -w $WAIT_TIME
                     done
-      - run:
-          name: Run Tests in Scratch Org
-          command: |
-            mkdir -p /tmp/artifacts
-            sf apex run test -l $TEST_LEVEL -o $TEST_ORG_ALIAS -c -d /tmp/artifacts -r json -w $WAIT_TIME
-      - store_artifacts:
-          path: /tmp/artifacts
+              - run:
+                  name: Run Tests in Scratch Org (Packages)
+                  command: |
+                    mkdir -p /tmp/artifacts
+                    sf apex run test -l $TEST_LEVEL -o $TEST_ORG_ALIAS -c -d /tmp/artifacts -r json -w $WAIT_TIME
+              - store_artifacts:
+                  path: /tmp/artifacts
       - run:
           name: Delete Testing Scratch Org
           command: sf org delete scratch -o $TEST_ORG_ALIAS -p
