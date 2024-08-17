@@ -131,8 +131,8 @@ jobs:
           name: Run Tests in Scratch Org
           command: |
             mkdir -p /tmp/artifacts
-            sf apex run test -y -s Core -s fflib -s LWCErrorHandler -s PrivateMixView -s RecommendedBadgeMix -s SortCustomMetadata -s StorageManagement -s Triggers -o $TEST_ORG_ALIAS -c -d /tmp/artifacts -r json
-            sf apex run test -y -s RecommendedArticles -o $TEST_ORG_ALIAS -c -d /tmp/artifacts -r json
+            sf apex run test -s Core -s fflib -s LWCErrorHandler -s PrivateMixView -s RecommendedBadgeMix -s SortCustomMetadata -s StorageManagement -s Triggers -o $TEST_ORG_ALIAS -c -d /tmp/artifacts -r json
+            sf apex run test -s RecommendedArticles -o $TEST_ORG_ALIAS -c -d /tmp/artifacts -r json
       - store_artifacts:
           path: /tmp/artifacts
       - run:
