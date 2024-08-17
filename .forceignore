@@ -55,16 +55,16 @@ package.xml
 #**Home_Page_Default.flexipage**
 
 # Ignored Packages
-#Core
+Core
 fflib
 LWCErrorHandler
 LWCUtils
-PrivateMixView
-#RecommendedArticles
+#PrivateMixView
+RecommendedArticles
 RecommendedBadgeMix
 SortCustomMetadata
 Triggers
-#UserInterface
+UserInterface
 
 # Ignored Folders
 unpackageable
