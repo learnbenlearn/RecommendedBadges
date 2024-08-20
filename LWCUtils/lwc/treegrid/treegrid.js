@@ -2,15 +2,20 @@ import { LightningElement, api } from 'lwc';
 
 export default class Treegrid extends LightningElement {
     @api columns;
+    @api expandedRows;
     @api keyField;
     @api treegridData;
     @api displayCustomTreegrid;
 
     @api expandAll() {
-        this.template.querySelector('lightning-tree-grid').expandAll();
+        this.refs.treegrid.expandAll();
     }
 
     @api collapseAll() {
-        this.template.querySelector('lightning-tree-grid').collapseAll();
+        this.refs.treegrid.collapseAll();
+    }
+
+    @api getCurrentExpandedRows() {
+        return this.refs.treegrid.getCurrentExpandedRows();
     }
 }

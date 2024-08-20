@@ -63,7 +63,8 @@
             <template lwc:if={displayTable}>
                 <div style="max-height:60vh;overflow:scroll;display:block">
                     <br/>
-                    <c-treegrid columns={treegridColumns} treegrid-data={treegridData} key-field={keyField}></c-treegrid>
+                    <c-treegrid lwc:ref="treegrid" columns={treegridColumns} treegrid-data={filteredTreegridData} key-field={keyField} expanded-rows={currentExpandedRows}>
+                    </c-treegrid>
                 </div>
             </template>
         </div>

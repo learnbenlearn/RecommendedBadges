@@ -61,7 +61,7 @@ package.xml
 #Core
 fflib
 LWCErrorHandler
-LWCUtils
+#LWCUtils
 PrivateMixView
 RecommendedArticles
 #RecommendedBadgeMix
