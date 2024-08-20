@@ -1,4 +1,4 @@
 <template>
-        <lightning-checkbox-group name={name} label={label} options={filters} value="" onchange={handleFilterChange}>
+        <lightning-checkbox-group lwc:ref="checkboxGroup" name={name} label={label} options={filters} value="" disabled={disabled} onchange={handleFilterChange}>
         </lightning-checkbox-group>
 </template>

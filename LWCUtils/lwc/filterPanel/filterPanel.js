@@ -2,9 +2,14 @@ import { LightningElement, api } from 'lwc';
 
 export default class FilterPanel extends LightningElement {
     currentFilters = [];
+    @api disabled = false;
     @api filters;
     @api label;
     @api name;
+
+    @api clearSelections() {
+        this.refs.checkboxGroup.value = '';
+    }
 
     handleFilterChange(event) {
         const newFilters = event.detail.value;

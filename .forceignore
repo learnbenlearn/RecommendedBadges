@@ -44,9 +44,12 @@ package.xml
 **Recommended Badges (Enhanced) Profile**
 **Recommended_Badges_Enhanced**
 #**Recommended_Badges**
+**Recommended_Badges.site**
+**Recommended_Badges1**
 **report-meta.xml
 **reportFolder-meta.xml
 **reportType-meta.xml
+**SNA_Recommended_Badges1_sf_default_cdn_FXlVO**
 **singleRegionThemeLayout**
 **trailhead800x500**
 **contentassets/Rremovebgpreview**
@@ -55,16 +58,16 @@ package.xml
 #**Home_Page_Default.flexipage**
 
 # Ignored Packages
-Core
+#Core
 fflib
 LWCErrorHandler
-LWCUtils
+#LWCUtils
 #PrivateMixView
 RecommendedArticles
-RecommendedBadgeMix
+#RecommendedBadgeMix
 SortCustomMetadata
 Triggers
-UserInterface
+#UserInterface
 
 # Ignored Folders
 unpackageable
