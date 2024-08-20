@@ -7,54 +7,66 @@
 -->
 <template>
     <c-error></c-error>
-    <div class="slds-var-p-around-small" style="min-height:300px">
-        <div class="slds-grid slds-wrap slds-gutters" style="min-height:125px">
-            <div class="slds-col slds-size_1-of-4">
-                <c-dropdown label={mixLabel} value={mixValue} options={mixOptions} ondropdownchange={handleMixChange}>
-                </c-dropdown>
-            </div>
-
-            <div class="slds-col slds-size_1-of-4">
-                <c-dropdown label={sortLabel} value={sortValue} options={sortOptions} ondropdownchange={handleSortChange}></c-dropdown>
-            </div>
-
-            <div class="slds-col slds-size_1-of-4"></div>
-
-            <div class="slds-col slds-size_1-of-4">
-                <div lwc:if={displayTable}>
-                    Last Updated&nbsp;
-                    <lightning-formatted-date-time value={currentLastUpdatedDate} year="numeric" month="short" day="numeric" time-zone="UTC"></lightning-formatted-date-time>
-
-                    <div lwc:if={displayExamResources}>
-                        <a href={officialExamGuide} class="resourceLink" target="_blank">Official Exam Guide</a>
-                        <br/>
-                        <a href={officialExamTrailmix} class="resourceLink" target="_blank">Official Exam Trailmix</a>
-                        <br/>
-                        <template lwc:if={officialPracticeExam}>
-                            <a href={officialPracticeExam} class="resourceLink" target="_blank">Official Practice Exam</a>
+    <!-- wrap in conditional directive to only display on experience site -->
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-6">
+            <template lwc:if={badgeLevels}>
+                <c-filter-panel filters={badgeLevels} label="Levels" name="levels" onfilterchange={handleLevelFilterChange}></c-filter-panel>
+            </template>
+            <template lwc:if={badgeTypes}>
+                <c-filter-panel filters={badgeTypes} label="Types" name="types" onfilterchange={handleTypeFilterChange}></c-filter-panel>
+            </template>
+        </div>
+        <div class="slds-var-p-around-small slds-col slds-size_5-of-6" style="min-height:300px">
+            <div class="slds-grid slds-wrap slds-gutters" style="min-height:125px">
+                <div class="slds-col slds-size_1-of-4">
+                    <c-dropdown label={mixLabel} value={mixValue} options={mixOptions} ondropdownchange={handleMixChange}>
+                    </c-dropdown>
+                </div>
+    
+                <div class="slds-col slds-size_1-of-4">
+                    <c-dropdown label={sortLabel} value={sortValue} options={sortOptions} ondropdownchange={handleSortChange}></c-dropdown>
+                </div>
+    
+                <div class="slds-col slds-size_1-of-4"></div>
+    
+                <div class="slds-col slds-size_1-of-4">
+                    <div lwc:if={displayTable}>
+                        Last Updated&nbsp;
+                        <lightning-formatted-date-time value={currentLastUpdatedDate} year="numeric" month="short" day="numeric" time-zone="UTC"></lightning-formatted-date-time>
+    
+                        <div lwc:if={displayExamResources}>
+                            <a href={officialExamGuide} class="resourceLink" target="_blank">Official Exam Guide</a>
                             <br/>
-                        </template>
-                        <a href={freeSFBenPracticeExam} class="resourceLink" target="_blank">Free Salesforce Ben Practice Exam</a>
+                            <a href={officialExamTrailmix} class="resourceLink" target="_blank">Official Exam Trailmix</a>
+                            <br/>
+                            <template lwc:if={officialPracticeExam}>
+                                <a href={officialPracticeExam} class="resourceLink" target="_blank">Official Practice Exam</a>
+                                <br/>
+                            </template>
+                            <a href={freeSFBenPracticeExam} class="resourceLink" target="_blank">Free Salesforce Ben Practice Exam</a>
+                        </div>
                     </div>
                 </div>
+    
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-button variant="brand" label="Expand All" onclick={handleExpandAll}></lightning-button>
+                    &nbsp;&nbsp;
+                    <lightning-button variant="brand" label="Collapse All" onclick={handleCollapseAll}></lightning-button>
+                </div>
             </div>
-
-            <div class="slds-col slds-size_1-of-3">
-                <lightning-button variant="brand" label="Expand All" onclick={handleExpandAll}></lightning-button>
-                &nbsp;&nbsp;
-                <lightning-button variant="brand" label="Collapse All" onclick={handleCollapseAll}></lightning-button>
-            </div>
+    
+            <template lwc:if={isLoading}>
+                <lightning-spinner alternative-text={spinnerText}></lightning-spinner>
+            </template>
+    
+            <template lwc:if={displayTable}>
+                <div style="max-height:60vh;overflow:scroll;display:block">
+                    <br/>
+                    <c-treegrid columns={treegridColumns} treegrid-data={treegridData} key-field={keyField}></c-treegrid>
+                </div>
+            </template>
         </div>
-
-        <template lwc:if={isLoading}>
-            <lightning-spinner alternative-text={spinnerText}></lightning-spinner>
-        </template>
-
-        <template lwc:if={displayTable}>
-            <div style="max-height:60vh;overflow:scroll;display:block">
-                <br/>
-                <c-treegrid columns={treegridColumns} treegrid-data={treegridData} key-field={keyField}></c-treegrid>
-            </div>
-        </template>
     </div>
+    
 </template>

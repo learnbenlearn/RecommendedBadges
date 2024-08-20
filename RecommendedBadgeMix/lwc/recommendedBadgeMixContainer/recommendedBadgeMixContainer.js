@@ -2,7 +2,7 @@
 import { LightningElement, wire } from 'lwc';
 
 import { CurrentPageReference } from 'lightning/navigation';
-import { getObjectInfo } from 'lightning/uiObjectInfoApi';
+import { getObjectInfo, getPicklistValues } from 'lightning/uiObjectInfoApi';
 
 import getData from '@salesforce/apex/RecommendedBadgeMixController.getData';
 import getSortOptions from '@salesforce/apex/SortCustomMetadataController.getSortOptions';
@@ -35,6 +35,7 @@ import RECOMMENDED_BADGE_MIX_OFFICIAL_PRACTICE_EXAM_FIELD from '@salesforce/sche
 import RECOMMENDED_BADGE_MIX_RECORD_TYPE_ID_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.RecordTypeId';
 //import RECOMMENDED_BADGE_MIX_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__r';
 
+const MASTER_RECORD_TYPE_ID = '012000000000000AAA';
 const EXPERIENCE_SITE_PAGE_TYPE = 'comm__namedPage';
 const SPINNER_TEXT = 'Retrieving recommended badges';
 
@@ -49,7 +50,7 @@ const TREEGRID_COLUMNS = [
                 fieldName: RECOMMENDED_BADGE_NAME_FIELD.fieldApiName
             }
         },
-        initialWidth: 500
+        initialWidth: 600
     },
     {
         fieldName: BADGE_TYPE_FIELD.fieldApiName.replace('__c', ''),
@@ -92,7 +93,9 @@ const TREEGRID_COLUMNS = [
  */
 
 export default class RecommendedBadgeMixContainer extends LightningElement {
+    badgeLevels;
     badgeMixesByName;
+    badgeTypes;
     categoriesByBadgeMix;
     _displayExamResources = false;
     displayTable;
@@ -135,6 +138,26 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         // eslint-disable-next-line no-magic-numbers
         const recordTypeName = this.recordTypeNamesById[this.badgeMixesByName[badgeMixName][RECOMMENDED_BADGE_MIX_RECORD_TYPE_ID_FIELD.fieldApiName]];
         this._isExamMix = recordTypeName === 'Exam';
+    }
+
+    @wire(getPicklistValues, { recordTypeId: MASTER_RECORD_TYPE_ID, fieldApiName: BADGE_LEVEL_FIELD})
+    parseBadgeLevels({error, data}) {
+        if(data) {
+            this.badgeLevels = [];
+            data.values.forEach(value => (this.badgeLevels.push({label: value.label, value: value.value})));
+        } else if(error) {
+            this.template.querySelector('c-error').handleError(error);
+        }
+    }
+
+    @wire(getPicklistValues, { recordTypeId: MASTER_RECORD_TYPE_ID, fieldApiName: BADGE_TYPE_FIELD})
+    parseBadgeTypes({error, data}) {
+        if(data) {
+            this.badgeTypes = [];
+            data.values.forEach(value => (this.badgeTypes.push({label: value.label, value: value.value})));
+        } else if(error) {
+            this.template.querySelector('c-error').handleError(error);
+        }
     }
 
     renderedCallback() {
@@ -226,6 +249,19 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
             this.treegridDataByMix[mix] = extensibleMix;
         }
         this.treegridData = this.treegridDataByMix[defaultMix];
+    }
+
+    handleFilterChange(filterChange, filter) {
+        console.log(JSON.parse(JSON.stringify(filterChange)));
+        console.log(filter);
+    }
+
+    handleLevelFilterChange(event) {
+        this.handleFilterChange(event.detail, 'level');
+    }
+
+    handleTypeFilterChange(event) {
+        this.handleFilterChange(event.detail, 'type');
     }
 
     handleMixChange(event) {

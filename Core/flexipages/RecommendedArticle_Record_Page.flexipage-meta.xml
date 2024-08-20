@@ -10,6 +10,9 @@
                             <value>Edit</value>
                         </valueListItems>
                         <valueListItems>
+                            <value>RecommendedArticle__c.Assign_Topic</value>
+                        </valueListItems>
+                        <valueListItems>
                             <value>Delete</value>
                         </valueListItems>
                         <valueListItems>
