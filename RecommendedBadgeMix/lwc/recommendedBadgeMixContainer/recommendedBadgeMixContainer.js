@@ -1,5 +1,5 @@
 /* eslint-disable sort-imports, one-var, @lwc/lwc/no-for-of, no-underscore-dangle, no-ternary */
-import { LightningElement, wire } from 'lwc';
+import { LightningElement, wire, track } from 'lwc';
 
 import { CurrentPageReference } from 'lightning/navigation';
 import { getObjectInfo, getPicklistValues } from 'lightning/uiObjectInfoApi';
@@ -39,9 +39,12 @@ import RECOMMENDED_BADGE_MIX_OFFICIAL_PRACTICE_EXAM_FIELD from '@salesforce/sche
 import RECOMMENDED_BADGE_MIX_RECORD_TYPE_ID_FIELD from '@salesforce/schema/Recommended_Badge_Mix__c.RecordTypeId';
 //import RECOMMENDED_BADGE_MIX_FIELD from '@salesforce/schema/Mix_Category__c.Recommended_Badge_Mix__r';
 
-const MASTER_RECORD_TYPE_ID = '012000000000000AAA';
 const EXPERIENCE_SITE_PAGE_TYPE = 'comm__namedPage';
-const SPINNER_TEXT = 'Retrieving recommended badges';
+const FILTER_ADD = 'add';
+const FILTER_REMOVE = 'remove';
+const LEVEL_FILTER = 'level';
+const SPINNER_TEXT = 'Loading recommended badges...';
+const TYPE_FILTER = 'type';
 
 /* eslint-disable sort-keys */
 const TREEGRID_COLUMNS = [
@@ -102,12 +105,15 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     badgeTypes;
     categoriesByBadgeMix;
     currentExpandedRows = [];
+    currentLevelFilters = [];
+    currentTypeFilters = [];
     defaultBadgeRecordTypeId;
     _displayExamResources = false;
     displayTable;
-    filteredTreegridData;
+    @track filteredTreegridData;
     freeSFBenPracticeExam;
     _isExamMix = false;
+    isExperienceSite = false;
     isLoading = true;
     currentLastUpdatedDate;
     keyField = BADGE_ID_FIELD.fieldApiName;
@@ -117,6 +123,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     officialExamGuide;
     officialExamTrailmix;
     officialPracticeExam;
+    pageRef;
     recordTypeNamesById;
     sortLabel = 'Sort By';
     sortOptions;
@@ -127,7 +134,7 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     treegridDataByMix;
 
     get displayExamResources() {
-        if(this.isExamMix && this.pageRef?.type === EXPERIENCE_SITE_PAGE_TYPE) {
+        if(this.isExamMix && this.isExperienceSite) {
             this.displayExamResources = true;
         } else {
             this.displayExamResources = false;
@@ -148,7 +155,14 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     }
 
     @wire(CurrentPageReference)
-    pageRef;
+    parsePageRef(pageRef) {
+        try {
+            this.pageRef = pageRef;
+            this.isExperienceSite = pageRef.type === EXPERIENCE_SITE_PAGE_TYPE;
+        } catch(error) {
+            this.template.querySelector('c-error').handleError(error);
+        }
+    }
 
     @wire(getObjectInfo, { objectApiName : RECOMMENDED_BADGE_MIX_OBJECT })
     parseRecommendedBadgeMixObjectInfo({error, data}) {
@@ -233,6 +247,10 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         if(this.isLoading && this.treegridData) {
             this.isLoading = false;
         }
+
+        if(!this.refs.treegridContainer.classList.contains('slds-size_1-of-1') && !this.refs.treegridContainer.classList.contains('slds-size_5-of-6')) {
+            this.refs.treegridContainer.classList.add((this.isExperienceSite ? 'slds-size_5-of-6' : 'slds-size_1-of-1'));
+        }
     }
 
     populateMixDropdown(defaultMix) {
@@ -266,21 +284,49 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
         }
         this.treegridData = this.treegridDataByMix[defaultMix];
         this.filteredTreegridData = this.treegridDataByMix[defaultMix];
-        console.log(this.filteredTreegridData);
     }
 
-    handleFilterChange(filterChange, filter) {
-        const tempTreegridData = [...this.filteredTreegridData];
-        console.log(JSON.parse(JSON.stringify(filterChange)));
-        console.log(filter);
+    handleClearFilters() {
+        this.displayTable = false;
+        this.isLoading = true;
+        this.currentLevelFilters = [];
+        this.currentTypeFilters = [];
+        this.refs.levelFilterPanel.clearSelections();
+        this.refs.typeFilterPanel.clearSelections();
+        this.currentExpandedRows = this.refs.treegrid.getCurrentExpandedRows();
+        this.filteredTreegridData = structuredClone(this.treegridData);
+    }
+
+    handleFilterChange(filterChange, filterField) {
+        this.currentExpandedRows = this.refs.treegrid.getCurrentExpandedRows();
+        this.displayTable = false;
+        this.isLoading = true;
+        const tempTreegridData = structuredClone(this.treegridData);
+
+        this.updateCurrentFilters(filterField, filterChange.type, filterChange.filter);
+
+        /* eslint-disable no-plusplus, no-magic-numbers */
+        if(this.currentLevelFilters.length > 0) {
+            tempTreegridData.forEach((element, index) => {
+                tempTreegridData[index]._children = element._children.filter(badge => this.currentLevelFilters.includes(badge.Level));
+            });
+        }
+
+        if(this.currentTypeFilters.length > 0) {
+            tempTreegridData.forEach((element, index) => {
+                tempTreegridData[index]._children = element._children.filter(badge => this.currentTypeFilters.includes(badge.Type));
+            });
+        }
+
+        this.filteredTreegridData = tempTreegridData;
     }
 
     handleLevelFilterChange(event) {
-        this.handleFilterChange(event.detail, 'level');
+        this.handleFilterChange(event.detail, LEVEL_FILTER);
     }
 
     handleTypeFilterChange(event) {
-        this.handleFilterChange(event.detail, 'type');
+        this.handleFilterChange(event.detail, TYPE_FILTER);
     }
 
     handleMixChange(event) {
@@ -298,9 +344,8 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
 
     handleSortChange(event) {
         this.currentExpandedRows = this.refs.treegrid.getCurrentExpandedRows();
-        this.displayTable = false;
         const sortableFieldValues = this.sortOptions.find(option => (option.value === event.detail) && option.sortableFieldValues)?.sortableFieldValues.map(s => s.MasterLabel);
-        const tempTreegridData = [...this.filteredTreegridData];
+        const tempTreegridData = structuredClone(this.filteredTreegridData);
 
         for(const category of tempTreegridData) {
             /* eslint-disable no-magic-numbers */
@@ -319,5 +364,21 @@ export default class RecommendedBadgeMixContainer extends LightningElement {
     handleCollapseAll() {
         this.isLoading = true;
         this.refs.treegrid.collapseAll();
+    }
+
+    updateCurrentFilters(filterField, filterChangeType, filterChangeFilter) {
+        if(filterChangeType === FILTER_ADD) {
+            if(filterField === LEVEL_FILTER) {
+                this.currentLevelFilters.push(filterChangeFilter);
+            } else if(filterField === TYPE_FILTER) {
+                this.currentTypeFilters.push(filterChangeFilter);
+            }
+        } else if(filterChangeType === FILTER_REMOVE) {
+            if(filterField === LEVEL_FILTER) {
+                this.currentLevelFilters = this.currentLevelFilters.filter(f => f !== filterChangeFilter);
+            } else if(filterField === TYPE_FILTER) {
+                this.currentTypeFilters = this.currentTypeFilters.filter(f => f !== filterChangeFilter);
+            }
+        }
     }
 }

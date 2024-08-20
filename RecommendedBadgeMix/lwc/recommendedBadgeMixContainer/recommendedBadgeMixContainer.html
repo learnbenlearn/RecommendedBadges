@@ -7,17 +7,19 @@
 -->
 <template>
     <c-error></c-error>
-    <!-- wrap in conditional directive to only display on experience site -->
     <div class="slds-grid">
-        <div class="slds-col slds-size_1-of-6">
+        <div class="slds-col slds-size_1-of-6" lwc:if={isExperienceSite}>
             <template lwc:if={badgeLevels}>
-                <c-filter-panel filters={badgeLevels} label="Levels" name="levels" onfilterchange={handleLevelFilterChange}></c-filter-panel>
+                <c-filter-panel lwc:ref="levelFilterPanel" filters={badgeLevels} label="Levels" name="levels" disabled={isLoading} onfilterchange={handleLevelFilterChange}>
+                </c-filter-panel>
             </template>
             <template lwc:if={badgeTypes}>
-                <c-filter-panel filters={badgeTypes} label="Types" name="types" onfilterchange={handleTypeFilterChange}></c-filter-panel>
+                <c-filter-panel lwc:ref="typeFilterPanel" filters={badgeTypes} label="Types" name="types" disabled={isLoading} onfilterchange={handleTypeFilterChange}>
+                </c-filter-panel>
             </template>
         </div>
-        <div class="slds-var-p-around-small slds-col slds-size_5-of-6" style="min-height:300px">
+        
+        <div lwc:ref="treegridContainer" class="slds-var-p-around-small slds-col" style="min-height:300px">
             <div class="slds-grid slds-wrap slds-gutters" style="min-height:125px">
                 <div class="slds-col slds-size_1-of-4">
                     <c-dropdown label={mixLabel} value={mixValue} options={mixOptions} ondropdownchange={handleMixChange}>
@@ -53,6 +55,8 @@
                     <lightning-button variant="brand" label="Expand All" onclick={handleExpandAll}></lightning-button>
                     &nbsp;&nbsp;
                     <lightning-button variant="brand" label="Collapse All" onclick={handleCollapseAll}></lightning-button>
+                    &nbsp;&nbsp;
+                    <lightning-button variant="brand" label="Clear Filters" onclick={handleClearFilters}></lightning-button>
                 </div>
             </div>
     
@@ -69,5 +73,4 @@
             </template>
         </div>
     </div>
-    
 </template>
