@@ -30,7 +30,7 @@ public class RecommendedBadgeMixTS extends TestSupport.DataGeneration {
      */    
     public RecommendedBadgeMixTS(Map<String, Object> options, List<TestSupport.TestDataField> fieldSpecs) {
         super(options, fieldSpecs);
-        this.S_OBJECT_TYPE = 'Recommended_Badge_Mix__c';
+        this.SOBJECT_TYPE = 'Recommended_Badge_Mix__c';
     }
 
     protected override Map<Schema.SObjectField, TestSupport.TestDataField> loadDefaultSpecsByField() {

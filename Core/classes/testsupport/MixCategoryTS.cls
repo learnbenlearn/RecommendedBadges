@@ -32,7 +32,7 @@ public class MixCategoryTS extends TestSupport.DataGeneration {
      */    
     public MixCategoryTS(Map<String, Object> options, List<TestSupport.TestDataField> fieldSpecs) {
         super(options, fieldSpecs);
-        this.S_OBJECT_TYPE = 'Mix_Category__c';
+        this.SOBJECT_TYPE = 'Mix_Category__c';
 
         this.generateMasterRecords = Boolean.valueOf(options.get('generateMasterRecords') ?? true);
     }

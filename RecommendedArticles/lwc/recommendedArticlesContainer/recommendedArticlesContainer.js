@@ -12,6 +12,7 @@ export default class RecommendedArticlesContainer extends LightningElement {
     @wire(getRecommendedArticles)
     parseRecommendedArticles({error, data}) {
         if(data) {
+            console.log(data);
             /* eslint-disable sort-keys, no-ternary */
             this.recommendedArticles = data.map(ra => ({
                 id: ra.Id,

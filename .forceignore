@@ -61,12 +61,12 @@ package.xml
 #Core
 fflib
 LWCErrorHandler
-#LWCUtils
-#PrivateMixView
-RecommendedArticles
-#RecommendedBadgeMix
+LWCUtils
+PrivateMixView
+#RecommendedArticles
+RecommendedBadgeMix
 SortCustomMetadata
-Triggers
+#Triggers
 #UserInterface
 
 # Ignored Folders
