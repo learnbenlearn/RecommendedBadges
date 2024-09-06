@@ -76,6 +76,9 @@
               <li title="MixCategoriesSelector" id="item-MixCategoriesSelector" class="nav-item class public" onclick="goToLocation('MixCategoriesSelector.html');">
                 <a tabindex="1" href="javascript:void(0)">MixCategoriesSelector</a>
               </li>
+              <li title="RecommendedArticlesSelector" id="item-RecommendedArticlesSelector" class="nav-item class public" onclick="goToLocation('RecommendedArticlesSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">RecommendedArticlesSelector</a>
+              </li>
               <li title="RecommendedBadgeMixesSelector" id="item-RecommendedBadgeMixesSelector" class="nav-item class public" onclick="goToLocation('RecommendedBadgeMixesSelector.html');">
                 <a tabindex="1" href="javascript:void(0)">RecommendedBadgeMixesSelector</a>
               </li>
@@ -84,6 +87,9 @@
               </li>
               <li title="RecommendedTrailsSelector" id="item-RecommendedTrailsSelector" class="nav-item class public" onclick="goToLocation('RecommendedTrailsSelector.html');">
                 <a tabindex="1" href="javascript:void(0)">RecommendedTrailsSelector</a>
+              </li>
+              <li title="TopicAssignmentsSelector" id="item-TopicAssignmentsSelector" class="nav-item class public" onclick="goToLocation('TopicAssignmentsSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">TopicAssignmentsSelector</a>
               </li>
               <li title="TrailheadEntityURLMappingsSelector" id="item-TrailheadEntityURLMappingsSelector" class="nav-item class public" onclick="goToLocation('TrailheadEntityURLMappingsSelector.html');">
                 <a tabindex="1" href="javascript:void(0)">TrailheadEntityURLMappingsSelector</a>
@@ -112,6 +118,20 @@
               </li>
             </ul>
           </details>
+          <details id="RecommendedArticles" class="group-name">
+            <summary id="header-RecommendedArticles" class="nav-header">
+              <span>RecommendedArticles</span>
+            </summary>
+            <ul>
+              <!-- menu items -->
+              <li title="TopicsSelector" id="item-TopicsSelector" class="nav-item class public" onclick="goToLocation('TopicsSelector.html');">
+                <a tabindex="1" href="javascript:void(0)">TopicsSelector</a>
+              </li>
+              <li title="RecommendedArticlesContainerController" id="item-RecommendedArticlesContainerController" class="nav-item class public" onclick="goToLocation('RecommendedArticlesContainerController.html');">
+                <a tabindex="1" href="javascript:void(0)">RecommendedArticlesContainerController</a>
+              </li>
+            </ul>
+          </details>
           <details id="RecommendedBadgeMix" class="group-name">
             <summary id="header-RecommendedBadgeMix" class="nav-header">
               <span>RecommendedBadgeMix</span>
@@ -137,17 +157,6 @@
               </li>
               <li title="SortableFieldsSelector" id="item-SortableFieldsSelector" class="nav-item class public" onclick="goToLocation('SortableFieldsSelector.html');">
                 <a tabindex="1" href="javascript:void(0)">SortableFieldsSelector</a>
-              </li>
-            </ul>
-          </details>
-          <details id="StorageManagement" class="group-name">
-            <summary id="header-StorageManagement" class="nav-header">
-              <span>StorageManagement</span>
-            </summary>
-            <ul>
-              <!-- menu items -->
-              <li title="StorageLimitsController" id="item-StorageLimitsController" class="nav-item class public" onclick="goToLocation('StorageLimitsController.html');">
-                <a tabindex="1" href="javascript:void(0)">StorageLimitsController</a>
               </li>
             </ul>
           </details>
@@ -218,7 +227,7 @@
               </div>
 
               <div class="class-signature">
-                public without sharing class RecommendedBadgeMixController
+                public with sharing class RecommendedBadgeMixController
               </div>
               <div class="class-subtitle">
                 Author
@@ -244,10 +253,25 @@
                   <th>Description</th>
                 </tr>
                 <tr class="property public">
-                  <td class="attribute-name"><span>categoriesByMix</span></td>
+                  <td class="attribute-name"><span>badgeMixesByName</span></td>
                   <td>
                     <div class="attribute-signature">
-                      public Map&lt;String, List&lt;Mix_Category__c&gt;&gt; categoriesByMix
+                      public Map&lt;String, Recommended_Badge_Mix__c&gt; badgeMixesByName
+                    </div>
+                  </td>
+                  <td>
+                    <div class="prop-annotations">@AuraEnabled</div>
+                  </td>
+
+                  <td class="attribute-description">
+                    Last updated dates by Recommended Badge Mix
+                  </td>
+                </tr>
+                <tr class="property public">
+                  <td class="attribute-name"><span>categoriesByBadgeMix</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public Map&lt;String, List&lt;MixCategoryWrapper&gt;&gt; categoriesByBadgeMix
                     </div>
                   </td>
                   <td>
@@ -256,6 +280,21 @@
 
                   <td class="attribute-description">
                     Mix Categories (including children Recommended Badges/Trails) by parent Recommended Badge Mix
+                  </td>
+                </tr>
+                <tr class="property public">
+                  <td class="attribute-name"><span>children</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public List&lt;MixCategoryChild&gt; children
+                    </div>
+                  </td>
+                  <td>
+                    <div class="prop-annotations">@AuraEnabled</div>
+                  </td>
+
+                  <td class="attribute-description">
+
                   </td>
                 </tr>
                 <tr class="property public">
@@ -271,6 +310,21 @@
 
                   <td class="attribute-description">
                     Name of default Recommended Badge Mix
+                  </td>
+                </tr>
+                <tr class="property public">
+                  <td class="attribute-name"><span>mixCategory</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public Mix_Category__c mixCategory
+                    </div>
+                  </td>
+                  <td>
+                    <div class="prop-annotations">@AuraEnabled</div>
+                  </td>
+
+                  <td class="attribute-description">
+
                   </td>
                 </tr>
               </table>
@@ -311,6 +365,98 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div class="section">
+
+            <h2 class="class-title " id="RecommendedBadgeMixController.MixCategoryChild">
+              <span>RecommendedBadgeMixController.MixCategoryChild</span>
+            </h2>
+            <div class="class-container">
+
+              <div class="class-description">
+                Wrapper class for Recommended Badges/Recommended Trails for recommendedBadgeMixContainer LWC.
+              </div>
+              <div class="class-subtitle">
+                Signature
+              </div>
+
+              <div class="class-signature">
+                public class MixCategoryChild
+              </div>
+            </div>
+            <div class="subsection properties RecommendedBadgeMixController_MixCategoryChild">
+              <h3 class="subsection-title properties">RecommendedBadgeMixController.MixCategoryChild Properties</h3>
+              <table class="attributes-table properties">
+
+                <tr>
+                  <th>Name</th>
+                  <th>Signature</th>
+                  <th>Annotations</th>
+
+                </tr>
+                <tr class="property public">
+                  <td class="attribute-name"><span>Id</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public String Id
+                    </div>
+                  </td>
+                  <td>
+                    <div class="prop-annotations">@AuraEnabled</div>
+                  </td>
+
+                </tr>
+                <tr class="property public">
+                  <td class="attribute-name"><span>Level</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public String Level
+                    </div>
+                  </td>
+                  <td>
+                    <div class="prop-annotations">@AuraEnabled</div>
+                  </td>
+
+                </tr>
+                <tr class="property public">
+                  <td class="attribute-name"><span>Name</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public String Name
+                    </div>
+                  </td>
+                  <td>
+                    <div class="prop-annotations">@AuraEnabled</div>
+                  </td>
+
+                </tr>
+                <tr class="property public">
+                  <td class="attribute-name"><span>Type</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public String Type
+                    </div>
+                  </td>
+                  <td>
+                    <div class="prop-annotations">@AuraEnabled</div>
+                  </td>
+
+                </tr>
+                <tr class="property public">
+                  <td class="attribute-name"><span>URL</span></td>
+                  <td>
+                    <div class="attribute-signature">
+                      public String URL
+                    </div>
+                  </td>
+                  <td>
+                    <div class="prop-annotations">@AuraEnabled</div>
+                  </td>
+
+                </tr>
+              </table>
             </div>
           </div>
 

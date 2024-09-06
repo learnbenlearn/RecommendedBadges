@@ -30,7 +30,7 @@ public class NewRecommendedBadgeTrailEventTS extends TestSupport.DataGeneration 
      */    
     public NewRecommendedBadgeTrailEventTS(Map<String, Object> options, List<TestSupport.TestDataField> fieldSpecs) {
         super(options, fieldSpecs);
-        this.S_OBJECT_TYPE = 'NewRecommendedBadgeTrailEvent__e';
+        this.SOBJECT_TYPE = 'NewRecommendedBadgeTrailEvent__e';
         this.useFieldDefaults = false;
     }
 }

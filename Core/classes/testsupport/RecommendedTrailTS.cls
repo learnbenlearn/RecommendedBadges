@@ -32,7 +32,7 @@ public class RecommendedTrailTS extends TestSupport.DataGeneration {
      */    
     public RecommendedTrailTS(Map<String, Object> options, List<TestSupport.TestDataField> fieldSpecs) {
         super(options, fieldSpecs);
-        this.S_OBJECT_TYPE = 'Recommended_Trail__c';
+        this.SOBJECT_TYPE = 'Recommended_Trail__c';
         this.generateMasterRecords = Boolean.valueOf(options.get('generateMasterRecords') ?? true);
     }
 

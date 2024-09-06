@@ -31,7 +31,7 @@
       "path": "Core",
       "package": "Core",
       "versionName": "Akron",
-      "versionNumber": "2.23.0.NEXT",
+      "versionNumber": "2.24.0.NEXT",
       "default": true,
       "dependencies": [
         {
@@ -59,7 +59,7 @@
       "default": false,
       "package": "Triggers",
       "versionName": "Akron",
-      "versionNumber": "2.19.0.NEXT",
+      "versionNumber": "2.20.0.NEXT",
       "dependencies": [
         {
           "package": "fflib",
@@ -84,7 +84,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.23.0.LATEST"
+          "versionNumber": "2.24.0.LATEST"
         }
       ]
     },
@@ -93,7 +93,7 @@
       "default": false,
       "package": "SortCustomMetadata",
       "versionName": "Akron",
-      "versionNumber": "1.28.0.NEXT",
+      "versionNumber": "1.29.0.NEXT",
       "dependencies": [
         {
           "package": "NebulaLogger"
@@ -115,7 +115,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.23.0.LATEST"
+          "versionNumber": "2.24.0.LATEST"
         }
       ]
     },
@@ -124,7 +124,7 @@
       "default": false,
       "package": "RecommendedBadgeMix",
       "versionName": "Akron",
-      "versionNumber": "1.35.0.NEXT",
+      "versionNumber": "1.36.0.NEXT",
       "dependencies": [
         {
           "package": "TestSupport"
@@ -146,11 +146,11 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.23.0.LATEST"
+          "versionNumber": "2.24.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.28.0.LATEST"
+          "versionNumber": "1.29.0.LATEST"
         }
       ]
     },
@@ -158,7 +158,7 @@
       "path": "PrivateMixView",
       "package": "PrivateMixView",
       "versionName": "Akron",
-      "versionNumber": "1.32.0.NEXT",
+      "versionNumber": "1.33.0.NEXT",
       "default": false,
       "versionDescription": "Package containing classes, LWCs, and Lightning pages for the private view portion of the Recommended Badges app.",
       "dependencies": [
@@ -182,11 +182,11 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.23.0.LATEST"
+          "versionNumber": "2.24.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.28.0.LATEST"
+          "versionNumber": "1.29.0.LATEST"
         }
       ]
     },
@@ -223,25 +223,25 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.23.0.LATEST"
+          "versionNumber": "2.24.0.LATEST"
         },
         {
           "package": "SortCustomMetadata",
-          "versionNumber": "1.28.0.LATEST"
+          "versionNumber": "1.29.0.LATEST"
         },
         {
           "package": "PrivateMixView",
-          "versionNumber": "1.30.0.LATEST"
+          "versionNumber": "1.33.0.LATEST"
         },
         {
           "package": "RecommendedBadgeMix",
-          "versionNumber": "1.35.0.LATEST"
+          "versionNumber": "1.36.0.LATEST"
         }
       ]
     },
     {
       "versionName": "Ripley",
-      "versionNumber": "1.5.0.NEXT",
+      "versionNumber": "1.6.0.NEXT",
       "path": "RecommendedArticles",
       "default": false,
       "package": "RecommendedArticles",
@@ -267,7 +267,7 @@
         },
         {
           "package": "Core",
-          "versionNumber": "2.23.0.LATEST"
+          "versionNumber": "2.24.0.LATEST"
         }
       ],
       "unpackagedMetadata": {
@@ -289,10 +289,11 @@
   "sfdcLoginUrl": "https://recommendedbadges-dev-ed.my.salesforce.com",
   "sourceApiVersion": "61.0",
   "packageAliases": {
+    "ApexMockery": "04tDn0000006nbAIAQ",
     "NebulaLogger": "04t5Y0000027L98QAE",
     "Shortcuts": "04t8c000000yXMAAA2",
     "StorageLimits": "04t8c000000vGr4AAE",
-    "TestSupport": "04t8c000000vGhnAAE",
+    "TestSupport": "04t8c000000vH2MAAU",
     "TriggerHandler": "04t8b000000jtsMAAQ",
     "Core": "0Ho8c000000fxx5CAA",
     "LWCUtils": "0Ho8c000000fy64CAA",
@@ -305,22 +306,14 @@
     "LWCErrorHandler": "0Ho8c000000sYAzCAM",
     "RecommendedArticles": "0Ho8c0000008OwpCAE",
     "fflib@1.11.0-1": "04t8c000000vG2PAAU",
-    "LWCUtils@1.38.0-1": "04t8c000000vGuwAAE",
     "LWCErrorHandler@1.13.0-1": "04t8c000000vGwxAAE",
-    "Core@2.22.0-1": "04t8c000000vGyPAAU",
-    "Triggers@2.18.0-1": "04t8c000000vGyUAAU",
-    "SortCustomMetadata@1.27.0-1": "04t8c000000vGyZAAU",
-    "RecommendedArticles@1.4.0-1": "04t8c000000vGyeAAE",
-    "RecommendedBadgeMix@1.34.0-1": "04t8c000000vGyjAAE",
-    "PrivateMixView@1.31.0-1": "04t8c000000vGzrAAE",
-    "UserInterface@1.33.0-1": "04t8c000000vH1sAAE",
     "LWCUtils@1.39.0-1": "04t8c000000vH1JAAU",
-    "Core@2.23.0-1": "04t8c000000vH1OAAU",
-    "Triggers@2.19.0-1": "04t8c000000vH1TAAU",
-    "SortCustomMetadata@1.28.0-1": "04t8c000000vH1YAAU",
-    "RecommendedArticles@1.5.0-1": "04t8c000000vH1dAAE",
-    "RecommendedBadgeMix@1.35.0-1": "04t8c000000vH1iAAE",
-    "PrivateMixView@1.32.0-1": "04t8c000000vH1nAAE",
-    "UserInterface@1.34.0-1": "04t8c000000vH1xAAE"
+    "Core@2.24.0-1": "04t8c000000vH30AAE",
+    "Triggers@2.20.0-1": "04t8c000000vH35AAE",
+    "SortCustomMetadata@1.29.0-1": "04t8c000000vH3AAAU",
+    "RecommendedArticles@1.6.0-1": "04t8c000000vH3FAAU",
+    "RecommendedBadgeMix@1.36.0-1": "04t8c000000vH3KAAU",
+    "PrivateMixView@1.33.0-1": "04t8c000000vH3PAAU",
+    "UserInterface@1.35.0-1": "04t8c000000vH3UAAU"
   }
 }

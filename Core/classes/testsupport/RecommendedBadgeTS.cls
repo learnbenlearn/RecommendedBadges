@@ -32,7 +32,7 @@ public class RecommendedBadgeTS extends TestSupport.DataGeneration {
      */    
     public RecommendedBadgeTS(Map<String, Object> options, List<TestSupport.TestDataField> fieldSpecs) {
         super(options, fieldSpecs);
-        this.S_OBJECT_TYPE = 'Recommended_Badge__c';
+        this.SOBJECT_TYPE = 'Recommended_Badge__c';
         this.generateMasterRecords = Boolean.valueOf(options.get('generateMasterRecords') ?? true);
     }
 

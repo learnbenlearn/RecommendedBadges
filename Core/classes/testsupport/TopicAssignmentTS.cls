@@ -30,7 +30,7 @@ public class TopicAssignmentTS extends TestSupport.DataGeneration {
      */    
     public TopicAssignmentTS(Map<String, Object> options, List<TestSupport.TestDataField> fieldSpecs) {
         super(options, fieldSpecs);
-        this.S_OBJECT_TYPE = 'TopicAssignment';
+        this.SOBJECT_TYPE = 'TopicAssignment';
         this.useFieldDefaults = false;
     }
 }

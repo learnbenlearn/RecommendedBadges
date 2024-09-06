@@ -211,10 +211,106 @@
       </tr>
       <tr>
         <td class="doc-page">
-          <h2 class='section-title'>Home</h2>
-          <h1>Recommended Badges</h1>
 
-          Check out the <a href="https://github.com/RecommendedBadges/RecommendedBadges/wiki">Recommended Badges wiki</a>!
+          <div class="section">
+
+            <h2 class="class-title top-level-type" id="RecommendedArticlesContainerController">
+              <span>RecommendedArticlesContainerController</span>
+            </h2>
+            <div class="class-container">
+
+              <div class="class-description">
+                Apex controller for recommendedArticlesContainer component
+              </div>
+              <div class="class-subtitle">
+                Signature
+              </div>
+
+              <div class="class-signature">
+                public without sharing class RecommendedArticlesContainerController
+              </div>
+              <div class="class-subtitle">
+                Author
+              </div>
+              <div class="class-subtitle-description">
+                Ben Learn
+              </div>
+              <div class="class-subtitle">
+                Since
+              </div>
+              <div class="class-subtitle-description">
+                <li>08-05-2024</li>
+              </div>
+            </div>
+            <div class="subsection methods">
+              <h3 class="subsection-title methods">RecommendedArticlesContainerController Methods</h3>
+              <div class="methods-container">
+                <ul class="methods-toc">
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#RecommendedArticlesContainerController.getRecommendedArticles">
+                      getRecommendedArticles ()
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Returns all RecommendedArticle__c records along with the names of related Topics
+                    </div>
+                  </li>
+                  <li class="method public">
+                    <a class="methods-toc__entry " href="#RecommendedArticlesContainerController.getTopics">
+                      getTopics ()
+                    </a>
+
+                    <div class="methods-toc__description">
+                      Returns all Topics that have an TopicAssignment related to a RecommendedArticle__c record.
+                    </div>
+                  </li>
+                </ul>
+                <div class="method public">
+                  <h4 class="method-title " id="RecommendedArticlesContainerController.getRecommendedArticles">
+                    <span>getRecommendedArticles()</span>
+                  </h4>
+                  <div class="method-description">
+                    Returns all RecommendedArticle__c records along with the names of related Topics
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+                  <div class="method-annotations">@AuraEnabled(cacheable=true)</div>
+                  <div class="method-signature">
+                    public static List&lt;RecommendedArticle__c&gt; getRecommendedArticles()
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">List&lt;RecommendedArticle__c&gt;</code>
+                  </div>
+                </div>
+                <div class="method public">
+                  <h4 class="method-title " id="RecommendedArticlesContainerController.getTopics">
+                    <span>getTopics()</span>
+                  </h4>
+                  <div class="method-description">
+                    Returns all Topics that have an TopicAssignment related to a RecommendedArticle__c record.
+                  </div>
+                  <div class="method-subtitle">
+                    Signature
+                  </div>
+                  <div class="method-annotations">@AuraEnabled(cacheable=true)</div>
+                  <div class="method-signature">
+                    public static List&lt;Topic&gt; getTopics()
+                  </div>
+                  <div class="method-subtitle">
+                    Returns
+                  </div>
+                  <div class="method-subtitle-description">
+                    <code class="code-inline">List&lt;Topic&gt;</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </td>
       </tr>
       <tr>

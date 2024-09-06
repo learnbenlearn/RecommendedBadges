@@ -4,9 +4,9 @@ engine:
     - path: "${workspaceFolder}/Core/classes"
     - path: "${workspaceFolder}/LWCErrorHandler/classes"
     - path: "${workspaceFolder}/PrivateMixView/classes"
+    - path: "${workspaceFolder}/RecommendedArticles/classes"
     - path: "${workspaceFolder}/RecommendedBadgeMix/classes"
     - path: "${workspaceFolder}/SortCustomMetadata/classes"
-    - path: "${workspaceFolder}/StorageManagement/classes"
     - path: "${workspaceFolder}/Triggers/classes"
   homePagePath: "${workspaceFolder}/ApexDoxHomePage.html"
   excludes: [
